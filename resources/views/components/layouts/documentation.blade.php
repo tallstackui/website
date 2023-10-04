@@ -1,14 +1,13 @@
 @props(['header' => null])
 
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" class="h-full bg-gray-900 dark" x-data="{ mobile : false }" x-cloak>
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" class="h-full bg-dark dark" x-data="{ mobile : false }" x-cloak>
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
         <title>{{ config('app.name', 'Laravel') }}</title>
-
         <style> [x-cloak] { display: none !important; } </style>
 
         <link rel="preconnect" href="https://fonts.bunny.net">
@@ -19,10 +18,10 @@
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
     <body class="h-full font-sans antialiased">
-        <x-documentation.layout.navigation />
+        <x-documentation.layout.sidebar />
 
         <div class="lg:pl-72">
-            <div class="sticky top-0 z-40 flex h-16 shrink-0 items-center gap-x-6 border-b border-white/5 bg-gray-900 px-4 shadow-sm sm:px-6 lg:hidden lg:px-8">
+            <div class="sticky top-0 z-40 flex h-16 shrink-0 items-center gap-x-6 border-b border-white/5 bg-dark px-4 shadow-sm lg:hidden">
                 <button x-on:click="mobile = true" type="button" class="text-white -m-2.5 p-2.5 lg:hidden">
                     <span class="sr-only">Open sidebar</span>
                     <svg class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
@@ -30,9 +29,9 @@
                     </svg>
                 </button>
             </div>
-            <main class="bg-gray-900">
+            <main class="bg-dark">
                 @if ($header)
-                    <header class="flex items-center justify-between border-b border-white/5 px-4 py-4 sm:px-6 sm:py-6 lg:px-8">
+                    <header class="flex items-center justify-between border-b border-white/5 px-4 py-4">
                         <h1 class="text-2xl font-semibold leading-7 text-white">{{ $header }}</h1>
                     </header>
                 @endif
