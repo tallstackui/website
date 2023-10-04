@@ -1,14 +1,14 @@
-<div class="flex grow flex-col gap-y-5 overflow-y-auto bg-dark px-6 ring-1 ring-white/5">
-    <div class="flex h-16 shrink-0 items-center">
-        <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500" alt="Your Company">
+<div class="flex grow flex-col gap-y-2 overflow-y-auto bg-dark px-6 ring-1 ring-white/5">
+    <div class="flex h-16 shrink-0 items-center justify-center">
+        <p class="text-4xl font-bold text-orange-600">TasteUi</p>
     </div>
     <nav class="flex flex-1 flex-col">
         <ul role="list" class="flex flex-1 flex-col gap-y-7">
             <li>
                 <ul role="list" class="-mx-2 space-y-1">
-                    <x-documentation.navigation.item :route="route('dashboard')" title="Welcome" :active="true" />
+                    <x-documentation.navigation.item :route="route('welcome')" title="Welcome" />
                     <x-documentation.navigation title="Getting Started">
-                        <x-documentation.navigation.item :route="route('dashboard')" title="Installation" />
+                        <x-documentation.navigation.item :route="route('installation')" title="Installation" />
                     </x-documentation.navigation>
                     <x-documentation.navigation title="Components">
                         <x-documentation.navigation title="Form" sub>

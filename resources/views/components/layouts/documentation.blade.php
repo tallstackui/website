@@ -1,7 +1,7 @@
 @props(['header' => null])
 
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" class="h-full bg-dark dark" x-data="{ mobile : false }" x-cloak>
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" class="h-full bg-dark dark" x-data="{ mobile : false }">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -17,7 +17,7 @@
         @tasteUiScripts
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
-    <body class="h-full font-sans antialiased">
+    <body class="h-full font-sans antialiased" x-data x-cloak>
         <x-documentation.layout.sidebar />
 
         <div class="lg:pl-72">
@@ -31,7 +31,7 @@
             </div>
             <main class="bg-dark">
                 @if ($header)
-                    <header class="flex items-center justify-between border-b border-white/5 px-4 py-4">
+                    <header class="flex items-center justify-between border-b border-white/5 px-4 py-8">
                         <h1 class="text-2xl font-semibold leading-7 text-white">{{ $header }}</h1>
                     </header>
                 @endif

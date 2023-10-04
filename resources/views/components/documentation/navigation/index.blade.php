@@ -1,7 +1,7 @@
 @props(['title', 'sub' => false])
 
 <li>
-    <div x-data="{ expand : true }">
+    <div x-data="{ expand : true }" x-cloak>
         <button x-on:click="expand = !expand"
                 type="button"
                 @class([

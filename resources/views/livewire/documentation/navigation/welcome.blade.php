@@ -1,4 +1,4 @@
 <div>
-    <x-slot:header>A</x-slot:header>
+    <x-slot:header>Welcome to the TasteUi!</x-slot:header>
     asd
 </div>

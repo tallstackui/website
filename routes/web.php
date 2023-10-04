@@ -1,5 +1,6 @@
 <?php
 
+use App\Livewire\Documentation\Navigation\Installation;
 use App\Livewire\Documentation\Navigation\Welcome;
 use Illuminate\Support\Facades\Route;
 
@@ -14,7 +15,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', Welcome::class);
+Route::get('/', Welcome::class)->name('welcome');
+Route::get('/installation', Installation::class)->name('installation');
 
 Route::view('dashboard', 'dashboard')
     ->middleware(['auth', 'verified'])
