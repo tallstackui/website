@@ -13,7 +13,8 @@
         "laravel/tinker": "^2.8",
         "livewire/livewire": "^3.0",
         "livewire/volt": "^1.0",
-        "tasteui/tasteui": "^0.0.1"
+        "tasteui/tasteui": "^0.0.1",
+        "torchlight/torchlight-laravel": "^0.5.14"
     },
     "require-dev": {
         "fakerphp/faker": "^1.9.1",
