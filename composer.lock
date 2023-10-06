@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "78c04c3ca5b199a820b353e252a1459f",
+    "content-hash": "727b3265038e7352f6171cb5490f3edb",
     "packages": [
         {
             "name": "brick/math",
@@ -5566,16 +5566,16 @@
         },
         {
             "name": "tasteui/tasteui",
-            "version": "v0.0.2",
+            "version": "v0.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/tasteui/tasteui.git",
-                "reference": "55f19c59189e9aa8c42569af81ec9ddb3a1626c6"
+                "reference": "e9d8c79af68613835e05da8f26548fb1c3870ed1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tasteui/tasteui/zipball/55f19c59189e9aa8c42569af81ec9ddb3a1626c6",
-                "reference": "55f19c59189e9aa8c42569af81ec9ddb3a1626c6",
+                "url": "https://api.github.com/repos/tasteui/tasteui/zipball/e9d8c79af68613835e05da8f26548fb1c3870ed1",
+                "reference": "e9d8c79af68613835e05da8f26548fb1c3870ed1",
                 "shasum": ""
             },
             "require": {
@@ -5621,9 +5621,9 @@
             "description": "A curated list of TallStack UI Components",
             "support": {
                 "issues": "https://github.com/tasteui/tasteui/issues",
-                "source": "https://github.com/tasteui/tasteui/tree/v0.0.2"
+                "source": "https://github.com/tasteui/tasteui/tree/v0.0.3"
             },
-            "time": "2023-10-05T23:58:05+00:00"
+            "time": "2023-10-06T13:16:03+00:00"
         },
         {
             "name": "tijsverkoyen/css-to-inline-styles",

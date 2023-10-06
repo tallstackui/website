@@ -60,16 +60,16 @@
 </x-code>
     </x-section>
     <x-section title="Outline Variation" description="You can use outline variation">
-        <x-tooltip text="Top" position="top" icon="exclamation-circle" outline />
-        <x-tooltip text="Bottom" position="bottom" icon="bell" outline />
-        <x-tooltip text="Left" position="left" icon="shield-exclamation" outline />
-        <x-tooltip text="Right" position="right" outline />
+        <x-tooltip text="Top" position="top" icon="exclamation-circle" color="orange" outline />
+        <x-tooltip text="Bottom" position="bottom" icon="bell" color="red" outline />
+        <x-tooltip text="Left" position="left" icon="shield-exclamation" color="sky" outline />
+        <x-tooltip text="Right" position="right" color="pink" outline />
 <x-code language="blade">
     @verbatim
-<x-tooltip text="Top" position="top" />
-<x-tooltip text="Bottom" position="bottom" />
-<x-tooltip text="Left" position="left" />
-<x-tooltip text="Right" position="right" />
+<x-tooltip text="Top" position="top" icon="exclamation-circle" color="orange" outline />
+<x-tooltip text="Bottom" position="bottom" icon="bell" color="red" outline />
+<x-tooltip text="Left" position="left" icon="shield-exclamation" color="sky" outline />
+<x-tooltip text="Right" position="right" color="pink" outline />
     @endverbatim
 </x-code>
     </x-section>
