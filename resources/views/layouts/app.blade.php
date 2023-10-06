@@ -30,7 +30,7 @@
                                 <p class="text-sm font-medium text-sky-500 font-display">{{ $section }}</p>
                             @endif
                             @if ($title)
-                                <h1 class="text-3xl tracking-tight text-slate-900 font-display dark:text-white">{{ $title }}</h1>
+                                <h1 class="text-3xl font-semibold tracking-tight text-slate-900 font-display dark:text-white">{{ $title }}</h1>
                             @endif
                         </header>
                     @endif
