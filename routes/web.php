@@ -14,5 +14,6 @@ Route::prefix('/docs')
             ->group(function () {
                 Route::view('/alerts', 'pages.docs.alert')->name('alerts');
                 Route::view('/tabs', 'pages.docs.tabs')->name('tabs');
+                Route::view('/tooltip', 'pages.docs.tooltip')->name('tooltip');
             });
     });

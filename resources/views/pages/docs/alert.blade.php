@@ -68,7 +68,7 @@
 @endverbatim
 </x-code>
     </x-section>
-    <x-section title="Translucent" description="A translucent color variation.">
+    <x-section title="Translucent" description="A translucent color variation">
         <div class="space-y-2">
             <x-alert title="TasteUi" closeable translucent>
                 TasteUi is a library of ready-to-use components for TALL Stack applications.
