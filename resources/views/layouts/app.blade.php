@@ -37,7 +37,11 @@
                     {{ $slot }}
                 </article>
             </div>
-            <x-layout.sidebar.right />
+            @if ($indexes)
+                <x-layout.sidebar.right>
+                    {{ $indexes }}
+                </x-layout.sidebar.right>
+            @endif
         </div>
     </div>
     @livewireScripts

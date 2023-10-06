@@ -42,7 +42,7 @@
             style="position:fixed;top:1px;left:1px;width:1px;height:0;padding:0;margin:-1px;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border-width:0;display:none"></div>
     </div>
     <div class="relative flex basis-0 justify-end gap-6 sm:gap-8 md:flex-grow">
-        <a class="group" aria-label="GitHub" href="https://github.com">
+        <a class="group" aria-label="GitHub" href="https://github.com/tasteui">
             <svg aria-hidden="true" viewBox="0 0 16 16"
                  class="h-6 w-6 fill-slate-400 group-hover:fill-slate-500 dark:group-hover:fill-slate-300">
                 <path

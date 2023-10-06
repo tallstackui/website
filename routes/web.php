@@ -1,7 +1,5 @@
 <?php
 
-use App\Livewire\Documentation\Navigation\Installation;
-use App\Livewire\Documentation\Navigation\Welcome;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,4 +13,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::view('/', 'pages.welcome');
+Route::view('/', 'pages.welcome')->name('welcome');
+
+Route::prefix('/docs')
+    ->name('docs.')
+    ->group(function () {
+        Route::view('/get-started', 'pages.get-started')->name('get-started');
+        Route::view('/installation', 'pages.installation')->name('installation');
+    });

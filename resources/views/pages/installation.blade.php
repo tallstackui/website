@@ -1,5 +1,5 @@
 <x-layout>
     <x-slot:title>
-        Welcome to TasteUi
+        Installation
     </x-slot:title>
 </x-layout>

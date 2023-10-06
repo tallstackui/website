@@ -10,6 +10,7 @@ class Layout extends Component
     public function __construct(
         public ?string $title = null,
         public ?string $section = null,
+        public ?string $indexes = null,
     ) {
         //
     }
