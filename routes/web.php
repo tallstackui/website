@@ -15,15 +15,4 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', Welcome::class)->name('welcome');
-Route::get('/installation', Installation::class)->name('installation');
-
-Route::view('dashboard', 'dashboard')
-    ->middleware(['auth', 'verified'])
-    ->name('dashboard');
-
-Route::view('profile', 'profile')
-    ->middleware(['auth'])
-    ->name('profile');
-
-require __DIR__.'/auth.php';
+Route::view('/', 'pages.welcome');

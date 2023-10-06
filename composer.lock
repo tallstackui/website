@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a10a56e865f6f9b8bdf58ea8368f5bbb",
+    "content-hash": "78c04c3ca5b199a820b353e252a1459f",
     "packages": [
         {
             "name": "brick/math",
@@ -972,16 +972,16 @@
         },
         {
             "name": "laravel/breeze",
-            "version": "v1.24.0",
+            "version": "v1.24.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/breeze.git",
-                "reference": "d3979dc75f78c1c6b0b035f52e3f4ea2dacab615"
+                "reference": "15c8866a19a5469c34748586162a238efa27fa51"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/breeze/zipball/d3979dc75f78c1c6b0b035f52e3f4ea2dacab615",
-                "reference": "d3979dc75f78c1c6b0b035f52e3f4ea2dacab615",
+                "url": "https://api.github.com/repos/laravel/breeze/zipball/15c8866a19a5469c34748586162a238efa27fa51",
+                "reference": "15c8866a19a5469c34748586162a238efa27fa51",
                 "shasum": ""
             },
             "require": {
@@ -1030,7 +1030,7 @@
                 "issues": "https://github.com/laravel/breeze/issues",
                 "source": "https://github.com/laravel/breeze"
             },
-            "time": "2023-09-20T18:37:37+00:00"
+            "time": "2023-10-04T01:03:14+00:00"
         },
         {
             "name": "laravel/framework",
@@ -1674,16 +1674,16 @@
         },
         {
             "name": "league/flysystem",
-            "version": "3.16.0",
+            "version": "3.17.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/flysystem.git",
-                "reference": "4fdf372ca6b63c6e281b1c01a624349ccb757729"
+                "reference": "bd4c9b26849d82364119c68429541f1631fba94b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/4fdf372ca6b63c6e281b1c01a624349ccb757729",
-                "reference": "4fdf372ca6b63c6e281b1c01a624349ccb757729",
+                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/bd4c9b26849d82364119c68429541f1631fba94b",
+                "reference": "bd4c9b26849d82364119c68429541f1631fba94b",
                 "shasum": ""
             },
             "require": {
@@ -1701,8 +1701,8 @@
                 "symfony/http-client": "<5.2"
             },
             "require-dev": {
-                "async-aws/s3": "^1.5",
-                "async-aws/simple-s3": "^1.1",
+                "async-aws/s3": "^1.5 || ^2.0",
+                "async-aws/simple-s3": "^1.1 || ^2.0",
                 "aws/aws-sdk-php": "^3.220.0",
                 "composer/semver": "^3.0",
                 "ext-fileinfo": "*",
@@ -1748,7 +1748,7 @@
             ],
             "support": {
                 "issues": "https://github.com/thephpleague/flysystem/issues",
-                "source": "https://github.com/thephpleague/flysystem/tree/3.16.0"
+                "source": "https://github.com/thephpleague/flysystem/tree/3.17.0"
             },
             "funding": [
                 {
@@ -1760,7 +1760,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-09-07T19:22:17+00:00"
+            "time": "2023-10-05T20:15:05+00:00"
         },
         {
             "name": "league/flysystem-local",
@@ -2233,16 +2233,16 @@
         },
         {
             "name": "nette/schema",
-            "version": "v1.2.4",
+            "version": "v1.2.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nette/schema.git",
-                "reference": "c9ff517a53903b3d4e29ec547fb20feecb05b8ab"
+                "reference": "0462f0166e823aad657c9224d0f849ecac1ba10a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nette/schema/zipball/c9ff517a53903b3d4e29ec547fb20feecb05b8ab",
-                "reference": "c9ff517a53903b3d4e29ec547fb20feecb05b8ab",
+                "url": "https://api.github.com/repos/nette/schema/zipball/0462f0166e823aad657c9224d0f849ecac1ba10a",
+                "reference": "0462f0166e823aad657c9224d0f849ecac1ba10a",
                 "shasum": ""
             },
             "require": {
@@ -2289,9 +2289,9 @@
             ],
             "support": {
                 "issues": "https://github.com/nette/schema/issues",
-                "source": "https://github.com/nette/schema/tree/v1.2.4"
+                "source": "https://github.com/nette/schema/tree/v1.2.5"
             },
-            "time": "2023-08-05T18:56:25+00:00"
+            "time": "2023-10-05T20:37:59+00:00"
         },
         {
             "name": "nette/utils",
@@ -5566,16 +5566,16 @@
         },
         {
             "name": "tasteui/tasteui",
-            "version": "v0.0.1",
+            "version": "v0.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/tasteui/tasteui.git",
-                "reference": "d64474f2d54294d9c553fb0f3e4bb5f6b6d7726a"
+                "reference": "55f19c59189e9aa8c42569af81ec9ddb3a1626c6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tasteui/tasteui/zipball/d64474f2d54294d9c553fb0f3e4bb5f6b6d7726a",
-                "reference": "d64474f2d54294d9c553fb0f3e4bb5f6b6d7726a",
+                "url": "https://api.github.com/repos/tasteui/tasteui/zipball/55f19c59189e9aa8c42569af81ec9ddb3a1626c6",
+                "reference": "55f19c59189e9aa8c42569af81ec9ddb3a1626c6",
                 "shasum": ""
             },
             "require": {
@@ -5621,9 +5621,9 @@
             "description": "A curated list of TallStack UI Components",
             "support": {
                 "issues": "https://github.com/tasteui/tasteui/issues",
-                "source": "https://github.com/tasteui/tasteui/tree/v0.0.1"
+                "source": "https://github.com/tasteui/tasteui/tree/v0.0.2"
             },
-            "time": "2023-10-04T01:13:06+00:00"
+            "time": "2023-10-05T23:58:05+00:00"
         },
         {
             "name": "tijsverkoyen/css-to-inline-styles",
@@ -5963,16 +5963,16 @@
     "packages-dev": [
         {
             "name": "brianium/paratest",
-            "version": "v7.2.7",
+            "version": "v7.2.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/paratestphp/paratest.git",
-                "reference": "1526eb4fd195f65075456dee394d14742ae0a66c"
+                "reference": "882b02d197328138686bb06ce7d8cbb98fc0a16c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/paratestphp/paratest/zipball/1526eb4fd195f65075456dee394d14742ae0a66c",
-                "reference": "1526eb4fd195f65075456dee394d14742ae0a66c",
+                "url": "https://api.github.com/repos/paratestphp/paratest/zipball/882b02d197328138686bb06ce7d8cbb98fc0a16c",
+                "reference": "882b02d197328138686bb06ce7d8cbb98fc0a16c",
                 "shasum": ""
             },
             "require": {
@@ -6042,7 +6042,7 @@
             ],
             "support": {
                 "issues": "https://github.com/paratestphp/paratest/issues",
-                "source": "https://github.com/paratestphp/paratest/tree/v7.2.7"
+                "source": "https://github.com/paratestphp/paratest/tree/v7.2.8"
             },
             "funding": [
                 {
@@ -6054,7 +6054,7 @@
                     "type": "paypal"
                 }
             ],
-            "time": "2023-09-14T14:10:09+00:00"
+            "time": "2023-10-04T13:38:04+00:00"
         },
         {
             "name": "doctrine/deprecations",
@@ -7415,16 +7415,16 @@
         },
         {
             "name": "phpunit/php-code-coverage",
-            "version": "10.1.6",
+            "version": "10.1.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/php-code-coverage.git",
-                "reference": "56f33548fe522c8d82da7ff3824b42829d324364"
+                "reference": "355324ca4980b8916c18b9db29f3ef484078f26e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/php-code-coverage/zipball/56f33548fe522c8d82da7ff3824b42829d324364",
-                "reference": "56f33548fe522c8d82da7ff3824b42829d324364",
+                "url": "https://api.github.com/repos/sebastianbergmann/php-code-coverage/zipball/355324ca4980b8916c18b9db29f3ef484078f26e",
+                "reference": "355324ca4980b8916c18b9db29f3ef484078f26e",
                 "shasum": ""
             },
             "require": {
@@ -7481,7 +7481,7 @@
             "support": {
                 "issues": "https://github.com/sebastianbergmann/php-code-coverage/issues",
                 "security": "https://github.com/sebastianbergmann/php-code-coverage/security/policy",
-                "source": "https://github.com/sebastianbergmann/php-code-coverage/tree/10.1.6"
+                "source": "https://github.com/sebastianbergmann/php-code-coverage/tree/10.1.7"
             },
             "funding": [
                 {
@@ -7489,7 +7489,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-09-19T04:59:03+00:00"
+            "time": "2023-10-04T15:34:17+00:00"
         },
         {
             "name": "phpunit/php-file-iterator",
