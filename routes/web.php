@@ -12,6 +12,7 @@ Route::prefix('/docs')
         Route::prefix('/ui')
             ->name('ui.')
             ->group(function () {
-                Route::view('/colors', 'pages.docs.alert')->name('alert');
+                Route::view('/alerts', 'pages.docs.alert')->name('alerts');
+                Route::view('/tabs', 'pages.docs.tabs')->name('tabs');
             });
     });

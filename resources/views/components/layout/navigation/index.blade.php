@@ -56,10 +56,11 @@
                 <li class="ml-4 relative">
                     <h2 class="font-medium text-slate-900 font-display dark:text-white">UI</h2>
                     <ul role="list" class="mt-4 space-y-2 dark:border-slate-800 lg:space-y-4 lg:mt-4 lg:border-slate-200">
-                        <li class="ml-4 relative">
-                            <a href="{{ route('docs.ui.alert') }}" class="text-gray-500 transition hover:text-gray-800 hover:underline">
+                        <li class="ml-4 relative inline-flex items-center space-x-1">
+                            <a href="{{ route('docs.ui.alerts') }}" class="text-gray-500 transition hover:text-gray-800 hover:underline">
                                 Alert
                             </a>
+                            <x-icon icon="check-circle" class="w-4 h-4" color="green" />
                         </li>
                         <li class="ml-4 relative">
                             <a class="text-gray-500 transition hover:text-gray-800 hover:underline" href="/docs/understanding-caching">
@@ -106,10 +107,11 @@
                                 Select
                             </a>
                         </li>
-                        <li class="ml-4 relative">
-                            <a class="text-gray-500 transition hover:text-gray-800 hover:underline" href="/docs/understanding-caching">
+                        <li class="ml-4 relative inline-flex items-center space-x-1">
+                            <a href="{{ route('docs.ui.tabs') }}" class="text-gray-500 transition hover:text-gray-800 hover:underline">
                                 Tabs
                             </a>
+                            <x-icon icon="check-circle" class="w-4 h-4" color="green" />
                         </li>
                         <li class="ml-4 relative">
                             <a class="text-gray-500 transition hover:text-gray-800 hover:underline" href="/docs/understanding-caching">

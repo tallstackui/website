@@ -16,7 +16,7 @@
     @tasteUiScripts
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
-<body class="min-h-full flex-col justify-center bg-white dark:bg-slate-900">
+<body class="min-h-full flex-col justify-center bg-gray-100 dark:bg-slate-900">
     <x-layout.header />
     <div class="flex flex-col">
         <x-layout.banner />
