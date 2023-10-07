@@ -7,6 +7,7 @@ use App\Enums\Examples\Avatar;
 use App\Enums\Examples\Badge;
 use App\Enums\Examples\Card;
 use App\Enums\Examples\Dialog;
+use App\Enums\Examples\Errors;
 use App\Enums\Examples\GetStarted;
 use App\Enums\Examples\Modal;
 use App\Enums\Examples\Tab;
@@ -23,6 +24,7 @@ enum Example: string
     case Badge = Badge::class;
     case Card = Card::class;
     case Dialog = Dialog::class;
+    case Errors = Errors::class;
     case GetStarted = GetStarted::class;
     case Tab = Tab::class;
     case Tooltip = Tooltip::class;

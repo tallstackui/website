@@ -82,12 +82,12 @@
                             </a>
                         </li>
                         <li class="ml-4 relative">
-                            <a class="text-gray-500 transition hover:text-gray-800 hover:underline">
+                            <a href="{{ route('documentation.ui.dropdown') }}" class="text-gray-500 transition hover:text-gray-800 hover:underline">
                                 Dropdown
                             </a>
                         </li>
                         <li class="ml-4 relative">
-                            <a class="text-gray-500 transition hover:text-gray-800 hover:underline">
+                            <a href="{{ route('documentation.ui.errors') }}" class="text-gray-500 transition hover:text-gray-800 hover:underline">
                                 Errors
                             </a>
                         </li>
