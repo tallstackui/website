@@ -1,34 +1,34 @@
 <x-layout>
     <x-slot:title>
-        Dialog
+        Toast
     </x-slot:title>
     <x-slot:description>
-        Dialog component. A small version of Modal to interact with Livewire.
+        Toast component. A notification style to interact with Livewire.
     </x-slot:description>
     <x-section>
-        1. Insert the Dialog component on your main layout.
+        1. Insert the Toast component on your main layout.
         <x-code language="html" :contents="$tag" />
         2. Use the Interactions trait in your Livewire component.
         <x-code language="php" :contents="$trait" />
-        3. Dispatch the Dialog from a method.
+        3. Dispatch the Toast from a method.
         <x-code language="php" :contents="$dispatch" />
     </x-section>
     <x-section>
         <x-code-preview title="Basic Usage" :contents="$basic">
-            <livewire:documentation.interactions.dialog.examples />
+            <livewire:documentation.interactions.toast.examples />
         </x-code-preview>
     </x-section>
     <x-section>
         <x-code-preview title="Confirmations Examples"
                         description="Interacting with confirmation or cancellation."
                         :contents="$confirmation">
-            <livewire:documentation.interactions.dialog.confirmation />
+            <livewire:documentation.interactions.toast.confirmation />
         </x-code-preview>
     </x-section>
     <x-section title="Personalizations">
-        1. You can personalize the <x-block>z-index</x-block> of the Dialog component:
+        1. You can personalize the <x-block>z-index</x-block> of the Toast component:
         <x-code language="html" :contents="$zIndex" />
-        2. You can blur the background of the Dialog component:
-        <x-code language="html" :contents="$blur" />
+        1. You can personalize the positions of the Toast component:
+        <x-code language="html" :contents="$positions" />
     </x-section>
 </x-layout>
