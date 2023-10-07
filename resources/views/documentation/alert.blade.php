@@ -3,95 +3,81 @@
         Alert
     </x-slot:title>
     <x-slot:description>
-        Alert components similar to Bootstrap alerts.
+        Alert components similar to the Bootstrap alerts.
     </x-slot:description>
-    <x-section title="Basic Usage">
-        <x-alert>
-            TasteUi is a library of ready-to-use components for TALL Stack applications.
-        </x-alert>
-<x-code language="blade">
-@verbatim
-<x-alert>
-    {{-- ... --}}
-</x-alert>
-@endverbatim
-</x-code>
+    <x-section>
+        <x-code-preview title="Basic Usage"
+                        language="blade"
+                        :contents="$basic">
+            <x-alert>
+                TallStackUi
+            </x-alert>
+        </x-code-preview>
     </x-section>
-    <x-section title="Title">
-        <x-alert title="TasteUi">
-            TasteUi is a library of ready-to-use components for TALL Stack applications.
-        </x-alert>
-<x-code language="blade">
-@verbatim
-<x-alert title="TasteUi">
-    {{-- ... --}}
-</x-alert>
-@endverbatim
-</x-code>
+    <x-section>
+        <x-code-preview title="Title"
+                        language="blade"
+                        :contents="$title">
+            <x-alert title="TallStackUi">
+                TallStackUi
+            </x-alert>
+        </x-code-preview>
     </x-section>
-    <x-section title="Closeable" description="An option to allow the user to hide the alert">
-        <x-alert title="TasteUi" closeable>
-            TasteUi is a library of ready-to-use components for TALL Stack applications.
-        </x-alert>
-<x-code language="blade">
-@verbatim
-<x-alert title="TasteUi" closeable>
-    {{-- ... --}}
-</x-alert>
-@endverbatim
-</x-code>
-        <p>All TailwindCSS colors are available to be used.</p>
+    <x-section>
+        <x-code-preview title="Closeable"
+                        description="An option to allow the user to hide the alert"
+                        language="blade"
+                        :contents="$closeable">
+            <x-alert title="TallStackUi" closeable>
+                TallStackUi
+            </x-alert>
+        </x-code-preview>
     </x-section>
-    <x-section title="Colored" description="Variety of TailwindCSS colors">
-        <div class="space-y-2">
-            <x-alert title="TasteUi" closeable>
-                TasteUi is a library of ready-to-use components for TALL Stack applications.
-            </x-alert>
-            <x-alert title="TasteUi" color="yellow" closeable>
-                TasteUi is a library of ready-to-use components for TALL Stack applications.
-            </x-alert>
-            <x-alert title="TasteUi" color="red" closeable>
-                TasteUi is a library of ready-to-use components for TALL Stack applications.
-            </x-alert>
-            <x-alert title="TasteUi" color="sky" closeable>
-                TasteUi is a library of ready-to-use components for TALL Stack applications.
-            </x-alert>
-            <x-alert title="TasteUi" color="orange" closeable>
-                TasteUi is a library of ready-to-use components for TALL Stack applications.
-            </x-alert>
-        </div>
-<x-code language="blade">
-@verbatim
-<x-alert title="TasteUi" color="orange" closeable>
-    {{-- ... --}}
-</x-alert>
-@endverbatim
-</x-code>
+    <x-section>
+        <x-code-preview title="Color Variations"
+                        description="You can use any color from the TailwindCSS palette."
+                        language="blade"
+                        :contents="$colors">
+            <div class="space-y-2">
+                <x-alert title="TallStackUi">
+                    TallStackUi
+                </x-alert>
+                <x-alert title="TallStackUi" color="yellow">
+                    TallStackUi
+                </x-alert>
+                <x-alert title="TallStackUi" color="red">
+                    TallStackUi
+                </x-alert>
+                <x-alert title="TallStackUi" color="sky">
+                    TallStackUi
+                </x-alert>
+                <x-alert title="TallStackUi" color="orange">
+                    TallStackUi
+                </x-alert>
+            </div>
+        </x-code-preview>
     </x-section>
-    <x-section title="Translucent" description="A translucent color variation">
-        <div class="space-y-2">
-            <x-alert title="TasteUi" closeable translucent>
-                TasteUi is a library of ready-to-use components for TALL Stack applications.
-            </x-alert>
-            <x-alert title="TasteUi" color="yellow" closeable translucent>
-                TasteUi is a library of ready-to-use components for TALL Stack applications.
-            </x-alert>
-            <x-alert title="TasteUi" color="red" closeable translucent>
-                TasteUi is a library of ready-to-use components for TALL Stack applications.
-            </x-alert>
-            <x-alert title="TasteUi" color="sky" closeable translucent>
-                TasteUi is a library of ready-to-use components for TALL Stack applications.
-            </x-alert>
-            <x-alert title="TasteUi" color="orange" closeable translucent>
-                TasteUi is a library of ready-to-use components for TALL Stack applications.
-            </x-alert>
-        </div>
-<x-code language="blade">
-@verbatim
-<x-alert title="TasteUi" color="orange" closeable translucent>
-    {{-- ... --}}
-</x-alert>
-@endverbatim
-</x-code>
+    <x-section>
+        <x-code-preview title="Translucent Variations"
+                        language="blade"
+                        :contents="$translucents">
+            <div class="space-y-2">
+                <x-alert title="TallStackUi" translucent>
+                    TallStackUi
+                </x-alert>
+                <x-alert title="TallStackUi" color="yellow" translucent>
+                    TallStackUi
+                </x-alert>
+                <x-alert title="TallStackUi" color="red" translucent>
+                    TallStackUi
+                </x-alert>
+                <x-alert title="TallStackUi" color="sky" translucent>
+                    TallStackUi
+                </x-alert>
+                <x-alert title="TallStackUi" color="orange" translucent>
+                    TallStackUi
+                </x-alert>
+            </div>
+        </x-code-preview>
     </x-section>
 </x-layout>
