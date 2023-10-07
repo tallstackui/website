@@ -62,7 +62,7 @@
                             </a>
                         </li>
                         <li class="ml-4 relative">
-                            <a class="text-gray-500 transition hover:text-gray-800 hover:underline" href="/docs/understanding-caching">
+                            <a href="{{ route('documentation.ui.avatar') }}" class="text-gray-500 transition hover:text-gray-800 hover:underline">
                                 Avatar
                             </a>
                         </li>
