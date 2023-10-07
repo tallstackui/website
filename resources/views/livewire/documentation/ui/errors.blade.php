@@ -5,6 +5,7 @@ use Livewire\Volt\Component;
 new class extends Component {
     public array $only = [];
     public ?string $title = null;
+    public ?string $color = 'red';
 
     public function mount(): void
     {
@@ -14,5 +15,5 @@ new class extends Component {
 } ?>
 
 <div>
-    <x-errors :$only :$title />
+    <x-errors :$only :$title :$color />
 </div>

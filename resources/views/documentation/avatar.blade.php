@@ -14,12 +14,36 @@
     </x-section>
     <x-section>
         <x-preview title="Color Variations"
-                   description="You can use any color from the TailwindCSS palette."
                    language="blade"
                    :contents="$colors">
-            <x-avatar label="TS" color="secondary" />
-            <x-avatar label="TS" color="orange" />
-            <x-avatar label="TS" color="sky" />
+            <div class="space-y-2 gap-2">
+                <x-avatar label="TS" />
+                <x-avatar label="TS" color="secondary" />
+                <x-avatar label="TS" color="white" />
+                <x-avatar label="TS" color="black" />
+                <x-avatar label="TS" color="slate" />
+                <x-avatar label="TS" color="gray" />
+                <x-avatar label="TS" color="zinc" />
+                <x-avatar label="TS" color="neutral" />
+                <x-avatar label="TS" color="stone" />
+                <x-avatar label="TS" color="red" />
+                <x-avatar label="TS" color="orange" />
+                <x-avatar label="TS" color="amber" />
+                <x-avatar label="TS" color="yellow" />
+                <x-avatar label="TS" color="lime" />
+                <x-avatar label="TS" color="green" />
+                <x-avatar label="TS" color="emerald" />
+                <x-avatar label="TS" color="teal" />
+                <x-avatar label="TS" color="cyan" />
+                <x-avatar label="TS" color="sky" />
+                <x-avatar label="TS" color="blue" />
+                <x-avatar label="TS" color="indigo" />
+                <x-avatar label="TS" color="violet" />
+                <x-avatar label="TS" color="purple" />
+                <x-avatar label="TS" color="fuchsia" />
+                <x-avatar label="TS" color="pink" />
+                <x-avatar label="TS" color="rose" />
+            </div>
         </x-preview>
     </x-section>
     <x-section>
@@ -65,11 +89,34 @@
                    description="An option generate avatar with a svg placeholder with any color from the TailwindCSS palette."
                    language="blade"
                    :contents="$placeholder">
-            <x-avatar />
-            <x-avatar color="secondary" />
-            <x-avatar color="orange" />
-            <x-avatar color="sky" />
-            <x-avatar color="blue" />
+            <div class="space-y-2 gap-2">
+                <x-avatar />
+                <x-avatar color="secondary" />
+                <x-avatar color="white" />
+                <x-avatar color="black" />
+                <x-avatar color="slate" />
+                <x-avatar color="gray" />
+                <x-avatar color="zinc" />
+                <x-avatar color="neutral" />
+                <x-avatar color="stone" />
+                <x-avatar color="red" />
+                <x-avatar color="orange" />
+                <x-avatar color="amber" />
+                <x-avatar color="yellow" />
+                <x-avatar color="lime" />
+                <x-avatar color="green" />
+                <x-avatar color="emerald" />
+                <x-avatar color="teal" />
+                <x-avatar color="cyan" />
+                <x-avatar color="sky" />
+                <x-avatar color="blue" />
+                <x-avatar color="indigo" />
+                <x-avatar color="violet" />
+                <x-avatar color="purple" />
+                <x-avatar color="fuchsia" />
+                <x-avatar color="pink" />
+                <x-avatar color="rose" />
+            </div>
         </x-preview>
     </x-section>
 </x-layout>
