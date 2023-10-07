@@ -162,8 +162,9 @@
     <x-section>
         <x-code-preview title="AlpineJS Helper"
                         description="Helpers to open and close the modal using AlpineJS."
-                        language="blade">
-            AlpineJS helpers <x-block>x-on:click="$modalOpen('id')"</x-block> or <x-block>x-on:click="$modalClose('id')"</x-block> to open or close the modal.
+                        language="blade"
+                        :contents="$alpinejs">
+            AlpineJS helpers to open or close the modal. Check the code example.
         </x-code-preview>
     </x-section>
 </x-layout>

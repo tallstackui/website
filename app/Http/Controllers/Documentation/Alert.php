@@ -13,6 +13,15 @@ class Alert extends Controller
 </x-alert>
 HTML;
         $title = <<<HTML
+<x-alert>
+    <x-slot:title>
+        TallStackUi
+    </x-slot:title>
+    TallStackUi
+</x-alert>
+
+<!-- or -->
+
 <x-alert title="TallStackUi">
     TallStackUi
 </x-alert>

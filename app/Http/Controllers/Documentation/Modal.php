@@ -66,19 +66,41 @@ HTML;
 HTML;
 
         $wireable = <<<HTML
-<!-- Livewire boolean property: modal -->
+<!-- Livewire boolean property: \$modal -->
 
 <x-modal title="TallStackUi" wire>
     TallStackUi
 </x-modal>
+
+<x-button wire:click="\$toggle('modal')">
+    Open
+</x-button>
 HTML;
 
         $wireableCustomized = <<<HTML
-<!-- Livewire boolean property: tallstackui -->
+<!-- Livewire boolean property: \$tallstackui -->
 
 <x-modal title="TallStackUi" wire entangle="tallstackui">
     TallStackUi
 </x-modal>
+
+<x-button wire:click="\$toggle('tallstackui')">
+    Open
+</x-button>
+HTML;
+
+        $alpinejs = <<<HTML
+<x-modal id="modal-id">
+    TallStackUi
+</x-modal>
+
+<x-button x-on:click="\$modalOpen('modal-id')">
+    Open
+</x-button>
+
+<x-button x-on:click="\$modalClose('modal-id')">
+    Close
+</x-button>
 HTML;
 
         return view('documentation.modal', compact(
@@ -90,6 +112,7 @@ HTML;
             'uncloseable',
             'wireable',
             'wireableCustomized',
+                'alpinejs'
             )
         );
     }
