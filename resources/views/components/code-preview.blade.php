@@ -4,6 +4,7 @@
     'title' => null,
     'description' => null,
     'numbers' => false,
+    'background' => true,
     'language' => 'php',
 ])
 
@@ -30,7 +31,7 @@
         </div>
     </div>
     <div>
-        <div x-show="!code" class="rounded-lg bg-white p-6">
+        <div x-show="!code" @class(['rounded-lg p-6', 'bg-white' => $background])">
             {{ $slot }}
         </div>
         <div class="overflow-auto custom-scrollbar rounded-lg bg-[#292D3E]" x-cloak x-show="code">
