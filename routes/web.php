@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Documentation\Alert;
 use App\Http\Controllers\Documentation\GetStarted;
 use App\Http\Controllers\Documentation\Tooltip;
 use Illuminate\Support\Facades\Route;
@@ -14,8 +15,8 @@ Route::prefix('/docs')
         Route::prefix('/ui')
             ->name('ui.')
             ->group(function () {
-                Route::view('/alerts', 'documentation.alert')->name('alerts');
-                Route::view('/tabs', 'documentation.tabs')->name('tabs');
+                Route::get('/alerts', Alert::class)->name('alert');
+                Route::view('/tabs', 'documentation.tab')->name('tab');
                 Route::get('/tooltip', Tooltip::class)->name('tooltip');
             });
     });

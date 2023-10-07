@@ -12,26 +12,12 @@
     </x-section>
     <x-section class="space-y-4" title="Installation" id="installation">
         <p>1. Run the following command to TallStackUi as a composer dependency:</p>
-        <x-code language="shell">
-            composer require tasteui/tasteui
-        </x-code>
+        <x-code language="shell" :contents="$installation" />
         <p>2. Add the TallStackUi tag above the <x-block>@verbatim @vite @endverbatim</x-block>directive at your Blade template:</p>
-        <x-code language="shell">
-@verbatim
-<html>
-    <head>
-        ...
-        <tasteui:scripts />
-        @vite(['resources/css/app.css', 'resources/js/app.js'])
-    </head>
-</html>
-@endverbatim
-        </x-code>
+        <x-code language="shell" :contents="$layout" />
         <p>Obviously you can add separately: <x-block>@verbatim @tasteUiScripts @endverbatim</x-block> and <x-block>@verbatim @tasteUiStyles @endverbatim</x-block></p>
         <p>3. Run the following commands:</p>
-        <x-code language="shell">
-            php artisan tasteui:install && npm run build
-        </x-code>
+        <x-code language="shell" :contents="$command" />
         <p><b>Let the game begin!</b> You're ready to create your first TallStackUi components.</p>
     </x-section>
     <x-slot:indexes>

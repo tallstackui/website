@@ -41,11 +41,6 @@
                     {{ $slot }}
                 </article>
             </div>
-            @if ($indexes)
-                <x-layout.sidebar.right>
-                    {{ $indexes }}
-                </x-layout.sidebar.right>
-            @endif
         </div>
     </div>
     @livewireScripts
