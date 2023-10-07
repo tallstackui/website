@@ -24,7 +24,7 @@ HTML;
 HTML;
 
         $command = <<<HTML
-php artisan tasteui:install
+php artisan tallstackui:install
 HTML;
 
         return view('documentation.get-started', compact('installation', 'layout', 'command'));
