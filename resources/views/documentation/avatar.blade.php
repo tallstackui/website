@@ -47,7 +47,7 @@
                         :contents="$modelable">
             <x-avatar.modelable :model="auth()->user()" />
         </x-code-preview>
-        <x-code-preview title="Modelable Property Customized"
+        <x-code-preview title="Modelable Custom Property"
                         description="An option to generate a UI Avatar from a model based on a property different than name."
                         language="blade"
                         :contents="$modelableCustomized">

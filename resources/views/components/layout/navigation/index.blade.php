@@ -67,7 +67,7 @@
                             </a>
                         </li>
                         <li class="ml-4 relative">
-                            <a class="text-gray-500 transition hover:text-gray-800 hover:underline">
+                            <a href="{{ route('documentation.ui.badge') }}" class="text-gray-500 transition hover:text-gray-800 hover:underline">
                                 Badge
                             </a>
                         </li>

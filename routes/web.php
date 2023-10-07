@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Documentation\Alert;
 use App\Http\Controllers\Documentation\Avatar;
+use App\Http\Controllers\Documentation\Badge;
 use App\Http\Controllers\Documentation\Card;
 use App\Http\Controllers\Documentation\Dialog;
 use App\Http\Controllers\Documentation\GetStarted;
@@ -22,6 +23,7 @@ Route::prefix('/docs')
             ->group(function () {
                 Route::get('/alerts', Alert::class)->name('alert');
                 Route::get('/avatar', Avatar::class)->name('avatar');
+                Route::get('/badge', Badge::class)->name('badge');
                 Route::get('/card', Card::class)->name('card');
                 Route::get('/dialog', Dialog::class)->name('dialog');
                 Route::get('/tabs', Tab::class)->name('tab');
