@@ -7,6 +7,7 @@ use App\Enums\Examples\Avatar;
 use App\Enums\Examples\Badge;
 use App\Enums\Examples\Button;
 use App\Enums\Examples\Card;
+use App\Enums\Examples\DarkTheme;
 use App\Enums\Examples\Dialog;
 use App\Enums\Examples\Error;
 use App\Enums\Examples\GetStarted;
@@ -27,6 +28,7 @@ enum Example: string
     case Button = Button::class;
     case Card = Card::class;
     case Dialog = Dialog::class;
+    case DarkTheme = DarkTheme::class;
     case Error = Error::class;
     case Icon = Icon::class;
     case GetStarted = GetStarted::class;

@@ -5,6 +5,7 @@ use App\Http\Controllers\Documentation\Avatar;
 use App\Http\Controllers\Documentation\Badge;
 use App\Http\Controllers\Documentation\Button;
 use App\Http\Controllers\Documentation\Card;
+use App\Http\Controllers\Documentation\DarkTheme;
 use App\Http\Controllers\Documentation\Dialog;
 use App\Http\Controllers\Documentation\Dropdown;
 use App\Http\Controllers\Documentation\Error;
@@ -42,4 +43,6 @@ Route::prefix('/docs')
                 Route::get('/tooltip', Tooltip::class)->name('tooltip');
                 Route::get('/modal', Modal::class)->name('modal');
             });
+
+        Route::get('/dark-theme', DarkTheme::class)->name('dark-theme');
     });
