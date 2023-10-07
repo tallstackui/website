@@ -29,21 +29,14 @@ class CreateUser extends Component
 }
 HTML;
         $dispatch = <<<EOT
-use TallStackUi\Traits\Interactions;
+// ...
 
-class CreateUser extends Component
+public function save(): void
 {
-    use Interactions;
-
-    // ...
-
-    public function save(): void
-    {
-        \$this->dialog()->success('...');
-        \$this->dialog()->error('...');
-        \$this->dialog()->warning('...');
-        \$this->dialog()->info('...');
-    }
+    \$this->dialog()->success('...');
+    \$this->dialog()->error('...');
+    \$this->dialog()->warning('...');
+    \$this->dialog()->info('...');
 }
 EOT;
         $basic = <<<EOT
@@ -66,7 +59,13 @@ EOT;
     ]
 ]);
 EOT;
+        $zIndex = <<<HTML
+<x-dialog z-index="z-50" />
+HTML;
+        $blur = <<<HTML
+<x-dialog blur />
+HTML;
 
-        return view('documentation.dialog', compact('tag', 'trait', 'dispatch', 'basic', 'confirmation'));
+        return view('documentation.dialog', compact('tag', 'trait', 'dispatch', 'basic', 'confirmation', 'zIndex', 'blur'));
     }
 }
