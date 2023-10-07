@@ -22,32 +22,32 @@
                     <h2 class="font-medium text-slate-900 font-display dark:text-white">Form</h2>
                     <ul role="list" class="mt-4 space-y-2 dark:border-slate-800 lg:space-y-4 lg:mt-4 lg:border-slate-200">
                         <li class="ml-4 relative">
-                            <a class="text-gray-500 transition hover:text-gray-800 hover:underline" href="/docs/understanding-caching">
+                            <a class="text-gray-500 transition hover:text-gray-800 hover:underline">
                                 Input
                             </a>
                         </li>
                         <li class="ml-4 relative">
-                            <a class="text-gray-500 transition hover:text-gray-800 hover:underline" href="/docs/understanding-caching">
+                            <a class="text-gray-500 transition hover:text-gray-800 hover:underline">
                                 Password
                             </a>
                         </li>
                         <li class="ml-4 relative">
-                            <a class="text-gray-500 transition hover:text-gray-800 hover:underline" href="/docs/understanding-caching">
+                            <a class="text-gray-500 transition hover:text-gray-800 hover:underline">
                                 Textarea
                             </a>
                         </li>
                         <li class="ml-4 relative">
-                            <a class="text-gray-500 transition hover:text-gray-800 hover:underline" href="/docs/understanding-caching">
+                            <a class="text-gray-500 transition hover:text-gray-800 hover:underline">
                                 Checkbox
                             </a>
                         </li>
                         <li class="ml-4 relative">
-                            <a class="text-gray-500 transition hover:text-gray-800 hover:underline" href="/docs/understanding-caching">
+                            <a class="text-gray-500 transition hover:text-gray-800 hover:underline">
                                 Radio
                             </a>
                         </li>
                         <li class="ml-4 relative">
-                            <a class="text-gray-500 transition hover:text-gray-800 hover:underline" href="/docs/understanding-caching">
+                            <a class="text-gray-500 transition hover:text-gray-800 hover:underline">
                                 Toggle
                             </a>
                         </li>
@@ -67,12 +67,12 @@
                             </a>
                         </li>
                         <li class="ml-4 relative">
-                            <a class="text-gray-500 transition hover:text-gray-800 hover:underline" href="/docs/understanding-caching">
+                            <a class="text-gray-500 transition hover:text-gray-800 hover:underline">
                                 Badge
                             </a>
                         </li>
                         <li class="ml-4 relative">
-                            <a class="text-gray-500 transition hover:text-gray-800 hover:underline" href="/docs/understanding-caching">
+                            <a class="text-gray-500 transition hover:text-gray-800 hover:underline">
                                 Button
                             </a>
                         </li>
@@ -82,17 +82,17 @@
                             </a>
                         </li>
                         <li class="ml-4 relative">
-                            <a class="text-gray-500 transition hover:text-gray-800 hover:underline" href="/docs/understanding-caching">
+                            <a class="text-gray-500 transition hover:text-gray-800 hover:underline">
                                 Dropdown
                             </a>
                         </li>
                         <li class="ml-4 relative">
-                            <a class="text-gray-500 transition hover:text-gray-800 hover:underline" href="/docs/understanding-caching">
+                            <a class="text-gray-500 transition hover:text-gray-800 hover:underline">
                                 Errors
                             </a>
                         </li>
                         <li class="ml-4 relative">
-                            <a class="text-gray-500 transition hover:text-gray-800 hover:underline" href="/docs/understanding-caching">
+                            <a class="text-gray-500 transition hover:text-gray-800 hover:underline">
                                 Icons
                             </a>
                         </li>
@@ -102,7 +102,7 @@
                             </a>
                         </li>
                         <li class="ml-4 relative">
-                            <a class="text-gray-500 transition hover:text-gray-800 hover:underline" href="/docs/understanding-caching">
+                            <a class="text-gray-500 transition hover:text-gray-800 hover:underline">
                                 Select
                             </a>
                         </li>
@@ -110,7 +110,6 @@
                             <a href="{{ route('documentation.ui.tab') }}" class="text-gray-500 transition hover:text-gray-800 hover:underline">
                                 Tabs
                             </a>
-                            <x-icon icon="check-circle" class="w-4 h-4" color="green" />
                         </li>
                         <li class="ml-4 relative">
                             <a href="{{ route('documentation.ui.tooltip') }}" class="text-gray-500 transition hover:text-gray-800 hover:underline">
@@ -123,12 +122,12 @@
                     <h2 class="font-medium text-slate-900 font-display dark:text-white">Interactions</h2>
                     <ul role="list" class="mt-4 space-y-2 dark:border-slate-800 lg:space-y-4 lg:mt-4 lg:border-slate-200">
                         <li class="ml-4 relative">
-                            <a class="text-gray-500 transition hover:text-gray-800 hover:underline" href="/docs/understanding-caching">
+                            <a href="{{ route('documentation.ui.dialog') }}" class="text-gray-500 transition hover:text-gray-800 hover:underline">
                                 Dialog
                             </a>
                         </li>
                         <li class="ml-4 relative">
-                            <a class="text-gray-500 transition hover:text-gray-800 hover:underline" href="/docs/understanding-caching">
+                            <a class="text-gray-500 transition hover:text-gray-800 hover:underline">
                                 Toast
                             </a>
                         </li>

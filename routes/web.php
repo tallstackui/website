@@ -3,6 +3,7 @@
 use App\Http\Controllers\Documentation\Alert;
 use App\Http\Controllers\Documentation\Avatar;
 use App\Http\Controllers\Documentation\Card;
+use App\Http\Controllers\Documentation\Dialog;
 use App\Http\Controllers\Documentation\GetStarted;
 use App\Http\Controllers\Documentation\Modal;
 use App\Http\Controllers\Documentation\Tab;
@@ -22,6 +23,7 @@ Route::prefix('/docs')
                 Route::get('/alerts', Alert::class)->name('alert');
                 Route::get('/avatar', Avatar::class)->name('avatar');
                 Route::get('/card', Card::class)->name('card');
+                Route::get('/dialog', Dialog::class)->name('dialog');
                 Route::get('/tabs', Tab::class)->name('tab');
                 Route::get('/tooltip', Tooltip::class)->name('tooltip');
                 Route::get('/modal', Modal::class)->name('modal');
