@@ -1,6 +1,6 @@
 @props([
     'id',
-    'contents',
+    'contents' => null,
     'title' => null,
     'description' => null,
     'numbers' => false,
@@ -9,7 +9,7 @@
 ])
 
 <div x-data="{ code : false }" @isset($id) id="{{ $id }}" @endisset>
-    <div class="flex items-center justify-between">
+    <div {{ $attributes->merge(['class' => 'flex items-center justify-between']) }}>
         <div>
             @if ($title)
                 <h1 @class(['text-xl tracking-tight text-slate-900 font-medium', 'mb-4' => !$description])>
@@ -20,6 +20,7 @@
                 <p class="mb-4 text-sm text-slate-500">{{ $description }}</p>
             @endif
         </div>
+        @if ($contents)
         <div class="flex">
             <button class="flex items-center overflow-hidden rounded-md p-1 focus:outline-none sm:px-2"
                     :class="{
@@ -29,13 +30,16 @@
                 <x-icon name="code-bracket" class="h-5 w-5" />
             </button>
         </div>
+        @endif
     </div>
     <div>
         <div x-show="!code" @class(['rounded-lg p-6', 'bg-white' => $background])">
             {{ $slot }}
         </div>
-        <div class="overflow-auto custom-scrollbar rounded-lg bg-[#292D3E]" x-cloak x-show="code">
-            <x-code :language="$language" :$contents />
-        </div>
+        @if ($contents)
+            <div class="overflow-auto custom-scrollbar rounded-lg bg-[#292D3E]" x-cloak x-show="code">
+                <x-code :language="$language" :$contents />
+            </div>
+        @endif
     </div>
 </div>
