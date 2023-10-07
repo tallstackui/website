@@ -87,13 +87,13 @@
                             </a>
                         </li>
                         <li class="ml-4 relative">
-                            <a href="{{ route('documentation.ui.errors') }}" class="text-gray-500 transition hover:text-gray-800 hover:underline">
-                                Errors
+                            <a href="{{ route('documentation.ui.error') }}" class="text-gray-500 transition hover:text-gray-800 hover:underline">
+                                Error
                             </a>
                         </li>
                         <li class="ml-4 relative">
-                            <a class="text-gray-500 transition hover:text-gray-800 hover:underline">
-                                Icons
+                            <a href="{{ route('documentation.ui.icon') }}" class="text-gray-500 transition hover:text-gray-800 hover:underline">
+                                Icon
                             </a>
                         </li>
                         <li class="ml-4 relative">
@@ -108,7 +108,7 @@
                         </li>
                         <li class="ml-4 relative">
                             <a href="{{ route('documentation.ui.tab') }}" class="text-gray-500 transition hover:text-gray-800 hover:underline">
-                                Tabs
+                                Tab
                             </a>
                         </li>
                         <li class="ml-4 relative">

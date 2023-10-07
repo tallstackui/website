@@ -2,7 +2,7 @@
 
 namespace App\Enums\Examples;
 
-class Errors
+class Error
 {
     public const BASIC = <<<HTML
     <x-errors />
