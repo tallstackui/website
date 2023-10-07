@@ -22,7 +22,7 @@
         <x-code-preview title="Confirmations Examples"
                         description="Interacting with confirmation or cancellation."
                         :contents="$confirmation">
-            <livewire:documentation.interactions.dialog.confirmation-examples />
+            <livewire:documentation.interactions.dialog.confirmation />
         </x-code-preview>
     </x-section>
     <x-section title="Personalizations">

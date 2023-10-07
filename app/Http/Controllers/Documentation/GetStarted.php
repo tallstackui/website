@@ -2,31 +2,17 @@
 
 namespace App\Http\Controllers\Documentation;
 
+use App\Enums\Example;
 use App\Http\Controllers\Controller;
 use Illuminate\Contracts\View\View;
+use ReflectionException;
+use Throwable;
 
 class GetStarted extends Controller
 {
+    /** @throws ReflectionException|Throwable */
     public function __invoke(): View
     {
-        $installation = <<<HTML
-composer require tallstackui/tallstackui
-HTML;
-
-        $layout = <<<HTML
-<html>
-    <head>
-        ...
-        <tallstackui:scripts />
-        @vite(['resources/css/app.css', 'resources/js/app.js'])
-    </head>
-</html>
-HTML;
-
-        $command = <<<HTML
-php artisan tallstackui:install
-HTML;
-
-        return view('documentation.get-started', compact('installation', 'layout', 'command'));
+        return view('documentation.get-started', Example::GetStarted->variables());
     }
 }

@@ -2,23 +2,16 @@
 
 namespace App\Http\Controllers\Documentation;
 
+use App\Enums\Example;
 use App\Http\Controllers\Controller;
+use ReflectionException;
+use Throwable;
 
 class Tab extends Controller
 {
+    /** @throws ReflectionException|Throwable */
     public function __invoke()
     {
-        $basic = <<<HTML
-<x-tabs :options="['Tab 1', 'Tab 2']" selected="Tab 1">
-    <x-tabs.items tab="Tab 1">
-        Tab 1
-    </x-tabs.items>
-    <x-tabs.items tab="Tab 2">
-        Tab 2
-    </x-tabs.items>
-</x-tabs>
-HTML;
-
-        return view('documentation.tab', compact('basic'));
+        return view('documentation.tab', Example::Tab->variables());
     }
 }

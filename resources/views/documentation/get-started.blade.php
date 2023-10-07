@@ -14,7 +14,7 @@
         <p>1. Run the following command to TallStackUi as a composer dependency:</p>
         <x-code language="shell" :contents="$installation" />
         <p>2. Add the TallStackUi tag above the <x-block>@verbatim @vite @endverbatim</x-block>directive at your Blade template:</p>
-        <x-code language="shell" :contents="$layout" />
+        <x-code language="blade" :contents="$layout" />
         <p>Obviously you can add separately: <x-block>@verbatim @tallStackUiScripts @endverbatim</x-block> and <x-block>@verbatim @tallStackUiStyles @endverbatim</x-block></p>
         <p>3. Run the following commands:</p>
         <x-code language="shell" :contents="$command" />
