@@ -77,7 +77,7 @@
                             </a>
                         </li>
                         <li class="ml-4 relative">
-                            <a class="text-gray-500 transition hover:text-gray-800 hover:underline" href="/docs/understanding-caching">
+                            <a href="{{ route('documentation.ui.card') }}" class="text-gray-500 transition hover:text-gray-800 hover:underline">
                                 Card
                             </a>
                         </li>

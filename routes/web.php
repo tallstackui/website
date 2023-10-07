@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Documentation\Alert;
+use App\Http\Controllers\Documentation\Card;
 use App\Http\Controllers\Documentation\GetStarted;
 use App\Http\Controllers\Documentation\Tab;
 use App\Http\Controllers\Documentation\Tooltip;
@@ -17,6 +18,7 @@ Route::prefix('/docs')
             ->name('ui.')
             ->group(function () {
                 Route::get('/alerts', Alert::class)->name('alert');
+                Route::get('/card', Card::class)->name('card');
                 Route::get('/tabs', Tab::class)->name('tab');
                 Route::get('/tooltip', Tooltip::class)->name('tooltip');
             });
