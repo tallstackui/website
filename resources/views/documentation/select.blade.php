@@ -48,7 +48,6 @@
     </x-section>
     <x-section>
         <x-preview title="Styled Select, Multiple"
-                   description="An option to use multi-dimensional array."
                    language="blade"
                    :contents="$styledMultiple">
             <livewire:documentation.ui.select.styled :model="3"/>

@@ -38,84 +38,32 @@
                    language="blade"
                    :contents="$colors">
             <div class="space-y-2">
-                <x-alert title="TallStackUi">
-                    Primary
-                </x-alert>
-                <x-alert title="TallStackUi" color="secondary">
-                    Secondary
-                </x-alert>
-                <x-alert title="TallStackUi" color="black">
-                    Black
-                </x-alert>
-                <x-alert title="TallStackUi" color="white">
-                    White
-                </x-alert>
-                <x-alert title="TallStackUi" color="slate">
-                    Slate
-                </x-alert>
-                <x-alert title="TallStackUi" color="gray">
-                    Gray
-                </x-alert>
-                <x-alert title="TallStackUi" color="zinc">
-                    Zinc
-                </x-alert>
-                <x-alert title="TallStackUi" color="neutral">
-                    Neutral
-                </x-alert>
-                <x-alert title="TallStackUi" color="stone">
-                    Stone
-                </x-alert>
-                <x-alert title="TallStackUi" color="red">
-                    Red
-                </x-alert>
-                <x-alert title="TallStackUi" color="orange">
-                    Orange
-                </x-alert>
-                <x-alert title="TallStackUi" color="amber">
-                    Amber
-                </x-alert>
-                <x-alert title="TallStackUi" color="yellow">
-                    Yellow
-                </x-alert>
-                <x-alert title="TallStackUi" color="lime">
-                    Lime
-                </x-alert>
-                <x-alert title="TallStackUi" color="green">
-                    Green
-                </x-alert>
-                <x-alert title="TallStackUi" color="emerald">
-                    Emerald
-                </x-alert>
-                <x-alert title="TallStackUi" color="teal">
-                    Teal
-                </x-alert>
-                <x-alert title="TallStackUi" color="cyan">
-                    Cyan
-                </x-alert>
-                <x-alert title="TallStackUi" color="sky">
-                    Sky
-                </x-alert>
-                <x-alert title="TallStackUi" color="blue">
-                    Blue
-                </x-alert>
-                <x-alert title="TallStackUi" color="indigo">
-                    Indigo
-                </x-alert>
-                <x-alert title="TallStackUi" color="violet">
-                    Violet
-                </x-alert>
-                <x-alert title="TallStackUi" color="purple">
-                    Purple
-                </x-alert>
-                <x-alert title="TallStackUi" color="fuchsia">
-                    Fuchsia
-                </x-alert>
-                <x-alert title="TallStackUi" color="pink">
-                    Pink
-                </x-alert>
-                <x-alert title="TallStackUi" color="rose">
-                    Rose
-                </x-alert>
+                <x-alert title="TallStackUi" text="Primary" />
+                <x-alert title="TallStackUi" text="Secondary" color="secondary" />
+                <x-alert title="TallStackUi" text="Black" color="black" />
+                <x-alert title="TallStackUi" text="White" color="white" />
+                <x-alert title="TallStackUi" text="Slate" color="slate" />
+                <x-alert title="TallStackUi" text="Gray" color="gray" />
+                <x-alert title="TallStackUi" text="Zinc" color="zinc" />
+                <x-alert title="TallStackUi" text="Neutral" color="neutral" />
+                <x-alert title="TallStackUi" text="Stone" color="stone" />
+                <x-alert title="TallStackUi" text="Red" color="red" />
+                <x-alert title="TallStackUi" text="Orange" color="orange" />
+                <x-alert title="TallStackUi" text="Amber" color="amber" />
+                <x-alert title="TallStackUi" text="Yellow" color="yellow" />
+                <x-alert title="TallStackUi" text="Lime" color="lime" />
+                <x-alert title="TallStackUi" text="Green" color="green" />
+                <x-alert title="TallStackUi" text="Emerald" color="emerald" />
+                <x-alert title="TallStackUi" text="Teal" color="teal" />
+                <x-alert title="TallStackUi" text="Cyan" color="cyan" />
+                <x-alert title="TallStackUi" text="Sky" color="sky" />
+                <x-alert title="TallStackUi" text="Blue" color="blue" />
+                <x-alert title="TallStackUi" text="Indigo" color="indigo" />
+                <x-alert title="TallStackUi" text="Violet" color="violet" />
+                <x-alert title="TallStackUi" text="Purple" color="purple" />
+                <x-alert title="TallStackUi" text="Fuchsia" color="fuchsia" />
+                <x-alert title="TallStackUi" text="Pink" color="pink" />
+                <x-alert title="TallStackUi" text="Rose" color="rose" />
             </div>
         </x-preview>
     </x-section>
@@ -124,84 +72,32 @@
                    language="blade"
                    :contents="$translucents">
             <div class="space-y-2">
-                <x-alert title="TallStackUi" translucent>
-                    Primary
-                </x-alert>
-                <x-alert title="TallStackUi" color="secondary" translucent>
-                    Secondary
-                </x-alert>
-                <x-alert title="TallStackUi" color="black" translucent>
-                    Black
-                </x-alert>
-                <x-alert title="TallStackUi" color="white" translucent>
-                    White
-                </x-alert>
-                <x-alert title="TallStackUi" color="slate" translucent>
-                    Slate
-                </x-alert>
-                <x-alert title="TallStackUi" color="gray" translucent>
-                    Gray
-                </x-alert>
-                <x-alert title="TallStackUi" color="zinc" translucent>
-                    Zinc
-                </x-alert>
-                <x-alert title="TallStackUi" color="neutral" translucent>
-                    Neutral
-                </x-alert>
-                <x-alert title="TallStackUi" color="stone" translucent>
-                    Stone
-                </x-alert>
-                <x-alert title="TallStackUi" color="red" translucent>
-                    Red
-                </x-alert>
-                <x-alert title="TallStackUi" color="orange" translucent>
-                    Orange
-                </x-alert>
-                <x-alert title="TallStackUi" color="amber" translucent>
-                    Amber
-                </x-alert>
-                <x-alert title="TallStackUi" color="yellow" translucent>
-                    Yellow
-                </x-alert>
-                <x-alert title="TallStackUi" color="lime" translucent>
-                    Lime
-                </x-alert>
-                <x-alert title="TallStackUi" color="green" translucent>
-                    Green
-                </x-alert>
-                <x-alert title="TallStackUi" color="emerald" translucent>
-                    Emerald
-                </x-alert>
-                <x-alert title="TallStackUi" color="teal" translucent>
-                    Teal
-                </x-alert>
-                <x-alert title="TallStackUi" color="cyan" translucent>
-                    Cyan
-                </x-alert>
-                <x-alert title="TallStackUi" color="sky" translucent>
-                    Sky
-                </x-alert>
-                <x-alert title="TallStackUi" color="blue" translucent>
-                    Blue
-                </x-alert>
-                <x-alert title="TallStackUi" color="indigo" translucent>
-                    Indigo
-                </x-alert>
-                <x-alert title="TallStackUi" color="violet" translucent>
-                    Violet
-                </x-alert>
-                <x-alert title="TallStackUi" color="purple" translucent>
-                    Purple
-                </x-alert>
-                <x-alert title="TallStackUi" color="fuchsia" translucent>
-                    Fuchsia
-                </x-alert>
-                <x-alert title="TallStackUi" color="pink" translucent>
-                    Pink
-                </x-alert>
-                <x-alert title="TallStackUi" color="rose" translucent>
-                    Rose
-                </x-alert>
+                <x-alert title="TallStackUi" text="Primary" translucent />
+                <x-alert title="TallStackUi" text="Secondary" color="secondary" translucent />
+                <x-alert title="TallStackUi" text="Black" color="black" translucent />
+                <x-alert title="TallStackUi" text="White" color="white" translucent />
+                <x-alert title="TallStackUi" text="Slate" color="slate" translucent />
+                <x-alert title="TallStackUi" text="Gray" color="gray" translucent />
+                <x-alert title="TallStackUi" text="Zinc" color="zinc" translucent />
+                <x-alert title="TallStackUi" text="Neutral" color="neutral" translucent />
+                <x-alert title="TallStackUi" text="Stone" color="stone" translucent />
+                <x-alert title="TallStackUi" text="Red" color="red" translucent />
+                <x-alert title="TallStackUi" text="Orange" color="orange" translucent />
+                <x-alert title="TallStackUi" text="Amber" color="amber" translucent />
+                <x-alert title="TallStackUi" text="Yellow" color="yellow" translucent />
+                <x-alert title="TallStackUi" text="Lime" color="lime" translucent />
+                <x-alert title="TallStackUi" text="Green" color="green" translucent />
+                <x-alert title="TallStackUi" text="Emerald" color="emerald" translucent />
+                <x-alert title="TallStackUi" text="Teal" color="teal" translucent />
+                <x-alert title="TallStackUi" text="Cyan" color="cyan" translucent />
+                <x-alert title="TallStackUi" text="Sky" color="sky" translucent />
+                <x-alert title="TallStackUi" text="Blue" color="blue" translucent />
+                <x-alert title="TallStackUi" text="Indigo" color="indigo" translucent />
+                <x-alert title="TallStackUi" text="Violet" color="violet" translucent />
+                <x-alert title="TallStackUi" text="Purple" color="purple" translucent />
+                <x-alert title="TallStackUi" text="Fuchsia" color="fuchsia" translucent />
+                <x-alert title="TallStackUi" text="Pink" color="pink" translucent />
+                <x-alert title="TallStackUi" text="Rose" color="rose" translucent />
             </div>
         </x-preview>
     </x-section>

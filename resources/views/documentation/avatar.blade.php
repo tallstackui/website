@@ -59,9 +59,7 @@
         <x-preview title="Square Variations"
                    language="blade"
                    :contents="$square">
-            <x-avatar label="TS" sm square />
-            <x-avatar label="TS" md square />
-            <x-avatar label="TS" lg square />
+            <x-avatar label="TS" square />
         </x-preview>
     </x-section>
     <x-section class="space-y-4">

@@ -32,7 +32,7 @@
                    description="You can use any color from the TailwindCSS palette."
                    language="blade"
                    :contents="$colors">
-            <livewire:documentation.ui.errors title="Ops! There are :count validation errors:" color="sky" />
+            <livewire:documentation.ui.errors color="sky" />
         </x-preview>
     </x-section>
 </x-layout>

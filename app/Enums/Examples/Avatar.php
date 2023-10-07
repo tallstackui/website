@@ -44,9 +44,7 @@ class Avatar
     HTML;
 
     public const SQUARE = <<<'HTML'
-    <x-avatar label="TS" sm square />
-    <x-avatar label="TS" md square />
-    <x-avatar label="TS" lg square />
+    <x-avatar label="TS" square />
     HTML;
 
     public const MODELABLE = <<<'HTML'

@@ -21,6 +21,6 @@ class Error
     HTML;
 
     public const COLORS = <<<'HTML'
-    <x-errors title="Ops! There are :count validation errors:" color="sky" />
+    <x-errors color="sky" />
     HTML;
 }
