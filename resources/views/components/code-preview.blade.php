@@ -1,6 +1,6 @@
 @props([
     'id',
-    'code',
+    'contents',
     'title' => null,
     'description' => null,
     'numbers' => false,
@@ -34,7 +34,7 @@
             {{ $slot }}
         </div>
         <div class="overflow-auto custom-scrollbar rounded-lg bg-[#292D3E]" x-cloak x-show="code">
-            <x-code :language="$language" :contents="$code" :line-numbers="$numbers" />
+            <x-code :language="$language" :$contents />
         </div>
     </div>
 </div>

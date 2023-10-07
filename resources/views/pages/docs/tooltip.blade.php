@@ -9,7 +9,7 @@
         <x-code-preview title="Basic Usage"
                         description="Tooltips are triggered when hovering over an element."
                         language="blade"
-                        :code="$test">
+                        :contents="$test">
             <div class="inline-flex space-x-2">
                 <x-tooltip text="Top" position="top" />
                 <x-tooltip text="Bottom" position="bottom" />
