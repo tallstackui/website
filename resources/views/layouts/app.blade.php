@@ -15,7 +15,7 @@
     <tallstackui:scripts />
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
-<body class="min-h-full flex-col justify-center bg-gray-100 dark:bg-slate-900">
+<body class="min-h-full flex-col justify-center bg-gray-100 dark:bg-slate-900" x-cloak>
     <x-dialog />
     <x-toast />
     <x-layout.header />

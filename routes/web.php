@@ -10,6 +10,7 @@ use App\Http\Controllers\Documentation\Error;
 use App\Http\Controllers\Documentation\GetStarted;
 use App\Http\Controllers\Documentation\Icon;
 use App\Http\Controllers\Documentation\Modal;
+use App\Http\Controllers\Documentation\Select;
 use App\Http\Controllers\Documentation\Tab;
 use App\Http\Controllers\Documentation\Toast;
 use App\Http\Controllers\Documentation\Tooltip;
@@ -33,6 +34,7 @@ Route::prefix('/docs')
                 Route::get('/error', Error::class)->name('error');
                 Route::get('/icon', Icon::class)->name('icon');
                 Route::get('/dialog', Dialog::class)->name('dialog');
+                Route::get('/select', Select::class)->name('select');
                 Route::get('/tab', Tab::class)->name('tab');
                 Route::get('/toast', Toast::class)->name('toast');
                 Route::get('/tooltip', Tooltip::class)->name('tooltip');

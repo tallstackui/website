@@ -11,6 +11,7 @@ use App\Enums\Examples\Error;
 use App\Enums\Examples\GetStarted;
 use App\Enums\Examples\Icon;
 use App\Enums\Examples\Modal;
+use App\Enums\Examples\Select;
 use App\Enums\Examples\Tab;
 use App\Enums\Examples\Toast;
 use App\Enums\Examples\Tooltip;
@@ -27,6 +28,7 @@ enum Example: string
     case Error = Error::class;
     case Icon = Icon::class;
     case GetStarted = GetStarted::class;
+    case Select = Select::class;
     case Tab = Tab::class;
     case Toast = Toast::class;
     case Tooltip = Tooltip::class;
