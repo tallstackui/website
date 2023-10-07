@@ -4,7 +4,7 @@ namespace App\Enums\Examples;
 
 class Dialog
 {
-    public const TAG = <<<HTML
+    public const TAG = <<<'HTML'
     <html>
         <body>
             <x-dialog />
@@ -23,23 +23,23 @@ class Dialog
     }
     HTML;
 
-    public const DISPATCH = <<<HTML
+    public const DISPATCH = <<<'HTML'
     // ...
 
     public function save(): void
     {
-        \$this->dialog()->success('...');
-        \$this->dialog()->error('...');
-        \$this->dialog()->warning('...');
-        \$this->dialog()->info('...');
+        $this->dialog()->success('...');
+        $this->dialog()->error('...');
+        $this->dialog()->warning('...');
+        $this->dialog()->info('...');
     }
     HTML;
 
-    public const BASIC = <<<HTML
-    \$this->dialog()->success('Success', 'This is a success message.');
-    \$this->dialog()->error('Error', 'This is an error message.');
-    \$this->dialog()->warning('Warning', 'This is a warning message.');
-    \$this->dialog()->info('Info', 'This is an info message.');
+    public const BASIC = <<<'HTML'
+    $this->dialog()->success('Success', 'This is a success message.');
+    $this->dialog()->error('Error', 'This is an error message.');
+    $this->dialog()->warning('Warning', 'This is a warning message.');
+    $this->dialog()->info('Info', 'This is an info message.');
     HTML;
 
     public const CONFIRMATION = <<<HTML
@@ -74,11 +74,11 @@ class Dialog
     }
     HTML;
 
-    public const Z_INDEX = <<<HTML
+    public const Z_INDEX = <<<'HTML'
     <x-dialog z-index="z-50" />
     HTML;
 
-    public const BLUR = <<<HTML
+    public const BLUR = <<<'HTML'
     <x-dialog blur />
     HTML;
 }

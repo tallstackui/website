@@ -4,7 +4,7 @@ namespace App\Enums\Examples;
 
 class Tab
 {
-    public const BASIC = <<<HTML
+    public const BASIC = <<<'HTML'
     <x-tabs :options="['Tab 1', 'Tab 2']" selected="Tab 1">
         <x-tabs.items tab="Tab 1">
             Tab 1

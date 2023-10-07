@@ -4,18 +4,19 @@ namespace App\Enums\Examples;
 
 class Error
 {
-    public const BASIC = <<<HTML
+    public const BASIC = <<<'HTML'
     <x-errors />
     HTML;
-    public const SPECIFIC = <<<HTML
+
+    public const SPECIFIC = <<<'HTML'
     <x-errors only="name" />
 
     <!-- or -->
 
     <x-errors :only="['name', 'description']" />
     HTML;
-    public const CUSTOMIZED = <<<HTML
+
+    public const CUSTOMIZED = <<<'HTML'
     <x-errors title="Ops! There are :count validation errors:" />
     HTML;
-
 }

@@ -4,13 +4,13 @@ namespace App\Enums\Examples;
 
 class Card
 {
-    public const BASIC = <<<HTML
+    public const BASIC = <<<'HTML'
     <x-card>
         TallStackUi
     </x-card>
     HTML;
 
-    public const HEADER = <<<HTML
+    public const HEADER = <<<'HTML'
     <x-card>
         <x-slot:header>
             TallStackUi
@@ -25,7 +25,7 @@ class Card
     </x-card>
     HTML;
 
-    public const FOOTER = <<<HTML
+    public const FOOTER = <<<'HTML'
     <x-card>
         TallStackUi
         <x-slot:footer>

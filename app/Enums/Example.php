@@ -15,8 +15,6 @@ use App\Enums\Examples\Tab;
 use App\Enums\Examples\Tooltip;
 use Exception;
 use ReflectionClass;
-use ReflectionException;
-use Throwable;
 
 enum Example: string
 {
@@ -32,10 +30,9 @@ enum Example: string
     case Tooltip = Tooltip::class;
     case Modal = Modal::class;
 
-    /** @throws ReflectionException|Throwable|Exception */
     public function variables(): array
     {
-        throw_if(!class_exists($this->value), new Exception("Invalid code example"));
+        throw_if(! class_exists($this->value), new Exception('Invalid code example'));
 
         $constants = (new ReflectionClass($this->value))->getConstants();
 
@@ -44,7 +41,7 @@ enum Example: string
                 return [
                     str($key)->lower()
                         ->camel()
-                        ->value() => trim($value)
+                        ->value() => trim($value),
                 ];
             })->toArray()];
     }

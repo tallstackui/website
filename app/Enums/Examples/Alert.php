@@ -4,13 +4,13 @@ namespace App\Enums\Examples;
 
 class Alert
 {
-    public const BASIC = <<<HTML
+    public const BASIC = <<<'HTML'
     <x-alert>
         TallStackUi
     </x-alert>
     HTML;
 
-    public const TITLE = <<<HTML
+    public const TITLE = <<<'HTML'
     <x-alert>
         <x-slot:title>
             TallStackUi
@@ -25,13 +25,13 @@ class Alert
     </x-alert>
     HTML;
 
-    public const CLOSEABLE = <<<HTML
+    public const CLOSEABLE = <<<'HTML'
     <x-alert title="TallStackUi" closeable>
         TallStackUi
     </x-alert>
     HTML;
 
-    public const COLORS = <<<HTML
+    public const COLORS = <<<'HTML'
     <x-alert title="TallStackUi">
         TallStackUi
     </x-alert>
@@ -49,7 +49,7 @@ class Alert
     </x-alert>
     HTML;
 
-    public const TRANSLUCENTS = <<<HTML
+    public const TRANSLUCENTS = <<<'HTML'
     <x-alert title="TallStackUi" translucent>
         TallStackUi
     </x-alert>

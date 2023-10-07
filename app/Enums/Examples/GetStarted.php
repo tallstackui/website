@@ -4,11 +4,11 @@ namespace App\Enums\Examples;
 
 class GetStarted
 {
-    public const INSTALLATION = <<<HTML
+    public const INSTALLATION = <<<'HTML'
     composer require tallstackui/tallstackui
     HTML;
 
-    public const LAYOUT = <<<HTML
+    public const LAYOUT = <<<'HTML'
     <html>
         <head>
             <tallstackui:scripts />
@@ -17,7 +17,7 @@ class GetStarted
     </html>
     HTML;
 
-    public const COMMAND = <<<HTML
+    public const COMMAND = <<<'HTML'
     php artisan tallstackui:install
     HTML;
 }

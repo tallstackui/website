@@ -51,6 +51,16 @@
         ],
         "post-create-project-cmd": [
             "@php artisan key:generate --ansi"
+        ],
+        "test": "./vendor/bin/pest",
+        "test:feature": "./vendor/bin/pest --filter=Feature",
+        "type": "./vendor/bin/pest --type-coverage",
+        "format": "./vendor/bin/pint",
+        "analyse": "./vendor/bin/phpstan analyse --memory-limit=2G",
+        "ci": [
+            "./vendor/bin/pint --test",
+            "./vendor/bin/phpstan analyse --memory-limit=2G",
+            "./vendor/bin/pest"
         ]
     },
     "extra": {
