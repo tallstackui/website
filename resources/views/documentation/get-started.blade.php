@@ -15,13 +15,9 @@
         <x-code language="shell" :contents="$installation" />
         <p>2. Add the TallStackUi tag above the <x-block>@verbatim @vite @endverbatim</x-block>directive at your Blade template:</p>
         <x-code language="shell" :contents="$layout" />
-        <p>Obviously you can add separately: <x-block>@verbatim @tasteUiScripts @endverbatim</x-block> and <x-block>@verbatim @tasteUiStyles @endverbatim</x-block></p>
+        <p>Obviously you can add separately: <x-block>@verbatim @tallStackUiScripts @endverbatim</x-block> and <x-block>@verbatim @tallStackUiStyles @endverbatim</x-block></p>
         <p>3. Run the following commands:</p>
         <x-code language="shell" :contents="$command" />
         <p><b>Let the game begin!</b> You're ready to create your first TallStackUi components.</p>
     </x-section>
-    <x-slot:indexes>
-        <x-layout.sidebar.index title="Requirements" anchor="#requirements" />
-        <x-layout.sidebar.index title="Installation" anchor="#installation" />
-    </x-slot:indexes>
 </x-layout>

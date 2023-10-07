@@ -149,13 +149,13 @@
                         description="An option to control the modal entangled with a Livewire property."
                         language="blade"
                         :contents="$wireable">
-            <livewire:documentation.modalentangle />
+            <livewire:documentation.modal.entangle />
         </x-code-preview>
         <x-code-preview title="Wireable Personalized"
                         description="An option to customize which property to use to control the modal entangled with a Livewire property."
                         language="blade"
                         :contents="$wireableCustomized">
-            <livewire:documentation.modalcustomentangle />
+            <livewire:documentation.modal.customentangle />
         </x-code-preview>
         <p>To open the modal using this option use the <a class="underline" href="https://livewire.laravel.com/docs/actions#toggle" target="_blank">Livewire toggle magic actions.</a></p>
     </x-section>

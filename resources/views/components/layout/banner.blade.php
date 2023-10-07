@@ -4,7 +4,7 @@
             <div class="relative z-10 md:text-center lg:text-left">
                 <div class="relative">
                     <p class="inline bg-gradient-to-r from-indigo-200 via-sky-400 to-indigo-200 bg-clip-text text-5xl tracking-tight text-transparent font-display">
-                        TasteUi
+                        TallStackUi
                     </p>
                     <div class="mt-8 flex gap-4 md:justify-center lg:justify-start">
                         <a href="#" class="rounded-full bg-blue-500 p-2 text-sm text-white font-semibold">

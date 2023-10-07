@@ -10,14 +10,14 @@ class GetStarted extends Controller
     public function __invoke(): View
     {
         $installation = <<<HTML
-composer require tasteui/tasteui
+composer require tallstackui/tallstackui
 HTML;
 
         $layout = <<<HTML
 <html>
     <head>
         ...
-        <tasteui:scripts />
+        <tallstackui:scripts />
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
 </html>

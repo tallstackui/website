@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "727b3265038e7352f6171cb5490f3edb",
+    "content-hash": "e5675dad1321e17c69645162947282ee",
     "packages": [
         {
             "name": "brick/math",
@@ -5565,17 +5565,17 @@
             "time": "2023-09-12T10:11:35+00:00"
         },
         {
-            "name": "tasteui/tasteui",
-            "version": "v0.0.3",
+            "name": "tallstackui/tallstackui",
+            "version": "v0.1.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/tasteui/tasteui.git",
-                "reference": "e9d8c79af68613835e05da8f26548fb1c3870ed1"
+                "url": "https://github.com/tallstackui/tallstackui.git",
+                "reference": "2c3667bbd206d2a58407b7ccedc568af1b5e94e8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tasteui/tasteui/zipball/e9d8c79af68613835e05da8f26548fb1c3870ed1",
-                "reference": "e9d8c79af68613835e05da8f26548fb1c3870ed1",
+                "url": "https://api.github.com/repos/tallstackui/tallstackui/zipball/2c3667bbd206d2a58407b7ccedc568af1b5e94e8",
+                "reference": "2c3667bbd206d2a58407b7ccedc568af1b5e94e8",
                 "shasum": ""
             },
             "require": {
@@ -5595,7 +5595,7 @@
             "extra": {
                 "laravel": {
                     "providers": [
-                        "TasteUi\\TasteUiServiceProvider"
+                        "TallStackUi\\TallStackUiServiceProvider"
                     ],
                     "aliases": []
                 }
@@ -5605,7 +5605,7 @@
                     "src/helpers.php"
                 ],
                 "psr-4": {
-                    "TasteUi\\": "src/"
+                    "TallStackUi\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -5620,10 +5620,10 @@
             ],
             "description": "A curated list of TallStack UI Components",
             "support": {
-                "issues": "https://github.com/tasteui/tasteui/issues",
-                "source": "https://github.com/tasteui/tasteui/tree/v0.0.3"
+                "issues": "https://github.com/tallstackui/tallstackui/issues",
+                "source": "https://github.com/tallstackui/tallstackui/tree/v0.1.0"
             },
-            "time": "2023-10-06T13:16:03+00:00"
+            "time": "2023-10-07T01:11:16+00:00"
         },
         {
             "name": "tijsverkoyen/css-to-inline-styles",
