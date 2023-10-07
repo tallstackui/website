@@ -3,7 +3,7 @@
         Alert
     </x-slot:title>
     <x-slot:description>
-        Alert components similar to the Bootstrap alerts.
+        Alert components.
     </x-slot:description>
     <x-section>
         <x-preview title="Basic Usage"

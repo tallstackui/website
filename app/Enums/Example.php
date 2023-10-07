@@ -5,6 +5,7 @@ namespace App\Enums;
 use App\Enums\Examples\Alert;
 use App\Enums\Examples\Avatar;
 use App\Enums\Examples\Badge;
+use App\Enums\Examples\Button;
 use App\Enums\Examples\Card;
 use App\Enums\Examples\Dialog;
 use App\Enums\Examples\Error;
@@ -23,6 +24,7 @@ enum Example: string
     case Alert = Alert::class;
     case Avatar = Avatar::class;
     case Badge = Badge::class;
+    case Button = Button::class;
     case Card = Card::class;
     case Dialog = Dialog::class;
     case Error = Error::class;

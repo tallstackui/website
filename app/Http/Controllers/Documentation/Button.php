@@ -6,10 +6,10 @@ use App\Enums\Example;
 use App\Http\Controllers\Controller;
 use Illuminate\Contracts\View\View;
 
-class Card extends Controller
+class Button extends Controller
 {
     public function __invoke(): View
     {
-        return view('documentation.card', Example::Card->variables());
+        return view('documentation.button', Example::Button->variables());
     }
 }

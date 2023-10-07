@@ -3,6 +3,7 @@
 use App\Http\Controllers\Documentation\Alert;
 use App\Http\Controllers\Documentation\Avatar;
 use App\Http\Controllers\Documentation\Badge;
+use App\Http\Controllers\Documentation\Button;
 use App\Http\Controllers\Documentation\Card;
 use App\Http\Controllers\Documentation\Dialog;
 use App\Http\Controllers\Documentation\Dropdown;
@@ -29,6 +30,7 @@ Route::prefix('/docs')
                 Route::get('/alert', Alert::class)->name('alert');
                 Route::get('/avatar', Avatar::class)->name('avatar');
                 Route::get('/badge', Badge::class)->name('badge');
+                Route::get('/button', Button::class)->name('button');
                 Route::get('/card', Card::class)->name('card');
                 Route::get('/dropdown', Dropdown::class)->name('dropdown');
                 Route::get('/error', Error::class)->name('error');

@@ -34,9 +34,9 @@
                    language="blade"
                    :contents="$sizes">
             <div class="inline-flex space-x-2">
-                <x-tooltip text="SM" position="top" sm/>
-                <x-tooltip text="MD" position="bottom" md/>
-                <x-tooltip text="LG" position="left" lg/>
+                <x-tooltip text="SM" sm/>
+                <x-tooltip text="MD" md/>
+                <x-tooltip text="LG" lg/>
             </div>
         </x-preview>
     </x-section>

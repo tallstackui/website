@@ -30,7 +30,7 @@
             ]" select="label:label|value:value"/>
         </x-preview>
     </x-section>
-    <div class="border border-gray-300 my-8"></div>
+    <x-separator />
     <x-section>
         <x-preview title="Livewire Styled Select"
                    description="Customized select component to interact with Livewire."
@@ -69,7 +69,7 @@
             <livewire:documentation.ui.select.styled :model="5"/>
         </x-preview>
     </x-section>
-    <div class="border border-gray-300 my-8"></div>
+    <x-separator />
     <x-section>
         <x-preview title="Livewire Searchable Select"
                    description="Customized searchable select component to interact with search through API."
