@@ -7,28 +7,30 @@
     </x-slot:description>
     <x-section>
         1. Insert the Toast component on your main layout.
-        <x-code language="html" :contents="$tag" />
+        <x-code language="html" :contents="$tag"/>
         2. Use the Interactions trait in your Livewire component.
-        <x-code language="php" :contents="$trait" />
+        <x-code language="php" :contents="$trait"/>
         3. Dispatch the Toast from a method.
-        <x-code language="php" :contents="$dispatch" />
+        <x-code language="php" :contents="$dispatch"/>
     </x-section>
     <x-section>
-        <x-code-preview title="Basic Usage" :contents="$basic">
-            <livewire:documentation.interactions.toast.examples />
-        </x-code-preview>
+        <x-preview title="Basic Usage" :contents="$basic">
+            <livewire:documentation.interactions.toast.examples/>
+        </x-preview>
     </x-section>
     <x-section>
-        <x-code-preview title="Confirmations Examples"
-                        description="Interacting with confirmation or cancellation."
-                        :contents="$confirmation">
-            <livewire:documentation.interactions.toast.confirmation />
-        </x-code-preview>
+        <x-preview title="Confirmations Examples"
+                   description="Interacting with confirmation or cancellation."
+                   :contents="$confirmation">
+            <livewire:documentation.interactions.toast.confirmation/>
+        </x-preview>
     </x-section>
     <x-section title="Personalizations">
-        1. You can personalize the <x-block>z-index</x-block> of the Toast component:
-        <x-code language="html" :contents="$zIndex" />
+        1. You can personalize the
+        <x-block>z-index</x-block>
+        of the Toast component:
+        <x-code language="html" :contents="$zIndex"/>
         1. You can personalize the positions of the Toast component:
-        <x-code language="html" :contents="$positions" />
+        <x-code language="html" :contents="$positions"/>
     </x-section>
 </x-layout>

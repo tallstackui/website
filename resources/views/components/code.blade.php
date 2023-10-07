@@ -1,4 +1,4 @@
-@props(['contents' => null, 'language' => 'php', ''])
+@props(['contents' => null, 'language' => 'php'])
 
 @php($contents ??= $slot->toHtml())
 
