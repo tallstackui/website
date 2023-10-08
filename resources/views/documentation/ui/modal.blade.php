@@ -130,7 +130,7 @@
                    description="An option to prevent the user from closing the modal when click outside."
                    language="blade"
                    :contents="$uncloseable">
-            <x-modal id="uncloseable-modal" title="TallStackUi" :closeable="false">
+            <x-modal id="uncloseable-modal" title="TallStackUi" uncloseable>
                 TallStackUi
                 <x-slot:footer>
                     <x-button color="red" x-on:click="$modalClose('uncloseable-modal')">Close</x-button>

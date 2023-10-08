@@ -55,7 +55,7 @@ class Modal
     HTML;
 
     public const UNCLOSEABLE = <<<'HTML'
-    <x-modal title="TallStackUi" :closeable="false">
+    <x-modal title="TallStackUi" uncloseable>
         TallStackUi
     </x-modal>
     HTML;
