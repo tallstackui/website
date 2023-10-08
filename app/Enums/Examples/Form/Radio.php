@@ -19,7 +19,6 @@ class Radio
     <x-radio lg />
     HTML;
 
-
     public const COLORS = <<<'HTML'
     <x-radio />
     <x-radio color="secondary" />

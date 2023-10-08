@@ -139,8 +139,8 @@
             <h2 class="font-medium text-slate-900 font-display dark:text-white">Diggin Deeper</h2>
             <ul role="list" class="mt-4 space-y-2 dark:border-slate-800 lg:space-y-4 lg:mt-4 lg:border-slate-200">
                 <li class="ml-4 relative">
-                    <a href="{{ route('documentation.dark-theme') }}" class="text-gray-500 transition hover:text-gray-800 hover:underline">
-                        Dark Theme Helper
+                    <a href="{{ route('welcome') }}" class="text-gray-500 transition hover:text-gray-800 hover:underline">
+                        Configurations
                     </a>
                 </li>
                 <li class="ml-4 relative">
@@ -149,9 +149,36 @@
                     </a>
                 </li>
                 <li class="ml-4 relative">
-                    <a href="{{ route('documentation.get-started') }}" class="text-gray-500 transition hover:text-gray-800 hover:underline">
-                        Personalization
-                    </a>
+                    <h2 class="font-medium text-slate-900 font-display dark:text-white">Personalization</h2>
+                    <ul role="list" class="mt-4 space-y-2 dark:border-slate-800 lg:space-y-4 lg:mt-4 lg:border-slate-200">
+                        <li class="ml-4 relative">
+                            <a href="{{ route('documentation.dark-theme') }}" class="text-gray-500 transition hover:text-gray-800 hover:underline">
+                                Concept
+                            </a>
+                        </li>
+                    </ul>
+                    <ul role="list" class="mt-4 space-y-2 dark:border-slate-800 lg:space-y-4 lg:mt-4 lg:border-slate-200">
+                        <li class="ml-4 relative">
+                            <a href="{{ route('documentation.dark-theme') }}" class="text-gray-500 transition hover:text-gray-800 hover:underline">
+                                Soft Personalization
+                            </a>
+                        </li>
+                        <li class="ml-4 relative">
+                            <a href="{{ route('documentation.dark-theme') }}" class="text-gray-500 transition hover:text-gray-800 hover:underline">
+                                Deep Personalization
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="ml-4 relative">
+                    <h2 class="font-medium text-slate-900 font-display dark:text-white">Helpers</h2>
+                    <ul role="list" class="mt-4 space-y-2 dark:border-slate-800 lg:space-y-4 lg:mt-4 lg:border-slate-200">
+                        <li class="ml-4 relative">
+                            <a href="{{ route('documentation.dark-theme') }}" class="text-gray-500 transition hover:text-gray-800 hover:underline">
+                                Dark Theme
+                            </a>
+                        </li>
+                    </ul>
                 </li>
             </ul>
         </li>

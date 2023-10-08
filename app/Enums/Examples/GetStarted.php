@@ -42,6 +42,13 @@ class GetStarted
         require('./vendor/tallstackui/tallstackui/tailwind.config.js')
     ],
 
+    content: [
+        // ...
+
+        './vendor/tallstackui/tallstackui/resources/views/**/*.blade.php',
+        './vendor/tallstackui/tallstackui/src/**/*.php',
+    ],
+
     // ...
     HTML;
 

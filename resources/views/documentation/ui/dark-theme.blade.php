@@ -12,14 +12,16 @@
             After applying the helper, <b class="underline">an AlpineJS variable called darkTheme will be offered to control the dark theme</b>
             persisting the changes in the local storage.
         </p>
-        <p class="mt-4">1. Add the helper on the html tag of your layout:</p>
+        <p class="mt-4">1. Enable the dark theme support in your TailwindCSS:</p>
+        <x-code language="js" :contents="$tailwindcss"/>
+        <p class="mt-4">2. Add the helper on the <x-block>html</x-block> tag of your layout:</p>
         <x-code language="blade" :contents="$helper"/>
-        <p>Alternatively, you can customize the name of the state stored in local storage of the browser, <b class="underline">default is dark-theme</b></p>
+        <p>Alternatively, you can customize the name of the state stored in local storage of the browser, <b class="underline">default name is dark-theme</b></p>
         <x-code language="blade" :contents="$customized"/>
-        <p>2. Create a button to control the dark theme:</p>
+        <p>3. Create a button to control the dark theme:</p>
         <x-code language="blade" :contents="$button"/>
-        <p>3. After that, all you need to do is adapt all your CSS classes:</p>
+        <x-alert text="This button must be covered by the layout that received the helper above." color="pink" icon="exclamation-circle" translucent />
+        <p class="mt-2">4. After that, all you need to do is adapt all your CSS classes to the dark theme variation:</p>
         <x-code language="blade" :contents="$example"/>
-        <x-alert text="You need to configure the TailwindCSS to accept the dark theme based on class." color="pink" icon="exclamation-circle" translucent />
     </x-section>
 </x-layout>

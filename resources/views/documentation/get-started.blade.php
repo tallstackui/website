@@ -16,7 +16,7 @@
         <x-code language="shell" :contents="$installation"/>
         <p>2. Add the TallStackUi tag above the vite tag in your layout:</p>
         <x-code language="blade" :contents="$script"/>
-        <p>Obviously you can add separately:</p>
+        <p>If your prefer, you can add separately:</p>
         <x-code language="blade" :contents="$manual"/>
         <x-alert text="You must add the TallStackUi setup or directives above the @vite tag." color="pink" icon="exclamation-circle" translucent />
         <p>3. Edit the <x-block>tailwindcss.config.js</x-block> of your application inserting:</p>

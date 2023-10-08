@@ -4,6 +4,14 @@ namespace App\Enums\Examples;
 
 class DarkTheme
 {
+    public const TAILWINDCSS = <<<'HTML'
+    export default {
+        darkMode: 'class',
+
+        // ...
+    }
+    HTML;
+
     public const HELPER = <<<'HTML'
     <html x-data="tallstackui_darkTheme()"
           x-bind:class="{ 'dark bg-gray-700': darkTheme, 'bg-white': !darkTheme }">
