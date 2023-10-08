@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Documentation;
+namespace App\Http\Controllers\Documentation\Ui;
 
 use App\Enums\Example;
 use App\Http\Controllers\Controller;

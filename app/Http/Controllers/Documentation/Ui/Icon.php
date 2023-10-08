@@ -1,15 +1,15 @@
 <?php
 
-namespace App\Http\Controllers\Documentation;
+namespace App\Http\Controllers\Documentation\Ui;
 
 use App\Enums\Example;
 use App\Http\Controllers\Controller;
 use Illuminate\Contracts\View\View;
 
-class Badge extends Controller
+class Icon extends Controller
 {
     public function __invoke(): View
     {
-        return view('documentation.ui.badge', Example::Badge->variables());
+        return view('documentation.ui.icon', Example::Icon->variables());
     }
 }

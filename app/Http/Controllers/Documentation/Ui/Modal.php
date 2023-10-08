@@ -1,15 +1,15 @@
 <?php
 
-namespace App\Http\Controllers\Documentation;
+namespace App\Http\Controllers\Documentation\Ui;
 
 use App\Enums\Example;
 use App\Http\Controllers\Controller;
 use Illuminate\Contracts\View\View;
 
-class Avatar extends Controller
+class Modal extends Controller
 {
     public function __invoke(): View
     {
-        return view('documentation.ui.avatar', Example::Avatar->variables());
+        return view('documentation.ui.modal', Example::Modal->variables());
     }
 }
