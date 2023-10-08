@@ -47,32 +47,32 @@
                    language="blade"
                    :contents="$colors">
             <div class="gap-2">
-                <x-badge text="TallStackUi" color="primary" />
-                <x-badge text="TallStackUi" color="secondary" />
-                <x-badge text="TallStackUi" color="white" />
-                <x-badge text="TallStackUi" color="black" />
-                <x-badge text="TallStackUi" color="slate" />
-                <x-badge text="TallStackUi" color="gray" />
-                <x-badge text="TallStackUi" color="zinc" />
-                <x-badge text="TallStackUi" color="neutral" />
-                <x-badge text="TallStackUi" color="stone" />
-                <x-badge text="TallStackUi" color="red" />
-                <x-badge text="TallStackUi" color="orange" />
-                <x-badge text="TallStackUi" color="amber" />
-                <x-badge text="TallStackUi" color="yellow" />
-                <x-badge text="TallStackUi" color="lime" />
-                <x-badge text="TallStackUi" color="green" />
-                <x-badge text="TallStackUi" color="emerald" />
-                <x-badge text="TallStackUi" color="teal" />
-                <x-badge text="TallStackUi" color="cyan" />
-                <x-badge text="TallStackUi" color="sky" />
-                <x-badge text="TallStackUi" color="blue" />
-                <x-badge text="TallStackUi" color="indigo" />
-                <x-badge text="TallStackUi" color="violet" />
-                <x-badge text="TallStackUi" color="purple" />
-                <x-badge text="TallStackUi" color="fuchsia" />
-                <x-badge text="TallStackUi" color="pink" />
-                <x-badge text="TallStackUi" color="rose" />
+                <x-badge text="Primary" />
+                <x-badge text="Secondary" color="secondary" />
+                <x-badge text="White" color="white" />
+                <x-badge text="Black" color="black" />
+                <x-badge text="Slate" color="slate" />
+                <x-badge text="Gray" color="gray" />
+                <x-badge text="Zinc" color="zinc" />
+                <x-badge text="Neutral" color="neutral" />
+                <x-badge text="Stone" color="stone" />
+                <x-badge text="Red" color="red" />
+                <x-badge text="Orange" color="orange" />
+                <x-badge text="Amber" color="amber" />
+                <x-badge text="Yellow" color="yellow" />
+                <x-badge text="Lime" color="lime" />
+                <x-badge text="Green" color="green" />
+                <x-badge text="Emerald" color="emerald" />
+                <x-badge text="Teal" color="teal" />
+                <x-badge text="Cyan" color="cyan" />
+                <x-badge text="Sky" color="sky" />
+                <x-badge text="Blue" color="blue" />
+                <x-badge text="Indigo" color="indigo" />
+                <x-badge text="Violet" color="violet" />
+                <x-badge text="Purple" color="purple" />
+                <x-badge text="Fuchsia" color="fuchsia" />
+                <x-badge text="Pink" color="pink" />
+                <x-badge text="Rose" color="rose" />
             </div>
         </x-preview>
     </x-section>
@@ -81,32 +81,32 @@
                    language="blade"
                    :contents="$outlines">
             <div class="gap-2">
-                <x-badge text="TallStackUi" outline />
-                <x-badge text="TallStackUi" color="secondary" outline />
-                <x-badge text="TallStackUi" color="white" outline />
-                <x-badge text="TallStackUi" color="black" outline />
-                <x-badge text="TallStackUi" color="slate" outline />
-                <x-badge text="TallStackUi" color="gray" outline />
-                <x-badge text="TallStackUi" color="zinc" outline />
-                <x-badge text="TallStackUi" color="neutral" outline />
-                <x-badge text="TallStackUi" color="stone" outline />
-                <x-badge text="TallStackUi" color="red" outline />
-                <x-badge text="TallStackUi" color="orange" outline />
-                <x-badge text="TallStackUi" color="amber" outline />
-                <x-badge text="TallStackUi" color="yellow" outline />
-                <x-badge text="TallStackUi" color="lime" outline />
-                <x-badge text="TallStackUi" color="green" outline />
-                <x-badge text="TallStackUi" color="emerald" outline />
-                <x-badge text="TallStackUi" color="teal" outline />
-                <x-badge text="TallStackUi" color="cyan" outline />
-                <x-badge text="TallStackUi" color="sky" outline />
-                <x-badge text="TallStackUi" color="blue" outline />
-                <x-badge text="TallStackUi" color="indigo" outline />
-                <x-badge text="TallStackUi" color="violet" outline />
-                <x-badge text="TallStackUi" color="purple" outline />
-                <x-badge text="TallStackUi" color="fuchsia" outline />
-                <x-badge text="TallStackUi" color="pink" outline />
-                <x-badge text="TallStackUi" color="rose" outline />
+                <x-badge text="Primary" outline />
+                <x-badge text="Secondary" color="secondary" outline />
+                <x-badge text="White" color="white" outline />
+                <x-badge text="Black" color="black" outline />
+                <x-badge text="Slate" color="slate" outline />
+                <x-badge text="Gray" color="gray" outline />
+                <x-badge text="Zinc" color="zinc" outline />
+                <x-badge text="Neutral" color="neutral" outline />
+                <x-badge text="Stone" color="stone" outline />
+                <x-badge text="Red" color="red" outline />
+                <x-badge text="Orange" color="orange" outline />
+                <x-badge text="Amber" color="amber" outline />
+                <x-badge text="Yellow" color="yellow" outline />
+                <x-badge text="Lime" color="lime" outline />
+                <x-badge text="Green" color="green" outline />
+                <x-badge text="Emerald" color="emerald" outline />
+                <x-badge text="Teal" color="teal" outline />
+                <x-badge text="Cyan" color="cyan" outline />
+                <x-badge text="Sky" color="sky" outline />
+                <x-badge text="Blue" color="blue" outline />
+                <x-badge text="Indigo" color="indigo" outline />
+                <x-badge text="Violet" color="violet" outline />
+                <x-badge text="Purple" color="purple" outline />
+                <x-badge text="Fuchsia" color="fuchsia" outline />
+                <x-badge text="Pink" color="pink" outline />
+                <x-badge text="Rose" color="rose" outline />
             </div>
         </x-preview>
     </x-section>

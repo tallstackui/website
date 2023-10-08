@@ -1,9 +1,9 @@
 <x-layout>
     <x-slot:title>
-        Dark Theme
+        Dark Theme Helper
     </x-slot:title>
     <x-slot:description>
-        Dark Theme helper.
+        Helper to easy manage dark theme.
     </x-slot:description>
     <x-section>
         <p class="text-justify">
@@ -20,6 +20,6 @@
         <x-code language="blade" :contents="$button"/>
         <p>3. After that, all you need to do is adapt all your CSS classes:</p>
         <x-code language="blade" :contents="$example"/>
-        <x-alert color="yellow" icon="exclamation-circle" text="Remember to configure the TailwindCSS to accept the dark theme based on class." translucent />
+        <x-alert color="yellow" icon="exclamation-circle" text="You need to configure the TailwindCSS to accept the dark theme based on class." translucent />
     </x-section>
 </x-layout>

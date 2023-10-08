@@ -12,7 +12,7 @@ class Button
     <x-button text="TallStackUi" />
     HTML;
 
-    public const HREF = <<<'HTML'
+    public const A = <<<'HTML'
     <x-button href="https://google.com.br" target="_blank">TallStackUi</x-button>
     HTML;
 
@@ -102,7 +102,7 @@ class Button
     <x-button.circle text="TS" />
     HTML;
 
-    public const CIRCLE_HREF = <<<'HTML'
+    public const CIRCLE_A = <<<'HTML'
     <x-button.circle href="https://google.com.br" target="_blank">TS</x-button.circle>
     HTML;
 

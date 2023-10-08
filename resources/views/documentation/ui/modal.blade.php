@@ -142,7 +142,7 @@
         </x-preview>
     </x-section>
     <x-alert color="yellow" translucent>
-        Make sure you provide some way to close the modal when using this option, such as a button within the modal.
+        Make sure to provide some way to close the modal when using this option, such as a button within the modal.
     </x-alert>
     <x-section class="mt-2 space-y-2">
         <x-preview title="Wireable"

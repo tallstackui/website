@@ -140,7 +140,7 @@
             <ul role="list" class="mt-4 space-y-2 dark:border-slate-800 lg:space-y-4 lg:mt-4 lg:border-slate-200">
                 <li class="ml-4 relative">
                     <a href="{{ route('documentation.dark-theme') }}" class="text-gray-500 transition hover:text-gray-800 hover:underline">
-                        Dark Theme
+                        Dark Theme Helper
                     </a>
                 </li>
                 <li class="ml-4 relative">
