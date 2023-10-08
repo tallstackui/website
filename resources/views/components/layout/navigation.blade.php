@@ -22,32 +22,32 @@
                     <h2 class="font-medium text-slate-900 font-display dark:text-white">Form</h2>
                     <ul role="list" class="mt-4 space-y-2 dark:border-slate-800 lg:space-y-4 lg:mt-4 lg:border-slate-200">
                         <li class="ml-4 relative">
-                            <a class="text-gray-500 transition hover:text-gray-800 hover:underline">
+                            <a href="{{ route('documentation.form.input') }}" class="text-gray-500 transition hover:text-gray-800 hover:underline">
                                 Input
                             </a>
                         </li>
                         <li class="ml-4 relative">
-                            <a class="text-gray-500 transition hover:text-gray-800 hover:underline">
+                            <a href="{{ route('documentation.form.password') }}" class="text-gray-500 transition hover:text-gray-800 hover:underline">
                                 Password
                             </a>
                         </li>
                         <li class="ml-4 relative">
-                            <a class="text-gray-500 transition hover:text-gray-800 hover:underline">
+                            <a href="{{ route('documentation.form.textarea') }}" class="text-gray-500 transition hover:text-gray-800 hover:underline">
                                 Textarea
                             </a>
                         </li>
                         <li class="ml-4 relative">
-                            <a class="text-gray-500 transition hover:text-gray-800 hover:underline">
+                            <a href="{{ route('documentation.form.checkbox') }}" class="text-gray-500 transition hover:text-gray-800 hover:underline">
                                 Checkbox
                             </a>
                         </li>
                         <li class="ml-4 relative">
-                            <a class="text-gray-500 transition hover:text-gray-800 hover:underline">
+                            <a href="{{ route('documentation.form.radio') }}" class="text-gray-500 transition hover:text-gray-800 hover:underline">
                                 Radio
                             </a>
                         </li>
                         <li class="ml-4 relative">
-                            <a class="text-gray-500 transition hover:text-gray-800 hover:underline">
+                            <a href="{{ route('documentation.form.toggle') }}" class="text-gray-500 transition hover:text-gray-800 hover:underline">
                                 Toggle
                             </a>
                         </li>

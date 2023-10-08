@@ -10,6 +10,6 @@ class Dialog extends Controller
 {
     public function __invoke(): View
     {
-        return view('documentation.dialog', Example::Dialog->variables());
+        return view('documentation.ui.dialog', Example::Dialog->variables());
     }
 }

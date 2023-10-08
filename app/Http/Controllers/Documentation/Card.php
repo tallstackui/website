@@ -10,6 +10,6 @@ class Card extends Controller
 {
     public function __invoke(): View
     {
-        return view('documentation.card', Example::Card->variables());
+        return view('documentation.ui.card', Example::Card->variables());
     }
 }

@@ -5,16 +5,22 @@ use App\Http\Controllers\Documentation\Avatar;
 use App\Http\Controllers\Documentation\Badge;
 use App\Http\Controllers\Documentation\Button;
 use App\Http\Controllers\Documentation\Card;
+use App\Http\Controllers\Documentation\Checkbox;
 use App\Http\Controllers\Documentation\DarkTheme;
 use App\Http\Controllers\Documentation\Dialog;
 use App\Http\Controllers\Documentation\Dropdown;
 use App\Http\Controllers\Documentation\Error;
 use App\Http\Controllers\Documentation\GetStarted;
 use App\Http\Controllers\Documentation\Icon;
+use App\Http\Controllers\Documentation\Input;
 use App\Http\Controllers\Documentation\Modal;
+use App\Http\Controllers\Documentation\Password;
+use App\Http\Controllers\Documentation\Radio;
 use App\Http\Controllers\Documentation\Select;
 use App\Http\Controllers\Documentation\Tab;
+use App\Http\Controllers\Documentation\Textarea;
 use App\Http\Controllers\Documentation\Toast;
+use App\Http\Controllers\Documentation\Toggle;
 use App\Http\Controllers\Documentation\Tooltip;
 use Illuminate\Support\Facades\Route;
 
@@ -24,6 +30,17 @@ Route::prefix('/docs')
     ->name('documentation.')
     ->group(function () {
         Route::get('/get-started', GetStarted::class)->name('get-started');
+
+        Route::prefix('/form')
+            ->name('form.')
+            ->group(function () {
+                Route::get('/input', Input::class)->name('input');
+                Route::get('/password', Password::class)->name('password');
+                Route::get('/textarea', Textarea::class)->name('textarea');
+                Route::get('/checkbox', Checkbox::class)->name('checkbox');
+                Route::get('/radio', Radio::class)->name('radio');
+                Route::get('/toggle', Toggle::class)->name('toggle');
+            });
 
         Route::prefix('/ui')
             ->name('ui.')

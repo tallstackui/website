@@ -10,6 +10,6 @@ class Toast extends Controller
 {
     public function __invoke(): View
     {
-        return view('documentation.toast', Example::Toast->variables());
+        return view('documentation.ui.toast', Example::Toast->variables());
     }
 }

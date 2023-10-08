@@ -10,6 +10,6 @@ class Badge extends Controller
 {
     public function __invoke(): View
     {
-        return view('documentation.badge', Example::Badge->variables());
+        return view('documentation.ui.badge', Example::Badge->variables());
     }
 }

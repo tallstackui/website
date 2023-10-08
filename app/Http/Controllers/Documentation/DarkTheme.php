@@ -10,6 +10,6 @@ class DarkTheme extends Controller
 {
     public function __invoke(): View
     {
-        return view('documentation.dark-theme', Example::DarkTheme->variables());
+        return view('documentation.ui.dark-theme', Example::DarkTheme->variables());
     }
 }

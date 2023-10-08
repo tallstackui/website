@@ -10,6 +10,6 @@ class Icon extends Controller
 {
     public function __invoke(): View
     {
-        return view('documentation.icon', Example::Icon->variables());
+        return view('documentation.ui.icon', Example::Icon->variables());
     }
 }

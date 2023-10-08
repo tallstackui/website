@@ -10,6 +10,6 @@ class Modal extends Controller
 {
     public function __invoke(): View
     {
-        return view('documentation.modal', Example::Modal->variables());
+        return view('documentation.ui.modal', Example::Modal->variables());
     }
 }

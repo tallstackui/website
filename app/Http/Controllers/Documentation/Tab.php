@@ -10,6 +10,6 @@ class Tab extends Controller
 {
     public function __invoke(): View
     {
-        return view('documentation.tab', Example::Tab->variables());
+        return view('documentation.ui.tab', Example::Tab->variables());
     }
 }

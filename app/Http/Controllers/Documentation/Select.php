@@ -10,6 +10,6 @@ class Select extends Controller
 {
     public function __invoke(): View
     {
-        return view('documentation.select', Example::Select->variables());
+        return view('documentation.ui.select', Example::Select->variables());
     }
 }

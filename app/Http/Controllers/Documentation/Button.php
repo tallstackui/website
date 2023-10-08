@@ -10,6 +10,6 @@ class Button extends Controller
 {
     public function __invoke(): View
     {
-        return view('documentation.button', Example::Button->variables());
+        return view('documentation.ui.button', Example::Button->variables());
     }
 }

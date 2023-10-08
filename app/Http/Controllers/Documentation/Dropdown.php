@@ -9,6 +9,6 @@ class Dropdown extends Controller
 {
     public function __invoke(): View
     {
-        return view('documentation.dropdown');
+        return view('documentation.ui.dropdown');
     }
 }

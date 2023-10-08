@@ -10,6 +10,6 @@ class Tooltip extends Controller
 {
     public function __invoke(): View
     {
-        return view('documentation.tooltip', Example::Tooltip->variables());
+        return view('documentation.ui.tooltip', Example::Tooltip->variables());
     }
 }

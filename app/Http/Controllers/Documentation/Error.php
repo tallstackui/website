@@ -10,6 +10,6 @@ class Error extends Controller
 {
     public function __invoke(): View
     {
-        return view('documentation.errors', Example::Error->variables());
+        return view('documentation.ui.errors', Example::Error->variables());
     }
 }

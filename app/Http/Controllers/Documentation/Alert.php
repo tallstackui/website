@@ -10,6 +10,6 @@ class Alert extends Controller
 {
     public function __invoke(): View
     {
-        return view('documentation.alert', Example::Alert->variables());
+        return view('documentation.ui.alert', Example::Alert->variables());
     }
 }

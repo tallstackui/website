@@ -34,6 +34,16 @@
         </x-preview>
     </x-section>
     <x-section>
+        <x-preview title="Icon Slot"
+                   description="An option to use an icon when title is not defined"
+                   language="blade"
+                   :contents="$icon">
+            <x-alert icon="cog">
+                TallStackUi
+            </x-alert>
+        </x-preview>
+    </x-section>
+    <x-section>
         <x-preview title="Color Variations"
                    language="blade"
                    :contents="$colors">

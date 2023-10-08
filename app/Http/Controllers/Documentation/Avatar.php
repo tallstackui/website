@@ -10,6 +10,6 @@ class Avatar extends Controller
 {
     public function __invoke(): View
     {
-        return view('documentation.avatar', Example::Avatar->variables());
+        return view('documentation.ui.avatar', Example::Avatar->variables());
     }
 }
