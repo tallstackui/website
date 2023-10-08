@@ -34,6 +34,40 @@
         </x-preview>
     </x-section>
     <x-section>
+        <x-preview title="Color Variations"
+                   language="blade"
+                   :contents="$colors">
+            <div class="inline-flex gap-[2px]">
+                <x-toggle />
+                <x-toggle color="secondary" />
+                <x-toggle color="white" />
+                <x-toggle color="black" />
+                <x-toggle color="slate" />
+                <x-toggle color="gray" />
+                <x-toggle color="zinc" />
+                <x-toggle color="neutral" />
+                <x-toggle color="stone" />
+                <x-toggle color="red" />
+                <x-toggle color="orange" />
+                <x-toggle color="amber" />
+                <x-toggle color="yellow" />
+                <x-toggle color="lime" />
+                <x-toggle color="green" />
+                <x-toggle color="emerald" />
+                <x-toggle color="teal" />
+                <x-toggle color="cyan" />
+                <x-toggle color="sky" />
+                <x-toggle color="blue" />
+                <x-toggle color="indigo" />
+                <x-toggle color="violet" />
+                <x-toggle color="purple" />
+                <x-toggle color="fuchsia" />
+                <x-toggle color="pink" />
+                <x-toggle color="rose" />
+            </div>
+        </x-preview>
+    </x-section>
+    <x-section>
         <x-preview title="Livewire Validation Error"
                    language="blade"
                    :contents="$livewire">
