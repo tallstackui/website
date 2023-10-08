@@ -2,6 +2,7 @@
 
 namespace App\Enums;
 
+use App\Enums\Examples\Configuration;
 use App\Enums\Examples\DarkTheme;
 use App\Enums\Examples\Form\Checkbox;
 use App\Enums\Examples\Form\Input;
@@ -33,6 +34,7 @@ enum Example: string
     case Badge = Badge::class;
     case Button = Button::class;
     case Card = Card::class;
+    case Configuration = Configuration::class;
     case Checkbox = Checkbox::class;
     case Dialog = Dialog::class;
     case DarkTheme = DarkTheme::class;

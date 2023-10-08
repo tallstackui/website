@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Documentation\Configuration;
 use App\Http\Controllers\Documentation\Form\Checkbox;
 use App\Http\Controllers\Documentation\Form\Input;
 use App\Http\Controllers\Documentation\Form\Password;
@@ -62,4 +63,5 @@ Route::prefix('/docs')
             });
 
         Route::get('/dark-theme', DarkTheme::class)->name('dark-theme');
+        Route::get('/configuration', Configuration::class)->name('configuration');
     });
