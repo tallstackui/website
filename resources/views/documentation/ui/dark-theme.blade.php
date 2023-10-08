@@ -14,11 +14,12 @@
         </p>
         <p class="mt-4">1. Add the helper on the html tag of your layout:</p>
         <x-code language="blade" :contents="$helper"/>
-        <p>Alternatively, you can customize the name of the state stored in the browser, <b class="underline">default is dark-theme</b></p>
+        <p>Alternatively, you can customize the name of the state stored in local storage of the browser, <b class="underline">default is dark-theme</b></p>
         <x-code language="blade" :contents="$customized"/>
         <p>2. Create a button to control the dark theme:</p>
         <x-code language="blade" :contents="$button"/>
         <p>3. After that, all you need to do is adapt all your CSS classes:</p>
         <x-code language="blade" :contents="$example"/>
+        <x-alert color="yellow" icon="exclamation-circle" text="Remember to configure the TailwindCSS to accept the dark theme based on class." translucent />
     </x-section>
 </x-layout>

@@ -14,8 +14,8 @@ $save = function () {
 
 <div class="space-y-2">
     <x-textarea label="Description"
-             hint="Insert the post description"
-             wire:model="description"
+                hint="Insert the post description"
+                wire:model="description"
     />
 
     <x-button wire:click="save">Save</x-button>

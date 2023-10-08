@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Enums\Examples;
+namespace App\Enums\Examples\Ui;
 
 class Toast
 {

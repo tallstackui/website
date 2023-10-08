@@ -20,7 +20,7 @@
         </x-preview>
     </x-section>
     <x-section>
-        <x-preview title="Rows Control"
+        <x-preview title="Row Control"
                    language="blade"
                    :contents="$rows">
             <x-textarea :rows="3" />

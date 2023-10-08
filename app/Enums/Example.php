@@ -2,27 +2,27 @@
 
 namespace App\Enums;
 
-use App\Enums\Examples\Alert;
-use App\Enums\Examples\Avatar;
-use App\Enums\Examples\Badge;
-use App\Enums\Examples\Button;
-use App\Enums\Examples\Card;
-use App\Enums\Examples\Checkbox;
 use App\Enums\Examples\DarkTheme;
-use App\Enums\Examples\Dialog;
-use App\Enums\Examples\Error;
+use App\Enums\Examples\Form\Checkbox;
+use App\Enums\Examples\Form\Input;
+use App\Enums\Examples\Form\Password;
+use App\Enums\Examples\Form\Radio;
+use App\Enums\Examples\Form\Textarea;
+use App\Enums\Examples\Form\Toggle;
 use App\Enums\Examples\GetStarted;
-use App\Enums\Examples\Icon;
-use App\Enums\Examples\Input;
-use App\Enums\Examples\Modal;
-use App\Enums\Examples\Password;
-use App\Enums\Examples\Radio;
-use App\Enums\Examples\Select;
-use App\Enums\Examples\Tab;
-use App\Enums\Examples\Textarea;
-use App\Enums\Examples\Toast;
-use App\Enums\Examples\Toggle;
-use App\Enums\Examples\Tooltip;
+use App\Enums\Examples\Ui\Alert;
+use App\Enums\Examples\Ui\Avatar;
+use App\Enums\Examples\Ui\Badge;
+use App\Enums\Examples\Ui\Button;
+use App\Enums\Examples\Ui\Card;
+use App\Enums\Examples\Ui\Dialog;
+use App\Enums\Examples\Ui\Error;
+use App\Enums\Examples\Ui\Icon;
+use App\Enums\Examples\Ui\Modal;
+use App\Enums\Examples\Ui\Select;
+use App\Enums\Examples\Ui\Tab;
+use App\Enums\Examples\Ui\Toast;
+use App\Enums\Examples\Ui\Tooltip;
 use Exception;
 use ReflectionClass;
 
