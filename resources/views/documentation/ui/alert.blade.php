@@ -44,6 +44,15 @@
         </x-preview>
     </x-section>
     <x-section>
+        <x-preview title="Pulse Effect"
+                   language="blade"
+                   :contents="$pulse">
+            <x-alert icon="cog" pulse>
+                TallStackUi
+            </x-alert>
+        </x-preview>
+    </x-section>
+    <x-section>
         <x-preview title="Color Variations"
                    language="blade"
                    :contents="$colors">

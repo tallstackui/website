@@ -11,7 +11,7 @@ class GetStarted
     public const LAYOUT = <<<'HTML'
     <html>
         <head>
-            <tallstackui:scripts />
+            <tallstackui:setup />
             @vite(['resources/css/app.css', 'resources/js/app.js'])
         </head>
     </html>

@@ -29,5 +29,22 @@
             </x-tabs>
         </x-preview>
     </x-section>
-    <p class="mt-4 text-gray-700">Tabs can also be displayed square by managing the TasteUi configuration file.</p>
+    <x-section>
+        <x-preview title="Wireable"
+                   description="An option to control the tab entangled with a Livewire property."
+                   language="blade"
+                   :background="false"
+                   :contents="$wireable">
+            <livewire:documentation.ui.tabs />
+        </x-preview>
+    </x-section>
+    <x-section>
+        <x-preview title="Wireable Live Property"
+                   description="An option to control the tab entangled live with a Livewire property."
+                   language="blade"
+                   :background="false"
+                   :contents="$wireableLive">
+            <livewire:documentation.ui.tabs live />
+        </x-preview>
+    </x-section>
 </x-layout>

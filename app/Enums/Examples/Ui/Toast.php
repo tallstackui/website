@@ -40,35 +40,35 @@ class Toast
     $this->toast()->info('Info', 'This is an info message.');
     HTML;
 
-    public const CONFIRMATION = <<<HTML
+    public const CONFIRMATION = <<<'HTML'
     use Livewire\Attributes\On;
 
     public function save(): void
     {
-        \$this->toast()->confirm('Warning!', 'Are you sure?', [
+        $this->toast()->confirm('Warning!', 'Are you sure?', [
             'confirm' => [
                 'text' => 'Confirm',
                 'event' => 'confirmed',
-                'params' => 'Confirmed Successfully'
+                'params' => 'Confirmed Successfully' // string or array
             ],
             'cancel' => [
                 'text' => 'Cancel',
                 'event' => 'cancelled',
-                'params' => 'Cancelled Successfully'
+                'params' => 'Cancelled Successfully' // string or array
             ]
         ]);
     }
 
     #[On('confirmed')]
-    public function confirmed(string \$message): void
+    public function confirmed(string $message): void
     {
-        \$this->toast()->success('Success', \$message);
+        $this->toast()->success('Success', $message);
     }
 
     #[On('cancelled')]
-    public function cancelled(string \$message): void
+    public function cancelled(string $message): void
     {
-        \$this->toast()->error('Cancelled', \$message);
+        $this->toast()->error('Cancelled', $message);
     }
     HTML;
 

@@ -6,6 +6,7 @@ new class extends Component {
     public array $only = [];
     public ?string $title = null;
     public ?string $color = 'red';
+    public ?bool $pulse = false;
 
     public function mount(): void
     {
@@ -15,5 +16,5 @@ new class extends Component {
 } ?>
 
 <div>
-    <x-errors :$only :$title :$color />
+    <x-errors :$only :$title :$color :$pulse />
 </div>

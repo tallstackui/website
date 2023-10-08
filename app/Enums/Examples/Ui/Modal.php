@@ -75,7 +75,7 @@ class Modal
     public const WIREABLE_CUSTOMIZED = <<<'HTML'
     <!-- Livewire boolean property: $tallstackui -->
 
-    <x-modal title="TallStackUi" wire entangle="tallstackui">
+    <x-modal title="TallStackUi" wire="tallstackui">
         TallStackUi
     </x-modal>
 

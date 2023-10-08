@@ -23,5 +23,12 @@ class Icon
     <x-icon name="users" class="h-5 w-5" outline />
     <x-icon name="clipboard" class="h-5 w-5" />
     <x-icon name="clipboard" class="h-5 w-5" outline />
+
+    <!-- or -->
+
+    <x-icon icon="users" class="h-5 w-5" />
+    <x-icon icon="users" class="h-5 w-5" outline />
+    <x-icon icon="clipboard" class="h-5 w-5" />
+    <x-icon icon="clipboard" class="h-5 w-5" outline />
     HTML;
 }

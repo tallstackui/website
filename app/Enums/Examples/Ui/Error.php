@@ -11,13 +11,17 @@ class Error
     public const SPECIFIC = <<<'HTML'
     <x-errors only="name" />
 
-    <!-- or -->
+    <!-- use array for more than one -->
 
     <x-errors :only="['name', 'description']" />
     HTML;
 
     public const CUSTOMIZED = <<<'HTML'
     <x-errors title="Ops! There are :count validation errors:" />
+    HTML;
+
+    public const PULSE = <<<'HTML'
+    <x-errors pulse />
     HTML;
 
     public const COLORS = <<<'HTML'

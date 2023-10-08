@@ -157,9 +157,6 @@
                    :contents="$wireableCustomized">
             <livewire:documentation.modal.customentangle/>
         </x-preview>
-        <p>To open the modal using this option use the <a class="underline"
-                                                          href="https://livewire.laravel.com/docs/actions#toggle"
-                                                          target="_blank">Livewire toggle magic actions.</a></p>
     </x-section>
     <x-section title="AlpineJS Helper" description="Helpers to open and close the modal using AlpineJS.">
         <x-code language="blade" :contents="$alpinejs"/>

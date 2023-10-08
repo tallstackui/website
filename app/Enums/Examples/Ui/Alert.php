@@ -37,6 +37,12 @@ class Alert
     </x-alert>
     HTML;
 
+    public const PULSE = <<<'HTML'
+    <x-alert icon="cog" pulse>
+        TallStackUi
+    </x-alert>
+    HTML;
+
     public const COLORS = <<<'HTML'
     <x-alert title="TallStackUi" text="Primary" />
     <x-alert title="TallStackUi" text="Secondary" color="secondary" />
