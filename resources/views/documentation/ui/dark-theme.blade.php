@@ -20,6 +20,6 @@
         <x-code language="blade" :contents="$button"/>
         <p>3. After that, all you need to do is adapt all your CSS classes:</p>
         <x-code language="blade" :contents="$example"/>
-        <x-alert color="yellow" icon="exclamation-circle" text="You need to configure the TailwindCSS to accept the dark theme based on class." translucent />
+        <x-alert text="You need to configure the TailwindCSS to accept the dark theme based on class." color="pink" icon="exclamation-circle" translucent />
     </x-section>
 </x-layout>

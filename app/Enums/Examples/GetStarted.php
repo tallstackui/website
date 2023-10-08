@@ -8,16 +8,44 @@ class GetStarted
     composer require tallstackui/tallstackui
     HTML;
 
-    public const LAYOUT = <<<'HTML'
+    public const SCRIPT = <<<'HTML'
     <html>
         <head>
+            <!-- ... -->
+
             <tallstackui:setup />
             @vite(['resources/css/app.css', 'resources/js/app.js'])
+
+            <!-- ... -->
         </head>
     </html>
     HTML;
 
-    public const COMMAND = <<<'HTML'
-    php artisan tallstackui:install
+    public const MANUAL = <<<'HTML'
+    <html>
+        <head>
+            <!-- ... -->
+
+            @tallStackUiScripts
+            @tallStackUiStyles
+            @vite(['resources/css/app.css', 'resources/js/app.js'])
+
+            <!-- ... -->
+        </head>
+    </html>
+    HTML;
+
+    public const TAILWINDCSS = <<<'HTML'
+    // ...
+
+    presets: [
+        require('./vendor/tallstackui/tallstackui/tailwind.config.js')
+    ],
+
+    // ...
+    HTML;
+
+    public const BUILD = <<<'HTML'
+    npm run build && php artisan optimize:clear
     HTML;
 }

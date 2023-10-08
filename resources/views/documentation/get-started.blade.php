@@ -12,26 +12,17 @@
         </ul>
     </x-section>
     <x-section class="space-y-4" title="Installation" id="installation">
-        <p>1. Run the following command to TallStackUi as a composer dependency:</p>
+        <p>1. Run the following command to include the TallStackUi as a composer dependency:</p>
         <x-code language="shell" :contents="$installation"/>
-        <p>2. Add the TallStackUi tag above the
-            <x-block>@verbatim
-                    @vite
-                @endverbatim</x-block>
-            directive at your Blade template:
-        </p>
-        <x-code language="blade" :contents="$layout"/>
-        <p>Obviously you can add separately:
-            <x-block>@verbatim
-                    @tallStackUiScripts
-                @endverbatim</x-block>
-            and
-            <x-block>@verbatim
-                    @tallStackUiStyles
-                @endverbatim</x-block>
-        </p>
-        <p>3. Run the following commands:</p>
-        <x-code language="shell" :contents="$command"/>
-        <p><b>Let the game begin!</b> You're ready to create your first TallStackUi components.</p>
+        <p>2. Add the TallStackUi tag above the vite tag in your layout:</p>
+        <x-code language="blade" :contents="$script"/>
+        <p>Obviously you can add separately:</p>
+        <x-code language="blade" :contents="$manual"/>
+        <x-alert text="You must add the TallStackUi setup or directives above the @vite tag." color="pink" icon="exclamation-circle" translucent />
+        <p>3. Edit the <x-block>tailwindcss.config.js</x-block> of your application inserting:</p>
+        <x-code language="js" :contents="$tailwindcss"/>
+        <p>4. Build the assets:</p>
+        <x-code language="shell" :contents="$build"/>
+        <p>You're ready to create your first TallStackUi components.</p>
     </x-section>
 </x-layout>

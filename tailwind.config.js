@@ -10,10 +10,6 @@ export default {
         './vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php',
         './storage/framework/views/*.php',
         './resources/views/**/*.blade.php',
-        //
-        './vendor/tallstackui/tallstackui/resources/views/**/*.blade.php',
-        './vendor/tallstackui/tallstackui/resources/js/**/*.js',
-        './vendor/tallstackui/tallstackui/src/**/*.php',
     ],
     theme: {
         extend: {
