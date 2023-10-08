@@ -3,7 +3,7 @@
         Form Input Password
     </x-slot:title>
     <x-slot:description>
-        For input password component. Show or hide password value.
+        Form input password component. Show or hide password value.
     </x-slot:description>
     <x-section>
         <x-preview title="Basic Usage"

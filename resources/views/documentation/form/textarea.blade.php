@@ -3,7 +3,7 @@
         Form Textarea
     </x-slot:title>
     <x-slot:description>
-        For textarea component.
+        Form textarea component.
     </x-slot:description>
     <x-section>
         <x-preview title="Basic Usage"

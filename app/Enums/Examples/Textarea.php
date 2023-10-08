@@ -31,5 +31,4 @@ class Textarea
                 wire:model="description"
     />
     HTML;
-
 }
