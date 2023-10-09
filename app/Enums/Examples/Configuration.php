@@ -28,6 +28,7 @@ class Configuration
         ],
         'dialog' => [
             'z-index' => 'z-50',
+            'blur' => false,
             'closeable' => true,
             'square' => false,
         ],

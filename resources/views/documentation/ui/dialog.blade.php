@@ -26,12 +26,5 @@
             <livewire:documentation.interactions.dialog.confirmation/>
         </x-preview>
     </x-section>
-    <x-section title="Personalizations">
-        1. You can personalize the
-        <x-block>z-index</x-block>
-        of the Dialog component:
-        <x-code language="html" :contents="$zIndex"/>
-        2. You can blur the background of the Dialog component:
-        <x-code language="html" :contents="$blur"/>
-    </x-section>
+    <x-available-configuration />
 </x-layout>

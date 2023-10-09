@@ -26,12 +26,5 @@
             <livewire:documentation.interactions.toast.confirmation/>
         </x-preview>
     </x-section>
-    <x-section title="Personalizations">
-        1. You can personalize the
-        <x-block>z-index</x-block>
-        of the Toast component:
-        <x-code language="html" :contents="$zIndex"/>
-        1. You can personalize the positions of the Toast component:
-        <x-code language="html" :contents="$positions"/>
-    </x-section>
+    <x-available-configuration />
 </x-layout>

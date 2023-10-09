@@ -28,7 +28,7 @@
     </x-section>
     <x-section title="Fluent Personalization">
         <p class="text-justify">
-            We've introduced a fluency style in TallStackUi soft personaliazation. Let's take a look at a simple example:
+            We've introduced a fluency style in TallStackUi soft personalization. Let's take a look at a simple example:
         </p>
         <x-code language="php" :contents="$pest"/>
         <p class="text-justify mt-2">

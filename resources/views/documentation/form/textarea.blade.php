@@ -50,4 +50,5 @@
             <livewire:documentation.form.textarea />
         </x-preview>
     </x-section>
+    <x-available-configuration />
 </x-layout>

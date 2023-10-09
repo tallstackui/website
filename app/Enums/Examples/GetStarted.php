@@ -13,6 +13,9 @@ class GetStarted
         <head>
             <!-- ... -->
 
+            {{-- Also insert this code [tl! highlight:1] --}}
+            <style> [x-cloak] { display: none; } </style>
+
             <tallstackui:setup />
             @vite(['resources/css/app.css', 'resources/js/app.js'])
 
@@ -25,6 +28,9 @@ class GetStarted
     <html>
         <head>
             <!-- ... -->
+
+            {{-- Also insert this code [tl! highlight:1] --}}
+            <style> [x-cloak] { display: none; } </style>
 
             @tallStackUiScripts
             @tallStackUiStyles

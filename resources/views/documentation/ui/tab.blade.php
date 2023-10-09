@@ -47,4 +47,5 @@
             <livewire:documentation.ui.tabs live />
         </x-preview>
     </x-section>
+    <x-available-configuration />
 </x-layout>
