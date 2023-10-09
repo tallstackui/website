@@ -5,7 +5,7 @@ namespace App\Enums\Examples\Personalization;
 class SoftPersonalization
 {
     public const EXAMPLE = <<<'HTML'
-    use TasteUi\Facades\TasteUi;
+    use TallStackUi\Facades\TallStackUi;
 
     class AppServiceProvider extends ServiceProvider
     {
@@ -13,20 +13,20 @@ class SoftPersonalization
         {
             // ...
 
-           TasteUi::personalize()
+           TallStackUi::personalize()
                ->form('input')
                ->block('base', 'w-full rounded-full');
 
             // or...
 
-           TasteUi::personalize('form.input')
+           TallStackUi::personalize('form.input')
                ->block('base', 'w-full rounded-full');
         }
     }
     HTML;
 
     public const PEST = <<<'HTML'
-    use TasteUi\Facades\TasteUi;
+    use TallStackUi\Facades\TallStackUi;
 
     class AppServiceProvider extends ServiceProvider
     {
@@ -34,7 +34,7 @@ class SoftPersonalization
         {
             // ...
 
-           TasteUi::personalize()
+           TallStackUi::personalize()
                ->form('input')
                ->block('base', 'w-full rounded-full')
                ->and // [tl! highlight]
@@ -43,7 +43,7 @@ class SoftPersonalization
 
            // or...
 
-           TasteUi::personalize()
+           TallStackUi::personalize()
                ->form('input')
                ->block('base', 'w-full rounded-full')
                ->and() // [tl! highlight]
@@ -54,7 +54,7 @@ class SoftPersonalization
     HTML;
 
     public const INVOKABLE_EXAMPLE = <<<'HTML'
-    use TasteUi\Facades\TasteUi;
+    use TallStackUi\Facades\TallStackUi;
     use App\TallStackUi\InputPersonalization; // [tl! highlight]
 
     class AppServiceProvider extends ServiceProvider
@@ -63,7 +63,7 @@ class SoftPersonalization
         {
             // ...
 
-           TasteUi::personalize()
+           TallStackUi::personalize()
                ->form('input')
                ->block('base', new InputPersonalization()); // [tl! highlight]
         }
@@ -108,7 +108,7 @@ class SoftPersonalization
     HTML;
 
     public const WAYS = <<<'HTML'
-    use TasteUi\Facades\TasteUi;
+    use TallStackUi\Facades\TallStackUi;
     use App\TallStackUi\InputIconPersonzaliation;
 
     class AppServiceProvider extends ServiceProvider
@@ -117,7 +117,7 @@ class SoftPersonalization
         {
             // ...
 
-           TasteUi::personalize()
+           TallStackUi::personalize()
                ->form('input')
                ->block('base', 'w-full rounded-full')
                ->block('icon.wrapper', fn (array $data) => 'pointer-events-none absolute')
@@ -125,7 +125,7 @@ class SoftPersonalization
 
            // or ...
 
-            TasteUi::personalize()
+            TallStackUi::personalize()
                ->form('input')
                ->block([
                     'base' => 'w-full rounded-full',

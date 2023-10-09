@@ -10,7 +10,8 @@
             There are several ways to contribute to a library like TallStackUi, <b class="underline">don't think it's just with code.</b>
             Even if you're not an experienced developer, don't worry, there are other ways to help. Do you know
             how to write? Well, you can review the texts on both TallStackUi and our website and point out possible
-            flaws. This is a way to contribute. Do you use and like TallStackUi? Why not share it with your friends?
+            flaws. This is a way to contribute. Did you find something wrong with the website, documentation or any component of TallStackUi?
+            Create an issue and report the problem. This is a way to contribute. Do you use and like TallStackUi? Why not share it with your friends?
             This is a way to contribute. Are you an experienced developer and want to join the team? Feel free to write
             components, test, bug fix, or other things. This is a way to contribute. Going further, do you like TallStackUi
             so much that you want to sponsor the project? Well, you can contribute with some financial donation. You

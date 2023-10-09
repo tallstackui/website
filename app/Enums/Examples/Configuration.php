@@ -29,7 +29,7 @@ class Configuration
         'dialog' => [
             'z-index' => 'z-50',
             'blur' => false,
-            'closeable' => true,
+            'uncloseable' => false,
             'square' => false,
         ],
         'toast' => [
