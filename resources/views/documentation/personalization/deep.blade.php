@@ -15,17 +15,18 @@
     <x-section title="Publish Configuration File">
         <p class="text-justify">
             To start deep customization you must publish the TallStackUi configuration file.
-            <a class="underline" href="{{ route('documentation.configuration') }}">Click here and see how to carry out this procedure.</a>
+            <a class="underline" href="{{ route('documentation.configuration') }}">Click here to visit the documentation.</a>
         </p>
     </x-section>
     <x-section title="Overriding Component Class">
         <p class="text-justify">
-            As deep customization consists of having absolute control over the component, the idea behind this
-            way of customization is to overwrite the original TallStackUi component. Let's look at an example:
+            As deep customization consists of having absolute control over the component, <b class="underline">the idea behind
+            this form of customization is to overwrite the original TallStackUi component</b>, which is why more
+            technical knowledge is necessary. Let's look at an example:
         </p>
-        <p class="mt-2">1. Create a Blade component with class:</p>
+        <p class="mt-2">1. Create a Blade component:</p>
         <x-code language="shell" :contents="$command"/>
-        <p>2. Edit the TallStackUi configuration file pointing the component class:</p>
+        <p>2. Edit the TallStackUi configuration file pointing the original component class to your component:</p>
         <x-code language="php" :contents="$override"/>
         <p>3. In your component, extends the original TallStackUi component:</p>
         <x-code language="php" :contents="$extends"/>
@@ -34,8 +35,8 @@
         <p class="mt-2 text-justify">
             Every customizable component has a method called <x-block>customization</x-block>, which is where the
             classes come from. This method must return an array with the name of the customizable blocks and
-            their respective values which must be the CSS classes to be applied. To learn about customizable blocks,
-            visit the documentation for the component you are customizing.
+            their respective values which must be the CSS classes to be applied. <b class="underline">To learn about customizable blocks,
+            visit the documentation for the component you are customizing.</b>
         </p>
     </x-section>
 </x-layout>

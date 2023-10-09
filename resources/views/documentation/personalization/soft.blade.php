@@ -7,16 +7,17 @@
     </x-slot:description>
     <x-section>
         <p class="text-justify">
-            When we wrote this feature we thought about a single criterion: <i>"A way to customize components WITHOUT having to create
-            hundreds of files that overwrite the original components."</i>, as many other libraries do. <b class="underline">Read the information carefully
-            and do not skip steps to be able to use soft customization successfully.</b>
+            When we wrote this feature we thought about a single criterion: <i>"A way to customize components WITHOUT
+            having to be an expert in Laravel and having to create hundreds of files that replace the original components."</i>,
+            as many other libraries do. <b class="underline">Read the documentation carefully and do not skip steps to be able
+            to use soft customization successfully.</b>
         </p>
     </x-section>
     <x-section title="Concept">
         <p class="text-justify">
             <b class="underline">Soft personalization consists of customizing components at run time</b>, through a service provider, such as <x-block>AppServiceProvider</x-block>.
             The idea behind soft customization is to tap into customizable blocks of each component. The classes of each TallStackUi
-            component are divided into blocks that allow the classes to be overwritten at run time. Let's first look at a simple example.
+            component are divided into blocks that allow the classes to be overwritten at run time. Let's take a look at a simple example.
         </p>
         <x-code language="php" :contents="$example"/>
         <p class="text-justify mt-2">
@@ -27,7 +28,7 @@
     </x-section>
     <x-section title="Fluent Personalization">
         <p class="text-justify">
-            We've introduced a fluency style in TallStackUi. Let's first look at a simple example:
+            We've introduced a fluency style in TallStackUi soft personaliazation. Let's take a look at a simple example:
         </p>
         <x-code language="php" :contents="$pest"/>
         <p class="text-justify mt-2">
@@ -36,13 +37,13 @@
     </x-section>
     <x-section title="Multiple Personalization Ways">
         <p class="text-justify">
-            You can customize one block at a time or all at once. Let's look at an example:
+            You can customize one block at a time or all at once. Let's take a look at an example:
         </p>
         <x-code language="php" :contents="$ways"/>
     </x-section>
     <x-section title="Invokable Class">
         <p class="text-justify">
-            You can also send customization to be done in a callable class. Let's look at a simple example:
+            You can also send customization to be done in a callable class. Let's take a look at a example:
         </p>
         <x-code language="php" :contents="$invokableExample"/>
         <p class="mt-2">And then:</p>
@@ -51,9 +52,9 @@
     <x-section title="Component Parameters">
         <p class="text-justify">
             In the example above there is a variable called <x-block>$data</x-block>. This variable is an array containing
-            all the component's properties, <b class="underline">including the values passed when you used the component.</b> Let's look at an example:
+            all the component's properties, <b class="underline">including the values passed when you used the component.</b> Let's take a look at an example:
         </p>
-        <p class="mt-2">Using the <x-block>form.input</x-block> like this:</p>
+        <p class="mt-4">Using the <x-block>form.input</x-block> like this:</p>
         <x-code language="blade" :contents="$usingComponent"/>
         <p class="mt-2">The <x-block>$data</x-block> will be:</p>
         <x-code language="php" :contents="$data"/>
