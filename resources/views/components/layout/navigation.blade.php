@@ -1,7 +1,7 @@
 <nav {{ $attributes->merge(['class' => 'text-base lg:text-sm']) }}>
     <ul role="list" class="space-y-9">
         <li>
-            <h2 class="font-medium text-slate-900 font-display dark:text-white">Introduction</h2>
+            <h2 class="font-medium text-pink-900 font-display">Introduction</h2>
             <ul role="list" class="mt-4 space-y-2 dark:border-slate-800 lg:space-y-4 lg:mt-4 lg:border-slate-200">
                 <li class="ml-4 relative">
                     <a href="{{ route('welcome') }}" class="text-gray-500 transition hover:text-gray-800 hover:underline">
@@ -16,10 +16,10 @@
             </ul>
         </li>
         <li>
-            <h2 class="font-medium text-slate-900 font-display dark:text-white">Components</h2>
+            <h2 class="font-medium text-pink-900 font-display">Components</h2>
             <ul role="list" class="mt-4 space-y-2 dark:border-slate-800 lg:space-y-4 lg:mt-4 lg:border-slate-200">
                 <li class="ml-4 relative">
-                    <h2 class="font-medium text-slate-900 font-display dark:text-white">Form</h2>
+                    <h2 class="font-medium text-pink-900 font-display">Form</h2>
                     <ul role="list" class="mt-4 space-y-2 dark:border-slate-800 lg:space-y-4 lg:mt-4 lg:border-slate-200">
                         <li class="ml-4 relative">
                             <a href="{{ route('documentation.form.input') }}" class="text-gray-500 transition hover:text-gray-800 hover:underline">
@@ -54,7 +54,7 @@
                     </ul>
                 </li>
                 <li class="ml-4 relative">
-                    <h2 class="font-medium text-slate-900 font-display dark:text-white">UI</h2>
+                    <h2 class="font-medium text-pink-900 font-display">UI</h2>
                     <ul role="list" class="mt-4 space-y-2 dark:border-slate-800 lg:space-y-4 lg:mt-4 lg:border-slate-200">
                         <li class="ml-4 relative">
                             <a href="{{ route('documentation.ui.alert') }}" class="text-gray-500 transition hover:text-gray-800 hover:underline">
@@ -114,7 +114,7 @@
                     </ul>
                 </li>
                 <li class="ml-4 relative">
-                    <h2 class="font-medium text-slate-900 font-display dark:text-white">Interactions</h2>
+                    <h2 class="font-medium text-pink-900 font-display">Interactions</h2>
                     <ul role="list" class="mt-4 space-y-2 dark:border-slate-800 lg:space-y-4 lg:mt-4 lg:border-slate-200">
                         <li class="ml-4 relative">
                             <a href="{{ route('documentation.ui.dialog') }}" class="text-gray-500 transition hover:text-gray-800 hover:underline">
@@ -129,7 +129,7 @@
                     </ul>
                 </li>
                 <li class="ml-4 relative">
-                    <h2 class="font-medium text-slate-900 font-display dark:text-white">Internal Only</h2>
+                    <h2 class="font-medium text-pink-900 font-display">Internal Only</h2>
                     <ul role="list" class="mt-4 space-y-2 dark:border-slate-800 lg:space-y-4 lg:mt-4 lg:border-slate-200">
                         <li class="ml-4 relative">
                             <a href="{{ route('documentation.internal.error') }}" class="text-gray-500 transition hover:text-gray-800 hover:underline">
@@ -156,7 +156,7 @@
             </ul>
         </li>
         <li>
-            <h2 class="font-medium text-slate-900 font-display dark:text-white">Diggin Deeper</h2>
+            <h2 class="font-medium text-pink-900 font-display">Diggin Deeper</h2>
             <ul role="list" class="mt-4 space-y-2 dark:border-slate-800 lg:space-y-4 lg:mt-4 lg:border-slate-200">
                 <li class="ml-4 relative">
                     <a href="{{ route('documentation.configuration') }}" class="text-gray-500 transition hover:text-gray-800 hover:underline">
@@ -169,7 +169,7 @@
                     </a>
                 </li>
                 <li class="ml-4 relative">
-                    <h2 class="font-medium text-slate-900 font-display dark:text-white">Personalization</h2>
+                    <h2 class="font-medium text-pink-900 font-display">Personalization</h2>
                     <ul role="list" class="mt-4 space-y-2 dark:border-slate-800 lg:space-y-4 lg:mt-4 lg:border-slate-200">
                         <li class="ml-4 relative">
                             <a href="{{ route('documentation.personalization.concept') }}" class="text-gray-500 transition hover:text-gray-800 hover:underline">
@@ -196,7 +196,7 @@
                     </ul>
                 </li>
                 <li class="ml-4 relative">
-                    <h2 class="font-medium text-slate-900 font-display dark:text-white">Helpers</h2>
+                    <h2 class="font-medium text-pink-900 font-display">Helpers</h2>
                     <ul role="list" class="mt-4 space-y-2 dark:border-slate-800 lg:space-y-4 lg:mt-4 lg:border-slate-200">
                         <li class="ml-4 relative">
                             <a href="{{ route('documentation.dark-theme') }}" class="text-gray-500 transition hover:text-gray-800 hover:underline">
