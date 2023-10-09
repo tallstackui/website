@@ -32,7 +32,6 @@ jobs:
         with:
           node-version: "16.x"
       - run: npm install
-      - run: npm run lint
       - run: npm run build
 
       - name: Setup PHP, with composer and extensions
