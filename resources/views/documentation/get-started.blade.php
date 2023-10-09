@@ -11,17 +11,17 @@
             <li>PHP 8.1</li>
         </ul>
     </x-section>
-    <x-section class="space-y-4" title="Installation" id="installation">
+    <x-section title="Installation" id="installation">
         <p>1. Run the following command to include the TallStackUi as a composer dependency:</p>
         <x-code language="shell" :contents="$installation"/>
-        <p>2. Add the TallStackUi tag above the vite tag in your layout:</p>
+        <p>2. Add the TallStackUi setup above the <x-block>vite</x-block> tag in your layout:</p>
         <x-code language="blade" :contents="$script"/>
         <p>If your prefer, you can add separately:</p>
         <x-code language="blade" :contents="$manual"/>
         <x-alert text="You must add the TallStackUi setup or directives above the @vite tag." color="pink" icon="exclamation-circle" translucent />
-        <p>3. Edit the <x-block>tailwindcss.config.js</x-block> of your application inserting:</p>
+        <p class="mt-4">3. Edit the <x-block>tailwindcss.config.js</x-block> of your application inserting:</p>
         <x-code language="js" :contents="$tailwindcss"/>
-        <p>4. Build the assets:</p>
+        <p>4. Build the assets and do a full cleanup in the Laravel:</p>
         <x-code language="shell" :contents="$build"/>
         <p>You're ready to create your first TallStackUi components.</p>
     </x-section>

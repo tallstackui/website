@@ -141,7 +141,7 @@
             </x-button>
         </x-preview>
     </x-section>
-    <x-alert color="yellow" translucent>
+    <x-alert color="pink" icon="exclamation-circle" translucent>
         Make sure to provide some way to close the modal when using this option, such as a button within the modal.
     </x-alert>
     <x-section class="mt-2 space-y-2">
