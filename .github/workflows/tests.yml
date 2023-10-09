@@ -27,13 +27,6 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
-      - name: Setup Node and run tests
-        uses: actions/setup-node@v1
-        with:
-          node-version: "16.x"
-      - run: npm install
-      - run: npm run build
-
       - name: Setup PHP, with composer and extensions
         uses: shivammathur/setup-php@v2
         with:
@@ -57,6 +50,13 @@ jobs:
         run: |
           composer require "laravel/framework:${{ matrix.laravel }}" --no-interaction --no-update
           composer update --no-interaction --no-suggest
+
+      - name: Setup Node & Build Assets
+        uses: actions/setup-node@v1
+        with:
+          node-version: "16.x"
+      - run: npm install
+      - run: npm run build
 
       - name: Pint
         run: ./vendor/bin/pint --test
