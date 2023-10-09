@@ -8,6 +8,7 @@ use App\Http\Controllers\Documentation\Form\Radio;
 use App\Http\Controllers\Documentation\Form\Textarea;
 use App\Http\Controllers\Documentation\Form\Toggle;
 use App\Http\Controllers\Documentation\GetStarted;
+use App\Http\Controllers\Documentation\Translation;
 use App\Http\Controllers\Documentation\Ui\Alert;
 use App\Http\Controllers\Documentation\Ui\Avatar;
 use App\Http\Controllers\Documentation\Ui\Badge;
@@ -64,4 +65,5 @@ Route::prefix('/docs')
 
         Route::get('/dark-theme', DarkTheme::class)->name('dark-theme');
         Route::get('/configuration', Configuration::class)->name('configuration');
+        Route::get('/translation', Translation::class)->name('translation');
     });

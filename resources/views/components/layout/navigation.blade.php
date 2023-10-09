@@ -144,7 +144,7 @@
                     </a>
                 </li>
                 <li class="ml-4 relative">
-                    <a href="{{ route('welcome') }}" class="text-gray-500 transition hover:text-gray-800 hover:underline">
+                    <a href="{{ route('documentation.translation') }}" class="text-gray-500 transition hover:text-gray-800 hover:underline">
                         Translations
                     </a>
                 </li>

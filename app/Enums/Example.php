@@ -11,6 +11,7 @@ use App\Enums\Examples\Form\Radio;
 use App\Enums\Examples\Form\Textarea;
 use App\Enums\Examples\Form\Toggle;
 use App\Enums\Examples\GetStarted;
+use App\Enums\Examples\Translation;
 use App\Enums\Examples\Ui\Alert;
 use App\Enums\Examples\Ui\Avatar;
 use App\Enums\Examples\Ui\Badge;
@@ -47,6 +48,7 @@ enum Example: string
     case Select = Select::class;
     case Tab = Tab::class;
     case Textarea = Textarea::class;
+    case Translation = Translation::class;
     case Toast = Toast::class;
     case Toggle = Toggle::class;
     case Tooltip = Tooltip::class;
