@@ -2,7 +2,7 @@
 
 namespace App\Enums\Examples;
 
-class Personalization
+class SoftPersonalization
 {
     public const EXAMPLE = <<<'HTML'
     use TasteUi\Facades\TasteUi;

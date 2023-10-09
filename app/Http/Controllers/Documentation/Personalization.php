@@ -5,7 +5,6 @@ namespace App\Http\Controllers\Documentation;
 use App\Enums\Example;
 use App\Http\Controllers\Controller;
 use Illuminate\Contracts\View\View;
-use Illuminate\Http\Request;
 
 class Personalization extends Controller
 {
@@ -16,11 +15,11 @@ class Personalization extends Controller
 
     public function soft(): View
     {
-        return view('documentation.personalization.soft', Example::Personalization->variables());
+        return view('documentation.personalization.soft', Example::SoftPersonalization->variables());
     }
 
     public function deep(): View
     {
-        return view('documentation.personalization.deep');
+        return view('documentation.personalization.deep', Example::DeepPersonalization->variables());
     }
 }

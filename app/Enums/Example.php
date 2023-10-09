@@ -4,6 +4,7 @@ namespace App\Enums;
 
 use App\Enums\Examples\Configuration;
 use App\Enums\Examples\DarkTheme;
+use App\Enums\Examples\DeepPersonalization;
 use App\Enums\Examples\Form\Checkbox;
 use App\Enums\Examples\Form\Input;
 use App\Enums\Examples\Form\Password;
@@ -11,7 +12,7 @@ use App\Enums\Examples\Form\Radio;
 use App\Enums\Examples\Form\Textarea;
 use App\Enums\Examples\Form\Toggle;
 use App\Enums\Examples\GetStarted;
-use App\Enums\Examples\Personalization;
+use App\Enums\Examples\SoftPersonalization;
 use App\Enums\Examples\Translation;
 use App\Enums\Examples\Ui\Alert;
 use App\Enums\Examples\Ui\Avatar;
@@ -38,6 +39,7 @@ enum Example: string
     case Card = Card::class;
     case Configuration = Configuration::class;
     case Checkbox = Checkbox::class;
+    case DeepPersonalization = DeepPersonalization::class;
     case Dialog = Dialog::class;
     case DarkTheme = DarkTheme::class;
     case Error = Error::class;
@@ -45,9 +47,9 @@ enum Example: string
     case Input = Input::class;
     case GetStarted = GetStarted::class;
     case Password = Password::class;
-    case Personalization = Personalization::class;
     case Radio = Radio::class;
     case Select = Select::class;
+    case SoftPersonalization = SoftPersonalization::class;
     case Tab = Tab::class;
     case Textarea = Textarea::class;
     case Translation = Translation::class;
