@@ -58,6 +58,9 @@ jobs:
       - run: npm install
       - run: npm run build
 
+      - name: Generate Artisan Key
+        run: php artisan key:generate
+
       - name: Pint
         run: ./vendor/bin/pint --test
 
