@@ -1,25 +1,14 @@
-import defaultTheme from 'tailwindcss/defaultTheme';
-import forms from '@tailwindcss/forms';
+<?php
 
-/** @type {import('tailwindcss').Config} */
-export default {
-    darkMode: 'class',
-    presets: [
-        require('./vendor/tallstackui/tallstackui/tailwind.config.js')
-    ],
-    content: [
-        './vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php',
-        './storage/framework/views/*.php',
-        './resources/views/**/*.blade.php',
-        //
-        './vendor/tallstackui/tallstackui/resources/views/**/*.blade.php',
-        './vendor/tallstackui/tallstackui/src/**/*.php',
-    ],
+namespace App\Enums\Examples\Personalization;
+
+class ColorPersonalization
+{
+    public const FILE = <<<'HTML'
     theme: {
         extend: {
-            fontFamily: {
-                sans: ['Noto Sans', ...defaultTheme.fontFamily.sans],
-            },
+            // ...
+
             colors: {
                 'primary': {
                     DEFAULT: '#3b82f6',
@@ -50,5 +39,13 @@ export default {
             }
         },
     },
-    plugins: [forms],
-};
+    HTML;
+
+    public const REBUILD = <<<'HTML'
+    npm run build
+    HTML;
+
+    public const CLEANUP = <<<'HTML'
+    php artisan optimize:clear
+    HTML;
+}

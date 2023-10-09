@@ -82,11 +82,6 @@
                             </a>
                         </li>
                         <li class="ml-4 relative">
-                            <a href="{{ route('documentation.ui.dropdown') }}" class="text-gray-500 transition hover:text-gray-800 hover:underline">
-                                Dropdown
-                            </a>
-                        </li>
-                        <li class="ml-4 relative">
                             <a href="{{ route('documentation.ui.error') }}" class="text-gray-500 transition hover:text-gray-800 hover:underline">
                                 Error
                             </a>
@@ -152,7 +147,7 @@
                     <h2 class="font-medium text-slate-900 font-display dark:text-white">Personalization</h2>
                     <ul role="list" class="mt-4 space-y-2 dark:border-slate-800 lg:space-y-4 lg:mt-4 lg:border-slate-200">
                         <li class="ml-4 relative">
-                            <a href="{{ route('documentation.personalization.concept') }}" class="text-gray-500 transition hover:text-gray-800 hover:underline">
+                            <a href="{{ route('documentation.personalization.color') }}" class="text-gray-500 transition hover:text-gray-800 hover:underline">
                                 Concept
                             </a>
                         </li>
@@ -166,6 +161,11 @@
                         <li class="ml-4 relative">
                             <a href="{{ route('documentation.personalization.deep') }}" class="text-gray-500 transition hover:text-gray-800 hover:underline">
                                 Deep Personalization
+                            </a>
+                        </li>
+                        <li class="ml-4 relative">
+                            <a href="{{ route('documentation.personalization.color') }}" class="text-gray-500 transition hover:text-gray-800 hover:underline">
+                                Colors
                             </a>
                         </li>
                     </ul>

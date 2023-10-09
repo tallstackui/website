@@ -12,7 +12,7 @@
             After applying the helper, <b class="underline">an AlpineJS variable called darkTheme will be offered to control the dark theme</b>
             persisting the changes in the local storage.
         </p>
-        <p class="mt-4">1. Enable the dark theme support in your TailwindCSS:</p>
+        <p class="mt-4">1. Enable the dark theme support in your TailwindCSS configuration file:</p>
         <x-code language="js" :contents="$tailwindcss"/>
         <p class="mt-4">2. Add the helper on the <x-block>html</x-block> tag of your layout:</p>
         <x-code language="blade" :contents="$helper"/>

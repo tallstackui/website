@@ -13,6 +13,11 @@ class Personalization extends Controller
         return view('documentation.personalization.concept');
     }
 
+    public function color(): View
+    {
+        return view('documentation.personalization.color', Example::ColorPersonalization->variables());
+    }
+
     public function soft(): View
     {
         return view('documentation.personalization.soft', Example::SoftPersonalization->variables());

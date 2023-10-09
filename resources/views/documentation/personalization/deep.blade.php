@@ -39,4 +39,11 @@
             visit the documentation for the component you are customizing.</b>
         </p>
     </x-section>
+    <x-section title="Tracing TailwindCSS Classes">
+        <p class="text-justify">
+            If you really want to customize your components with deep personalization, make sure you track your
+            component classes so that TailwindCSS generates all the classes that come out of the component files:
+        </p>
+        <x-code language="js" :contents="$tailwindcss"/>
+    </x-section>
 </x-layout>

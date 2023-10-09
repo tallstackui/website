@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Enums\Examples;
+namespace App\Enums\Examples\Personalization;
 
 class DeepPersonalization
 {
@@ -95,4 +95,15 @@ class DeepPersonalization
     }
     HTML;
 
+    public const TAILWINDCSS = <<<'HTML'
+    // ...
+
+    content: [
+        // ...
+
+        './app/View/Components/**/*.php',
+    ],
+
+    // ...
+    HTML;
 }

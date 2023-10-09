@@ -17,7 +17,6 @@ use App\Http\Controllers\Documentation\Ui\Button;
 use App\Http\Controllers\Documentation\Ui\Card;
 use App\Http\Controllers\Documentation\Ui\DarkTheme;
 use App\Http\Controllers\Documentation\Ui\Dialog;
-use App\Http\Controllers\Documentation\Ui\Dropdown;
 use App\Http\Controllers\Documentation\Ui\Error;
 use App\Http\Controllers\Documentation\Ui\Icon;
 use App\Http\Controllers\Documentation\Ui\Modal;
@@ -53,7 +52,6 @@ Route::prefix('/docs')
                 Route::get('/badge', Badge::class)->name('badge');
                 Route::get('/button', Button::class)->name('button');
                 Route::get('/card', Card::class)->name('card');
-                Route::get('/dropdown', Dropdown::class)->name('dropdown');
                 Route::get('/error', Error::class)->name('error');
                 Route::get('/icon', Icon::class)->name('icon');
                 Route::get('/dialog', Dialog::class)->name('dialog');
@@ -73,6 +71,7 @@ Route::prefix('/docs')
             ->name('personalization.')
             ->group(function () {
                 Route::get('/concept', 'concept')->name('concept');
+                Route::get('/color', 'color')->name('color');
                 Route::get('/soft', 'soft')->name('soft');
                 Route::get('/deep', 'deep')->name('deep');
             });
