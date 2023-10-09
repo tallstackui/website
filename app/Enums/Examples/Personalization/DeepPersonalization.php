@@ -72,6 +72,10 @@ class DeepPersonalization
     }
     HTML;
 
+    public const VIEWS = <<<'HTML'
+    php artisan vendor:publish --tag=tallstackui.views
+    HTML;
+
     public const TAILWINDCSS = <<<'HTML'
     // ...
 

@@ -39,6 +39,12 @@
             visit the documentation for the component you are customizing.
         </p>
     </x-section>
+    <x-section title="Publish Blade Views">
+        <p class="text-justify">
+            You can publish and edit Blade files related to TallStackUi. Use this command to publish the files to your project:
+        </p>
+        <x-code language="shell" :contents="$views"/>
+    </x-section>
     <x-section title="Tracing TailwindCSS Classes">
         <p class="text-justify">
             If you really want to customize your components with deep personalization, make sure you track your

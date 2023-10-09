@@ -20,8 +20,10 @@ class Configuration
     */
     'personalizations' => [
         'input' => [
-            'square' => false, // Applicable: input, password and textarea
-            'round' => false, // Applicable: input & password
+            /* Input, Textarea & Password */
+            'square' => false,
+            /* Input & Password Only */
+            'round' => false,
         ],
         'tabs' => [
             'square' => false,
@@ -34,6 +36,7 @@ class Configuration
         ],
         'toast' => [
             'z-index' => 'z-50',
+            /* Alloweds: "top-right", "top-left", "bottom-right", "bottom-left" */
             'position' => 'top-right',
             'square' => false,
         ],
