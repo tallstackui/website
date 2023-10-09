@@ -72,6 +72,12 @@ class Toast
     }
     HTML;
 
+    public const TIME = <<<'HTML'
+    $this->toast()
+        ->timeout(seconds: 10)
+        ->success('Success', 'This is a success message.');
+    HTML;
+
     public const Z_INDEX = <<<'HTML'
     <x-toast z-index="z-50" />
     HTML;

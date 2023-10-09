@@ -2,8 +2,8 @@
 
 use function Livewire\Volt\{state};
 
-$model   = state('model', 1);
-$value   = state('value', 1);
+$model = state('model', 1);
+$value = state('value', 1);
 $options = state('options', [1,2,3]);
 
 ?>

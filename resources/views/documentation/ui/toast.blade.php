@@ -29,5 +29,12 @@
             <livewire:documentation.interactions.toast.confirmation/>
         </x-preview>
     </x-section>
+    <x-section>
+        <x-preview title="Time Controul"
+                   description="Increase the time to show the toast."
+                   :contents="$time">
+            <livewire:documentation.interactions.toast.timeout/>
+        </x-preview>
+    </x-section>
     <x-available-configuration />
 </x-layout>

@@ -9,6 +9,15 @@
 
     <title>{{ config('app.name', 'Laravel') }}</title>
 
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="{{ config('app.url') }}">
+    <meta name="twitter:creator" content="@devajmeireles">
+    <meta name="twitter:title" content="TALLStackUi">
+    <meta name="twitter:description" content="TALL Stack Compponents">
+
+    <meta property="og:url" content="{{ config('app.url') }}" />
+    <meta property="og:title" content="TALLStackUi, TALL Stack Compponents" />
+
     <link rel="preconnect" href="https://fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet"/>
 

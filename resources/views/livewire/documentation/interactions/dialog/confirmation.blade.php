@@ -1,6 +1,5 @@
 <?php
 
-use function Livewire\Volt\{state};
 use TallStackUi\Traits\Interactions;
 use Livewire\Volt\Component;
 use Livewire\Attributes\On;
