@@ -33,7 +33,7 @@
         <p>Let's prepare your environment for your first contribution:</p>
         <p class="mt-2">1. Fork the <a href="https://github.com/tallstackui/tallstackui" class="underline" target="_blank">repository</a></p>
         <p>2. Clone the repository forked for your computer.</p>
-        <p>3. Create a basic Laravel project using <a href="https://laravel.com/docs/10.x/starter-kits#laravel-breeze" class="underline" target="_blank">Laravel Breeze</a> with <b>Livewire (3)</b> stack.</p>
+        <p>3. Create a basic Laravel project using <a href="https://laravel.com/docs/10.x/starter-kits#laravel-breeze" class="underline" target="_blank">Laravel Breeze</a> with <b>Livewire (V3)</b> stack.</p>
         <p>4. Prepare any authentication way to access the <x-block>/dashboard</x-block></p>
         <p>5. Create a folder in the root of the Laravel project called <x-block>packages</x-block></p>
         <p>6. Inside the <x-block>packages</x-block> folder create another folder called <x-block>tallstackui</x-block></p>

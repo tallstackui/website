@@ -128,6 +128,31 @@
                         </li>
                     </ul>
                 </li>
+                <li class="ml-4 relative">
+                    <h2 class="font-medium text-slate-900 font-display dark:text-white">Internal Only</h2>
+                    <ul role="list" class="mt-4 space-y-2 dark:border-slate-800 lg:space-y-4 lg:mt-4 lg:border-slate-200">
+                        <li class="ml-4 relative">
+                            <a href="{{ route('documentation.internal.error') }}" class="text-gray-500 transition hover:text-gray-800 hover:underline">
+                                Error
+                            </a>
+                        </li>
+                        <li class="ml-4 relative">
+                            <a href="{{ route('documentation.internal.hint') }}" class="text-gray-500 transition hover:text-gray-800 hover:underline">
+                                Hint
+                            </a>
+                        </li>
+                        <li class="ml-4 relative">
+                            <a href="{{ route('documentation.internal.label') }}" class="text-gray-500 transition hover:text-gray-800 hover:underline">
+                                Label
+                            </a>
+                        </li>
+                        <li class="ml-4 relative">
+                            <a href="{{ route('documentation.internal.wrapper') }}" class="text-gray-500 transition hover:text-gray-800 hover:underline">
+                                Wrapper
+                            </a>
+                        </li>
+                    </ul>
+                </li>
             </ul>
         </li>
         <li>

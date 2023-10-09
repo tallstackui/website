@@ -9,6 +9,7 @@ use App\Http\Controllers\Documentation\Form\Radio;
 use App\Http\Controllers\Documentation\Form\Textarea;
 use App\Http\Controllers\Documentation\Form\Toggle;
 use App\Http\Controllers\Documentation\GetStarted;
+use App\Http\Controllers\Documentation\Internal;
 use App\Http\Controllers\Documentation\Personalization;
 use App\Http\Controllers\Documentation\Translation;
 use App\Http\Controllers\Documentation\Ui\Alert;
@@ -61,6 +62,16 @@ Route::prefix('/docs')
                 Route::get('/toast', Toast::class)->name('toast');
                 Route::get('/tooltip', Tooltip::class)->name('tooltip');
                 Route::get('/modal', Modal::class)->name('modal');
+            });
+
+        Route::controller(Internal::class)
+            ->prefix('/interal')
+            ->name('internal.')
+            ->group(function () {
+                Route::get('/error', 'index')->name('error');
+                Route::get('/hint', 'hint')->name('hint');
+                Route::get('/label', 'label')->name('label');
+                Route::get('/wrapper', 'wrapper')->name('wrapper');
             });
 
         Route::get('/dark-theme', DarkTheme::class)->name('dark-theme');
