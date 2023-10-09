@@ -11,6 +11,7 @@ class Layout extends Component
         public ?string $title = null,
         public ?string $section = null,
         public ?string $description = null,
+        public bool $torchlight = true,
     ) {
         //
     }

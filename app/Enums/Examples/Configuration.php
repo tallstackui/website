@@ -20,8 +20,8 @@ class Configuration
     */
     'personalizations' => [
         'input' => [
-            'square' => false,
-            'round' => false,
+            'square' => false, // Applicable: input, password and textarea
+            'round' => false, // Applicable: input & password
         ],
         'tabs' => [
             'square' => false,

@@ -41,7 +41,7 @@
                     @endif
                     {{ $slot }}
                 </article>
-                @if (request()->routeIs('documentation.*'))
+                @if ($torchlight && request()->routeIs('documentation.*'))
                     <p class="text-sm text-gray-600">Code highlighting provided by <a href="https://torchlight.dev" class="font-semibold underline" target="_blank">Torchlight</a></p>
                 @endif
             </div>
