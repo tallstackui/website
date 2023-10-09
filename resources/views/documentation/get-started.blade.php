@@ -3,8 +3,7 @@
         Get Started
     </x-slot:title>
     <x-section title="Requirements" id="requirements">
-        <p>TallStackUi was created with a <b class="font-bold underline">focus on Livewire 3</b> so the usage
-            requirements are:</p>
+        <p>TallStackUi was created with a <b class="font-bold underline">focus on Livewire 3</b> so the usage requirements are:</p>
         <ul class="mt-4 ml-4 list-inside list-decimal space-y-2">
             <li>Laravel 10</li>
             <li>Livewire 3</li>
@@ -18,7 +17,7 @@
         <x-code language="blade" :contents="$script"/>
         <p>If your prefer, you can add separately:</p>
         <x-code language="blade" :contents="$manual"/>
-        <x-alert text="You must add the TallStackUi setup or directives above the @vite tag." color="pink" icon="exclamation-circle" translucent />
+        <x-warning text="You must add the TallStackUi setup or directives above the @vite tag." />
         <p class="mt-4">3. Edit the <x-block>tailwindcss.config.js</x-block> of your application inserting:</p>
         <x-code language="js" :contents="$tailwindcss"/>
         <p>4. Build the assets and do a full cleanup in the Laravel:</p>

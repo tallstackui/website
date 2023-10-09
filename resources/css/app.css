@@ -4,28 +4,17 @@
 
 [x-cloak] { display: none !important; }
 
-/*
-  Blur and dim the lines that don't have the `.line-focus` class,
-  but are within a code block that contains any focus lines.
-*/
 .torchlight.has-focus-lines .line:not(.line-focus) {
     transition: filter 0.35s, opacity 0.35s;
     filter: blur(.095rem);
     opacity: .65;
 }
 
-/*
-  When the code block is hovered, bring all the lines into focus.
-*/
 .torchlight.has-focus-lines:hover .line:not(.line-focus) {
     filter: blur(0px);
     opacity: 1;
 }
 
-/*
- Margin and rounding are personal preferences,
- overflow-x-auto is recommended.
-*/
 pre {
     border-radius: 0.25rem;
     margin-top: 1rem;
@@ -33,12 +22,6 @@ pre {
     overflow-x: auto;
 }
 
-/*
- Add some vertical padding and expand the width
- to fill its container. The horizontal padding
- comes at the line level so that background
- colors extend edge to edge.
-*/
 pre code.torchlight {
     display: block;
     min-width: -webkit-max-content;
@@ -46,19 +29,11 @@ pre code.torchlight {
     min-width: max-content;
 }
 
-/*
- Horizontal line padding to match the vertical
- padding from the code block above.
-*/
 pre code.torchlight .line {
     padding-left: 1rem;
     padding-right: 1rem;
 }
 
-/*
- Push the code away from the line numbers and
- summary caret indicators.
-*/
 pre code.torchlight .line-number,
 pre code.torchlight .summary-caret {
     margin-right: 1rem;

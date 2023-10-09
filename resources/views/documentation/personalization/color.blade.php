@@ -15,7 +15,7 @@
     <x-section title="Personalizing Colors">
         <p>1. Open the TailwindCSS configuration file and enter the following content:</p>
         <x-code language="js" :contents="$file"/>
-        <x-alert text="Replace the hexadecimal values with your desired colors." color="pink" icon="exclamation-circle" translucent />
+        <x-warning text="Replace the hexadecimal values with your desired colors." />
         <p class="mt-2">2. After that, rebuild your assets:</p>
         <x-code language="shell" :contents="$rebuild"/>
         <p>3. After that, do a general clean up of Laravel using the command:</p>

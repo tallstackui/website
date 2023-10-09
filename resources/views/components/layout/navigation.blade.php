@@ -180,6 +180,11 @@
                         </li>
                     </ul>
                 </li>
+                <li class="ml-4 relative">
+                    <a href="{{ route('documentation.contribution') }}" class="text-gray-500 transition hover:text-gray-800 hover:underline">
+                        Contribution Guide
+                    </a>
+                </li>
             </ul>
         </li>
     </ul>

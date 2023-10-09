@@ -12,7 +12,7 @@
         <x-code language="php" :contents="$trait"/>
         3. Dispatch the Toast from a method.
         <x-code language="php" :contents="$dispatch"/>
-        <x-alert text="This is an example. You can't dispatch all at the same time." color="pink" icon="exclamation-circle" translucent />
+        <x-warning text="This is an example. You can't dispatch all at the same time." />
     </x-section>
     <x-section>
         <x-preview title="Basic Usage" :contents="$basic">

@@ -20,7 +20,7 @@
         <x-code language="blade" :contents="$customized"/>
         <p>3. Create a button to control the dark theme:</p>
         <x-code language="blade" :contents="$button"/>
-        <x-alert text="This button must be covered by the layout that received the helper above." color="pink" icon="exclamation-circle" translucent />
+        <x-warning text="This button must be covered by the layout that received the helper above." />
         <p class="mt-2">4. After that, all you need to do is adapt all your CSS classes to the dark theme variation:</p>
         <x-code language="blade" :contents="$example"/>
     </x-section>

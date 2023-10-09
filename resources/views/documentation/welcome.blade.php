@@ -12,10 +12,9 @@
     </x-section>
     <x-section class="space-y-6" title="History of TallStackUi" id="test">
         <p class="text-justify">
-            Hey! I'm <a href="https://github.com/devajmeireles" class="underline underline-offset-4"
-                        target="_blank">AJ</a>, creator of TallStackUi. I'm a FullStack developer passionate about TALL
-            Stack and addicted to the Laravel ecosystem. I also cooperate with the PestPHP community and other
-            open-source projects.
+            Hey! I'm <a href="https://github.com/devajmeireles" class="underline underline-offset-4" target="_blank">AJ</a>,
+            creator of TallStackUi. I'm a FullStack developer passionate about TALL Stack and addicted to the Laravel ecosystem.
+            I also cooperate with the PestPHP community and other open-source projects.
         </p>
         <p class="text-justify">
             For a long time, I have used a variety of component libraries to create TALL Stack applications. As time
