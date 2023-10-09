@@ -5,6 +5,9 @@
     <x-slot:description>
         Form input password component. Show or hide password value.
     </x-slot:description>
+    <x-slot:personalization>
+        <livewire:documentation.personalization component="password" />
+    </x-slot:personalization>
     <x-section>
         <x-preview title="Basic Usage"
                    language="blade"

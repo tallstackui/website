@@ -5,6 +5,9 @@
     <x-slot:description>
         Tooltip components to show contextual information when hovering over an element.
     </x-slot:description>
+    <x-slot:personalization>
+        <livewire:documentation.personalization component="tooltip" />
+    </x-slot:personalization>
     <x-section>
         <x-preview title="Basic Usage"
                    language="blade"

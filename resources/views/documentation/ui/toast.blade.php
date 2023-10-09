@@ -5,6 +5,9 @@
     <x-slot:description>
         Toast component. A notification style to interact with Livewire.
     </x-slot:description>
+    <x-slot:personalization>
+        <livewire:documentation.personalization component="toast" />
+    </x-slot:personalization>
     <x-section>
         1. Insert the Toast component on your main layout.
         <x-code language="html" :contents="$tag"/>

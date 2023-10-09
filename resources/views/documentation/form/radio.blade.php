@@ -5,6 +5,9 @@
     <x-slot:description>
         Form radio component.
     </x-slot:description>
+    <x-slot:personalization>
+        <livewire:documentation.personalization component="radio" />
+    </x-slot:personalization>
     <x-section>
         <x-preview title="Basic Usage"
                    language="blade"

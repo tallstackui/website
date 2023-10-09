@@ -5,6 +5,9 @@
     <x-slot:description>
         Form Toggle component.
     </x-slot:description>
+    <x-slot:personalization>
+        <livewire:documentation.personalization component="toggle" />
+    </x-slot:personalization>
     <x-section>
         <x-preview title="Basic Usage"
                    language="blade"

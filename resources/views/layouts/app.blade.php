@@ -37,6 +37,11 @@
                             @if ($description)
                                 <p class="text-sm text-slate-500">{{ $description }}</p>
                             @endif
+                            @if ($personalization)
+                                <div class="mt-2 inline-flex space-x-2">
+                                    {!! $personalization !!}
+                                </div>
+                            @endif
                         </header>
                     @endif
                     {{ $slot }}

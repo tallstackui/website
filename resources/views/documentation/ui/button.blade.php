@@ -5,6 +5,10 @@
     <x-slot:description>
         Button components.
     </x-slot:description>
+    <x-slot:personalization>
+        <livewire:documentation.personalization component="button" />
+        <livewire:documentation.personalization component="button.circle" />
+    </x-slot:personalization>
     <x-section>
         <x-preview title="Basic Button"
                    language="blade"

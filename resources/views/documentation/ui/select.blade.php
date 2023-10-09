@@ -5,6 +5,11 @@
     <x-slot:description>
         Varieties of select components.
     </x-slot:description>
+    <x-slot:personalization>
+        <livewire:documentation.personalization component="select" />
+        <livewire:documentation.personalization component="select.styled" />
+        <livewire:documentation.personalization component="select.searchable" />
+    </x-slot:personalization>
     <x-section>
         <x-preview title="Native HTML Select"
                    language="blade"

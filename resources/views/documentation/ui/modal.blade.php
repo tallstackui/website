@@ -5,6 +5,9 @@
     <x-slot:description>
         Modal component.
     </x-slot:description>
+    <x-slot:personalization>
+        <livewire:documentation.personalization component="modal" />
+    </x-slot:personalization>
     <x-section>
         <x-preview title="Basic Usage"
                    language="blade"

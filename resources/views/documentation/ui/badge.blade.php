@@ -5,6 +5,9 @@
     <x-slot:description>
         Badge component.
     </x-slot:description>
+    <x-slot:personalization>
+        <livewire:documentation.personalization component="badge" />
+    </x-slot:personalization>
     <x-section>
         <x-preview title="Basic Usage"
                    language="blade"

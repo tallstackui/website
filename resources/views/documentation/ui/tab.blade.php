@@ -5,6 +5,10 @@
     <x-slot:description>
         Tabs components to display content in tabs.
     </x-slot:description>
+    <x-slot:personalization>
+        <livewire:documentation.personalization component="tabs" />
+        <livewire:documentation.personalization component="tabs.items" />
+    </x-slot:personalization>
     <x-section>
         <x-preview title="Basic"
                    language="blade"
