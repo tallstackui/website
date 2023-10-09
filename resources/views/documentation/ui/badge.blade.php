@@ -25,6 +25,15 @@
         </x-preview>
     </x-section>
     <x-section>
+        <x-preview title="Round Variation"
+                   language="blade"
+                   :contents="$round">
+            <div class="flex items-center gap-2">
+                <x-badge text="TallStackUi" round/>
+            </div>
+        </x-preview>
+    </x-section>
+    <x-section>
         <x-preview title="Icon Slot"
                    language="blade"
                    :contents="$icons">

@@ -34,9 +34,9 @@
         <x-code language="php" :contents="$customization"/>
         <p class="mt-2 text-justify">
             Every customizable component has a method called <x-block>customization</x-block>, which is where the
-            classes come from. This method must return an array with the name of the customizable blocks and
-            their respective values which must be the CSS classes to be applied. <b class="underline">To learn about customizable blocks,
-            visit the documentation for the component you are customizing.</b>
+            classes come from. <u>This method must return an array with the name of the customizable blocks and
+            their respective values which must be the CSS classes to be applied.</u> To learn about customizable blocks,
+            visit the documentation for the component you are customizing.
         </p>
     </x-section>
     <x-section title="Tracing TailwindCSS Classes">

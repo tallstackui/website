@@ -28,12 +28,4 @@
             encourages me to maintain the library with constant news, improvements and updates.
         </p>
     </x-section>
-    <x-section class="mt-2" title="Maintainers">
-        <p class="text-justify">
-            As no one gets anywhere alone, TallStackUi has a team of developers who work to provide the
-            support that the library deserves. I am grateful to the people who believed in the project
-            and made it happen. You can check the list of contributors by <a href="https://github.com/tallstackui/tallstackui/graphs/contributors" class="underline" target="_blank">clicking here.</a>
-            Feel invited to join our team by reading the <a href="{{ route('documentation.contribution') }}" class="underline">contribution guide.</a>
-        </p>
-    </x-section>
 </x-layout>

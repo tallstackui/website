@@ -37,7 +37,9 @@ new class extends Component {
 
 <div>
     <x-modal wire>
-        <x-warning class="mb-4" text="This content is part of TallStackUi customizations." />
+        <x-warning class="mb-4">
+            This content is part of <a href="{{ route('documentation.personalization.concept') }}" class="underline">TallStackUi customizations.</a>
+        </x-warning>
         <x-slot:title>
             <div class="flex items-center gap-2">
                 {{ $name }}, Personalization Blocks
