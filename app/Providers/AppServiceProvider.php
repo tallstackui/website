@@ -13,6 +13,6 @@ class AppServiceProvider extends ServiceProvider
 
     public function boot(): void
     {
-        auth()->loginUsingId(1);
+        //
     }
 }

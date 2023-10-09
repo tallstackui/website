@@ -12,7 +12,6 @@ class Badge
     <x-badge text="TallStackUi" square />
     HTML;
 
-
     public const ROUND = <<<'HTML'
     <x-badge text="TallStackUi" round />
     HTML;

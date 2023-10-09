@@ -69,7 +69,7 @@ enum Example: string
         $constants = (new ReflectionClass($this->value))->getConstants();
 
         return [...collect($constants)
-            ->mapWithKeys(function ($value, $key) {
+            ->mapWithKeys(function (string $value, string $key) {
                 return [
                     str($key)->lower()
                         ->camel()

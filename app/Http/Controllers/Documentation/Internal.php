@@ -4,7 +4,6 @@ namespace App\Http\Controllers\Documentation;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Contracts\View\View;
-use Illuminate\Http\Request;
 
 class Internal extends Controller
 {
