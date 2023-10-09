@@ -59,7 +59,7 @@ jobs:
       - run: npm run build
 
       - name: Generate Artisan Key
-        run: copy .env.example .env && php artisan key:generate
+        run: cp .env.example .env && php artisan key:generate
 
       - name: Pint
         run: ./vendor/bin/pint --test
