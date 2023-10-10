@@ -54,6 +54,12 @@ class Modal
     </x-modal>
     HTML;
 
+    public const Z_INDEX = <<<'HTML'
+    <x-modal title="TallStackUi" z-index="z-10">
+        TallStackUi
+    </x-modal>
+    HTML;
+
     public const UNCLOSEABLE = <<<'HTML'
     <x-modal title="TallStackUi" uncloseable>
         TallStackUi

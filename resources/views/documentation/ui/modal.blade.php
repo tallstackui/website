@@ -129,6 +129,18 @@
         </x-preview>
     </x-section>
     <x-section>
+        <x-preview title="Z Index"
+                   language="blade"
+                   :contents="$zIndex">
+            <x-modal id="z-modal" title="TallStackUi" z-index="z-10">
+                TallStackUi
+            </x-modal>
+            <x-button x-on:click="$modalOpen('z-modal')">
+                Open
+            </x-button>
+        </x-preview>
+    </x-section>
+    <x-section>
         <x-preview title="Uncloseable"
                    description="An option to prevent the user from closing the modal when click outside."
                    language="blade"
