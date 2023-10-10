@@ -35,7 +35,7 @@ class Select
     HTML;
 
     public const STYLED_ADVANCED = <<<'HTML'
-    <x-select wire:model="value" :options="[
+    <x-select.styled wire:model="value" :options="[
         ['label' => 'TALL', 'value' => 1],
         ['label' => 'LIVT', 'value' => 2],
     ]" select="label:label|value:value" />
@@ -48,7 +48,7 @@ class Select
     HTML;
 
     public const STYLED_SEARCHABLE = <<<'HTML'
-    <x-select wire:model="value" :options="[
+    <x-select.styled wire:model="value" :options="[
         ['label' => 'TALL', 'value' => 1],
         ['label' => 'LIVT', 'value' => 2],
     ]" select="label:label|value:value" searchable />
