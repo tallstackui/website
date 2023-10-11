@@ -1,6 +1,6 @@
 <x-layout :torchlight="false">
     <x-slot:title>
-        Label Component (Interal Only)
+        Label Component
     </x-slot:title>
     <x-slot:description>
         The generic error component used in form components.

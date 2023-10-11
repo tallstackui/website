@@ -5,9 +5,6 @@
     <x-slot:description>
         Native support to all <a href="https://heroicons.com" class="underline" target="_blank">Heroicons.</a>
     </x-slot:description>
-    <x-slot:personalization>
-        <livewire:documentation.personalization component="icon" />
-    </x-slot:personalization>
     <x-section>
         <x-preview title="Basic Usage"
                    language="blade"

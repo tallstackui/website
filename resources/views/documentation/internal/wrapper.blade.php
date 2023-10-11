@@ -1,6 +1,6 @@
 <x-layout :torchlight="false">
     <x-slot:title>
-        Wrapper Component (Interal Only)
+        Wrapper Component
     </x-slot:title>
     <x-slot:description>
         The generic error component used in form components.

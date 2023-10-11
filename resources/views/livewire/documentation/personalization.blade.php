@@ -44,7 +44,7 @@ new class extends Component {
             This content is part of <a href="{{ route('documentation.personalization.concept') }}" class="underline">TallStackUi personalization.</a>
         </x-warning>
         <x-slot:title>
-            <div class="flex items-center gap-2">
+            <div class="flex justify-start items-center gap-2">
                 {{ $name }}, Personalization Blocks
                 <x-tooltip text="Click on the block to check the original class."
                            position="bottom"
@@ -68,7 +68,7 @@ new class extends Component {
                 </div>
                 <div class="mt-2 space-y-2">
                     @if ($original !== null)
-                        <p>Name: <x-badge :text="$original['block']" color="pink" outline /></p>
+                        <p>Block Name: <x-badge :text="$original['block']" color="pink" outline /></p>
                         <p>Original Content:</p>
                         <div class="text-[#C3E88D] overflow-auto custom-scrollbar rounded-lg bg-[#292D3E] p-4 my-2">
                             {{ $original['class'] }}
