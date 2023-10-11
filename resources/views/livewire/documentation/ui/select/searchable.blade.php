@@ -41,6 +41,8 @@ $options = state('options', [1,2,3]);
     @elseif ($model === 5)
         <x-select.searchable request="https://jsonplaceholder.typicode.com/users"
                              select="label:name|value:id"
+                             label="Select One User"
+                             hint="Enter any random value to see the slot"
                              wire:model="value">
             <x-slot:after>
                 <div class="px-2 mb-2 flex justify-center items-center">

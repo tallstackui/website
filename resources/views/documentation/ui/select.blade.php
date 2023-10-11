@@ -75,6 +75,7 @@
     </x-section>
     <x-section>
         <x-preview title="Slot After"
+                   description="An option to interact with the search term"
                    language="blade"
                    :contents="$styledSlot">
             <livewire:documentation.ui.select.styled :model="6"/>
@@ -112,6 +113,7 @@
     </x-section>
     <x-section>
         <x-preview title="Slot After"
+                   description="An option to interact with the search term"
                    language="blade"
                    :contents="$searchableSlot">
             <livewire:documentation.ui.select.searchable :model="5"/>

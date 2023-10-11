@@ -31,7 +31,7 @@ $options = state('options', [1,2,3]);
         ]" select="label:label|value:value" wire:model="value" searchable />
     @else
         <x-select.styled label="Select One Option"
-                         hint="You can choose 1, 2 or 3"
+                         hint="Enter any random value to see the slot"
                          wire:model="value"
                          searchable
                          :options="[1,2,3]">
