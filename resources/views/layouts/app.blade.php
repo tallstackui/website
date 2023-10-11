@@ -39,10 +39,10 @@
                     @if ($title || $section)
                         <header class="mb-6 space-y-1">
                             @if ($section)
-                                <p class="text-sm font-medium text-sky-500 font-display">{{ $section }}</p>
+                                <p class="text-sm font-medium text-pink-500 font-display">{{ $section }}</p>
                             @endif
                             @if ($title)
-                                <h1 class="text-3xl font-semibold tracking-tight text-slate-900 font-display dark:text-white">{{ $title }}</h1>
+                                <h1 class="text-3xl font-semibold tracking-tight text-pink-900 font-display dark:text-white">{{ $title }}</h1>
                             @endif
                             @if ($description)
                                 <p class="text-sm text-slate-500">{{ $description }}</p>

@@ -12,7 +12,7 @@
     <div {{ $attributes->merge(['class' => 'flex items-center justify-between']) }}>
         <div>
             @if ($title)
-                <h1 @class(['text-xl tracking-tight text-slate-900 font-medium', 'mb-4' => !$description])>
+                <h1 @class(['text-xl tracking-tight text-pink-600 font-medium', 'mb-4' => !$description])>
                     {{ $title }}
                 </h1>
             @endif

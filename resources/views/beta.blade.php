@@ -4,9 +4,7 @@
     </x-slot:title>
     <x-section>
         <p class="text-justify">
-            TallStackUi is in beta phase since of 9/10/2023. <u>The beta phase is a testing phase</u> that consists
-            of preparing the library for a stable version (1.0) soon. Read the information below to be aware
-            of what may happen in this beta phase.
+            TallStackUi is in beta phase since of 9/10/2023. <u>The beta phase is a testing phase.</u>
         </p>
     </x-section>
     <x-section title="Warnings">
