@@ -38,5 +38,15 @@ $options = state('options', [1,2,3]);
                              select="label:name|value:id"
                              wire:model="value"
         />
+    @elseif ($model === 5)
+        <x-select.searchable request="https://jsonplaceholder.typicode.com/users"
+                             select="label:name|value:id"
+                             wire:model="value">
+            <x-slot:after>
+                <div class="px-2 mb-2 flex justify-center items-center">
+                    <span x-html="`Create user <b>${search}</b>`"></span>
+                </div>
+            </x-slot:after>
+        </x-select.searchable>
     @endif
 </div>

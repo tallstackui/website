@@ -1,1 +1,1 @@
-<div class="border border-gray-300 my-8"></div>
+<div class="border border-pink-300 my-8"></div>

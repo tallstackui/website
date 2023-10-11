@@ -11,8 +11,7 @@ class Select
     public const BASIC_LABEL_HINT = <<<'HTML'
     <x-select label="Select One Option"
               hint="You can choose 1, 2 or 3"
-              :options="[1,2,3]"
-    />
+              :options="[1,2,3]" />
     HTML;
 
     public const BASIC_ADVANCED = <<<'HTML'
@@ -30,8 +29,7 @@ class Select
     <x-select.styled label="Select One Option"
                      hint="You can choose 1, 2 or 3"
                      wire:model="value"
-                     :options="[1,2,3]"
-    />
+                     :options="[1,2,3]" />
     HTML;
 
     public const STYLED_ADVANCED = <<<'HTML'
@@ -54,11 +52,24 @@ class Select
     ]" select="label:label|value:value" searchable />
     HTML;
 
+    public const STYLED_SLOT = <<<'HTML'
+        <x-select.styled label="Select One Option"
+                         hint="You can choose 1, 2 or 3"
+                         wire:model="value"
+                         searchable
+                         :options="[1,2,3]">
+            <x-slot:after>
+                <div class="px-2 mb-2 flex justify-center items-center">
+                    <span x-html="`Create user <b>${search}</b>`"></span>
+                </div>
+            </x-slot:after>
+        </x-select.styled>
+    HTML;
+
     public const SEARCHABLE = <<<'HTML'
     <x-select.searchable request="https://jsonplaceholder.typicode.com/users"
                          select="label:name|value:id"
-                         wire:model="value"
-    />
+                         wire:model="value" />
     HTML;
 
     public const SEARCHABLE_LABEL_HINT = <<<'HTML'
@@ -66,8 +77,7 @@ class Select
                          select="label:name|value:id"
                          label="Select One User"
                          hint="You can choose whoever you want"
-                         wire:model="value"
-    />
+                         wire:model="value" />
     HTML;
 
     public const SEARCHABLE_MULTIPLE = <<<'HTML'
@@ -76,11 +86,12 @@ class Select
     <x-select.searchable request="https://jsonplaceholder.typicode.com/users"
                          select="label:name|value:id"
                          wire:model="options"
-                         multiple
-    />
+                         multiple />
     HTML;
 
     public const SEARCHABLE_ADVANCED = <<<'HTML'
+    <!-- Method can be 'get' or 'post' -->
+
     <x-select.searchable :request="[
                             'url' => 'https://jsonplaceholder.typicode.com/users',
                             'method' => 'get',
@@ -89,7 +100,18 @@ class Select
                             ],
                          ]"
                          select="label:name|value:id"
-                         wire:model="value"
-    />
+                         wire:model="value" />
+    HTML;
+
+    public const SEARCHABLE_SLOT = <<<'HTML'
+    <x-select.searchable request="https://jsonplaceholder.typicode.com/users"
+                         select="label:name|value:id"
+                         wire:model="value">
+        <x-slot:after>
+            <div class="px-2 mb-2 flex justify-center items-center">
+                <span x-html="`Create user <b>${search}</b>`"></span>
+            </div>
+        </x-slot:after>
+    </x-select.searchable>
     HTML;
 }

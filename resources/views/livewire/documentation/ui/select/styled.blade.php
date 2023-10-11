@@ -24,10 +24,22 @@ $options = state('options', [1,2,3]);
             ['label' => 'TALL', 'value' => 1],
             ['label' => 'LIVT', 'value' => 2],
         ]" select="label:label|value:value" wire:model="value" />
-    @else
+    @elseif ($model === 5)
         <x-select.styled :options="[
             ['label' => 'TALL', 'value' => 1],
             ['label' => 'LIVT', 'value' => 2],
         ]" select="label:label|value:value" wire:model="value" searchable />
+    @else
+        <x-select.styled label="Select One Option"
+                         hint="You can choose 1, 2 or 3"
+                         wire:model="value"
+                         searchable
+                         :options="[1,2,3]">
+            <x-slot:after>
+                <div class="px-2 mb-2 flex justify-center items-center">
+                    <span x-html="`Create user <b>${search}</b>`"></span>
+                </div>
+            </x-slot:after>
+        </x-select.styled>
     @endif
 </div>

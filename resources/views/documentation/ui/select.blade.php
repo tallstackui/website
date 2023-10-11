@@ -18,14 +18,14 @@
         </x-preview>
     </x-section>
     <x-section>
-        <x-preview title="Select, Label & Hint"
+        <x-preview title="Label & Hint"
                    language="blade"
                    :contents="$basicLabelHint">
             <x-select label="Select One Option" hint="You can choose 1, 2 or 3" :options="[1,2,3]"/>
         </x-preview>
     </x-section>
     <x-section>
-        <x-preview title="Select, Multi-dimensional Array"
+        <x-preview title="Multi-dimensional Array"
                    description="An option to use multi-dimensional array."
                    language="blade"
                    :contents="$basicAdvanced">
@@ -45,21 +45,21 @@
         </x-preview>
     </x-section>
     <x-section>
-        <x-preview title="Styled Select, Label & Hint"
+        <x-preview title="Label & Hint"
                    language="blade"
                    :contents="$styledLabelHint">
             <livewire:documentation.ui.select.styled :model="2"/>
         </x-preview>
     </x-section>
     <x-section>
-        <x-preview title="Styled Select, Multiple"
+        <x-preview title="Multiple"
                    language="blade"
                    :contents="$styledMultiple">
             <livewire:documentation.ui.select.styled :model="3"/>
         </x-preview>
     </x-section>
     <x-section>
-        <x-preview title="Styled Select, Multi-dimensional Array"
+        <x-preview title="Multi-dimensional Array"
                    description="An option to use multi-dimensional array."
                    language="blade"
                    :contents="$styledAdvanced">
@@ -67,10 +67,17 @@
         </x-preview>
     </x-section>
     <x-section>
-        <x-preview title="Styled Select, Searchable"
+        <x-preview title="Searchable"
                    language="blade"
                    :contents="$styledSearchable">
             <livewire:documentation.ui.select.styled :model="5"/>
+        </x-preview>
+    </x-section>
+    <x-section>
+        <x-preview title="Slot After"
+                   language="blade"
+                   :contents="$styledSlot">
+            <livewire:documentation.ui.select.styled :model="6"/>
         </x-preview>
     </x-section>
     <x-separator />
@@ -83,24 +90,31 @@
         </x-preview>
     </x-section>
     <x-section>
-        <x-preview title="Searchable Select, Label & Hint"
+        <x-preview title="Label & Hint"
                    language="blade"
                    :contents="$searchableLabelHint">
             <livewire:documentation.ui.select.searchable :model="2"/>
         </x-preview>
     </x-section>
     <x-section>
-        <x-preview title="Searchable Select, Multiple"
+        <x-preview title="Multiple"
                    language="blade"
                    :contents="$searchableMultiple">
             <livewire:documentation.ui.select.searchable :model="3"/>
         </x-preview>
     </x-section>
     <x-section>
-        <x-preview title="Searchable Select, Advanced Usage"
+        <x-preview title="Advanced Usage"
                    language="blade"
                    :contents="$searchableAdvanced">
             <livewire:documentation.ui.select.searchable :model="4"/>
+        </x-preview>
+    </x-section>
+    <x-section>
+        <x-preview title="Slot After"
+                   language="blade"
+                   :contents="$searchableSlot">
+            <livewire:documentation.ui.select.searchable :model="5"/>
         </x-preview>
     </x-section>
 </x-layout>
