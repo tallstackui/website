@@ -6,7 +6,7 @@
                     TallStackUi
                 </span>
             </div>
-            <p class="mt-4 font-medium text-white">Ready-to-use TALL Stack Components.</p>
+            <p class="mt-4 font-medium text-white">Your Next-level of TALL Stack Components.</p>
         </div>
     </div>
 </div>

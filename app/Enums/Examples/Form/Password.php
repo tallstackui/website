@@ -26,7 +26,6 @@ class Password
     public const LIVEWIRE = <<<'HTML'
     <x-password label="Password"
                 hint="Insert your best password"
-                wire:model="password"
-    />
+                wire:model="password" />
     HTML;
 }
