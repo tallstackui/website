@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Documentation\Configuration;
 use App\Http\Controllers\Documentation\Contribution;
+use App\Http\Controllers\Documentation\Dropdown;
 use App\Http\Controllers\Documentation\Form\Checkbox;
 use App\Http\Controllers\Documentation\Form\Input;
 use App\Http\Controllers\Documentation\Form\Password;
@@ -58,6 +59,7 @@ Route::prefix('/docs')
                 Route::get('/error', Error::class)->name('error');
                 Route::get('/icon', Icon::class)->name('icon');
                 Route::get('/dialog', Dialog::class)->name('dialog');
+                Route::get('/dropdown', Dropdown::class)->name('dropdown');
                 Route::get('/select', Select::class)->name('select');
                 Route::get('/tab', Tab::class)->name('tab');
                 Route::get('/toast', Toast::class)->name('toast');

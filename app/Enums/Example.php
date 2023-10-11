@@ -22,6 +22,7 @@ use App\Enums\Examples\Ui\Badge;
 use App\Enums\Examples\Ui\Button;
 use App\Enums\Examples\Ui\Card;
 use App\Enums\Examples\Ui\Dialog;
+use App\Enums\Examples\Ui\Dropdown;
 use App\Enums\Examples\Ui\Error;
 use App\Enums\Examples\Ui\Icon;
 use App\Enums\Examples\Ui\Modal;
@@ -45,6 +46,7 @@ enum Example: string
     case Checkbox = Checkbox::class;
     case DeepPersonalization = DeepPersonalization::class;
     case Dialog = Dialog::class;
+    case Dropdown = Dropdown::class;
     case DarkTheme = DarkTheme::class;
     case Error = Error::class;
     case Icon = Icon::class;

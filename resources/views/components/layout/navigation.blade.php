@@ -87,6 +87,11 @@
                             </a>
                         </li>
                         <li class="relative ml-4">
+                            <a href="{{ route('documentation.ui.dropdown') }}" @class(['text-gray-500 transition hover:text-gray-800 hover:underline', 'underline' => request()->routeIs('documentation.ui.dropdown')])>
+                                Dropdown
+                            </a>
+                        </li>
+                        <li class="relative ml-4">
                             <a href="{{ route('documentation.ui.error') }}" @class(['text-gray-500 transition hover:text-gray-800 hover:underline', 'underline' => request()->routeIs('documentation.ui.error')])>
                                 Error
                             </a>
