@@ -13,8 +13,14 @@ class Password
     HTML;
 
     public const EFFECTS = <<<'HTML'
-    <x-password label="Password" hint="Insert your best password" value="TallStackUi" disabled />
-    <x-password label="Password" hint="Insert your best password" value="TallStackUi" readonly />
+    <x-password label="Password"
+                hint="Insert your best password"
+                value="TallStackUi"
+                disabled />
+
+    <x-password label="Password"
+                hint="Insert your best password"
+                value="TallStackUi" readonly />
     HTML;
 
     public const LIVEWIRE = <<<'HTML'

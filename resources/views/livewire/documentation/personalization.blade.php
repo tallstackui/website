@@ -21,6 +21,8 @@ new class extends Component {
     public function updatingModal($value): void
     {
         if (!$value) {
+            $this->blocks = null;
+            $this->original = null;
             return;
         }
 
@@ -36,9 +38,10 @@ new class extends Component {
 } ?>
 
 <div>
+{{--    TODO: add the name that needs to be used to personalize --}}
     <x-modal wire>
         <x-warning class="mb-4">
-            This content is part of <a href="{{ route('documentation.personalization.concept') }}" class="underline">TallStackUi customizations.</a>
+            This content is part of <a href="{{ route('documentation.personalization.concept') }}" class="underline">TallStackUi personalization.</a>
         </x-warning>
         <x-slot:title>
             <div class="flex items-center gap-2">

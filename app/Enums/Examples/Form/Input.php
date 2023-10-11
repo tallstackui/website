@@ -27,7 +27,6 @@ class Input
              hint="Insert your username"
              icon="users"
              position="right"
-             wire:model="username"
-    />
+             wire:model="username" />
     HTML;
 }

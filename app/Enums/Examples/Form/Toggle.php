@@ -50,7 +50,6 @@ class Toggle
 
     public const LIVEWIRE = <<<'HTML'
     <x-toggle label="Receive Alert"
-              wire:model="alert"
-    />
+              wire:model="alert" />
     HTML;
 }

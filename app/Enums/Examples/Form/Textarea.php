@@ -12,6 +12,10 @@ class Textarea
     <x-textarea resize />
     HTML;
 
+    public const AUTO_RESIZE = <<<'HTML'
+    <x-textarea auto-resize />
+    HTML;
+
     public const ROWS = <<<'HTML'
     <x-textarea :rows="3" />
     HTML;
@@ -28,7 +32,6 @@ class Textarea
     public const LIVEWIRE = <<<'HTML'
     <x-textarea label="Description"
                 hint="Insert the post description"
-                wire:model="description"
-    />
+                wire:model="description" />
     HTML;
 }

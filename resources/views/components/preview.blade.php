@@ -21,13 +21,14 @@
             @endif
         </div>
         @if ($contents)
-        <div class="flex">
-            <button class="flex items-center overflow-hidden rounded-md p-1 focus:outline-none sm:px-2"
+        <div class="flex rounded-md bg-white">
+            <button class="flex items-center gap-x-1 overflow-hidden rounded-md p-1 text-sm transition focus:outline-none sm:px-2"
                     :class="{
-                    'dark:bg-secondary-700 text-red-500 font-semibold':  code,
+                    'dark:bg-secondary-700 text-pink-500 font-semibold':  code,
                     'text-gray-400': !code
                 }" type="button" x-on:click="code = !code" x-cloak>
-                <x-icon name="code-bracket" class="h-5 w-5" />
+                <x-icon name="code-bracket" class="h-3 w-3" />
+                Code
             </button>
         </div>
         @endif

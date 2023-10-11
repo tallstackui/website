@@ -50,7 +50,6 @@ class Radio
 
     public const LIVEWIRE = <<<'HTML'
     <x-radio label="Receive Alert"
-             wire:model="alert"
-    />
+             wire:model="alert" />
     HTML;
 }

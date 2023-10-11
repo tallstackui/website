@@ -50,7 +50,6 @@ class Checkbox
 
     public const LIVEWIRE = <<<'HTML'
     <x-checkbox label="Receive Alert"
-                wire:model="alert"
-    />
+                wire:model="alert" />
     HTML;
 }

@@ -23,6 +23,13 @@
         </x-preview>
     </x-section>
     <x-section>
+        <x-preview title="Auto-resize"
+                   language="blade"
+                   :contents="$autoResize">
+            <x-textarea :rows="1" auto-resize />
+        </x-preview>
+    </x-section>
+    <x-section>
         <x-preview title="Row Control"
                    language="blade"
                    :contents="$rows">
