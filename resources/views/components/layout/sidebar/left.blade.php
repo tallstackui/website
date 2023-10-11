@@ -6,7 +6,7 @@
          x-transition:leave="transition-opacity ease-linear duration-300"
          x-transition:leave-start="opacity-100"
          x-transition:leave-end="opacity-0"
-         class="fixed inset-0 bg-gray-600 bg-opacity-75"></div>
+         class="fixed inset-0 bg-gray-600 bg-opacity-75 backdrop-blur-sm"></div>
     <div x-show="mobile" class="fixed inset-0 z-40 flex">
         <div x-show="mobile"
              x-transition:enter="transition ease-in-out duration-300 transform"
@@ -33,6 +33,9 @@
                 </button>
             </div>
             <div class="mt-5 h-0 flex-1 overflow-y-auto soft-scrollbar">
+                <div class="flex justify-center items-center mb-6">
+                    <x-svg.banner class="w-14 h-14" />
+                </div>
                 <x-layout.navigation class="ml-8" />
             </div>
         </div>

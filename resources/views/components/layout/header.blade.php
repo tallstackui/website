@@ -1,4 +1,7 @@
 <header class="top-0 z-50 flex flex-none flex-wrap items-center justify-between bg-white px-4 py-5 shadow-md shadow-slate-900/5 transition duration-500 dark:bg-transparent dark:shadow-none sm:px-6 lg:px-8">
+    <div class="hidden lg:block">
+        <x-svg.banner class="w-10 h-8" />
+    </div>
     <div class="mr-6 flex lg:hidden">
         <button x-on:click="mobile = true" type="button" class="relative" aria-label="Open navigation">
             <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"
