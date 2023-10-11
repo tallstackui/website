@@ -5,7 +5,7 @@ namespace App\Enums\Examples\Ui;
 class Tab
 {
     public const BASIC = <<<'HTML'
-    <x-tabs :options="['Tab 1', 'Tab 2', 'Tab 3', 'Tab 4', 'Tab 5']" selected="Tab 1">
+    <x-tabs selected="Tab 1">
         <x-tabs.items tab="Tab 1">
             Tab 1
         </x-tabs.items>
@@ -27,7 +27,7 @@ class Tab
     public const WIREABLE = <<<'HTML'
     <!--  Livewire string property: $tab - initial value: "Tab 1" -->
 
-    <x-tabs :options="['Tab 1', 'Tab 2', 'Tab 3', 'Tab 4', 'Tab 5']" wire:model="tab">
+    <x-tabs wire:model="tab">
         <x-tabs.items tab="Tab 1">
             Tab 1
         </x-tabs.items>
@@ -51,7 +51,7 @@ class Tab
     public const WIREABLE_LIVE = <<<'HTML'
     <!--  Livewire string property: $tab - initial value: "Tab 1" -->
 
-    <x-tabs :options="['Tab 1', 'Tab 2', 'Tab 3', 'Tab 4', 'Tab 5']" wire:model.live="tab">
+    <x-tabs wire:model.live="tab">
         <x-tabs.items tab="Tab 1">
             Tab 1
         </x-tabs.items>
