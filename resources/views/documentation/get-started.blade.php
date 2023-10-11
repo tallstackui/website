@@ -17,7 +17,7 @@
         <x-code language="blade" :contents="$script"/>
         <p>If your prefer, you can add separately:</p>
         <x-code language="blade" :contents="$manual"/>
-        <x-warning text="You must add the TallStackUi setup or directives above the @vite tag." />
+        <x-warning text="You must add the setup or directives above the @vite tag." />
         <p class="mt-4">3. Edit the <x-block>tailwindcss.config.js</x-block> of your application inserting:</p>
         <x-code language="js" :contents="$tailwindcss"/>
         <p>4. Build the assets and do a full cleanup in the Laravel:</p>

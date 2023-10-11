@@ -11,15 +11,11 @@ class GetStarted
     public const SCRIPT = <<<'HTML'
     <html>
         <head>
-            <!-- ... -->
-
             {{-- Also insert this code [tl! highlight:1] --}}
             <style> [x-cloak] { display: none; } </style>
 
             <tallstackui:setup /> {{-- [tl! highlight] --}}
             @vite(['resources/css/app.css', 'resources/js/app.js'])
-
-            <!-- ... -->
         </head>
     </html>
     HTML;
@@ -27,16 +23,12 @@ class GetStarted
     public const MANUAL = <<<'HTML'
     <html>
         <head>
-            <!-- ... -->
-
             {{-- Also insert this code [tl! highlight:1] --}}
             <style> [x-cloak] { display: none; } </style>
 
             @tallStackUiScripts {{-- [tl! highlight:1] --}}
             @tallStackUiStyles
             @vite(['resources/css/app.css', 'resources/js/app.js'])
-
-            <!-- ... -->
         </head>
     </html>
     HTML;
@@ -54,8 +46,6 @@ class GetStarted
         './vendor/tallstackui/tallstackui/resources/views/**/*.blade.php',
         './vendor/tallstackui/tallstackui/src/**/*.php',
     ],
-
-    // ...
     HTML;
 
     public const BUILD = <<<'HTML'
