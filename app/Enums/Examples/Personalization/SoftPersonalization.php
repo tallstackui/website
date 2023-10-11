@@ -135,4 +135,20 @@ class SoftPersonalization
         }
     }
     HTML;
+
+    public const TAILWINDCSS = <<<'HTML'
+    // ...
+
+    content: [
+        // ...
+
+        './app/Providers/AppServiceProvider.php',
+
+        // or if you are using invokable classes...
+
+        './app/TallStackUi/**/*.php',
+    ],
+
+    // ...
+    HTML;
 }

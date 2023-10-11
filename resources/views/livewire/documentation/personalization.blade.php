@@ -38,7 +38,6 @@ new class extends Component {
 } ?>
 
 <div>
-{{--    TODO: add the name that needs to be used to personalize --}}
     <x-modal wire>
         <x-warning class="mb-4">
             This content is part of <a href="{{ route('documentation.personalization.concept') }}" class="underline">TallStackUi personalization.</a>
@@ -68,7 +67,9 @@ new class extends Component {
                 </div>
                 <div class="mt-2 space-y-2">
                     @if ($original !== null)
-                        <p>Block Name: <x-badge :text="$original['block']" color="pink" outline /></p>
+                        <p>Block Name:
+                            <x-badge :text="$original['block']" color="pink" outline/>
+                        </p>
                         <p>Original Content:</p>
                         <div class="text-[#C3E88D] overflow-auto custom-scrollbar rounded-lg bg-[#292D3E] p-4 my-2">
                             {{ $original['class'] }}
@@ -81,6 +82,5 @@ new class extends Component {
     <x-button.circle wire:click="$toggle('modal')"
                      icon="paint-brush"
                      color="pink"
-                     sm
-    />
+                     sm />
 </div>

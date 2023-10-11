@@ -16,7 +16,7 @@
         </p>
     </x-section>
     <x-section class="grid grid-cols-2 gap-2">
-        <div class="col-span-1">
+        <div class="col-span-full md:col-span-1">
             <x-card>
                 <a class="inline-flex items-center gap-2" href="{{ route('documentation.personalization.soft') }}">
                     <u>Soft</u> Personalization
@@ -24,7 +24,7 @@
                 </a>
             </x-card>
         </div>
-        <div class="col-span-1">
+        <div class="col-span-full md:col-span-1">
             <x-card>
                 <a class="inline-flex items-center gap-2" href="{{ route('documentation.personalization.deep') }}">
                     <u>Deep</u> Personalization

@@ -5,18 +5,10 @@
     <x-slot:description>
         The soft personalization. Easy way to personalize all TallStackUi components.
     </x-slot:description>
-    <x-section>
-        <p class="text-justify">
-            When we wrote this feature we thought about a single criterion: <i>"A way to customize components WITHOUT
-            having to be an expert in Laravel and having to create hundreds of files that replace the original components."</i>,
-            as many other libraries do. <b class="underline">Read the documentation carefully and do not skip steps to be able
-            to use soft customization successfully.</b>
-        </p>
-    </x-section>
     <x-section title="Concept">
         <p class="text-justify">
             <b class="underline">Soft personalization consists of customizing components at run time</b>, through a service provider, such as <x-block>AppServiceProvider</x-block>.
-            The idea behind soft customization is to tap into customizable blocks of each component. The classes of each TallStackUi
+            The idea behind soft personalization is to tap into customizable blocks of each component. The classes of each TallStackUi
             component are divided into blocks that allow the classes to be overwritten at run time. Let's take a look at a simple example.
         </p>
         <x-code language="php" :contents="$example"/>
@@ -43,7 +35,7 @@
     </x-section>
     <x-section title="Invokable Class">
         <p class="text-justify">
-            You can also send customization to be done in a callable class. Let's take a look at a example:
+            You can also send personalization to be done in a callable class. Let's take a look at a example:
         </p>
         <x-code language="php" :contents="$invokableExample"/>
         <p class="mt-2">And then:</p>
@@ -64,11 +56,19 @@
             All component documentation mentions their respective personalized blocks in a pink button at the top of the page.
         </p>
     </x-section>
-    <x-section title="Original Content vs. Rewritten Content">
+    <x-section title="Tracing TailwindCSS Classes">
+        <p class="text-justify">
+            If you really want to personalize your components, make sure you track your component classes
+            so that TailwindCSS generates all the classes that come out of the component files. Your
+            <x-block>tailwindcss.config.js</x-block> needs to receive the following content:
+        </p>
+        <x-code language="js" :contents="$tailwindcss"/>
+    </x-section>
+    <x-section title="Preserve the Original Content">
         <p class="text-justify">
             One of the precautions you should take with soft personalization is to customize what you want,
-            but <b>preserve the rest of the original classes.</b> Without preserving the original classes after
-            touching some point in the customization, the component may be completely modified, leading to
+            but <b>preserve the original content classes.</b> Without preserving the original classes after
+            touching some point in the personalization, the component may be completely modified, leading to
             an unpleasant appearance. For example, suppose you want to make a component square instead of
             originally round, for this we need to remove the <x-block>rounded-md</x-block>, so <b>the correct thing to do is
             to return the entire component's original class WITHOUT</b> the <x-block>rounded-md</x-block>.

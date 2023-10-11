@@ -27,7 +27,7 @@ new class extends Component {
     }
 } ?>
 
-<div>
+<div class="flex flex-col space-y-2 md:space-x-2 md:space-y-0 md:flex-row">
     <x-button color="green" wire:click="success">Success</x-button>
     <x-button color="red" wire:click="error">Error</x-button>
     <x-button color="yellow" wire:click="warning">Warning</x-button>
