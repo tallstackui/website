@@ -28,7 +28,8 @@ use App\Http\Controllers\Documentation\Ui\Toast;
 use App\Http\Controllers\Documentation\Ui\Tooltip;
 use Illuminate\Support\Facades\Route;
 
-Route::view('/', 'documentation.welcome')->name('welcome');
+Route::view('/', 'welcome')->name('welcome');
+Route::view('/beta', 'beta')->name('beta');
 
 Route::prefix('/docs')
     ->name('documentation.')

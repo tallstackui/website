@@ -1,6 +1,6 @@
 <div class="mb-8">
     <x-warning>
-        <b>TallStackUi is under beta release.</b>
-        <a href="https://github.com/tallstackui/tallstackui/issues/new/choose" class="underline" target="_blank">Report any issue by clicking here.</a>
+        <b>TallStackUi is in the beta phase. </b>
+        <a href="{{ route('beta') }}" class="underline">Read the announcement here.</a>
     </x-warning>
 </div>
