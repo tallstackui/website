@@ -1,6 +1,6 @@
 # TallStackUi, WebSite
 
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="arts/tallstackui.svg" width="500"></a></p>
+<p align="center"><a href="https://tallstackui.com" target="_blank"><img src="arts/tallstackui.svg" width="500"></a></p>
 
 <p align="center">
     <a href="https://github.com/laravel/tallstackui/tallstackui">
