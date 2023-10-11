@@ -61,6 +61,17 @@
         </x-preview>
     </x-section>
     <x-section>
+        <x-preview title="Loading Effect"
+                   language="blade"
+                   :contents="$loadings">
+            <div class="inline-flex items-center space-x-2">
+                <livewire:documentation.ui.button :model="1" />
+                <livewire:documentation.ui.button :model="1" :type="2" />
+                <livewire:documentation.ui.button :model="1" :type="3" />
+            </div>
+        </x-preview>
+    </x-section>
+    <x-section>
         <x-preview title="Color Variations"
                    language="blade"
                    :contents="$colors">
@@ -149,6 +160,17 @@
                    language="blade"
                    :contents="$circleIcons">
             <x-button.circle icon="pencil"/>
+        </x-preview>
+    </x-section>
+    <x-section>
+        <x-preview title="Loading Effect"
+                   language="blade"
+                   :contents="$circleLoadings">
+            <div class="inline-flex items-center space-x-2">
+                <livewire:documentation.ui.button :model="2" />
+                <livewire:documentation.ui.button :model="2" :type="2" />
+                <livewire:documentation.ui.button :model="2" :type="3" />
+            </div>
         </x-preview>
     </x-section>
     <x-section>

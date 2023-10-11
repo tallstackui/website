@@ -36,6 +36,18 @@ class Button
     <x-button lg>TallStackUi</x-button>
     HTML;
 
+    public const LOADINGS = <<<'HTML'
+    <x-button wire:click="basic" loading>
+        Basic
+    </x-button>
+    <x-button wire:click="target" loading="target">
+        Loading Target
+    </x-button>
+    <x-button wire:click="delay" loading delay="longest">
+        Delay Control
+    </x-button>
+    HTML;
+
     public const COLORS = <<<'HTML'
     <x-button text="TallStackUi" />
     <x-button text="TallStackUi" color="secondary" />
@@ -108,6 +120,20 @@ class Button
 
     public const CIRCLE_ICONS = <<<'HTML'
     <x-button.circle icon="pencil" />
+    HTML;
+
+    public const CIRCLE_LOADINGS = <<<'HTML'
+    <x-button.circle wire:click="basic"
+                     icon="pencil"
+                     loading />
+
+    <x-button.circle wire:click="target"
+                     icon="pencil"
+                     loading="target" />
+
+    <x-button.circle wire:click="delay"
+                     icon="pencil"
+                     loading delay="longest" />
     HTML;
 
     public const CIRCLE_COLORS = <<<'HTML'
