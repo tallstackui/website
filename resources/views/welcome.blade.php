@@ -11,7 +11,7 @@
     </x-section>
     <x-section class="space-y-4" title="Motivation Behinds TallStackUi">
         <p class="text-justify">
-            Hey! I'm <a href="https://github.com/devajmeireles" class="underline underline-offset-4" target="_blank">AJ</a>, creator of TallStackUi.
+            Hey! I'm <a href="https://github.com/devajmeireles" class="underline underline-offset-4" target="_blank">AJ</a>, creator of TallStackUi and a
             FullStack PHP developer, passionate about TALL Stack, addicted to the Laravel ecosystem, and a core member of <a href="https://pestphp.com" class="underline underline-offset-4" target="_blank">PestPHP</a>.
         </p>
         <p class="text-justify">

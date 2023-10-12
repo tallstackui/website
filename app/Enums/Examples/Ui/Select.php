@@ -53,17 +53,19 @@ class Select
     HTML;
 
     public const STYLED_SLOT = <<<'HTML'
-        <x-select.styled label="Select One Option"
-                         hint="You can choose 1, 2 or 3"
-                         wire:model="value"
-                         searchable
-                         :options="[1,2,3]">
-            <x-slot:after>
-                <div class="px-2 mb-2 flex justify-center items-center">
+    <x-select.styled label="Select One Option"
+                     hint="Enter any random value to see the slot"
+                     wire:model="value"
+                     searchable
+                     :options="[1,2,3]">
+        <x-slot:after>
+            <div class="px-2 mb-2 flex justify-center items-center">
+                <x-button x-on:click="show = false; $dispatch('confirmed', { term: search })">
                     <span x-html="`Create user <b>${search}</b>`"></span>
-                </div>
-            </x-slot:after>
-        </x-select.styled>
+                </x-button>
+            </div>
+        </x-slot:after>
+    </x-select.styled>
     HTML;
 
     public const SEARCHABLE = <<<'HTML'
@@ -106,10 +108,14 @@ class Select
     public const SEARCHABLE_SLOT = <<<'HTML'
     <x-select.searchable request="https://jsonplaceholder.typicode.com/users"
                          select="label:name|value:id"
+                         label="Select One User"
+                         hint="Enter any random value to see the slot"
                          wire:model="value">
         <x-slot:after>
             <div class="px-2 mb-2 flex justify-center items-center">
-                <span x-html="`Create user <b>${search}</b>`"></span>
+                <x-button x-on:click="show = false; $dispatch('confirmed', { term: search })">
+                    <span x-html="`Create user <b>${search}</b>`"></span>
+                </x-button>
             </div>
         </x-slot:after>
     </x-select.searchable>
