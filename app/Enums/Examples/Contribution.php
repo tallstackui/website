@@ -17,8 +17,6 @@ class Contribution
             "url": "./packages/tallstackui/tallstackui"
         }
     ],
-
-    // ...
     HTML;
 
     public const COMMAND = <<<'HTML'

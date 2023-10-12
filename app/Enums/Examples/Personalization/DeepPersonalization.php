@@ -9,8 +9,6 @@ class DeepPersonalization
     HTML;
 
     public const OVERRIDE = <<<'HTML'
-    // ...
-
     /*
     |--------------------------------------------------------------------------
     | Components List
@@ -77,14 +75,10 @@ class DeepPersonalization
     HTML;
 
     public const TAILWINDCSS = <<<'HTML'
-    // ...
-
     content: [
         // ...
 
         './app/View/Components/**/*.php',
     ],
-
-    // ...
     HTML;
 }

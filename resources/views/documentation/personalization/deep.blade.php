@@ -33,7 +33,7 @@
         <p>4. In your component, override the <x-block>customization</x-block> method:</p>
         <x-code language="php" :contents="$customization"/>
         <p class="mt-2 text-justify">
-            Every customizable component has a method called <x-block>personalization</x-block>, which is where the
+            Every customizable component has a method called <x-block>customization</x-block>, which is where the
             classes come from. <u>This method must return an array with the name of the customizable blocks and
             their respective values which must be the CSS classes to be applied.</u> To learn about customizable blocks,
             visit the documentation for the component you are customizing.
@@ -41,7 +41,7 @@
     </x-section>
     <x-section title="Publish Blade Views">
         <p class="text-justify">
-            You can publish and edit Blade files related to TallStackUi. Use this command to publish the files to your project:
+            You can also edit the Blade files of the TallStackUi components. Use this command to publish the files:
         </p>
         <x-code language="shell" :contents="$views"/>
     </x-section>

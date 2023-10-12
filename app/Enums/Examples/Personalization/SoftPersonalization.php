@@ -137,8 +137,6 @@ class SoftPersonalization
     HTML;
 
     public const TAILWINDCSS = <<<'HTML'
-    // ...
-
     content: [
         // ...
 
@@ -148,7 +146,5 @@ class SoftPersonalization
 
         './app/TallStackUi/**/*.php',
     ],
-
-    // ...
     HTML;
 }
