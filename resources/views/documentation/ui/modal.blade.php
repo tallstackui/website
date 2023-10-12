@@ -66,66 +66,68 @@
         <x-preview title="Size Variations"
                    language="blade"
                    :contents="$sizes">
-            <x-modal id="default-size-modal" title="TallStackUi">
-                Default (2xl)
-            </x-modal>
-            <x-modal id="sm-size-modal" title="TallStackUi" size="sm">
-                sm
-            </x-modal>
-            <x-modal id="md-size-modal" title="TallStackUi" size="md">
-                md
-            </x-modal>
-            <x-modal id="lg-size-modal" title="TallStackUi" size="lg">
-                lg
-            </x-modal>
-            <x-modal id="xl-size-modal" title="TallStackUi" size="xl">
-                xl
-            </x-modal>
-            <x-modal id="3xl-size-modal" title="TallStackUi" size="3xl">
-                3xl
-            </x-modal>
-            <x-modal id="4xl-size-modal" title="TallStackUi" size="4xl">
-                4xl
-            </x-modal>
-            <x-modal id="5xl-size-modal" title="TallStackUi" size="5xl">
-                5xl
-            </x-modal>
-            <x-modal id="6xl-size-modal" title="TallStackUi" size="6xl">
-                6xl
-            </x-modal>
-            <x-modal id="7xl-size-modal" title="TallStackUi" size="7xl">
-                7xl
-            </x-modal>
-            <x-button x-on:click="$modalOpen('default-size-modal')">
-                Default
-            </x-button>
-            <x-button x-on:click="$modalOpen('sm-size-modal')">
-                sm
-            </x-button>
-            <x-button x-on:click="$modalOpen('md-size-modal')">
-                md
-            </x-button>
-            <x-button x-on:click="$modalOpen('lg-size-modal')">
-                lg
-            </x-button>
-            <x-button x-on:click="$modalOpen('xl-size-modal')">
-                xl
-            </x-button>
-            <x-button x-on:click="$modalOpen('3xl-size-modal')">
-                3xl
-            </x-button>
-            <x-button x-on:click="$modalOpen('4xl-size-modal')">
-                4xl
-            </x-button>
-            <x-button x-on:click="$modalOpen('5xl-size-modal')">
-                5xl
-            </x-button>
-            <x-button x-on:click="$modalOpen('6xl-size-modal')">
-                6xl
-            </x-button>
-            <x-button x-on:click="$modalOpen('7xl-size-modal')">
-                7xl
-            </x-button>
+            <div class="flex flex-col space-y-2 md:space-x-2 md:space-y-0 md:flex-row">
+                <x-modal id="default-size-modal" title="TallStackUi">
+                    Default (2xl)
+                </x-modal>
+                <x-modal id="sm-size-modal" title="TallStackUi" size="sm">
+                    sm
+                </x-modal>
+                <x-modal id="md-size-modal" title="TallStackUi" size="md">
+                    md
+                </x-modal>
+                <x-modal id="lg-size-modal" title="TallStackUi" size="lg">
+                    lg
+                </x-modal>
+                <x-modal id="xl-size-modal" title="TallStackUi" size="xl">
+                    xl
+                </x-modal>
+                <x-modal id="3xl-size-modal" title="TallStackUi" size="3xl">
+                    3xl
+                </x-modal>
+                <x-modal id="4xl-size-modal" title="TallStackUi" size="4xl">
+                    4xl
+                </x-modal>
+                <x-modal id="5xl-size-modal" title="TallStackUi" size="5xl">
+                    5xl
+                </x-modal>
+                <x-modal id="6xl-size-modal" title="TallStackUi" size="6xl">
+                    6xl
+                </x-modal>
+                <x-modal id="7xl-size-modal" title="TallStackUi" size="7xl">
+                    7xl
+                </x-modal>
+                <x-button x-on:click="$modalOpen('default-size-modal')">
+                    Default
+                </x-button>
+                <x-button x-on:click="$modalOpen('sm-size-modal')">
+                    sm
+                </x-button>
+                <x-button x-on:click="$modalOpen('md-size-modal')">
+                    md
+                </x-button>
+                <x-button x-on:click="$modalOpen('lg-size-modal')">
+                    lg
+                </x-button>
+                <x-button x-on:click="$modalOpen('xl-size-modal')">
+                    xl
+                </x-button>
+                <x-button x-on:click="$modalOpen('3xl-size-modal')">
+                    3xl
+                </x-button>
+                <x-button x-on:click="$modalOpen('4xl-size-modal')">
+                    4xl
+                </x-button>
+                <x-button x-on:click="$modalOpen('5xl-size-modal')">
+                    5xl
+                </x-button>
+                <x-button x-on:click="$modalOpen('6xl-size-modal')">
+                    6xl
+                </x-button>
+                <x-button x-on:click="$modalOpen('7xl-size-modal')">
+                    7xl
+                </x-button>
+            </div>
         </x-preview>
     </x-section>
     <x-section>

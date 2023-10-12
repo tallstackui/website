@@ -14,7 +14,7 @@
                     </a>
                 </li>
                 <li class="relative ml-4">
-                    <a href="{{ route('beta') }}" @class(['font-semibold text-pink-900 transition hover:text-gray-800 underline', 'underline' => request()->routeIs('documentation.get-started')])>
+                    <a href="{{ route('beta') }}" @class(['font-semibold text-pink-900 transition hover:text-pink-500', 'underline' => request()->routeIs('beta')])>
                         Beta Phase
                     </a>
                 </li>

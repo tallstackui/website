@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c1d499eb10d42597d2878d4c067267f7",
+    "content-hash": "f5b1e6311836fd8cac69526f74a03dcd",
     "packages": [
         {
             "name": "brick/math",
@@ -5566,16 +5566,16 @@
         },
         {
             "name": "tallstackui/tallstackui",
-            "version": "v0.3.0",
+            "version": "v0.4.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/tallstackui/tallstackui.git",
-                "reference": "624e5697f17466da32788fd68e880da1faeae5ce"
+                "reference": "7b38aa4fb6cb54d6a2178c2f61e882c8d83f91ce"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tallstackui/tallstackui/zipball/624e5697f17466da32788fd68e880da1faeae5ce",
-                "reference": "624e5697f17466da32788fd68e880da1faeae5ce",
+                "url": "https://api.github.com/repos/tallstackui/tallstackui/zipball/7b38aa4fb6cb54d6a2178c2f61e882c8d83f91ce",
+                "reference": "7b38aa4fb6cb54d6a2178c2f61e882c8d83f91ce",
                 "shasum": ""
             },
             "require": {
@@ -5621,9 +5621,9 @@
             "description": "A curated list of TallStack UI Components",
             "support": {
                 "issues": "https://github.com/tallstackui/tallstackui/issues",
-                "source": "https://github.com/tallstackui/tallstackui/tree/v0.3.0"
+                "source": "https://github.com/tallstackui/tallstackui/tree/v0.4.1"
             },
-            "time": "2023-10-11T02:03:20+00:00"
+            "time": "2023-10-11T23:31:56+00:00"
         },
         {
             "name": "tijsverkoyen/css-to-inline-styles",
