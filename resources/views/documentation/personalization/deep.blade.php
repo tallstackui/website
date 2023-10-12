@@ -1,4 +1,4 @@
-<x-layout :torchlight="false">
+<x-layout>
     <x-slot:title>
         Deep Personalization
     </x-slot:title>

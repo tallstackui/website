@@ -45,7 +45,7 @@
         <p>11. In the same <x-block>composer.json</x-block> file, change the <x-block>minimum-stability</x-block> to <x-block>dev</x-block></p>
         <p>12. After that, run the following command in the terminal:</p>
         <x-code language="shell" :contents="$command" />
-        <p>13. <a href="{{ route('documentation.get-started') }}" class="underline">Install the TallStackUi</a> in the Laravel project following the guide <i>(skip the step 1 of the tutorial)</i></p>
+        <p>13. <a href="{{ route('installation') }}" class="underline">Install the TallStackUi</a> in the Laravel project following the guide <i>(skip the step 1 of the tutorial)</i></p>
         <p>14. You are ready to start the work!</p>
     </x-section>
     <x-section title="Dusk Tests">

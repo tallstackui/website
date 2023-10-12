@@ -1,4 +1,4 @@
-<x-layout>
+<x-layout torchlight>
     <x-slot:title>
         Get Started
     </x-slot:title>

@@ -1,4 +1,4 @@
-<x-layout>
+<x-layout :torchlight="false">
     <x-slot:title>
         Welcome to TallStackUi
     </x-slot:title>
