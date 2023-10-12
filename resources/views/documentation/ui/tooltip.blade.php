@@ -81,7 +81,7 @@
         <x-preview title="Outline Variations"
                    language="blade"
                    :contents="$outlines">
-            <div class="inline-flex space-x-2">
+            <div class="gap-2 space-y-2">
                 <x-tooltip text="primary" outline/>
                 <x-tooltip text="secondary" color="secondary" outline/>
                 <x-tooltip text="white" color="white" outline/>
