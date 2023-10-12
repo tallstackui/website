@@ -8,6 +8,10 @@ class Alert
     <x-alert>
         TallStackUi
     </x-alert>
+
+    <!-- or -->
+
+    <x-alert text="TallStackUi" />
     HTML;
 
     public const TITLE = <<<'HTML'

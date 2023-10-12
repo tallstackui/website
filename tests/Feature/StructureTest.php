@@ -17,9 +17,9 @@ test('can access all routes', function (string $route) {
     $this->get($route)->assertOk();
 })->with([
     fn () => route('welcome'),
-    fn () => route('documentation.get-started'),
+    fn () => route('installation'),
+    fn () => route('beta'),
     //
-    fn () => route('documentation.get-started'),
     fn () => route('documentation.form.input'),
     fn () => route('documentation.form.password'),
     fn () => route('documentation.form.textarea'),
