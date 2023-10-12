@@ -9,8 +9,8 @@
                     </a>
                 </li>
                 <li class="relative ml-4">
-                    <a href="{{ route('documentation.get-started') }}" @class(['text-gray-500 transition hover:text-gray-800 hover:underline', 'underline' => request()->routeIs('documentation.get-started')])>
-                        Get Started
+                    <a href="{{ route('installation') }}" @class(['text-gray-500 transition hover:text-gray-800 hover:underline', 'underline' => request()->routeIs('installation')])>
+                        Installation
                     </a>
                 </li>
                 <li class="relative ml-4">

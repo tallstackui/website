@@ -6,10 +6,10 @@ use App\Enums\Example;
 use App\Http\Controllers\Controller;
 use Illuminate\Contracts\View\View;
 
-class GetStarted extends Controller
+class Installation extends Controller
 {
     public function __invoke(): View
     {
-        return view('documentation.get-started', Example::GetStarted->variables());
+        return view('documentation.installation', Example::Installation->variables());
     }
 }

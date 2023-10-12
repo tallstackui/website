@@ -11,7 +11,7 @@ use App\Enums\Examples\Form\Password;
 use App\Enums\Examples\Form\Radio;
 use App\Enums\Examples\Form\Textarea;
 use App\Enums\Examples\Form\Toggle;
-use App\Enums\Examples\GetStarted;
+use App\Enums\Examples\Installation;
 use App\Enums\Examples\Personalization\ColorPersonalization;
 use App\Enums\Examples\Personalization\DeepPersonalization;
 use App\Enums\Examples\Personalization\SoftPersonalization;
@@ -51,7 +51,7 @@ enum Example: string
     case Error = Error::class;
     case Icon = Icon::class;
     case Input = Input::class;
-    case GetStarted = GetStarted::class;
+    case Installation = Installation::class;
     case Password = Password::class;
     case Radio = Radio::class;
     case Select = Select::class;

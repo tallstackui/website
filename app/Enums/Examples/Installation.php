@@ -2,7 +2,7 @@
 
 namespace App\Enums\Examples;
 
-class GetStarted
+class Installation
 {
     public const INSTALLATION = <<<'HTML'
     composer require tallstackui/tallstackui

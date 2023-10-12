@@ -9,7 +9,7 @@ use App\Http\Controllers\Documentation\Form\Password;
 use App\Http\Controllers\Documentation\Form\Radio;
 use App\Http\Controllers\Documentation\Form\Textarea;
 use App\Http\Controllers\Documentation\Form\Toggle;
-use App\Http\Controllers\Documentation\GetStarted;
+use App\Http\Controllers\Documentation\Installation;
 use App\Http\Controllers\Documentation\Internal;
 use App\Http\Controllers\Documentation\Personalization;
 use App\Http\Controllers\Documentation\Translation;
@@ -31,11 +31,11 @@ use Illuminate\Support\Facades\Route;
 
 Route::view('/', 'welcome')->name('welcome');
 Route::view('/beta', 'beta')->name('beta');
+Route::get('/installation', Installation::class)->name('installation');
 
 Route::prefix('/docs')
     ->name('documentation.')
     ->group(function () {
-        Route::get('/get-started', GetStarted::class)->name('get-started');
 
         Route::prefix('/form')
             ->name('form.')
