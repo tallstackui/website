@@ -147,4 +147,31 @@ class SoftPersonalization
         './app/TallStackUi/**/*.php',
     ],
     HTML;
+
+    public const REAL_EXAMPLE = <<<'HTML'
+    use Illuminate\Support\Arr;
+    use TallStackUi\Facades\TallStackUi;
+
+    public function boot(): void
+    {
+        //...
+
+        TallStackUi::personalize()
+            ->button()
+            ->block('wrapper', function (array $data) {
+                return Arr::toCssClasses([
+                    'outline-none inline-flex justify-center items-center group ease-in font-semibold transition',
+                    'focus:ring-2 focus:ring-offset-2 hover:shadow-sm disabled:opacity-50 disabled:cursor-not-allowed',
+                    'gap-x-2' => $data['icon'] !== null,
+                    'text-xs px-1 py-0.5' => $data['size'] === 'xs',
+                    'text-lg px-2 py-1' => $data['size'] === 'sm', // [tl! highlight]
+                    'text-base px-4 py-2' => $data['size'] === 'md',
+                    'text-base px-6 py-3' => $data['size'] === 'lg',
+                    'rounded' => $data['square'] === null && $data['round'] === null,
+                    'rounded-full' => $data['square'] === null && $data['round'] !== null,
+                    $data['tallStackUiButtonColorClasses'](),
+                ]);
+            });
+    }
+    HTML;
 }

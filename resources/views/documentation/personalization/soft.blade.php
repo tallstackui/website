@@ -12,7 +12,7 @@
             component are divided into blocks that allow the classes to be overwritten at run time. Let's take a look at a simple example.
         </p>
         <x-code language="php" :contents="$example"/>
-        <p class="text-justify mt-2">
+        <p class="mt-2 text-justify">
             In this example we are touching and replacing all the classes in the <x-block>base</x-block>
             block of the <x-block>form.input</x-block> component with the content <x-block>w-full rounded-full</x-block>.
             This means that every input component displayed on the application pages will have these classes, instead of the original component classes.
@@ -23,7 +23,7 @@
             We've introduced a fluency style in TallStackUi soft personalization. Let's take a look at a simple example:
         </p>
         <x-code language="php" :contents="$pest"/>
-        <p class="text-justify mt-2">
+        <p class="mt-2 text-justify">
             With that, we are able to customize two or more components at the same time, thanks to the concept of fluency that we see in <a href="https://pestphp.com" target="_blank" class="underline">Pest</a>.
         </p>
     </x-section>
@@ -64,6 +64,22 @@
         </p>
         <x-code language="js" :contents="$tailwindcss"/>
     </x-section>
+    <x-section title="Real Example">
+        <p class="text-justify">
+            Let's assume that you only use the <x-block>sm</x-block> button variation in your application,
+            but you are noticing the small texts and therefore want to increase the text without modify the
+            other features of the TallStackUi buttons. If this is the case, see an example of how to personalize
+            the button component to achieve this result:
+        </p>
+        <x-code :contents="$realExample"/>
+        <p class="text-justify">
+            As difficult as it may seem, this is just the original content of customizing the buttons with a
+            change in text size for the <x-block>sm</x-block> variation. Thanks to the fact that TallStackUi shares properties through
+            the <x-block>$data</x-block> variable we can do this kind of thing. Did you notice that in the example above we executed
+            a function through the array? As confusing as it may seem, this is common and acceptable. We are just executing a closure saved at an index of the array.
+        </p>
+        <p class="mt-4 font-semibold underline">With that, you are not replacing the original component content.</p>
+    </x-section>
     <x-section title="Preserve the Original Content">
         <p class="text-justify">
             One of the precautions you should take with soft personalization is to customize what you want,
@@ -73,5 +89,11 @@
             originally round, for this we need to remove the <x-block>rounded-md</x-block>, so <b>the correct thing to do is
             to return the entire component's original class WITHOUT</b> the <x-block>rounded-md</x-block>.
         </p>
+    </x-section>
+    <x-section title="Special Tips">
+        <ul class="list-inside list-decimal">
+            <li>Have doubts about the real content of a block? Take a look at the original content of the component, <a href="https://github.com/tallstackui/tallstackui/blob/main/src/View/Components/Button/Index.php#L50" class="underline" target="_blank">for example this.</a></li>
+            <li>Start your personalization by debugging the <x-block>$data</x-block> to meet all the available properties.</li>
+        </ul>
     </x-section>
 </x-layout>

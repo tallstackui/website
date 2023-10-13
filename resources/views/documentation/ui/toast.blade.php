@@ -30,7 +30,7 @@
         </x-preview>
     </x-section>
     <x-section>
-        <x-preview title="Time Controul"
+        <x-preview title="Time Control"
                    description="Increase the time to show the toast."
                    :contents="$time">
             <livewire:documentation.interactions.toast.timeout/>

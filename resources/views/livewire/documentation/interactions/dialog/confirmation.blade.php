@@ -12,24 +12,22 @@ new class extends Component {
         $this->dialog()->confirm('Warning!', 'Are you sure?', [
             'confirm' => [
                 'text' => 'Confirm',
-                'event' => 'confirmed',
+                'method' => 'confirmed',
                 'params' => 'Confirmed Successfully'
             ],
             'cancel' => [
                 'text' => 'Cancel',
-                'event' => 'cancelled',
+                'method' => 'cancelled',
                 'params' => 'Cancelled Successfully'
             ]
         ]);
     }
 
-    #[On('confirmed')]
     public function confirmed(string $message): void
     {
         $this->dialog()->success('Success', $message);
     }
 
-    #[On('cancelled')]
     public function cancelled(string $message): void
     {
         $this->dialog()->error('Cancelled', $message);

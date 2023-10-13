@@ -70,6 +70,21 @@
         </x-preview>
     </x-section>
     <x-section>
+        <x-preview title="Header Slot"
+                   language="blade"
+                   :contents="$headerSlots">
+            <div class="flex justify-end md:justify-center">
+                <x-dropdown text="Menu">
+                    <x-slot:header>
+                        <p class="text-sm">Welcome!</p>
+                    </x-slot:header>
+                    <x-dropdown.items icon="cog" text="Settings" />
+                    <x-dropdown.items icon="arrow-left-on-rectangle" text="Logout" separator />
+                </x-dropdown>
+            </div>
+        </x-preview>
+    </x-section>
+    <x-section>
         <x-preview title="Action Slot"
                    language="blade"
                    :contents="$actionSlots">
