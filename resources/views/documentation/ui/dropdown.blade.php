@@ -46,6 +46,19 @@
         </x-preview>
     </x-section>
     <x-section>
+        <x-preview title="Icon Slot Static"
+                   description="An option to use icons without rotate animation"
+                   language="blade"
+                   :contents="$iconsStatic">
+            <div class="flex justify-end md:justify-center">
+                <x-dropdown icon="ellipsis-vertical" static>
+                    <x-dropdown.items text="Settings" />
+                    <x-dropdown.items text="Logout" separator />
+                </x-dropdown>
+            </div>
+        </x-preview>
+    </x-section>
+    <x-section>
         <x-preview title="Header Slot"
                    language="blade"
                    :contents="$headerSlots">

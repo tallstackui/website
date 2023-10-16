@@ -25,6 +25,13 @@ class Dropdown
     </x-dropdown>
     HTML;
 
+    public const ICONS_STATIC = <<<'HTML'
+    <x-dropdown icon="ellipsis-vertical" static>
+        <x-dropdown.items text="Settings" />
+        <x-dropdown.items text="Logout" separator />
+    </x-dropdown>
+    HTML;
+
     public const HEADER_SLOTS = <<<'HTML'
     <x-dropdown text="Menu">
         <x-slot:header>
