@@ -37,73 +37,78 @@ class Button
     HTML;
 
     public const LOADINGS = <<<'HTML'
+    <!-- You can use all of Livewire delay options -->
+
     <x-button wire:click="basic" loading>
         Basic
     </x-button>
+
+    <!-- You can specify the target of the delay (method or property) -->
+
     <x-button wire:click="target" loading="target">
         Loading Target
     </x-button>
-    <x-button wire:click="delay" loading delay="longest">
+    <x-button wire:click="delay" loading="target" delay="longest">
         Delay Control
     </x-button>
     HTML;
 
     public const COLORS = <<<'HTML'
-    <x-button text="TallStackUi" />
-    <x-button text="TallStackUi" color="secondary" />
-    <x-button text="TallStackUi" color="white" />
-    <x-button text="TallStackUi" color="black" />
-    <x-button text="TallStackUi" color="slate" />
-    <x-button text="TallStackUi" color="gray" />
-    <x-button text="TallStackUi" color="zinc" />
-    <x-button text="TallStackUi" color="neutral" />
-    <x-button text="TallStackUi" color="stone" />
-    <x-button text="TallStackUi" color="red" />
-    <x-button text="TallStackUi" color="orange" />
-    <x-button text="TallStackUi" color="amber" />
-    <x-button text="TallStackUi" color="yellow" />
-    <x-button text="TallStackUi" color="lime" />
-    <x-button text="TallStackUi" color="green" />
-    <x-button text="TallStackUi" color="emerald" />
-    <x-button text="TallStackUi" color="teal" />
-    <x-button text="TallStackUi" color="cyan" />
-    <x-button text="TallStackUi" color="sky" />
-    <x-button text="TallStackUi" color="blue" />
-    <x-button text="TallStackUi" color="indigo" />
-    <x-button text="TallStackUi" color="violet" />
-    <x-button text="TallStackUi" color="purple" />
-    <x-button text="TallStackUi" color="fuchsia" />
-    <x-button text="TallStackUi" color="pink" />
-    <x-button text="TallStackUi" color="rose" />
+    <x-button text="Primary" />
+    <x-button text="Secondary" color="secondary" />
+    <x-button text="Slate" color="slate" />
+    <x-button text="Gray" color="gray" />
+    <x-button text="Zinc" color="zinc" />
+    <x-button text="Neutral" color="neutral" />
+    <x-button text="Stone" color="stone" />
+    <x-button text="Red" color="red" />
+    <x-button text="Orange" color="orange" />
+    <x-button text="Amber" color="amber" />
+    <x-button text="Yellow" color="yellow" />
+    <x-button text="Lime" color="lime" />
+    <x-button text="Green" color="green" />
+    <x-button text="Emerald" color="emerald" />
+    <x-button text="Teal" color="teal" />
+    <x-button text="Cyan" color="cyan" />
+    <x-button text="Sky" color="sky" />
+    <x-button text="Blue" color="blue" />
+    <x-button text="Indigo" color="indigo" />
+    <x-button text="Violet" color="violet" />
+    <x-button text="Purple" color="purple" />
+    <x-button text="Fuchsia" color="fuchsia" />
+    <x-button text="Pink" color="pink" />
+    <x-button text="Rose" color="rose" />
+    <x-button text="Black" color="black" />
+    <x-button text="White" color="white" />
     HTML;
 
     public const OUTLINES = <<<'HTML'
-    <x-button text="TallStackUi" outline />
-    <x-button text="TallStackUi" color="secondary" outline />
-    <x-button text="TallStackUi" color="white" outline />
-    <x-button text="TallStackUi" color="black" outline />
-    <x-button text="TallStackUi" color="slate" outline />
-    <x-button text="TallStackUi" color="gray" outline />
-    <x-button text="TallStackUi" color="zinc" outline />
-    <x-button text="TallStackUi" color="neutral" outline />
-    <x-button text="TallStackUi" color="stone" outline />
-    <x-button text="TallStackUi" color="red" outline />
-    <x-button text="TallStackUi" color="orange" outline />
-    <x-button text="TallStackUi" color="amber" outline />
-    <x-button text="TallStackUi" color="yellow" outline />
-    <x-button text="TallStackUi" color="lime" outline />
-    <x-button text="TallStackUi" color="green" outline />
-    <x-button text="TallStackUi" color="emerald" outline />
-    <x-button text="TallStackUi" color="teal" outline />
-    <x-button text="TallStackUi" color="cyan" outline />
-    <x-button text="TallStackUi" color="sky" outline />
-    <x-button text="TallStackUi" color="blue" outline />
-    <x-button text="TallStackUi" color="indigo" outline />
-    <x-button text="TallStackUi" color="violet" outline />
-    <x-button text="TallStackUi" color="purple" outline />
-    <x-button text="TallStackUi" color="fuchsia" outline />
-    <x-button text="TallStackUi" color="pink" outline />
-    <x-button text="TallStackUi" color="rose" outline />
+    <x-button text="Primary" outline />
+    <x-button text="Secondary" color="secondary" outline />
+    <x-button text="Slate" color="slate" outline />
+    <x-button text="Gray" color="gray" outline />
+    <x-button text="Zinc" color="zinc" outline />
+    <x-button text="Neutral" color="neutral" outline />
+    <x-button text="Stone" color="stone" outline />
+    <x-button text="Red" color="red" outline />
+    <x-button text="Orange" color="orange" outline />
+    <x-button text="Amber" color="amber" outline />
+    <x-button text="Yellow" color="yellow" outline />
+    <x-button text="Lime" color="lime" outline />
+    <x-button text="Green" color="green" outline />
+    <x-button text="Emerald" color="emerald" outline />
+    <x-button text="Teal" color="teal" outline />
+    <x-button text="Cyan" color="cyan" outline />
+    <x-button text="Sky" color="sky" outline />
+    <x-button text="Blue" color="blue" outline />
+    <x-button text="Indigo" color="indigo" outline />
+    <x-button text="Violet" color="violet" outline />
+    <x-button text="Purple" color="purple" outline />
+    <x-button text="Fuchsia" color="fuchsia" outline />
+    <x-button text="Pink" color="pink" outline />
+    <x-button text="Rose" color="rose" outline />
+    <x-button text="Black" color="black" outline />
+    <x-button text="White" color="white" outline />
     HTML;
 
     public const CIRCLE = <<<'HTML'
@@ -123,9 +128,13 @@ class Button
     HTML;
 
     public const CIRCLE_LOADINGS = <<<'HTML'
+    <!-- You can use all of Livewire delay options -->
+
     <x-button.circle wire:click="basic"
                      icon="pencil"
                      loading />
+
+    <!-- You can specify the target of the delay (method or property) -->
 
     <x-button.circle wire:click="target"
                      icon="pencil"
@@ -133,14 +142,13 @@ class Button
 
     <x-button.circle wire:click="delay"
                      icon="pencil"
-                     loading delay="longest" />
+                     loading="target"
+                     delay="longest" />
     HTML;
 
     public const CIRCLE_COLORS = <<<'HTML'
     <x-button.circle text="TS" />
     <x-button.circle text="TS" color="secondary" />
-    <x-button.circle text="TS" color="white" />
-    <x-button.circle text="TS" color="black" />
     <x-button.circle text="TS" color="slate" />
     <x-button.circle text="TS" color="gray" />
     <x-button.circle text="TS" color="zinc" />
@@ -163,13 +171,13 @@ class Button
     <x-button.circle text="TS" color="fuchsia" />
     <x-button.circle text="TS" color="pink" />
     <x-button.circle text="TS" color="rose" />
+    <x-button.circle text="TS" color="black" />
+    <x-button.circle text="TS" color="white" />
     HTML;
 
     public const CIRCLE_OUTLINES = <<<'HTML'
     <x-button.circle text="TS" outline />
     <x-button.circle text="TS" color="secondary" outline />
-    <x-button.circle text="TS" color="white" outline />
-    <x-button.circle text="TS" color="black" outline />
     <x-button.circle text="TS" color="slate" outline />
     <x-button.circle text="TS" color="gray" outline />
     <x-button.circle text="TS" color="zinc" outline />
@@ -192,5 +200,7 @@ class Button
     <x-button.circle text="TS" color="fuchsia" outline />
     <x-button.circle text="TS" color="pink" outline />
     <x-button.circle text="TS" color="rose" outline />
+    <x-button.circle text="TS" color="black" outline />
+    <x-button.circle text="TS" color="white" outline />
     HTML;
 }

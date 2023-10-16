@@ -52,11 +52,19 @@
         <x-preview title="Size Variations"
                    language="blade"
                    :contents="$sizes">
-            <div class="inline-flex items-center space-x-2">
-                <x-button xs>TallStackUi</x-button>
-                <x-button sm>TallStackUi</x-button>
-                <x-button md>TallStackUi</x-button>
-                <x-button lg>TallStackUi</x-button>
+            <div class="flex flex-col items-center justify-center space-y-2 sm:space-x-2 sm:flex-row sm:space-y-0">
+                <div>
+                    <x-button xs>TallStackUi</x-button>
+                </div>
+                <div>
+                    <x-button sm>TallStackUi</x-button>
+                </div>
+                <div>
+                    <x-button md>TallStackUi</x-button>
+                </div>
+                <div>
+                    <x-button lg>TallStackUi</x-button>
+                </div>
             </div>
         </x-preview>
     </x-section>
@@ -64,10 +72,16 @@
         <x-preview title="Loading Effect"
                    language="blade"
                    :contents="$loadings">
-            <div class="inline-flex items-center space-x-2">
-                <livewire:documentation.ui.button :model="1" />
-                <livewire:documentation.ui.button :model="1" :type="2" />
-                <livewire:documentation.ui.button :model="1" :type="3" />
+            <div class="flex flex-col items-center justify-center space-y-2 sm:space-x-2 sm:flex-row sm:space-y-0">
+                <div>
+                    <livewire:documentation.ui.button :model="1" />
+                </div>
+                <div>
+                    <livewire:documentation.ui.button :model="1" :type="2" />
+                </div>
+                <div>
+                    <livewire:documentation.ui.button :model="1" :type="3" />
+                </div>
             </div>
         </x-preview>
     </x-section>
@@ -78,8 +92,6 @@
             <div class="gap-2 space-y-2">
                 <x-button text="Primary" />
                 <x-button text="Secondary" color="secondary" />
-                <x-button text="White" color="white" />
-                <x-button text="Black" color="black" />
                 <x-button text="Slate" color="slate" />
                 <x-button text="Gray" color="gray" />
                 <x-button text="Zinc" color="zinc" />
@@ -102,6 +114,8 @@
                 <x-button text="Fuchsia" color="fuchsia" />
                 <x-button text="Pink" color="pink" />
                 <x-button text="Rose" color="rose" />
+                <x-button text="Black" color="black" />
+                <x-button text="White" color="white" />
             </div>
         </x-preview>
     </x-section>
@@ -112,8 +126,6 @@
             <div class="gap-2 space-y-2">
                 <x-button text="Primary" outline />
                 <x-button text="Secondary" color="secondary" outline />
-                <x-button text="White" color="white" outline />
-                <x-button text="Black" color="black" outline />
                 <x-button text="Slate" color="slate" outline />
                 <x-button text="Gray" color="gray" outline />
                 <x-button text="Zinc" color="zinc" outline />
@@ -136,6 +148,8 @@
                 <x-button text="Fuchsia" color="fuchsia" outline />
                 <x-button text="Pink" color="pink" outline />
                 <x-button text="Rose" color="rose" outline />
+                <x-button text="Black" color="black" outline />
+                <x-button text="White" color="white" outline />
             </div>
         </x-preview>
     </x-section>
@@ -180,8 +194,6 @@
             <div class="gap-2 space-y-2">
                 <x-button.circle text="TS" />
                 <x-button.circle text="TS" color="secondary" />
-                <x-button.circle text="TS" color="white" />
-                <x-button.circle text="TS" color="black" />
                 <x-button.circle text="TS" color="slate" />
                 <x-button.circle text="TS" color="gray" />
                 <x-button.circle text="TS" color="zinc" />
@@ -204,6 +216,8 @@
                 <x-button.circle text="TS" color="fuchsia" />
                 <x-button.circle text="TS" color="pink" />
                 <x-button.circle text="TS" color="rose" />
+                <x-button.circle text="TS" color="black" />
+                <x-button.circle text="TS" color="white" />
             </div>
         </x-preview>
     </x-section>
@@ -214,8 +228,6 @@
             <div class="gap-2 space-y-2">
                 <x-button.circle text="TS" outline />
                 <x-button.circle text="TS" color="secondary" outline />
-                <x-button.circle text="TS" color="white" outline />
-                <x-button.circle text="TS" color="black" outline />
                 <x-button.circle text="TS" color="slate" outline />
                 <x-button.circle text="TS" color="gray" outline />
                 <x-button.circle text="TS" color="zinc" outline />
@@ -238,6 +250,8 @@
                 <x-button.circle text="TS" color="fuchsia" outline />
                 <x-button.circle text="TS" color="pink" outline />
                 <x-button.circle text="TS" color="rose" outline />
+                <x-button.circle text="TS" color="black" outline />
+                <x-button.circle text="TS" color="white" outline />
             </div>
         </x-preview>
     </x-section>
