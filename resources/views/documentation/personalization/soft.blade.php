@@ -7,49 +7,68 @@
     </x-slot:description>
     <x-section title="Concept">
         <p class="text-justify">
-            <b class="underline">Soft personalization consists of customizing components at run time</b>, through a service provider, such as <x-block>AppServiceProvider</x-block>.
-            The idea behind soft personalization is to tap into customizable blocks of each component. The classes of each TallStackUi
-            component are divided into blocks that allow the classes to be overwritten at run time. Let's take a look at a simple example.
+            <u>Soft personalization consists of customizing components at run time</u>, through a service provider, such as <x-block>AppServiceProvider</x-block>.
+            The idea behind soft personalization is to tap into personalizeble blocks of each component. Let's take a look at an example:
         </p>
         <x-code language="php" :contents="$example"/>
         <p class="mt-2 text-justify">
-            In this example we are touching and replacing all the classes in the <x-block>base</x-block>
-            block of the <x-block>form.input</x-block> component with the content <x-block>w-full rounded-full</x-block>.
+            In this example we are touching and replacing all the classes in the <x-block>input.class</x-block>
+            block of the <x-block>input</x-block> component with the content: <x-block>w-full rounded-full</x-block>.
             This means that every input component displayed on the application pages will have these classes, instead of the original component classes.
+        </p>
+    </x-section>
+    <x-section title="Component Example">
+        <div class="inline-flex items-center gap-1">
+            <p class="text-justify">
+                This is an example of the <a class="underline" href="{{ route('documentation.ui.avatar') }}">Avatar</a> component classes
+                <x-outdated-contente-tooltip />
+            </p>
+        </div>
+        <x-code language="php" :contents="$avatar"/>
+        <p class="mt-2 text-justify">
+            All component classes are divided into class blocks applicable to their appropriate required locations in the
+            Blade file associated with the component. TallStackUi was designed with soft personalization in mind: an easy way
+            to personalize components, so even if the developer is a beginner, he doesn't need to have difficulty customizing the components.
         </p>
     </x-section>
     <x-section title="Fluent Personalization">
         <p class="text-justify">
-            We've introduced a fluency style in TallStackUi soft personalization. Let's take a look at a simple example:
+            Just like <a href="https://pestphp.com" target="_blank" class="underline">Pest</a>, TallStackUi offers a concept of
+            fluency when using the <x-block>and</x-block> like a property or method:
         </p>
-        <x-code language="php" :contents="$pest"/>
-        <p class="mt-2 text-justify">
-            With that, we are able to customize two or more components at the same time, thanks to the concept of fluency that we see in <a href="https://pestphp.com" target="_blank" class="underline">Pest</a>.
+        <x-code language="php" :contents="$fluent"/>
+        <p class="text-justify">
+            The idea behind this approach is to personalize more than one component at the same time.
         </p>
     </x-section>
-    <x-section title="Multiple Personalization Ways">
+    <x-section title="Multiple Personalization Usage">
         <p class="text-justify">
-            You can customize one block at a time or all at once. Let's take a look at an example:
+            You can personalize one block at a time or all at once:
         </p>
-        <x-code language="php" :contents="$ways"/>
+        <x-code language="php" :contents="$usages"/>
     </x-section>
     <x-section title="Invokable Class">
         <p class="text-justify">
-            You can also send personalization to be done in a callable class. Let's take a look at a example:
+            You may have noticed that in some example above we used the <x-block>InputPersonzaliation</x-block> class, right?
+            This is a simple invokable class, because TallStackUi also allows you to make your personalization into classes.
+            This approach is ideal if you are someone who prioritizes organization above all else. Let's take a look at an example:
         </p>
         <x-code language="php" :contents="$invokableExample"/>
         <p class="mt-2">And then:</p>
         <x-code language="php" :contents="$invokableClass"/>
     </x-section>
-    <x-section title="Component Parameters">
+    <x-section title="Component Data Parameters">
         <p class="text-justify">
-            In the example above there is a variable called <x-block>$data</x-block>. This variable is an array containing
-            all the component's properties, <b class="underline">including the values passed when you used the component.</b> Let's take a look at an example:
+            You may have noticed that in some examples above there is a variable called <x-block>$data</x-block>, right? This variable is an array
+            containing all the component's properties, <u>including the values passed when you used the component somewhere in your application.</u>
         </p>
-        <p class="mt-4">Using the <x-block>form.input</x-block> like this:</p>
+        <p class="mt-4">Using the <x-block>input</x-block> like this:</p>
         <x-code language="blade" :contents="$usingComponent"/>
         <p class="mt-2">The <x-block>$data</x-block> will be:</p>
         <x-code language="php" :contents="$data"/>
+        <p class="text-justify">
+            You can use this to interact with your personalization.
+        </p>
     </x-section>
     <x-section title="Component Blocks">
         <p class="text-justify">
@@ -58,42 +77,19 @@
     </x-section>
     <x-section title="Tracing TailwindCSS Classes">
         <p class="text-justify">
-            If you really want to personalize your components, make sure you track your component classes
-            so that TailwindCSS generates all the classes that come out of the component files. Your
-            <x-block>tailwindcss.config.js</x-block> needs to receive the following content:
+            If you are excited with soft personalization and want to use it to personalize your components, there is
+            something you should know. As classes are TailwindCSS classes you need to ensure that TailwindCSS watches
+            the files from which the classes you defined come, so personalizations will take effect. To do this, you
+            must edit your <x-block>tailwindcss.config.js</x-block> file inserting this content:
         </p>
         <x-code language="js" :contents="$tailwindcss"/>
     </x-section>
-    <x-section title="Real Example">
-        <p class="text-justify">
-            Let's assume that you only use the <x-block>sm</x-block> button variation in your application,
-            but you are noticing the small texts and therefore want to increase the text without modify the
-            other features of the TallStackUi buttons. If this is the case, see an example of how to personalize
-            the button component to achieve this result:
-        </p>
-        <x-code :contents="$realExample"/>
-        <p class="text-justify">
-            As difficult as it may seem, this is just the original content of customizing the buttons with a
-            change in text size for the <x-block>sm</x-block> variation. Thanks to the fact that TallStackUi shares properties through
-            the <x-block>$data</x-block> variable we can do this kind of thing. Did you notice that in the example above we executed
-            a function through the array? As confusing as it may seem, this is common and acceptable. We are just executing a closure saved at an index of the array.
-        </p>
-        <p class="mt-4 font-semibold underline">With that, you are not replacing the original component content.</p>
-    </x-section>
     <x-section title="Preserve the Original Content">
         <p class="text-justify">
-            One of the precautions you should take with soft personalization is to customize what you want,
-            but <b>preserve the original content classes.</b> Without preserving the original classes after
+            One of the precautions you should take with soft personalization is to personalize what you want,
+            but <u>preserve the original content classes.</u> Without preserving the original classes after
             touching some point in the personalization, the component may be completely modified, leading to
-            an unpleasant appearance. For example, suppose you want to make a component square instead of
-            originally round, for this we need to remove the <x-block>rounded-md</x-block>, so <b>the correct thing to do is
-            to return the entire component's original class WITHOUT</b> the <x-block>rounded-md</x-block>.
+            an unpleasant appearance.
         </p>
-    </x-section>
-    <x-section title="Special Tips">
-        <ul class="list-inside list-decimal">
-            <li>Have doubts about the real content of a block? Take a look at the original content of the component, <a href="https://github.com/tallstackui/tallstackui/blob/main/src/View/Components/Button/Index.php#L50" class="underline" target="_blank">for example this.</a></li>
-            <li>Start your personalization by debugging the <x-block>$data</x-block> to meet all the available properties.</li>
-        </ul>
     </x-section>
 </x-layout>

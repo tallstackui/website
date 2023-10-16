@@ -7,12 +7,10 @@
     </x-slot:description>
     <x-section>
         <p class="text-justify">
-            TallStackUi offers two personalization approaches, one we call "soft" because it's easy and another called "deep"
-            because it's actually something deeper. The "soft" option consists of avoiding having to create many files, and
-            depending on a single service provider to customize all the styling of the components. The "deep" option is more
-            laborious because it involves overwriting the components' customizable classes, which will make you more work in
-            the end. <b class="underline">We suggest that, if possible, avoid doing "deep" personalization</b> so as not to generate conflicts with
-            possible updates we make in the future.
+            TallStackUi offers two personalization approaches, one that we call "soft" because it is easy and simple,
+            and another called "deep" because it actually involves overriding component classes, which will require
+            more technical knowledge from you. As much as you are free to choose the option you want,
+            we suggest you opt for soft personalization.
         </p>
     </x-section>
     <x-section class="grid grid-cols-2 gap-2">

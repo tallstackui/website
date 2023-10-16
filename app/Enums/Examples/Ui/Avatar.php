@@ -38,13 +38,13 @@ class Avatar
     HTML;
 
     public const SIZES = <<<'HTML'
-    <x-avatar label="SM" sm />
-    <x-avatar label="MD" md />
-    <x-avatar label="LG" lg />
+    <x-avatar text="SM" sm />
+    <x-avatar text="MD" md />
+    <x-avatar text="LG" lg />
     HTML;
 
     public const SQUARE = <<<'HTML'
-    <x-avatar label="TS" square />
+    <x-avatar text="TS" square />
     HTML;
 
     public const MODELABLE = <<<'HTML'

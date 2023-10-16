@@ -58,7 +58,7 @@ class DeepPersonalization
             parent::__construct();
         }
 
-        public function customization(): array // [tl! focus:3]
+        public function personalization(): array // [tl! focus:3]
         {
             return [/* ... */];
         }

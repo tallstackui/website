@@ -15,8 +15,12 @@
         <x-code language="shell" :contents="$command"/>
     </x-section>
     <x-section title="Content">
-        <p>This will be a part of the file content:</p>
+        <div class="inline-flex items-center gap-1">
+            <p>
+                This will be a part of the file content
+                <x-outdated-contente-tooltip />
+            </p>
+        </div>
         <x-code :contents="$content"/>
-        <p class="text-justify mt-2">These are some options that offer the customization of various things about the components in general.</p>
     </x-section>
 </x-layout>

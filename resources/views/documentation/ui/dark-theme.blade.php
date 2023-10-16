@@ -9,7 +9,7 @@
         <p class="text-justify">
             TallStackUi provides a simple yet powerful helper to add dark theme support to your application. The main idea
             of this helper is to offer an easy way to control the dark theme by persisting a value in the browser's local storage.
-            After applying the helper, <b class="underline">an AlpineJS variable called darkTheme will be offered to control the dark theme</b>
+            After applying the helper, an AlpineJS variable called <x-block>darkTheme</x-block> will be offered to control the dark theme
             persisting the changes in the local storage.
         </p>
         <p class="mt-4">1. Enable the dark theme support in your TailwindCSS configuration file:</p>
@@ -21,7 +21,7 @@
         <p>3. Create a button to control the dark theme:</p>
         <x-code language="blade" :contents="$button"/>
         <x-warning text="This button must be covered by the layout that received the helper above." />
-        <p class="mt-2">4. After that, all you need to do is adapt all your CSS classes to the dark theme variation:</p>
+        <p class="mt-2">4. Now, all you need to do is adapt all your CSS classes to the dark theme variation:</p>
         <x-code language="blade" :contents="$example"/>
     </x-section>
 </x-layout>

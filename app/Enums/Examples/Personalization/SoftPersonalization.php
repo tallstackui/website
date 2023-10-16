@@ -15,17 +15,50 @@ class SoftPersonalization
 
            TallStackUi::personalize()
                ->form('input')
-               ->block('base', 'w-full rounded-full');
+               ->block('input.class', 'w-full rounded-full');
 
             // or...
 
            TallStackUi::personalize('form.input')
-               ->block('base', 'w-full rounded-full');
+               ->block('input.class', 'w-full rounded-full');
         }
     }
     HTML;
 
-    public const PEST = <<<'HTML'
+    public const AVATAR = <<<'HTML'
+    public function personalization(): array
+    {
+        return Arr::dot([
+            'wrapper' => [
+                'class' => 'inline-flex shrink-0 items-center justify-center overflow-hidden',
+                'sizes' => [
+                    'sm' => 'w-8 h-8 text-xs',
+                    'md' => 'w-12 h-12 text-lg',
+                    'lg' => 'w-14 h-14 text-2xl',
+                ],
+            ],
+            'content' => [
+                'image' => [
+                    'class' => 'shrink-0 object-cover object-center text-xl',
+                    'sizes' => [
+                        'sm' => 'w-8 h-8 text-sm',
+                        'md' => 'w-12 h-12 text-lg',
+                        'lg' => 'w-14 h-14 text-2xl',
+                    ],
+                ],
+                'text' => [
+                    'class' => 'font-semibold',
+                    'colors' => [
+                        'colorful' => 'text-white',
+                        'white' => 'text-neutral-700',
+                    ],
+                ],
+            ],
+        ]);
+    }
+    HTML;
+
+    public const FLUENT = <<<'HTML'
     use TallStackUi\Facades\TallStackUi;
 
     class AppServiceProvider extends ServiceProvider
@@ -36,19 +69,48 @@ class SoftPersonalization
 
            TallStackUi::personalize()
                ->form('input')
-               ->block('base', 'w-full rounded-full')
+               ->block('input.class', 'w-full rounded-full')
                ->and // [tl! highlight]
                ->avatar()
-               ->block('content', 'w-8')
+               ->block('wrapper.sizes.sm', 'w-8 h-8 text-xs')
 
            // or...
 
            TallStackUi::personalize()
                ->form('input')
-               ->block('base', 'w-full rounded-full')
+               ->block('input.class', 'w-full rounded-full')
                ->and() // [tl! highlight]
                ->avatar()
-               ->block('content', 'w-8')
+               ->block('wrapper.sizes.sm', 'w-8 h-8 text-xs')
+        }
+    }
+    HTML;
+
+    public const USAGES = <<<'HTML'
+    use TallStackUi\Facades\TallStackUi;
+    use App\TallStackUi\InputPersonzaliation;
+
+    class AppServiceProvider extends ServiceProvider
+    {
+        public function boot(): void
+        {
+            // ...
+
+           TallStackUi::personalize()
+               ->form('input')
+               ->block('input.class', new InputPersonzaliation())
+               ->block('icon.wrapper', fn (array $data) => 'pointer-events-none absolute')
+               ->block('icon.paddings.left', 'pl-10');
+
+           // or ...
+
+            TallStackUi::personalize()
+               ->form('input')
+               ->block([
+                    'input.class' => new InputPersonzaliation(),
+                    'icon.wrapper' => fn (array $data) => 'pointer-events-none absolute',
+                    'icon.paddings.left' => 'pl-10',
+               ]);
         }
     }
     HTML;
@@ -65,7 +127,7 @@ class SoftPersonalization
 
            TallStackUi::personalize()
                ->form('input')
-               ->block('base', new InputPersonalization()); // [tl! highlight]
+               ->block('input.class', new InputPersonalization()); // [tl! highlight]
         }
     }
     HTML;
@@ -90,88 +152,32 @@ class SoftPersonalization
 
     public const DATA = <<<'HTML'
     [
-        "id" => null
-        "label" => "Name"
-        "hint" => "Your full name"
-        "icon" => null
-        "position" => "left"
-        "square" => false
-        "round" => false
-        "validate" => true
-        "componentName" => "input"
-        "attributes" => \Illuminate\View\ComponentAttributeBag
-        "customization" => \Illuminate\View\InvokableComponentVariable
-        "tallStackUiClasses" => \Illuminate\View\InvokableComponentVariable
-        "slot" => \Illuminate\View\ComponentSlot
-        "__laravel_slots" => [...]
+      "id" => null
+      "label" => "Name"
+      "hint" => "Your full name"
+      "icon" => null
+      "position" => "left"
+      "validate" => true
+      "componentName" => "input"
+      "attributes" => \Illuminate\View\ComponentAttributeBag [...]
+      "personalization" => \Illuminate\View\InvokableComponentVariable [...]
+      "colors" => \Illuminate\View\InvokableComponentVariable [...]
+      "configurations" => [...]
+      "slot" => \Illuminate\View\ComponentSlot [...]
+      "__laravel_slots" => [...]
     ]
-    HTML;
-
-    public const WAYS = <<<'HTML'
-    use TallStackUi\Facades\TallStackUi;
-    use App\TallStackUi\InputIconPersonzaliation;
-
-    class AppServiceProvider extends ServiceProvider
-    {
-        public function boot(): void
-        {
-            // ...
-
-           TallStackUi::personalize()
-               ->form('input')
-               ->block('base', 'w-full rounded-full')
-               ->block('icon.wrapper', fn (array $data) => 'pointer-events-none absolute')
-               ->block('icon.size', 'h-10 w-10');
-
-           // or ...
-
-            TallStackUi::personalize()
-               ->form('input')
-               ->block([
-                    'base' => 'w-full rounded-full',
-                    'icon.wrapper' => fn (array $data) => 'pointer-events-none absolute',
-                    'icon.size' => new InputIconPersonzaliation(),
-               ]);
-        }
-    }
     HTML;
 
     public const TAILWINDCSS = <<<'HTML'
     content: [
-        // ...
+        // If you are personalizing into AppServiceProvider or other
 
+        './app/Providers/MyCustomServiceProvider.php',
         './app/Providers/AppServiceProvider.php',
 
-        // or if you are using invokable classes...
+        // If you are using invokable classes...
 
         './app/TallStackUi/**/*.php',
     ],
-    HTML;
-
-    public const REAL_EXAMPLE = <<<'HTML'
-    use Illuminate\Support\Arr;
-    use TallStackUi\Facades\TallStackUi;
-
-    public function boot(): void
-    {
-        //...
-
-        TallStackUi::personalize()
-            ->button()
-            ->block('wrapper', function (array $data) {
-                return Arr::toCssClasses([
-                    'outline-none inline-flex justify-center items-center group ease-in font-semibold transition',
-                    'focus:ring-2 focus:ring-offset-2 hover:shadow-sm disabled:opacity-50 disabled:cursor-not-allowed',
-                    'gap-x-2' => $data['icon'] !== null,
-                    'text-xs px-1 py-0.5' => $data['size'] === 'xs',
-                    'text-lg px-2 py-1' => $data['size'] === 'sm', // [tl! highlight]
-                    'text-base px-4 py-2' => $data['size'] === 'md',
-                    'text-base px-6 py-3' => $data['size'] === 'lg',
-                    'rounded' => $data['square'] === null && $data['round'] === null,
-                    'rounded-full' => $data['square'] === null && $data['round'] !== null,
-                    $data['tallStackUiButtonColorClasses'](),
-                ]);
-            });
-    }
     HTML;
 }
