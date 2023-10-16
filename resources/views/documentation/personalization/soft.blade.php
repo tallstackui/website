@@ -72,7 +72,7 @@
     </x-section>
     <x-section title="Component Blocks">
         <p class="text-justify">
-            All component documentation mentions their respective personalized blocks in a pink button at the top of the page.
+            All component documentation mentions their respective blocks in a pink circle button at the top of the page.
         </p>
     </x-section>
     <x-section title="Tracing TailwindCSS Classes">

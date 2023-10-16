@@ -52,7 +52,7 @@
         <x-preview title="Size Variations"
                    language="blade"
                    :contents="$sizes">
-            <div class="flex flex-col items-center justify-center space-y-2 sm:space-x-2 sm:flex-row sm:space-y-0">
+            <div class="flex flex-col items-center justify-center space-y-2 sm:space-x-2 sm:space-y-0 sm:flex-row sm:justify-start">
                 <div>
                     <x-button xs>TallStackUi</x-button>
                 </div>
@@ -72,7 +72,7 @@
         <x-preview title="Loading Effect"
                    language="blade"
                    :contents="$loadings">
-            <div class="flex flex-col items-center justify-center space-y-2 sm:space-x-2 sm:flex-row sm:space-y-0">
+            <div class="flex flex-col items-center justify-center space-y-2 sm:space-x-2 sm:space-y-0 sm:flex-row sm:justify-start">
                 <div>
                     <livewire:documentation.ui.button :model="1" />
                 </div>

@@ -37,9 +37,7 @@ class Button
     HTML;
 
     public const LOADINGS = <<<'HTML'
-    <!-- You can use all of Livewire delay options -->
-
-    <x-button wire:click="basic" loading>
+    <x-button wire:click="target" loading>
         Basic
     </x-button>
 
@@ -48,6 +46,9 @@ class Button
     <x-button wire:click="target" loading="target">
         Loading Target
     </x-button>
+
+    <!-- You can use all the Livewire delay options: shortest, shorter, short, long, longer, longest -->
+
     <x-button wire:click="delay" loading="target" delay="longest">
         Delay Control
     </x-button>
@@ -128,17 +129,15 @@ class Button
     HTML;
 
     public const CIRCLE_LOADINGS = <<<'HTML'
-    <!-- You can use all of Livewire delay options -->
-
-    <x-button.circle wire:click="basic"
-                     icon="pencil"
-                     loading />
+    <x-button.circle wire:click="basic" icon="pencil" loading />
 
     <!-- You can specify the target of the delay (method or property) -->
 
     <x-button.circle wire:click="target"
                      icon="pencil"
                      loading="target" />
+
+     <!-- You can use all the Livewire delay options: shortest, shorter, short, long, longer, longest -->
 
     <x-button.circle wire:click="delay"
                      icon="pencil"
