@@ -46,7 +46,7 @@ $tab = state(tab: 'Tab 1');
     @endif
 
     <div class="flex flex-col gap-y-4">
-        <p class="mt-4">Selected: {{ $tab }}</p>
+        <p class="mt-4 font-semibold text-pink-500">Selected: <u>{{ $tab }}</u></p>
     </div>
 
     @if (!$live)

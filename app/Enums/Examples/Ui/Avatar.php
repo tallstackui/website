@@ -5,7 +5,7 @@ namespace App\Enums\Examples\Ui;
 class Avatar
 {
     public const BASIC = <<<'HTML'
-    <x-avatar label="TS" />
+    <x-avatar text="TS" />
     HTML;
 
     public const COLORS = <<<'HTML'
@@ -56,7 +56,12 @@ class Avatar
     HTML;
 
     public const MODELABLE_CUSTOMIZED_COLORS = <<<'HTML'
-    <x-avatar.modelable :model="auth()->user()" property="email" background="ff0000" color="f2f2f2" />
+    <!-- "background" and "color" must be hexadecimals -->
+
+    <x-avatar.modelable :model="auth()->user()"
+                        property="email"
+                        background="ff0000"
+                        color="f2f2f2" />
     HTML;
 
     public const PLACEHOLDER = <<<'HTML'
