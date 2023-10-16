@@ -61,8 +61,6 @@
             <div class="gap-2">
                 <x-badge text="Primary" />
                 <x-badge text="Secondary" color="secondary" />
-                <x-badge text="White" color="white" />
-                <x-badge text="Black" color="black" />
                 <x-badge text="Slate" color="slate" />
                 <x-badge text="Gray" color="gray" />
                 <x-badge text="Zinc" color="zinc" />
@@ -85,6 +83,8 @@
                 <x-badge text="Fuchsia" color="fuchsia" />
                 <x-badge text="Pink" color="pink" />
                 <x-badge text="Rose" color="rose" />
+                <x-badge text="White" color="white" />
+                <x-badge text="Black" color="black" />
             </div>
         </x-preview>
     </x-section>
@@ -95,8 +95,6 @@
             <div class="gap-2">
                 <x-badge text="Primary" outline />
                 <x-badge text="Secondary" color="secondary" outline />
-                <x-badge text="White" color="white" outline />
-                <x-badge text="Black" color="black" outline />
                 <x-badge text="Slate" color="slate" outline />
                 <x-badge text="Gray" color="gray" outline />
                 <x-badge text="Zinc" color="zinc" outline />
@@ -119,6 +117,8 @@
                 <x-badge text="Fuchsia" color="fuchsia" outline />
                 <x-badge text="Pink" color="pink" outline />
                 <x-badge text="Rose" color="rose" outline />
+                <x-badge text="White" color="white" outline />
+                <x-badge text="Black" color="black" outline />
             </div>
         </x-preview>
     </x-section>

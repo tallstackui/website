@@ -9,32 +9,32 @@ class Avatar
     HTML;
 
     public const COLORS = <<<'HTML'
-    <x-avatar label="TS" />
-    <x-avatar label="TS" color="secondary" />
-    <x-avatar label="TS" color="white" />
-    <x-avatar label="TS" color="black" />
-    <x-avatar label="TS" color="slate" />
-    <x-avatar label="TS" color="gray" />
-    <x-avatar label="TS" color="zinc" />
-    <x-avatar label="TS" color="neutral" />
-    <x-avatar label="TS" color="stone" />
-    <x-avatar label="TS" color="red" />
-    <x-avatar label="TS" color="orange" />
-    <x-avatar label="TS" color="amber" />
-    <x-avatar label="TS" color="yellow" />
-    <x-avatar label="TS" color="lime" />
-    <x-avatar label="TS" color="green" />
-    <x-avatar label="TS" color="emerald" />
-    <x-avatar label="TS" color="teal" />
-    <x-avatar label="TS" color="cyan" />
-    <x-avatar label="TS" color="sky" />
-    <x-avatar label="TS" color="blue" />
-    <x-avatar label="TS" color="indigo" />
-    <x-avatar label="TS" color="violet" />
-    <x-avatar label="TS" color="purple" />
-    <x-avatar label="TS" color="fuchsia" />
-    <x-avatar label="TS" color="pink" />
-    <x-avatar label="TS" color="rose" />
+    <x-avatar text="TS" />
+    <x-avatar text="TS" color="secondary" />
+    <x-avatar text="TS" color="slate" />
+    <x-avatar text="TS" color="gray" />
+    <x-avatar text="TS" color="zinc" />
+    <x-avatar text="TS" color="neutral" />
+    <x-avatar text="TS" color="stone" />
+    <x-avatar text="TS" color="red" />
+    <x-avatar text="TS" color="orange" />
+    <x-avatar text="TS" color="amber" />
+    <x-avatar text="TS" color="yellow" />
+    <x-avatar text="TS" color="lime" />
+    <x-avatar text="TS" color="green" />
+    <x-avatar text="TS" color="emerald" />
+    <x-avatar text="TS" color="teal" />
+    <x-avatar text="TS" color="cyan" />
+    <x-avatar text="TS" color="sky" />
+    <x-avatar text="TS" color="blue" />
+    <x-avatar text="TS" color="indigo" />
+    <x-avatar text="TS" color="violet" />
+    <x-avatar text="TS" color="purple" />
+    <x-avatar text="TS" color="fuchsia" />
+    <x-avatar text="TS" color="pink" />
+    <x-avatar text="TS" color="rose" />
+    <x-avatar text="TS" color="black" />
+    <x-avatar text="TS" color="white" />
     HTML;
 
     public const SIZES = <<<'HTML'
@@ -62,8 +62,6 @@ class Avatar
     public const PLACEHOLDER = <<<'HTML'
     <x-avatar />
     <x-avatar color="secondary" />
-    <x-avatar color="white" />
-    <x-avatar color="black" />
     <x-avatar color="slate" />
     <x-avatar color="gray" />
     <x-avatar color="zinc" />
@@ -86,5 +84,7 @@ class Avatar
     <x-avatar color="fuchsia" />
     <x-avatar color="pink" />
     <x-avatar color="rose" />
+    <x-avatar color="black" />
+    <x-avatar color="white" />
     HTML;
 }

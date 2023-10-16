@@ -42,15 +42,13 @@
                    language="blade"
                    :contents="$colors">
             <livewire:documentation.ui.errors />
+            <livewire:documentation.ui.errors color="primary" />
             <livewire:documentation.ui.errors color="secondary" />
-            <livewire:documentation.ui.errors color="white" />
-            <livewire:documentation.ui.errors color="black" />
             <livewire:documentation.ui.errors color="slate" />
             <livewire:documentation.ui.errors color="gray" />
             <livewire:documentation.ui.errors color="zinc" />
             <livewire:documentation.ui.errors color="neutral" />
             <livewire:documentation.ui.errors color="stone" />
-            <livewire:documentation.ui.errors color="red" />
             <livewire:documentation.ui.errors color="orange" />
             <livewire:documentation.ui.errors color="amber" />
             <livewire:documentation.ui.errors color="yellow" />
@@ -66,6 +64,9 @@
             <livewire:documentation.ui.errors color="purple" />
             <livewire:documentation.ui.errors color="fuchsia" />
             <livewire:documentation.ui.errors color="pink" />
+            <livewire:documentation.ui.errors color="rose" />
+            <livewire:documentation.ui.errors color="black" />
+            <livewire:documentation.ui.errors color="white" />
         </x-preview>
     </x-section>
 </x-layout>

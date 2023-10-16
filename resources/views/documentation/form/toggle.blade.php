@@ -43,8 +43,6 @@
             <div class="space-y-2">
                 <x-toggle label="Primary" />
                 <x-toggle color="secondary" label="Secondary" />
-                <x-toggle color="white" label="White" />
-                <x-toggle color="black" label="Black" />
                 <x-toggle color="slate" label="Slate" />
                 <x-toggle color="gray" label="Gray" />
                 <x-toggle color="zinc" label="Zinc" />
@@ -67,6 +65,8 @@
                 <x-toggle color="fuchsia" label="Fuchsia" />
                 <x-toggle color="pink" label="Pink" />
                 <x-toggle color="rose" label="Rose" />
+                <x-toggle color="black" label="Black" />
+                <x-toggle color="white" label="White" />
             </div>
         </x-preview>
     </x-section>

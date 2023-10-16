@@ -18,16 +18,14 @@ new class extends Component {
         $this->name = str($this->component)->replace('.', ' ')->title()->value();
     }
 
-    public function updatingModal($value): void
+    public function open(): void
     {
-        if (!$value) {
-            $this->blocks = null;
-            $this->original = null;
-            return;
-        }
+        $this->original = null;
 
         $components = config()->get('tallstackui.components');
-        $this->blocks = app($components[$this->component], ['ignoreValidations' => true])->customization();
+        $this->blocks = app($components[$this->component], ['ignoreValidations' => true])->personalization();
+
+        $this->modal = !$this->modal;
     }
 
     public function content(string $block, string $class): void
@@ -66,7 +64,7 @@ new class extends Component {
                     </div>
                 </div>
                 <div class="mt-2 space-y-2">
-                    @if ($original !== null)
+                    @if ($original)
                         <p>Block Name:
                             <x-badge :text="$original['block']" color="pink" outline/>
                         </p>
@@ -79,7 +77,7 @@ new class extends Component {
             </div>
         @endif
     </x-modal>
-    <x-button.circle wire:click="$toggle('modal')"
+    <x-button.circle wire:click="open"
                      icon="paint-brush"
                      color="pink"
                      sm />

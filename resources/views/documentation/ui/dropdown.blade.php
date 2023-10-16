@@ -34,25 +34,13 @@
         </x-preview>
     </x-section>
     <x-section>
-        <x-preview title="Icon Usage"
+        <x-preview title="Icon Slot"
                    language="blade"
                    :contents="$icons">
             <div class="flex justify-end md:justify-center">
                 <x-dropdown icon="chevron-down">
                     <x-dropdown.items text="Settings" />
                     <x-dropdown.items text="Logout" separator />
-                </x-dropdown>
-            </div>
-        </x-preview>
-    </x-section>
-    <x-section>
-        <x-preview title="Icon Slot"
-                   language="blade"
-                   :contents="$iconSlots">
-            <div class="flex justify-end md:justify-center">
-                <x-dropdown icon="chevron-down" animate>
-                    <x-dropdown.items icon="cog" text="Settings" />
-                    <x-dropdown.items icon="arrow-left-on-rectangle" text="Logout" separator />
                 </x-dropdown>
             </div>
         </x-preview>

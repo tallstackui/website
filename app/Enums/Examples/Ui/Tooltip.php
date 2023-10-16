@@ -25,39 +25,37 @@ class Tooltip
     HTML;
 
     public const COLORS = <<<'HTML'
-    <x-tooltip text="primary"/>
-    <x-tooltip text="secondary" color="secondary"/>
-    <x-tooltip text="white" color="white"/>
-    <x-tooltip text="black" color="black"/>
-    <x-tooltip text="slate" color="slate"/>
-    <x-tooltip text="gray" color="gray"/>
-    <x-tooltip text="zinc" color="zinc"/>
-    <x-tooltip text="neutral" color="neutral"/>
-    <x-tooltip text="stone" color="stone"/>
-    <x-tooltip text="red" color="red"/>
-    <x-tooltip text="orange" color="orange"/>
-    <x-tooltip text="amber" color="amber"/>
-    <x-tooltip text="yellow" color="yellow"/>
-    <x-tooltip text="lime" color="lime"/>
-    <x-tooltip text="green" color="green"/>
-    <x-tooltip text="emerald" color="emerald"/>
-    <x-tooltip text="teal" color="teal"/>
-    <x-tooltip text="cyan" color="cyan"/>
-    <x-tooltip text="sky" color="sky"/>
-    <x-tooltip text="blue" color="blue"/>
-    <x-tooltip text="indigo" color="indigo"/>
-    <x-tooltip text="violet" color="violet"/>
-    <x-tooltip text="purple" color="purple"/>
-    <x-tooltip text="fuchsia" color="fuchsia"/>
-    <x-tooltip text="pink" color="pink"/>
-    <x-tooltip text="rose" color="rose"/>
+    <x-tooltip text="primary" />
+    <x-tooltip text="secondary" color="secondary" />
+    <x-tooltip text="slate" color="slate" />
+    <x-tooltip text="gray" color="gray" />
+    <x-tooltip text="zinc" color="zinc" />
+    <x-tooltip text="neutral" color="neutral" />
+    <x-tooltip text="stone" color="stone" />
+    <x-tooltip text="red" color="red" />
+    <x-tooltip text="orange" color="orange" />
+    <x-tooltip text="amber" color="amber" />
+    <x-tooltip text="yellow" color="yellow" />
+    <x-tooltip text="lime" color="lime" />
+    <x-tooltip text="green" color="green" />
+    <x-tooltip text="emerald" color="emerald" />
+    <x-tooltip text="teal" color="teal" />
+    <x-tooltip text="cyan" color="cyan" />
+    <x-tooltip text="sky" color="sky" />
+    <x-tooltip text="blue" color="blue" />
+    <x-tooltip text="indigo" color="indigo" />
+    <x-tooltip text="violet" color="violet" />
+    <x-tooltip text="purple" color="purple" />
+    <x-tooltip text="fuchsia" color="fuchsia" />
+    <x-tooltip text="pink" color="pink" />
+    <x-tooltip text="rose" color="rose" />
+    <x-tooltip text="black" color="black" />
+    <x-tooltip text="white" color="white" />
     HTML;
 
     public const OUTLINES = <<<'HTML'
     <x-tooltip text="primary" outline />
     <x-tooltip text="secondary" color="secondary" outline />
-    <x-tooltip text="white" color="white" outline />
-    <x-tooltip text="black" color="black" outline />
     <x-tooltip text="slate" color="slate" outline />
     <x-tooltip text="gray" color="gray" outline />
     <x-tooltip text="zinc" color="zinc" outline />
@@ -80,5 +78,7 @@ class Tooltip
     <x-tooltip text="fuchsia" color="fuchsia" outline />
     <x-tooltip text="pink" color="pink" outline />
     <x-tooltip text="rose" color="rose" outline />
+    <x-tooltip text="black" color="black" outline />
+    <x-tooltip text="white" color="white" outline />
     HTML;
 }

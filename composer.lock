@@ -3010,16 +3010,16 @@
         },
         {
             "name": "psy/psysh",
-            "version": "v0.11.21",
+            "version": "v0.11.22",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bobthecow/psysh.git",
-                "reference": "bcb22101107f3bf770523b65630c9d547f60c540"
+                "reference": "128fa1b608be651999ed9789c95e6e2a31b5802b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bobthecow/psysh/zipball/bcb22101107f3bf770523b65630c9d547f60c540",
-                "reference": "bcb22101107f3bf770523b65630c9d547f60c540",
+                "url": "https://api.github.com/repos/bobthecow/psysh/zipball/128fa1b608be651999ed9789c95e6e2a31b5802b",
+                "reference": "128fa1b608be651999ed9789c95e6e2a31b5802b",
                 "shasum": ""
             },
             "require": {
@@ -3048,7 +3048,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-main": "0.11.x-dev"
+                    "dev-0.11": "0.11.x-dev"
                 },
                 "bamarni-bin": {
                     "bin-links": false,
@@ -3084,9 +3084,9 @@
             ],
             "support": {
                 "issues": "https://github.com/bobthecow/psysh/issues",
-                "source": "https://github.com/bobthecow/psysh/tree/v0.11.21"
+                "source": "https://github.com/bobthecow/psysh/tree/v0.11.22"
             },
-            "time": "2023-09-17T21:15:54+00:00"
+            "time": "2023-10-14T21:56:36+00:00"
         },
         {
             "name": "ralouphie/getallheaders",
@@ -5566,16 +5566,16 @@
         },
         {
             "name": "tallstackui/tallstackui",
-            "version": "v0.6.0",
+            "version": "v0.6.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/tallstackui/tallstackui.git",
-                "reference": "15034ab724cc8d463d039780932e99b7189a1285"
+                "reference": "8d6eac34ccb083519ed4fc5f9c029b87b36936cf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tallstackui/tallstackui/zipball/15034ab724cc8d463d039780932e99b7189a1285",
-                "reference": "15034ab724cc8d463d039780932e99b7189a1285",
+                "url": "https://api.github.com/repos/tallstackui/tallstackui/zipball/8d6eac34ccb083519ed4fc5f9c029b87b36936cf",
+                "reference": "8d6eac34ccb083519ed4fc5f9c029b87b36936cf",
                 "shasum": ""
             },
             "require": {
@@ -5621,9 +5621,9 @@
             "description": "A curated list of TallStack UI Components",
             "support": {
                 "issues": "https://github.com/tallstackui/tallstackui/issues",
-                "source": "https://github.com/tallstackui/tallstackui/tree/v0.6.0"
+                "source": "https://github.com/tallstackui/tallstackui/tree/v0.6.2"
             },
-            "time": "2023-10-16T02:38:14+00:00"
+            "time": "2023-10-16T05:26:51+00:00"
         },
         {
             "name": "tijsverkoyen/css-to-inline-styles",

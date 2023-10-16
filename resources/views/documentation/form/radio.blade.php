@@ -43,8 +43,6 @@
             <div class="space-y-2">
                 <x-radio label="Primary" />
                 <x-radio color="secondary" label="Secondary" />
-                <x-radio color="white" label="White" />
-                <x-radio color="black" label="Black" />
                 <x-radio color="slate" label="Slate" />
                 <x-radio color="gray" label="Gray" />
                 <x-radio color="zinc" label="Zinc" />
@@ -67,6 +65,8 @@
                 <x-radio color="fuchsia" label="Fuchsia" />
                 <x-radio color="pink" label="Pink" />
                 <x-radio color="rose" label="Rose" />
+                <x-radio color="black" label="Black" />
+                <x-radio color="white" label="White" />
             </div>
         </x-preview>
     </x-section>

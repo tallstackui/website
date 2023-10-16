@@ -20,10 +20,8 @@
                    language="blade"
                    :contents="$colors">
             <div class="space-y-2 gap-2">
-                <x-avatar text="TS" />
+                <x-avatar text="TS" color="primary" />
                 <x-avatar text="TS" color="secondary" />
-                <x-avatar text="TS" color="white" />
-                <x-avatar text="TS" color="black" />
                 <x-avatar text="TS" color="slate" />
                 <x-avatar text="TS" color="gray" />
                 <x-avatar text="TS" color="zinc" />
@@ -46,6 +44,8 @@
                 <x-avatar text="TS" color="fuchsia" />
                 <x-avatar text="TS" color="pink" />
                 <x-avatar text="TS" color="rose" />
+                <x-avatar text="TS" color="black" />
+                <x-avatar text="TS" color="white" />
             </div>
         </x-preview>
     </x-section>
@@ -91,10 +91,8 @@
                    language="blade"
                    :contents="$placeholder">
             <div class="space-y-2 gap-2">
-                <x-avatar />
+                <x-avatar color="primary" />
                 <x-avatar color="secondary" />
-                <x-avatar color="white" />
-                <x-avatar color="black" />
                 <x-avatar color="slate" />
                 <x-avatar color="gray" />
                 <x-avatar color="zinc" />
@@ -117,6 +115,8 @@
                 <x-avatar color="fuchsia" />
                 <x-avatar color="pink" />
                 <x-avatar color="rose" />
+                <x-avatar color="black" />
+                <x-avatar color="white" />
             </div>
         </x-preview>
     </x-section>

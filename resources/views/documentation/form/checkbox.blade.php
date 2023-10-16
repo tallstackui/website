@@ -43,8 +43,6 @@
             <div class="space-y-2">
                 <x-checkbox label="Primary" />
                 <x-checkbox color="secondary" label="Secondary" />
-                <x-checkbox color="white" label="White" />
-                <x-checkbox color="black" label="Black" />
                 <x-checkbox color="slate" label="Slate" />
                 <x-checkbox color="gray" label="Gray" />
                 <x-checkbox color="zinc" label="Zinc" />
@@ -67,6 +65,8 @@
                 <x-checkbox color="fuchsia" label="Fuchsia" />
                 <x-checkbox color="pink" label="Pink" />
                 <x-checkbox color="rose" label="Rose" />
+                <x-checkbox color="black" label="Black" />
+                <x-checkbox color="white" label="White" />
             </div>
         </x-preview>
     </x-section>

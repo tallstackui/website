@@ -20,32 +20,32 @@ class Toggle
     HTML;
 
     public const COLORS = <<<'HTML'
-    <x-toggle />
-    <x-toggle color="secondary" />
-    <x-toggle color="white" />
-    <x-toggle color="black" />
-    <x-toggle color="slate" />
-    <x-toggle color="gray" />
-    <x-toggle color="zinc" />
-    <x-toggle color="neutral" />
-    <x-toggle color="stone" />
-    <x-toggle color="red" />
-    <x-toggle color="orange" />
-    <x-toggle color="amber" />
-    <x-toggle color="yellow" />
-    <x-toggle color="lime" />
-    <x-toggle color="green" />
-    <x-toggle color="emerald" />
-    <x-toggle color="teal" />
-    <x-toggle color="cyan" />
-    <x-toggle color="sky" />
-    <x-toggle color="blue" />
-    <x-toggle color="indigo" />
-    <x-toggle color="violet" />
-    <x-toggle color="purple" />
-    <x-toggle color="fuchsia" />
-    <x-toggle color="pink" />
-    <x-toggle color="rose" />
+    <x-toggle label="Primary" />
+    <x-toggle color="secondary" label="Secondary" />
+    <x-toggle color="slate" label="Slate" />
+    <x-toggle color="gray" label="Gray" />
+    <x-toggle color="zinc" label="Zinc" />
+    <x-toggle color="neutral" label="Neutral" />
+    <x-toggle color="stone" label="Stone" />
+    <x-toggle color="red" label="Red" />
+    <x-toggle color="orange" label="Orange" />
+    <x-toggle color="amber" label="Amber" />
+    <x-toggle color="yellow" label="Yellow" />
+    <x-toggle color="lime" label="Lime" />
+    <x-toggle color="green" label="Green" />
+    <x-toggle color="emerald" label="Emerald" />
+    <x-toggle color="teal" label="Teal" />
+    <x-toggle color="cyan" label="Cyan" />
+    <x-toggle color="sky" label="Sky" />
+    <x-toggle color="blue" label="Blue" />
+    <x-toggle color="indigo" label="Indigo" />
+    <x-toggle color="violet" label="Violet" />
+    <x-toggle color="purple" label="Purple" />
+    <x-toggle color="fuchsia" label="Fuchsia" />
+    <x-toggle color="pink" label="Pink" />
+    <x-toggle color="rose" label="Rose" />
+    <x-toggle color="black" label="Black" />
+    <x-toggle color="white" label="White" />
     HTML;
 
     public const LIVEWIRE = <<<'HTML'

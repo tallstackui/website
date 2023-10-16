@@ -50,8 +50,6 @@ class Alert
     public const COLORS = <<<'HTML'
     <x-alert title="TallStackUi" text="Primary" />
     <x-alert title="TallStackUi" text="Secondary" color="secondary" />
-    <x-alert title="TallStackUi" text="Black" color="black" />
-    <x-alert title="TallStackUi" text="White" color="white" />
     <x-alert title="TallStackUi" text="Slate" color="slate" />
     <x-alert title="TallStackUi" text="Gray" color="gray" />
     <x-alert title="TallStackUi" text="Zinc" color="zinc" />
@@ -74,13 +72,13 @@ class Alert
     <x-alert title="TallStackUi" text="Fuchsia" color="fuchsia" />
     <x-alert title="TallStackUi" text="Pink" color="pink" />
     <x-alert title="TallStackUi" text="Rose" color="rose" />
+    <x-alert title="TallStackUi" text="Black" color="black" />
+    <x-alert title="TallStackUi" text="White" color="white" />
     HTML;
 
     public const TRANSLUCENTS = <<<'HTML'
     <x-alert title="TallStackUi" text="Primary" translucent />
     <x-alert title="TallStackUi" text="Secondary" color="secondary" translucent />
-    <x-alert title="TallStackUi" text="Black" color="black" translucent />
-    <x-alert title="TallStackUi" text="White" color="white" translucent />
     <x-alert title="TallStackUi" text="Slate" color="slate" translucent />
     <x-alert title="TallStackUi" text="Gray" color="gray" translucent />
     <x-alert title="TallStackUi" text="Zinc" color="zinc" translucent />
@@ -103,5 +101,7 @@ class Alert
     <x-alert title="TallStackUi" text="Fuchsia" color="fuchsia" translucent />
     <x-alert title="TallStackUi" text="Pink" color="pink" translucent />
     <x-alert title="TallStackUi" text="Rose" color="rose" translucent />
+    <x-alert title="TallStackUi" text="Black" color="black" translucent />
+    <x-alert title="TallStackUi" text="White" color="white" translucent />
     HTML;
 }

@@ -20,32 +20,32 @@ class Radio
     HTML;
 
     public const COLORS = <<<'HTML'
-    <x-radio />
-    <x-radio color="secondary" />
-    <x-radio color="white" />
-    <x-radio color="black" />
-    <x-radio color="slate" />
-    <x-radio color="gray" />
-    <x-radio color="zinc" />
-    <x-radio color="neutral" />
-    <x-radio color="stone" />
-    <x-radio color="red" />
-    <x-radio color="orange" />
-    <x-radio color="amber" />
-    <x-radio color="yellow" />
-    <x-radio color="lime" />
-    <x-radio color="green" />
-    <x-radio color="emerald" />
-    <x-radio color="teal" />
-    <x-radio color="cyan" />
-    <x-radio color="sky" />
-    <x-radio color="blue" />
-    <x-radio color="indigo" />
-    <x-radio color="violet" />
-    <x-radio color="purple" />
-    <x-radio color="fuchsia" />
-    <x-radio color="pink" />
-    <x-radio color="rose" />
+    <x-radio label="Primary" />
+    <x-radio color="secondary" label="Secondary" />
+    <x-radio color="slate" label="Slate" />
+    <x-radio color="gray" label="Gray" />
+    <x-radio color="zinc" label="Zinc" />
+    <x-radio color="neutral" label="Neutral" />
+    <x-radio color="stone" label="Stone" />
+    <x-radio color="red" label="Red" />
+    <x-radio color="orange" label="Orange" />
+    <x-radio color="amber" label="Amber" />
+    <x-radio color="yellow" label="Yellow" />
+    <x-radio color="lime" label="Lime" />
+    <x-radio color="green" label="Green" />
+    <x-radio color="emerald" label="Emerald" />
+    <x-radio color="teal" label="Teal" />
+    <x-radio color="cyan" label="Cyan" />
+    <x-radio color="sky" label="Sky" />
+    <x-radio color="blue" label="Blue" />
+    <x-radio color="indigo" label="Indigo" />
+    <x-radio color="violet" label="Violet" />
+    <x-radio color="purple" label="Purple" />
+    <x-radio color="fuchsia" label="Fuchsia" />
+    <x-radio color="pink" label="Pink" />
+    <x-radio color="rose" label="Rose" />
+    <x-radio color="black" label="Black" />
+    <x-radio color="white" label="White" />
     HTML;
 
     public const LIVEWIRE = <<<'HTML'
