@@ -1,4 +1,4 @@
-<x-layout>
+<x-layout :torchlight="false">
     <x-slot:title>
         Beta Phase
     </x-slot:title>
