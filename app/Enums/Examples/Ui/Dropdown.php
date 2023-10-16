@@ -25,13 +25,6 @@ class Dropdown
     </x-dropdown>
     HTML;
 
-    public const ANIMATIONS = <<<'HTML'
-    <x-dropdown icon="chevron-down" animate>
-        <x-dropdown.items text="Settings" />
-        <x-dropdown.items text="Logout" separator />
-    </x-dropdown>
-    HTML;
-
     public const ICON_SLOTS = <<<'HTML'
     <x-dropdown icon="chevron-down" animate>
         <x-dropdown.items icon="cog" text="Settings" />

@@ -12,7 +12,7 @@
         <x-preview title="Basic Usage"
                         language="blade"
                         :contents="$basic">
-            <x-avatar label="TS" />
+            <x-avatar text="TS" />
         </x-preview>
     </x-section>
     <x-section>
@@ -20,32 +20,32 @@
                    language="blade"
                    :contents="$colors">
             <div class="space-y-2 gap-2">
-                <x-avatar label="TS" />
-                <x-avatar label="TS" color="secondary" />
-                <x-avatar label="TS" color="white" />
-                <x-avatar label="TS" color="black" />
-                <x-avatar label="TS" color="slate" />
-                <x-avatar label="TS" color="gray" />
-                <x-avatar label="TS" color="zinc" />
-                <x-avatar label="TS" color="neutral" />
-                <x-avatar label="TS" color="stone" />
-                <x-avatar label="TS" color="red" />
-                <x-avatar label="TS" color="orange" />
-                <x-avatar label="TS" color="amber" />
-                <x-avatar label="TS" color="yellow" />
-                <x-avatar label="TS" color="lime" />
-                <x-avatar label="TS" color="green" />
-                <x-avatar label="TS" color="emerald" />
-                <x-avatar label="TS" color="teal" />
-                <x-avatar label="TS" color="cyan" />
-                <x-avatar label="TS" color="sky" />
-                <x-avatar label="TS" color="blue" />
-                <x-avatar label="TS" color="indigo" />
-                <x-avatar label="TS" color="violet" />
-                <x-avatar label="TS" color="purple" />
-                <x-avatar label="TS" color="fuchsia" />
-                <x-avatar label="TS" color="pink" />
-                <x-avatar label="TS" color="rose" />
+                <x-avatar text="TS" />
+                <x-avatar text="TS" color="secondary" />
+                <x-avatar text="TS" color="white" />
+                <x-avatar text="TS" color="black" />
+                <x-avatar text="TS" color="slate" />
+                <x-avatar text="TS" color="gray" />
+                <x-avatar text="TS" color="zinc" />
+                <x-avatar text="TS" color="neutral" />
+                <x-avatar text="TS" color="stone" />
+                <x-avatar text="TS" color="red" />
+                <x-avatar text="TS" color="orange" />
+                <x-avatar text="TS" color="amber" />
+                <x-avatar text="TS" color="yellow" />
+                <x-avatar text="TS" color="lime" />
+                <x-avatar text="TS" color="green" />
+                <x-avatar text="TS" color="emerald" />
+                <x-avatar text="TS" color="teal" />
+                <x-avatar text="TS" color="cyan" />
+                <x-avatar text="TS" color="sky" />
+                <x-avatar text="TS" color="blue" />
+                <x-avatar text="TS" color="indigo" />
+                <x-avatar text="TS" color="violet" />
+                <x-avatar text="TS" color="purple" />
+                <x-avatar text="TS" color="fuchsia" />
+                <x-avatar text="TS" color="pink" />
+                <x-avatar text="TS" color="rose" />
             </div>
         </x-preview>
     </x-section>
@@ -53,16 +53,16 @@
         <x-preview title="Size Variations"
                    language="blade"
                    :contents="$sizes">
-            <x-avatar label="SM" sm />
-            <x-avatar label="MD" md />
-            <x-avatar label="LG" lg />
+            <x-avatar text="SM" sm />
+            <x-avatar text="MD" md />
+            <x-avatar text="LG" lg />
         </x-preview>
     </x-section>
     <x-section>
         <x-preview title="Square Variations"
                    language="blade"
                    :contents="$square">
-            <x-avatar label="TS" square />
+            <x-avatar text="TS" square />
         </x-preview>
     </x-section>
     <x-section class="space-y-4">

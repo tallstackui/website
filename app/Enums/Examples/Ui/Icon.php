@@ -5,8 +5,6 @@ namespace App\Enums\Examples\Ui;
 class Icon
 {
     public const BASIC = <<<'HTML'
-    <!-- You can also use "icon" instead of "name" -->
-
     <x-icon name="users" class="h-5 w-5" />
     <x-icon name="cog" class="h-5 w-5" />
     <x-icon name="arrow-left" class="h-5 w-5" />
@@ -14,8 +12,6 @@ class Icon
     HTML;
 
     public const OUTLINE = <<<'HTML'
-    <!-- You can also use "icon" instead of "name" -->
-
     <x-icon name="users" class="h-5 w-5" />
     <x-icon name="users" class="h-5 w-5" outline />
     <x-icon name="clipboard" class="h-5 w-5" />

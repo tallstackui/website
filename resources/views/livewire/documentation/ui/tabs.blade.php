@@ -8,41 +8,41 @@ $tab = state(tab: 'Tab 1');
 
 <div>
     @if ($live)
-    <x-tabs wire:model.live="tab">
-        <x-tabs.items tab="Tab 1">
+    <x-tab wire:model.live="tab">
+        <x-tab.items tab="Tab 1">
             Tab 1
-        </x-tabs.items>
-        <x-tabs.items tab="Tab 2">
+        </x-tab.items>
+        <x-tab.items tab="Tab 2">
             Tab 2
-        </x-tabs.items>
-        <x-tabs.items tab="Tab 3">
+        </x-tab.items>
+        <x-tab.items tab="Tab 3">
             Tab 3
-        </x-tabs.items>
-        <x-tabs.items tab="Tab 4">
+        </x-tab.items>
+        <x-tab.items tab="Tab 4">
             Tab 4
-        </x-tabs.items>
-        <x-tabs.items tab="Tab 5">
+        </x-tab.items>
+        <x-tab.items tab="Tab 5">
             Tab 5
-        </x-tabs.items>
-    </x-tabs>
+        </x-tab.items>
+    </x-tab>
     @else
-        <x-tabs wire:model="tab">
-            <x-tabs.items tab="Tab 1">
+        <x-tab wire:model="tab">
+            <x-tab.items tab="Tab 1">
                 Tab 1
-            </x-tabs.items>
-            <x-tabs.items tab="Tab 2">
+            </x-tab.items>
+            <x-tab.items tab="Tab 2">
                 Tab 2
-            </x-tabs.items>
-            <x-tabs.items tab="Tab 3">
+            </x-tab.items>
+            <x-tab.items tab="Tab 3">
                 Tab 3
-            </x-tabs.items>
-            <x-tabs.items tab="Tab 4">
+            </x-tab.items>
+            <x-tab.items tab="Tab 4">
                 Tab 4
-            </x-tabs.items>
-            <x-tabs.items tab="Tab 5">
+            </x-tab.items>
+            <x-tab.items tab="Tab 5">
                 Tab 5
-            </x-tabs.items>
-        </x-tabs>
+            </x-tab.items>
+        </x-tab>
     @endif
 
     <div class="flex flex-col gap-y-4">

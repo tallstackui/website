@@ -97,9 +97,7 @@ class Select
     <x-select.searchable :request="[
                             'url' => 'https://jsonplaceholder.typicode.com/users',
                             'method' => 'get',
-                            'params' => [
-                                'library' => 'TallStackUi',
-                            ],
+                            'params' => ['library' => 'TallStackUi'],
                          ]"
                          select="label:name|value:id"
                          wire:model="value" />

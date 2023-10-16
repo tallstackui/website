@@ -46,18 +46,6 @@
         </x-preview>
     </x-section>
     <x-section>
-        <x-preview title="Icon Usage Animated"
-                   language="blade"
-                   :contents="$animations">
-            <div class="flex justify-end md:justify-center">
-                <x-dropdown icon="chevron-down" animate>
-                    <x-dropdown.items text="Settings" />
-                    <x-dropdown.items text="Logout" separator />
-                </x-dropdown>
-            </div>
-        </x-preview>
-    </x-section>
-    <x-section>
         <x-preview title="Icon Slot"
                    language="blade"
                    :contents="$iconSlots">
