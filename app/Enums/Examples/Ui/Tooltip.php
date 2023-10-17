@@ -81,4 +81,10 @@ class Tooltip
     <x-tooltip text="black" color="black" outline />
     <x-tooltip text="white" color="white" outline />
     HTML;
+
+    public const PERSONALIZATION = <<<'HTML'
+    TallStackUi::personalize()
+        ->tooltip()
+        ->block('block', 'classes');
+    HTML;
 }

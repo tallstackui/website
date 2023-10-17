@@ -52,4 +52,10 @@ class Radio
     <x-radio label="Receive Alert"
              wire:model="alert" />
     HTML;
+
+    public const PERSONALIZATION = <<<'HTML'
+    TallStackUi::personalize()
+        ->form('radio')
+        ->block('block', 'classes');
+    HTML;
 }

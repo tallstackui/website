@@ -6,7 +6,7 @@
         Card component.
     </x-slot:description>
     <x-slot:personalization>
-        <livewire:documentation.personalization component="card" />
+        <livewire:documentation.personalization :$personalization component="card" />
     </x-slot:personalization>
     <x-section>
         <x-preview title="Basic Usage"

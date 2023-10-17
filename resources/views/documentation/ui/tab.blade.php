@@ -6,8 +6,8 @@
         Tabs components to display content in tabs.
     </x-slot:description>
     <x-slot:personalization>
-        <livewire:documentation.personalization component="tabs" />
-        <livewire:documentation.personalization component="tabs.items" />
+        <livewire:documentation.personalization :$personalization component="tab" />
+        <livewire:documentation.personalization :personalization="$personalizationItems" component="tab.items" />
     </x-slot:personalization>
     <x-section>
         <x-preview title="Basic"

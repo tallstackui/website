@@ -103,4 +103,10 @@ class Modal
         Close
     </x-button>
     HTML;
+
+    public const PERSONALIZATION = <<<'HTML'
+    TallStackUi::personalize()
+        ->modal()
+        ->block('block', 'classes');
+    HTML;
 }

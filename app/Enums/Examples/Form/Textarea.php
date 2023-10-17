@@ -34,4 +34,10 @@ class Textarea
                 hint="Insert the post description"
                 wire:model="description" />
     HTML;
+
+    public const PERSONALIZATION = <<<'HTML'
+    TallStackUi::personalize()
+        ->form('textarea')
+        ->block('block', 'classes');
+    HTML;
 }

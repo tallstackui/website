@@ -6,7 +6,7 @@
         Form checkbox component.
     </x-slot:description>
     <x-slot:personalization>
-        <livewire:documentation.personalization component="checkbox" />
+        <livewire:documentation.personalization :$personalization component="checkbox" />
     </x-slot:personalization>
     <x-section>
         <x-preview title="Basic Usage"

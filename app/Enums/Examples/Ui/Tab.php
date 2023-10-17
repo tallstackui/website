@@ -69,4 +69,16 @@ class Tab
         </x-tabs.items>
     </x-tabs>
     HTML;
+
+    public const PERSONALIZATION = <<<'HTML'
+    TallStackUi::personalize()
+        ->tab()
+        ->block('block', 'classes');
+    HTML;
+
+    public const PERSONALIZATION_ITEMS = <<<'HTML'
+    TallStackUi::personalize()
+        ->tab('items')
+        ->block('block', 'classes');
+    HTML;
 }

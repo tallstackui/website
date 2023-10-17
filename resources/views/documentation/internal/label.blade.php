@@ -6,7 +6,7 @@
         The generic error component used in form components.
     </x-slot:description>
     <x-slot:personalization>
-        <livewire:documentation.personalization component="label" />
+        <livewire:documentation.personalization :$personalization component="label" />
     </x-slot:personalization>
     <x-card>
         <p class="text-justify">

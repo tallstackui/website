@@ -29,4 +29,10 @@ class Input
              position="right"
              wire:model="username" />
     HTML;
+
+    public const PERSONALIZATION = <<<'HTML'
+    TallStackUi::personalize()
+        ->form('input')
+        ->block('block', 'classes');
+    HTML;
 }

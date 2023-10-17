@@ -54,4 +54,10 @@ class Error
     <x-errors color="black" />
     <x-errors color="white" />
     HTML;
+
+    public const PERSONALIZATION = <<<'HTML'
+    TallStackUi::personalize()
+        ->dropdown('errors')
+        ->block('block', 'classes');
+    HTML;
 }

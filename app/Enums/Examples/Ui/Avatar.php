@@ -92,4 +92,10 @@ class Avatar
     <x-avatar color="black" />
     <x-avatar color="white" />
     HTML;
+
+    public const PERSONALIZATION = <<<'HTML'
+    TallStackUi::personalize()
+        ->avatar()
+        ->block('block', 'classes');
+    HTML;
 }

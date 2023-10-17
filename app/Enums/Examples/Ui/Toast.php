@@ -85,4 +85,10 @@ class Toast
     <x-toast position="bottom-left" />
     <x-toast position="bottom-right" />
     HTML;
+
+    public const PERSONALIZATION = <<<'HTML'
+    TallStackUi::personalize()
+        ->toast()
+        ->block('block', 'classes');
+    HTML;
 }

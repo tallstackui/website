@@ -202,4 +202,16 @@ class Button
     <x-button.circle text="TS" color="black" outline />
     <x-button.circle text="TS" color="white" outline />
     HTML;
+
+    public const PERSONALIZATION = <<<'HTML'
+    TallStackUi::personalize()
+        ->button()
+        ->block('block', 'classes');
+    HTML;
+
+    public const PERSONALIZATION_CIRCLE = <<<'HTML'
+    TallStackUi::personalize()
+        ->button('circle')
+        ->block('block', 'classes');
+    HTML;
 }

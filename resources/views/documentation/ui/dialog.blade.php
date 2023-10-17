@@ -6,7 +6,7 @@
         Dialog component. A small version of Modal to interact with Livewire.
     </x-slot:description>
     <x-slot:personalization>
-        <livewire:documentation.personalization component="dialog" />
+        <livewire:documentation.personalization :$personalization component="dialog" />
     </x-slot:personalization>
     <x-section>
         1. Insert the Dialog component on your main layout.

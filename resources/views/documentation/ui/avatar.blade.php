@@ -6,7 +6,7 @@
         Avatar component.
     </x-slot:description>
     <x-slot:personalization>
-        <livewire:documentation.personalization component="avatar" />
+        <livewire:documentation.personalization :$personalization component="avatar" />
     </x-slot:personalization>
     <x-section>
         <x-preview title="Basic Usage"

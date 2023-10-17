@@ -5,7 +5,9 @@ use Livewire\Volt\Component;
 new class extends Component {
     public string $component;
 
-    public string $name = '';
+    public string $id = '';
+
+    public string $title = '';
 
     public bool $modal = false;
 
@@ -13,9 +15,19 @@ new class extends Component {
 
     public ?array $original = null;
 
+    public ?string $personalization = null;
+
     public function mount(): void
     {
-        $this->name = str($this->component)->replace('.', ' ')->title()->value();
+        $str = str($this->component);
+
+        $this->title = $str->replace('.', ' ')
+            ->title()
+            ->value();
+
+        $this->id = $str->replace('.', '')
+            ->trim()
+            ->value();
     }
 
     public function open(): void
@@ -24,8 +36,6 @@ new class extends Component {
 
         $components = config()->get('tallstackui.components');
         $this->blocks = app($components[$this->component], ['ignoreValidations' => true])->personalization();
-
-        $this->modal = !$this->modal;
     }
 
     public function content(string $block, string $class): void
@@ -36,13 +46,13 @@ new class extends Component {
 } ?>
 
 <div>
-    <x-modal wire>
+    <x-modal id="{{ $id }}">
         <x-warning class="mb-4">
             This content is part of <a href="{{ route('documentation.personalization.concept') }}" class="underline">TallStackUi personalization.</a>
         </x-warning>
         <x-slot:title>
-            <div class="flex justify-start items-center gap-2">
-                {{ $name }}, Personalization Blocks
+            <div class="flex items-center justify-start gap-2">
+                {{ $title }}, Personalization Blocks
                 <x-tooltip text="Click on the block to check the original class."
                            position="bottom"
                            color="pink"
@@ -50,9 +60,16 @@ new class extends Component {
                 />
             </div>
         </x-slot:title>
+        @if ($personalization)
+            <div wire:ignore>
+                <p class="text-base font-medium">Example:</p>
+                <x-code :contents="$personalization" unpadding />
+            </div>
+        @endif
         @if ($blocks)
             <div class="px-2 sm:px-0">
-                <div class="flex flex-col items-center justify-center">
+                <p class="text-base font-medium">Blocks:</p>
+                <div class="flex items-center justify-start gap-1">
                     <div>
                         @foreach ($blocks as $name => $class)
                             <x-button wire:click="$call('content', '{{ $name }}', '{{ $class }}')"
@@ -65,7 +82,7 @@ new class extends Component {
                 </div>
                 <div class="mt-2 space-y-2">
                     @if ($original)
-                        <p>Block Name:
+                        <p>Name:
                             <x-badge :text="$original['block']" color="pink" outline/>
                         </p>
                         <p>Original Content:</p>
@@ -77,8 +94,8 @@ new class extends Component {
             </div>
         @endif
     </x-modal>
-    <x-button.circle wire:click="open"
-                     icon="paint-brush"
-                     color="pink"
-                     sm />
+    <x-button x-on:click="$modalOpen('{{ $id }}'); $wire.call('open');"
+              text="Personalize: {{ $title }}"
+              color="pink"
+              xs />
 </div>

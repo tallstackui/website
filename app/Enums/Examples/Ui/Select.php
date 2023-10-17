@@ -118,4 +118,22 @@ class Select
         </x-slot:after>
     </x-select.searchable>
     HTML;
+
+    public const PERSONALIZATION_NATIVE = <<<'HTML'
+    TallStackUi::personalize()
+        ->select()
+        ->block('block', 'classes');
+    HTML;
+
+    public const PERSONALIZATION_STYLED = <<<'HTML'
+    TallStackUi::personalize()
+        ->select('styled')
+        ->block('block', 'classes');
+    HTML;
+
+    public const PERSONALIZATION_SEARCHABLE = <<<'HTML'
+    TallStackUi::personalize()
+        ->select('searchable')
+        ->block('block', 'classes');
+    HTML;
 }

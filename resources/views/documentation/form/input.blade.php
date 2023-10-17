@@ -6,7 +6,7 @@
         Form input component.
     </x-slot:description>
     <x-slot:personalization>
-        <livewire:documentation.personalization component="input" />
+        <livewire:documentation.personalization :$personalization component="input" />
     </x-slot:personalization>
     <x-section>
         <x-preview title="Basic Usage"

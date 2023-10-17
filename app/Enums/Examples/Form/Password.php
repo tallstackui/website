@@ -28,4 +28,10 @@ class Password
                 hint="Insert your best password"
                 wire:model="password" />
     HTML;
+
+    public const PERSONALIZATION = <<<'HTML'
+    TallStackUi::personalize()
+        ->form('password')
+        ->block('block', 'classes');
+    HTML;
 }

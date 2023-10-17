@@ -6,7 +6,7 @@
         Alert components.
     </x-slot:description>
     <x-slot:personalization>
-        <livewire:documentation.personalization component="alert" />
+        <livewire:documentation.personalization :$personalization component="alert" />
     </x-slot:personalization>
     <x-section>
         <x-preview title="Basic Usage"

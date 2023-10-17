@@ -6,7 +6,7 @@
         Form textarea component.
     </x-slot:description>
     <x-slot:personalization>
-        <livewire:documentation.personalization component="textarea" />
+        <livewire:documentation.personalization :$personalization component="textarea" />
     </x-slot:personalization>
     <x-section>
         <x-preview title="Basic Usage"

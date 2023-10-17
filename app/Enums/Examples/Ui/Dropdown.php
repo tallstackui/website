@@ -51,4 +51,16 @@ class Dropdown
         <x-dropdown.items icon="arrow-left-on-rectangle" text="Logout" separator />
     </x-dropdown>
     HTML;
+
+    public const PERSONALIZATION = <<<'HTML'
+    TallStackUi::personalize()
+        ->dropdown()
+        ->block('block', 'classes');
+    HTML;
+
+    public const PERSONALIZATION_ITEMS = <<<'HTML'
+    TallStackUi::personalize()
+        ->dropdown('items')
+        ->block('block', 'classes');
+    HTML;
 }

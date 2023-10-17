@@ -3,10 +3,10 @@
         Form Toggle
     </x-slot:title>
     <x-slot:description>
-        Form Toggle component.
+        Form toggle component.
     </x-slot:description>
     <x-slot:personalization>
-        <livewire:documentation.personalization component="toggle" />
+        <livewire:documentation.personalization :$personalization component="toggle" />
     </x-slot:personalization>
     <x-section>
         <x-preview title="Basic Usage"

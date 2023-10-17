@@ -3,10 +3,10 @@
         Form Input Password
     </x-slot:title>
     <x-slot:description>
-        Form input password component. Show or hide password value.
+        Form password component. Show or hide password value.
     </x-slot:description>
     <x-slot:personalization>
-        <livewire:documentation.personalization component="password" />
+        <livewire:documentation.personalization :$personalization component="password" />
     </x-slot:personalization>
     <x-section>
         <x-preview title="Basic Usage"

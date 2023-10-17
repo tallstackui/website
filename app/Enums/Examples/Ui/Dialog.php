@@ -76,4 +76,10 @@ class Dialog
     public const BLUR = <<<'HTML'
     <x-dialog blur />
     HTML;
+
+    public const PERSONALIZATION = <<<'HTML'
+    TallStackUi::personalize()
+        ->dialog()
+        ->block('block', 'classes');
+    HTML;
 }

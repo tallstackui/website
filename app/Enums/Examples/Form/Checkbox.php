@@ -52,4 +52,10 @@ class Checkbox
     <x-checkbox label="Receive Alert"
                 wire:model="alert" />
     HTML;
+
+    public const PERSONALIZATION = <<<'HTML'
+    TallStackUi::personalize()
+        ->form('checkbox')
+        ->block('block', 'classes');
+    HTML;
 }

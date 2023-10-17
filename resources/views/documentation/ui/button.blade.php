@@ -6,8 +6,8 @@
         Button components.
     </x-slot:description>
     <x-slot:personalization>
-        <livewire:documentation.personalization component="button" />
-        <livewire:documentation.personalization component="button.circle" />
+        <livewire:documentation.personalization :$personalization component="button" />
+        <livewire:documentation.personalization :personalization="$personalizationCircle" component="button.circle" />
     </x-slot:personalization>
     <x-section>
         <x-preview title="Basic Button"

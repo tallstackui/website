@@ -6,7 +6,7 @@
         Modal component.
     </x-slot:description>
     <x-slot:personalization>
-        <livewire:documentation.personalization component="modal" />
+        <livewire:documentation.personalization :$personalization component="modal" />
     </x-slot:personalization>
     <x-section>
         <x-preview title="Basic Usage"

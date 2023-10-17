@@ -104,4 +104,10 @@ class Alert
     <x-alert title="TallStackUi" text="Black" color="black" translucent />
     <x-alert title="TallStackUi" text="White" color="white" translucent />
     HTML;
+
+    public const PERSONALIZATION = <<<'HTML'
+    TallStackUi::personalize()
+        ->alert()
+        ->block('block', 'classes');
+    HTML;
 }

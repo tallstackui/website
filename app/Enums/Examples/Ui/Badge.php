@@ -84,4 +84,10 @@ class Badge
     <x-badge text="White" color="white" outline />
     <x-badge text="Black" color="black" outline />
     HTML;
+
+    public const PERSONALIZATION = <<<'HTML'
+    TallStackUi::personalize()
+        ->badge()
+        ->block('block', 'classes');
+    HTML;
 }
