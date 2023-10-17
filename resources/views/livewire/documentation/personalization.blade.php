@@ -28,6 +28,8 @@ new class extends Component {
         $this->id = $str->replace('.', '')
             ->trim()
             ->value();
+
+        $this->id .= '-'.uniqid();
     }
 
     public function open(): void
@@ -63,7 +65,7 @@ new class extends Component {
         @if ($personalization)
             <div wire:ignore>
                 <p class="text-base font-medium">Example:</p>
-                <x-code :contents="$personalization" unpadding />
+                <x-code :contents="$personalization" unpadding/>
             </div>
         @endif
         @if ($blocks)
@@ -97,5 +99,5 @@ new class extends Component {
     <x-button x-on:click="$modalOpen('{{ $id }}'); $wire.call('open');"
               text="Personalize: {{ $title }}"
               color="pink"
-              xs />
+              xs/>
 </div>

@@ -8,7 +8,7 @@
     <x-section title="Concept">
         <p class="text-justify">
             <u>Soft personalization consists of customizing components at run time</u>, through a service provider, such as <x-block>AppServiceProvider</x-block>.
-            The idea behind soft personalization is to tap into personalizeble blocks of each component. Let's take a look at an example:
+            The idea behind soft personalization is to tap into personalizable blocks of each component. Let's take a look at an example:
         </p>
         <x-code language="php" :contents="$example"/>
         <p class="mt-2 text-justify">
@@ -28,7 +28,7 @@
         <p class="mt-2 text-justify">
             All component classes are divided into class blocks applicable to their appropriate required locations in the
             Blade file associated with the component. TallStackUi was designed with soft personalization in mind: an easy way
-            to personalize components, so even if the developer is a beginner, he doesn't need to have difficulty customizing the components.
+            to personalize components, so even if the developer is a beginner, he doesn't need to have difficulty personalizing the components.
         </p>
     </x-section>
     <x-section title="Fluent Personalization">
@@ -49,22 +49,23 @@
     </x-section>
     <x-section title="Invokable Class">
         <p class="text-justify">
-            You may have noticed that in some example above we used the <x-block>InputPersonzaliation</x-block> class, right?
+            You may have noticed that in the example above we used the <x-block>InputPersonzaliation</x-block> class.
             This is a simple invokable class, because TallStackUi also allows you to make your personalization into classes.
             This approach is ideal if you are someone who prioritizes organization above all else. Let's take a look at an example:
         </p>
+        <p class="mt-4">1. Preparing:</p>
         <x-code language="php" :contents="$invokableExample"/>
-        <p class="mt-2">And then:</p>
+        <p class="mt-2">2. Personalizing:</p>
         <x-code language="php" :contents="$invokableClass"/>
     </x-section>
     <x-section title="Component Data Parameters">
         <p class="text-justify">
-            You may have noticed that in some examples above there is a variable called <x-block>$data</x-block>, right? This variable is an array
+            You may have noticed that the example above there is a variable called <x-block>$data</x-block>. This variable is an array
             containing all the component's properties, <u>including the values passed when you used the component somewhere in your application.</u>
         </p>
         <p class="mt-4">Using the <x-block>input</x-block> like this:</p>
         <x-code language="blade" :contents="$usingComponent"/>
-        <p class="mt-2">The <x-block>$data</x-block> will be:</p>
+        <p class="mt-2">The <x-block>$data</x-block> will be this array:</p>
         <x-code language="php" :contents="$data"/>
         <p class="text-justify">
             You can use this to interact with your personalization.
@@ -72,15 +73,16 @@
     </x-section>
     <x-section title="Component Blocks">
         <p class="text-justify">
-            All component documentation mentions their respective blocks in a pink circle button at the top of the page.
+            All component documentation mentions their respective blocks in a button at the top of the page.
         </p>
     </x-section>
+    <x-non-personalized-thigs />
     <x-section title="Tracing TailwindCSS Classes">
         <p class="text-justify">
-            If you are excited with soft personalization and want to use it to personalize your components, there is
-            something you should know. As classes are TailwindCSS classes you need to ensure that TailwindCSS watches
-            the files from which the classes you defined come, so personalizations will take effect. To do this, you
-            must edit your <x-block>tailwindcss.config.js</x-block> file inserting this content:
+            If you are personalizing your components, there is something you should know. As classes are TailwindCSS
+            classes you need to ensure that TailwindCSS watches the files from which the classes you defined come,
+            so personalizations will take effect. To do this, you must edit your <x-block>tailwindcss.config.js</x-block>
+            file inserting this content:
         </p>
         <x-code language="js" :contents="$tailwindcss"/>
     </x-section>

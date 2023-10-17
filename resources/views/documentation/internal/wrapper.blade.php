@@ -6,9 +6,9 @@
         The generic error component used in form components.
     </x-slot:description>
     <x-slot:personalization>
-        <livewire:documentation.personalization :personalization="$personalizationInput" component="wrapper.input" />
-        <livewire:documentation.personalization :personalization="$personalizationRadio" component="wrapper.radio" />
-        <livewire:documentation.personalization :personalization="$personalizationSelect" component="wrapper.select" />
+        <livewire:documentation.personalization :personalization="$personalization['input']" component="wrapper.input" />
+        <livewire:documentation.personalization :personalization="$personalization['radio']" component="wrapper.radio" />
+        <livewire:documentation.personalization :personalization="$personalization['select']" component="wrapper.select" />
     </x-slot:personalization>
     <x-card>
         <p class="text-justify">

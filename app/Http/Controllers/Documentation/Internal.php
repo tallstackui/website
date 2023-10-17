@@ -49,28 +49,26 @@ class Internal extends Controller
 
     public function wrapper(): View
     {
-        $personalizationInput = <<<'HTML'
+        $personalization['input'] = <<<'HTML'
         TallStackUi::personalize()
             ->wrapper('input')
             ->block('block', 'classes');
         HTML;
 
-        $personalizationRadio = <<<'HTML'
+        $personalization['radio'] = <<<'HTML'
         TallStackUi::personalize()
             ->wrapper('radio')
             ->block('block', 'classes');
         HTML;
 
-        $personalizationSelect = <<<'HTML'
+        $personalization['select'] = <<<'HTML'
         TallStackUi::personalize()
             ->wrapper('select')
             ->block('block', 'classes');
         HTML;
 
         return view('documentation.internal.wrapper', [
-            'personalizationInput' => $personalizationInput,
-            'personalizationRadio' => $personalizationRadio,
-            'personalizationSelect' => $personalizationSelect,
+            'personalization' => $personalization,
         ]);
     }
 }

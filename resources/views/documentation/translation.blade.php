@@ -13,6 +13,6 @@
         <x-code language="shell" :contents="$command"/>
     </x-section>
     <x-section title="Content">
-        <p class="text-justify">This command will publish the TallStackUi translation files for your application, inside the <x-block>lang</x-block> folder.</p>
+        <p class="text-justify">This command will publish the TallStackUi translation files for the root path of your application, inside the <x-block>lang</x-block> folder.</p>
     </x-section>
 </x-layout>

@@ -4,7 +4,7 @@ namespace App\Enums\Examples\Personalization;
 
 class ColorPersonalization
 {
-    public const FILE = <<<'HTML'
+    public const CONTENT = <<<'HTML'
     theme: {
         extend: {
             // ...
@@ -43,7 +43,7 @@ class ColorPersonalization
     },
     HTML;
 
-    public const REBUILD = <<<'HTML'
+    public const BUILD = <<<'HTML'
     npm run build
     HTML;
 
