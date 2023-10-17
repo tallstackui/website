@@ -48,20 +48,19 @@ class Avatar
     HTML;
 
     public const MODELABLE = <<<'HTML'
-    <x-avatar.modelable :model="auth()->user()" />
+    <x-avatar :model="auth()->user()" color="fff" />
     HTML;
 
     public const MODELABLE_CUSTOMIZED = <<<'HTML'
-    <x-avatar.modelable :model="auth()->user()" property="email" />
+    <x-avatar :model="auth()->user()" property="email" color="fff" />
     HTML;
 
     public const MODELABLE_CUSTOMIZED_COLORS = <<<'HTML'
     <!-- "background" and "color" must be hexadecimals -->
-
-    <x-avatar.modelable :model="auth()->user()"
-                        property="email"
-                        background="ff0000"
-                        color="f2f2f2" />
+    <x-avatar :model="auth()->user()"
+              property="email"
+              background="ff0000"
+              color="fff" />
     HTML;
 
     public const PLACEHOLDER = <<<'HTML'

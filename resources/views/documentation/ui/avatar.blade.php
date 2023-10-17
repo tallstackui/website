@@ -70,19 +70,19 @@
                    description="An option to generate a UI Avatar from a model based on name property."
                    language="blade"
                    :contents="$modelable">
-            <x-avatar.modelable :model="auth()->user()" />
+            <x-avatar :model="auth()->user()" color="fff" />
         </x-preview>
         <x-preview title="Modelable Custom Property"
                    description="An option to generate a UI Avatar from a model based on a property different than name."
                    language="blade"
                    :contents="$modelableCustomized">
-            <x-avatar.modelable :model="auth()->user()" property="email" />
+            <x-avatar :model="auth()->user()" property="email" color="fff" />
         </x-preview>
         <x-preview title="Customizing Colors"
                    description="An option to generate a UI Avatar from a model based customizing the colors."
                    language="blade"
                    :contents="$modelableCustomizedColors">
-            <x-avatar.modelable :model="auth()->user()" property="email" background="ff0000" color="f2f2f2" />
+            <x-avatar :model="auth()->user()" property="email" background="ff0000" color="fff" />
         </x-preview>
     </x-section>
     <x-section>

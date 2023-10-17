@@ -14,7 +14,7 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Components Settings
+    | Component Settings
     |--------------------------------------------------------------------------
     |
     | General components settings.
@@ -45,15 +45,14 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Components List
+    | Component List
     |--------------------------------------------------------------------------
     |
     | List of all TallStackUi components.
     */
     'components' => [
         'alert' => Components\Alert::class,
-        'avatar' => Components\Avatar\Avatar::class,
-        'avatar.modelable' => Components\Avatar\Modelable::class,
+        'avatar' => Components\Avatar::class,
         'badge' => Components\Badge::class,
         'button' => Components\Button\Button::class,
         'button.circle' => Components\Button\Circle::class,
