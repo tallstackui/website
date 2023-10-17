@@ -19,8 +19,8 @@
     </x-section>
     <x-section title="Component Example">
         <div class="inline-flex items-center gap-1">
-            <p class="text-justify">
-                This is an example of the <a class="underline" href="{{ route('documentation.ui.avatar') }}">Avatar</a> component classes
+            <p>
+                The <a class="underline" href="{{ route('documentation.ui.avatar') }}">Avatar</a> component classes
                 <x-outdated-contente-tooltip />
             </p>
         </div>
