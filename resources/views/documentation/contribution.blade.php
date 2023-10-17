@@ -51,7 +51,7 @@
     <x-section title="Dusk Tests">
         <p class="text-justify">
             Some of the TallStackUi tests are written using <a href="https://laravel.com/docs/10.x/dusk" class="underline" target="_blank">Laravel Dusk</a>
-            the <a href="https://github.com/orchestral/testbench-dusk" class="underline" target="_blank">Orchestral Testbench Dusk.</a>
+            through the <a href="https://github.com/orchestral/testbench-dusk" class="underline" target="_blank">Orchestral Testbench Dusk.</a>
             Although sometimes difficult, you can run the browser tests on your computer. To do this, it is essential
             to have Chrome installed. Use the commands below to prepare your environment.</p>
         <p class="mt-2">Installing the appropriate Chrome driver according to your Chrome version:</p>
