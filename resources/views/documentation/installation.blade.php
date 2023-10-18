@@ -1,6 +1,6 @@
 <x-layout torchlight>
     <x-slot:title>
-        Get Started
+        Installation
     </x-slot:title>
     <x-section title="Requirements">
         <p>TallStackUi was created with a <b class="font-semibold text-pink-500 underline">focus on Livewire 3</b> so the usage requirements are:</p>

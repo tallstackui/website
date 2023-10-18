@@ -25,7 +25,7 @@
             <button class="flex items-center gap-x-1 overflow-hidden rounded-md p-1 text-sm transition focus:outline-none sm:px-2"
                     :class="{
                     'text-pink-500 font-semibold': code,
-                    'text-gray-400': !code
+                    'text-gray-400 dark:text-slate-300': !code
                 }" type="button" x-on:click="code = !code" x-cloak>
                 <x-icon name="code-bracket" class="h-3 w-3" />
                 Code

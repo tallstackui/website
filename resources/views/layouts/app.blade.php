@@ -43,10 +43,10 @@
                                 <p class="text-sm font-medium text-pink-500 font-display">{{ $section }}</p>
                             @endif
                             @if ($title)
-                                <h1 class="text-3xl font-semibold tracking-tight text-pink-900 font-display dark:text-white">{{ $title }}</h1>
+                                <h1 class="text-3xl font-semibold tracking-tight text-pink-900 font-display dark:text-slate-300">{{ $title }}</h1>
                             @endif
                             @if ($description)
-                                <p class="text-sm text-slate-500">{{ $description }}</p>
+                                <p class="text-sm text-slate-500 dark:text-slate-400">{{ $description }}</p>
                             @endif
                             @if ($personalization)
                                 <div class="mt-2 inline-flex space-x-2">

@@ -20,7 +20,7 @@
     <x-section title="Component Example">
         <div class="inline-flex items-center gap-1">
             <p>
-                The <a class="underline" href="{{ route('documentation.ui.avatar') }}">Avatar</a> component classes
+                Example of the <a class="underline" href="{{ route('documentation.ui.avatar') }}">Avatar</a> component classes
                 <x-outdated-contente-tooltip />
             </p>
         </div>
