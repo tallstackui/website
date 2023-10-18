@@ -15,7 +15,7 @@
              x-transition:leave="transition ease-in-out duration-300 transform"
              x-transition:leave-start="translate-x-0"
              x-transition:leave-end="-translate-x-full"
-             class="relative flex w-full max-w-xs flex-1 flex-col bg-white pt-5 pb-4" x-on:click.outside="mobile = false">
+             class="relative flex w-full max-w-xs flex-1 flex-col bg-white pt-5 pb-4 dark:bg-slate-800" x-on:click.outside="mobile = false">
             <div x-show="mobile"
                  x-transition:enter="ease-in-out duration-300"
                  x-transition:enter-start="opacity-0"

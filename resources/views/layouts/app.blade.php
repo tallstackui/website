@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}"
       class="h-full antialiased"
-      x-data="{ mobile : false }">
+      x-data="tallstackui_darkTheme()"
+      x-bind:class="{ 'dark bg-gray-700': darkTheme, 'bg-white': !darkTheme }">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -25,7 +26,7 @@
     @livewireStyles
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
-<body class="min-h-full flex-col justify-center bg-gray-100 dark:bg-slate-900" x-cloak>
+<body class="min-h-full flex-col justify-center bg-gray-100 dark:bg-slate-900" x-data="{ mobile : false }" x-cloak>
     <x-dialog />
     <x-toast />
     <x-layout.header />
@@ -57,7 +58,7 @@
                     {{ $slot }}
                 </article>
                 @if ($torchlight)
-                    <p class="text-sm text-gray-600">Code highlighting provided by <a href="https://torchlight.dev" class="font-semibold underline text-pink-700" target="_blank">Torchlight</a></p>
+                    <p class="text-sm text-gray-600 dark:text-slate-400">Code highlighting provided by <a href="https://torchlight.dev" class="font-semibold text-pink-700 underline" target="_blank">Torchlight</a></p>
                 @endif
             </div>
         </div>

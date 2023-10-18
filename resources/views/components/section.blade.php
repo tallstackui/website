@@ -1,6 +1,6 @@
 @props(['title' => null, 'description' => null, 'id' => null])
 
-<section {{ $attributes->merge(['class' => 'text-gray-600 mb-4']) }} @if ($id) id="{{ $id }}" @endif>
+<section {{ $attributes->merge(['class' => 'text-gray-600 mb-4 dark:text-slate-400']) }} @if ($id) id="{{ $id }}" @endif>
     @if ($title)
         <h1 @class(['text-2xl tracking-tight text-pink-600 font-medium dark:text-white', 'mb-4' => !$description])>
             {{ $title }}
