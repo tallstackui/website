@@ -16,6 +16,13 @@
         </x-preview>
     </x-section>
     <x-section>
+        <x-preview title="Label & Hint"
+                   language="blade"
+                   :contents="$labelHint">
+            <x-textarea label="Name" hint="Insert your name" />
+        </x-preview>
+    </x-section>
+    <x-section>
         <x-preview title="Resize"
                    language="blade"
                    :contents="$resize">
@@ -38,13 +45,6 @@
         </x-preview>
     </x-section>
     <x-section>
-        <x-preview title="Label & Hint"
-                   language="blade"
-                   :contents="$labelHint">
-            <x-textarea label="Name" hint="Insert your name" />
-        </x-preview>
-    </x-section>
-    <x-section>
         <x-preview title="Disabled & Readonly"
                    language="blade"
                    :contents="$effects">
@@ -62,5 +62,4 @@
             <livewire:documentation.form.textarea />
         </x-preview>
     </x-section>
-    <x-available-configuration />
 </x-layout>

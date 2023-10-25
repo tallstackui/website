@@ -128,6 +128,13 @@ class Button
     <x-button.circle icon="pencil" />
     HTML;
 
+    public const CIRCLE_SIZES = <<<'HTML'
+    <x-button.circle text="SM" sm/>
+    <x-button.circle text="MD" />
+    <x-button.circle text="LG" lg/>
+    HTML;
+
+
     public const CIRCLE_LOADINGS = <<<'HTML'
     <x-button.circle wire:click="basic" icon="pencil" loading />
 

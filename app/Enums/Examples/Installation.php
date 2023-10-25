@@ -43,7 +43,6 @@ class Installation
     content: [
         // ...
 
-        './vendor/tallstackui/tallstackui/resources/views/**/*.blade.php',
         './vendor/tallstackui/tallstackui/src/**/*.php',
     ],
     HTML;

@@ -178,4 +178,5 @@
     <x-section title="AlpineJS Helper" description="Helpers to open and close the modal using AlpineJS.">
         <x-code language="blade" :contents="$alpinejs"/>
     </x-section>
+    <x-available-configuration />
 </x-layout>

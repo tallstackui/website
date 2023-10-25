@@ -50,5 +50,4 @@
             <livewire:documentation.form.input />
         </x-preview>
     </x-section>
-    <x-available-configuration />
 </x-layout>

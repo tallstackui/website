@@ -20,26 +20,22 @@ return [
     | General components settings.
     */
     'personalizations' => [
-        'input' => [
-            /* Input, Textarea & Password */
-            'square' => false,
-            /* Input & Password */
-            'round' => false,
-        ],
-        'tab' => [
-            'square' => false,
-        ],
         'dialog' => [
             'z-index' => 'z-50',
             'blur' => false,
             'uncloseable' => false,
-            'square' => false,
+        ],
+        'modal' => [
+            'z-index' => 'z-50',
+            'blur' => false,
+            'uncloseable' => false,
+            /* Alloweds: sm, md, lg, xl, 2xl, 3xl, 4xl, 5xl, 6xl, 7xl */
+            'size' => '2xl',
         ],
         'toast' => [
             'z-index' => 'z-50',
-            /* Alloweds: "top-right", "top-left", "bottom-right", "bottom-left" */
+            /* Alloweds: top-right, top-left, bottom-right, bottom-left */
             'position' => 'top-right',
-            'square' => false,
         ],
     ],
 
@@ -70,8 +66,7 @@ return [
         'modal' => Components\Modal::class,
         'password' => Components\Form\Password::class,
         'radio' => Components\Form\Radio::class,
-        'select' => Components\Select\Select::class,
-        'select.searchable' => Components\Select\Searchable::class,
+        'select.native' => Components\Select\Native::class,
         'select.styled' => Components\Select\Styled::class,
         'tab' => Components\Tab\Tab::class,
         'tab.items' => Components\Tab\Items::class,
@@ -81,6 +76,5 @@ return [
         'tooltip' => Components\Tooltip::class,
         'wrapper.input' => Components\Wrapper\Input::class,
         'wrapper.radio' => Components\Wrapper\Radio::class,
-        'wrapper.select' => Components\Wrapper\Select::class,
     ],
 ];

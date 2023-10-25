@@ -40,5 +40,4 @@
             <livewire:documentation.form.password />
         </x-preview>
     </x-section>
-    <x-available-configuration />
 </x-layout>

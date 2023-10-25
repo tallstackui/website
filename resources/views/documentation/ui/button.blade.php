@@ -177,6 +177,16 @@
         </x-preview>
     </x-section>
     <x-section>
+        <x-preview title="Size Variations"
+                   description="An option to use any Heroicon."
+                   language="blade"
+                   :contents="$circleSizes">
+            <x-button.circle text="SM" sm/>
+            <x-button.circle text="MD" />
+            <x-button.circle text="LG" lg/>
+        </x-preview>
+    </x-section>
+    <x-section>
         <x-preview title="Loading Effect"
                    language="blade"
                    :contents="$circleLoadings">

@@ -34,7 +34,7 @@
         @endif
     </div>
     <div>
-        <div x-show="!code" @class(['rounded-lg p-6', 'bg-white dark:bg-slate-600' => $background])>
+        <div x-show="!code" @class(['rounded-lg p-6', 'bg-white dark:bg-slate-800' => $background])>
             {{ $slot }}
         </div>
         @if ($contents)
