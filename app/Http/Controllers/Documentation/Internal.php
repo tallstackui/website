@@ -61,12 +61,6 @@ class Internal extends Controller
             ->block('block', 'classes');
         HTML;
 
-        $personalization['select'] = <<<'HTML'
-        TallStackUi::personalize()
-            ->wrapper('select')
-            ->block('block', 'classes');
-        HTML;
-
         return view('documentation.internal.wrapper', [
             'personalization' => $personalization,
         ]);

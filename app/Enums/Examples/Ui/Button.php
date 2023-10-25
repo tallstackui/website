@@ -134,7 +134,6 @@ class Button
     <x-button.circle text="LG" lg/>
     HTML;
 
-
     public const CIRCLE_LOADINGS = <<<'HTML'
     <x-button.circle wire:click="basic" icon="pencil" loading />
 

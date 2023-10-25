@@ -6,30 +6,29 @@
         Varieties of select components.
     </x-slot:description>
     <x-slot:personalization>
-        <livewire:documentation.personalization :personalization="$personalizationNative" component="select" />
+        <livewire:documentation.personalization :personalization="$personalizationNative" component="select.native" />
         <livewire:documentation.personalization :personalization="$personalizationStyled" component="select.styled" />
-        <livewire:documentation.personalization :personalization="$personalizationSearchable" component="select.searchable" />
     </x-slot:personalization>
     <x-section>
         <x-preview title="Native HTML Select"
                    language="blade"
-                   :contents="$basic">
-            <x-select :options="[1,2,3]"/>
+                   :contents="$nativeBasic">
+            <x-select.native :options="[1,2,3]"/>
         </x-preview>
     </x-section>
     <x-section>
         <x-preview title="Label & Hint"
                    language="blade"
-                   :contents="$basicLabelHint">
-            <x-select label="Select One Option" hint="You can choose 1, 2 or 3" :options="[1,2,3]"/>
+                   :contents="$nativeLabelHint">
+            <x-select.native label="Select One Option" hint="You can choose 1, 2 or 3" :options="[1,2,3]"/>
         </x-preview>
     </x-section>
     <x-section>
         <x-preview title="Multi-dimensional Array"
                    description="An option to use multi-dimensional array."
                    language="blade"
-                   :contents="$basicAdvanced">
-            <x-select :options="[
+                   :contents="$nativeAdvanced">
+            <x-select.native :options="[
                 ['label' => 'TALL', 'value' => 1],
                 ['label' => 'LIVT', 'value' => 2],
             ]" select="label:label|value:value"/>
@@ -40,7 +39,7 @@
         <x-preview title="Livewire Styled Select"
                    description="Customized select component to interact with Livewire."
                    language="blade"
-                   :contents="$styled">
+                   :contents="$styledBasic">
             <livewire:documentation.ui.select.styled/>
         </x-preview>
     </x-section>
@@ -62,7 +61,7 @@
         <x-preview title="Multi-dimensional Array"
                    description="An option to use multi-dimensional array."
                    language="blade"
-                   :contents="$styledAdvanced">
+                   :contents="$styledMultidimensional">
             <livewire:documentation.ui.select.styled :model="4"/>
         </x-preview>
     </x-section>

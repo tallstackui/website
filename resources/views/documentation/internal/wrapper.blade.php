@@ -8,7 +8,6 @@
     <x-slot:personalization>
         <livewire:documentation.personalization :personalization="$personalization['input']" component="wrapper.input" />
         <livewire:documentation.personalization :personalization="$personalization['radio']" component="wrapper.radio" />
-        <livewire:documentation.personalization :personalization="$personalization['select']" component="wrapper.select" />
     </x-slot:personalization>
     <x-card>
         <p class="text-justify">

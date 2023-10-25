@@ -4,24 +4,28 @@ namespace App\Enums\Examples\Ui;
 
 class Select
 {
-    public const BASIC = <<<'HTML'
-    <x-select :options="[1,2,3]" />
+    /* Native */
+
+    public const NATIVE_BASIC = <<<'HTML'
+    <x-select.native :options="[1,2,3]" />
     HTML;
 
-    public const BASIC_LABEL_HINT = <<<'HTML'
-    <x-select label="Select One Option"
-              hint="You can choose 1, 2 or 3"
-              :options="[1,2,3]" />
+    public const NATIVE_LABEL_HINT = <<<'HTML'
+    <x-select.native label="Select One Option"
+                     hint="You can choose 1, 2 or 3"
+                     :options="[1,2,3]" />
     HTML;
 
-    public const BASIC_ADVANCED = <<<'HTML'
-    <x-select :options="[
+    public const NATIVE_ADVANCED = <<<'HTML'
+    <x-select.native :options="[
         ['label' => 'TALL', 'value' => 1],
         ['label' => 'LIVT', 'value' => 2],
     ]" select="label:label|value:value" />
     HTML;
 
-    public const STYLED = <<<'HTML'
+    /* Styled Common */
+
+    public const STYLED_BASIC = <<<'HTML'
     <x-select.styled wire:model="value" :options="[1,2,3]" />
     HTML;
 
@@ -32,7 +36,7 @@ class Select
                      :options="[1,2,3]" />
     HTML;
 
-    public const STYLED_ADVANCED = <<<'HTML'
+    public const STYLED_MULTIDIMENSIONAL = <<<'HTML'
     <x-select.styled wire:model="value" :options="[
         ['label' => 'TALL', 'value' => 1],
         ['label' => 'LIVT', 'value' => 2],
@@ -68,6 +72,8 @@ class Select
     </x-select.styled>
     HTML;
 
+    /* Styled Searchable */
+
     public const SEARCHABLE = <<<'HTML'
     <x-select.searchable request="https://jsonplaceholder.typicode.com/users"
                          select="label:name|value:id"
@@ -75,40 +81,40 @@ class Select
     HTML;
 
     public const SEARCHABLE_LABEL_HINT = <<<'HTML'
-    <x-select.searchable request="https://jsonplaceholder.typicode.com/users"
-                         select="label:name|value:id"
-                         label="Select One User"
-                         hint="You can choose whoever you want"
-                         wire:model="value" />
+    <x-select.styled request="https://jsonplaceholder.typicode.com/users"
+                     select="label:name|value:id"
+                     label="Select One User"
+                     hint="You can choose whoever you want"
+                     wire:model="value" />
     HTML;
 
     public const SEARCHABLE_MULTIPLE = <<<'HTML'
     <!-- The Livewire property to bind must be an array -->
 
-    <x-select.searchable request="https://jsonplaceholder.typicode.com/users"
-                         select="label:name|value:id"
-                         wire:model="options"
-                         multiple />
+    <x-select.styled request="https://jsonplaceholder.typicode.com/users"
+                     select="label:name|value:id"
+                     wire:model="options"
+                     multiple />
     HTML;
 
     public const SEARCHABLE_ADVANCED = <<<'HTML'
     <!-- Method can be 'get' or 'post' -->
 
-    <x-select.searchable :request="[
-                            'url' => 'https://jsonplaceholder.typicode.com/users',
-                            'method' => 'get',
-                            'params' => ['library' => 'TallStackUi'],
-                         ]"
-                         select="label:name|value:id"
-                         wire:model="value" />
+    <x-select.styled :request="[
+                        'url' => 'https://jsonplaceholder.typicode.com/users',
+                        'method' => 'get',
+                        'params' => ['library' => 'TallStackUi'],
+                     ]"
+                     select="label:name|value:id"
+                     wire:model="value" />
     HTML;
 
     public const SEARCHABLE_SLOT = <<<'HTML'
-    <x-select.searchable request="https://jsonplaceholder.typicode.com/users"
-                         select="label:name|value:id"
-                         label="Select One User"
-                         hint="Enter any random value to see the slot"
-                         wire:model="value">
+    <x-select.styled request="https://jsonplaceholder.typicode.com/users"
+                     select="label:name|value:id"
+                     label="Select One User"
+                     hint="Enter any random value to see the slot"
+                     wire:model="value">
         <x-slot:after>
             <div class="px-2 mb-2 flex justify-center items-center">
                 <x-button x-on:click="show = false; $dispatch('confirmed', { term: search })">
@@ -116,7 +122,7 @@ class Select
                 </x-button>
             </div>
         </x-slot:after>
-    </x-select.searchable>
+    </x-select.styled>
     HTML;
 
     public const PERSONALIZATION_NATIVE = <<<'HTML'

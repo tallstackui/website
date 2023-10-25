@@ -19,26 +19,22 @@ class Configuration
     | General components settings.
     */
     'personalizations' => [
-        'input' => [
-            /* Input, Textarea & Password */
-            'square' => false,
-            /* Input & Password */
-            'round' => false,
-        ],
-        'tab' => [
-            'square' => false,
-        ],
         'dialog' => [
             'z-index' => 'z-50',
             'blur' => false,
             'uncloseable' => false,
-            'square' => false,
+        ],
+        'modal' => [
+            'z-index' => 'z-50',
+            'blur' => false,
+            'uncloseable' => false,
+            /* Alloweds: sm, md, lg, xl, 2xl, 3xl, 4xl, 5xl, 6xl, 7xl */
+            'size' => '2xl',
         ],
         'toast' => [
             'z-index' => 'z-50',
-            /* Alloweds: "top-right", "top-left", "bottom-right", "bottom-left" */
+            /* Alloweds: top-right, top-left, bottom-right, bottom-left */
             'position' => 'top-right',
-            'square' => false,
         ],
     ],
 
