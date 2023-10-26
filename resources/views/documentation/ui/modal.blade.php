@@ -66,7 +66,7 @@
         <x-preview title="Size Variations"
                    language="blade"
                    :contents="$sizes">
-            <div class="flex flex-col space-y-2 md:space-x-2 md:space-y-0 md:flex-row">
+            <div class="flex flex-col space-y-2 lg:space-x-2 lg:space-y-0 lg:flex-row">
                 <x-modal id="default-size-modal" title="TallStackUi">
                     Default (2xl)
                 </x-modal>
@@ -129,6 +129,9 @@
                 </x-button>
             </div>
         </x-preview>
+        <div class="mt-2 block sm:hidden">
+            <x-warning text="Applicable only on desktop devices." />
+        </div>
     </x-section>
     <x-section>
         <x-preview title="Z Index"

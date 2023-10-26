@@ -65,23 +65,30 @@
             <x-avatar text="TS" square />
         </x-preview>
     </x-section>
+    <x-separator />
     <x-section class="space-y-4">
         <x-preview title="Modelable"
-                   description="An option to generate a UI Avatar from a model based on name property."
                    language="blade"
                    :contents="$modelable">
+            <x-slot:description>
+                An option to generate a <a href="https://ui-avatars.com/" class="underline" target="_blank">UI Avatar</a> from a model based on name property.
+            </x-slot:description>
             <x-avatar :model="auth()->user()" color="fff" />
         </x-preview>
         <x-preview title="Modelable Custom Property"
-                   description="An option to generate a UI Avatar from a model based on a property different than name."
                    language="blade"
                    :contents="$modelableCustomized">
+            <x-slot:description>
+                An option to generate a <a href="https://ui-avatars.com/" class="underline" target="_blank">UI Avatar</a> from a model based on a property different than name.
+            </x-slot:description>
             <x-avatar :model="auth()->user()" property="email" color="fff" />
         </x-preview>
         <x-preview title="Customizing Colors"
-                   description="An option to generate a UI Avatar from a model based customizing the colors."
                    language="blade"
                    :contents="$modelableCustomizedColors">
+            <x-slot:description>
+                An option to generate a <a href="https://ui-avatars.com/" class="underline" target="_blank">UI Avatar</a> from a model based customizing the colors.
+            </x-slot:description>
             <x-avatar :model="auth()->user()" property="email" background="ff0000" color="fff" />
         </x-preview>
     </x-section>

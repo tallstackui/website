@@ -57,6 +57,7 @@ class Avatar
 
     public const MODELABLE_CUSTOMIZED_COLORS = <<<'HTML'
     <!-- "background" and "color" must be hexadecimals -->
+
     <x-avatar :model="auth()->user()"
               property="email"
               background="ff0000"
