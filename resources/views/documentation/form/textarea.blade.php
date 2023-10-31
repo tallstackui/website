@@ -34,7 +34,7 @@
                    description="Start to type in the textarea to see the auto-resize in action."
                    language="blade"
                    :contents="$autoResize">
-            <x-textarea :rows="1" auto-resize />
+            <x-textarea :rows="1" resize-auto />
         </x-preview>
     </x-section>
     <x-section>

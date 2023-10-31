@@ -14,7 +14,7 @@ class Installation
             {{-- Also insert this code [tl! highlight:1] --}}
             <style> [x-cloak] { display: none; } </style>
 
-            <tallstackui:setup /> {{-- [tl! highlight] --}}
+            <tallstackui:script /> {{-- [tl! highlight] --}}
             @vite(['resources/css/app.css', 'resources/js/app.js'])
         </head>
     </html>
@@ -23,9 +23,6 @@ class Installation
     public const MANUAL = <<<'HTML'
     <html>
         <head>
-            {{-- Also insert this code [tl! highlight:1] --}}
-            <style> [x-cloak] { display: none; } </style>
-
             @tallStackUiScripts {{-- [tl! highlight:1] --}}
             @tallStackUiStyles
             @vite(['resources/css/app.css', 'resources/js/app.js'])
