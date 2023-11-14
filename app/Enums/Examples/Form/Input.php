@@ -17,19 +17,6 @@ class Input
     <x-input label="Name" icon="cog" position="right" />
     HTML;
 
-    public const EFFECTS = <<<'HTML'
-    <x-input label="Name" value="TallStackUi" disabled />
-    <x-input label="Name" value="TallStackUi" readonly />
-    HTML;
-
-    public const LIVEWIRE = <<<'HTML'
-    <x-input label="User"
-             hint="Insert your username"
-             icon="users"
-             position="right"
-             wire:model="username" />
-    HTML;
-
     public const PERSONALIZATION = <<<'HTML'
     TallStackUi::personalize()
         ->form('input')

@@ -48,11 +48,6 @@ class Toggle
     <x-toggle color="white" label="White" />
     HTML;
 
-    public const LIVEWIRE = <<<'HTML'
-    <x-toggle label="Receive Alert"
-              wire:model="alert" />
-    HTML;
-
     public const PERSONALIZATION = <<<'HTML'
     TallStackUi::personalize()
         ->form('toggle')

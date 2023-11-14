@@ -41,12 +41,6 @@ class Alert
     </x-alert>
     HTML;
 
-    public const PULSE = <<<'HTML'
-    <x-alert icon="cog" pulse>
-        TallStackUi
-    </x-alert>
-    HTML;
-
     public const COLORS = <<<'HTML'
     <x-alert title="TallStackUi" text="Primary" />
     <x-alert title="TallStackUi" text="Secondary" color="secondary" />
@@ -76,33 +70,33 @@ class Alert
     <x-alert title="TallStackUi" text="White" color="white" />
     HTML;
 
-    public const TRANSLUCENTS = <<<'HTML'
-    <x-alert title="TallStackUi" text="Primary" translucent />
-    <x-alert title="TallStackUi" text="Secondary" color="secondary" translucent />
-    <x-alert title="TallStackUi" text="Slate" color="slate" translucent />
-    <x-alert title="TallStackUi" text="Gray" color="gray" translucent />
-    <x-alert title="TallStackUi" text="Zinc" color="zinc" translucent />
-    <x-alert title="TallStackUi" text="Neutral" color="neutral" translucent />
-    <x-alert title="TallStackUi" text="Stone" color="stone" translucent />
-    <x-alert title="TallStackUi" text="Red" color="red" translucent />
-    <x-alert title="TallStackUi" text="Orange" color="orange" translucent />
-    <x-alert title="TallStackUi" text="Amber" color="amber" translucent />
-    <x-alert title="TallStackUi" text="Yellow" color="yellow" translucent />
-    <x-alert title="TallStackUi" text="Lime" color="lime" translucent />
-    <x-alert title="TallStackUi" text="Green" color="green" translucent />
-    <x-alert title="TallStackUi" text="Emerald" color="emerald" translucent />
-    <x-alert title="TallStackUi" text="Teal" color="teal" translucent />
-    <x-alert title="TallStackUi" text="Cyan" color="cyan" translucent />
-    <x-alert title="TallStackUi" text="Sky" color="sky" translucent />
-    <x-alert title="TallStackUi" text="Blue" color="blue" translucent />
-    <x-alert title="TallStackUi" text="Indigo" color="indigo" translucent />
-    <x-alert title="TallStackUi" text="Violet" color="violet" translucent />
-    <x-alert title="TallStackUi" text="Purple" color="purple" translucent />
-    <x-alert title="TallStackUi" text="Fuchsia" color="fuchsia" translucent />
-    <x-alert title="TallStackUi" text="Pink" color="pink" translucent />
-    <x-alert title="TallStackUi" text="Rose" color="rose" translucent />
-    <x-alert title="TallStackUi" text="Black" color="black" translucent />
-    <x-alert title="TallStackUi" text="White" color="white" translucent />
+    public const LIGHTS = <<<'HTML'
+    <x-alert title="TallStackUi" text="Primary" light />
+    <x-alert title="TallStackUi" text="Secondary" color="secondary" light />
+    <x-alert title="TallStackUi" text="Slate" color="slate" light />
+    <x-alert title="TallStackUi" text="Gray" color="gray" light />
+    <x-alert title="TallStackUi" text="Zinc" color="zinc" light />
+    <x-alert title="TallStackUi" text="Neutral" color="neutral" light />
+    <x-alert title="TallStackUi" text="Stone" color="stone" light />
+    <x-alert title="TallStackUi" text="Red" color="red" light />
+    <x-alert title="TallStackUi" text="Orange" color="orange" light />
+    <x-alert title="TallStackUi" text="Amber" color="amber" light />
+    <x-alert title="TallStackUi" text="Yellow" color="yellow" light />
+    <x-alert title="TallStackUi" text="Lime" color="lime" light />
+    <x-alert title="TallStackUi" text="Green" color="green" light />
+    <x-alert title="TallStackUi" text="Emerald" color="emerald" light />
+    <x-alert title="TallStackUi" text="Teal" color="teal" light />
+    <x-alert title="TallStackUi" text="Cyan" color="cyan" light />
+    <x-alert title="TallStackUi" text="Sky" color="sky" light />
+    <x-alert title="TallStackUi" text="Blue" color="blue" light />
+    <x-alert title="TallStackUi" text="Indigo" color="indigo" light />
+    <x-alert title="TallStackUi" text="Violet" color="violet" light />
+    <x-alert title="TallStackUi" text="Purple" color="purple" light />
+    <x-alert title="TallStackUi" text="Fuchsia" color="fuchsia" light />
+    <x-alert title="TallStackUi" text="Pink" color="pink" light />
+    <x-alert title="TallStackUi" text="Rose" color="rose" light />
+    <x-alert title="TallStackUi" text="Black" color="black" light />
+    <x-alert title="TallStackUi" text="White" color="white" light />
     HTML;
 
     public const PERSONALIZATION = <<<'HTML'

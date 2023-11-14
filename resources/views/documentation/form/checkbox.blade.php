@@ -70,12 +70,4 @@
             </div>
         </x-preview>
     </x-section>
-    <x-section>
-        <x-preview title="Livewire Validation Error"
-                   description="Press the save button to see the validation error."
-                   language="blade"
-                   :contents="$livewire">
-            <livewire:documentation.form.checkbox />
-        </x-preview>
-    </x-section>
 </x-layout>

@@ -22,22 +22,4 @@
             <x-password label="Password" hint="Insert your best password" value="TallStackUi" />
         </x-preview>
     </x-section>
-    <x-section>
-        <x-preview title="Disabled & Readonly"
-                   language="blade"
-                   :contents="$effects">
-            <div class="space-y-2">
-                <x-password label="Password" hint="Insert your best password" value="TallStackUi" disabled />
-                <x-password label="Password" hint="Insert your best password" value="TallStackUi" readonly />
-            </div>
-        </x-preview>
-    </x-section>
-    <x-section>
-        <x-preview title="Livewire Validation Error"
-                   description="Press the save button to see the validation error."
-                   language="blade"
-                   :contents="$livewire">
-            <livewire:documentation.form.password />
-        </x-preview>
-    </x-section>
 </x-layout>

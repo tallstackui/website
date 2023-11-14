@@ -37,29 +37,4 @@
             <x-textarea :rows="1" resize-auto />
         </x-preview>
     </x-section>
-    <x-section>
-        <x-preview title="Row Control"
-                   language="blade"
-                   :contents="$rows">
-            <x-textarea :rows="3" />
-        </x-preview>
-    </x-section>
-    <x-section>
-        <x-preview title="Disabled & Readonly"
-                   language="blade"
-                   :contents="$effects">
-            <div class="space-y-2">
-                <x-textarea label="Name" disabled>TallStackUi</x-textarea>
-                <x-textarea label="Name" value="TallStackUi" readonly>TallStackUi</x-textarea>
-            </div>
-        </x-preview>
-    </x-section>
-    <x-section>
-        <x-preview title="Livewire Validation Error"
-                   description="Press the save button to see the validation error."
-                   language="blade"
-                   :contents="$livewire">
-            <livewire:documentation.form.textarea />
-        </x-preview>
-    </x-section>
 </x-layout>

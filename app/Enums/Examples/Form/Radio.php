@@ -48,11 +48,6 @@ class Radio
     <x-radio color="white" label="White" />
     HTML;
 
-    public const LIVEWIRE = <<<'HTML'
-    <x-radio label="Receive Alert"
-             wire:model="alert" />
-    HTML;
-
     public const PERSONALIZATION = <<<'HTML'
     TallStackUi::personalize()
         ->form('radio')

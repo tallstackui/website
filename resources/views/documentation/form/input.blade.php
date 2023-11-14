@@ -32,22 +32,4 @@
             </div>
         </x-preview>
     </x-section>
-    <x-section>
-        <x-preview title="Disabled & Readonly"
-                   language="blade"
-                   :contents="$effects">
-            <div class="space-y-2">
-                <x-input label="Name" value="TallStackUi" disabled />
-                <x-input label="Name" value="TallStackUi" readonly />
-            </div>
-        </x-preview>
-    </x-section>
-    <x-section>
-        <x-preview title="Livewire Validation Error"
-                   description="Press the save button to see the validation error."
-                   language="blade"
-                   :contents="$livewire">
-            <livewire:documentation.form.input />
-        </x-preview>
-    </x-section>
 </x-layout>
