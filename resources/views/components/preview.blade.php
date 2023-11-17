@@ -22,7 +22,6 @@
         </div>
         @if ($contents)
         <div class="flex rounded-md bg-white dark:bg-slate-600">
-            <x-copy-to-clipboard :contents="$contents" />
             <button class="flex items-center gap-x-1 overflow-hidden rounded-md p-1 text-sm transition focus:outline-none sm:px-2"
                     :class="{
                     'text-pink-500 font-semibold': code,
@@ -39,6 +38,9 @@
             {{ $slot }}
         </div>
         @if ($contents)
+            <div class="flex justify-end mb-2" x-show="code">
+                <x-copy-to-clipboard :contents="$contents" />
+            </div>
             <div class="overflow-auto custom-scrollbar rounded-lg bg-[#292D3E]" x-cloak x-show="code">
                 <x-code :language="$language" :$contents />
             </div>
