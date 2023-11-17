@@ -30,10 +30,10 @@
         </x-preview>
     </x-section>
     <x-section>
-        <x-preview title="Auto-resize"
-                   description="Start to type in the textarea to see the auto-resize in action."
+        <x-preview title="Resize-auto"
+                   description="Start to type in the textarea to see the resize-auto in action."
                    language="blade"
-                   :contents="$autoResize">
+                   :contents="$resizeAuto">
             <x-textarea :rows="1" resize-auto />
         </x-preview>
     </x-section>
