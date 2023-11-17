@@ -33,7 +33,7 @@
         <x-preview title="Auto-resize"
                    description="Start to type in the textarea to see the auto-resize in action."
                    language="blade"
-                   :contents="$autoResize">
+                   :contents="$resizeAuto">
             <x-textarea :rows="1" resize-auto />
         </x-preview>
     </x-section>

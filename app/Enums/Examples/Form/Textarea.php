@@ -12,8 +12,8 @@ class Textarea
     <x-textarea resize />
     HTML;
 
-    public const AUTO_RESIZE = <<<'HTML'
-    <x-textarea auto-resize />
+    public const RESIZE_AUTO = <<<'HTML'
+    <x-textarea resize-auto />
     HTML;
 
     public const LABEL_HINT = <<<'HTML'
