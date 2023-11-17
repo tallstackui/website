@@ -5,7 +5,7 @@
     notification: false,
     copy() {
         try {
-            navigator.clipboard.writeText(this.copyText);
+            navigator.clipboard.writeText(this.text);
             this.notification = true;
         } catch (err) { alert('Failed to copy to clipboard.'); }
 
