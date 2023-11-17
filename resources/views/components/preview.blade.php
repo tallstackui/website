@@ -38,9 +38,6 @@
             {{ $slot }}
         </div>
         @if ($contents)
-            <div class="flex justify-end mb-2" x-show="code">
-                <x-copy-to-clipboard :contents="$contents" />
-            </div>
             <div class="overflow-auto custom-scrollbar rounded-lg bg-[#292D3E]" x-cloak x-show="code">
                 <x-code :language="$language" :$contents />
             </div>
