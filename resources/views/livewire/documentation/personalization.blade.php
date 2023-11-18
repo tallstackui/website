@@ -65,7 +65,7 @@ new class extends Component {
         @if ($personalization)
             <div wire:ignore>
                 <p class="text-base font-medium">Example:</p>
-                <x-code :contents="$personalization" unpadding/>
+                <x-code :contents="$personalization" personalization unpadding/>
             </div>
         @endif
         @if ($blocks)
