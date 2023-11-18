@@ -31,13 +31,6 @@
         </x-preview>
     </x-section>
     <x-section>
-        <x-preview title="Pulse Effect"
-                   language="blade"
-                   :contents="$pulse">
-            <livewire:documentation.ui.errors title="Ops! There are :count validation errors:" pulse />
-        </x-preview>
-    </x-section>
-    <x-section>
         <x-preview title="Color Variations"
                    language="blade"
                    :contents="$colors">

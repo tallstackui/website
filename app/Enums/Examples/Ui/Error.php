@@ -20,10 +20,6 @@ class Error
     <x-errors title="Ops! There are :count validation errors:" />
     HTML;
 
-    public const PULSE = <<<'HTML'
-    <x-errors pulse />
-    HTML;
-
     public const COLORS = <<<'HTML'
     <!-- Default: red -->
 
