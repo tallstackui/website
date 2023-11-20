@@ -11,7 +11,7 @@
 
         setTimeout(() => this.notification = false, 3000);
     }
-}" class="relative z-20 flex items-center m-2">
+}" class="relative z-20 flex items-center">
     <button x-on:click="copy()">
         <x-icon name="document" class="text-gray-500 h-5 w-5" x-show="!notification" />
         <x-icon name="document-check" class="h-5 w-5 text-pink-500" x-show="notification" />
