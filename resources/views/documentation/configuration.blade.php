@@ -21,6 +21,6 @@
                 <x-outdated-contente-tooltip />
             </p>
         </div>
-        <x-code :contents="$content"/>
+        <x-code :contents="$content" :copy="false"/>
     </x-section>
 </x-layout>

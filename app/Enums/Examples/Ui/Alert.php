@@ -39,6 +39,12 @@ class Alert
     <x-alert icon="cog">
         TallStackUi
     </x-alert>
+
+    <!-- With title -->
+
+    <x-alert title="TallStackUi" icon="cog">
+        TallStackUi
+    </x-alert>
     HTML;
 
     public const COLORS = <<<'HTML'

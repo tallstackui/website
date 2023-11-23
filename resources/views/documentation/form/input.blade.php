@@ -23,6 +23,14 @@
         </x-preview>
     </x-section>
     <x-section>
+        <x-preview title="Required Label Indicator"
+                   description="You can use a asterisk in the label to indicate that the field is required."
+                   language="blade"
+                   :contents="$asterisk">
+            <x-input label="Name *" hint="Insert your name" />
+        </x-preview>
+    </x-section>
+    <x-section>
         <x-preview title="Icon Slot"
                    language="blade"
                    :contents="$icons">

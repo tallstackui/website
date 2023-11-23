@@ -64,6 +64,15 @@ class Avatar
               color="fff" />
     HTML;
 
+    public const MODELABLE_OPTIONS = <<<'HTML'
+    <x-avatar :model="auth()->user()"
+              property="email"
+              background="ff0000"
+              color="fff"
+              :options="['uppercase' => false, 'rounded' => true]"
+    />
+    HTML;
+
     public const PLACEHOLDER = <<<'HTML'
     <x-avatar />
     <x-avatar color="secondary" />

@@ -65,33 +65,6 @@
             <x-avatar text="TS" square />
         </x-preview>
     </x-section>
-    <x-separator />
-    <x-section class="space-y-4">
-        <x-preview title="Modelable"
-                   language="blade"
-                   :contents="$modelable">
-            <x-slot:description>
-                An option to generate a <a href="https://ui-avatars.com/" class="underline" target="_blank">UI Avatar</a> from a model based on name property.
-            </x-slot:description>
-            <x-avatar :model="auth()->user()" color="fff" />
-        </x-preview>
-        <x-preview title="Modelable Custom Property"
-                   language="blade"
-                   :contents="$modelableCustomized">
-            <x-slot:description>
-                An option to generate a <a href="https://ui-avatars.com/" class="underline" target="_blank">UI Avatar</a> from a model based on a property different than name.
-            </x-slot:description>
-            <x-avatar :model="auth()->user()" property="email" color="fff" />
-        </x-preview>
-        <x-preview title="Customizing Colors"
-                   language="blade"
-                   :contents="$modelableCustomizedColors">
-            <x-slot:description>
-                An option to generate a <a href="https://ui-avatars.com/" class="underline" target="_blank">UI Avatar</a> from a model based customizing the colors.
-            </x-slot:description>
-            <x-avatar :model="auth()->user()" property="email" background="ff0000" color="fff" />
-        </x-preview>
-    </x-section>
     <x-section>
         <x-preview title="Placeholder"
                    description="An option generate avatar with a svg placeholder with any color from the TailwindCSS palette."
@@ -125,6 +98,49 @@
                 <x-avatar color="black" />
                 <x-avatar color="white" />
             </div>
+        </x-preview>
+    </x-section>
+    <x-separator />
+    <x-section class="space-y-4">
+        <x-preview title="Modelable"
+                   language="blade"
+                   :contents="$modelable">
+            <x-slot:description>
+                An option to generate a <a href="https://ui-avatars.com/" class="underline" target="_blank">UI Avatar</a> from a model based on name property.
+            </x-slot:description>
+            <x-avatar :model="auth()->user()" color="fff" />
+        </x-preview>
+        <x-preview title="Modelable Custom Property"
+                   language="blade"
+                   :contents="$modelableCustomized">
+            <x-slot:description>
+                An option to generate a <a href="https://ui-avatars.com/" class="underline" target="_blank">UI Avatar</a> from a model based on a property different from name.
+            </x-slot:description>
+            <x-avatar :model="auth()->user()" property="email" color="fff" />
+        </x-preview>
+        <x-preview title="Customizing Colors"
+                   language="blade"
+                   :contents="$modelableCustomizedColors">
+            <x-slot:description>
+                An option to generate a <a href="https://ui-avatars.com/" class="underline" target="_blank">UI Avatar</a> from a model based customizing the colors.
+            </x-slot:description>
+            <x-avatar :model="auth()->user()" property="email" background="ff0000" color="fff" />
+        </x-preview>
+        <x-preview title="Other Options"
+                   language="blade"
+                   :contents="$modelableOptions">
+            <x-slot:description>
+                An option to interact with all other <a href="https://ui-avatars.com/" class="underline" target="_blank">UI Avatar</a> configuration options.
+            </x-slot:description>
+            <x-avatar :model="auth()->user()"
+                      property="email"
+                      background="ff0000"
+                      color="fff"
+                      :options="[
+                          'uppercase' => false,
+                          'rounded' => true,
+                      ]"
+            />
         </x-preview>
     </x-section>
 </x-layout>

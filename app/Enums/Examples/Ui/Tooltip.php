@@ -24,6 +24,10 @@ class Tooltip
     <x-tooltip text="LG" lg />
     HTML;
 
+    public const HTML = <<<'HTML'
+    <x-tooltip text="<b>Tall</b><i>Stack</i><u>Ui</u>" />
+    HTML;
+
     public const COLORS = <<<'HTML'
     <x-tooltip text="primary" />
     <x-tooltip text="secondary" color="secondary" />

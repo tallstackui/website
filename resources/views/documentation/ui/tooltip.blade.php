@@ -44,6 +44,15 @@
         </x-preview>
     </x-section>
     <x-section>
+        <x-preview title="HTML Content"
+                   language="blade"
+                   :contents="$html">
+            <div class="inline-flex space-x-2">
+                <x-tooltip text="<b>Tall</b><i>Stack</i><u>Ui</u>" />
+            </div>
+        </x-preview>
+    </x-section>
+    <x-section>
         <x-preview title="Color Variations"
                    language="blade"
                    :contents="$colors">

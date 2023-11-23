@@ -8,6 +8,10 @@ class Textarea
     <x-textarea />
     HTML;
 
+    public const ASTERISK = <<<'HTML'
+    <x-textarea label="Description *" />
+    HTML;
+
     public const RESIZE = <<<'HTML'
     <x-textarea resize />
     HTML;
@@ -17,7 +21,7 @@ class Textarea
     HTML;
 
     public const LABEL_HINT = <<<'HTML'
-    <x-textarea label="Name" hint="Insert your name" />
+    <x-textarea label="Name" hint="Insert the description" />
     HTML;
 
     public const PERSONALIZATION = <<<'HTML'

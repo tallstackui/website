@@ -22,4 +22,12 @@
             <x-password label="Password" hint="Insert your best password" value="TallStackUi" />
         </x-preview>
     </x-section>
+    <x-section>
+        <x-preview title="Required Label Indicator"
+                   description="You can use a asterisk in the label to indicate that the field is required."
+                   language="blade"
+                   :contents="$asterisk">
+            <x-password label="Password *" hint="Insert your password" value="TallStackUi" />
+        </x-preview>
+    </x-section>
 </x-layout>

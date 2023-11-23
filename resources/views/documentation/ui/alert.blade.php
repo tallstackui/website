@@ -38,12 +38,16 @@
     </x-section>
     <x-section>
         <x-preview title="Icon Slot"
-                   description="An option to use an icon when title is not defined"
                    language="blade"
                    :contents="$icon">
-            <x-alert icon="cog">
-                TallStackUi
-            </x-alert>
+            <div class="space-y-2">
+                <x-alert icon="cog">
+                    TallStackUi
+                </x-alert>
+                <x-alert title="TallStackUi" icon="cog">
+                    TallStackUi
+                </x-alert>
+            </div>
         </x-preview>
     </x-section>
     <x-section>

@@ -12,8 +12,20 @@ class Dropdown
     HTML;
 
     public const POSITIONS = <<<'HTML'
-    <!-- Accept all AlpineJS x-anchor positions -->
-    <!-- 'bottom', 'bottom-start', 'bottom-end', 'top', 'top-start', 'top-end', 'left', 'left-start', 'left-end', 'right', 'right-start', 'right-end' -->
+    <!-- Available Positions:
+         bottom,
+         bottom-start,
+         bottom-end,
+         top,
+         top-start,
+         top-end,
+         left,
+         left-start,
+         left-end,
+         right,
+         right-start,
+         right-end
+     -->
 
     <x-dropdown text="Menu" position="bottom-start">
         <x-dropdown.items text="Settings" />

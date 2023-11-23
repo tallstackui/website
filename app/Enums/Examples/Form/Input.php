@@ -12,6 +12,10 @@ class Input
     <x-input label="Name" hint="Insert your name" />
     HTML;
 
+    public const ASTERISK = <<<'HTML'
+    <x-input label="Name *" hint="Insert your name" />
+    HTML;
+
     public const ICONS = <<<'HTML'
     <x-input label="Name" icon="users" />
     <x-input label="Name" icon="cog" position="right" />
