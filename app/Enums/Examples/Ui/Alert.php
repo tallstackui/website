@@ -70,6 +70,35 @@ class Alert
     <x-alert title="TallStackUi" text="White" color="white" />
     HTML;
 
+    public const OUTLINES = <<<'HTML'
+    <x-alert title="TallStackUi" text="Primary" outline />
+    <x-alert title="TallStackUi" text="Secondary" color="secondary" outline />
+    <x-alert title="TallStackUi" text="Slate" color="slate" outline />
+    <x-alert title="TallStackUi" text="Gray" color="gray" outline />
+    <x-alert title="TallStackUi" text="Zinc" color="zinc" outline />
+    <x-alert title="TallStackUi" text="Neutral" color="neutral" outline />
+    <x-alert title="TallStackUi" text="Stone" color="stone" outline />
+    <x-alert title="TallStackUi" text="Red" color="red" outline />
+    <x-alert title="TallStackUi" text="Orange" color="orange" outline />
+    <x-alert title="TallStackUi" text="Amber" color="amber" outline />
+    <x-alert title="TallStackUi" text="Yellow" color="yellow" outline />
+    <x-alert title="TallStackUi" text="Lime" color="lime" outline />
+    <x-alert title="TallStackUi" text="Green" color="green" outline />
+    <x-alert title="TallStackUi" text="Emerald" color="emerald" outline />
+    <x-alert title="TallStackUi" text="Teal" color="teal" outline />
+    <x-alert title="TallStackUi" text="Cyan" color="cyan" outline />
+    <x-alert title="TallStackUi" text="Sky" color="sky" outline />
+    <x-alert title="TallStackUi" text="Blue" color="blue" outline />
+    <x-alert title="TallStackUi" text="Indigo" color="indigo" outline />
+    <x-alert title="TallStackUi" text="Violet" color="violet" outline />
+    <x-alert title="TallStackUi" text="Purple" color="purple" outline />
+    <x-alert title="TallStackUi" text="Fuchsia" color="fuchsia" outline />
+    <x-alert title="TallStackUi" text="Pink" color="pink" outline />
+    <x-alert title="TallStackUi" text="Rose" color="rose" outline />
+    <x-alert title="TallStackUi" text="Black" color="black" outline />
+    <x-alert title="TallStackUi" text="White" color="white" outline />
+    HTML;
+
     public const LIGHTS = <<<'HTML'
     <x-alert title="TallStackUi" text="Primary" light />
     <x-alert title="TallStackUi" text="Secondary" color="secondary" light />

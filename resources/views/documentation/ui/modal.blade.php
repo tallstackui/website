@@ -146,11 +146,11 @@
         </x-preview>
     </x-section>
     <x-section>
-        <x-preview title="Uncloseable"
+        <x-preview title="Persistent"
                    description="An option to prevent the user from closing the modal when click outside."
                    language="blade"
-                   :contents="$uncloseable">
-            <x-modal id="uncloseable-modal" title="TallStackUi" uncloseable>
+                   :contents="$persistent">
+            <x-modal id="uncloseable-modal" title="TallStackUi" persistent>
                 TallStackUi
                 <x-slot:footer>
                     <x-button color="red" x-on:click="$modalClose('uncloseable-modal')">Close</x-button>
@@ -161,9 +161,7 @@
             </x-button>
         </x-preview>
     </x-section>
-    <x-alert color="pink" icon="exclamation-circle" translucent>
-        Make sure to provide some way to close the modal when using this option, such as a button within the modal.
-    </x-alert>
+    <x-warning text="Make sure to provide some way to close the modal when using this option, such as a button within the modal." />
     <x-section class="mt-2 space-y-2">
         <x-preview title="Wireable"
                    description="An option to control the modal entangled with a Livewire property."

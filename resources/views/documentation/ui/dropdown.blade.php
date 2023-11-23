@@ -14,7 +14,7 @@
                    language="blade"
                    :contents="$left">
             <div class="flex justify-end md:justify-center">
-                <x-dropdown text="Menu">
+                <x-dropdown text="Menu" position="bottom-end">
                     <x-dropdown.items text="Settings" />
                     <x-dropdown.items text="Logout" separator />
                 </x-dropdown>
@@ -22,11 +22,11 @@
         </x-preview>
     </x-section>
     <x-section>
-        <x-preview title="Right Side"
+        <x-preview title="Positions"
                    language="blade"
-                   :contents="$right">
+                   :contents="$positions">
             <div class="flex justify-start md:justify-center">
-                <x-dropdown text="Menu" right>
+                <x-dropdown text="Menu" position="bottom-start">
                     <x-dropdown.items text="Settings" />
                     <x-dropdown.items text="Logout" separator />
                 </x-dropdown>
@@ -38,7 +38,7 @@
                    language="blade"
                    :contents="$icons">
             <div class="flex justify-end md:justify-center">
-                <x-dropdown icon="chevron-down">
+                <x-dropdown icon="chevron-down" position="bottom-end">
                     <x-dropdown.items text="Settings" />
                     <x-dropdown.items text="Logout" separator />
                 </x-dropdown>
@@ -51,7 +51,7 @@
                    language="blade"
                    :contents="$iconsStatic">
             <div class="flex justify-end md:justify-center">
-                <x-dropdown icon="ellipsis-vertical" static>
+                <x-dropdown icon="ellipsis-vertical" static position="bottom-end">
                     <x-dropdown.items text="Settings" />
                     <x-dropdown.items text="Logout" separator />
                 </x-dropdown>
@@ -63,7 +63,7 @@
                    language="blade"
                    :contents="$headerSlots">
             <div class="flex justify-end md:justify-center">
-                <x-dropdown text="Menu">
+                <x-dropdown text="Menu" position="bottom-end">
                     <x-slot:header>
                         <p class="text-sm">Welcome!</p>
                     </x-slot:header>
@@ -78,7 +78,7 @@
                    language="blade"
                    :contents="$actionSlots">
             <div class="flex justify-end md:justify-center">
-                <x-dropdown>
+                <x-dropdown position="bottom-end">
                     <x-slot:action>
                         <x-button x-on:click="show = !show" sm outline>Open</x-button>
                     </x-slot:action>

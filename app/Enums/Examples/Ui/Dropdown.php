@@ -5,14 +5,17 @@ namespace App\Enums\Examples\Ui;
 class Dropdown
 {
     public const LEFT = <<<'HTML'
-    <x-dropdown text="Menu">
+    <x-dropdown text="Menu" position="bottom-end">
         <x-dropdown.items text="Settings" />
         <x-dropdown.items text="Logout" separator />
     </x-dropdown>
     HTML;
 
-    public const RIGHT = <<<'HTML'
-    <x-dropdown text="Menu" right>
+    public const POSITIONS = <<<'HTML'
+    <!-- Accept all AlpineJS x-anchor positions -->
+    <!-- 'bottom', 'bottom-start', 'bottom-end', 'top', 'top-start', 'top-end', 'left', 'left-start', 'left-end', 'right', 'right-start', 'right-end' -->
+
+    <x-dropdown text="Menu" position="bottom-start">
         <x-dropdown.items text="Settings" />
         <x-dropdown.items text="Logout" separator />
     </x-dropdown>

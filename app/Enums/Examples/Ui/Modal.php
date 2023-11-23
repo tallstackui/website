@@ -60,8 +60,8 @@ class Modal
     </x-modal>
     HTML;
 
-    public const UNCLOSEABLE = <<<'HTML'
-    <x-modal title="TallStackUi" uncloseable>
+    public const PERSISTENT = <<<'HTML'
+    <x-modal title="TallStackUi" persistent>
         TallStackUi
     </x-modal>
     HTML;

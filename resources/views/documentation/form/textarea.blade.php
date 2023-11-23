@@ -30,7 +30,7 @@
         </x-preview>
     </x-section>
     <x-section>
-        <x-preview title="Resize-auto"
+        <x-preview title="Resize Auto"
                    description="Start to type in the textarea to see the resize-auto in action."
                    language="blade"
                    :contents="$resizeAuto">
