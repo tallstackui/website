@@ -24,6 +24,7 @@ use App\Http\Controllers\Documentation\Ui\Error;
 use App\Http\Controllers\Documentation\Ui\Icon;
 use App\Http\Controllers\Documentation\Ui\Modal;
 use App\Http\Controllers\Documentation\Ui\Select;
+use App\Http\Controllers\Documentation\Ui\Slide;
 use App\Http\Controllers\Documentation\Ui\Tab;
 use App\Http\Controllers\Documentation\Ui\Toast;
 use App\Http\Controllers\Documentation\Ui\Tooltip;
@@ -61,6 +62,7 @@ Route::prefix('/docs')
                 Route::get('/dialog', Dialog::class)->name('dialog');
                 Route::get('/dropdown', Dropdown::class)->name('dropdown');
                 Route::get('/select', Select::class)->name('select');
+                Route::get('/slide', Slide::class)->name('slide');
                 Route::get('/tab', Tab::class)->name('tab');
                 Route::get('/toast', Toast::class)->name('toast');
                 Route::get('/tooltip', Tooltip::class)->name('tooltip');

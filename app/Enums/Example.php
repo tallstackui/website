@@ -27,6 +27,7 @@ use App\Enums\Examples\Ui\Error;
 use App\Enums\Examples\Ui\Icon;
 use App\Enums\Examples\Ui\Modal;
 use App\Enums\Examples\Ui\Select;
+use App\Enums\Examples\Ui\Slide;
 use App\Enums\Examples\Ui\Tab;
 use App\Enums\Examples\Ui\Toast;
 use App\Enums\Examples\Ui\Tooltip;
@@ -55,6 +56,7 @@ enum Example: string
     case Password = Password::class;
     case Radio = Radio::class;
     case Select = Select::class;
+    case Slide = Slide::class;
     case SoftPersonalization = SoftPersonalization::class;
     case Tab = Tab::class;
     case Textarea = Textarea::class;

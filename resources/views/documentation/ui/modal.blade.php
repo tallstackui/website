@@ -150,10 +150,10 @@
                    description="An option to prevent the user from closing the modal when click outside."
                    language="blade"
                    :contents="$persistent">
-            <x-modal id="uncloseable-modal" title="TallStackUi" persistent>
+            <x-modal id="persistent-modal" title="TallStackUi" persistent>
                 TallStackUi
                 <x-slot:footer>
-                    <x-button color="red" x-on:click="$modalClose('uncloseable-modal')">Close</x-button>
+                    <x-button color="red" x-on:click="$modalClose('persistent-modal')">Close</x-button>
                 </x-slot:footer>
             </x-modal>
             <x-button x-on:click="$modalOpen('uncloseable-modal')">

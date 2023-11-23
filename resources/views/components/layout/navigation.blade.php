@@ -112,6 +112,11 @@
                             </a>
                         </li>
                         <li class="relative ml-4">
+                            <a href="{{ route('documentation.ui.slide') }}" @class(['text-gray-500 transition hover:text-gray-800 hover:underline dark:text-slate-400', 'underline' => request()->routeIs('documentation.ui.slide')])>
+                                Slide
+                            </a>
+                        </li>
+                        <li class="relative ml-4">
                             <a href="{{ route('documentation.ui.tab') }}" @class(['text-gray-500 transition hover:text-gray-800 hover:underline dark:text-slate-400', 'underline' => request()->routeIs('documentation.ui.tab')])>
                                 Tab
                             </a>
