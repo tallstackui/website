@@ -12,7 +12,7 @@
     </x-section>
     <x-section title="Installation">
         <p>1. Run the following command to include the TallStackUi as a composer dependency:</p>
-        <x-code language="shell" :contents="$installation" :copy="false" />
+        <x-code language="shell" :contents="$installation" />
         <p>2. Prepare the AlpineJS <x-block>x-cloak</x-block> directive:</p>
         <x-code language="blade" :contents="$cloak" :copy="false" />
         <p>3. Add the TallStackUi setup above the <x-block>vite</x-block> tag in your layout:</p>
@@ -23,7 +23,7 @@
         <p class="mt-4">4. Edit the <x-block>tailwindcss.config.js</x-block> of your application inserting this content:</p>
         <x-code language="js" :contents="$tailwindcss" :copy="false" />
         <p class="mt-4">5. Build the assets and do a full cleanup in the Laravel:</p>
-        <x-code language="shell" :contents="$build" :copy="false" />
+        <x-code language="shell" :contents="$build" />
         <p>You're ready to create your first TallStackUi components.</p>
     </x-section>
     <x-section title="Livewire SPA Mode">
