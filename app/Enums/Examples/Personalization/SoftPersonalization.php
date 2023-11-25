@@ -15,12 +15,12 @@ class SoftPersonalization
 
            TallStackUi::personalize()
                ->form('input')
-               ->block('input.class', 'w-full rounded-full');
+               ->block('input.class.base', 'w-full rounded-full');
 
             // or...
 
            TallStackUi::personalize('form.input')
-               ->block('input.class', 'w-full rounded-full');
+               ->block('input.class.base', 'w-full rounded-full');
         }
     }
     HTML;
@@ -69,7 +69,7 @@ class SoftPersonalization
 
            TallStackUi::personalize()
                ->form('input')
-               ->block('input.class', 'w-full rounded-full')
+               ->block('input.class.base', 'w-full rounded-full')
                ->and // [tl! highlight]
                ->avatar()
                ->block('wrapper.sizes.sm', 'w-8 h-8 text-xs')
@@ -78,7 +78,7 @@ class SoftPersonalization
 
            TallStackUi::personalize()
                ->form('input')
-               ->block('input.class', 'w-full rounded-full')
+               ->block('input.class.base', 'w-full rounded-full')
                ->and() // [tl! highlight]
                ->avatar()
                ->block('wrapper.sizes.sm', 'w-8 h-8 text-xs')
@@ -88,7 +88,7 @@ class SoftPersonalization
 
     public const USAGES = <<<'HTML'
     use TallStackUi\Facades\TallStackUi;
-    use App\TallStackUi\InputPersonzaliation;
+    use App\TallStackUi\InputPersonalization;
 
     class AppServiceProvider extends ServiceProvider
     {
@@ -98,7 +98,7 @@ class SoftPersonalization
 
            TallStackUi::personalize()
                ->form('input')
-               ->block('input.class', new InputPersonzaliation())
+               ->block('input.class.base', new InputPersonalization())
                ->block('icon.wrapper', fn (array $data) => 'pointer-events-none absolute')
                ->block('icon.paddings.left', 'pl-10');
 
@@ -107,7 +107,7 @@ class SoftPersonalization
             TallStackUi::personalize()
                ->form('input')
                ->block([
-                    'input.class' => new InputPersonzaliation(),
+                    'input.class' => new InputPersonalization(),
                     'icon.wrapper' => fn (array $data) => 'pointer-events-none absolute',
                     'icon.paddings.left' => 'pl-10',
                ]);
@@ -127,7 +127,7 @@ class SoftPersonalization
 
            TallStackUi::personalize()
                ->form('input')
-               ->block('input.class', new InputPersonalization()); // [tl! highlight]
+               ->block('input.class.base', new InputPersonalization()); // [tl! highlight]
         }
     }
     HTML;
@@ -148,6 +148,65 @@ class SoftPersonalization
 
     public const USING_COMPONENT = <<<'HTML'
     <x-input label="Name" hint="Your full name" />
+    HTML;
+
+    public const REPLACE = <<<'HTML'
+    use TallStackUi\Facades\TallStackUi;
+
+    class AppServiceProvider extends ServiceProvider
+    {
+        public function boot(): void
+        {
+            // ...
+
+           TallStackUi::personalize()
+               ->form('input')
+               ->block('input.class.base')
+               ->replace('rounded-md', 'rounded-full'); // [tl! highlight]
+
+           // or...
+
+          TallStackUi::personalize()
+              ->form('input')
+              ->block('input.class.base')
+              ->replace([ // [tl! highlight:3]
+                  'rounded-md' => 'rounded-full',
+                  'border-0' => 'border-1',
+              ]);
+        }
+    }
+    HTML;
+
+    public const USEFUL_METHODS = <<<'HTML'
+    use TallStackUi\Facades\TallStackUi;
+
+    class AppServiceProvider extends ServiceProvider
+    {
+        public function boot(): void
+        {
+            // ...
+
+           TallStackUi::personalize()
+               ->form('input')
+               ->block('input.class.base')
+               ->replace('rounded-md', 'rounded-full'); // [tl! highlight]
+
+           TallStackUi::personalize()
+               ->form('input')
+               ->block('input.class.base')
+               ->remove('rounded-md'); // also accept array [tl! highlight]
+
+           TallStackUi::personalize()
+               ->form('input')
+               ->block('input.class.base')
+               ->append('px-4'); // [tl! highlight]
+
+           TallStackUi::personalize()
+               ->form('input')
+               ->block('input.class.base')
+               ->prepend('py-4'); // [tl! highlight]
+        }
+    }
     HTML;
 
     public const DATA = <<<'HTML'

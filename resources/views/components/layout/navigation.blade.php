@@ -142,7 +142,7 @@
                     </ul>
                 </li>
                 <li class="relative ml-4">
-                    <h2 class="font-medium text-pink-900 font-display dark:text-pink-500">Internal Only</h2>
+                    <h2 class="font-medium text-pink-900 font-display dark:text-pink-500">Internals</h2>
                     <ul role="list" class="mt-4 space-y-2 dark:border-slate-800 lg:space-y-4 lg:mt-4 lg:border-slate-200">
                         <li class="relative ml-4">
                             <a href="{{ route('documentation.internal.error') }}" @class(['text-gray-500 transition hover:text-gray-800 hover:underline dark:text-slate-400', 'underline' => request()->routeIs('documentation.internal.error')])>

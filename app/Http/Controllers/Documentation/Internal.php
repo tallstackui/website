@@ -12,7 +12,7 @@ class Internal extends Controller
     {
         $personalization = <<<'HTML'
         TallStackUi::personalize()
-            ->error()
+            ->form('error')
             ->block('block', 'classes');
         HTML;
 
@@ -25,7 +25,7 @@ class Internal extends Controller
     {
         $personalization = <<<'HTML'
         TallStackUi::personalize()
-            ->hint()
+            ->form('hint')
             ->block('block', 'classes');
         HTML;
 
@@ -38,7 +38,7 @@ class Internal extends Controller
     {
         $personalization = <<<'HTML'
         TallStackUi::personalize()
-            ->label()
+            ->form('label')
             ->block('block', 'classes');
         HTML;
 

@@ -8,18 +8,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
-
+    <title>TallStackUI, @if ($title) {{ $title }} @endif</title>
     <style> [x-cloak] { display: none; } </style>
 
     <meta name="twitter:card" content="summary">
     <meta name="twitter:site" content="{{ config('app.url') }}">
     <meta name="twitter:creator" content="@devajmeireles">
     <meta name="twitter:title" content="TallStackUI">
-    <meta name="twitter:description" content="TallStackUI: New Generation of TALL Stack Components">
+    <meta name="twitter:description" content="TallStackUI: New friendly TALL Stack Component Library">
 
     <meta property="og:url" content="{{ config('app.url') }}" />
-    <meta property="og:title" content="TallStackUI: New Generation of TALL Stack Components" />
+    <meta property="og:title" content="TallStackUI: New friendly TALL Stack Component Library" />
 
     <link rel="preconnect" href="https://fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet"/>
@@ -32,7 +31,7 @@
     <x-dialog />
     <x-toast />
     <x-top-bar>
-        <a href="https://github.com/tallstackui/tallstackui/releases" target="_blank" class="underline decoration-dotted underline-offset-4">First stable release published! 🎉</a>
+        <a href="https://github.com/tallstackui/tallstackui/releases" target="_blank" class="underline decoration-dotted underline-offset-4">TallStackUi 1.0 is here! 🎉</a>
     </x-top-bar>
     <x-layout.header />
     <div class="flex flex-col">

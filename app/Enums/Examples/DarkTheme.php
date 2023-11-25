@@ -30,7 +30,13 @@ class DarkTheme
     <x-button x-on:click="darkTheme = !darkTheme">Light / Dark Mode</x-button>
     HTML;
 
+    public const ASSETS = <<<'HTML'
+    npm run build && php artisan optimize:clear
+    HTML;
+
     public const EXAMPLE = <<<'HTML'
+    <!-- ... -->
+
     <p class="text-gray-700 dark:text-white">Hello World</p>
     <div class="bg-red-500 dark:bg-white">Hello World</div>
     HTML;

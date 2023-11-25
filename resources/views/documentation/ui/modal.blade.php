@@ -156,7 +156,7 @@
                     <x-button color="red" x-on:click="$modalClose('persistent-modal')">Close</x-button>
                 </x-slot:footer>
             </x-modal>
-            <x-button x-on:click="$modalOpen('uncloseable-modal')">
+            <x-button x-on:click="$modalOpen('persistent-modal')">
                 Open
             </x-button>
         </x-preview>

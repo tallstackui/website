@@ -5572,12 +5572,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/tallstackui/tallstackui.git",
-                "reference": "4e921aff01118fef7a23df25a70f0896896212ba"
+                "reference": "e4842312be5a97f7a7a931ad09f0923e911309f0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tallstackui/tallstackui/zipball/4e921aff01118fef7a23df25a70f0896896212ba",
-                "reference": "4e921aff01118fef7a23df25a70f0896896212ba",
+                "url": "https://api.github.com/repos/tallstackui/tallstackui/zipball/e4842312be5a97f7a7a931ad09f0923e911309f0",
+                "reference": "e4842312be5a97f7a7a931ad09f0923e911309f0",
                 "shasum": ""
             },
             "require": {
@@ -5623,9 +5623,9 @@
             "description": "A curated list of TallStack UI Components",
             "support": {
                 "issues": "https://github.com/tallstackui/tallstackui/issues",
-                "source": "https://github.com/tallstackui/tallstackui/tree/main"
+                "source": "https://github.com/tallstackui/tallstackui/tree/develop"
             },
-            "time": "2023-11-23T03:09:13+00:00"
+            "time": "2023-11-25T05:46:15+00:00"
         },
         {
             "name": "tijsverkoyen/css-to-inline-styles",

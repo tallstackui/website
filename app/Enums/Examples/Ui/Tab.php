@@ -24,6 +24,23 @@ class Tab
     </x-tab>
     HTML;
 
+    public const SLOTS = <<<'HTML'
+    <x-tab selected="Invoices">
+        <x-tab.items tab="Invoices">
+            <x-slot:right>
+                <x-icon name="document-text" class="w-5 h-5" />
+            </x-slot:right>
+            Invoices
+        </x-tab.items>
+        <x-tab.items tab="Transactions">
+            <x-slot:left>
+                <x-icon name="currency-dollar" class="w-5 h-5" />
+            </x-slot:left>
+            Transactions
+        </x-tab.items>
+    </x-tab>
+    HTML;
+
     public const WIREABLE = <<<'HTML'
     <!--  Livewire string property: $tab - initial value: "Tab 1" -->
 

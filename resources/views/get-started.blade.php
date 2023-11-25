@@ -1,6 +1,6 @@
 <x-layout :torchlight="false">
     <x-slot:title>
-        Welcome to TallStackUi
+        Get Started
     </x-slot:title>
     <x-section>
         <p class="text-justify">

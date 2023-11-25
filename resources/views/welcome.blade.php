@@ -8,17 +8,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>TallStackUI</title>
     <style> [x-cloak] { display: none; } </style>
 
     <meta name="twitter:card" content="summary">
     <meta name="twitter:site" content="{{ config('app.url') }}">
     <meta name="twitter:creator" content="@devajmeireles">
     <meta name="twitter:title" content="TallStackUI">
-    <meta name="twitter:description" content="TallStackUI: New Generation of TALL Stack Components">
+    <meta name="twitter:description" content="TallStackUI: New friendly TALL Stack Component Library">
 
     <meta property="og:url" content="{{ config('app.url') }}" />
-    <meta property="og:title" content="TallStackUI: New Generation of TALL Stack Components" />
+    <meta property="og:title" content="TallStackUI: New friendly TALL Stack Component Library" />
 
     <link rel="preconnect" href="https://fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet"/>

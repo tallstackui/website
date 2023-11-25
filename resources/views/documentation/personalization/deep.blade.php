@@ -12,7 +12,7 @@
             soft personalization</u>, which does not require as much technical knowledge from you.
         </p>
     </x-section>
-    <x-section title="Publish Configuration File">
+    <x-section title="Publishing Configuration File">
         <p class="text-justify">
             To start deep personalization you must publish the TallStackUi configuration file.
             <a class="underline" href="{{ route('documentation.configuration') }}">Click here to visit the documentation.</a>
@@ -39,13 +39,12 @@
             visit the documentation for the component you are customizing.
         </p>
     </x-section>
-    <x-section title="Publish Blade Views">
+    <x-section title="Publishing Blade Views">
         <p class="text-justify mb-4">
             You can also edit the Blade files of the TallStackUi components. Use this command to publish the files:
         </p>
         <x-code language="shell" :contents="$views"/>
     </x-section>
-    <x-non-personalized-thigs />
     <x-section title="Tracing TailwindCSS Classes">
         <p class="text-justify mb-4">
             If you are personalizing your components using deep personalization, make sure you track your

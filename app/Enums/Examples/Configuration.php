@@ -18,7 +18,7 @@ class Configuration
     |
     | General components settings.
     */
-    'personalizations' => [
+    'settings' => [
         'dialog' => [
             'z-index' => 'z-50',
             'blur' => false,
@@ -42,6 +42,7 @@ class Configuration
         ],
         'toast' => [
             'z-index' => 'z-50',
+            'progress' => true,
             /* Alloweds: top-right, top-left, bottom-right, bottom-left */
             'position' => 'top-right',
         ],
