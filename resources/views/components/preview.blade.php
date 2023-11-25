@@ -8,16 +8,19 @@
     'language' => 'php',
 ])
 
+@php($anchor = str($title)->slug()->lower())
+
 <div x-data="{ code : false }" @isset($id) id="{{ $id }}" @endisset>
-    <div {{ $attributes->merge(['class' => 'flex items-center justify-between']) }}>
-        <div>
+    <div {{ $attributes->merge(['class' => 'flex items-center justify-between mb-4']) }}>
+        <div id="{{ $anchor }}">
             @if ($title)
-                <h1 @class(['text-xl tracking-tight text-pink-600 font-medium', 'mb-4' => !$description])>
+                <a href="#{{ $anchor }}" @class(['text-xl tracking-tight text-pink-600 font-medium cursor-pointer'])>
+                    <span class="text-gray-300 dark:text-gray-600">#</span>
                     {{ $title }}
-                </h1>
+                </a>
             @endif
             @if ($description)
-                <p class="mb-4 text-sm text-slate-500">{{ $description }}</p>
+                <p class="text-sm text-slate-500">{{ $description }}</p>
             @endif
         </div>
         @if ($contents)

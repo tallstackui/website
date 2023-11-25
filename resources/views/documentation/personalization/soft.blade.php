@@ -6,7 +6,7 @@
         The soft personalization. Easy way to personalize all TallStackUi components.
     </x-slot:description>
     <x-section title="Concept">
-        <p class="text-justify">
+        <p class="mb-4 text-justify">
             <u>Soft personalization consists of customizing components at run time</u>, through a service provider, such as <x-block>AppServiceProvider</x-block>.
             The idea behind soft personalization is to tap into personalizable blocks of each component. Let's take a look at an example:
         </p>
@@ -18,7 +18,7 @@
         </p>
     </x-section>
     <x-section title="Component Example">
-        <div class="inline-flex items-center gap-1">
+        <div class="mb-4 inline-flex items-center gap-1">
             <p>
                 Example of the <a class="underline" href="{{ route('documentation.ui.avatar') }}">Avatar</a> component classes
                 <x-outdated-contente-tooltip />
@@ -32,7 +32,7 @@
         </p>
     </x-section>
     <x-section title="Fluent Personalization">
-        <p class="text-justify">
+        <p class="mb-4 text-justify">
             Just like <a href="https://pestphp.com" target="_blank" class="underline">Pest</a>, TallStackUi offers a concept of
             fluency when using the <x-block>and</x-block> like a property or method:
         </p>
@@ -42,13 +42,13 @@
         </p>
     </x-section>
     <x-section title="Multiple Personalization Usage">
-        <p class="text-justify">
+        <p class="text-justify mb-4">
             You can personalize one block at a time or all at once:
         </p>
         <x-code language="php" :contents="$usages"/>
     </x-section>
     <x-section title="Invokable Class">
-        <p class="text-justify">
+        <p class="text-justify mb-4">
             You may have noticed that in the example above we used the <x-block>InputPersonzaliation</x-block> class.
             This is a simple invokable class, because TallStackUi also allows you to make your personalization into classes.
             This approach is ideal if you are someone who prioritizes organization above all else. Let's take a look at an example:
@@ -59,7 +59,7 @@
         <x-code language="php" :contents="$invokableClass"/>
     </x-section>
     <x-section title="Component Data Parameters">
-        <p class="text-justify">
+        <p class="text-justify mb-4">
             You may have noticed that the example above there is a variable called <x-block>$data</x-block>. This variable is an array
             containing all the component's properties, <u>including the values passed when you used the component somewhere in your application.</u>
         </p>
@@ -72,13 +72,13 @@
         </p>
     </x-section>
     <x-section title="Component Blocks">
-        <p class="text-justify">
+        <p class="text-justify mb-4">
             All component documentation mentions their respective blocks in a button at the top of the page.
         </p>
     </x-section>
     <x-non-personalized-thigs />
     <x-section title="Tracing TailwindCSS Classes">
-        <p class="text-justify">
+        <p class="text-justify mb-4">
             If you are personalizing your components, there is something you should know. As classes are TailwindCSS
             classes you need to ensure that TailwindCSS watches the files from which the classes you defined come,
             so personalizations will take effect. To do this, you must edit your <x-block>tailwindcss.config.js</x-block>
@@ -87,7 +87,7 @@
         <x-code language="js" :contents="$tailwindcss"/>
     </x-section>
     <x-section title="Preserve the Original Content">
-        <p class="text-justify">
+        <p class="text-justify mb-4">
             One of the precautions you should take with soft personalization is to personalize what you want,
             but <u>preserve the original content classes.</u> Without preserving the original classes after
             touching some point in the personalization, the component may be completely modified, leading to

@@ -40,14 +40,14 @@
         </p>
     </x-section>
     <x-section title="Publish Blade Views">
-        <p class="text-justify">
+        <p class="text-justify mb-4">
             You can also edit the Blade files of the TallStackUi components. Use this command to publish the files:
         </p>
         <x-code language="shell" :contents="$views"/>
     </x-section>
     <x-non-personalized-thigs />
     <x-section title="Tracing TailwindCSS Classes">
-        <p class="text-justify">
+        <p class="text-justify mb-4">
             If you are personalizing your components using deep personalization, make sure you track your
             component classes so that TailwindCSS generates all the classes that come out of the files. Your
             <x-block>tailwindcss.config.js</x-block> needs to receive the following content:
