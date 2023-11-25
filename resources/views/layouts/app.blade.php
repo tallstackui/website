@@ -10,6 +10,8 @@
 
     <title>{{ config('app.name', 'Laravel') }}</title>
 
+    <style> [x-cloak] { display: none; } </style>
+
     <meta name="twitter:card" content="summary">
     <meta name="twitter:site" content="{{ config('app.url') }}">
     <meta name="twitter:creator" content="@devajmeireles">
@@ -22,20 +24,22 @@
     <link rel="preconnect" href="https://fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet"/>
 
-    <tallstackui:setup />
+    <tallstackui:script />
     @livewireStyles
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
-<body class="min-h-full flex-col justify-center bg-gray-100 dark:bg-slate-900" x-data="{ mobile : false }" x-cloak>
+<body class="min-h-full flex-col justify-center bg-gray-100 dark:bg-slate-900" x-bind:class="{ 'bg-dots-white' : darkTheme, 'bg-dots-darker' : !darkTheme }" x-data="{ mobile : false }" x-cloak>
     <x-dialog />
     <x-toast />
+    <x-top-bar>
+        <a href="https://github.com/tallstackui/tallstackui/releases" target="_blank" class="underline decoration-dotted underline-offset-4">First stable release published! 🎉</a>
+    </x-top-bar>
     <x-layout.header />
     <div class="flex flex-col">
         <x-layout.banner />
         <div class="relative mx-auto flex w-full max-w-screen-2xl flex-auto justify-center sm:px-2 lg:px-8 xl:px-12">
             <x-layout.sidebar.left />
             <div class="min-w-0 max-w-2xl flex-auto px-4 py-16 lg:max-w-none lg:pr-0 lg:pl-8 xl:px-16">
-                <x-beta-warning />
                 <article>
                     @if ($title || $section)
                         <header class="mb-6 space-y-1">

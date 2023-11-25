@@ -31,12 +31,14 @@ use App\Http\Controllers\Documentation\Ui\Tooltip;
 use Illuminate\Support\Facades\Route;
 
 Route::view('/', 'welcome')->name('welcome');
-Route::view('/beta', 'beta')->name('beta');
-Route::get('/installation', Installation::class)->name('installation');
+Route::redirect('/docs', '/docs/get-started')->name('documentation');
+Route::redirect('/install', '/docs/installation')->name('documentation');
 
 Route::prefix('/docs')
     ->name('documentation.')
     ->group(function () {
+        Route::view('/get-started', 'get-started')->name('get-started');
+        Route::get('/installation', Installation::class)->name('installation');
 
         Route::prefix('/form')
             ->name('form.')

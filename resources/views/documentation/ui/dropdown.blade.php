@@ -1,6 +1,6 @@
 <x-layout>
     <x-slot:title>
-        Avatar
+        Dropdown
     </x-slot:title>
     <x-slot:description>
         Dropdown component.

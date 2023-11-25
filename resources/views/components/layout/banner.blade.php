@@ -1,12 +1,16 @@
-<div class="overflow-hidden bg-cover bg-[url('/public/assets/images/background.svg')]">
-    <div class="relative py-16">
+<div class="overflow-hidden bg-pink-900">
+    <div class="relative py-10">
         <div class="flex flex-col items-center justify-center">
-            <div class="space-x-0">
-                <span class="inline bg-clip-text text-5xl font-bold text-white">
-                    TallStackUi
-                </span>
+            <div class="w-1/4">
+                <x-svg.tallstackui-light />
             </div>
-            <p class="mt-4 font-medium text-white">New generation of TALL Stack Components.</p>
+            <p class="text-md leading-8 text-white">
+                Your new friendly
+                <span class="relative inline-block">
+                    <span class="z-10 w-full font-semibold">TALL Stack</span>
+                    <span class="absolute bottom-0 left-0 h-1 w-full bg-pink-400"></span>
+                </span> component library.
+            </p>
         </div>
     </div>
 </div>

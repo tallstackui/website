@@ -1,21 +1,19 @@
 <nav {{ $attributes->merge(['class' => 'text-base lg:text-sm']) }}>
+    <div class="mb-4 pr-4 sm:flex-1 sm:pr-0">
+        <livewire:version-selector />
+    </div>
     <ul role="list" class="space-y-9">
         <li>
             <h2 class="font-medium text-pink-900 font-display dark:text-pink-500">Introduction</h2>
             <ul role="list" class="mt-4 space-y-2 dark:border-slate-800 lg:space-y-4 lg:mt-4 lg:border-slate-200">
                 <li class="relative ml-4">
-                    <a href="{{ route('welcome') }}" @class(['text-gray-500 transition hover:text-gray-800 hover:underline dark:text-slate-400', 'underline' => request()->routeIs('welcome')])>
-                        Welcome
+                    <a href="{{ route('documentation.get-started') }}" @class(['text-gray-500 transition hover:text-gray-800 hover:underline dark:text-slate-400', 'underline' => request()->routeIs('documentation.get-started')])>
+                        Get Started
                     </a>
                 </li>
                 <li class="relative ml-4">
-                    <a href="{{ route('installation') }}" @class(['text-gray-500 transition hover:text-gray-800 hover:underline dark:text-slate-400', 'underline' => request()->routeIs('installation')])>
+                    <a href="{{ route('documentation.installation') }}" @class(['text-gray-500 transition hover:text-gray-800 hover:underline dark:text-slate-400', 'underline' => request()->routeIs('documentation.installation')])>
                         Installation
-                    </a>
-                </li>
-                <li class="relative ml-4">
-                    <a href="{{ route('beta') }}" @class(['font-semibold text-pink-900 transition hover:text-pink-500 dark:text-pink-500', 'underline' => request()->routeIs('beta')])>
-                        Beta Phase
                     </a>
                 </li>
             </ul>
