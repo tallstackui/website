@@ -29,4 +29,9 @@
                 users of the library</u>, guaranteeing useful components and frequent updates.
         </p>
     </x-section>
+    <x-slot:navigation>
+        <x-slot:next>
+            <x-navigation.link href="{{ route('documentation.installation') }}" text="Installation" />
+        </x-slot:next>
+    </x-slot:navigation>
 </x-layout>

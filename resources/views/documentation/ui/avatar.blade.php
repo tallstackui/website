@@ -143,4 +143,12 @@
             />
         </x-preview>
     </x-section>
+    <x-slot:navigation>
+        <x-slot:back>
+            <x-navigation.link href="{{ route('documentation.ui.alert') }}" text="Alert" back />
+        </x-slot:back>
+        <x-slot:next>
+            <x-navigation.link href="{{ route('documentation.ui.badge') }}" text="Badge" />
+        </x-slot:next>
+    </x-slot:navigation>
 </x-layout>

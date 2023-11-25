@@ -21,4 +21,12 @@
         <p>3. Do a general clean up of Laravel using the command:</p>
         <x-code language="shell" :contents="$cleanup"/>
     </x-section>
+    <x-slot:navigation>
+        <x-slot:back>
+            <x-navigation.link href="{{ route('documentation.personalization.deep') }}" text="Deep Personalization" back />
+        </x-slot:back>
+        <x-slot:next>
+            <x-navigation.link href="{{ route('documentation.dark-theme') }}" text="Dark Theme" />
+        </x-slot:next>
+    </x-slot:navigation>
 </x-layout>

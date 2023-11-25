@@ -54,4 +54,12 @@
         </p>
         <x-code language="js" :contents="$tailwindcss"/>
     </x-section>
+    <x-slot:navigation>
+        <x-slot:back>
+            <x-navigation.link href="{{ route('documentation.personalization.soft') }}" text="Soft Personalization" back />
+        </x-slot:back>
+        <x-slot:next>
+            <x-navigation.link href="{{ route('documentation.personalization.color') }}" text="Colors" />
+        </x-slot:next>
+    </x-slot:navigation>
 </x-layout>

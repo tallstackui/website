@@ -61,8 +61,28 @@
                     @endif
                     {{ $slot }}
                 </article>
+                @if ($navigation)
+                    <dl class="mt-12 flex border-t border-slate-200 pt-6 dark:border-slate-800">
+                        @if ($back)
+                            <div>
+                                <dt class="text-sm font-medium text-pink-700 font-display dark:text-white">Previous</dt>
+                                <dd class="mt-1">
+                                    {{ $back }}
+                                </dd>
+                            </div>
+                        @endif
+                        @if ($next)
+                            <div class="ml-auto text-right">
+                                <dt class="text-sm font-medium text-pink-700 font-display dark:text-white">Next</dt>
+                                <dd class="mt-1">
+                                    {{ $next }}
+                                </dd>
+                            </div>
+                        @endif
+                    </dl>
+                @endif
                 @if ($torchlight)
-                    <p class="text-sm text-gray-600 dark:text-slate-400">Code highlighting provided by <a href="https://torchlight.dev" class="font-semibold text-pink-700 underline" target="_blank">Torchlight</a></p>
+                    <p @class(['text-sm text-gray-600 dark:text-slate-400', 'mt-4' => $navigation !== null])>Code highlighting provided by <a href="https://torchlight.dev" class="font-semibold text-pink-700 underline" target="_blank">Torchlight</a></p>
                 @endif
             </div>
         </div>

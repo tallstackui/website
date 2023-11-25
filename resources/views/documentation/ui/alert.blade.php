@@ -152,4 +152,12 @@
             </div>
         </x-preview>
     </x-section>
+    <x-slot:navigation>
+        <x-slot:back>
+            <x-navigation.link href="{{ route('documentation.form.toggle') }}" text="Form Toggle" back />
+        </x-slot:back>
+        <x-slot:next>
+            <x-navigation.link href="{{ route('documentation.ui.avatar') }}" text="Avatar" />
+        </x-slot:next>
+    </x-slot:navigation>
 </x-layout>

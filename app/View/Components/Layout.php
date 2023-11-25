@@ -12,6 +12,10 @@ class Layout extends Component
         public ?string $section = null,
         public ?string $description = null,
         public ?string $personalization = null,
+        /* footer navigation */
+        public ?string $navigation = null,
+        public ?string $back = null,
+        public ?string $next = null,
         public bool $torchlight = true,
     ) {
         //

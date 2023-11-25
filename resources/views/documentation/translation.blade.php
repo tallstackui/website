@@ -15,4 +15,12 @@
     <x-section title="Content">
         <p class="text-justify">This command will publish the TallStackUi translation files for the root path of your application, inside the <x-block>lang</x-block> folder.</p>
     </x-section>
+    <x-slot:navigation>
+        <x-slot:back>
+            <x-navigation.link href="{{ route('documentation.configuration') }}" text="Configurations" back />
+        </x-slot:back>
+        <x-slot:next>
+            <x-navigation.link href="{{ route('documentation.personalization.concept') }}" text="Personalization Concept" />
+        </x-slot:next>
+    </x-slot:navigation>
 </x-layout>

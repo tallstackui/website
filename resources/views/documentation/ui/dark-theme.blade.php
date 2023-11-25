@@ -24,4 +24,12 @@
         <p class="mt-2">4. Now, all you need to do is adapt all your CSS classes to the dark theme variation:</p>
         <x-code language="blade" :contents="$example"/>
     </x-section>
+    <x-slot:navigation>
+        <x-slot:back>
+            <x-navigation.link href="{{ route('documentation.personalization.color') }}" text="Colors" back />
+        </x-slot:back>
+        <x-slot:next>
+            <x-navigation.link href="{{ route('documentation.contribution') }}" text="Contribution Guide" />
+        </x-slot:next>
+    </x-slot:navigation>
 </x-layout>

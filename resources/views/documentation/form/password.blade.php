@@ -30,4 +30,12 @@
             <x-password label="Password *" hint="Insert your password" value="TallStackUi" />
         </x-preview>
     </x-section>
+    <x-slot:navigation>
+        <x-slot:back>
+            <x-navigation.link href="{{ route('documentation.form.input') }}" text="Form Input" back />
+        </x-slot:back>
+        <x-slot:next>
+            <x-navigation.link href="{{ route('documentation.form.textarea') }}" text="Form Textarea" />
+        </x-slot:next>
+    </x-slot:navigation>
 </x-layout>

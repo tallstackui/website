@@ -118,4 +118,12 @@
             <livewire:documentation.ui.select.searchable :model="5"/>
         </x-preview>
     </x-section>
+    <x-slot:navigation>
+        <x-slot:back>
+            <x-navigation.link href="{{ route('documentation.ui.modal') }}" text="Modal" back />
+        </x-slot:back>
+        <x-slot:next>
+            <x-navigation.link href="{{ route('documentation.ui.slide') }}" text="Slide" />
+        </x-slot:next>
+    </x-slot:navigation>
 </x-layout>

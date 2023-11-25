@@ -31,4 +31,12 @@
             </x-card>
         </div>
     </x-section>
+    <x-slot:navigation>
+        <x-slot:back>
+            <x-navigation.link href="{{ route('documentation.translation') }}" text="Translations" back />
+        </x-slot:back>
+        <x-slot:next>
+            <x-navigation.link href="{{ route('documentation.personalization.soft') }}" text="Soft Personalization" />
+        </x-slot:next>
+    </x-slot:navigation>
 </x-layout>

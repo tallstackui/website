@@ -70,4 +70,12 @@
             </div>
         </x-preview>
     </x-section>
+    <x-slot:navigation>
+        <x-slot:back>
+            <x-navigation.link href="{{ route('documentation.form.radio') }}" text="Form Radio" back />
+        </x-slot:back>
+        <x-slot:next>
+            <x-navigation.link href="{{ route('documentation.ui.alert') }}" text="Alert" />
+        </x-slot:next>
+    </x-slot:navigation>
 </x-layout>

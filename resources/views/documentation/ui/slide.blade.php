@@ -192,4 +192,12 @@
         <x-code language="blade" :contents="$alpinejs"/>
     </x-section>
     <x-available-configuration />
+    <x-slot:navigation>
+        <x-slot:back>
+            <x-navigation.link href="{{ route('documentation.ui.select') }}" text="Select" back />
+        </x-slot:back>
+        <x-slot:next>
+            <x-navigation.link href="{{ route('documentation.ui.tab') }}" text="Tab" />
+        </x-slot:next>
+    </x-slot:navigation>
 </x-layout>

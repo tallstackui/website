@@ -45,4 +45,12 @@
             <x-textarea :rows="1" resize-auto />
         </x-preview>
     </x-section>
+    <x-slot:navigation>
+        <x-slot:back>
+            <x-navigation.link href="{{ route('documentation.form.password') }}" text="Form Password" back />
+        </x-slot:back>
+        <x-slot:next>
+            <x-navigation.link href="{{ route('documentation.form.checkbox') }}" text="Form Checkbox" />
+        </x-slot:next>
+    </x-slot:navigation>
 </x-layout>

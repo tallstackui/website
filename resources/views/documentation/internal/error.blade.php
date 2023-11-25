@@ -15,4 +15,12 @@
             soft or deep personalization, if you wish.
         </p>
     </x-card>
+    <x-slot:navigation>
+        <x-slot:back>
+            <x-navigation.link href="{{ route('documentation.ui.toast') }}" text="Toast" back />
+        </x-slot:back>
+        <x-slot:next>
+            <x-navigation.link href="{{ route('documentation.internal.hint') }}" text="Internal Hint" />
+        </x-slot:next>
+    </x-slot:navigation>
 </x-layout>

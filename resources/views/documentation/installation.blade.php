@@ -32,4 +32,12 @@
             in your application and persist the TallStackUi setup in all other layouts that want to use TallStackUi.
         </p>
     </x-section>
+    <x-slot:navigation>
+        <x-slot:back>
+            <x-navigation.link href="{{ route('documentation.get-started') }}" text="Get Started" back />
+        </x-slot:back>
+        <x-slot:next>
+            <x-navigation.link href="{{ route('documentation.form.input') }}" text="Form Input" />
+        </x-slot:next>
+    </x-slot:navigation>
 </x-layout>
