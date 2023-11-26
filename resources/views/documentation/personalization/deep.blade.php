@@ -68,7 +68,7 @@
             <x-table.tbody>
                 <x-table.tr>
                     <x-table.td>
-                        <p class="font-mono">TallStackUi\View\Components\Button\Button</p>
+                        <p class="font-mono">Button\Button</p>
                     </x-table.td>
                     <x-table.td>
                         <x-badge color="pink" outline>backgroundColor</x-badge>
@@ -84,7 +84,7 @@
                 </x-table.tr>
                 <x-table.tr>
                     <x-table.td>
-                        <p class="font-mono">TallStackUi\View\Components\Button\Circle</p>
+                        <p class="font-mono">Button\Circle</p>
                     </x-table.td>
                     <x-table.td>
                         <x-badge color="pink" outline>backgroundColor</x-badge>
@@ -100,7 +100,7 @@
                 </x-table.tr>
                 <x-table.tr>
                     <x-table.td>
-                        <p class="font-mono">TallStackUi\View\Components\Alert</p>
+                        <p class="font-mono">Alert</p>
                     </x-table.td>
                     <x-table.td>
                         <x-badge color="pink" outline>backgroundColor</x-badge>
@@ -116,7 +116,7 @@
                 </x-table.tr>
                 <x-table.tr>
                     <x-table.td>
-                        <p class="font-mono">TallStackUi\View\Components\Avatar</p>
+                        <p class="font-mono">Avatar</p>
                     </x-table.td>
                     <x-table.td>
                         <x-badge color="pink" outline>backgroundColor</x-badge>
@@ -131,7 +131,7 @@
                 </x-table.tr>
                 <x-table.tr>
                     <x-table.td>
-                        <p class="font-mono">TallStackUi\View\Components\Badge</p>
+                        <p class="font-mono">Badge</p>
                     </x-table.td>
                     <x-table.td>
                         <x-badge color="pink" outline>backgroundColor</x-badge>
@@ -148,7 +148,7 @@
                 </x-table.tr>
                 <x-table.tr>
                     <x-table.td>
-                        <p class="font-mono">TallStackUi\View\Components\Errors</p>
+                        <p class="font-mono">Errors</p>
                     </x-table.td>
                     <x-table.td>
                         <x-badge color="pink" outline>backgroundColor</x-badge>
@@ -165,7 +165,7 @@
                 </x-table.tr>
                 <x-table.tr>
                     <x-table.td>
-                        <p class="font-mono">TallStackUi\View\Components\Form\Radio</p>
+                        <p class="font-mono">Form\Radio</p>
                     </x-table.td>
                     <x-table.td>
                         <x-badge color="pink" outline>backgroundColor</x-badge>
@@ -180,7 +180,7 @@
                 </x-table.tr>
                 <x-table.tr>
                     <x-table.td>
-                        <p class="font-mono">TallStackUi\View\Components\Form\Checkbox</p>
+                        <p class="font-mono">Form\Checkbox</p>
                     </x-table.td>
                     <x-table.td>
                         <x-badge color="pink" outline>backgroundColor</x-badge>
@@ -195,7 +195,7 @@
                 </x-table.tr>
                 <x-table.tr>
                     <x-table.td>
-                        <p class="font-mono">TallStackUi\View\Components\Form\Toggle</p>
+                        <p class="font-mono">Form\Toggle</p>
                     </x-table.td>
                     <x-table.td>
                         <x-badge color="pink" outline>backgroundColor</x-badge>
@@ -210,7 +210,7 @@
                 </x-table.tr>
                 <x-table.tr>
                     <x-table.td>
-                        <p class="font-mono">TallStackUi\View\Components\Tooltip</p>
+                        <p class="font-mono">Tooltip</p>
                     </x-table.td>
                     <x-table.td>
                         <x-badge color="pink" outline>iconColor</x-badge>
