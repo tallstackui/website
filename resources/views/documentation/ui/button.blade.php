@@ -11,6 +11,7 @@
     </x-slot:personalization>
     <x-section>
         <x-preview title="Basic Usage"
+                   anchor="basic-usage"
                    language="blade"
                    :contents="$basic">
             <x-button>TallStackUi</x-button>
@@ -18,6 +19,7 @@
     </x-section>
     <x-section>
         <x-preview title="Tag A Usage"
+                   anchor="basic-tag-a-usage"
                    language="blade"
                    :contents="$a">
             <x-button href="https://google.com.br" target="_blank">TallStackUi</x-button>
@@ -25,6 +27,7 @@
     </x-section>
     <x-section>
         <x-preview title="Square Variation"
+                   anchor="basic-square-variation"
                    language="blade"
                    :contents="$square">
             <x-button square>TallStackUi</x-button>
@@ -32,6 +35,7 @@
     </x-section>
     <x-section>
         <x-preview title="Round Variation"
+                   anchor="basic-round-variation"
                    language="blade"
                    :contents="$round">
             <x-button round>TallStackUi</x-button>
@@ -39,6 +43,7 @@
     </x-section>
     <x-section>
         <x-preview title="Icon Slot"
+                   anchor="basic-icon-slot"
                    description="An option to use any Heroicon."
                    language="blade"
                    :contents="$icons">
@@ -50,6 +55,7 @@
     </x-section>
     <x-section>
         <x-preview title="Size Variations"
+                   anchor="basic-size-variations"
                    language="blade"
                    :contents="$sizes">
             <div class="flex flex-col items-center justify-center space-y-2 sm:space-x-2 sm:space-y-0 sm:flex-row sm:justify-start">
@@ -70,6 +76,7 @@
     </x-section>
     <x-section>
         <x-preview title="Loading Effect"
+                   anchor="basic-loading-effect"
                    language="blade"
                    :contents="$loadings">
             <div class="flex flex-col items-center justify-center space-y-2 sm:space-x-2 sm:space-y-0 sm:flex-row sm:justify-start">
@@ -87,6 +94,7 @@
     </x-section>
     <x-section>
         <x-preview title="Color Variations"
+                   anchor="basic-color-variations"
                    language="blade"
                    :contents="$colors">
             <div class="gap-2 space-y-2">
@@ -121,6 +129,7 @@
     </x-section>
     <x-section>
         <x-preview title="Outline Variations"
+                   anchor="basic-outline-variations"
                    language="blade"
                    :contents="$outlines">
             <div class="gap-2 space-y-2">
@@ -156,6 +165,7 @@
     <x-separator/>
     <x-section>
         <x-preview title="Circle Button"
+                   anchor="circle-basic-usage"
                    language="blade"
                    :contents="$circle">
             <x-button.circle>TS</x-button.circle>
@@ -163,6 +173,7 @@
     </x-section>
     <x-section>
         <x-preview title="Circle Tag A Button"
+                   anchor="circle-tag-a-usage"
                    language="blade"
                    :contents="$circleA">
             <x-button.circle href="https://google.com.br" target="_blank">TS</x-button.circle>
@@ -170,6 +181,7 @@
     </x-section>
     <x-section>
         <x-preview title="Icon Slot"
+                   anchor="circle-icon-slot"
                    description="An option to use any Heroicon."
                    language="blade"
                    :contents="$circleIcons">
@@ -178,6 +190,7 @@
     </x-section>
     <x-section>
         <x-preview title="Size Variations"
+                   anchor="circle-size-variations"
                    description="An option to use any Heroicon."
                    language="blade"
                    :contents="$circleSizes">
@@ -188,6 +201,7 @@
     </x-section>
     <x-section>
         <x-preview title="Loading Effect"
+                   anchor="circle-loading-effect"
                    language="blade"
                    :contents="$circleLoadings">
             <div class="inline-flex items-center space-x-2">
@@ -199,6 +213,7 @@
     </x-section>
     <x-section>
         <x-preview title="Color Variations"
+                   anchor="circle-color-variations"
                    language="blade"
                    :contents="$circleColors">
             <div class="gap-2 space-y-2">
@@ -233,6 +248,7 @@
     </x-section>
     <x-section>
         <x-preview title="Outline Variations"
+                   anchor="circle-outline-variations"
                    language="blade"
                    :contents="$circleOutlines">
             <div class="gap-2 space-y-2">

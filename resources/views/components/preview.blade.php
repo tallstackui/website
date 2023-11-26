@@ -3,12 +3,13 @@
     'contents' => null,
     'title' => null,
     'description' => null,
+    'anchor' => null,
     'numbers' => false,
     'background' => true,
     'language' => 'php',
 ])
 
-@php($anchor = str($title)->slug()->lower())
+@php($anchor ??= str($title)->slug()->lower())
 
 <div x-data="{ code : false, anchor : false }" @isset($id) id="{{ $id }}" @endisset>
     <div {{ $attributes->merge(['class' => 'flex items-center justify-between mb-4']) }}>
