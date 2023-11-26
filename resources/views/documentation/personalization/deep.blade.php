@@ -32,12 +32,16 @@
         <x-code language="php" :contents="$extends"/>
         <p>4. In your component, override the <x-block>personalization</x-block> method:</p>
         <x-code language="php" :contents="$customization"/>
-        <p class="mt-2 text-justify">
+        <p class="my-2 text-justify">
             Every customizable component has a method called <x-block>personalization</x-block>, which is where the
             classes come from. <u>This method must return an array with the name of the customizable blocks and
             their respective values which must be the CSS classes to be applied.</u> To learn about customizable blocks,
-            visit the documentation for the component you are customizing.
+            visit the documentation for the component you are personalizing.
         </p>
+        <x-warning>
+            Thanks to careful engineering, even if you prefer to use deep personalization,
+            <a href="{{ route('documentation.personalization.soft') }}" class="underline">soft personalization</a> can still be applied to components.
+        </x-warning>
     </x-section>
     <x-section title="Overriding Component Colors">
         <p class="text-justify">
