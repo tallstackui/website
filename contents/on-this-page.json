@@ -29,27 +29,33 @@
         "6": "Outline Variations"
     },
     "docs.ui.button": {
-        "Basic": {
-            "0": "Basic Usage",
-            "1": "Tag A Usage",
-            "2": "Square Variation",
-            "3": "Round Variation",
-            "4": "Icon Slot",
-            "5": "Size Variations",
-            "6": "Loading Effect",
-            "7": "Color Variations",
-            "8": "Outline Variations"
+        "Normal": {
+            "prefix": true,
+            "contents": {
+                "0": "Basic Usage",
+                "1": "Tag A Usage",
+                "2": "Square Variation",
+                "3": "Round Variation",
+                "4": "Icon Slot",
+                "5": "Size Variations",
+                "6": "Loading Effect",
+                "7": "Color Variations",
+                "8": "Outline Variations"
+            }
         },
         "Circle": {
-            "0": "Basic Usage",
-            "1": "Tag A Usage",
-            "2": "Square Variation",
-            "3": "Round Variation",
-            "4": "Icon Slot",
-            "5": "Size Variations",
-            "6": "Loading Effect",
-            "7": "Color Variations",
-            "8": "Outline Variations"
+            "prefix": true,
+            "contents": {
+                "0": "Basic Usage",
+                "1": "Tag A Usage",
+                "2": "Square Variation",
+                "3": "Round Variation",
+                "4": "Icon Slot",
+                "5": "Size Variations",
+                "6": "Loading Effect",
+                "7": "Color Variations",
+                "8": "Outline Variations"
+            }
         }
     }
 }

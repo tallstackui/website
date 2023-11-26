@@ -10,7 +10,7 @@
                         <h3><a class="text-pink-500 font-semibold">{{ $parent }}</a></h3>
                         <ol role="list" class="mt-2 pl-5 text-slate-500 space-y-3 dark:text-slate-400">
                             @foreach ($children as $child)
-                                <li><a class="hover:text-pink-600 dark:hover:text-gray-300" href="#{{ $child['anchor'] }}">{{ $child['title'] }}</a></li>
+                                <li><a class="hover:text-pink-600 dark:hover:text-gray-300" href="#{{ ($child['prefix'] ?? '') . $child['anchor'] }}">{{ $child['title'] }}</a></li>
                             @endforeach
                         </ol>
                     </li>

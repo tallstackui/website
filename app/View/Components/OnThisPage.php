@@ -19,43 +19,60 @@ class OnThisPage extends Component
 
     private function contents(): void
     {
-        $route = str_replace('/', '.', request()->route()->uri());
+        $index = str_replace('/', '.', request()->route()->uri());
         $file = json_decode(file_get_contents(base_path('contents/on-this-page.json')), true);
-        $index = $file[$route] ?? [];
+        $content = $file[$index] ?? [];
 
-        // If the index is empty, the page doesn't have an `on this page` section.
-        if (!$index) {
+        if (empty($content)) {
             return;
         }
 
-        // If the index is numeric, we assume it's a flat array.
-        if (is_numeric(array_keys($index)[0])) {
-            $this->contents = collect($index)
-                ->mapWithKeys(fn (string $item, int $key) => $this->map($item, $key))
-                ->toArray();
+        // If the first key is numeric, we know it's a flat array
+        // For pages like /docs/ui/alert that doesn't contain any category.
+        if (is_numeric(array_keys($content)[0])) {
+            $this->contents = $this->flat($content);
 
             return;
         }
 
-        // Otherwise, we assume it's a nested array (parent => child).
-        $this->contents = collect($index)
-            ->mapWithKeys(function ($item, $key) {
-                return [
-                    $key => collect($item)->mapWithKeys(fn (string $item, int $key) => $this->map($item, $key)),
-                ];
-            })
-            ->toArray();
+        // Otherwise, it's a nested array, for pages like /docs/ui/button
+        // that contains button types like categories.
+        $this->contents = $this->nested($content);
     }
 
-    private function map(string $item, int $key): array
+    private function flat(array $content): array
     {
-        return [
-            $key => [
+        return collect($content)->mapWithKeys(function (string $item, int $key) {
+            return $this->map($item, $key);
+        })->toArray();
+    }
+
+    private function nested(array $content): array
+    {
+        return collect($content)->mapWithKeys(function (array $structure, string $parent) {
+            return [
+                $parent => collect($structure['contents'])->mapWithKeys(function (string $item, int $child) use ($parent, $structure) {
+                    return $this->map($item, $child, $parent, $structure);
+                }),
+            ];
+        })->toArray();
+    }
+
+    private function map(string $item, int $child, string $parent = null, array $structure = null): array
+    {
+        $data = [
+            $child => [
                 'title' => $item,
-                'anchor' => str($item)->lower()
-                    ->slug()
-                    ->value(),
+                'anchor' => str($item)->lower()->slug()->value(),
             ],
         ];
+
+        // If is a nested array and has prefix, we add the prefix using the parent name
+        // For situations like the button page, that contains two types of buttons.
+        if ($parent && data_get($structure, 'prefix') === true) {
+            $data[$child]['prefix'] = str($parent)->lower()->append('-')->value();
+        }
+
+        return $data;
     }
 }
