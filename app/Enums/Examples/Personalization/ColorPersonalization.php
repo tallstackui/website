@@ -58,10 +58,6 @@ class ColorPersonalization
     HTML;
 
     public const BUILD = <<<'HTML'
-    npm run build
-    HTML;
-
-    public const CLEANUP = <<<'HTML'
-    php artisan optimize:clear
+    npm run build && php artisan optimize:clear
     HTML;
 }

@@ -70,6 +70,139 @@ class DeepPersonalization
     }
     HTML;
 
+    public const OVERRIDE_COLORS = <<<'HTML'
+    namespace App\View\Components;
+
+    use Illuminate\Contracts\View\View;
+
+    class CustomButton extends \TallStackUi\View\Components\Button\Button // [tl! highlight]
+    {
+        public function backgroundColor(): array // [tl! highlight]
+        {
+            return [
+                'solid' => [
+                    'white' => '...',
+                    'black' => '...',
+                    'primary' => '...',
+                    'secondary' => '...',
+                    'slate' => '...',
+                    'gray' => '...',
+                    'zinc' => '...',
+                    'neutral' => '...',
+                    'stone' => '...',
+                    'red' => '...',
+                    'orange' => '...',
+                    'amber' => '...',
+                    'yellow' => '...',
+                    'lime' => '...',
+                    'green' => '...',
+                    'emerald' => '...',
+                    'teal' => '...',
+                    'cyan' => '...',
+                    'sky' => '...',
+                    'blue' => '...',
+                    'indigo' => '...',
+                    'violet' => '...',
+                    'purple' => '...',
+                    'fuchsia' => '...',
+                    'pink' => '...',
+                    'rose' => '...',
+                ],
+                'outline' => [
+                    'white' => '...',
+                    'black' => '...',
+                    'primary' => '...',
+                    'secondary' => '...',
+                    'slate' => '...',
+                    'gray' => '...',
+                    'zinc' => '...',
+                    'neutral' => '...',
+                    'stone' => '...',
+                    'red' => '...',
+                    'orange' => '...',
+                    'amber' => '...',
+                    'yellow' => '...',
+                    'lime' => '...',
+                    'green' => '...',
+                    'emerald' => '...',
+                    'teal' => '...',
+                    'cyan' => '...',
+                    'sky' => '...',
+                    'blue' => '...',
+                    'indigo' => '...',
+                    'violet' => '...',
+                    'purple' => '...',
+                    'fuchsia' => '...',
+                    'pink' => '...',
+                    'rose' => '...',
+                ],
+            ];
+        }
+
+        public function iconColor(): array // [tl! highlight]
+        {
+            return [
+                'solid' => [
+                    'white' => '...',
+                    'black' => '...',
+                    'primary' => '...',
+                    'secondary' => '...',
+                    'slate' => '...',
+                    'gray' => '...',
+                    'zinc' => '...',
+                    'neutral' => '...',
+                    'stone' => '...',
+                    'red' => '...',
+                    'orange' => '...',
+                    'amber' => '...',
+                    'yellow' => '...',
+                    'lime' => '...',
+                    'green' => '...',
+                    'emerald' => '...',
+                    'teal' => '...',
+                    'cyan' => '...',
+                    'sky' => '...',
+                    'blue' => '...',
+                    'indigo' => '...',
+                    'violet' => '...',
+                    'purple' => '...',
+                    'fuchsia' => '...',
+                    'pink' => '...',
+                    'rose' => '...',
+                ],
+                'outline' => [
+                    'white' => '...',
+                    'black' => '...',
+                    'primary' => '...',
+                    'secondary' => '...',
+                    'slate' => '...',
+                    'gray' => '...',
+                    'zinc' => '...',
+                    'neutral' => '...',
+                    'stone' => '...',
+                    'red' => '...',
+                    'orange' => '...',
+                    'amber' => '...',
+                    'yellow' => '...',
+                    'lime' => '...',
+                    'green' => '...',
+                    'emerald' => '...',
+                    'teal' => '...',
+                    'cyan' => '...',
+                    'sky' => '...',
+                    'blue' => '...',
+                    'indigo' => '...',
+                    'violet' => '...',
+                    'purple' => '...',
+                    'fuchsia' => '...',
+                    'pink' => '...',
+                    'rose' => '...',
+                ],
+            ];
+        }
+    }
+    HTML;
+
     public const VIEWS = <<<'HTML'
     php artisan vendor:publish --tag=tallstackui.views
     HTML;

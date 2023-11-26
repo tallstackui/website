@@ -3,7 +3,7 @@
         Soft Personalization
     </x-slot:title>
     <x-slot:description>
-        The soft personalization. Easy way to personalize all TallStackUi components.
+        The soft personalization.
     </x-slot:description>
     <x-section title="Concept">
         <p class="mb-4 text-justify">

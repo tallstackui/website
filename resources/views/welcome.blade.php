@@ -58,14 +58,12 @@
                             <div class="mt-10 flex items-center justify-center gap-x-2">
                                 <x-button :href="route('documentation.get-started')"
                                           color="pink"
-                                          icon="arrow-small-right"
                                           position="right">
                                     Get Started
                                 </x-button>
                                 <x-button href="https://github.com/tallstackui/tallstackui"
                                           target="_blank"
                                           color="pink"
-                                          icon="arrow-small-right"
                                           position="right"
                                           outline>
                                     Source Code
