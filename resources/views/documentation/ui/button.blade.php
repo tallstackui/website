@@ -10,7 +10,7 @@
         <livewire:documentation.personalization :personalization="$personalizationCircle" component="button.circle" />
     </x-slot:personalization>
     <x-section>
-        <x-preview title="Basic Button"
+        <x-preview title="Basic Usage"
                    language="blade"
                    :contents="$basic">
             <x-button>TallStackUi</x-button>

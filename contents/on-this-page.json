@@ -1,0 +1,55 @@
+{
+    "docs.ui.alert": {
+        "0": "Basic Usage",
+        "1": "Title",
+        "2": "Closeable",
+        "3": "Icon Slot",
+        "4": "Color Variations",
+        "5": "Outline Variations",
+        "6": "Light Variations"
+    },
+    "docs.ui.avatar": {
+        "0": "Basic Usage",
+        "1": "Color Variations",
+        "2": "Size Variations",
+        "3": "Square Variations",
+        "4": "Placeholder",
+        "5": "Modelable",
+        "6": "Modelable Custom Property",
+        "7": "Customizing Colors",
+        "8": "Other Options"
+    },
+    "docs.ui.badge": {
+        "0": "Basic Usage",
+        "1": "Square Variations",
+        "2": "Round Variations",
+        "3": "Icon Slot",
+        "4": "Size Variations",
+        "5": "Color Variations",
+        "6": "Outline Variations"
+    },
+    "docs.ui.button": {
+        "Basic": {
+            "0": "Basic Usage",
+            "1": "Tag A Usage",
+            "2": "Square Variation",
+            "3": "Round Variation",
+            "4": "Icon Slot",
+            "5": "Size Variations",
+            "6": "Loading Effect",
+            "7": "Color Variations",
+            "8": "Outline Variations"
+        },
+        "Circle": {
+            "0": "Basic Usage",
+            "1": "Tag A Usage",
+            "2": "Square Variation",
+            "3": "Round Variation",
+            "4": "Icon Slot",
+            "5": "Size Variations",
+            "6": "Loading Effect",
+            "7": "Color Variations",
+            "8": "Outline Variations"
+        }
+    }
+}

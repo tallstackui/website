@@ -2,11 +2,11 @@
 
 @php($anchor = str($title)->slug()->lower())
 
-<section id="{{ $anchor }}" {{ $attributes->merge(['class' => 'text-gray-600 mb-6 dark:text-slate-400']) }} @if ($id) id="{{ $id }}" @endif>
+<section x-data="{ anchor : false }" id="{{ $anchor }}" {{ $attributes->merge(['class' => 'text-gray-600 mb-6 dark:text-slate-400']) }} @if ($id) id="{{ $id }}" @endif>
     @if ($title)
-        <h1 @class(['text-2xl tracking-tight text-pink-600 font-medium dark:text-slate-300 cursor-pointer'])>
+        <h1 @class(['text-xl tracking-tight text-pink-600 font-medium cursor-pointer']) x-on:mouseover="anchor = true" x-on:mouseleave="anchor = false">
             <a href="#{{ $anchor }}" class="m-0">
-                <span class="text-gray-300 dark:text-gray-600">#</span>
+                <span class="text-gray-400 dark:text-gray-600" x-show="anchor">#</span>
                 {{ $title }}
             </a>
         </h1>

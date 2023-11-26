@@ -23,7 +23,7 @@
         <x-code language="php" :contents="$avatar"/>
         <p class="mt-2 text-justify">
             All component classes are divided into class blocks applicable to their appropriate required locations in the
-            Blade file associated with the component. TallStackUi was designed with soft personalization in mind: an easy way
+            Blade file associated with the component. TallStackUI was designed with soft personalization in mind: an easy way
             to personalize components, so even if the developer is a beginner, he doesn't need to have difficulty personalizing the components.
         </p>
     </x-section>
@@ -41,7 +41,7 @@
     </x-section>
     <x-section title="Fluent Personalization">
         <p class="mb-4 text-justify">
-            Just like <a href="https://pestphp.com" target="_blank" class="underline">Pest</a>, TallStackUi offers a concept of
+            Just like <a href="https://pestphp.com" target="_blank" class="underline">Pest</a>, TallStackUI offers a concept of
             fluency when using the <x-block>and</x-block> like a property or method:
         </p>
         <x-code language="php" :contents="$fluent"/>
@@ -58,7 +58,7 @@
     <x-section title="Invokable Class">
         <p class="text-justify mb-4">
             You may have noticed that in the example above we used the <x-block>InputPersonalization</x-block> class.
-            This is a simple invokable class, because TallStackUi also allows you to make your personalization into classes.
+            This is a simple invokable class, because TallStackUI also allows you to make your personalization into classes.
             This approach is ideal if you are someone who prioritizes organization above all else. Let's take a look at an example:
         </p>
         <p class="mt-4">1. Preparing:</p>

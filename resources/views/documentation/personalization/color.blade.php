@@ -7,7 +7,7 @@
     </x-slot:description>
     <x-section>
         <p class="text-justify">
-            All TallStackUi components are based on three custom colors: primary, secondary and dark. Additionally,
+            All TallStackUI components are based on three custom colors: primary, secondary and dark. Additionally,
             all other <a class="underline" href="https://tailwindcss.com/docs/customizing-colors" target="_blank">colors are the original TailwindCSS colors.</a> You can customize the primary and secondary
             colors to your liking by following the TailwindCSS custom color concept.
         </p>

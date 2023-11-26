@@ -14,21 +14,21 @@
     </x-section>
     <x-section title="Publishing Configuration File">
         <p class="text-justify">
-            To start deep personalization you must publish the TallStackUi configuration file.
+            To start deep personalization you must publish the TallStackUI configuration file.
             <a class="underline" href="{{ route('documentation.configuration') }}">Click here to visit the documentation.</a>
         </p>
     </x-section>
     <x-section title="Overriding Component Class">
         <p class="text-justify">
             As deep personalization consists of having absolute control over the component, <u>the idea behind
-            this form of personalization is to overwrite the original TallStackUi component</u>, which is why more
+            this form of personalization is to overwrite the original TallStackUI component</u>, which is why more
             technical knowledge is necessary. Let's look at an example:
         </p>
         <p class="mt-2">1. Create a Blade component:</p>
         <x-code language="shell" :contents="$command"/>
-        <p>2. Edit the TallStackUi configuration file pointing the original component class to your component:</p>
+        <p>2. Edit the TallStackUI configuration file pointing the original component class to your component:</p>
         <x-code language="php" :contents="$override"/>
-        <p>3. In your component, extends the original TallStackUi component:</p>
+        <p>3. In your component, extends the original TallStackUI component:</p>
         <x-code language="php" :contents="$extends"/>
         <p>4. In your component, override the <x-block>personalization</x-block> method:</p>
         <x-code language="php" :contents="$customization"/>
@@ -53,7 +53,7 @@
         <p class="text-justify mb-4">
             Note that in the example above the methods are defined with the term "Color" at the end. Also note that these
             methods must return an array containing an array of arrays, where the button type opens a new array containing
-            the list of all possible class variations. This will cause TallStackUi to use these color classes instead of the
+            the list of all possible class variations. This will cause TallStackUI to use these color classes instead of the
             default color classes. See below a list of components that have color personalizations and their method references
             and original content:
         </p>
@@ -228,7 +228,7 @@
     </x-section>
     <x-section title="Publishing Blade Views">
         <p class="mb-4 text-justify">
-            You can also edit the Blade files of the TallStackUi components. Use this command to publish the files:
+            You can also edit the Blade files of the TallStackUI components. Use this command to publish the files:
         </p>
         <x-code language="shell" :contents="$views"/>
     </x-section>

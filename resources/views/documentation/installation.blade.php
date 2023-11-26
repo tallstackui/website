@@ -11,11 +11,11 @@
         </ul>
     </x-section>
     <x-section title="Installation">
-        <p>1. Run the following command to include the TallStackUi as a composer dependency:</p>
+        <p>1. Run the following command to include the TallStackUI as a composer dependency:</p>
         <x-code language="shell" :contents="$installation" />
         <p>2. Prepare the AlpineJS <x-block>x-cloak</x-block> directive:</p>
         <x-code language="blade" :contents="$cloak" :copy="false" />
-        <p>3. Add the TallStackUi setup above the <x-block>vite</x-block> tag in your layout:</p>
+        <p>3. Add the TallStackUI setup above the <x-block>vite</x-block> tag in your layout:</p>
         <x-code language="blade" :contents="$script" :copy="false" />
         <p>If you prefer, you can add then separately:</p>
         <x-code language="blade" :contents="$manual" :copy="false" />
@@ -24,12 +24,12 @@
         <x-code language="js" :contents="$tailwindcss" :copy="false" />
         <p class="mt-4">5. Build the assets and do a full cleanup in the Laravel:</p>
         <x-code language="shell" :contents="$build" />
-        <p>You're ready to create your first TallStackUi components.</p>
+        <p>You're ready to create your first TallStackUI components.</p>
     </x-section>
     <x-section title="Livewire SPA Mode">
         <p class="text-justify">
-            If you are using the new SPA mode in Livewire you must add the TallStackUi setup to the first page rendered
-            in your application and persist the TallStackUi setup in all other layouts that want to use TallStackUi.
+            If you are using the new SPA mode in Livewire you must add the TallStackUI setup to the first page rendered
+            in your application and persist the TallStackUI setup in all other layouts that want to use TallStackUi.
         </p>
     </x-section>
     <x-slot:navigation>

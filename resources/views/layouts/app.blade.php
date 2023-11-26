@@ -84,6 +84,9 @@
                     <p @class(['text-sm text-gray-600 dark:text-slate-400', 'mt-4' => $navigation !== null])>Code highlighting provided by <a href="https://torchlight.dev" class="font-semibold text-pink-700 underline" target="_blank">Torchlight</a></p>
                 @endif
             </div>
+            @if ($right)
+                <x-on-this-page />
+            @endif
         </div>
     </div>
     @livewireScripts

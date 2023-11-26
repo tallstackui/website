@@ -10,12 +10,12 @@
 
 @php($anchor = str($title)->slug()->lower())
 
-<div x-data="{ code : false }" @isset($id) id="{{ $id }}" @endisset>
+<div x-data="{ code : false, anchor : false }" @isset($id) id="{{ $id }}" @endisset>
     <div {{ $attributes->merge(['class' => 'flex items-center justify-between mb-4']) }}>
         <div id="{{ $anchor }}">
             @if ($title)
-                <a href="#{{ $anchor }}" @class(['text-xl tracking-tight text-pink-600 font-medium cursor-pointer'])>
-                    <span class="text-gray-300 dark:text-gray-600">#</span>
+                <a href="#{{ $anchor }}" @class(['text-xl tracking-tight text-pink-600 font-medium cursor-pointer']) x-on:mouseover="anchor = true" x-on:mouseleave="anchor = false">
+                    <span class="text-gray-400 dark:text-gray-600" x-show="anchor">#</span>
                     {{ $title }}
                 </a>
             @endif

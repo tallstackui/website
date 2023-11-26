@@ -3,13 +3,13 @@
         Contribution Guide
     </x-slot:title>
     <x-slot:description>
-        The TallStackUi Contribuition Guide.
+        TallStackUI Contribuition Guide.
     </x-slot:description>
     <x-section title="Possibilities">
         <p class="text-justify">
             There are several ways to contribute to a library like TallStackUi, <b class="underline">don't think it's just with code.</b>
             Even if you're not an experienced developer, don't worry, there are other ways to help. Do you know
-            how to write? Well, you can review the texts on both TallStackUi and our website and point out possible
+            how to write? Well, you can review the texts on both TallStackUI and our website and point out possible
             flaws. This is a way to contribute. Did you find something wrong with the website, documentation or any component of TallStackUi?
             Create an issue and report the problem. This is a way to contribute. Do you use and like TallStackUi? Why not share it with your friends?
             This is a way to contribute. Are you an experienced developer and want to join the team? Feel free to write
@@ -50,7 +50,7 @@
     </x-section>
     <x-section title="Dusk Tests">
         <p class="text-justify">
-            Some of the TallStackUi tests are written using <a href="https://laravel.com/docs/10.x/dusk" class="underline" target="_blank">Laravel Dusk</a>
+            Some of the TallStackUI tests are written using <a href="https://laravel.com/docs/10.x/dusk" class="underline" target="_blank">Laravel Dusk</a>
             through the <a href="https://github.com/orchestral/testbench-dusk" class="underline" target="_blank">Orchestral Testbench Dusk.</a>
             Although sometimes difficult, you can run the browser tests on your computer. To do this, it is essential
             to have Chrome installed. Use the commands below to prepare your environment.</p>

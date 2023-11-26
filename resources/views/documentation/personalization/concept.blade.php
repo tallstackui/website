@@ -3,11 +3,11 @@
         Personalization Concepts
     </x-slot:title>
     <x-slot:description>
-        TallStackUi available personalization concepts.
+        TallStackUI personalization concepts.
     </x-slot:description>
     <x-section>
         <p class="text-justify">
-            TallStackUi offers two personalization approaches, one that we call "soft" because it is easy and simple,
+            TallStackUI offers two personalization approaches, one that we call "soft" because it is easy and simple,
             and another called "deep" because it actually involves overriding component classes, which will require
             more technical knowledge from you. As much as you are free to choose the option you want,
             <u>we suggest you opt for soft personalization.</u>

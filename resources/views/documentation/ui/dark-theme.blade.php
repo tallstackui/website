@@ -7,7 +7,7 @@
     </x-slot:description>
     <x-section>
         <p class="text-justify">
-            TallStackUi provides a simple yet powerful helper to add dark theme support to your application. The main idea
+            TallStackUI provides a simple yet powerful helper to add dark theme support to your application. The main idea
             of this helper is to offer an easy way to control the dark theme by persisting a value in the browser's local storage.
             After applying the helper, an AlpineJS variable called <x-block>darkTheme</x-block> will be offered to control the dark theme
             persisting the changes in the local storage.
