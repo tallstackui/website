@@ -20,6 +20,10 @@ class Error
     <x-errors title="Ops! There are :count validation errors:" />
     HTML;
 
+    public const CLOSE = <<<'HTML'
+    <x-errors close />
+    HTML;
+
     public const COLORS = <<<'HTML'
     <!-- Default: red -->
 

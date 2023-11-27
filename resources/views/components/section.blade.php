@@ -1,6 +1,6 @@
-@props(['title' => null, 'description' => null, 'id' => null])
+@props(['title' => null, 'description' => null, 'anchor' => null, 'id' => null])
 
-@php($anchor = str($title)->slug()->lower())
+@php($anchor ??= str($title)->slug()->lower())
 
 <section x-data="{ anchor : false }" id="{{ $anchor }}" {{ $attributes->merge(['class' => 'text-gray-600 mb-6 dark:text-slate-400']) }} @if ($id) id="{{ $id }}" @endif>
     @if ($title)

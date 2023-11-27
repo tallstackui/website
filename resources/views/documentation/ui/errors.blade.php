@@ -34,7 +34,7 @@
         <x-preview title="Close Option"
                    description="An option to allow the user to hide the errors"
                    language="blade"
-                   :contents="$customized">
+                   :contents="$close">
             <livewire:documentation.ui.errors :close="true"/>
         </x-preview>
     </x-section>

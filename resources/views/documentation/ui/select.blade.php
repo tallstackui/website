@@ -132,6 +132,14 @@
             <livewire:documentation.ui.select.searchable :model="5"/>
         </x-preview>
     </x-section>
+    <x-section title="Filtering Using Eloquent" anchor="styled-api-filtering-using-eloquent">
+        <p class="mb-2 text-justify">
+            If you are using the select component to filter records in the database
+            through Eloquent, this code may be useful. This is a snippet code that can be applied
+            as a route in the <x-block>routes/api.php</x-block> file.
+        </p>
+        <x-code :contents="$eloquent" />
+    </x-section>
     <x-slot:navigation>
         <x-slot:back>
             <x-navigation.link href="{{ route('documentation.ui.modal') }}" text="Modal" back />

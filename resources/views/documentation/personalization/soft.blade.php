@@ -33,7 +33,7 @@
         </p>
         <x-code language="php" :contents="$example"/>
         <p class="mt-2 text-justify">
-            In this example we are touching and replacing all the classes in the <x-block>input.class.base</x-block>
+            In this example we are <u>touching and replacing all the classes</u> in the <x-block>input.class.base</x-block>
             block of the <x-block>input</x-block> component with the content: <x-block>w-full rounded-full</x-block>.
             This means that every input component displayed on the application pages will have these classes, instead of the
             original component classes.
@@ -82,17 +82,28 @@
     <x-section title="Interacting with Default Classes">
         <p class="text-justify mb-4">
             Although all the examples above are valid, they overwrite the original block classes by defining the second parameter
-            of the <x-block>blocks</x-block> method, this is a way of doing a complete replacement of the original component classes
-            by the blocks, an expected behavior when the soft personalization was created. Luckily we have an easy way to interact
+            of the <x-block>blocks</x-block> method, this is a way of doing a <u>complete replacement of the original component classes
+            by the blocks</u>, an expected behavior when the soft personalization was created. Luckily we have an easy way to interact
             with the original classes by touching their content but preserving everything else. Let's take a look at an example:
             <x-code :contents="$replace"/>
             <p class="mt-2">
-                Note that in the example above we omitted the second parameter of the <x-block>blocks</x-block> method,
+                Note that in the example above <u>we omitted the second parameter of the <x-block>blocks</x-block> method</u>,
                 this way we can access four useful methods that allow us to touch the component's original
                 classes in an easy way in order to make modifications while maintaining the rest of the original content.
             </p>
-            <p class="mt-4">All useful methods:</p>
+            <p class="mt-4">All the four methods:</p>
             <x-code :contents="$usefulMethods"/>
+            <p class="my-4 text-justify">
+                Now that these methods have been introduced, let's imagine that you want to
+                transform all your inputs into a fully round style to follow the look of your
+                application, so all the work (🥵) you need to do is:
+            </p>
+            <x-code :contents="$realExample"/>
+            <p class="mt-4 text-justify">
+                Without spending a lot of time, without a lot of effort, without a lot of technical
+                knowledge you have just achieved your goal in an extremely quick, expressive and direct way.
+                Isn't that amazing? 😎
+            </p>
         </p>
     </x-section>
     <x-section title="Tracing TailwindCSS Classes">
@@ -106,7 +117,7 @@
     </x-section>
     <x-section title="Personalizable Blocks">
         <p class="text-justify mb-4">
-            All component documentation mentions their respective blocks in a button at the top of the page.
+            All component documentation mentions their respective blocks in a button at the top of each page.
         </p>
     </x-section>
     <x-slot:navigation>

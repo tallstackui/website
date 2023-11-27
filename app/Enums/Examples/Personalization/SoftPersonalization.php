@@ -189,22 +189,39 @@ class SoftPersonalization
            TallStackUi::personalize()
                ->form('input')
                ->block('input.class.base')
+               ->replace('rounded-md', 'rounded-full'); // string or array [tl! highlight]
+
+           TallStackUi::personalize()
+               ->form('input')
+               ->block('input.class.base')
+               ->remove('rounded-md'); // string or array [tl! highlight]
+
+           TallStackUi::personalize()
+               ->form('input')
+               ->block('input.class.base')
+               ->append('px-4'); // string only [tl! highlight]
+
+           TallStackUi::personalize()
+               ->form('input')
+               ->block('input.class.base')
+               ->prepend('py-4'); // string only [tl! highlight]
+        }
+    }
+    HTML;
+
+    public const REAL_EXAMPLE = <<<'HTML'
+    use TallStackUi\Facades\TallStackUi;
+
+    class AppServiceProvider extends ServiceProvider
+    {
+        public function boot(): void
+        {
+            // ...
+
+           TallStackUi::personalize()
+               ->form('input')
+               ->block('input.class.base')
                ->replace('rounded-md', 'rounded-full'); // [tl! highlight]
-
-           TallStackUi::personalize()
-               ->form('input')
-               ->block('input.class.base')
-               ->remove('rounded-md'); // also accept array [tl! highlight]
-
-           TallStackUi::personalize()
-               ->form('input')
-               ->block('input.class.base')
-               ->append('px-4'); // [tl! highlight]
-
-           TallStackUi::personalize()
-               ->form('input')
-               ->block('input.class.base')
-               ->prepend('py-4'); // [tl! highlight]
         }
     }
     HTML;

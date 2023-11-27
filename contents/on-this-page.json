@@ -159,7 +159,8 @@
                 "1": "Label & Hint",
                 "2": "Multiple",
                 "3": "Advanced Usage",
-                "4": "Slot After"
+                "4": "Slot After",
+                "5": "Filtering Using Eloquent"
             }
         }
     },
