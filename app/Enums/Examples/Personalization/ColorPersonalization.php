@@ -37,7 +37,7 @@ class ColorPersonalization
                     '800': '#676767',
                     '900': '#545454',
                     '950': '#363636',
-                }
+                },
                 'dark': {
                     DEFAULT: '#3f4d69',
                     '50': '#f6f7f9',
