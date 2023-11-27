@@ -16,9 +16,8 @@ test('cannot use dangerous functions')
 test('can access all routes', function (string $route) {
     $this->get($route)->assertOk();
 })->with([
-    fn () => route('welcome'),
-    fn () => route('installation'),
-    fn () => route('beta'),
+    fn () => route('documentation.get-started'),
+    fn () => route('documentation.installation'),
     //
     fn () => route('documentation.form.input'),
     fn () => route('documentation.form.password'),
@@ -35,13 +34,14 @@ test('can access all routes', function (string $route) {
     fn () => route('documentation.ui.dropdown'),
     fn () => route('documentation.ui.error'),
     fn () => route('documentation.ui.icon'),
-    fn () => route('documentation.ui.dialog'),
     fn () => route('documentation.ui.select'),
     fn () => route('documentation.ui.slide'),
     fn () => route('documentation.ui.tab'),
-    fn () => route('documentation.ui.toast'),
     fn () => route('documentation.ui.tooltip'),
     fn () => route('documentation.ui.modal'),
+    //
+    fn () => route('documentation.interaction.dialog'),
+    fn () => route('documentation.interaction.toast'),
     //
     fn () => route('documentation.internal.error'),
     fn () => route('documentation.internal.hint'),

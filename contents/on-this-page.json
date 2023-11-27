@@ -1,4 +1,45 @@
 {
+    "docs.installation": {
+        "0": "Requirements",
+        "1": "Installation",
+        "2": "Livewire SPA Mode"
+    },
+    "docs.form.input": {
+        "0": "Basic Usage",
+        "1": "Label & Hint",
+        "2": "Required Label Indicator",
+        "3": "Icon Slot"
+    },
+    "docs.form.password": {
+        "0": "Basic Usage",
+        "1": "Label & Hint",
+        "2": "Required Label Indicator"
+    },
+    "docs.form.textarea": {
+        "0": "Basic Usage",
+        "1": "Label & Hint",
+        "2": "Required Label Indicator",
+        "3": "Resize",
+        "4": "Resize Auto"
+    },
+    "docs.form.checkbox": {
+        "0": "Basic Usage",
+        "1": "Label",
+        "2": "Size Variations",
+        "4": "Color Variations"
+    },
+    "docs.form.radio": {
+        "0": "Basic Usage",
+        "1": "Label",
+        "2": "Size Variations",
+        "4": "Color Variations"
+    },
+    "docs.form.toggle": {
+        "0": "Basic Usage",
+        "1": "Label",
+        "2": "Size Variations",
+        "4": "Color Variations"
+    },
     "docs.ui.alert": {
         "0": "Basic Usage",
         "1": "Title",
@@ -147,5 +188,53 @@
         "3": "HTML Content",
         "4": "Color Variations",
         "5": "Outline Variations"
+    },
+    "docs.interaction.dialog": {
+        "0": "Configuration",
+        "1": "Basic Usage",
+        "2": "Confirmations",
+        "3": "Configurations"
+    },
+    "docs.interaction.toast": {
+        "0": "Configuration",
+        "1": "Basic Usage",
+        "2": "Confirmations",
+        "3": "Time Control",
+        "4": "Configurations"
+    },
+    "docs.configuration": {
+        "0": "Configuration File",
+        "1": "Content"
+    },
+    "docs.translation": {
+        "0": "Translation Files",
+        "1": "Content"
+    },
+    "docs.personalization.soft": {
+        "0": "Concept",
+        "1": "Example of Component Structure",
+        "2": "Start the Personalization",
+        "3": "Fluent Personalization",
+        "4": "Multiple Personalization Ways",
+        "5": "Invokable Class",
+        "6": "Component Data Parameters",
+        "7": "Interacting with Default Classes",
+        "8": "Tracing TailwindCSS Classes",
+        "9": "Personalizable Blocks"
+    },
+    "docs.personalization.deep": {
+        "0": "Publishing Configuration File",
+        "1": "Overriding Component Class",
+        "2": "Overriding Component Colors",
+        "3": "Publishing Blade Files",
+        "4": "Tracing TailwindCSS Classes"
+    },
+    "docs.contribution": {
+        "0": "Possibilities",
+        "1": "Writing Codes",
+        "2": "Prepare Environment",
+        "3": "Dusk Tests",
+        "4": "Run Tests",
+        "5": "Synchronize Changes"
     }
 }

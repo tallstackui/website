@@ -27,7 +27,7 @@
             to personalize components, so even if the developer is a beginner, he doesn't need to have difficulty personalizing the components.
         </p>
     </x-section>
-    <x-section title="The Personalization">
+    <x-section title="Start the Personalization">
         <p class="mb-4 text-justify">
             Let's take a look at an example:
         </p>
@@ -79,7 +79,7 @@
             You can use this to interact with your personalization.
         </p>
     </x-section>
-    <x-section title="Preserving Default Classes">
+    <x-section title="Interacting with Default Classes">
         <p class="text-justify mb-4">
             Although all the examples above are valid, they overwrite the original block classes by defining the second parameter
             of the <x-block>blocks</x-block> method, this is a way of doing a complete replacement of the original component classes
@@ -104,7 +104,7 @@
         </p>
         <x-code language="js" :contents="$tailwindcss"/>
     </x-section>
-    <x-section title="Component Personalizable Blocks">
+    <x-section title="Personalizable Blocks">
         <p class="text-justify mb-4">
             All component documentation mentions their respective blocks in a button at the top of the page.
         </p>

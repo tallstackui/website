@@ -72,10 +72,13 @@
     <x-section title="Synchronize Changes">
         <p class="text-justify">
             Sometimes you can make changes to components, but the change is not noticed, it is
-            like a cache state in Composer and in the Laravel project. If this is the case,
+            like a cache state in the Laravel project. If this is the case,
             use the instruction below to synchronize the changes with Composer:
         </p>
         <x-code language="shell" :contents="$synchronize" />
+        <x-warning>
+            <b>TIP!</b> Create an alias to facilitate the execution of this command.
+        </x-warning>
     </x-section>
     <x-slot:navigation>
         <x-slot:back>

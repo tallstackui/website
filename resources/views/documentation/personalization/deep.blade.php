@@ -226,7 +226,7 @@
             </x-table.tbody>
         </x-table>
     </x-section>
-    <x-section title="Publishing Blade Views">
+    <x-section title="Publishing Blade Files">
         <p class="mb-4 text-justify">
             You can also edit the Blade files of the TallStackUI components. Use this command to publish the files:
         </p>

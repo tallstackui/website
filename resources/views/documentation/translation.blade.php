@@ -5,7 +5,7 @@
     <x-slot:description>
         TallStackUI translations.
     </x-slot:description>
-    <x-section title="Configuration File">
+    <x-section title="Translation Files">
         <p class="text-justify">
             You are free to customize various texts that are in use in TallStackUI components.
         </p>
@@ -13,7 +13,7 @@
         <x-code language="shell" :contents="$command"/>
     </x-section>
     <x-section title="Content">
-        <p class="text-justify">This command will publish the TallStackUI translation files for the root path of your application, inside the <x-block>lang</x-block> folder.</p>
+        <p class="text-justify">This command will publish the TallStackUI translation files for the root path of your application.</p>
     </x-section>
     <x-slot:navigation>
         <x-slot:back>

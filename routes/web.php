@@ -71,6 +71,13 @@ Route::prefix('/docs')
                 Route::get('/modal', Modal::class)->name('modal');
             });
 
+        Route::prefix('/interaction')
+            ->name('interaction.')
+            ->group(function () {
+                Route::get('/dialog', Dialog::class)->name('dialog');
+                Route::get('/toast', Toast::class)->name('toast');
+            });
+
         Route::controller(Internal::class)
             ->prefix('/interal')
             ->name('internal.')
