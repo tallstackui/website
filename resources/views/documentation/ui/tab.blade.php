@@ -10,7 +10,7 @@
         <livewire:documentation.personalization :personalization="$personalizationItems" component="tab.items" />
     </x-slot:personalization>
     <x-section>
-        <x-preview title="Basic"
+        <x-preview title="Basic Usage"
                    language="blade"
                    :background="false"
                    :contents="$basic">
@@ -64,7 +64,7 @@
         </x-preview>
     </x-section>
     <x-section>
-        <x-preview title="Wireable Live Property"
+        <x-preview title="Live Wireable"
                    description="An option to control the tab entangled live with a Livewire property."
                    language="blade"
                    :background="false"

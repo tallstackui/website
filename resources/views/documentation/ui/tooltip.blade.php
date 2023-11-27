@@ -21,7 +21,7 @@
         </x-preview>
     </x-section>
     <x-section>
-        <x-preview title="Customizing Icon"
+        <x-preview title="Customized Icon"
                    language="blade"
                    :contents="$icons">
             <div class="inline-flex space-x-2">

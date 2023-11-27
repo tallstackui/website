@@ -22,7 +22,7 @@
         </x-preview>
     </x-section>
     <x-section>
-        <x-preview title="Positions"
+        <x-preview title="Available Positions"
                    language="blade"
                    :contents="$positions">
             <div class="flex justify-start md:justify-center">

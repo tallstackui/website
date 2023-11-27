@@ -16,7 +16,7 @@
         </x-preview>
     </x-section>
     <x-section>
-        <x-preview title="Ignoring Properties"
+        <x-preview title="Filtering Properties"
                    description="An option to show validation errors for specific properties."
                    language="blade"
                    :contents="$specific">
@@ -24,17 +24,10 @@
         </x-preview>
     </x-section>
     <x-section>
-        <x-preview title="Title Customized"
+        <x-preview title="Title Customization"
                    language="blade"
                    :contents="$customized">
             <livewire:documentation.ui.errors title="Ops! There are :count validation errors:"/>
-        </x-preview>
-    </x-section>
-    <x-section>
-        <x-preview title="Pulse Effect"
-                   language="blade"
-                   :contents="$pulse">
-            <livewire:documentation.ui.errors title="Ops! There are :count validation errors:" pulse />
         </x-preview>
     </x-section>
     <x-section>

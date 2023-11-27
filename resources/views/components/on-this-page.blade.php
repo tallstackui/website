@@ -8,7 +8,7 @@
                     @foreach ($contents as $parent => $children)
                     <li>
                         <h3><a class="text-pink-500 font-semibold">{{ $parent }}</a></h3>
-                        <ol role="list" class="mt-2 pl-5 text-slate-500 space-y-3 dark:text-slate-400">
+                        <ol role="list" class="mt-2 pl-5 text-gray-500 space-y-3 dark:text-gray-400">
                             @foreach ($children as $child)
                                 <li><a class="hover:text-pink-600 dark:hover:text-gray-300" href="#{{ ($child['prefix'] ?? '') . $child['anchor'] }}">{{ $child['title'] }}</a></li>
                             @endforeach
@@ -19,7 +19,7 @@
                 @else
                     @foreach ($contents as $content)
                         <li>
-                            <h3 class="text-gray-600 transition hover:text-pink-600 dark:text-gray-500 dark:hover:text-gray-300">
+                            <h3 class="text-gray-500 transition hover:text-pink-600 dark:text-gray-400 dark:hover:text-gray-300">
                                 <a href="#{{ $content['anchor'] }}">{{ $content['title'] }}</a>
                             </h3>
                         </li>

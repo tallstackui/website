@@ -21,8 +21,8 @@
     },
     "docs.ui.badge": {
         "0": "Basic Usage",
-        "1": "Square Variations",
-        "2": "Round Variations",
+        "1": "Square Variation",
+        "2": "Round Variation",
         "3": "Icon Slot",
         "4": "Size Variations",
         "5": "Color Variations",
@@ -57,5 +57,95 @@
                 "8": "Outline Variations"
             }
         }
+    },
+    "docs.ui.card": {
+        "0": "Basic Usage",
+        "1": "Header Slot",
+        "2": "Footer Slot"
+    },
+    "docs.ui.dropdown": {
+        "0": "Basic Usage",
+        "1": "Available Positions",
+        "2": "Icon Slot",
+        "3": "Icon Slot Static",
+        "4": "Header Slot",
+        "5": "Action Slot"
+    },
+    "docs.ui.error": {
+        "0": "Basic Usage",
+        "1": "Filtering Properties",
+        "2": "Title Customization",
+        "3": "Color Variations"
+    },
+    "docs.ui.modal": {
+        "0": "Basic Usage",
+        "1": "Title Slot",
+        "2": "Footer Slot",
+        "3": "Background Blur",
+        "4": "Size Variations",
+        "5": "Z Index",
+        "6": "Persistent",
+        "7": "Wireable",
+        "8": "Wireable Personalized",
+        "9": "AlpineJS Helper",
+        "10": "Configurations"
+    },
+    "docs.ui.select": {
+        "Native": {
+            "prefix": true,
+            "contents": {
+                "0": "Basic Usage",
+                "1": "Label & Hint",
+                "2": "Multi-dimensional Array"
+            }
+        },
+        "Styled": {
+            "prefix": true,
+            "contents": {
+                "0": "Basic Usage",
+                "1": "Label & Hint",
+                "2": "Multiple",
+                "3": "Multi-dimensional Array",
+                "4": "Searchable",
+                "5": "Slot After"
+            }
+        },
+        "Styled API": {
+            "prefix": true,
+            "contents": {
+                "0": "Basic Usage",
+                "1": "Label & Hint",
+                "2": "Multiple",
+                "3": "Advanced Usage",
+                "4": "Slot After"
+            }
+        }
+    },
+    "docs.ui.slide": {
+        "0": "Basic Usage",
+        "1": "Title Slot",
+        "2": "Footer Slot",
+        "3": "Background Blur",
+        "4": "Size Variations",
+        "5": "Z Index",
+        "6": "Persistent",
+        "7": "Wireable",
+        "8": "Wireable Personalized",
+        "9": "AlpineJS Helper",
+        "10": "Configurations"
+    },
+    "docs.ui.tab": {
+        "0": "Basic Usage",
+        "1": "Slots",
+        "2": "Wireable",
+        "3": "Live Wireable"
+    },
+    "docs.ui.tooltip": {
+        "0": "Basic Usage",
+        "1": "Customized Icon",
+        "2": "Size Variations",
+        "3": "HTML Content",
+        "4": "Color Variations",
+        "5": "Outline Variations"
     }
 }

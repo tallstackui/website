@@ -70,7 +70,10 @@ class OnThisPage extends Component
         // If is a nested array and has prefix, we add the prefix using the parent name
         // For situations like the button page, that contains two types of buttons.
         if ($parent && data_get($structure, 'prefix') === true) {
-            $data[$child]['prefix'] = str($parent)->lower()->append('-')->value();
+            $data[$child]['prefix'] = str($parent)->lower()
+                ->replace(' ', '-')
+                ->append('-')
+                ->value();
         }
 
         return $data;
