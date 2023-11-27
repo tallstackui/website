@@ -5572,12 +5572,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/tallstackui/tallstackui.git",
-                "reference": "e4842312be5a97f7a7a931ad09f0923e911309f0"
+                "reference": "43ad359942d6fb4e0e63166d129bb06bf4715938"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tallstackui/tallstackui/zipball/e4842312be5a97f7a7a931ad09f0923e911309f0",
-                "reference": "e4842312be5a97f7a7a931ad09f0923e911309f0",
+                "url": "https://api.github.com/repos/tallstackui/tallstackui/zipball/43ad359942d6fb4e0e63166d129bb06bf4715938",
+                "reference": "43ad359942d6fb4e0e63166d129bb06bf4715938",
                 "shasum": ""
             },
             "require": {
@@ -5625,7 +5625,7 @@
                 "issues": "https://github.com/tallstackui/tallstackui/issues",
                 "source": "https://github.com/tallstackui/tallstackui/tree/develop"
             },
-            "time": "2023-11-25T05:46:15+00:00"
+            "time": "2023-11-27T02:08:05+00:00"
         },
         {
             "name": "tijsverkoyen/css-to-inline-styles",
@@ -7451,16 +7451,16 @@
         },
         {
             "name": "phpstan/phpdoc-parser",
-            "version": "1.24.3",
+            "version": "1.24.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpstan/phpdoc-parser.git",
-                "reference": "12f01d214f1c73b9c91fdb3b1c415e4c70652083"
+                "reference": "6bd0c26f3786cd9b7c359675cb789e35a8e07496"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpdoc-parser/zipball/12f01d214f1c73b9c91fdb3b1c415e4c70652083",
-                "reference": "12f01d214f1c73b9c91fdb3b1c415e4c70652083",
+                "url": "https://api.github.com/repos/phpstan/phpdoc-parser/zipball/6bd0c26f3786cd9b7c359675cb789e35a8e07496",
+                "reference": "6bd0c26f3786cd9b7c359675cb789e35a8e07496",
                 "shasum": ""
             },
             "require": {
@@ -7492,9 +7492,9 @@
             "description": "PHPDoc parser with support for nullable, intersection and generic types",
             "support": {
                 "issues": "https://github.com/phpstan/phpdoc-parser/issues",
-                "source": "https://github.com/phpstan/phpdoc-parser/tree/1.24.3"
+                "source": "https://github.com/phpstan/phpdoc-parser/tree/1.24.4"
             },
-            "time": "2023-11-18T20:15:32+00:00"
+            "time": "2023-11-26T18:29:22+00:00"
         },
         {
             "name": "phpstan/phpstan",

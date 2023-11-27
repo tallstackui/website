@@ -24,7 +24,7 @@
         <x-code language="js" :contents="$tailwindcss" :copy="false" />
         <p class="mt-4">5. Build the assets and do a full cleanup in the Laravel:</p>
         <x-code language="shell" :contents="$build" />
-        <p>You're ready to create your first TallStackUI components.</p>
+        <p class="mt-4 text-pink-600 dark:text-gray-300 font-bold">You're ready to create your first TallStackUI components.</p>
     </x-section>
     <x-section title="Livewire SPA Mode">
         <p class="text-justify">

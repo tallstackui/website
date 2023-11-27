@@ -43,7 +43,7 @@
     "docs.ui.alert": {
         "0": "Basic Usage",
         "1": "Title",
-        "2": "Closeable",
+        "2": "Close Option",
         "3": "Icon Slot",
         "4": "Color Variations",
         "5": "Outline Variations",
@@ -116,7 +116,8 @@
         "0": "Basic Usage",
         "1": "Filtering Properties",
         "2": "Title Customization",
-        "3": "Color Variations"
+        "3": "Close Option",
+        "4": "Color Variations"
     },
     "docs.ui.modal": {
         "0": "Basic Usage",

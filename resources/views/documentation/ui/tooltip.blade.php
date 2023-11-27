@@ -48,7 +48,9 @@
                    language="blade"
                    :contents="$html">
             <div class="inline-flex space-x-2">
-                <x-tooltip text="<b>Tall</b><i>Stack</i><u>Ui</u>" />
+                <x-tooltip>
+                    <b>Tall</b><i>Stack</i><u>Ui</u>
+                </x-tooltip>
             </div>
         </x-preview>
     </x-section>

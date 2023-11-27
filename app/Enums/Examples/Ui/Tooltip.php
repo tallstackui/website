@@ -25,7 +25,9 @@ class Tooltip
     HTML;
 
     public const HTML = <<<'HTML'
-    <x-tooltip text="<b>Tall</b><i>Stack</i><u>Ui</u>" />
+    <x-tooltip>
+        <b>Tall</b><i>Stack</i><u>Ui</u>
+    </x-tooltip>
     HTML;
 
     public const COLORS = <<<'HTML'
