@@ -31,7 +31,7 @@
     <x-dialog />
     <x-toast />
     <x-top-bar>
-        <a href="https://github.com/tallstackui/tallstackui/releases" target="_blank" class="underline decoration-dotted underline-offset-4">TallStackUi 1.0 is here! 🎉</a>
+        <a href="https://github.com/tallstackui/tallstackui/releases" target="_blank" class="underline decoration-dotted underline-offset-4">TallStackUI 1.0 is here! 🎉</a>
     </x-top-bar>
     <x-layout.header />
     <div class="flex flex-col">

@@ -162,7 +162,7 @@
         </x-preview>
     </x-section>
     <x-warning text="Make sure to provide some way to close the modal when using this option, such as a button within the modal." />
-    <x-section class="mt-2 space-y-2">
+    <x-section class="mt-4 space-y-4">
         <x-preview title="Wireable"
                    description="An option to control the modal entangled with a Livewire property."
                    language="blade"

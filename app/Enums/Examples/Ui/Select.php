@@ -75,13 +75,13 @@ class Select
     /* Styled Searchable */
 
     public const SEARCHABLE = <<<'HTML'
-    <x-select.searchable request="https://jsonplaceholder.typicode.com/users"
+    <x-select.searchable :request="route('api.users')"
                          select="label:name|value:id"
                          wire:model="value" />
     HTML;
 
     public const SEARCHABLE_LABEL_HINT = <<<'HTML'
-    <x-select.styled request="https://jsonplaceholder.typicode.com/users"
+    <x-select.styled :request="route('api.users')"
                      select="label:name|value:id"
                      label="Select One User"
                      hint="You can choose whoever you want"
@@ -91,7 +91,7 @@ class Select
     public const SEARCHABLE_MULTIPLE = <<<'HTML'
     <!-- The Livewire property to bind must be an array -->
 
-    <x-select.styled request="https://jsonplaceholder.typicode.com/users"
+    <x-select.styled :request="route('api.users')"
                      select="label:name|value:id"
                      wire:model="options"
                      multiple />
@@ -101,7 +101,7 @@ class Select
     <!-- Method can be 'get' or 'post' -->
 
     <x-select.styled :request="[
-                        'url' => 'https://jsonplaceholder.typicode.com/users',
+                        'url' => route('api.users'),
                         'method' => 'get',
                         'params' => ['library' => 'TallStackUi'],
                      ]"
@@ -110,7 +110,7 @@ class Select
     HTML;
 
     public const SEARCHABLE_SLOT = <<<'HTML'
-    <x-select.styled request="https://jsonplaceholder.typicode.com/users"
+    <x-select.styled :request="route('api.users')"
                      select="label:name|value:id"
                      label="Select One User"
                      hint="Enter any random value to see the slot"
