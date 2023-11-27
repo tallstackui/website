@@ -20,26 +20,26 @@ new class extends Component {
 
 <div>
     @if ($model === 1)
-        <x-select.styled request="https://jsonplaceholder.typicode.com/users"
+        <x-select.styled :request="route('api.users')"
                         select="label:name|value:id"
                         wire:model="value"
         />
     @elseif ($model === 2)
-        <x-select.styled request="https://jsonplaceholder.typicode.com/users"
+        <x-select.styled :request="route('api.users')"
                         select="label:name|value:id"
                         label="Select One User"
                         hint="You can choose whoever you want"
                         wire:model="value"
         />
     @elseif ($model === 3)
-        <x-select.styled request="https://jsonplaceholder.typicode.com/users"
+        <x-select.styled :request="route('api.users')"
                         select="label:name|value:id"
                         wire:model="options"
                         multiple
         />
     @elseif ($model === 4)
         <x-select.styled :request="[
-                           'url' => 'https://jsonplaceholder.typicode.com/users',
+                           'url' => route('api.users'),
                            'method' => 'get',
                            'params' => [
                                'library' => 'TallStackUi',
@@ -49,7 +49,7 @@ new class extends Component {
                         wire:model="value"
         />
     @elseif ($model === 5)
-        <x-select.styled request="https://jsonplaceholder.typicode.com/users"
+        <x-select.styled :request="route('api.users')"
                         select="label:name|value:id"
                         label="Select One User"
                         hint="Enter any random value to see the slot"

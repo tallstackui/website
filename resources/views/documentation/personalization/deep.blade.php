@@ -39,7 +39,7 @@
             visit the documentation for the component you are personalizing.
         </p>
         <x-warning>
-            Thanks to careful engineering, even if you prefer to use deep personalization,
+            Even if you prefer to use deep personalization,
             <a href="{{ route('documentation.personalization.soft') }}" class="underline">soft personalization</a> can still be applied to components.
         </x-warning>
     </x-section>
