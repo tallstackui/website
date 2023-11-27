@@ -1,0 +1,75 @@
+@import '@docsearch/css/dist/_variables.css';
+@import '@docsearch/css/dist/modal.css';
+
+:root {
+    --docsearch-container-background: rgba(0, 0, 0, 0.5);
+    --docsearch-primary-color: #d4066d;
+}
+
+[id=docsearch] {
+    width: 100%;
+    @apply md:w-auto;
+}
+
+.DocSearch-Button {
+    @apply border border-solid border-gray-400/50 dark:border-white/10 dark:bg-black/10 flex items-center;
+    @apply w-full;
+
+    &:hover {
+        box-shadow: none;
+        @apply text-gray-400 border-gray-400/70 bg-transparent dark:border-white/20;
+    }
+}
+
+.DocSearch-Button .DocSearch-Search-Icon {
+    height: 0.87rem;
+    @apply text-gray-500 dark:text-white/60;
+}
+
+.DocSearch-Button-Placeholder {
+    @apply dark:text-white/60 pr-56 text-xs;
+}
+
+.DocSearch-Button-Keys {
+    display: flex;
+    min-width: auto;
+
+    @apply mt-1 text-xs leading-none;
+}
+
+.DocSearch-Button-Key {
+    background: none;
+    box-shadow: none;
+    width: auto;
+
+    @apply font-sans mr-0.5;
+}
+
+.DocSearch-Modal {
+    @apply text-black;
+}
+
+.DocSearch-Screen-Icon {
+    display: none;
+}
+
+.DocSearch-Form {
+    @apply bg-white;
+    @apply border border-solid border-gray-400/50 dark:border-white/10;
+    @apply rounded-lg;
+    @apply w-full;
+    @apply max-w-full;
+    @apply overflow-hidden;
+    @apply shadow-md;
+}
+
+.DocSearch-Input {
+    @apply focus-visible:outline-none;
+    @apply focus:outline-none;
+    @apply border border-primary-600;
+    @apply focus:border-primary-600 focus:ring-0 focus:ring-offset-0;
+}
+
+.DocSearch-MagnifierLabel {
+    @apply hidden;
+}

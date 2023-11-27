@@ -1,5 +1,6 @@
 import './bootstrap';
 import clipboard from "./modules/clipboard";
+import docsearch from '@docsearch/js';
 
 document.addEventListener('alpine:init', () => {
     window.Alpine.data('clipboard', clipboard)
@@ -28,3 +29,11 @@ document.addEventListener('livewire:init', () => {
         })
     }
 })
+
+docsearch({
+    appId: 'R2IYF7ETH7',
+    apiKey: '599cec31baffa4868cae4e79f180729b',
+    indexName: 'docsearch',
+    container: '#docsearch',
+    debug: false
+});

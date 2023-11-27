@@ -9,7 +9,6 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>TallStackUI, @if ($title) {{ $title }} @endif</title>
-    <style> [x-cloak] { display: none; } </style>
 
     <meta name="twitter:card" content="summary">
     <meta name="twitter:site" content="{{ config('app.url') }}">
@@ -25,7 +24,7 @@
 
     <tallstackui:script />
     @livewireStyles
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
+    @vite(['resources/css/app.scss', 'resources/js/app.js'])
 </head>
 <body class="min-h-full flex-col justify-center bg-gray-100 dark:bg-slate-900" x-bind:class="{ 'bg-dots-white' : darkTheme, 'bg-dots-darker' : !darkTheme }" x-data="{ mobile : false }" x-cloak>
     <x-dialog />
