@@ -10,8 +10,8 @@
     </x-slot:personalization>
     <x-section>
         <x-preview title="Basic Usage"
-                        language="blade"
-                        :contents="$basic">
+                   language="blade"
+                   :contents="$basic">
             <x-avatar text="TS" />
         </x-preview>
     </x-section>
@@ -100,7 +100,7 @@
             </div>
         </x-preview>
     </x-section>
-    <x-separator />
+    <x-separator text="Modelable" />
     <x-section class="space-y-4">
         <x-preview title="Modelable"
                    language="blade"

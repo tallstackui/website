@@ -37,7 +37,7 @@
             ]" select="label:label|value:value"/>
         </x-preview>
     </x-section>
-    <x-separator />
+    <x-separator text="Styled Select" />
     <x-section>
         <x-preview title="Basic Usage"
                    anchor="styled-basic-usage"
@@ -89,7 +89,7 @@
             <livewire:documentation.ui.select.styled :model="6"/>
         </x-preview>
     </x-section>
-    <x-separator />
+    <x-separator text="Styled API Select" />
     <x-section>
         <x-preview title="Basic Usage"
                    anchor="styled-api-basic-usage"

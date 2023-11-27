@@ -162,7 +162,7 @@
             </div>
         </x-preview>
     </x-section>
-    <x-separator/>
+    <x-separator text="Circle Button" />
     <x-section>
         <x-preview title="Basic Usage"
                    anchor="circle-basic-usage"
