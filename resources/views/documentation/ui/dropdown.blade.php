@@ -25,6 +25,9 @@
         <x-preview title="Available Positions"
                    language="blade"
                    :contents="$positions">
+            <x-slot:description>
+                All available positions based on the <a href="https://alpinejs.dev/plugins/anchor" target="_blank" class="underline">AlpineJS anchor plugin.</a>
+            </x-slot:description>
             <div class="flex justify-start md:justify-center">
                 <x-dropdown text="Menu" position="bottom-start">
                     <x-dropdown.items text="Settings" />
@@ -80,7 +83,7 @@
             <div class="flex justify-end md:justify-center">
                 <x-dropdown position="bottom-end">
                     <x-slot:action>
-                        <x-button x-on:click="show = !show" sm outline>Open</x-button>
+                        <x-button x-on:click="show = !show" sm>Open</x-button>
                     </x-slot:action>
                     <x-dropdown.items icon="cog" text="Settings" />
                     <x-dropdown.items icon="arrow-left-on-rectangle" text="Logout" separator />
