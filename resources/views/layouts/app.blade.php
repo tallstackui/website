@@ -19,6 +19,14 @@
     <meta property="og:url" content="{{ config('app.url') }}" />
     <meta property="og:title" content="TallStackUI: New friendly TALL Stack Component Library" />
 
+    <link rel="apple-touch-icon" href="{{ asset('assets/images/apple-touch-icon.png') }}" >
+    <link rel="icon" ype="image/x-icon" href="{{ asset('assets/images/favicon.ico') }}">
+    <link rel="icon" type="image/png" href="{{ asset('assets/images/favicon-16x16.png') }}" sizes="16x16">
+    <link rel="icon" type="image/png" href="{{ asset('assets/images/favicon-32x32.png') }}" sizes="32x32">
+    <link rel="icon" type="image/png" sizes="192x192"  href="{{ asset('assets/images/android-chrome-192x192.png') }}">
+    <link rel="icon" type="image/png" sizes="512x512"  href="{{ asset('assets/images/android-chrome-512x512.png') }}">
+    <link rel="manifest" href="{{ asset('assets/images/site.webmanifest') }}">
+
     <link rel="preconnect" href="https://fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet"/>
 
