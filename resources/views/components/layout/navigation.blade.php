@@ -3,7 +3,7 @@
         <div class="bg-white dark:bg-slate-900 relative">
             <button type="button" 
                     x-on:click="document.querySelector('#docsearch').firstChild.click()"
-                    class="hidden w-full lg:flex items-center text-sm leading-6 text-slate-400 rounded-md ring-1 ring-slate-300 dark:ring-slate-800 shadow-sm py-1.5 pl-2 pr-3 dark:bg-slate-800 dark:highlight-white/5 dark:hover:bg-slate-700">
+                    class="hidden w-full lg:flex items-center text-sm leading-6 text-slate-400 rounded-md ring-1 ring-slate-300 hover:bg-slate-100 dark:ring-slate-800 shadow-sm py-1.5 pl-2 pr-3 dark:bg-slate-800 dark:highlight-white/5 dark:hover:bg-slate-700">
                 <x-icon name="magnifying-glass" class="w-5 h-5 mr-4" />Quick search...
                 <div x-data="{ isWindows: /win/i.test(navigator.userAgent), isMac: /mac/i.test(navigator.userAgent) }" class="ml-auto pl-3 text-xs font-semibold">
                     <div x-show="isWindows">Ctrl K</div>
