@@ -75,9 +75,9 @@ class Select
     /* Styled Searchable */
 
     public const SEARCHABLE = <<<'HTML'
-    <x-select.searchable :request="route('api.users')"
-                         select="label:name|value:id"
-                         wire:model="value" />
+    <x-select.styled :request="route('api.users')"
+                     select="label:name|value:id"
+                     wire:model="value" />
     HTML;
 
     public const SEARCHABLE_LABEL_HINT = <<<'HTML'
