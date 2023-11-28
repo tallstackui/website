@@ -28,9 +28,7 @@
     @vite(['resources/css/app.scss', 'resources/js/app.js'])
 </head>
 <body class="min-h-full flex-col justify-center bg-gray-100 dark:bg-slate-900" x-bind:class="{ 'bg-dots-white' : darkTheme, 'bg-dots-darker' : !darkTheme }">
-    <x-top-bar>
-        <a href="https://github.com/tallstackui/tallstackui/releases" target="_blank" class="underline decoration-dotted underline-offset-4">TallStackUI 1.0 is here! 🎉</a>
-    </x-top-bar>
+    <x-release-alert />
     <div class="flex flex-col">
         <div class="relative mx-auto flex w-full max-w-screen-2xl flex-auto justify-center sm:px-2 lg:px-8 xl:px-12">
             <div class="min-w-0 max-w-2xl flex-auto px-4 py-16 lg:max-w-none lg:pr-0 lg:pl-8 xl:px-16">
