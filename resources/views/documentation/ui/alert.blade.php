@@ -30,7 +30,7 @@
         <x-preview title="Close Option"
                    description="An option to allow the user to hide the alert"
                    language="blade"
-                   :contents="$closeable">
+                   :contents="$close">
             <x-alert title="TallStackUi" close>
                 TallStackUi
             </x-alert>

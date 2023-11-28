@@ -29,8 +29,8 @@ class Alert
     </x-alert>
     HTML;
 
-    public const CLOSEABLE = <<<'HTML'
-    <x-alert title="TallStackUi" closeable>
+    public const CLOSE = <<<'HTML'
+    <x-alert title="TallStackUi" close>
         TallStackUi
     </x-alert>
     HTML;
