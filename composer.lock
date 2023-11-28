@@ -1034,16 +1034,16 @@
         },
         {
             "name": "laravel/framework",
-            "version": "v10.33.0",
+            "version": "v10.34.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "4536872e3e5b6be51b1f655dafd12c9a4fa0cfe8"
+                "reference": "92b78fdd1f386425a88f443a728efd176c666244"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/4536872e3e5b6be51b1f655dafd12c9a4fa0cfe8",
-                "reference": "4536872e3e5b6be51b1f655dafd12c9a4fa0cfe8",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/92b78fdd1f386425a88f443a728efd176c666244",
+                "reference": "92b78fdd1f386425a88f443a728efd176c666244",
                 "shasum": ""
             },
             "require": {
@@ -1232,7 +1232,7 @@
                 "issues": "https://github.com/laravel/framework/issues",
                 "source": "https://github.com/laravel/framework"
             },
-            "time": "2023-11-21T14:49:31+00:00"
+            "time": "2023-11-28T15:01:38+00:00"
         },
         {
             "name": "laravel/prompts",
@@ -5572,12 +5572,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/tallstackui/tallstackui.git",
-                "reference": "c7ac740dbd70043cbdb18760c3a8c3c04d15cecd"
+                "reference": "c89d6e8bd85f79c1ad2015a79ca3c6aaab0f73ba"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tallstackui/tallstackui/zipball/c7ac740dbd70043cbdb18760c3a8c3c04d15cecd",
-                "reference": "c7ac740dbd70043cbdb18760c3a8c3c04d15cecd",
+                "url": "https://api.github.com/repos/tallstackui/tallstackui/zipball/c89d6e8bd85f79c1ad2015a79ca3c6aaab0f73ba",
+                "reference": "c89d6e8bd85f79c1ad2015a79ca3c6aaab0f73ba",
                 "shasum": ""
             },
             "require": {
@@ -5625,7 +5625,7 @@
                 "issues": "https://github.com/tallstackui/tallstackui/issues",
                 "source": "https://github.com/tallstackui/tallstackui/tree/develop"
             },
-            "time": "2023-11-27T15:35:05+00:00"
+            "time": "2023-11-28T15:53:20+00:00"
         },
         {
             "name": "tijsverkoyen/css-to-inline-styles",
@@ -7498,16 +7498,16 @@
         },
         {
             "name": "phpstan/phpstan",
-            "version": "1.10.45",
+            "version": "1.10.46",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpstan/phpstan.git",
-                "reference": "2f024fbb47432e2e62ad8a8032387aa2dd631c73"
+                "reference": "90d3d25c5b98b8068916bbf08ce42d5cb6c54e70"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/2f024fbb47432e2e62ad8a8032387aa2dd631c73",
-                "reference": "2f024fbb47432e2e62ad8a8032387aa2dd631c73",
+                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/90d3d25c5b98b8068916bbf08ce42d5cb6c54e70",
+                "reference": "90d3d25c5b98b8068916bbf08ce42d5cb6c54e70",
                 "shasum": ""
             },
             "require": {
@@ -7556,7 +7556,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2023-11-27T14:15:06+00:00"
+            "time": "2023-11-28T14:57:26+00:00"
         },
         {
             "name": "phpunit/php-code-coverage",
