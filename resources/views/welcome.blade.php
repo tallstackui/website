@@ -9,7 +9,6 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>TallStackUI</title>
-    <style> [x-cloak] { display: none; } </style>
 
     <meta name="twitter:card" content="summary">
     <meta name="twitter:site" content="{{ config('app.url') }}">
@@ -20,6 +19,14 @@
     <meta property="og:url" content="{{ config('app.url') }}" />
     <meta property="og:title" content="TallStackUI: New friendly TALL Stack Component Library" />
 
+    <link rel="apple-touch-icon" href="{{ asset('assets/images/apple-touch-icon.png') }}" >
+    <link rel="icon" ype="image/x-icon" href="{{ asset('assets/images/favicon.ico') }}">
+    <link rel="icon" type="image/png" href="{{ asset('assets/images/favicon-16x16.png') }}" sizes="16x16">
+    <link rel="icon" type="image/png" href="{{ asset('assets/images/favicon-32x32.png') }}" sizes="32x32">
+    <link rel="icon" type="image/png" sizes="192x192"  href="{{ asset('assets/images/android-chrome-192x192.png') }}">
+    <link rel="icon" type="image/png" sizes="512x512"  href="{{ asset('assets/images/android-chrome-512x512.png') }}">
+    <link rel="manifest" href="{{ asset('assets/images/site.webmanifest') }}">
+
     <link rel="preconnect" href="https://fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet"/>
 
@@ -28,9 +35,7 @@
     @vite(['resources/css/app.scss', 'resources/js/app.js'])
 </head>
 <body class="min-h-full flex-col justify-center bg-gray-100 dark:bg-slate-900" x-bind:class="{ 'bg-dots-white' : darkTheme, 'bg-dots-darker' : !darkTheme }">
-    <x-top-bar>
-        <a href="https://github.com/tallstackui/tallstackui/releases" target="_blank" class="underline decoration-dotted underline-offset-4">TallStackUI 1.0 is here! 🎉</a>
-    </x-top-bar>
+    <x-release-alert />
     <div class="flex flex-col">
         <div class="relative mx-auto flex w-full max-w-screen-2xl flex-auto justify-center sm:px-2 lg:px-8 xl:px-12">
             <div class="min-w-0 max-w-2xl flex-auto px-4 py-16 lg:max-w-none lg:pr-0 lg:pl-8 xl:px-16">
@@ -46,7 +51,7 @@
                     </nav>
                 </header>
                 <div class="relative isolate px-6 pt-14 lg:px-8">
-                    <div class="mx-auto max-w-4xl py-32 sm:py-48 lg:py-56">
+                    <div class="mx-auto max-w-4xl py-52">
                         <div class="text-center">
                             <x-svg.tallstackui />
                             <div>
@@ -72,6 +77,46 @@
                                     Source Code
                                 </x-button>
                             </div>
+                        </div>
+                        <x-icon name="arrow-down-circle" class="mx-auto mt-16 h-12 w-12 animate-bounce text-pink-500 dark:text-pink-700" outline />
+                    </div>
+                </div>
+                <div class="bg-transparent mt-12">
+                    <div class="mx-auto max-w-7xl px-6 lg:px-8">
+                        <div class="mx-auto max-w-2xl lg:text-center">
+                            <p class="mt-2 text-3xl font-bold tracking-tight text-gray-700 dark:text-gray-300 sm:text-4xl">Your application. Our components.</p>
+                            <p class="mt-6 text-lg leading-8 text-gray-600 dark:text-gray-500">Variety of TALL Stack components ready to use with little effort.</p>
+                        </div>
+                        <div class="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
+                            <dl class="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-3">
+                                <div class="flex flex-col">
+                                    <dt class="flex items-center gap-x-3 text-lg uppercase font-semibold leading-7 text-gray-700 dark:text-pink-500">
+                                        <x-icon name="cloud-arrow-up" class="h-6 w-6 text-pink-500 dark:text-gray-400" />
+                                        Ready-to-use
+                                    </dt>
+                                    <dd class="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-600 dark:text-gray-400">
+                                        <p class="flex-auto">More than twenty ready-to-use components.</p>
+                                    </dd>
+                                </div>
+                                <div class="flex flex-col">
+                                    <dt class="flex items-center gap-x-3 text-lg uppercase font-semibold leading-7 text-gray-700 dark:text-pink-500">
+                                        <x-icon name="wrench" class="h-6 w-6 text-pink-500 dark:text-gray-400" />
+                                        Easy Installation
+                                    </dt>
+                                    <dd class="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-600 dark:text-gray-400">
+                                        <p class="flex-auto">Ready-to-use in less than five minutes.</p>
+                                    </dd>
+                                </div>
+                                <div class="flex flex-col">
+                                    <dt class="flex items-center gap-x-3 text-lg uppercase font-semibold leading-7 text-gray-700 dark:text-pink-500">
+                                        <x-icon name="paint-brush" class="h-6 w-6 text-pink-500 dark:text-gray-400" />
+                                        Soft Personalized
+                                    </dt>
+                                    <dd class="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-600 dark:text-gray-400">
+                                        <p class="flex-auto">New and exclusive personalization approaches.</p>
+                                    </dd>
+                                </div>
+                            </dl>
                         </div>
                     </div>
                 </div>
