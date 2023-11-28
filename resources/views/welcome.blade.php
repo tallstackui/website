@@ -51,7 +51,7 @@
                     </nav>
                 </header>
                 <div class="relative isolate px-6 pt-14 lg:px-8">
-                    <div class="mx-auto max-w-4xl py-32 sm:py-48 lg:py-56">
+                    <div class="mx-auto max-w-4xl py-52">
                         <div class="text-center">
                             <x-svg.tallstackui />
                             <div>
@@ -77,6 +77,46 @@
                                     Source Code
                                 </x-button>
                             </div>
+                        </div>
+                        <x-icon name="arrow-down-circle" class="mx-auto mt-16 h-12 w-12 animate-bounce text-pink-500 dark:text-pink-700" outline />
+                    </div>
+                </div>
+                <div class="bg-transparent mt-12">
+                    <div class="mx-auto max-w-7xl px-6 lg:px-8">
+                        <div class="mx-auto max-w-2xl lg:text-center">
+                            <p class="mt-2 text-3xl font-bold tracking-tight text-gray-700 dark:text-gray-300 sm:text-4xl">Your application. Our components.</p>
+                            <p class="mt-6 text-lg leading-8 text-gray-600 dark:text-gray-500">Variety of TALL Stack components ready to use with little effort.</p>
+                        </div>
+                        <div class="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
+                            <dl class="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-3">
+                                <div class="flex flex-col">
+                                    <dt class="flex items-center gap-x-3 text-lg uppercase font-semibold leading-7 text-gray-700 dark:text-pink-500">
+                                        <x-icon name="cloud-arrow-up" class="h-6 w-6 text-pink-500 dark:text-gray-400" />
+                                        Ready-to-use
+                                    </dt>
+                                    <dd class="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-600 dark:text-gray-400">
+                                        <p class="flex-auto">More than twenty ready-to-use components.</p>
+                                    </dd>
+                                </div>
+                                <div class="flex flex-col">
+                                    <dt class="flex items-center gap-x-3 text-lg uppercase font-semibold leading-7 text-gray-700 dark:text-pink-500">
+                                        <x-icon name="wrench" class="h-6 w-6 text-pink-500 dark:text-gray-400" />
+                                        Easy Installation
+                                    </dt>
+                                    <dd class="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-600 dark:text-gray-400">
+                                        <p class="flex-auto">Ready-to-use in less than five minutes.</p>
+                                    </dd>
+                                </div>
+                                <div class="flex flex-col">
+                                    <dt class="flex items-center gap-x-3 text-lg uppercase font-semibold leading-7 text-gray-700 dark:text-pink-500">
+                                        <x-icon name="paint-brush" class="h-6 w-6 text-pink-500 dark:text-gray-400" />
+                                        Soft Personalized
+                                    </dt>
+                                    <dd class="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-600 dark:text-gray-400">
+                                        <p class="flex-auto">New and exclusive personalization approaches.</p>
+                                    </dd>
+                                </div>
+                            </dl>
                         </div>
                     </div>
                 </div>
