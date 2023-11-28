@@ -30,7 +30,13 @@ use App\Http\Controllers\Documentation\Ui\Toast;
 use App\Http\Controllers\Documentation\Ui\Tooltip;
 use Illuminate\Support\Facades\Route;
 
-Route::view('/', 'welcome')->name('welcome');
+$test = <<<HTML
+<x-button />
+HTML;
+
+Route::view('/', 'welcome', [
+    'test' => $test
+])->name('welcome');
 Route::redirect('/docs', '/docs/get-started')->name('documentation');
 Route::redirect('/install', '/docs/installation')->name('documentation');
 
