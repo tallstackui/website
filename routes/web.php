@@ -37,8 +37,8 @@ HTML;
 
 Route::view('/', 'welcome', Example::Welcome->variables())->name('welcome');
 
-Route::redirect('/docs', '/docs/get-started')->name('documentation');
-Route::redirect('/install', '/docs/installation')->name('documentation');
+Route::redirect('/docs', '/docs/get-started');
+Route::redirect('/install', '/docs/installation');
 
 Route::prefix('/docs')
     ->name('documentation.')
