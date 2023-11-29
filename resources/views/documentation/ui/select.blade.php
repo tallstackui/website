@@ -39,8 +39,7 @@
         </x-preview>
     </x-section>
     <x-section title="Multiple" anchor="styled-multiple">
-        <x-preview language="blade"
-                   :contents="$styledMultiple">
+        <x-preview language="blade" :contents="$styledMultiple">
             <livewire:documentation.ui.select.styled :model="3"/>
         </x-preview>
     </x-section>
@@ -66,8 +65,7 @@
         </x-preview>
     </x-section>
     <x-section title="Label & Hint" anchor="styled-api-label-hint">
-        <x-preview language="blade"
-                   :contents="$searchableLabelHint">
+        <x-preview language="blade" :contents="$searchableLabelHint">
             <livewire:documentation.ui.select.searchable :model="2"/>
         </x-preview>
     </x-section>

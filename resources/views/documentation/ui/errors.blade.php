@@ -19,14 +19,12 @@
         </x-preview>
     </x-section>
     <x-section title="Title Customization">
-        <x-preview language="blade"
-                   :contents="$customized">
+        <x-preview language="blade" :contents="$customized">
             <livewire:documentation.ui.errors title="Ops! There are :count validation errors:"/>
         </x-preview>
     </x-section>
     <x-section title="Close Option" description="An option to allow the user to hide the errors">
-        <x-preview language="blade"
-                   :contents="$close">
+        <x-preview language="blade" :contents="$close">
             <livewire:documentation.ui.errors :close="true"/>
         </x-preview>
     </x-section>

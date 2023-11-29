@@ -15,8 +15,7 @@
         </x-preview>
     </x-section>
     <x-section title="Tag A Usage" anchor="normal-tag-a-usage">
-        <x-preview language="blade"
-                   :contents="$a">
+        <x-preview language="blade" :contents="$a">
             <x-button href="https://google.com.br" target="_blank">TallStackUi</x-button>
         </x-preview>
     </x-section>
@@ -27,8 +26,7 @@
         </x-preview>
     </x-section>
     <x-section title="Round Variation" anchor="normal-round-variation">
-        <x-preview language="blade"
-                   :contents="$round">
+        <x-preview language="blade" :contents="$round">
             <x-button round>TallStackUi</x-button>
         </x-preview>
     </x-section>
@@ -145,8 +143,7 @@
         </x-preview>
     </x-section>
     <x-section title="Tag A Button" anchor="circle-tag-a-usage">
-        <x-preview language="blade"
-                   :contents="$circleA">
+        <x-preview language="blade" :contents="$circleA">
             <x-button.circle href="https://google.com.br" target="_blank">TS</x-button.circle>
         </x-preview>
     </x-section>
