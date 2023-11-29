@@ -6,20 +6,20 @@
         The deep personalization.
     </x-slot:description>
     <x-section>
-        <p class="text-justify">
+        <p>
             The deep personalization is a way to personalize components more deeply by <u>overriding the component's original class.</u>
             This form of personalization requires more work and more technical knowledge. <u>We strongly suggest that you prefer
             soft personalization</u>, which does not require as much technical knowledge from you.
         </p>
     </x-section>
     <x-section title="Publishing Configuration File">
-        <p class="text-justify">
+        <p>
             To start deep personalization you must publish the TallStackUI configuration file.
             <a class="underline" href="{{ route('documentation.configuration') }}">Click here to visit the documentation.</a>
         </p>
     </x-section>
     <x-section title="Overriding Component Class">
-        <p class="text-justify">
+        <p>
             As deep personalization consists of having absolute control over the component, <u>the idea behind
             this form of personalization is to overwrite the original TallStackUI component</u>, which is why more
             technical knowledge is necessary. Let's look at an example:
@@ -32,7 +32,7 @@
         <x-code language="php" :contents="$extends"/>
         <p>4. In your component, override the <x-block>personalization</x-block> method:</p>
         <x-code language="php" :contents="$customization"/>
-        <p class="my-2 text-justify">
+        <p class="my-2">
             Every customizable component has a method called <x-block>personalization</x-block>, which is where the
             classes come from. <u>This method must return an array with the name of the customizable blocks and
             their respective values which must be the CSS classes to be applied.</u> To learn about customizable blocks,
@@ -44,13 +44,13 @@
         </x-warning>
     </x-section>
     <x-section title="Overriding Component Colors">
-        <p class="text-justify">
+        <p>
             One of the great advantages of deep personalization is being able to touch the current color classes by
             replacing their content. This can be done in all components that have color definitions. Let's look at an example:
         </p>
-        <p class="mt-2 text-justify">Assuming you want to change the button colors, then this will be the approach to take:</p>
+        <p class="mt-2">Assuming you want to change the button colors, then this will be the approach to take:</p>
         <x-code :contents="$overrideColors" :copy="false"/>
-        <p class="text-justify mb-4">
+        <p class="mb-4">
             Note that in the example above the methods are defined with the term "Color" at the end. Also note that these
             methods must return an array containing an array of arrays, where the button type opens a new array containing
             the list of all possible class variations. This will cause TallStackUI to use these color classes instead of the
@@ -227,13 +227,13 @@
         </x-table>
     </x-section>
     <x-section title="Publishing Blade Files">
-        <p class="mb-4 text-justify">
+        <p class="mb-4">
             You can also edit the Blade files of the TallStackUI components. Use this command to publish the files:
         </p>
         <x-code language="shell" :contents="$views"/>
     </x-section>
     <x-section title="Tracing TailwindCSS Classes">
-        <p class="mb-4 text-justify">
+        <p class="mb-4">
             If you are personalizing your components using deep personalization, make sure you track your
             component classes so that TailwindCSS generates all the classes that come out of the files. Your
             <x-block>tailwindcss.config.js</x-block> needs to receive the following content:

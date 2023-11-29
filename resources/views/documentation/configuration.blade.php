@@ -6,7 +6,7 @@
         TallStackUI configurations.
     </x-slot:description>
     <x-section title="Configuration File">
-        <p class="text-justify">
+        <p>
             TallStackUI offers a configuration file that allows you to control several things, in addition to
             listing all available components for possible personalizations, something we will talk about later.
             Use this file to configure some things about certain components.

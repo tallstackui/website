@@ -109,7 +109,7 @@
                                         <x-icon name="cloud-arrow-up" class="h-6 w-6 text-pink-500 dark:text-gray-400" />
                                         Ready-to-use
                                     </dt>
-                                    <dd class="mt-4 flex flex-auto flex-col text-justify text-base leading-7 text-gray-600 dark:text-gray-400">
+                                    <dd class="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-600 dark:text-gray-400">
                                         <p class="flex-auto">More than 20 ready-to-use components, and more than 10 components are in development.</p>
                                     </dd>
                                 </div>
@@ -143,7 +143,7 @@
                                 <div class="mx-auto max-w-2xl">
                                     <div class="max-w-lg">
                                         <h1 class="mt-10 text-4xl font-bold tracking-tight text-gray-700 dark:text-white sm:text-6xl">A personalization approach never seen before.</h1>
-                                        <p class="mt-6 text-justify text-lg leading-8 text-gray-600 dark:text-gray-400">Enjoy <u class="text-pink-500 font-semibold">soft personalization</u> to customize your components at runtime. In just a few minutes and without technical effort, you can personalize all the TallStackUI components.</p>
+                                        <p class="mt-6 text-lg leading-8 text-gray-600 dark:text-gray-400">Enjoy <u class="text-pink-500 font-semibold">soft personalization</u> to customize your components at runtime. In just a few minutes and without technical effort, you can personalize all the TallStackUI components.</p>
                                         <div class="mt-10 flex items-center gap-x-6">
                                             <a href="{{ route('documentation.personalization.soft') }}" class="text-sm font-semibold leading-6 text-gray-700 dark:text-white">Learn more <span aria-hidden="true">→</span></a>
                                         </div>

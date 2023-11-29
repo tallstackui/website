@@ -133,7 +133,7 @@
         </x-preview>
     </x-section>
     <x-section title="Filtering Using Eloquent" anchor="styled-api-filtering-using-eloquent">
-        <p class="mb-2 text-justify">
+        <p class="mb-2">
             If you are using the select component to filter records in the database
             through Eloquent, this code may be useful. This is a snippet code that can be applied
             as a route in the <x-block>routes/api.php</x-block> file.

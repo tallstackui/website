@@ -6,7 +6,7 @@
         TallStackUI personalization concepts.
     </x-slot:description>
     <x-section>
-        <p class="text-justify">
+        <p>
             TallStackUI offers two personalization approaches, one that we call "soft" because it is easy and simple,
             and another called "deep" because it actually involves overriding component classes, which will require
             more technical knowledge from you. As much as you are free to choose the option you want,
@@ -18,7 +18,7 @@
             <x-card>
                 <a class="inline-flex items-center gap-2" href="{{ route('documentation.personalization.soft') }}">
                     <u>Soft</u> Personalization
-                    <x-icon name="arrow-up-right" class="w-5 h-5 text-pink-500" />
+                    <x-icon name="arrow-up-right" class="h-5 w-5 text-pink-500" />
                 </a>
             </x-card>
         </div>
@@ -26,7 +26,7 @@
             <x-card>
                 <a class="inline-flex items-center gap-2" href="{{ route('documentation.personalization.deep') }}">
                     <u>Deep</u> Personalization
-                    <x-icon name="arrow-up-right" class="w-5 h-5 text-pink-500" />
+                    <x-icon name="arrow-up-right" class="h-5 w-5 text-pink-500" />
                 </a>
             </x-card>
         </div>

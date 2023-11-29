@@ -31,7 +31,7 @@
         </div>
     </x-section>
     <x-section title="Livewire SPA Mode">
-        <p class="text-justify">
+        <p>
             If you are using the new Livewire SPA mode you must load the TallStackUI to the first page rendered
             in your application and persist in all other pages that want to use TallStackUi.
         </p>

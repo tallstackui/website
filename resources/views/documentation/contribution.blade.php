@@ -6,7 +6,7 @@
         TallStackUI Contribuition Guide.
     </x-slot:description>
     <x-section title="Possibilities">
-        <p class="text-justify">
+        <p>
             There are several ways to contribute to a library like TallStackUi, <b class="underline">don't think it's just with code.</b>
             Even if you're not an experienced developer, don't worry, there are other ways to help. Do you know
             how to write? Well, you can review the texts on both TallStackUI and our website and point out possible
@@ -19,7 +19,7 @@
         </p>
     </x-section>
     <x-section title="Writing Codes">
-        <p class="text-justify">
+        <p>
             Before we really get into the step-by-step guide on how to contribute with code, we want you to know a few things:
         </p>
         <ul class="mt-2 ml-4 list-inside list-decimal">
@@ -49,7 +49,7 @@
         <p>14. You are ready to start the work!</p>
     </x-section>
     <x-section title="Dusk Tests">
-        <p class="text-justify">
+        <p>
             Some of the TallStackUI tests are written using <a href="https://laravel.com/docs/10.x/dusk" class="underline" target="_blank">Laravel Dusk</a>
             through the <a href="https://github.com/orchestral/testbench-dusk" class="underline" target="_blank">Orchestral Testbench Dusk.</a>
             Although sometimes difficult, you can run the browser tests on your computer. To do this, it is essential
@@ -70,7 +70,7 @@
         <x-code language="shell" :contents="$analyse" />
     </x-section>
     <x-section title="Synchronize Changes">
-        <p class="text-justify">
+        <p>
             Sometimes you can make changes to components, but the change is not noticed, it is
             like a cache state in the Laravel project. If this is the case,
             use the instruction below to synchronize the changes with Composer:
