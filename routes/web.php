@@ -1,5 +1,6 @@
 <?php
 
+use App\Enums\Example;
 use App\Http\Controllers\Documentation\Configuration;
 use App\Http\Controllers\Documentation\Contribution;
 use App\Http\Controllers\Documentation\Dropdown;
@@ -34,9 +35,8 @@ $test = <<<HTML
 <x-button />
 HTML;
 
-Route::view('/', 'welcome', [
-    'test' => $test
-])->name('welcome');
+Route::view('/', 'welcome', Example::Welcome->variables())->name('welcome');
+
 Route::redirect('/docs', '/docs/get-started')->name('documentation');
 Route::redirect('/install', '/docs/installation')->name('documentation');
 

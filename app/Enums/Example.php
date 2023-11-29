@@ -31,6 +31,7 @@ use App\Enums\Examples\Ui\Slide;
 use App\Enums\Examples\Ui\Tab;
 use App\Enums\Examples\Ui\Toast;
 use App\Enums\Examples\Ui\Tooltip;
+use App\Enums\Examples\Welcome;
 use Exception;
 use ReflectionClass;
 
@@ -65,6 +66,7 @@ enum Example: string
     case Toggle = Toggle::class;
     case Tooltip = Tooltip::class;
     case Modal = Modal::class;
+    case Welcome = Welcome::class;
 
     public function variables(): array
     {

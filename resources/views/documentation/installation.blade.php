@@ -15,16 +15,20 @@
         <x-code language="shell" :contents="$installation" />
         <p>2. Prepare the AlpineJS <x-block>x-cloak</x-block> directive:</p>
         <x-code language="blade" :contents="$cloak" :copy="false" />
-        <p>3. Add the TallStackUI setup above the <x-block>vite</x-block> tag in your layout:</p>
+        <p>3. Add the TallStackUI script above the <x-block>vite</x-block> tag in your layout:</p>
         <x-code language="blade" :contents="$script" :copy="false" />
         <p>If you prefer, you can add then separately:</p>
         <x-code language="blade" :contents="$manual" :copy="false" />
-        <x-warning text="You must add the setup or directives above the @vite tag." />
+        <x-warning text="You must add above the @vite tag." />
         <p class="mt-4">4. Edit the <x-block>tailwindcss.config.js</x-block> of your application inserting this content:</p>
         <x-code language="js" :contents="$tailwindcss" :copy="false" />
         <p class="mt-4">5. Build the assets and do a full cleanup in the Laravel:</p>
         <x-code language="shell" :contents="$build" />
-        <p class="mt-4 text-pink-600 dark:text-gray-300 font-bold">You're ready to create your first TallStackUI components.</p>
+        <div class="mt-4">
+            <x-alert icon="check" color="green">
+                You're ready to create your first TallStackUI components.
+            </x-alert>
+        </div>
     </x-section>
     <x-section title="Livewire SPA Mode">
         <p class="text-justify">

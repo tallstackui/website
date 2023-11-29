@@ -44,7 +44,7 @@
         <div class="relative mx-auto flex w-full max-w-screen-2xl flex-auto justify-center sm:px-2 lg:px-8 xl:px-12">
             <x-layout.sidebar.left />
             <div class="min-w-0 max-w-2xl flex-auto px-4 py-16 lg:max-w-none lg:pr-0 lg:pl-8 xl:px-16">
-                <article>
+                <main>
                     @if ($title || $section)
                         <header class="mb-6 space-y-1">
                             @if ($section)
@@ -64,7 +64,7 @@
                         </header>
                     @endif
                     {{ $slot }}
-                </article>
+                </main>
                 @if ($navigation)
                     <dl class="mt-12 flex border-t border-slate-200 pt-6 dark:border-slate-800">
                         @if ($back)
