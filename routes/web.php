@@ -31,7 +31,7 @@ use App\Http\Controllers\Documentation\Ui\Toast;
 use App\Http\Controllers\Documentation\Ui\Tooltip;
 use Illuminate\Support\Facades\Route;
 
-$test = <<<HTML
+$test = <<<'HTML'
 <x-button />
 HTML;
 
