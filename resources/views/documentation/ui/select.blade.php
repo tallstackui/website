@@ -3,7 +3,7 @@
         Select
     </x-slot:title>
     <x-slot:description>
-        Varieties of select components.
+        Select components.
     </x-slot:description>
     <x-slot:personalization>
         <livewire:documentation.personalization :personalization="$personalizationNative" component="select.native" />

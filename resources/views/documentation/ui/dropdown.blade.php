@@ -20,10 +20,10 @@
         </x-preview>
     </x-section>
     <x-section title="Available Positions">
+        <x-slot:description>
+            All available positions based on the <a href="https://alpinejs.dev/plugins/anchor" target="_blank" class="underline">AlpineJS anchor plugin.</a>
+        </x-slot:description>
         <x-preview language="blade" :contents="$positions">
-            <x-slot:description>
-                All available positions based on the <a href="https://alpinejs.dev/plugins/anchor" target="_blank" class="underline">AlpineJS anchor plugin.</a>
-            </x-slot:description>
             <div class="flex justify-start md:justify-center">
                 <x-dropdown text="Menu" position="bottom-start">
                     <x-dropdown.items text="Settings" />

@@ -3,7 +3,7 @@
         Errors
     </x-slot:title>
     <x-slot:description>
-        Errors component to display Livewire validation errors.
+        Errors component.
     </x-slot:description>
     <x-slot:personalization>
         <livewire:documentation.personalization :$personalization component="errors" />

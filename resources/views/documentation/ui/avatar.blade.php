@@ -90,35 +90,35 @@
         </x-preview>
     </x-section>
     <x-separator text="Modelable" />
-    <x-section title="Modelable" class="space-y-4">
+    <x-section title="Modelable">
+        <x-slot:description>
+            An option to generate a <a href="https://ui-avatars.com/" class="underline" target="_blank">UI Avatar</a> from a model based on name property.
+        </x-slot:description>
         <x-preview language="blade" :contents="$modelable">
-            <x-slot:description>
-                An option to generate a <a href="https://ui-avatars.com/" class="underline" target="_blank">UI Avatar</a> from a model based on name property.
-            </x-slot:description>
             <x-avatar :model="auth()->user()" color="fff" />
         </x-preview>
     </x-section>
     <x-section title="Custom Property">
+        <x-slot:description>
+            Generate a <a href="https://ui-avatars.com/" class="underline" target="_blank">UI Avatar</a> from a model based on a property different from name.
+        </x-slot:description>
         <x-preview language="blade" :contents="$modelableCustomized">
-            <x-slot:description>
-                An option to generate a <a href="https://ui-avatars.com/" class="underline" target="_blank">UI Avatar</a> from a model based on a property different from name.
-            </x-slot:description>
             <x-avatar :model="auth()->user()" property="email" color="fff" />
         </x-preview>
     </x-section>
     <x-section title="Customizing Colors">
+        <x-slot:description>
+            Generate a <a href="https://ui-avatars.com/" class="underline" target="_blank">UI Avatar</a> from a model based customizing the colors.
+        </x-slot:description>
         <x-preview language="blade" :contents="$modelableCustomizedColors">
-            <x-slot:description>
-                An option to generate a <a href="https://ui-avatars.com/" class="underline" target="_blank">UI Avatar</a> from a model based customizing the colors.
-            </x-slot:description>
             <x-avatar :model="auth()->user()" property="email" background="ff0000" color="fff" />
         </x-preview>
     </x-section>
     <x-section title="Other Options">
+        <x-slot:description>
+            Interact with all other <a href="https://ui-avatars.com/" class="underline" target="_blank">UI Avatar</a> configuration options.
+        </x-slot:description>
         <x-preview language="blade" :contents="$modelableOptions">
-            <x-slot:description>
-                An option to interact with all other <a href="https://ui-avatars.com/" class="underline" target="_blank">UI Avatar</a> configuration options.
-            </x-slot:description>
             <x-avatar :model="auth()->user()"
                       property="email"
                       background="ff0000"

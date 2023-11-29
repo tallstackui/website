@@ -3,7 +3,7 @@
         Toast
     </x-slot:title>
     <x-slot:description>
-        Toast component. A notification style to interact with Livewire.
+        Toast component.
     </x-slot:description>
     <x-slot:personalization>
         <livewire:documentation.personalization :$personalization component="toast" />

@@ -30,11 +30,5 @@
     @if ($description)
         <p class="text-sm text-slate-500 dark:text-slate-400 mb-4">{{ $description }}</p>
     @endif
-    @if ($p)
-        <p {{ $p->attributes }}>
-            {!! $p !!}
-        </p>
-    @else
-        {!! $slot !!}
-    @endif
+    {!! $slot !!}
 </section>

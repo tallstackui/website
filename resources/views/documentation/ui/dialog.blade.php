@@ -3,7 +3,7 @@
         Dialog
     </x-slot:title>
     <x-slot:description>
-        Dialog component. A small version of Modal to interact with Livewire.
+        Dialog component.
     </x-slot:description>
     <x-slot:personalization>
         <livewire:documentation.personalization :$personalization component="dialog" />

@@ -3,7 +3,7 @@
         Tabs
     </x-slot:title>
     <x-slot:description>
-        Tabs components to display content in tabs.
+        Tabs component.
     </x-slot:description>
     <x-slot:personalization>
         <livewire:documentation.personalization :$personalization component="tab" />

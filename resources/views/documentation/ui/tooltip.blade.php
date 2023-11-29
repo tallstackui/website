@@ -3,7 +3,7 @@
         Tooltip
     </x-slot:title>
     <x-slot:description>
-        Tooltip components to show contextual information when hovering over an element.
+        Tooltip component.
     </x-slot:description>
     <x-slot:personalization>
         <livewire:documentation.personalization :$personalization component="tooltip" />

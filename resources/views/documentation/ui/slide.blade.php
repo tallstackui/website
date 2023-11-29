@@ -3,7 +3,7 @@
         Slide
     </x-slot:title>
     <x-slot:description>
-        The slide component.
+        Slide component.
     </x-slot:description>
     <x-slot:personalization>
         <livewire:documentation.personalization :$personalization component="slide" />

@@ -3,7 +3,7 @@
         Button
     </x-slot:title>
     <x-slot:description>
-        Button components.
+        Button component.
     </x-slot:description>
     <x-slot:personalization>
         <livewire:documentation.personalization :$personalization component="button" />

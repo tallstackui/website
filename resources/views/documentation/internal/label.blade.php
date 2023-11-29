@@ -3,7 +3,7 @@
         Label Component
     </x-slot:title>
     <x-slot:description>
-        The generic error component used in form components.
+        The generic label component used in form components.
     </x-slot:description>
     <x-slot:personalization>
         <livewire:documentation.personalization :$personalization component="label" />
