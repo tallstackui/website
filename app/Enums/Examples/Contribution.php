@@ -20,7 +20,7 @@ class Contribution
     HTML;
 
     public const COMMAND = <<<'HTML'
-    composer require tallstackui/tallstackui:dev-develop
+    composer require tallstackui/tallstackui:1.x-dev
     HTML;
 
     public const DUSK = <<<'HTML'

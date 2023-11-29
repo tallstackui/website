@@ -38,5 +38,6 @@ docsearch({
     apiKey: '378dd543d0d51d43ef1f493c55eb5341',
     indexName: 'tallstackui',
     container: '#docsearch',
+    insights: true,
     debug: false
 });

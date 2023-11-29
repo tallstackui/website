@@ -77,7 +77,7 @@
         </p>
         <x-code language="shell" :contents="$synchronize" />
         <x-warning>
-            <b>TIP!</b> Create an alias to facilitate the execution of this command.
+            We suggest you to create an alias to facilitate the execution of this command.
         </x-warning>
     </x-section>
     <x-slot:navigation>
