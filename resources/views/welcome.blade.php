@@ -99,7 +99,7 @@
                 <section class="bg-transparent">
                     <div class="mx-auto max-w-7xl px-6 lg:px-8">
                         <div class="mx-auto max-w-2xl lg:text-center">
-                            <p class="mt-2 text-3xl font-bold tracking-tight text-gray-700 dark:text-gray-300 sm:text-4xl">Your next idea. Our components.</p>
+                            <p class="mt-2 text-3xl font-bold tracking-tight text-gray-700 dark:text-gray-300 sm:text-4xl">TALL Stack made easy.</p>
                             <p class="mt-6 leading-8 text-gray-600 text-md dark:text-gray-400 md:text-lg">Variety of ready-to-use TALL Stack components.</p>
                         </div>
                         <div class="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
