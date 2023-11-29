@@ -163,7 +163,7 @@
                         <figure>
                             <blockquote class="text-center text-xl font-semibold italic leading-8 text-gray-700 dark:text-gray-300 sm:text-2xl sm:leading-9">
                                 <p class="text-center">
-                                    “I was tired of relying on component libraries that became abandoned over time. As I have SaaS based on TALL Stack I decided to create TallStackUI so that I can consume it myself, this is my motivation to maintain the library.”
+                                    “I was tired of relying on component libraries that had been abandoned over time. Since I have a SaaS based on the TALL Stack, I decided to create TallStackUI to maintain the library I use, ensuring regular updates.”
                                 </p>
                             </blockquote>
                             <figcaption class="mt-10">
