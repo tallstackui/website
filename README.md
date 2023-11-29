@@ -20,7 +20,7 @@
 
 ## Documentation
 
-[Visit our website to check the documentation](https://tallstackui.com)
+[Visit the website to check the documentation](https://tallstackui.com)
 
 ## Contributing
 

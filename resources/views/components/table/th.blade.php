@@ -1,11 +1,11 @@
 @props(['first' => null, 'label' => null, 'column' => null, 'sort' => null, 'direction' => null])
 
 <th scope="col" {{ $attributes->class([
-        'py-3.5 text-left text-sm font-semibold text-gray-900',
+        'py-3.5 text-left text-sm font-semibold text-gray-900 dark:text-gray-300',
         'px-3'              => ! $first,
         'pl-4 pr-3 sm:pl-6' => $first,
     ]) }}>
-    <a href="#" class="group inline-flex cursor-pointer truncate text-pink-700"
+    <a href="#" class="group inline-flex cursor-pointer truncate text-pink-700 dark:text-gray-300"
        @if ($sort && $column && $direction) wire:click.prevent="sort('{{ $column }}', '{{ $sort === $column ? ($direction === 'asc' ? 'desc' : 'asc') : 'desc' }}')" @endif>
 
         {{ $label ?? $slot }}

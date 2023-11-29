@@ -5,7 +5,7 @@ namespace App\Enums\Examples;
 class Installation
 {
     public const INSTALLATION = <<<'HTML'
-    composer require tallstackui/tallstackui
+    composer require tallstackui/tallstackui:^1.0
     HTML;
 
     public const CLOAK = <<<'HTML'
@@ -33,8 +33,8 @@ class Installation
     <html>
         <head>
             <!-- Blade Directives -->
-            @tallStackUiScripts {{-- [tl! highlight:1] --}}
-            @tallStackUiStyles
+            @tallStackUiScript {{-- [tl! highlight:1] --}}
+            @tallStackUiStyle
 
             <!-- ... or Livewire Style -->
             <tallstackui:script /> {{-- [tl! highlight:1] --}}

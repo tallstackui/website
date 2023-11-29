@@ -41,7 +41,7 @@
         <x-code language="shell" :contents="$link" />
         <p>9. The expected folder structure should be: <x-block>packages/tallstackui/tallstackui</x-block></p>
         <p>10. Open the <x-block>composer.json</x-block> of the Laravel project and insert the following content:</p>
-        <x-code language="json" :contents="$composer" />
+        <x-code language="json" :contents="$composer" :copy="false" />
         <p>11. In the same <x-block>composer.json</x-block> file, change the <x-block>minimum-stability</x-block> to <x-block>dev</x-block></p>
         <p>12. After that, run the following command in the terminal:</p>
         <x-code language="shell" :contents="$command" />
