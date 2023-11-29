@@ -22,6 +22,15 @@ class Welcome
                ->alert()
                ->block('wrapper')
                ->remove('rounded-lg');
+
+           TallStackUi::personalize()
+               ->badge()
+               ->block('wrapper.class')
+               ->append('py-4')
+               ->and()
+               ->avatar()
+               ->block('content.text.class')
+               ->prepend('text-2xl');
         }
     }
     HTML;
