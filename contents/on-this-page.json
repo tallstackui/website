@@ -225,11 +225,12 @@
         "9": "Personalizable Blocks"
     },
     "docs.personalization.deep": {
-        "0": "Publishing Configuration File",
-        "1": "Overriding Component Class",
-        "2": "Overriding Component Colors",
-        "3": "Publishing Blade Files",
-        "4": "Tracing TailwindCSS Classes"
+        "0": "Concept",
+        "1": "Publishing Configuration File",
+        "2": "Overriding Component Class",
+        "3": "Overriding Component Colors",
+        "4": "Publishing Blade Files",
+        "5": "Tracing TailwindCSS Classes"
     },
     "docs.contribution": {
         "0": "Possibilities",

@@ -22,7 +22,7 @@
             <livewire:documentation.interactions.toast.examples/>
         </x-preview>
     </x-section>
-    <x-section title="Confirmations" description="Interacting with confirmation or cancellation.">
+    <x-section title="Confirmations" description="Interacting with actions.">
         <x-preview :contents="$confirmation">
             <livewire:documentation.interactions.toast.confirmation/>
         </x-preview>

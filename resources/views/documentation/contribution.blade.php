@@ -5,7 +5,7 @@
     <x-slot:description>
         TallStackUI Contribuition Guide.
     </x-slot:description>
-    <x-section title="Possibilities">
+    <x-section title="Possibilities" :copy="false">
         <p>
             There are several ways to contribute to a library like TallStackUi, <b class="underline">don't think it's just with code.</b>
             Even if you're not an experienced developer, don't worry, there are other ways to help. Do you know
@@ -18,7 +18,7 @@
             have many ways to contribute. Choose one and go for it!
         </p>
     </x-section>
-    <x-section title="Writing Codes">
+    <x-section title="Writing Codes" :copy="false">
         <p>
             Before we really get into the step-by-step guide on how to contribute with code, we want you to know a few things:
         </p>
@@ -29,7 +29,7 @@
             <li>All codes need to be tested with <a href="https://pestphp.com" target="_blank" class="underline">Pest</a></li>
         </ul>
     </x-section>
-    <x-section title="Prepare Environment">
+    <x-section title="Prepare Environment" :copy="false">
         <p>Let's prepare your environment for your first contribution:</p>
         <p class="mt-2">1. Fork the <a href="https://github.com/tallstackui/tallstackui" class="underline" target="_blank">repository</a></p>
         <p>2. Clone the repository forked for your computer.</p>
@@ -48,7 +48,7 @@
         <p>13. <a href="{{ route('documentation.installation') }}" class="underline">Install the TallStackUi</a> in the Laravel project following the guide <i>(skip the step 1 of the tutorial)</i></p>
         <p>14. You are ready to start the work!</p>
     </x-section>
-    <x-section title="Dusk Tests">
+    <x-section title="Dusk Tests" :copy="false">
         <p>
             Some of the TallStackUI tests are written using <a href="https://laravel.com/docs/10.x/dusk" class="underline" target="_blank">Laravel Dusk</a>
             through the <a href="https://github.com/orchestral/testbench-dusk" class="underline" target="_blank">Orchestral Testbench Dusk.</a>
@@ -59,7 +59,7 @@
         <p class="mt-2">Alternatively, you can use:</p>
         <x-code language="shell" :contents="$alternative" />
     </x-section>
-    <x-section title="Run Tests">
+    <x-section title="Run Tests" :copy="false">
         <p>1. Run the Feature tests:</p>
         <x-code language="shell" :contents="$feature" />
         <p>2. Run the Browser tests:</p>
@@ -69,7 +69,7 @@
         <p>4. Validate Type Coverage & PhpStan:</p>
         <x-code language="shell" :contents="$analyse" />
     </x-section>
-    <x-section title="Synchronize Changes">
+    <x-section title="Synchronize Changes" :copy="false">
         <p>
             Sometimes you can make changes to components, but the change is not noticed, it is
             like a cache state in the Laravel project. If this is the case,
