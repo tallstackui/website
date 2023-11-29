@@ -8,21 +8,15 @@
     <x-slot:personalization>
         <livewire:documentation.personalization :$personalization component="card" />
     </x-slot:personalization>
-    <x-section>
-        <x-preview title="Basic Usage"
-                   language="blade"
-                   :background="false"
-                   :contents="$basic">
+    <x-section title="Basic Usage">
+        <x-preview language="blade" :background="false" :contents="$basic">
             <x-card>
                 TallStackUi
             </x-card>
         </x-preview>
     </x-section>
-    <x-section>
-        <x-preview title="Header Slot"
-                   language="blade"
-                   :background="false"
-                   :contents="$header">
+    <x-section title="Header Slot">
+        <x-preview language="blade" :background="false" :contents="$header">
             <x-card>
                 <x-slot:header>
                     TallStackUi
@@ -31,11 +25,8 @@
             </x-card>
         </x-preview>
     </x-section>
-    <x-section>
-        <x-preview title="Footer Slot"
-                   language="blade"
-                   :background="false"
-                   :contents="$footer">
+    <x-section title="Footer Slot">
+        <x-preview language="blade" :background="false" :contents="$footer">
             <x-card>
                 TallStackUi
                 <x-slot:footer>

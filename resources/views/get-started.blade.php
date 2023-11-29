@@ -2,14 +2,14 @@
     <x-slot:title>
         Get Started
     </x-slot:title>
-    <x-section>
+    <x-section :copy="false">
         <p>
             This is the TallStackUi, a library of ready-to-use components for TALL Stack applications.
             TallStackUI is unlike anything you've ever seen, from its conception to construction and general
             availability. Beforehand we want to tell you a little about our motivation.
         </p>
     </x-section>
-    <x-section class="space-y-4" title="Motivation Behinds TallStackUi">
+    <x-section class="space-y-4" title="Motivation Behinds TallStackUi" :copy="false">
         <p>
             Hey! I'm <a href="https://github.com/devajmeireles" class="underline" target="_blank">AJ</a>,
             creator of TallStackUI and FullStack PHP developer since 9 years ago. I'm passionate about TALL

@@ -8,10 +8,8 @@
     <x-slot:personalization>
         <livewire:documentation.personalization :$personalization component="tooltip" />
     </x-slot:personalization>
-    <x-section>
-        <x-preview title="Basic Usage"
-                   language="blade"
-                   :contents="$basic">
+    <x-section title="Basic Usage">
+        <x-preview language="blade" :contents="$basic">
             <div class="inline-flex space-x-2">
                 <x-tooltip text="Top" position="top"/>
                 <x-tooltip text="Bottom" position="bottom"/>
@@ -20,10 +18,8 @@
             </div>
         </x-preview>
     </x-section>
-    <x-section>
-        <x-preview title="Customized Icon"
-                   language="blade"
-                   :contents="$icons">
+    <x-section title="Customized Icon">
+        <x-preview language="blade" :contents="$icons">
             <div class="inline-flex space-x-2">
                 <x-tooltip text="Top" position="top" icon="exclamation-circle"/>
                 <x-tooltip text="Bottom" position="bottom" icon="exclamation-triangle"/>
@@ -32,10 +28,8 @@
             </div>
         </x-preview>
     </x-section>
-    <x-section>
-        <x-preview title="Size Variations"
-                   language="blade"
-                   :contents="$sizes">
+    <x-section title="Size Variations">
+        <x-preview language="blade" :contents="$sizes">
             <div class="inline-flex space-x-2">
                 <x-tooltip text="SM" sm/>
                 <x-tooltip text="MD" md/>
@@ -43,10 +37,8 @@
             </div>
         </x-preview>
     </x-section>
-    <x-section>
-        <x-preview title="HTML Content"
-                   language="blade"
-                   :contents="$html">
+    <x-section title="HTML Content">
+        <x-preview language="blade" :contents="$html">
             <div class="inline-flex space-x-2">
                 <x-tooltip>
                     <b>Tall</b><i>Stack</i><u>Ui</u>
@@ -54,10 +46,8 @@
             </div>
         </x-preview>
     </x-section>
-    <x-section>
-        <x-preview title="Color Variations"
-                   language="blade"
-                   :contents="$colors">
+    <x-section title="Color Variations">
+        <x-preview language="blade" :contents="$colors">
             <div class="gap-2 space-y-2">
                 <x-tooltip text="primary" />
                 <x-tooltip text="secondary" color="secondary" />
@@ -88,10 +78,8 @@
             </div>
         </x-preview>
     </x-section>
-    <x-section>
-        <x-preview title="Outline Variations"
-                   language="blade"
-                   :contents="$outlines">
+    <x-section title="Outline Variations">
+        <x-preview language="blade" :contents="$outlines">
             <div class="gap-2 space-y-2">
                 <x-tooltip text="primary" outline />
                 <x-tooltip text="secondary" color="secondary" outline />

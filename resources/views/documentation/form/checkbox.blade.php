@@ -8,27 +8,21 @@
     <x-slot:personalization>
         <livewire:documentation.personalization :$personalization component="checkbox" />
     </x-slot:personalization>
-    <x-section>
-        <x-preview title="Basic Usage"
-                   language="blade"
-                   :contents="$basic">
+    <x-section title="Basic Usage">
+        <x-preview language="blade" :contents="$basic">
             <x-checkbox />
         </x-preview>
     </x-section>
-    <x-section>
-        <x-preview title="Label"
-                   language="blade"
-                   :contents="$label">
+    <x-section title="Label">
+        <x-preview language="blade" :contents="$label">
             <div class="space-y-2">
                 <x-checkbox label="Receive Alert" />
                 <x-checkbox label="Receive Alert" position="left" />
             </div>
         </x-preview>
     </x-section>
-    <x-section>
-        <x-preview title="Size Variations"
-                   language="blade"
-                   :contents="$sizes">
+    <x-section title="Size Variations">
+        <x-preview language="blade" :contents="$sizes">
             <div class="inline-flex space-x-2">
                 <x-checkbox sm />
                 <x-checkbox md />
@@ -36,10 +30,8 @@
             </div>
         </x-preview>
     </x-section>
-    <x-section>
-        <x-preview title="Color Variations"
-                   language="blade"
-                   :contents="$colors">
+    <x-section title="Color Variations">
+        <x-preview language="blade" :contents="$colors">
             <div class="space-y-2">
                 <x-checkbox label="Primary" />
                 <x-checkbox color="secondary" label="Secondary" />

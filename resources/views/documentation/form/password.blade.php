@@ -8,25 +8,18 @@
     <x-slot:personalization>
         <livewire:documentation.personalization :$personalization component="password" />
     </x-slot:personalization>
-    <x-section>
-        <x-preview title="Basic Usage"
-                   language="blade"
-                   :contents="$basic">
+    <x-section title="Basic Usage">
+        <x-preview language="blade" :contents="$basic">
             <x-password value="TallStackUi" />
         </x-preview>
     </x-section>
-    <x-section>
-        <x-preview title="Label & Hint"
-                   language="blade"
-                   :contents="$labelHint">
+    <x-section title="Label & Hint">
+        <x-preview language="blade" :contents="$labelHint">
             <x-password label="Password" hint="Insert your best password" value="TallStackUi" />
         </x-preview>
     </x-section>
-    <x-section>
-        <x-preview title="Required Label Indicator"
-                   description="You can use a asterisk in the label to indicate that the field is required."
-                   language="blade"
-                   :contents="$asterisk">
+    <x-section title="Required Label Indicator" description="An asterisk in the label to indicate that the field is required.">
+        <x-preview language="blade" :contents="$asterisk">
             <x-password label="Password *" hint="Insert your password" value="TallStackUi" />
         </x-preview>
     </x-section>

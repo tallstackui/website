@@ -9,55 +9,39 @@
         <livewire:documentation.personalization :$personalization component="button" />
         <livewire:documentation.personalization :personalization="$personalizationCircle" component="button.circle" />
     </x-slot:personalization>
-    <x-section>
-        <x-preview title="Basic Usage"
-                   anchor="normal-basic-usage"
-                   language="blade"
-                   :contents="$basic">
+    <x-section title="Basic Usage" anchor="normal-basic-usage">
+        <x-preview language="blade" :contents="$basic">
             <x-button>TallStackUi</x-button>
         </x-preview>
     </x-section>
-    <x-section>
-        <x-preview title="Tag A Usage"
-                   anchor="normal-tag-a-usage"
-                   language="blade"
+    <x-section title="Tag A Usage" anchor="normal-tag-a-usage">
+        <x-preview language="blade"
                    :contents="$a">
             <x-button href="https://google.com.br" target="_blank">TallStackUi</x-button>
         </x-preview>
     </x-section>
-    <x-section>
-        <x-preview title="Square Variation"
-                   anchor="normal-square-variation"
-                   language="blade"
-                   :contents="$square">
+    <x-section title="Square Variation"
+               anchor="normal-square-variation">
+        <x-preview language="blade" :contents="$square">
             <x-button square>TallStackUi</x-button>
         </x-preview>
     </x-section>
-    <x-section>
-        <x-preview title="Round Variation"
-                   anchor="normal-round-variation"
-                   language="blade"
+    <x-section title="Round Variation" anchor="normal-round-variation">
+        <x-preview language="blade"
                    :contents="$round">
             <x-button round>TallStackUi</x-button>
         </x-preview>
     </x-section>
-    <x-section>
-        <x-preview title="Icon Slot"
-                   anchor="normal-icon-slot"
-                   description="An option to use any Heroicon."
-                   language="blade"
-                   :contents="$icons">
+    <x-section title="Icon Slot" anchor="normal-icon-slot" description="An option to use any Heroicon.">
+        <x-preview language="blade" :contents="$icons">
             <div class="inline-flex space-x-2">
                 <x-button icon="cog" position="left">TallStackUi</x-button>
                 <x-button icon="users" position="right">TallStackUi</x-button>
             </div>
         </x-preview>
     </x-section>
-    <x-section>
-        <x-preview title="Size Variations"
-                   anchor="normal-size-variations"
-                   language="blade"
-                   :contents="$sizes">
+    <x-section title="Size Variations" anchor="normal-size-variations">
+        <x-preview language="blade" :contents="$sizes">
             <div class="flex flex-col items-center justify-center space-y-2 sm:space-x-2 sm:space-y-0 sm:flex-row sm:justify-start">
                 <div>
                     <x-button xs>TallStackUi</x-button>
@@ -74,11 +58,8 @@
             </div>
         </x-preview>
     </x-section>
-    <x-section>
-        <x-preview title="Loading Effect"
-                   anchor="normal-loading-effect"
-                   language="blade"
-                   :contents="$loadings">
+    <x-section title="Loading Effect" anchor="normal-loading-effect">
+        <x-preview language="blade" :contents="$loadings">
             <div class="flex flex-col items-center justify-center space-y-2 sm:space-x-2 sm:space-y-0 sm:flex-row sm:justify-start">
                 <div>
                     <livewire:documentation.ui.button :model="1" />
@@ -92,11 +73,8 @@
             </div>
         </x-preview>
     </x-section>
-    <x-section>
-        <x-preview title="Color Variations"
-                   anchor="normal-color-variations"
-                   language="blade"
-                   :contents="$colors">
+    <x-section title="Color Variations" anchor="normal-color-variations">
+        <x-preview language="blade" :contents="$colors">
             <div class="gap-2 space-y-2">
                 <x-button text="Primary" />
                 <x-button text="Secondary" color="secondary" />
@@ -127,11 +105,9 @@
             </div>
         </x-preview>
     </x-section>
-    <x-section>
-        <x-preview title="Outline Variations"
-                   anchor="normal-outline-variations"
-                   language="blade"
-                   :contents="$outlines">
+    <x-section title="Outline Variations"
+               anchor="normal-outline-variations">
+        <x-preview language="blade" :contents="$outlines">
             <div class="gap-2 space-y-2">
                 <x-button text="Primary" outline />
                 <x-button text="Secondary" color="secondary" outline />
@@ -163,47 +139,33 @@
         </x-preview>
     </x-section>
     <x-separator text="Circle Button" />
-    <x-section>
-        <x-preview title="Basic Usage"
-                   anchor="circle-basic-usage"
-                   language="blade"
-                   :contents="$circle">
+    <x-section title="Basic Usage" anchor="circle-basic-usage">
+        <x-preview language="blade" :contents="$circle">
             <x-button.circle>TS</x-button.circle>
         </x-preview>
     </x-section>
-    <x-section>
-        <x-preview title="Tag A Button"
-                   anchor="circle-tag-a-usage"
-                   language="blade"
+    <x-section title="Tag A Button" anchor="circle-tag-a-usage">
+        <x-preview language="blade"
                    :contents="$circleA">
             <x-button.circle href="https://google.com.br" target="_blank">TS</x-button.circle>
         </x-preview>
     </x-section>
-    <x-section>
-        <x-preview title="Icon Slot"
-                   anchor="circle-icon-slot"
-                   description="An option to use any Heroicon."
-                   language="blade"
-                   :contents="$circleIcons">
+    <x-section title="Icon Slot" anchor="circle-icon-slot" description="An option to use any Heroicon.">
+        <x-preview language="blade" :contents="$circleIcons">
             <x-button.circle icon="pencil"/>
         </x-preview>
     </x-section>
-    <x-section>
-        <x-preview title="Size Variations"
-                   anchor="circle-size-variations"
-                   description="An option to use any Heroicon."
-                   language="blade"
-                   :contents="$circleSizes">
+    <x-section title="Size Variations"
+               anchor="circle-size-variations"
+               description="An option to use any Heroicon.">
+        <x-preview language="blade" :contents="$circleSizes">
             <x-button.circle text="SM" sm/>
             <x-button.circle text="MD" />
             <x-button.circle text="LG" lg/>
         </x-preview>
     </x-section>
-    <x-section>
-        <x-preview title="Loading Effect"
-                   anchor="circle-loading-effect"
-                   language="blade"
-                   :contents="$circleLoadings">
+    <x-section title="Loading Effect" anchor="circle-loading-effect">
+        <x-preview language="blade" :contents="$circleLoadings">
             <div class="inline-flex items-center space-x-2">
                 <livewire:documentation.ui.button :model="2" />
                 <livewire:documentation.ui.button :model="2" :type="2" />
@@ -211,11 +173,8 @@
             </div>
         </x-preview>
     </x-section>
-    <x-section>
-        <x-preview title="Color Variations"
-                   anchor="circle-color-variations"
-                   language="blade"
-                   :contents="$circleColors">
+    <x-section title="Color Variations" anchor="circle-color-variations">
+        <x-preview language="blade" :contents="$circleColors">
             <div class="gap-2 space-y-2">
                 <x-button.circle text="TS" />
                 <x-button.circle text="TS" color="secondary" />
@@ -246,11 +205,8 @@
             </div>
         </x-preview>
     </x-section>
-    <x-section>
-        <x-preview title="Outline Variations"
-                   anchor="circle-outline-variations"
-                   language="blade"
-                   :contents="$circleOutlines">
+    <x-section title="Outline Variations" anchor="circle-outline-variations">
+        <x-preview language="blade" :contents="$circleOutlines">
             <div class="gap-2 space-y-2">
                 <x-button.circle text="TS" outline />
                 <x-button.circle text="TS" color="secondary" outline />

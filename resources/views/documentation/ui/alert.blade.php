@@ -8,38 +8,29 @@
     <x-slot:personalization>
         <livewire:documentation.personalization :$personalization component="alert" />
     </x-slot:personalization>
-    <x-section>
-        <x-preview title="Basic Usage"
-                   language="blade"
-                   :contents="$basic">
+    <x-section title="Basic Usage">
+        <x-preview language="blade" :contents="$basic">
             <x-alert>
                 TallStackUi
             </x-alert>
         </x-preview>
     </x-section>
-    <x-section>
-        <x-preview title="Title"
-                   language="blade"
-                   :contents="$title">
+    <x-section title="Title">
+        <x-preview language="blade" :contents="$title">
             <x-alert title="TallStackUi">
                 TallStackUi
             </x-alert>
         </x-preview>
     </x-section>
-    <x-section>
-        <x-preview title="Close Option"
-                   description="An option to allow the user to hide the alert"
-                   language="blade"
-                   :contents="$close">
+    <x-section title="Close Option" description="An option to allow the user to hide the alert">
+        <x-preview language="blade" :contents="$close">
             <x-alert title="TallStackUi" close>
                 TallStackUi
             </x-alert>
         </x-preview>
     </x-section>
-    <x-section>
-        <x-preview title="Icon Slot"
-                   language="blade"
-                   :contents="$icon">
+    <x-section title="Icon Slot">
+        <x-preview language="blade" :contents="$icon">
             <div class="space-y-2">
                 <x-alert icon="cog">
                     TallStackUi
@@ -50,10 +41,8 @@
             </div>
         </x-preview>
     </x-section>
-    <x-section>
-        <x-preview title="Color Variations"
-                   language="blade"
-                   :contents="$colors">
+    <x-section title="Color Variations">
+        <x-preview language="blade" :contents="$colors">
             <div class="space-y-2">
                 <x-alert title="TallStackUi" text="Primary" />
                 <x-alert title="TallStackUi" text="Secondary" color="secondary" />
@@ -84,10 +73,8 @@
             </div>
         </x-preview>
     </x-section>
-    <x-section>
-        <x-preview title="Outline Variations"
-                   language="blade"
-                   :contents="$outlines">
+    <x-section title="Outline Variations">
+        <x-preview language="blade" :contents="$outlines">
             <div class="space-y-2">
                 <x-alert title="TallStackUi" text="Primary" outline />
                 <x-alert title="TallStackUi" text="Secondary" color="secondary" outline />
@@ -118,10 +105,8 @@
             </div>
         </x-preview>
     </x-section>
-    <x-section>
-        <x-preview title="Light Variations"
-                   language="blade"
-                   :contents="$lights">
+    <x-section title="Light Variations">
+        <x-preview language="blade" :contents="$lights">
             <div class="space-y-2">
                 <x-alert title="TallStackUi" text="Primary" light />
                 <x-alert title="TallStackUi" text="Secondary" color="secondary" light />

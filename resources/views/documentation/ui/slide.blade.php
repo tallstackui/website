@@ -8,10 +8,8 @@
     <x-slot:personalization>
         <livewire:documentation.personalization :$personalization component="slide" />
     </x-slot:personalization>
-    <x-section>
-        <x-preview title="Basic Usage"
-                   language="blade"
-                   :contents="$basic">
+    <x-section title="Basic Usage">
+        <x-preview language="blade" :contents="$basic">
             <x-slide id="basic-slide">
                 TallStackUi
             </x-slide>
@@ -20,10 +18,8 @@
             </x-button>
         </x-preview>
     </x-section>
-    <x-section>
-        <x-preview title="Left Side"
-                   language="blade"
-                   :contents="$left">
+    <x-section title="Left Side">
+        <x-preview language="blade" :contents="$left">
             <x-slide id="left-slide" left>
                 TallStackUi
             </x-slide>
@@ -32,10 +28,8 @@
             </x-button>
         </x-preview>
     </x-section>
-    <x-section>
-        <x-preview title="Title Slot"
-                   language="blade"
-                   :contents="$title">
+    <x-section title="Title Slot">
+        <x-preview language="blade" :contents="$title">
             <x-slide id="title-slide">
                 <x-slot:title>
                     TallStackUi
@@ -47,10 +41,8 @@
             </x-button>
         </x-preview>
     </x-section>
-    <x-section>
-        <x-preview title="Footer Slot"
-                   language="blade"
-                   :contents="$footer">
+    <x-section title="Footer Slot">
+        <x-preview language="blade" :contents="$footer">
             <x-slide id="footer-slide">
                 TallStackUi
                 <x-slot:footer start>
@@ -62,10 +54,8 @@
             </x-button>
         </x-preview>
     </x-section>
-    <x-section>
-        <x-preview title="Background Blur"
-                   language="blade"
-                   :contents="$blur">
+    <x-section title="Background Blur">
+        <x-preview language="blade" :contents="$blur">
             <x-slide id="background-blur-slide" blur>
                 TallStackUi
             </x-slide>
@@ -74,10 +64,8 @@
             </x-button>
         </x-preview>
     </x-section>
-    <x-section>
-        <x-preview title="Size Variations"
-                   language="blade"
-                   :contents="$sizes">
+    <x-section title="Size Variations">
+        <x-preview language="blade" :contents="$sizes">
             <div class="flex flex-col space-y-2 lg:space-x-2 lg:space-y-0 lg:flex-row">
                 <x-slide id="default-size-slide" title="TallStackUi">
                     Default (lg)
@@ -145,10 +133,8 @@
             <x-warning text="Applicable only on desktop devices." />
         </div>
     </x-section>
-    <x-section>
-        <x-preview title="Z Index"
-                   language="blade"
-                   :contents="$zIndex">
+    <x-section title="Z Index">
+        <x-preview language="blade" :contents="$zIndex">
             <x-slide id="z-slide" title="TallStackUi" z-index="z-10">
                 TallStackUi
             </x-slide>
@@ -157,11 +143,8 @@
             </x-button>
         </x-preview>
     </x-section>
-    <x-section>
-        <x-preview title="Persistent"
-                   description="An option to prevent the user from closing the slide when click outside."
-                   language="blade"
-                   :contents="$persistent">
+    <x-section title="Persistent" description="An option to prevent the user from closing the slide when click outside.">
+        <x-preview language="blade" :contents="$persistent">
             <x-slide id="persistent-slide" title="TallStackUi" persistent>
                 TallStackUi
                 <x-slot:footer end>
@@ -174,17 +157,13 @@
         </x-preview>
     </x-section>
     <x-warning text="Make sure to provide some way to close the slide when using this option, such as a button within the slide." />
-    <x-section class="mt-4 space-y-4">
-        <x-preview title="Wireable"
-                   description="An option to control the slide entangled with a Livewire property."
-                   language="blade"
-                   :contents="$wireable">
+    <x-section class="mt-4" title="Wireable" description="An option to control the modal via Livewire.">
+        <x-preview language="blade" :contents="$wireable">
             <livewire:documentation.slide.entangle/>
         </x-preview>
-        <x-preview title="Wireable Personalized"
-                   description="An option to customize which property to use to control the slide entangled with a Livewire property."
-                   language="blade"
-                   :contents="$wireableCustomized">
+    </x-section>
+    <x-section title="Wireable Personalized" description="Customize which property to use to control the modal via Livewire.">
+        <x-preview language="blade" :contents="$wireableCustomized">
             <livewire:documentation.slide.customentangle/>
         </x-preview>
     </x-section>

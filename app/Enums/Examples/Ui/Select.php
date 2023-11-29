@@ -127,7 +127,6 @@ class Select
 
     public const ELOQUENT = <<<'HTML'
     use App\Models\User;
-    use Illuminate\Database\Eloquent\Builder;
     use Illuminate\Http\Request;
     use Illuminate\Support\Facades\Route;
 
@@ -141,11 +140,11 @@ class Select
                 $search = $request->get('search'),
                 fn ($query) => $query->where('name', 'like', "%{$search}%")
             )
-            ->when(!$search && $selected, function (Builder $query) use ($selected) {
+            ->when(!$search && $selected, function ($query) use ($selected) {
                 // selecting the initial selected values
                 $query->whereIn('id', $selected)
                     // or selecting the other users ordered by creation date
-                    ->orWhere(function (Builder $query) use ($selected) {
+                    ->orWhere(function ($query) use ($selected) {
                         $query->whereNotIn('id', $selected)
                             ->orderBy('created_at');
                     });

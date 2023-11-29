@@ -8,27 +8,21 @@
     <x-slot:personalization>
         <livewire:documentation.personalization :$personalization component="radio" />
     </x-slot:personalization>
-    <x-section>
-        <x-preview title="Basic Usage"
-                   language="blade"
-                   :contents="$basic">
+    <x-section title="Basic Usage">
+        <x-preview language="blade" :contents="$basic">
             <x-radio />
         </x-preview>
     </x-section>
-    <x-section>
-        <x-preview title="Label"
-                   language="blade"
-                   :contents="$label">
+    <x-section title="Label">
+        <x-preview language="blade" :contents="$label">
             <div class="space-y-2">
                 <x-radio label="Receive Alert" />
                 <x-radio label="Receive Alert" position="left" />
             </div>
         </x-preview>
     </x-section>
-    <x-section>
-        <x-preview title="Size Variations"
-                   language="blade"
-                   :contents="$sizes">
+    <x-section title="Size Variations">
+        <x-preview language="blade" :contents="$sizes">
             <div class="inline-flex space-x-2">
                 <x-radio sm />
                 <x-radio md />
@@ -36,10 +30,8 @@
             </div>
         </x-preview>
     </x-section>
-    <x-section>
-        <x-preview title="Color Variations"
-                   language="blade"
-                   :contents="$colors">
+    <x-section title="Color Variations">
+        <x-preview language="blade" :contents="$colors">
             <div class="space-y-2">
                 <x-radio label="Primary" />
                 <x-radio color="secondary" label="Secondary" />

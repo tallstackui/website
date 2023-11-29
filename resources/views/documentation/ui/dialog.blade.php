@@ -17,15 +17,13 @@
         <x-code language="php" :contents="$dispatch"/>
         <x-warning text="This is an example. You can't dispatch all at the same time." />
     </x-section>
-    <x-section>
-        <x-preview title="Basic Usage" :contents="$basic">
+    <x-section title="Basic Usage">
+        <x-preview :contents="$basic">
             <livewire:documentation.interactions.dialog.examples/>
         </x-preview>
     </x-section>
-    <x-section>
-        <x-preview title="Confirmations"
-                   description="Interacting with confirmation or cancellation."
-                   :contents="$confirmation">
+    <x-section title="Confirmations" description="Interacting with actions.">
+        <x-preview :contents="$confirmation">
             <livewire:documentation.interactions.dialog.confirmation/>
         </x-preview>
     </x-section>

@@ -9,10 +9,8 @@
         <livewire:documentation.personalization :$personalization component="dropdown" />
         <livewire:documentation.personalization :personalization="$personalizationItems" component="dropdown.items" />
     </x-slot:personalization>
-    <x-section>
-        <x-preview title="Basic Usage"
-                   language="blade"
-                   :contents="$left">
+    <x-section title="Basic Usage">
+        <x-preview language="blade" :contents="$left">
             <div class="flex justify-end md:justify-center">
                 <x-dropdown text="Menu" position="bottom-end">
                     <x-dropdown.items text="Settings" />
@@ -21,10 +19,8 @@
             </div>
         </x-preview>
     </x-section>
-    <x-section>
-        <x-preview title="Available Positions"
-                   language="blade"
-                   :contents="$positions">
+    <x-section title="Available Positions">
+        <x-preview language="blade" :contents="$positions">
             <x-slot:description>
                 All available positions based on the <a href="https://alpinejs.dev/plugins/anchor" target="_blank" class="underline">AlpineJS anchor plugin.</a>
             </x-slot:description>
@@ -36,10 +32,8 @@
             </div>
         </x-preview>
     </x-section>
-    <x-section>
-        <x-preview title="Icon Slot"
-                   language="blade"
-                   :contents="$icons">
+    <x-section title="Icon Slot">
+        <x-preview language="blade" :contents="$icons">
             <div class="flex justify-end md:justify-center">
                 <x-dropdown icon="chevron-down" position="bottom-end">
                     <x-dropdown.items text="Settings" />
@@ -48,11 +42,8 @@
             </div>
         </x-preview>
     </x-section>
-    <x-section>
-        <x-preview title="Icon Slot Static"
-                   description="An option to use icons without rotate animation"
-                   language="blade"
-                   :contents="$iconsStatic">
+    <x-section title="Icon Slot Static" description="An option to use icons without rotate animation">
+        <x-preview language="blade" :contents="$iconsStatic">
             <div class="flex justify-end md:justify-center">
                 <x-dropdown icon="ellipsis-vertical" static position="bottom-end">
                     <x-dropdown.items text="Settings" />
@@ -61,10 +52,8 @@
             </div>
         </x-preview>
     </x-section>
-    <x-section>
-        <x-preview title="Header Slot"
-                   language="blade"
-                   :contents="$headerSlots">
+    <x-section title="Header Slot">
+        <x-preview language="blade" :contents="$headerSlots">
             <div class="flex justify-end md:justify-center">
                 <x-dropdown text="Menu" position="bottom-end">
                     <x-slot:header>
@@ -76,10 +65,8 @@
             </div>
         </x-preview>
     </x-section>
-    <x-section>
-        <x-preview title="Action Slot"
-                   language="blade"
-                   :contents="$actionSlots">
+    <x-section title="Action Slot">
+        <x-preview language="blade" :contents="$actionSlots">
             <div class="flex justify-end md:justify-center">
                 <x-dropdown position="bottom-end">
                     <x-slot:action>

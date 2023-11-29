@@ -5,7 +5,7 @@
     <x-slot:description>
         Helper to easy manage dark theme.
     </x-slot:description>
-    <x-section>
+    <x-section :copy="false">
         <p>
             TallStackUI provides a simple yet powerful helper to add dark theme support to your application. The main idea
             of this helper is to offer an easy way to control the dark theme by persisting a value in the browser's local storage.
@@ -19,7 +19,7 @@
         <p>Alternatively, you can customize the name of the state stored in local storage of the browser, <b class="underline">default name is dark-theme</b></p>
         <x-code language="blade" :contents="$customized" :copy="false"/>
         <p>3. Create a button to control the dark theme:</p>
-        <x-code language="blade" :contents="$button" />
+        <x-code language="blade" :contents="$button" :copy="false" />
         <x-warning text="This button must be covered by the layout that received the helper above." />
         <p class="mt-2">4. Rebuild your assets:</p>
         <x-code language="shell" :contents="$assets" />

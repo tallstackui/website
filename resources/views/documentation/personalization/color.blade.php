@@ -5,14 +5,14 @@
     <x-slot:description>
         The colors personalization.
     </x-slot:description>
-    <x-section>
-        <p>
+    <x-section :copy="false">
+        <x-slot:p>
             All TallStackUI components are based on three custom colors: primary, secondary and dark. Additionally,
             all other <a class="underline" href="https://tailwindcss.com/docs/customizing-colors" target="_blank">colors are the original TailwindCSS colors.</a> You can customize the primary and secondary
             colors to your liking by following the TailwindCSS custom color concept.
-        </p>
+        </x-slot:p>
     </x-section>
-    <x-section title="Personalizing Colors">
+    <x-section title="Personalizing Colors" :copy="false">
         <p class="mb-4">1. Open the TailwindCSS configuration file and enter the following content:</p>
         <x-code language="js" :contents="$content" :copy="false"/>
         <x-warning text="Replace the hexadecimal values above with your desired colors." />

@@ -8,45 +8,35 @@
     <x-slot:personalization>
         <livewire:documentation.personalization :$personalization component="badge" />
     </x-slot:personalization>
-    <x-section>
-        <x-preview title="Basic Usage"
-                   language="blade"
-                   :contents="$basic">
+    <x-section title="Basic Usage">
+        <x-preview language="blade" :contents="$basic">
             <x-badge text="TallStackUi"/>
         </x-preview>
     </x-section>
-    <x-section>
-        <x-preview title="Square Variation"
-                   language="blade"
-                   :contents="$square">
+    <x-section title="Square Variation">
+        <x-preview language="blade" :contents="$square">
             <div class="flex items-center gap-2">
                 <x-badge text="TallStackUi" square/>
             </div>
         </x-preview>
     </x-section>
-    <x-section>
-        <x-preview title="Round Variation"
-                   language="blade"
-                   :contents="$round">
+    <x-section title="Round Variation">
+        <x-preview language="blade" :contents="$round">
             <div class="flex items-center gap-2">
                 <x-badge text="TallStackUi" round/>
             </div>
         </x-preview>
     </x-section>
-    <x-section>
-        <x-preview title="Icon Slot"
-                   language="blade"
-                   :contents="$icons">
+    <x-section title="Icon Slot">
+        <x-preview language="blade" :contents="$icons">
             <div class="flex items-center gap-2">
                 <x-badge text="TallStackUi" icon="users" position="left"/>
                 <x-badge text="TallStackUi" icon="cog" position="right"/>
             </div>
         </x-preview>
     </x-section>
-    <x-section>
-        <x-preview title="Size Variations"
-                   language="blade"
-                   :contents="$sizes">
+    <x-section title="Size Variations">
+        <x-preview language="blade" :contents="$sizes">
             <div class="flex items-center gap-2">
                 <x-badge text="Default"/>
                 <x-badge text="MD" md/>
@@ -54,10 +44,8 @@
             </div>
         </x-preview>
     </x-section>
-    <x-section>
-        <x-preview title="Color Variations"
-                   language="blade"
-                   :contents="$colors">
+    <x-section title="Color Variations">
+        <x-preview language="blade" :contents="$colors">
             <div class="gap-2">
                 <x-badge text="Primary" />
                 <x-badge text="Secondary" color="secondary" />
@@ -88,10 +76,8 @@
             </div>
         </x-preview>
     </x-section>
-    <x-section>
-        <x-preview title="Outline Variations"
-                   language="blade"
-                   :contents="$outlines">
+    <x-section title="Outline Variations">
+        <x-preview language="blade" :contents="$outlines">
             <div class="gap-2">
                 <x-badge text="Primary" outline />
                 <x-badge text="Secondary" color="secondary" outline />

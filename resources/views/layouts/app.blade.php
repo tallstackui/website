@@ -47,9 +47,6 @@
                 <main>
                     @if ($title || $section)
                         <header class="mb-6 space-y-1">
-                            @if ($section)
-                                <p class="text-sm font-medium text-pink-500 font-display">{{ $section }}</p>
-                            @endif
                             @if ($title)
                                 <h1 class="text-3xl font-semibold tracking-tight text-pink-900 font-display dark:text-slate-300">{{ $title }}</h1>
                             @endif

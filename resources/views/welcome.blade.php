@@ -106,7 +106,7 @@
                             <dl class="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-3">
                                 <div class="flex flex-col">
                                     <dt class="flex items-center gap-x-3 text-lg font-semibold uppercase leading-7 text-gray-700 dark:text-pink-500">
-                                        <x-icon name="cloud-arrow-up" class="h-6 w-6 text-pink-500 dark:text-gray-400" />
+                                        <x-icon name="cloud-arrow-up" class="h-6 w-6 text-pink-500 dark:text-gray-300" />
                                         Ready-to-use
                                     </dt>
                                     <dd class="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-600 dark:text-gray-400">
@@ -115,7 +115,7 @@
                                 </div>
                                 <div class="flex flex-col">
                                     <dt class="flex items-center gap-x-3 text-lg font-semibold uppercase leading-7 text-gray-700 dark:text-pink-500">
-                                        <x-icon name="wrench" class="h-6 w-6 text-pink-500 dark:text-gray-400" />
+                                        <x-icon name="wrench" class="h-6 w-6 text-pink-500 dark:text-gray-300" />
                                         Easy Installation
                                     </dt>
                                     <dd class="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-600 dark:text-gray-400">
@@ -124,7 +124,7 @@
                                 </div>
                                 <div class="flex flex-col">
                                     <dt class="flex items-center gap-x-3 text-lg font-semibold uppercase leading-7 text-gray-700 dark:text-pink-500">
-                                        <x-icon name="paint-brush" class="h-6 w-6 text-pink-500 dark:text-gray-400" />
+                                        <x-icon name="paint-brush" class="h-6 w-6 text-pink-500 dark:text-gray-300" />
                                         Full Personalized
                                     </dt>
                                     <dd class="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-600 dark:text-gray-400">

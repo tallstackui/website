@@ -8,17 +8,13 @@
     <x-slot:personalization>
         <livewire:documentation.personalization :$personalization component="avatar" />
     </x-slot:personalization>
-    <x-section>
-        <x-preview title="Basic Usage"
-                   language="blade"
-                   :contents="$basic">
+    <x-section title="Basic Usage">
+        <x-preview language="blade" :contents="$basic">
             <x-avatar text="TS" />
         </x-preview>
     </x-section>
-    <x-section>
-        <x-preview title="Color Variations"
-                   language="blade"
-                   :contents="$colors">
+    <x-section title="Color Variations">
+        <x-preview language="blade" :contents="$colors">
             <div class="space-y-2 gap-2">
                 <x-avatar text="TS" color="primary" />
                 <x-avatar text="TS" color="secondary" />
@@ -49,27 +45,20 @@
             </div>
         </x-preview>
     </x-section>
-    <x-section>
-        <x-preview title="Size Variations"
-                   language="blade"
-                   :contents="$sizes">
+    <x-section title="Size Variations">
+        <x-preview language="blade" :contents="$sizes">
             <x-avatar text="SM" sm />
             <x-avatar text="MD" md />
             <x-avatar text="LG" lg />
         </x-preview>
     </x-section>
-    <x-section>
-        <x-preview title="Square Variations"
-                   language="blade"
-                   :contents="$square">
+    <x-section title="Square Variations">
+        <x-preview language="blade" :contents="$square">
             <x-avatar text="TS" square />
         </x-preview>
     </x-section>
-    <x-section>
-        <x-preview title="Placeholder"
-                   description="An option generate avatar with a svg placeholder with any color from the TailwindCSS palette."
-                   language="blade"
-                   :contents="$placeholder">
+    <x-section title="Placeholder" description="An option generate avatar with a svg placeholder.">
+        <x-preview language="blade" :contents="$placeholder">
             <div class="space-y-2 gap-2">
                 <x-avatar color="primary" />
                 <x-avatar color="secondary" />
@@ -101,34 +90,32 @@
         </x-preview>
     </x-section>
     <x-separator text="Modelable" />
-    <x-section class="space-y-4">
-        <x-preview title="Modelable"
-                   language="blade"
-                   :contents="$modelable">
+    <x-section title="Modelable" class="space-y-4">
+        <x-preview language="blade" :contents="$modelable">
             <x-slot:description>
                 An option to generate a <a href="https://ui-avatars.com/" class="underline" target="_blank">UI Avatar</a> from a model based on name property.
             </x-slot:description>
             <x-avatar :model="auth()->user()" color="fff" />
         </x-preview>
-        <x-preview title="Modelable Custom Property"
-                   language="blade"
-                   :contents="$modelableCustomized">
+    </x-section>
+    <x-section title="Custom Property">
+        <x-preview language="blade" :contents="$modelableCustomized">
             <x-slot:description>
                 An option to generate a <a href="https://ui-avatars.com/" class="underline" target="_blank">UI Avatar</a> from a model based on a property different from name.
             </x-slot:description>
             <x-avatar :model="auth()->user()" property="email" color="fff" />
         </x-preview>
-        <x-preview title="Customizing Colors"
-                   language="blade"
-                   :contents="$modelableCustomizedColors">
+    </x-section>
+    <x-section title="Customizing Colors">
+        <x-preview language="blade" :contents="$modelableCustomizedColors">
             <x-slot:description>
                 An option to generate a <a href="https://ui-avatars.com/" class="underline" target="_blank">UI Avatar</a> from a model based customizing the colors.
             </x-slot:description>
             <x-avatar :model="auth()->user()" property="email" background="ff0000" color="fff" />
         </x-preview>
-        <x-preview title="Other Options"
-                   language="blade"
-                   :contents="$modelableOptions">
+    </x-section>
+    <x-section title="Other Options">
+        <x-preview language="blade" :contents="$modelableOptions">
             <x-slot:description>
                 An option to interact with all other <a href="https://ui-avatars.com/" class="underline" target="_blank">UI Avatar</a> configuration options.
             </x-slot:description>

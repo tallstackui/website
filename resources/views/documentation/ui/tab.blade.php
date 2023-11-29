@@ -9,11 +9,8 @@
         <livewire:documentation.personalization :$personalization component="tab" />
         <livewire:documentation.personalization :personalization="$personalizationItems" component="tab.items" />
     </x-slot:personalization>
-    <x-section>
-        <x-preview title="Basic Usage"
-                   language="blade"
-                   :background="false"
-                   :contents="$basic">
+    <x-section title="Basic Usage">
+        <x-preview language="blade" :background="false" :contents="$basic">
             <x-tab selected="Tab 1">
                 <x-tab.items tab="Tab 1">
                     Tab 1
@@ -33,11 +30,8 @@
             </x-tab>
         </x-preview>
     </x-section>
-    <x-section>
-        <x-preview title="Slots"
-                   language="blade"
-                   :background="false"
-                   :contents="$slots">
+    <x-section title="Slots">
+        <x-preview language="blade" :background="false" :contents="$slots">
             <x-tab selected="Invoices">
                 <x-tab.items tab="Invoices">
                     <x-slot:right>
@@ -54,21 +48,13 @@
             </x-tab>
         </x-preview>
     </x-section>
-    <x-section>
-        <x-preview title="Wireable"
-                   description="An option to control the tab entangled with a Livewire property."
-                   language="blade"
-                   :background="false"
-                   :contents="$wireable">
+    <x-section title="Wireable" description="An option to control the tab entangled with a Livewire property.">
+        <x-preview language="blade" :background="false" :contents="$wireable">
             <livewire:documentation.ui.tabs />
         </x-preview>
     </x-section>
-    <x-section>
-        <x-preview title="Live Wireable"
-                   description="An option to control the tab entangled live with a Livewire property."
-                   language="blade"
-                   :background="false"
-                   :contents="$wireableLive">
+    <x-section title="Live Wireable" description="An option to control the tab entangled live with a Livewire property.">
+        <x-preview language="blade" :background="false" :contents="$wireableLive">
             <livewire:documentation.ui.tabs live />
         </x-preview>
     </x-section>

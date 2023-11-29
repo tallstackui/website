@@ -8,10 +8,8 @@
     <x-slot:personalization>
         <livewire:documentation.personalization :$personalization component="modal" />
     </x-slot:personalization>
-    <x-section>
-        <x-preview title="Basic Usage"
-                   language="blade"
-                   :contents="$basic">
+    <x-section title="Basic Usage">
+        <x-preview language="blade" :contents="$basic">
             <x-modal id="basic-modal">
                 TallStackUi
             </x-modal>
@@ -20,10 +18,8 @@
             </x-button>
         </x-preview>
     </x-section>
-    <x-section>
-        <x-preview title="Title Slot"
-                   language="blade"
-                   :contents="$title">
+    <x-section title="Title Slot">
+        <x-preview language="blade" :contents="$title">
             <x-modal id="title-modal">
                 <x-slot:title>
                     TallStackUi
@@ -35,10 +31,8 @@
             </x-button>
         </x-preview>
     </x-section>
-    <x-section>
-        <x-preview title="Footer Slot"
-                   language="blade"
-                   :contents="$footer">
+    <x-section title="Footer Slot">
+        <x-preview language="blade" :contents="$footer">
             <x-modal id="footer-modal" title="TallStackUi">
                 TallStackUi
                 <x-slot:footer>
@@ -50,10 +44,8 @@
             </x-button>
         </x-preview>
     </x-section>
-    <x-section>
-        <x-preview title="Background Blur"
-                   language="blade"
-                   :contents="$blur">
+    <x-section title="Background Blur">
+        <x-preview language="blade" :contents="$blur">
             <x-modal id="blur-modal" title="TallStackUi" blur>
                 TallStackUi
             </x-modal>
@@ -62,10 +54,8 @@
             </x-button>
         </x-preview>
     </x-section>
-    <x-section>
-        <x-preview title="Size Variations"
-                   language="blade"
-                   :contents="$sizes">
+    <x-section title="Size Variations">
+        <x-preview language="blade" :contents="$sizes">
             <div class="flex flex-col space-y-2 lg:space-x-2 lg:space-y-0 lg:flex-row">
                 <x-modal id="default-size-modal" title="TallStackUi">
                     Default (2xl)
@@ -133,10 +123,8 @@
             <x-warning text="Applicable only on desktop devices." />
         </div>
     </x-section>
-    <x-section>
-        <x-preview title="Z Index"
-                   language="blade"
-                   :contents="$zIndex">
+    <x-section title="Z Index">
+        <x-preview language="blade" :contents="$zIndex">
             <x-modal id="z-modal" title="TallStackUi" z-index="z-10">
                 TallStackUi
             </x-modal>
@@ -145,11 +133,8 @@
             </x-button>
         </x-preview>
     </x-section>
-    <x-section>
-        <x-preview title="Persistent"
-                   description="An option to prevent the user from closing the modal when click outside."
-                   language="blade"
-                   :contents="$persistent">
+    <x-section title="Persistent" description="An option to prevent the closing when click outside.">
+        <x-preview language="blade" :contents="$persistent">
             <x-modal id="persistent-modal" title="TallStackUi" persistent>
                 TallStackUi
                 <x-slot:footer>
@@ -162,17 +147,13 @@
         </x-preview>
     </x-section>
     <x-warning text="Make sure to provide some way to close the modal when using this option, such as a button within the modal." />
-    <x-section class="mt-4 space-y-4">
-        <x-preview title="Wireable"
-                   description="An option to control the modal entangled with a Livewire property."
-                   language="blade"
-                   :contents="$wireable">
+    <x-section class="mt-4" title="Wireable" description="An option to control the modal via Livewire.">
+        <x-preview language="blade" :contents="$wireable">
             <livewire:documentation.modal.entangle/>
         </x-preview>
-        <x-preview title="Wireable Personalized"
-                   description="An option to customize which property to use to control the modal entangled with a Livewire property."
-                   language="blade"
-                   :contents="$wireableCustomized">
+    </x-section>
+    <x-section title="Wireable Personalized" description="Customize which property to use to control the modal via Livewire.">
+        <x-preview language="blade" :contents="$wireableCustomized">
             <livewire:documentation.modal.customentangle/>
         </x-preview>
     </x-section>

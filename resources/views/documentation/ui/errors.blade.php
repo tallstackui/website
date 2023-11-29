@@ -8,40 +8,30 @@
     <x-slot:personalization>
         <livewire:documentation.personalization :$personalization component="errors" />
     </x-slot:personalization>
-    <x-section>
-        <x-preview title="Basic Usage"
-                   language="blade"
-                   :contents="$basic">
+    <x-section title="Basic Usage">
+        <x-preview language="blade" :contents="$basic">
             <livewire:documentation.ui.errors/>
         </x-preview>
     </x-section>
-    <x-section>
-        <x-preview title="Filtering Properties"
-                   description="An option to show validation errors for specific properties."
-                   language="blade"
-                   :contents="$specific">
+    <x-section title="Filtering Properties" description="An option to show validation errors for specific properties.">
+        <x-preview language="blade" :contents="$specific">
             <livewire:documentation.ui.errors :only="['name']"/>
         </x-preview>
     </x-section>
-    <x-section>
-        <x-preview title="Title Customization"
-                   language="blade"
+    <x-section title="Title Customization">
+        <x-preview language="blade"
                    :contents="$customized">
             <livewire:documentation.ui.errors title="Ops! There are :count validation errors:"/>
         </x-preview>
     </x-section>
-    <x-section>
-        <x-preview title="Close Option"
-                   description="An option to allow the user to hide the errors"
-                   language="blade"
+    <x-section title="Close Option" description="An option to allow the user to hide the errors">
+        <x-preview language="blade"
                    :contents="$close">
             <livewire:documentation.ui.errors :close="true"/>
         </x-preview>
     </x-section>
-    <x-section>
-        <x-preview title="Color Variations"
-                   language="blade"
-                   :contents="$colors">
+    <x-section title="Color Variations">
+        <x-preview language="blade" :contents="$colors">
             <div class="space-y-2">
                 <livewire:documentation.ui.errors />
                 <livewire:documentation.ui.errors color="primary" />
