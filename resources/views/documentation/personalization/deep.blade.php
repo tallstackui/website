@@ -6,17 +6,17 @@
         The deep personalization.
     </x-slot:description>
     <x-section title="Concept" :copy="false">
-        <x-slot:p>
+        <p>
             The deep personalization is a way to personalize components more deeply by <u>overriding the component's original class.</u>
             This form of personalization requires more work and more technical knowledge. <u>We strongly suggest that you prefer
                 soft personalization</u>, which does not require as much technical knowledge from you.
-        </x-slot:p>
+        </p>
     </x-section>
     <x-section title="Publishing Configuration File" :copy="false">
-        <x-slot:p>
+        <p>
             To start deep personalization you must publish the TallStackUI configuration file.
             <a class="underline" href="{{ route('documentation.configuration') }}">Click here to visit the documentation.</a>
-        </x-slot:p>
+        </p>
     </x-section>
     <x-section title="Overriding Component Class" :copy="false">
         <p>

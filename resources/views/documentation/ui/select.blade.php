@@ -85,11 +85,11 @@
         </x-preview>
     </x-section>
     <x-section title="Filtering Using Eloquent" anchor="styled-api-filtering-using-eloquent" :copy="false">
-        <x-slot:p>
+        <p>
             If you are using the select component to filter records in the database
             through Eloquent, this code may be useful. This is a snippet code that can be applied
             as a route in the <x-block>routes/api.php</x-block> file.
-        </x-slot:p>
+        </p>
     </x-section>
     <x-code :contents="$eloquent" />
     <x-slot:navigation>

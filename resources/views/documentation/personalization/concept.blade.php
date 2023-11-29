@@ -6,12 +6,12 @@
         TallStackUI personalization concepts.
     </x-slot:description>
     <x-section :copy="false">
-        <x-slot:p>
+        <p>
             TallStackUI offers two personalization approaches, one that we call "soft" because it is easy and simple,
             and another called "deep" because it actually involves overriding component classes, which will require
             more technical knowledge from you. As much as you are free to choose the option you want,
             <u>we suggest you opt for soft personalization.</u>
-        </x-slot:p>
+        </p>
     </x-section>
     <x-section class="grid grid-cols-2 gap-2" :copy="false">
         <div class="col-span-full md:col-span-1">
