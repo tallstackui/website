@@ -103,8 +103,39 @@
             </div>
         </x-preview>
     </x-section>
-    <x-section title="Outline Variations"
-               anchor="normal-outline-variations">
+    <x-section title="Light Variations" anchor="normal-light-variations">
+        <x-preview language="blade" :contents="$lights">
+            <div class="gap-2 space-y-2">
+                <x-button text="Primary" light />
+                <x-button text="Secondary" color="secondary" light />
+                <x-button text="Slate" color="slate" light />
+                <x-button text="Gray" color="gray" light />
+                <x-button text="Zinc" color="zinc" light />
+                <x-button text="Neutral" color="neutral" light />
+                <x-button text="Stone" color="stone" light />
+                <x-button text="Red" color="red" light />
+                <x-button text="Orange" color="orange" light />
+                <x-button text="Amber" color="amber" light />
+                <x-button text="Yellow" color="yellow" light />
+                <x-button text="Lime" color="lime" light />
+                <x-button text="Green" color="green" light />
+                <x-button text="Emerald" color="emerald" light />
+                <x-button text="Teal" color="teal" light />
+                <x-button text="Cyan" color="cyan" light />
+                <x-button text="Sky" color="sky" light />
+                <x-button text="Blue" color="blue" light />
+                <x-button text="Indigo" color="indigo" light />
+                <x-button text="Violet" color="violet" light />
+                <x-button text="Purple" color="purple" light />
+                <x-button text="Fuchsia" color="fuchsia" light />
+                <x-button text="Pink" color="pink" light />
+                <x-button text="Rose" color="rose" light />
+                <x-button text="Black" color="black" light />
+                <x-button text="White" color="white" light />
+            </div>
+        </x-preview>
+    </x-section>
+    <x-section title="Outline Variations" anchor="normal-outline-variations">
         <x-preview language="blade" :contents="$outlines">
             <div class="gap-2 space-y-2">
                 <x-button text="Primary" outline />
@@ -199,6 +230,38 @@
                 <x-button.circle text="TS" color="rose" />
                 <x-button.circle text="TS" color="black" />
                 <x-button.circle text="TS" color="white" />
+            </div>
+        </x-preview>
+    </x-section>
+    <x-section title="Light Variations" anchor="circle-light-variations">
+        <x-preview language="blade" :contents="$circleLights">
+            <div class="gap-2 space-y-2">
+                <x-button.circle text="TS" light />
+                <x-button.circle text="TS" color="secondary" light />
+                <x-button.circle text="TS" color="slate" light />
+                <x-button.circle text="TS" color="gray" light />
+                <x-button.circle text="TS" color="zinc" light />
+                <x-button.circle text="TS" color="neutral" light />
+                <x-button.circle text="TS" color="stone" light />
+                <x-button.circle text="TS" color="red" light />
+                <x-button.circle text="TS" color="orange" light />
+                <x-button.circle text="TS" color="amber" light />
+                <x-button.circle text="TS" color="yellow" light />
+                <x-button.circle text="TS" color="lime" light />
+                <x-button.circle text="TS" color="green" light />
+                <x-button.circle text="TS" color="emerald" light />
+                <x-button.circle text="TS" color="teal" light />
+                <x-button.circle text="TS" color="cyan" light />
+                <x-button.circle text="TS" color="sky" light />
+                <x-button.circle text="TS" color="blue" light />
+                <x-button.circle text="TS" color="indigo" light />
+                <x-button.circle text="TS" color="violet" light />
+                <x-button.circle text="TS" color="purple" light />
+                <x-button.circle text="TS" color="fuchsia" light />
+                <x-button.circle text="TS" color="pink" light />
+                <x-button.circle text="TS" color="rose" light />
+                <x-button.circle text="TS" color="black" light />
+                <x-button.circle text="TS" color="white" light />
             </div>
         </x-preview>
     </x-section>

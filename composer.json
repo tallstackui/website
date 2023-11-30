@@ -13,7 +13,7 @@
         "laravel/tinker": "^2.8",
         "livewire/livewire": "^3.0",
         "livewire/volt": "^1.0",
-        "tallstackui/tallstackui": "^1.0",
+        "tallstackui/tallstackui": "1.x-dev",
         "torchlight/torchlight-laravel": "^0.5.14"
     },
     "require-dev": {

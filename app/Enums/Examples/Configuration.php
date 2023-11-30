@@ -46,6 +46,10 @@ class Configuration
             /* Alloweds: top-right, top-left, bottom-right, bottom-left */
             'position' => 'top-right',
         ],
+        'tooltip' => [
+            /* Enable theme variation between light/dark theme */
+            'thematic' => false,
+        ],
     ],
 
     // ...

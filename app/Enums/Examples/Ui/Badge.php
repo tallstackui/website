@@ -56,6 +56,35 @@ class Badge
     <x-badge text="Black" color="black" />
     HTML;
 
+    public const LIGHTS = <<<'HTML'
+    <x-badge text="Primary" light />
+    <x-badge text="Secondary" color="secondary" light />
+    <x-badge text="Slate" color="slate" light />
+    <x-badge text="Gray" color="gray" light />
+    <x-badge text="Zinc" color="zinc" light />
+    <x-badge text="Neutral" color="neutral" light />
+    <x-badge text="Stone" color="stone" light />
+    <x-badge text="Red" color="red" light />
+    <x-badge text="Orange" color="orange" light />
+    <x-badge text="Amber" color="amber" light />
+    <x-badge text="Yellow" color="yellow" light />
+    <x-badge text="Lime" color="lime" light />
+    <x-badge text="Green" color="green" light />
+    <x-badge text="Emerald" color="emerald" light />
+    <x-badge text="Teal" color="teal" light />
+    <x-badge text="Cyan" color="cyan" light />
+    <x-badge text="Sky" color="sky" light />
+    <x-badge text="Blue" color="blue" light />
+    <x-badge text="Indigo" color="indigo" light />
+    <x-badge text="Violet" color="violet" light />
+    <x-badge text="Purple" color="purple" light />
+    <x-badge text="Fuchsia" color="fuchsia" light />
+    <x-badge text="Pink" color="pink" light />
+    <x-badge text="Rose" color="rose" light />
+    <x-badge text="White" color="white" light />
+    <x-badge text="Black" color="black" light />
+    HTML;
+
     public const OUTLINES = <<<'HTML'
     <x-badge text="Primary" outline />
     <x-badge text="Secondary" color="secondary" outline />

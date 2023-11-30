@@ -67,7 +67,8 @@
         "3": "Icon Slot",
         "4": "Size Variations",
         "5": "Color Variations",
-        "6": "Outline Variations"
+        "6": "Light Variations",
+        "7": "Outline Variations"
     },
     "docs.ui.button": {
         "Normal": {
@@ -81,7 +82,8 @@
                 "5": "Size Variations",
                 "6": "Loading Effect",
                 "7": "Color Variations",
-                "8": "Outline Variations"
+                "8": "Light Variations",
+                "9": "Outline Variations"
             }
         },
         "Circle": {
@@ -95,7 +97,8 @@
                 "5": "Size Variations",
                 "6": "Loading Effect",
                 "7": "Color Variations",
-                "8": "Outline Variations"
+                "8": "Light Variations",
+                "9": "Outline Variations"
             }
         }
     },
