@@ -47,15 +47,19 @@ class Installation
     public const TAILWINDCSS = <<<'HTML'
     // ...
 
+    import forms from '@tailwindcss/forms'; // [tl! highlight]
+
     presets: [
-        require('./vendor/tallstackui/tallstackui/tailwind.config.js')
+        require('./vendor/tallstackui/tallstackui/tailwind.config.js') // [tl! highlight]
     ],
 
     content: [
         // ...
 
-        './vendor/tallstackui/tallstackui/src/**/*.php',
+        './vendor/tallstackui/tallstackui/src/**/*.php', // [tl! highlight]
     ],
+
+    plugins: [forms], // [tl! highlight]
     HTML;
 
     public const BUILD = <<<'HTML'

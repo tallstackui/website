@@ -5,9 +5,10 @@
     <x-section title="Requirements" :copy="false">
         <p>TallStackUi was created with a <b class="font-semibold text-pink-500 underline">focus on Livewire 3</b> so the usage requirements are:</p>
         <ul class="mt-4 ml-4 list-inside list-decimal space-y-2">
+            <li>PHP 8.1</li>
             <li>Laravel 10</li>
             <li>Livewire 3</li>
-            <li>PHP 8.1</li>
+            <li>TailwindCSS 3</li>
         </ul>
     </x-section>
     <x-section title="Installation" :copy="false">
@@ -17,11 +18,17 @@
         <x-code language="blade" :contents="$cloak" :copy="false" />
         <p>3. Add the TallStackUI script above the <x-block>vite</x-block> tag in your layout:</p>
         <x-code language="blade" :contents="$script" :copy="false" />
-        <p>If you prefer, you can add then separately:</p>
+        <p>If you prefer, you can load the script and styles separately:</p>
         <x-code language="blade" :contents="$manual" :copy="false" />
-        <x-warning text="You must add above the @vite tag." />
+        <x-warning>
+            <ul class="text-sm list-inside list-decimal">
+                <li>You must add above the @verbatim @vite @endverbatim tag.</li>
+                <li>You do not need to load the style separately if you choose to follow step 4 below.</li>
+            </ul>
+        </x-warning>
         <p class="mt-4">4. Edit the <x-block>tailwindcss.config.js</x-block> of your application inserting this content:</p>
         <x-code language="js" :contents="$tailwindcss" :copy="false" />
+        <x-warning text="Your TailwindCSS configuration must also load the form plugin." />
         <p class="mt-4">5. Build the assets and do a full cleanup in the Laravel:</p>
         <x-code language="shell" :contents="$build" />
         <div class="mt-4">

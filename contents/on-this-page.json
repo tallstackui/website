@@ -46,8 +46,8 @@
         "2": "Close Option",
         "3": "Icon Slot",
         "4": "Color Variations",
-        "5": "Outline Variations",
-        "6": "Light Variations"
+        "5": "Light Variations",
+        "6": "Outline Variations"
     },
     "docs.ui.avatar": {
         "0": "Basic Usage",
