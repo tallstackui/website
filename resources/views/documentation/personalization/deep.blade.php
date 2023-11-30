@@ -236,7 +236,7 @@
         <p class="mb-4">
             If you are personalizing your components using deep personalization, make sure you track your
             component classes so that TailwindCSS generates all the classes that come out of the files. Your
-            <x-block>tailwindcss.config.js</x-block> needs to receive the following content:
+            <x-block>tailwind.config.js</x-block> needs to receive the following content:
         </p>
         <x-code language="js" :contents="$tailwindcss" :copy="false"/>
     </x-section>

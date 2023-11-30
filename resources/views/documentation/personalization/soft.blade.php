@@ -110,7 +110,7 @@
         <p class="mb-4">
             If you are personalizing your components, there is something you should know. As classes are TailwindCSS
             classes you need to ensure that TailwindCSS watches the files from which the classes you defined come,
-            so personalizations will take effect. To do this, you must edit your <x-block>tailwindcss.config.js</x-block>
+            so personalizations will take effect. To do this, you must edit your <x-block>tailwind.config.js</x-block>
             file inserting this content:
         </p>
         <x-code language="js" :contents="$tailwindcss" :copy="false"/>

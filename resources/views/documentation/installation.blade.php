@@ -10,6 +10,11 @@
             <li>Livewire 3</li>
             <li>TailwindCSS 3</li>
         </ul>
+        <div class="mt-4">
+            <x-alert icon="check" color="green">
+                Ready for PHP 8.2 & PHP 8.3
+            </x-alert>
+        </div>
     </x-section>
     <x-section title="Installation" :copy="false">
         <p>1. Run the following command to include the TallStackUI as a composer dependency:</p>
@@ -23,12 +28,12 @@
         <x-warning>
             <ul class="text-sm list-inside list-decimal">
                 <li>You must add above the @verbatim @vite @endverbatim tag.</li>
-                <li>You do not need to load the style separately if you choose to follow step 4 below.</li>
+                <li><u>You do not need to load the style separately</u> if you choose to follow step 4 below.</li>
             </ul>
         </x-warning>
-        <p class="mt-4">4. Edit the <x-block>tailwindcss.config.js</x-block> of your application inserting this content:</p>
+        <p class="mt-4">4. Edit the <x-block>tailwind.config.js</x-block> of your application inserting this content:</p>
         <x-code language="js" :contents="$tailwindcss" :copy="false" />
-        <x-warning text="Your TailwindCSS configuration must also load the form plugin." />
+        <x-warning text="Your TailwindCSS setup must also load the form plugin." />
         <p class="mt-4">5. Build the assets and do a full cleanup in the Laravel:</p>
         <x-code language="shell" :contents="$build" />
         <div class="mt-4">
