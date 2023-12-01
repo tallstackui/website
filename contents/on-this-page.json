@@ -2,7 +2,8 @@
     "docs.installation": {
         "0": "Requirements",
         "1": "Installation",
-        "2": "Livewire SPA Mode"
+        "3": "AlpineJS Requirement",
+        "4": "Livewire SPA Mode"
     },
     "docs.form.input": {
         "0": "Basic Usage",

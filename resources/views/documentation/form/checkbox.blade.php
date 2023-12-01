@@ -33,32 +33,32 @@
     <x-section title="Color Variations">
         <x-preview language="blade" :contents="$colors">
             <div class="space-y-2">
-                <x-checkbox label="Primary" />
-                <x-checkbox color="secondary" label="Secondary" />
-                <x-checkbox color="slate" label="Slate" />
-                <x-checkbox color="gray" label="Gray" />
-                <x-checkbox color="zinc" label="Zinc" />
-                <x-checkbox color="neutral" label="Neutral" />
-                <x-checkbox color="stone" label="Stone" />
-                <x-checkbox color="red" label="Red" />
-                <x-checkbox color="orange" label="Orange" />
-                <x-checkbox color="amber" label="Amber" />
-                <x-checkbox color="yellow" label="Yellow" />
-                <x-checkbox color="lime" label="Lime" />
-                <x-checkbox color="green" label="Green" />
-                <x-checkbox color="emerald" label="Emerald" />
-                <x-checkbox color="teal" label="Teal" />
-                <x-checkbox color="cyan" label="Cyan" />
-                <x-checkbox color="sky" label="Sky" />
-                <x-checkbox color="blue" label="Blue" />
-                <x-checkbox color="indigo" label="Indigo" />
-                <x-checkbox color="violet" label="Violet" />
-                <x-checkbox color="purple" label="Purple" />
-                <x-checkbox color="fuchsia" label="Fuchsia" />
-                <x-checkbox color="pink" label="Pink" />
-                <x-checkbox color="rose" label="Rose" />
-                <x-checkbox color="black" label="Black" />
-                <x-checkbox color="white" label="White" />
+                <x-checkbox label="Primary" checked />
+                <x-checkbox color="secondary" label="Secondary" checked />
+                <x-checkbox color="slate" label="Slate" checked />
+                <x-checkbox color="gray" label="Gray" checked />
+                <x-checkbox color="zinc" label="Zinc" checked />
+                <x-checkbox color="neutral" label="Neutral" checked />
+                <x-checkbox color="stone" label="Stone" checked />
+                <x-checkbox color="red" label="Red" checked />
+                <x-checkbox color="orange" label="Orange" checked />
+                <x-checkbox color="amber" label="Amber" checked />
+                <x-checkbox color="yellow" label="Yellow" checked />
+                <x-checkbox color="lime" label="Lime" checked />
+                <x-checkbox color="green" label="Green" checked />
+                <x-checkbox color="emerald" label="Emerald" checked />
+                <x-checkbox color="teal" label="Teal" checked />
+                <x-checkbox color="cyan" label="Cyan" checked />
+                <x-checkbox color="sky" label="Sky" checked />
+                <x-checkbox color="blue" label="Blue" checked />
+                <x-checkbox color="indigo" label="Indigo" checked />
+                <x-checkbox color="violet" label="Violet" checked />
+                <x-checkbox color="purple" label="Purple" checked />
+                <x-checkbox color="fuchsia" label="Fuchsia" checked />
+                <x-checkbox color="pink" label="Pink" checked />
+                <x-checkbox color="rose" label="Rose" checked />
+                <x-checkbox color="black" label="Black" checked />
+                <x-checkbox color="white" label="White" checked />
             </div>
         </x-preview>
     </x-section>

@@ -6,12 +6,18 @@
         Helper to easy manage dark theme.
     </x-slot:description>
     <x-section :copy="false">
-        <p>
+        <p class="mb-2">
             TallStackUI provides a simple yet powerful helper to add dark theme support to your application. The main idea
             of this helper is to offer an easy way to control the dark theme by persisting a value in the browser's local storage.
             After applying the helper, an AlpineJS variable called <x-block>darkTheme</x-block> will be offered to control the dark theme
             persisting the changes in the local storage.
         </p>
+        <x-warning>
+            The dark theme helper needs AlpineJS to work, and Livewire 3 automatically delivers AlpineJS only when
+            there are Livewire components on the page. To ensure the dark theme helper works even if there are no
+            Livewire components on the page, load AlpineJS using the <x-block>@livewireScript</x-block> directive
+            <a href="https://livewire.laravel.com/docs/installation#manually-including-livewires-frontend-assets" class="underline" target="_blank">as mentioned in the documentation.</a>
+        </x-warning>
         <p class="mt-4">1. Enable the dark theme support in your TailwindCSS configuration file:</p>
         <x-code language="js" :contents="$tailwindcss" :copy="false"/>
         <p class="mt-4">2. Add the helper on the <x-block>html</x-block> tag of your layout:</p>

@@ -33,32 +33,32 @@
     <x-section title="Color Variations">
         <x-preview language="blade" :contents="$colors">
             <div class="space-y-2">
-                <x-toggle label="Primary" />
-                <x-toggle color="secondary" label="Secondary" />
-                <x-toggle color="slate" label="Slate" />
-                <x-toggle color="gray" label="Gray" />
-                <x-toggle color="zinc" label="Zinc" />
-                <x-toggle color="neutral" label="Neutral" />
-                <x-toggle color="stone" label="Stone" />
-                <x-toggle color="red" label="Red" />
-                <x-toggle color="orange" label="Orange" />
-                <x-toggle color="amber" label="Amber" />
-                <x-toggle color="yellow" label="Yellow" />
-                <x-toggle color="lime" label="Lime" />
-                <x-toggle color="green" label="Green" />
-                <x-toggle color="emerald" label="Emerald" />
-                <x-toggle color="teal" label="Teal" />
-                <x-toggle color="cyan" label="Cyan" />
-                <x-toggle color="sky" label="Sky" />
-                <x-toggle color="blue" label="Blue" />
-                <x-toggle color="indigo" label="Indigo" />
-                <x-toggle color="violet" label="Violet" />
-                <x-toggle color="purple" label="Purple" />
-                <x-toggle color="fuchsia" label="Fuchsia" />
-                <x-toggle color="pink" label="Pink" />
-                <x-toggle color="rose" label="Rose" />
-                <x-toggle color="black" label="Black" />
-                <x-toggle color="white" label="White" />
+                <x-toggle label="Primary" checked />
+                <x-toggle color="secondary" label="Secondary" checked />
+                <x-toggle color="slate" label="Slate" checked />
+                <x-toggle color="gray" label="Gray" checked />
+                <x-toggle color="zinc" label="Zinc" checked />
+                <x-toggle color="neutral" label="Neutral" checked />
+                <x-toggle color="stone" label="Stone" checked />
+                <x-toggle color="red" label="Red" checked />
+                <x-toggle color="orange" label="Orange" checked />
+                <x-toggle color="amber" label="Amber" checked />
+                <x-toggle color="yellow" label="Yellow" checked />
+                <x-toggle color="lime" label="Lime" checked />
+                <x-toggle color="green" label="Green" checked />
+                <x-toggle color="emerald" label="Emerald" checked />
+                <x-toggle color="teal" label="Teal" checked />
+                <x-toggle color="cyan" label="Cyan" checked />
+                <x-toggle color="sky" label="Sky" checked />
+                <x-toggle color="blue" label="Blue" checked />
+                <x-toggle color="indigo" label="Indigo" checked />
+                <x-toggle color="violet" label="Violet" checked />
+                <x-toggle color="purple" label="Purple" checked />
+                <x-toggle color="fuchsia" label="Fuchsia" checked />
+                <x-toggle color="pink" label="Pink" checked />
+                <x-toggle color="rose" label="Rose" checked />
+                <x-toggle color="black" label="Black" checked />
+                <x-toggle color="white" label="White" checked />
             </div>
         </x-preview>
     </x-section>

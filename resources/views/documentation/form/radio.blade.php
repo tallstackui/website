@@ -33,32 +33,32 @@
     <x-section title="Color Variations">
         <x-preview language="blade" :contents="$colors">
             <div class="space-y-2">
-                <x-radio label="Primary" />
-                <x-radio color="secondary" label="Secondary" />
-                <x-radio color="slate" label="Slate" />
-                <x-radio color="gray" label="Gray" />
-                <x-radio color="zinc" label="Zinc" />
-                <x-radio color="neutral" label="Neutral" />
-                <x-radio color="stone" label="Stone" />
-                <x-radio color="red" label="Red" />
-                <x-radio color="orange" label="Orange" />
-                <x-radio color="amber" label="Amber" />
-                <x-radio color="yellow" label="Yellow" />
-                <x-radio color="lime" label="Lime" />
-                <x-radio color="green" label="Green" />
-                <x-radio color="emerald" label="Emerald" />
-                <x-radio color="teal" label="Teal" />
-                <x-radio color="cyan" label="Cyan" />
-                <x-radio color="sky" label="Sky" />
-                <x-radio color="blue" label="Blue" />
-                <x-radio color="indigo" label="Indigo" />
-                <x-radio color="violet" label="Violet" />
-                <x-radio color="purple" label="Purple" />
-                <x-radio color="fuchsia" label="Fuchsia" />
-                <x-radio color="pink" label="Pink" />
-                <x-radio color="rose" label="Rose" />
-                <x-radio color="black" label="Black" />
-                <x-radio color="white" label="White" />
+                <x-radio label="Primary" checked />
+                <x-radio color="secondary" label="Secondary" checked />
+                <x-radio color="slate" label="Slate" checked />
+                <x-radio color="gray" label="Gray" checked />
+                <x-radio color="zinc" label="Zinc" checked />
+                <x-radio color="neutral" label="Neutral" checked />
+                <x-radio color="stone" label="Stone" checked />
+                <x-radio color="red" label="Red" checked />
+                <x-radio color="orange" label="Orange" checked />
+                <x-radio color="amber" label="Amber" checked />
+                <x-radio color="yellow" label="Yellow" checked />
+                <x-radio color="lime" label="Lime" checked />
+                <x-radio color="green" label="Green" checked />
+                <x-radio color="emerald" label="Emerald" checked />
+                <x-radio color="teal" label="Teal" checked />
+                <x-radio color="cyan" label="Cyan" checked />
+                <x-radio color="sky" label="Sky" checked />
+                <x-radio color="blue" label="Blue" checked />
+                <x-radio color="indigo" label="Indigo" checked />
+                <x-radio color="violet" label="Violet" checked />
+                <x-radio color="purple" label="Purple" checked />
+                <x-radio color="fuchsia" label="Fuchsia" checked />
+                <x-radio color="pink" label="Pink" checked />
+                <x-radio color="rose" label="Rose" checked />
+                <x-radio color="black" label="Black" checked />
+                <x-radio color="white" label="White" checked />
             </div>
         </x-preview>
     </x-section>

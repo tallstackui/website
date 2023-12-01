@@ -62,6 +62,16 @@ class Installation
     plugins: [forms], // [tl! highlight]
     HTML;
 
+    public const ALPINE = <<<'HTML'
+    <html>
+        <body>
+            <!-- ... -->
+
+            @livewireScripts
+        </body>
+    </html>
+    HTML;
+
     public const BUILD = <<<'HTML'
     npm run build && php artisan optimize:clear
     HTML;

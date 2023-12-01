@@ -38,6 +38,6 @@ class DarkTheme
     <!-- ... -->
 
     <p class="text-gray-700 dark:text-white">Hello World</p>
-    <div class="bg-red-500 dark:bg-white">Hello World</div>
+    <div class="bg-white dark:gray-800">Hello World</div>
     HTML;
 }

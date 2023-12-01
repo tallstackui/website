@@ -33,11 +33,17 @@
         </x-warning>
         <p class="mt-4">5. Build the assets and do a full cleanup in the Laravel:</p>
         <x-code language="shell" :contents="$build" />
-        <div class="mt-4">
-            <x-alert icon="check" color="green">
-                You are ready to create your first TallStackUI components.
-            </x-alert>
-        </div>
+    </x-section>
+    <x-section title="AlpineJS Requirement" :copy="false">
+        <p>
+            Livewire 3 brings AlpineJS together when you have Livewire components in the page. This made life
+            easier for TallStack developers, but it brought up one concern that you need to be aware of.
+            <u>You need to ensure that AlpineJS is always available, even when you are not in a Livewire
+            component but want to use TallStackUI components.</u> To do this, make sure you load AlpineJS
+            independently of Livewire using the <x-block>@livewireScript</x-block> directive:
+        </p>
+        <x-code language="blade" :contents="$alpine" :copy="false" />
+        <a href="https://livewire.laravel.com/docs/installation#manually-including-livewires-frontend-assets" class="underline" target="_blank">Learn more about it in the Livewire documentation.</a>
     </x-section>
     <x-section title="Livewire SPA Mode" :copy="false">
         <p>
