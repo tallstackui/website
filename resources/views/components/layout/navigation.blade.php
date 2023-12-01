@@ -90,6 +90,11 @@
                             </a>
                         </li>
                         <li class="relative ml-4">
+                            <a href="{{ route('documentation.ui.banner') }}" @class(['text-gray-500 transition hover:text-gray-800 hover:underline dark:text-slate-400', 'underline' => request()->routeIs('documentation.ui.banner')])>
+                                Banner
+                            </a>
+                        </li>
+                        <li class="relative ml-4">
                             <a href="{{ route('documentation.ui.button') }}" @class(['text-gray-500 transition hover:text-gray-800 hover:underline dark:text-slate-400', 'underline' => request()->routeIs('documentation.ui.button')])>
                                 Button
                             </a>

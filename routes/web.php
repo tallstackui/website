@@ -17,6 +17,7 @@ use App\Http\Controllers\Documentation\Translation;
 use App\Http\Controllers\Documentation\Ui\Alert;
 use App\Http\Controllers\Documentation\Ui\Avatar;
 use App\Http\Controllers\Documentation\Ui\Badge;
+use App\Http\Controllers\Documentation\Ui\Banner;
 use App\Http\Controllers\Documentation\Ui\Button;
 use App\Http\Controllers\Documentation\Ui\Card;
 use App\Http\Controllers\Documentation\Ui\DarkTheme;
@@ -63,6 +64,7 @@ Route::prefix('/docs')
                 Route::get('/alert', Alert::class)->name('alert');
                 Route::get('/avatar', Avatar::class)->name('avatar');
                 Route::get('/badge', Badge::class)->name('badge');
+                Route::get('/banner', Banner::class)->name('banner');
                 Route::get('/button', Button::class)->name('button');
                 Route::get('/card', Card::class)->name('card');
                 Route::get('/error', Error::class)->name('error');

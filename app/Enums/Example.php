@@ -19,6 +19,7 @@ use App\Enums\Examples\Translation;
 use App\Enums\Examples\Ui\Alert;
 use App\Enums\Examples\Ui\Avatar;
 use App\Enums\Examples\Ui\Badge;
+use App\Enums\Examples\Ui\Banner;
 use App\Enums\Examples\Ui\Button;
 use App\Enums\Examples\Ui\Card;
 use App\Enums\Examples\Ui\Dialog;
@@ -40,6 +41,7 @@ enum Example: string
     case Alert = Alert::class;
     case Avatar = Avatar::class;
     case Badge = Badge::class;
+    case Banner = Banner::class;
     case Button = Button::class;
     case Card = Card::class;
     case Configuration = Configuration::class;
