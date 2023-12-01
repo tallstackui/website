@@ -40,7 +40,7 @@
             easier for TallStack developers, but it brought up one concern that you need to be aware of.
             <u>You need to ensure that AlpineJS is always available, even when you are not in a Livewire
             component but want to use TallStackUI components.</u> To do this, make sure you load AlpineJS
-            independently of Livewire using the <x-block>@livewireScript</x-block> directive:
+            independently of Livewire:
         </p>
         <x-code language="blade" :contents="$alpine" :copy="false" />
         <a href="https://livewire.laravel.com/docs/installation#manually-including-livewires-frontend-assets" class="underline" target="_blank">Learn more about it in the Livewire documentation.</a>
