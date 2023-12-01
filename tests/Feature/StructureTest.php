@@ -29,6 +29,7 @@ test('can access all routes', function (string $route) {
     fn () => route('documentation.ui.alert'),
     fn () => route('documentation.ui.avatar'),
     fn () => route('documentation.ui.badge'),
+    fn () => route('documentation.ui.banner'),
     fn () => route('documentation.ui.button'),
     fn () => route('documentation.ui.card'),
     fn () => route('documentation.ui.dropdown'),

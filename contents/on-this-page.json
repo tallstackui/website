@@ -72,6 +72,30 @@
         "8": "Light Variations",
         "9": "Outline Variations"
     },
+    "docs.ui.banner": {
+        "Static": {
+            "prefix": true,
+            "contents": {
+                "0": "Concept",
+                "1": "Usage",
+                "2": "Messages",
+                "3": "Left Slot",
+                "4": "Close Option",
+                "5": "Animations",
+                "6": "Date Limit",
+                "7": "Size Variations",
+                "8": "Color Variations & Light Option"
+            }
+        },
+        "Livewire Integration": {
+            "prefix": true,
+            "contents": {
+                "0": "Concept",
+                "1": "Usage",
+                "2": "Available Options"
+            }
+        }
+    },
     "docs.ui.button": {
         "Normal": {
             "prefix": true,
