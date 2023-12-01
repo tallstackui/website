@@ -25,6 +25,22 @@
             </div>
         </x-preview>
     </x-section>
+    <x-section title="Left & Right Slots">
+        <x-preview language="blade" :contents="$leftRight">
+            <div class="inline-flex space-x-2">
+                <x-icon name="users" class="h-5 w-5">
+                    <x-slot:left>
+                        Users
+                    </x-slot:left>
+                </x-icon>
+                <x-icon name="cog" class="h-5 w-5">
+                    <x-slot:right>
+                        Settings
+                    </x-slot:right>
+                </x-icon>
+            </div>
+        </x-preview>
+    </x-section>
     <x-slot:navigation>
         <x-slot:back>
             <x-navigation.link href="{{ route('documentation.ui.error') }}" text="Error" back />

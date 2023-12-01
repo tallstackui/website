@@ -8,7 +8,8 @@
         "0": "Basic Usage",
         "1": "Label & Hint",
         "2": "Required Label Indicator",
-        "3": "Icon Slot"
+        "3": "Icon Slot",
+        "4": "Prefix & Suffix"
     },
     "docs.form.password": {
         "0": "Basic Usage",
@@ -64,11 +65,12 @@
         "0": "Basic Usage",
         "1": "Square Variation",
         "2": "Round Variation",
-        "3": "Icon Slot",
-        "4": "Size Variations",
-        "5": "Color Variations",
-        "6": "Light Variations",
-        "7": "Outline Variations"
+        "4": "Left & Right Slots",
+        "5": "Icon Slot",
+        "6": "Size Variations",
+        "7": "Color Variations",
+        "8": "Light Variations",
+        "9": "Outline Variations"
     },
     "docs.ui.button": {
         "Normal": {
@@ -78,12 +80,13 @@
                 "1": "Tag A Usage",
                 "2": "Square Variation",
                 "3": "Round Variation",
-                "4": "Icon Slot",
-                "5": "Size Variations",
-                "6": "Loading Effect",
-                "7": "Color Variations",
-                "8": "Light Variations",
-                "9": "Outline Variations"
+                "4": "Left & Right Slots",
+                "5": "Icon Slot",
+                "6": "Size Variations",
+                "7": "Loading Effect",
+                "8": "Color Variations",
+                "9": "Light Variations",
+                "10": "Outline Variations"
             }
         },
         "Circle": {
@@ -121,6 +124,11 @@
         "2": "Title Customization",
         "3": "Close Option",
         "4": "Color Variations"
+    },
+    "docs.ui.icon": {
+        "0": "Basic Usage",
+        "1": "Outline Variations",
+        "2": "Left & Right Slots"
     },
     "docs.ui.modal": {
         "0": "Basic Usage",

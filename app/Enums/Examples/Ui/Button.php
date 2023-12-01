@@ -24,6 +24,21 @@ class Button
     <x-button round>TallStackUi</x-button>
     HTML;
 
+    public const LEFT_RIGHT = <<<'HTML'
+    <x-button>
+        <x-slot:left>
+            <x-badge color="yellow" text="+99" round light />
+        </x-slot:left>
+        TallStackUi
+    </x-button>
+    <x-button>
+        <x-slot:right>
+            <x-badge color="yellow" text="+99" round light />
+        </x-slot:right>
+        TallStackUi
+    </x-button>
+    HTML;
+
     public const ICONS = <<<'HTML'
     <x-button icon="cog" position="left">TallStackUi</x-button>
     <x-button icon="users" position="right">TallStackUi</x-button>

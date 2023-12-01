@@ -17,4 +17,17 @@ class Icon
     <x-icon name="clipboard" class="h-5 w-5" />
     <x-icon name="clipboard" class="h-5 w-5" outline />
     HTML;
+
+    public const LEFT_RIGHT = <<<'HTML'
+    <x-icon name="users" class="h-5 w-5">
+        <x-slot:left>
+            Users
+        </x-slot:left>
+    </x-icon>
+    <x-icon name="cog" class="h-5 w-5">
+        <x-slot:right>
+            Settings
+        </x-slot:right>
+    </x-icon>
+    HTML;
 }

@@ -30,6 +30,24 @@
             <x-button round>TallStackUi</x-button>
         </x-preview>
     </x-section>
+    <x-section title="Left & Right Slots" anchor="normal-left-right-slots">
+        <x-preview language="blade" :contents="$leftRight">
+            <div class="inline-flex space-x-2">
+                <x-button>
+                    <x-slot:left>
+                        <x-badge color="yellow" text="+99" round light />
+                    </x-slot:left>
+                    TallStackUi
+                </x-button>
+                <x-button>
+                    <x-slot:right>
+                        <x-badge color="yellow" text="+99" round light />
+                    </x-slot:right>
+                    TallStackUi
+                </x-button>
+            </div>
+        </x-preview>
+    </x-section>
     <x-section title="Icon Slot" anchor="normal-icon-slot" description="An option to use any Heroicon.">
         <x-preview language="blade" :contents="$icons">
             <div class="inline-flex space-x-2">

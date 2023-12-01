@@ -27,6 +27,24 @@
             </div>
         </x-preview>
     </x-section>
+    <x-section title="Left & Right Slots">
+        <x-preview language="blade" :contents="$leftRight">
+            <div class="flex items-center gap-2">
+                <x-badge lg>
+                    <x-slot:left>
+                        <p class="text-yellow-300 text-xs mr-2">+99</p>
+                    </x-slot:left>
+                    TallStackUI
+                </x-badge>
+                <x-badge lg>
+                    <x-slot:right>
+                        <p class="text-yellow-300 text-xs ml-2">+99</p>
+                    </x-slot:right>
+                    TallStackUI
+                </x-badge>
+            </div>
+        </x-preview>
+    </x-section>
     <x-section title="Icon Slot">
         <x-preview language="blade" :contents="$icons">
             <div class="flex items-center gap-2">

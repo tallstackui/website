@@ -21,6 +21,11 @@ class Input
     <x-input label="Name" icon="cog" position="right" />
     HTML;
 
+    public const PREFIX_SUFFIX = <<<'HTML'
+    <x-input prefix="https://" label="Domain" />
+    <x-input suffix="@gmail.com" label="E-mail" />
+    HTML;
+
     public const PERSONALIZATION = <<<'HTML'
     TallStackUi::personalize()
         ->form('input')

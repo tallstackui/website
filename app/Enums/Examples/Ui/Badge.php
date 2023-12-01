@@ -16,6 +16,21 @@ class Badge
     <x-badge text="TallStackUi" round />
     HTML;
 
+    public const LEFT_RIGHT = <<<'HTML'
+    <x-badge lg>
+        <x-slot:left>
+            <p class="text-yellow-300 text-xs mr-2">+99</p>
+        </x-slot:left>
+        TallStackUI
+    </x-badge>
+    <x-badge lg>
+        <x-slot:right>
+            <p class="text-yellow-300 text-xs ml-2">+99</p>
+        </x-slot:right>
+        TallStackUI
+    </x-badge>
+    HTML;
+
     public const ICONS = <<<'HTML'
     <x-badge text="TallStackUi" icon="users" position="left" />
     <x-badge text="TallStackUi" icon="cog" position="right" />

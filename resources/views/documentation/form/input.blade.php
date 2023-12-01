@@ -31,6 +31,14 @@
             </div>
         </x-preview>
     </x-section>
+    <x-section title="Prefix & Suffix">
+        <x-preview language="blade" :contents="$prefixSuffix">
+            <div class="space-y-2">
+                <x-input prefix="https://" label="Domain" />
+                <x-input suffix="@gmail.com" label="E-mail" />
+            </div>
+        </x-preview>
+    </x-section>
     <x-slot:navigation>
         <x-slot:back>
             <x-navigation.link href="{{ route('documentation.installation') }}" text="Installation" back />
