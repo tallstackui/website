@@ -112,10 +112,10 @@
     </x-section>
     <x-slot:navigation>
         <x-slot:back>
-            <x-navigation.link href="{{ route('documentation.ui.tab') }}" text="Tab" back />
+            <x-layout.footer-navigation href="{{ route('documentation.ui.tab') }}" text="Tab" back />
         </x-slot:back>
         <x-slot:next>
-            <x-navigation.link href="{{ route('documentation.ui.dialog') }}" text="Dialog" />
+            <x-layout.footer-navigation href="{{ route('documentation.ui.dialog') }}" text="Dialog" />
         </x-slot:next>
     </x-slot:navigation>
 </x-layout>

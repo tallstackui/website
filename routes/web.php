@@ -6,6 +6,7 @@ use App\Http\Controllers\Documentation\Contribution;
 use App\Http\Controllers\Documentation\Dropdown;
 use App\Http\Controllers\Documentation\Form\Checkbox;
 use App\Http\Controllers\Documentation\Form\Input;
+use App\Http\Controllers\Documentation\Form\Number;
 use App\Http\Controllers\Documentation\Form\Password;
 use App\Http\Controllers\Documentation\Form\Radio;
 use App\Http\Controllers\Documentation\Form\Textarea;
@@ -53,6 +54,7 @@ Route::prefix('/docs')
                 Route::get('/input', Input::class)->name('input');
                 Route::get('/password', Password::class)->name('password');
                 Route::get('/textarea', Textarea::class)->name('textarea');
+                Route::get('/number', Number::class)->name('number');
                 Route::get('/checkbox', Checkbox::class)->name('checkbox');
                 Route::get('/radio', Radio::class)->name('radio');
                 Route::get('/toggle', Toggle::class)->name('toggle');

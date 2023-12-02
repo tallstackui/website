@@ -7,6 +7,7 @@ use App\Enums\Examples\Contribution;
 use App\Enums\Examples\DarkTheme;
 use App\Enums\Examples\Form\Checkbox;
 use App\Enums\Examples\Form\Input;
+use App\Enums\Examples\Form\Number;
 use App\Enums\Examples\Form\Password;
 use App\Enums\Examples\Form\Radio;
 use App\Enums\Examples\Form\Textarea;
@@ -55,6 +56,7 @@ enum Example: string
     case Error = Error::class;
     case Icon = Icon::class;
     case Input = Input::class;
+    case Number = Number::class;
     case Installation = Installation::class;
     case Password = Password::class;
     case Radio = Radio::class;

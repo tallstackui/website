@@ -60,10 +60,10 @@
     </x-section>
     <x-slot:navigation>
         <x-slot:back>
-            <x-navigation.link href="{{ route('documentation.ui.slide') }}" text="Slide" back />
+            <x-layout.footer-navigation href="{{ route('documentation.ui.slide') }}" text="Slide" back />
         </x-slot:back>
         <x-slot:next>
-            <x-navigation.link href="{{ route('documentation.ui.tooltip') }}" text="Tooltip" />
+            <x-layout.footer-navigation href="{{ route('documentation.ui.tooltip') }}" text="Tooltip" />
         </x-slot:next>
     </x-slot:navigation>
 </x-layout>

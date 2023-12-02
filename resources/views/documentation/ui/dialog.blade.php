@@ -30,10 +30,10 @@
     <x-available-configuration />
     <x-slot:navigation>
         <x-slot:back>
-            <x-navigation.link href="{{ route('documentation.ui.tooltip') }}" text="Tooltip" back />
+            <x-layout.footer-navigation href="{{ route('documentation.ui.tooltip') }}" text="Tooltip" back />
         </x-slot:back>
         <x-slot:next>
-            <x-navigation.link href="{{ route('documentation.ui.toast') }}" text="Toast" />
+            <x-layout.footer-navigation href="{{ route('documentation.ui.toast') }}" text="Toast" />
         </x-slot:next>
     </x-slot:navigation>
 </x-layout>

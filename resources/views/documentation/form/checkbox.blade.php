@@ -64,10 +64,10 @@
     </x-section>
     <x-slot:navigation>
         <x-slot:back>
-            <x-navigation.link href="{{ route('documentation.form.textarea') }}" text="Form Textarea" back />
+            <x-layout.footer-navigation :href="route('documentation.form.textarea')" text="Form Textarea" back />
         </x-slot:back>
         <x-slot:next>
-            <x-navigation.link href="{{ route('documentation.form.radio') }}" text="Form Radio" />
+            <x-layout.footer-navigation :href="route('documentation.form.radio')" text="Form Radio" />
         </x-slot:next>
     </x-slot:navigation>
 </x-layout>

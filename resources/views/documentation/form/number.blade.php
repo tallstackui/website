@@ -1,9 +1,9 @@
 <x-layout>
     <x-slot:title>
-        Form Input
+        Form Number
     </x-slot:title>
     <x-slot:description>
-        Form input component.
+        Form number component.
     </x-slot:description>
     <x-slot:personalization>
         <livewire:documentation.personalization :$personalization component="input" />

@@ -55,6 +55,12 @@
                             </a>
                         </li>
                         <li class="relative ml-4">
+                            <a href="{{ route('documentation.form.number') }}" @class(['text-gray-500 transition hover:text-gray-800 hover:underline dark:text-slate-400', 'underline' => request()->routeIs('documentation.form.number')])>
+                                Number
+                                <x-layout.menu-badge-new />
+                            </a>
+                        </li>
+                        <li class="relative ml-4">
                             <a href="{{ route('documentation.form.checkbox') }}" @class(['text-gray-500 transition hover:text-gray-800 hover:underline dark:text-slate-400', 'underline' => request()->routeIs('documentation.form.checkbox')])>
                                 Checkbox
                             </a>
@@ -93,6 +99,7 @@
                             <a href="{{ route('documentation.ui.banner') }}" @class(['text-gray-500 transition hover:text-gray-800 hover:underline dark:text-slate-400', 'underline' => request()->routeIs('documentation.ui.banner')])>
                                 Banner
                             </a>
+                            <x-layout.menu-badge-new />
                         </li>
                         <li class="relative ml-4">
                             <a href="{{ route('documentation.ui.button') }}" @class(['text-gray-500 transition hover:text-gray-800 hover:underline dark:text-slate-400', 'underline' => request()->routeIs('documentation.ui.button')])>
