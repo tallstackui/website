@@ -6,45 +6,37 @@
         Form number component.
     </x-slot:description>
     <x-slot:personalization>
-        <livewire:documentation.personalization :$personalization component="input" />
+        <livewire:documentation.personalization :$personalization component="number" />
     </x-slot:personalization>
     <x-section title="Basic Usage">
         <x-preview language="blade" :contents="$basic">
-            <x-input />
+            <livewire:documentation.form.number />
         </x-preview>
     </x-section>
     <x-section title="Label & Hint">
         <x-preview language="blade" :contents="$labelHint">
-            <x-input label="Name" hint="Insert your name" />
+            <livewire:documentation.form.number :model="1" />
         </x-preview>
     </x-section>
-    <x-section title="Required Label Indicator" description="An asterisk in the label to indicate that the field is required.">
-        <x-preview language="blade" :contents="$asterisk">
-            <x-input label="Name *" hint="Insert your name" />
+    <x-section title="Min & Max Control">
+        <x-preview language="blade" :contents="$minMax">
+            <livewire:documentation.form.number :model="2" />
         </x-preview>
     </x-section>
-    <x-section title="Icon Slot">
-        <x-preview language="blade" :contents="$icons">
-            <div class="space-y-2">
-                <x-input label="Name" icon="users" />
-                <x-input label="Name" icon="cog" position="right" />
-            </div>
+    <x-section title="Delay Control" description="An option to control the velocity to increase/decrease when pressing">
+        <x-preview language="blade" :contents="$delay">
+            <livewire:documentation.form.number :model="3" />
         </x-preview>
-    </x-section>
-    <x-section title="Prefix & Suffix">
-        <x-preview language="blade" :contents="$prefixSuffix">
-            <div class="space-y-2">
-                <x-input prefix="https://" label="Domain" />
-                <x-input suffix="@gmail.com" label="E-mail" />
-            </div>
-        </x-preview>
+        <x-warning class="mt-4">
+            The delay option is in MS (milliseconds).
+        </x-warning>
     </x-section>
     <x-slot:navigation>
         <x-slot:back>
-            <x-layout.footer-navigation :href="route('documentation.installation')" text="Installation" back />
+            <x-layout.footer-navigation :href="route('documentation.form.textarea')" text="Form Textarea" back />
         </x-slot:back>
         <x-slot:next>
-            <x-layout.footer-navigation :href="route('documentation.form.password')" text="Form Password" />
+            <x-layout.footer-navigation :href="route('documentation.form.checkbox')" text="Form Checkbox" />
         </x-slot:next>
     </x-slot:navigation>
 </x-layout>

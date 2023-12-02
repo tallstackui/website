@@ -17,6 +17,12 @@
         "1": "Label & Hint",
         "2": "Required Label Indicator"
     },
+    "docs.form.number": {
+        "0": "Basic Usage",
+        "1": "Label & Hint",
+        "2": "Min & Max Control",
+        "3": "Delay Control"
+    },
     "docs.form.textarea": {
         "0": "Basic Usage",
         "1": "Label & Hint",
