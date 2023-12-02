@@ -7,7 +7,7 @@ use Illuminate\View\Component;
 
 class OnThisPage extends Component
 {
-    public function __construct(public ?array $contents = [])
+    public function __construct(public ?array $contents = [], public ?bool $mobile = false)
     {
         $this->contents();
     }

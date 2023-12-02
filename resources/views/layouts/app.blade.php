@@ -46,6 +46,9 @@
             <div class="min-w-0 max-w-2xl flex-auto px-4 py-16 lg:max-w-none lg:pr-0 lg:pl-8 xl:px-16">
                 <main>
                     @if ($title || $section)
+                        <div class="block xl:hidden">
+                            <x-on-this-page mobile />
+                        </div>
                         <header class="mb-6 space-y-1">
                             @if ($title)
                                 <h1 class="text-3xl font-semibold tracking-tight text-pink-900 font-display dark:text-slate-300">{{ $title }}</h1>
