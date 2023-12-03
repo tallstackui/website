@@ -10,6 +10,22 @@ class Loading
     <x-loading delay="longest" loading="save" /> {{-- [tl! add] --}}
     HTML;
 
+    public const USAGE = <<<'HTML'
+    <!-- resources/views/livewire/post.blade.php -->
+
+    <div>
+        <x-loading /> {{-- [tl! add] --}}
+
+        <form wire:submit="save">
+            <input type="text" wire:model="title">
+
+            <input type="text" wire:model="content">
+
+            <button type="submit">Save</button>
+        </form>
+    </div>
+    HTML;
+
     public const BASIC = <<<'HTML'
     <x-loading />
     HTML;

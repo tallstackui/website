@@ -176,11 +176,12 @@
     },
     "docs.ui.loading": {
         "0": "Concept",
-        "1": "Interaction Way",
-        "2": "Basic Usage",
-        "3": "Text Slot",
-        "4": "Target & Delay Options",
-        "5": "Configurations"
+        "1": "Attributes",
+        "2": "Usage",
+        "3": "Basic Usage",
+        "4": "Text Slot",
+        "5": "Target & Delay Options",
+        "6": "Configurations"
     },
     "docs.ui.select": {
         "Native": {
