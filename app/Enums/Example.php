@@ -27,6 +27,7 @@ use App\Enums\Examples\Ui\Dialog;
 use App\Enums\Examples\Ui\Dropdown;
 use App\Enums\Examples\Ui\Error;
 use App\Enums\Examples\Ui\Icon;
+use App\Enums\Examples\Ui\Loading;
 use App\Enums\Examples\Ui\Modal;
 use App\Enums\Examples\Ui\Select;
 use App\Enums\Examples\Ui\Slide;
@@ -70,6 +71,7 @@ enum Example: string
     case Toggle = Toggle::class;
     case Tooltip = Tooltip::class;
     case Modal = Modal::class;
+    case Loading = Loading::class;
     case Welcome = Welcome::class;
 
     public function variables(): array

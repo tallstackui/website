@@ -12,7 +12,10 @@ use App\Http\Controllers\Documentation\Form\Radio;
 use App\Http\Controllers\Documentation\Form\Textarea;
 use App\Http\Controllers\Documentation\Form\Toggle;
 use App\Http\Controllers\Documentation\Installation;
+use App\Http\Controllers\Documentation\Interactions\Dialog;
+use App\Http\Controllers\Documentation\Interactions\Toast;
 use App\Http\Controllers\Documentation\Internal;
+use App\Http\Controllers\Documentation\Loading;
 use App\Http\Controllers\Documentation\Personalization;
 use App\Http\Controllers\Documentation\Translation;
 use App\Http\Controllers\Documentation\Ui\Alert;
@@ -22,14 +25,12 @@ use App\Http\Controllers\Documentation\Ui\Banner;
 use App\Http\Controllers\Documentation\Ui\Button;
 use App\Http\Controllers\Documentation\Ui\Card;
 use App\Http\Controllers\Documentation\Ui\DarkTheme;
-use App\Http\Controllers\Documentation\Ui\Dialog;
 use App\Http\Controllers\Documentation\Ui\Error;
 use App\Http\Controllers\Documentation\Ui\Icon;
 use App\Http\Controllers\Documentation\Ui\Modal;
 use App\Http\Controllers\Documentation\Ui\Select;
 use App\Http\Controllers\Documentation\Ui\Slide;
 use App\Http\Controllers\Documentation\Ui\Tab;
-use App\Http\Controllers\Documentation\Ui\Toast;
 use App\Http\Controllers\Documentation\Ui\Tooltip;
 use Illuminate\Support\Facades\Route;
 
@@ -69,16 +70,15 @@ Route::prefix('/docs')
                 Route::get('/banner', Banner::class)->name('banner');
                 Route::get('/button', Button::class)->name('button');
                 Route::get('/card', Card::class)->name('card');
+                Route::get('/dropdown', Dropdown::class)->name('dropdown');
                 Route::get('/error', Error::class)->name('error');
                 Route::get('/icon', Icon::class)->name('icon');
-                Route::get('/dialog', Dialog::class)->name('dialog');
-                Route::get('/dropdown', Dropdown::class)->name('dropdown');
+                Route::get('/modal', Modal::class)->name('modal');
+                Route::get('/loading', Loading::class)->name('loading');
                 Route::get('/select', Select::class)->name('select');
                 Route::get('/slide', Slide::class)->name('slide');
                 Route::get('/tab', Tab::class)->name('tab');
-                Route::get('/toast', Toast::class)->name('toast');
                 Route::get('/tooltip', Tooltip::class)->name('tooltip');
-                Route::get('/modal', Modal::class)->name('modal');
             });
 
         Route::prefix('/interaction')

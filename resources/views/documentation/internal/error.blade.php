@@ -11,7 +11,7 @@
     <x-internals-warning />
     <x-slot:navigation>
         <x-slot:back>
-            <x-layout.footer-navigation href="{{ route('documentation.ui.toast') }}" text="Toast" back />
+            <x-layout.footer-navigation href="{{ route('documentation.interaction.toast') }}" text="Toast" back />
         </x-slot:back>
         <x-slot:next>
             <x-layout.footer-navigation href="{{ route('documentation.internal.hint') }}" text="Internal Hint" />

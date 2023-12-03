@@ -41,6 +41,7 @@ test('can access all routes', function (string $route) {
     fn () => route('documentation.ui.tab'),
     fn () => route('documentation.ui.tooltip'),
     fn () => route('documentation.ui.modal'),
+    fn () => route('documentation.ui.loading'),
     //
     fn () => route('documentation.interaction.dialog'),
     fn () => route('documentation.interaction.toast'),

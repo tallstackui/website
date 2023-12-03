@@ -92,6 +92,9 @@
                             <x-layout.navigation.link :href="route('documentation.ui.modal')" text="Modal" />
                         </li>
                         <li class="relative ml-4">
+                            <x-layout.navigation.link :href="route('documentation.ui.loading')" text="Loading" new />
+                        </li>
+                        <li class="relative ml-4">
                             <x-layout.navigation.link :href="route('documentation.ui.select')" text="Select" />
                         </li>
                         <li class="relative ml-4">
@@ -109,10 +112,10 @@
                     <h2 class="font-medium text-pink-900 font-display dark:text-pink-500">Interactions</h2>
                     <ul role="list" class="mt-4 space-y-2 dark:border-slate-800 lg:space-y-4 lg:mt-4 lg:border-slate-200">
                         <li class="relative ml-4">
-                            <x-layout.navigation.link :href="route('documentation.ui.dialog')" text="Dialog" />
+                            <x-layout.navigation.link :href="route('documentation.interaction.dialog')" text="Dialog" />
                         </li>
                         <li class="relative ml-4">
-                            <x-layout.navigation.link :href="route('documentation.ui.toast')" text="Toast" />
+                            <x-layout.navigation.link :href="route('documentation.interaction.toast')" text="Toast" />
                         </li>
                     </ul>
                 </li>

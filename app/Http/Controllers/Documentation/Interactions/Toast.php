@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Documentation\Ui;
+namespace App\Http\Controllers\Documentation\Interactions;
 
 use App\Enums\Example;
 use App\Http\Controllers\Controller;
@@ -10,6 +10,6 @@ class Toast extends Controller
 {
     public function __invoke(): View
     {
-        return view('documentation.ui.toast', Example::Toast->variables());
+        return view('documentation.interactions.toast', Example::Toast->variables());
     }
 }
