@@ -19,7 +19,11 @@ class Number
     HTML;
 
     public const DELAY = <<<'HTML'
-    <x-number delay="2" min="2" max="5" wire:model.live="quantity" />
+    <x-number delay="1" min="1" max="10" wire:model.live="quantity" />
+    HTML;
+
+    public const ICON = <<<'HTML'
+    <x-number wire:model.live="quantity" chevron />
     HTML;
 
     public const PERSONALIZATION = <<<'HTML'
