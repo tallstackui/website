@@ -10,12 +10,12 @@ class Number
 
     public const LABEL_HINT = <<<'HTML'
     <x-number label="Quantity"
-              hint="Select the quantity of items"
+              hint="Press the plus button to increase one by one"
               wire:model.live="quantity" />
     HTML;
 
     public const MIN_MAX = <<<'HTML'
-    <x-number min="2" max="5" wire:model.live="quantity" />
+    <x-number min="1" max="10" wire:model.live="quantity" />
     HTML;
 
     public const DELAY = <<<'HTML'
