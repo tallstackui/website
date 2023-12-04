@@ -189,22 +189,10 @@ class SoftPersonalization
            TallStackUi::personalize()
                ->form('input')
                ->block('input.class.base')
-               ->replace('rounded-md', 'rounded-full'); // string or array [tl! highlight]
-
-           TallStackUi::personalize()
-               ->form('input')
-               ->block('input.class.base')
-               ->remove('rounded-md'); // string or array [tl! highlight]
-
-           TallStackUi::personalize()
-               ->form('input')
-               ->block('input.class.base')
-               ->append('px-4'); // string only [tl! highlight]
-
-           TallStackUi::personalize()
-               ->form('input')
-               ->block('input.class.base')
-               ->prepend('py-4'); // string only [tl! highlight]
+               ->replace('rounded-md', 'rounded-full') // string or array
+               ->remove('rounded-md') // string or array
+               ->append('px-4') // string only
+               ->prepend('py-4'); // string only
         }
     }
     HTML;
