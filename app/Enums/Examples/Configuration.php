@@ -31,6 +31,10 @@ class Configuration
             /* Alloweds: sm, md, lg, xl, 2xl, 3xl, 4xl, 5xl, 6xl, 7xl */
             'size' => '2xl',
         ],
+        'loading' => [
+            'blur' => false,
+            'opacity' => true,
+        ],
         'slide' => [
             'z-index' => 'z-50',
             'blur' => false,
@@ -45,10 +49,6 @@ class Configuration
             'progress' => true,
             /* Alloweds: top-right, top-left, bottom-right, bottom-left */
             'position' => 'top-right',
-        ],
-        'tooltip' => [
-            /* Enable theme variation between light/dark theme */
-            'thematic' => false,
         ],
     ],
 

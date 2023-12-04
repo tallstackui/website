@@ -25,10 +25,10 @@
     </x-section>
     <x-slot:navigation>
         <x-slot:back>
-            <x-navigation.link href="{{ route('documentation.internal.wrapper') }}" text="Internal Wrapper" back />
+            <layout.footer-navigation href="{{ route('documentation.internal.wrapper') }}" text="Internal Wrapper" back />
         </x-slot:back>
         <x-slot:next>
-            <x-navigation.link href="{{ route('documentation.translation') }}" text="Translations" />
+            <layout.footer-navigation href="{{ route('documentation.translation') }}" text="Translations" />
         </x-slot:next>
     </x-slot:navigation>
 </x-layout>

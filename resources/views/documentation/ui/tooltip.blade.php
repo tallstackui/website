@@ -10,6 +10,14 @@
     </x-slot:personalization>
     <x-section title="Basic Usage">
         <x-preview language="blade" :contents="$basic">
+            <x-tooltip text="TallStackUI" />
+        </x-preview>
+    </x-section>
+    <x-section title="Available Positions">
+        <x-slot:description>
+            You can use all the <a href="https://atomiks.github.io/tippyjs/v6/all-props/#placement" class="underline" target="_blank">tippy.js available placements.</a>
+        </x-slot:description>
+        <x-preview language="blade" :contents="$positions">
             <div class="inline-flex space-x-2">
                 <x-tooltip text="Top" position="top"/>
                 <x-tooltip text="Bottom" position="bottom"/>
@@ -112,10 +120,10 @@
     </x-section>
     <x-slot:navigation>
         <x-slot:back>
-            <x-navigation.link href="{{ route('documentation.ui.tab') }}" text="Tab" back />
+            <x-layout.footer-navigation href="{{ route('documentation.ui.tab') }}" text="Tab" back />
         </x-slot:back>
         <x-slot:next>
-            <x-navigation.link href="{{ route('documentation.ui.dialog') }}" text="Dialog" />
+            <x-layout.footer-navigation href="{{ route('documentation.interaction.dialog') }}" text="Dialog" />
         </x-slot:next>
     </x-slot:navigation>
 </x-layout>

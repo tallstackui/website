@@ -22,6 +22,7 @@ test('can access all routes', function (string $route) {
     fn () => route('documentation.form.input'),
     fn () => route('documentation.form.password'),
     fn () => route('documentation.form.textarea'),
+    fn () => route('documentation.form.number'),
     fn () => route('documentation.form.checkbox'),
     fn () => route('documentation.form.radio'),
     fn () => route('documentation.form.toggle'),
@@ -40,6 +41,7 @@ test('can access all routes', function (string $route) {
     fn () => route('documentation.ui.tab'),
     fn () => route('documentation.ui.tooltip'),
     fn () => route('documentation.ui.modal'),
+    fn () => route('documentation.ui.loading'),
     //
     fn () => route('documentation.interaction.dialog'),
     fn () => route('documentation.interaction.toast'),

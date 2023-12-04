@@ -41,10 +41,10 @@
     </x-section>
     <x-slot:navigation>
         <x-slot:back>
-            <x-navigation.link href="{{ route('documentation.installation') }}" text="Installation" back />
+            <x-layout.footer-navigation :href="route('documentation.installation')" text="Installation" back />
         </x-slot:back>
         <x-slot:next>
-            <x-navigation.link href="{{ route('documentation.form.password') }}" text="Form Password" />
+            <x-layout.footer-navigation :href="route('documentation.form.password')" text="Form Password" />
         </x-slot:next>
     </x-slot:navigation>
 </x-layout>

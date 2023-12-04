@@ -31,7 +31,7 @@
     </x-section>
     <x-slot:navigation>
         <x-slot:next>
-            <x-navigation.link href="{{ route('documentation.installation') }}" text="Installation" />
+            <x-layout.footer-navigation href="{{ route('documentation.installation') }}" text="Installation" />
         </x-slot:next>
     </x-slot:navigation>
 </x-layout>

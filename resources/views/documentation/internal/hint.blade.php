@@ -11,10 +11,10 @@
     <x-internals-warning />
     <x-slot:navigation>
         <x-slot:back>
-            <x-navigation.link href="{{ route('documentation.internal.error') }}" text="Internal Error" back />
+            <x-layout.footer-navigation href="{{ route('documentation.internal.error') }}" text="Internal Error" back />
         </x-slot:back>
         <x-slot:next>
-            <x-navigation.link href="{{ route('documentation.internal.label') }}" text="Internal Label" />
+            <x-layout.footer-navigation href="{{ route('documentation.internal.label') }}" text="Internal Label" />
         </x-slot:next>
     </x-slot:navigation>
 </x-layout>

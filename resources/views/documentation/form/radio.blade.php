@@ -64,10 +64,10 @@
     </x-section>
     <x-slot:navigation>
         <x-slot:back>
-            <x-navigation.link href="{{ route('documentation.form.checkbox') }}" text="Form Checkbox" back />
+            <x-layout.footer-navigation :href="route('documentation.form.checkbox')" text="Form Checkbox" back />
         </x-slot:back>
         <x-slot:next>
-            <x-navigation.link href="{{ route('documentation.form.toggle') }}" text="Form Toggle" />
+            <x-layout.footer-navigation :href="route('documentation.form.toggle')" text="Form Toggle" />
         </x-slot:next>
     </x-slot:navigation>
 </x-layout>

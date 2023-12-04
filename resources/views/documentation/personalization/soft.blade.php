@@ -122,10 +122,10 @@
     </x-section>
     <x-slot:navigation>
         <x-slot:back>
-            <x-navigation.link href="{{ route('documentation.personalization.concept') }}" text="Personalization Concept" back />
+            <x-layout.footer-navigation href="{{ route('documentation.personalization.concept') }}" text="Personalization Concept" back />
         </x-slot:back>
         <x-slot:next>
-            <x-navigation.link href="{{ route('documentation.personalization.deep') }}" text="Deep Personalization" />
+            <x-layout.footer-navigation href="{{ route('documentation.personalization.deep') }}" text="Deep Personalization" />
         </x-slot:next>
     </x-slot:navigation>
 </x-layout>

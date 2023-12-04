@@ -7,6 +7,7 @@ use App\Enums\Examples\Contribution;
 use App\Enums\Examples\DarkTheme;
 use App\Enums\Examples\Form\Checkbox;
 use App\Enums\Examples\Form\Input;
+use App\Enums\Examples\Form\Number;
 use App\Enums\Examples\Form\Password;
 use App\Enums\Examples\Form\Radio;
 use App\Enums\Examples\Form\Textarea;
@@ -26,6 +27,7 @@ use App\Enums\Examples\Ui\Dialog;
 use App\Enums\Examples\Ui\Dropdown;
 use App\Enums\Examples\Ui\Error;
 use App\Enums\Examples\Ui\Icon;
+use App\Enums\Examples\Ui\Loading;
 use App\Enums\Examples\Ui\Modal;
 use App\Enums\Examples\Ui\Select;
 use App\Enums\Examples\Ui\Slide;
@@ -55,6 +57,7 @@ enum Example: string
     case Error = Error::class;
     case Icon = Icon::class;
     case Input = Input::class;
+    case Number = Number::class;
     case Installation = Installation::class;
     case Password = Password::class;
     case Radio = Radio::class;
@@ -68,6 +71,7 @@ enum Example: string
     case Toggle = Toggle::class;
     case Tooltip = Tooltip::class;
     case Modal = Modal::class;
+    case Loading = Loading::class;
     case Welcome = Welcome::class;
 
     public function variables(): array

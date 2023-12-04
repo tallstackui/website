@@ -94,10 +94,10 @@
     <x-code :contents="$eloquent" />
     <x-slot:navigation>
         <x-slot:back>
-            <x-navigation.link href="{{ route('documentation.ui.modal') }}" text="Modal" back />
+            <x-layout.footer-navigation href="{{ route('documentation.ui.modal') }}" text="Modal" back />
         </x-slot:back>
         <x-slot:next>
-            <x-navigation.link href="{{ route('documentation.ui.slide') }}" text="Slide" />
+            <x-layout.footer-navigation href="{{ route('documentation.ui.slide') }}" text="Slide" />
         </x-slot:next>
     </x-slot:navigation>
 </x-layout>

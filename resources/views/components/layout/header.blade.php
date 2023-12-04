@@ -15,6 +15,6 @@
         <x-icon x-on:click="document.querySelector('#docsearch').firstChild.click()" name="magnifying-glass" class="h-6 w-6 cursor-pointer text-gray-500 block lg:hidden" />
         <x-icon x-on:click="darkTheme = false" name="sun" class="h-6 w-6 cursor-pointer text-gray-500" x-show="darkTheme" />
         <x-icon x-on:click="darkTheme = true" name="moon" class="h-6 w-6 cursor-pointer text-gray-500" x-show="!darkTheme" />
-        <x-github />
+        <x-github repository />
     </div>
 </header>

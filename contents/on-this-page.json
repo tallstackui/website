@@ -17,6 +17,12 @@
         "1": "Label & Hint",
         "2": "Required Label Indicator"
     },
+    "docs.form.number": {
+        "0": "Basic Usage",
+        "1": "Label & Hint",
+        "2": "Min & Max Control",
+        "3": "Delay Control"
+    },
     "docs.form.textarea": {
         "0": "Basic Usage",
         "1": "Label & Hint",
@@ -168,6 +174,15 @@
         "9": "AlpineJS Helper",
         "10": "Configurations"
     },
+    "docs.ui.loading": {
+        "0": "Concept",
+        "1": "Attributes",
+        "2": "Usage",
+        "3": "Basic Usage",
+        "4": "Text Slot",
+        "5": "Target & Delay Options",
+        "6": "Configurations"
+    },
     "docs.ui.select": {
         "Native": {
             "prefix": true,
@@ -221,11 +236,12 @@
     },
     "docs.ui.tooltip": {
         "0": "Basic Usage",
-        "1": "Customized Icon",
-        "2": "Size Variations",
-        "3": "HTML Content",
-        "4": "Color Variations",
-        "5": "Outline Variations"
+        "1": "Available Positions",
+        "2": "Customized Icon",
+        "3": "Size Variations",
+        "4": "HTML Content",
+        "5": "Color Variations",
+        "6": "Outline Variations"
     },
     "docs.interaction.dialog": {
         "0": "Configuration",

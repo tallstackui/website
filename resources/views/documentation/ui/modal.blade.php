@@ -163,10 +163,10 @@
     <x-available-configuration />
     <x-slot:navigation>
         <x-slot:back>
-            <x-navigation.link href="{{ route('documentation.ui.icon') }}" text="Icon" back />
+            <x-layout.footer-navigation href="{{ route('documentation.ui.icon') }}" text="Icon" back />
         </x-slot:back>
         <x-slot:next>
-            <x-navigation.link href="{{ route('documentation.ui.select') }}" text="Select" />
+            <x-layout.footer-navigation href="{{ route('documentation.ui.select') }}" text="Select" />
         </x-slot:next>
     </x-slot:navigation>
 </x-layout>
