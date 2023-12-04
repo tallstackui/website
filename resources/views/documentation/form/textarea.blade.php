@@ -38,7 +38,7 @@
             <x-layout.footer-navigation :href="route('documentation.form.password')" text="Form Password" back />
         </x-slot:back>
         <x-slot:next>
-            <x-layout.footer-navigation :href="route('documentation.form.checkbox')" text="Form Checkbox" />
+            <x-layout.footer-navigation :href="route('documentation.form.number')" text="Form Number" />
         </x-slot:next>
     </x-slot:navigation>
 </x-layout>
