@@ -1,42 +1,9 @@
 <?php
 
 use App\Enums\Example;
-use App\Http\Controllers\Documentation\Configuration;
-use App\Http\Controllers\Documentation\Contribution;
-use App\Http\Controllers\Documentation\Dropdown;
-use App\Http\Controllers\Documentation\Form\Checkbox;
-use App\Http\Controllers\Documentation\Form\Input;
-use App\Http\Controllers\Documentation\Form\Number;
-use App\Http\Controllers\Documentation\Form\Password;
-use App\Http\Controllers\Documentation\Form\Radio;
-use App\Http\Controllers\Documentation\Form\Textarea;
-use App\Http\Controllers\Documentation\Form\Toggle;
-use App\Http\Controllers\Documentation\Installation;
-use App\Http\Controllers\Documentation\Interactions\Dialog;
-use App\Http\Controllers\Documentation\Interactions\Toast;
 use App\Http\Controllers\Documentation\Internal;
-use App\Http\Controllers\Documentation\Loading;
 use App\Http\Controllers\Documentation\Personalization;
-use App\Http\Controllers\Documentation\Translation;
-use App\Http\Controllers\Documentation\Ui\Alert;
-use App\Http\Controllers\Documentation\Ui\Avatar;
-use App\Http\Controllers\Documentation\Ui\Badge;
-use App\Http\Controllers\Documentation\Ui\Banner;
-use App\Http\Controllers\Documentation\Ui\Button;
-use App\Http\Controllers\Documentation\Ui\Card;
-use App\Http\Controllers\Documentation\Ui\DarkTheme;
-use App\Http\Controllers\Documentation\Ui\Error;
-use App\Http\Controllers\Documentation\Ui\Icon;
-use App\Http\Controllers\Documentation\Ui\Modal;
-use App\Http\Controllers\Documentation\Ui\Select;
-use App\Http\Controllers\Documentation\Ui\Slide;
-use App\Http\Controllers\Documentation\Ui\Tab;
-use App\Http\Controllers\Documentation\Ui\Tooltip;
 use Illuminate\Support\Facades\Route;
-
-$test = <<<'HTML'
-<x-button />
-HTML;
 
 Route::view('/', 'welcome', Example::Welcome->variables())->name('welcome');
 
@@ -47,45 +14,45 @@ Route::prefix('/docs')
     ->name('documentation.')
     ->group(function () {
         Route::view('/get-started', 'get-started')->name('get-started');
-        Route::get('/installation', Installation::class)->name('installation');
+        Route::view('/installation', 'documentation.installation', Example::Installation->variables())->name('installation');
 
         Route::prefix('/form')
             ->name('form.')
             ->group(function () {
-                Route::get('/input', Input::class)->name('input');
-                Route::get('/password', Password::class)->name('password');
-                Route::get('/textarea', Textarea::class)->name('textarea');
-                Route::get('/number', Number::class)->name('number');
-                Route::get('/checkbox', Checkbox::class)->name('checkbox');
-                Route::get('/radio', Radio::class)->name('radio');
-                Route::get('/toggle', Toggle::class)->name('toggle');
+                Route::view('/input', 'documentation.form.input', Example::Input->variables())->name('input');
+                Route::view('/password', 'documentation.form.password', Example::Password->variables())->name('password');
+                Route::view('/textarea', 'documentation.form.textarea', Example::Textarea->variables())->name('textarea');
+                Route::view('/number', 'documentation.form.number', Example::Number->variables())->name('number');
+                Route::view('/checkbox', 'documentation.form.checkbox', Example::Checkbox->variables())->name('checkbox');
+                Route::view('/radio', 'documentation.form.radio', Example::Radio->variables())->name('radio');
+                Route::view('/toggle', 'documentation.form.toggle', Example::Toggle->variables())->name('toggle');
             });
 
         Route::prefix('/ui')
             ->name('ui.')
             ->group(function () {
-                Route::get('/alert', Alert::class)->name('alert');
-                Route::get('/avatar', Avatar::class)->name('avatar');
-                Route::get('/badge', Badge::class)->name('badge');
-                Route::get('/banner', Banner::class)->name('banner');
-                Route::get('/button', Button::class)->name('button');
-                Route::get('/card', Card::class)->name('card');
-                Route::get('/dropdown', Dropdown::class)->name('dropdown');
-                Route::get('/error', Error::class)->name('error');
-                Route::get('/icon', Icon::class)->name('icon');
-                Route::get('/modal', Modal::class)->name('modal');
-                Route::get('/loading', Loading::class)->name('loading');
-                Route::get('/select', Select::class)->name('select');
-                Route::get('/slide', Slide::class)->name('slide');
-                Route::get('/tab', Tab::class)->name('tab');
-                Route::get('/tooltip', Tooltip::class)->name('tooltip');
+                Route::view('/alert', 'documentation.ui.alert', Example::Alert->variables())->name('alert');
+                Route::view('/avatar', 'documentation.ui.avatar', Example::Avatar->variables())->name('avatar');
+                Route::view('/badge', 'documentation.ui.badge', Example::Badge->variables())->name('badge');
+                Route::view('/banner', 'documentation.ui.banner', Example::Banner->variables())->name('banner');
+                Route::view('/button', 'documentation.ui.button', Example::Button->variables())->name('button');
+                Route::view('/card', 'documentation.ui.card', Example::Card->variables())->name('card');
+                Route::view('/dropdown', 'documentation.ui.dropdown', Example::Dropdown->variables())->name('dropdown');
+                Route::view('/error', 'documentation.ui.errors', Example::Error->variables())->name('error');
+                Route::view('/icon', 'documentation.ui.icon', Example::Icon->variables())->name('icon');
+                Route::view('/modal', 'documentation.ui.modal', Example::Modal->variables())->name('modal');
+                Route::view('/loading', 'documentation.ui.loading', Example::Loading->variables())->name('loading');
+                Route::view('/select', 'documentation.ui.select', Example::Select->variables())->name('select');
+                Route::view('/slide', 'documentation.ui.slide', Example::Slide->variables())->name('slide');
+                Route::view('/tab', 'documentation.ui.tab', Example::Tab->variables())->name('tab');
+                Route::view('/tooltip', 'documentation.ui.tooltip', Example::Tooltip->variables())->name('tooltip');
             });
 
         Route::prefix('/interaction')
             ->name('interaction.')
             ->group(function () {
-                Route::get('/dialog', Dialog::class)->name('dialog');
-                Route::get('/toast', Toast::class)->name('toast');
+                Route::view('/dialog', 'documentation.interactions.dialog', Example::Dialog->variables())->name('dialog');
+                Route::view('/toast', 'documentation.interactions.toast', Example::Toast->variables())->name('toast');
             });
 
         Route::controller(Internal::class)
@@ -98,18 +65,18 @@ Route::prefix('/docs')
                 Route::get('/wrapper', 'wrapper')->name('wrapper');
             });
 
-        Route::get('/dark-theme', DarkTheme::class)->name('dark-theme');
-        Route::get('/configuration', Configuration::class)->name('configuration');
-        Route::get('/translation', Translation::class)->name('translation');
-        Route::get('/contribution', Contribution::class)->name('contribution');
+        Route::view('/dark-theme', 'documentation.ui.dark-theme', Example::DarkTheme->variables())->name('dark-theme');
+        Route::view('/configuration', 'documentation.configuration', Example::Configuration->variables())->name('configuration');
+        Route::view('/translation', 'documentation.translation', Example::Translation->variables())->name('translation');
+        Route::view('/contribution', 'documentation.contribution', Example::Contribution->variables())->name('contribution');
 
         Route::controller(Personalization::class)
             ->prefix('/personalization')
             ->name('personalization.')
             ->group(function () {
-                Route::get('/concept', 'concept')->name('concept');
-                Route::get('/color', 'color')->name('color');
-                Route::get('/soft', 'soft')->name('soft');
-                Route::get('/deep', 'deep')->name('deep');
+                Route::view('/concept', 'documentation.personalization.concept')->name('concept');
+                Route::view('/color', 'documentation.personalization.color', Example::ColorPersonalization->variables())->name('color');
+                Route::view('/soft', 'documentation.personalization.soft', Example::SoftPersonalization->variables())->name('soft');
+                Route::view('/deep', 'documentation.personalization.deep', Example::DeepPersonalization->variables())->name('deep');
             });
     });
