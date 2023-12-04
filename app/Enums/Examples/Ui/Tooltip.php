@@ -5,6 +5,28 @@ namespace App\Enums\Examples\Ui;
 class Tooltip
 {
     public const BASIC = <<<'HTML'
+    <x-tooltip text="TallStackUI" />
+    HTML;
+
+    public const POSITIONS = <<<'HTML'
+    <!-- Available Positions:
+         bottom,
+         bottom-start,
+         bottom-end,
+         top,
+         top-start,
+         top-end,
+         left,
+         left-start,
+         left-end,
+         right,
+         right-start,
+         right-end,
+         auto
+         auto-start
+         auto-end
+     -->
+
     <x-tooltip text="Top" position="top" />
     <x-tooltip text="Bottom" position="bottom" />
     <x-tooltip text="Left" position="left" />

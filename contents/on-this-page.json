@@ -236,11 +236,12 @@
     },
     "docs.ui.tooltip": {
         "0": "Basic Usage",
-        "1": "Customized Icon",
-        "2": "Size Variations",
-        "3": "HTML Content",
-        "4": "Color Variations",
-        "5": "Outline Variations"
+        "1": "Available Positions",
+        "2": "Customized Icon",
+        "3": "Size Variations",
+        "4": "HTML Content",
+        "5": "Color Variations",
+        "6": "Outline Variations"
     },
     "docs.interaction.dialog": {
         "0": "Configuration",
