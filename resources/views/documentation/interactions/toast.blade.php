@@ -35,10 +35,10 @@
     <x-available-configuration />
     <x-slot:navigation>
         <x-slot:back>
-            <x-layout.footer-navigation href="{{ route('documentation.interaction.dialog') }}" text="Dialog" back />
+            <x-layout.footer-navigation :href="route('documentation.interaction.dialog')" text="Dialog" back />
         </x-slot:back>
         <x-slot:next>
-            <x-layout.footer-navigation href="{{ route('documentation.internal.error') }}" text="Internal Error" />
+            <x-layout.footer-navigation :href="route('documentation.internal.error')" text="Internal Error" />
         </x-slot:next>
     </x-slot:navigation>
 </x-layout>

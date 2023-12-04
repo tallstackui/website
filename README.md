@@ -1,6 +1,6 @@
-# TallStackUi, WebSite
+# TallStackUi
 
-<p align="center"><a href="https://tallstackui.com" target="_blank"><img src="arts/tallstackui.svg" width="500"></a></p>
+<p align="center"><a href="https://tallstackui.com" target="_blank"><img src="https://raw.githubusercontent.com/tallstackui/website/main/arts/tallstackui.svg" width="500"></a></p>
 
 <p align="center">
     <a href="https://github.com/tallstackui/tallstackui">
@@ -16,11 +16,15 @@
 
 ## Introduction
 
-[TallStackUi](https://tallstackui.com/) is the best ready-to-use component library for the TALL Stack.
+[TallStackUi](https://tallstackui.com/) is your new friendly TALL Stack component library.
 
 ## Documentation
 
-[Visit the website to check the documentation](https://tallstackui.com)
+[Visit our website to check the documentation](https://tallstackui.com)
+
+## License
+
+TallStackUi is open-source under the [MIT license](https://github.com/tallstackui/tallstackui/blob/1.x/README.md)
 
 ## Contributing
 

@@ -21,10 +21,10 @@
     </x-section>
     <x-slot:navigation>
         <x-slot:back>
-            <x-layout.footer-navigation href="{{ route('documentation.personalization.deep') }}" text="Deep Personalization" back />
+            <x-layout.footer-navigation :href="route('documentation.personalization.deep')" text="Deep Personalization" back />
         </x-slot:back>
         <x-slot:next>
-            <x-layout.footer-navigation href="{{ route('documentation.dark-theme') }}" text="Dark Theme" />
+            <x-layout.footer-navigation :href="route('documentation.dark-theme')" text="Dark Theme" />
         </x-slot:next>
     </x-slot:navigation>
 </x-layout>

@@ -62,10 +62,10 @@
     </x-section>
     <x-slot:navigation>
         <x-slot:back>
-            <x-layout.footer-navigation href="{{ route('documentation.ui.dropdown') }}" text="Dropdown" back />
+            <x-layout.footer-navigation :href="route('documentation.ui.dropdown')" text="Dropdown" back />
         </x-slot:back>
         <x-slot:next>
-            <x-layout.footer-navigation href="{{ route('documentation.ui.icon') }}" text="Icon" />
+            <x-layout.footer-navigation :href="route('documentation.ui.icon')" text="Icon" />
         </x-slot:next>
     </x-slot:navigation>
 </x-layout>

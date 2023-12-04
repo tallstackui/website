@@ -317,10 +317,10 @@
     </x-section>
     <x-slot:navigation>
         <x-slot:back>
-            <x-layout.footer-navigation href="{{ route('documentation.ui.badge') }}" text="Badge" back />
+            <x-layout.footer-navigation :href="route('documentation.ui.badge')" text="Badge" back />
         </x-slot:back>
         <x-slot:next>
-            <x-layout.footer-navigation href="{{ route('documentation.ui.card') }}" text="Card" />
+            <x-layout.footer-navigation :href="route('documentation.ui.card')" text="Card" />
         </x-slot:next>
     </x-slot:navigation>
 </x-layout>

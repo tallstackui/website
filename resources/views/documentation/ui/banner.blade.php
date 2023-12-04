@@ -65,10 +65,10 @@
     </x-section>
     <x-slot:navigation>
         <x-slot:back>
-            <x-layout.footer-navigation href="{{ route('documentation.ui.banner') }}" text="Badge" back />
+            <x-layout.footer-navigation :href="route('documentation.ui.banner')" text="Badge" back />
         </x-slot:back>
         <x-slot:next>
-            <x-layout.footer-navigation href="{{ route('documentation.ui.button') }}" text="Button" />
+            <x-layout.footer-navigation :href="route('documentation.ui.button')" text="Button" />
         </x-slot:next>
     </x-slot:navigation>
 </x-layout>

@@ -34,7 +34,7 @@
         <x-code language="php" :contents="$customization" :copy="false"/>
         <p class="my-2">
             Every customizable component has a method called <x-block>personalization</x-block>, which is where the
-            classes come from. <u>This method must return an array with the name of the customizable blocks and
+            classes come from. <u>This method must return an array with the name of the personalizable blocks and
             their respective values which must be the CSS classes to be applied.</u> To learn about customizable blocks,
             visit the documentation for the component you are personalizing.
         </p>
@@ -242,10 +242,10 @@
     </x-section>
     <x-slot:navigation>
         <x-slot:back>
-            <x-layout.footer-navigation href="{{ route('documentation.personalization.soft') }}" text="Soft Personalization" back />
+            <x-layout.footer-navigation :href="route('documentation.personalization.soft')" text="Soft Personalization" back />
         </x-slot:back>
         <x-slot:next>
-            <x-layout.footer-navigation href="{{ route('documentation.personalization.color') }}" text="Colors" />
+            <x-layout.footer-navigation :href="route('documentation.personalization.color')" text="Colors" />
         </x-slot:next>
     </x-slot:navigation>
 </x-layout>

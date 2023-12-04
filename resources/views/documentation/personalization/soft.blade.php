@@ -87,7 +87,7 @@
             with the original classes by touching their content but preserving everything else. Let's take a look at an example:
             <x-code :contents="$replace" :copy="false"/>
             <p class="mt-2">
-                Note that in the example above <u>we omitted the second parameter of the <x-block>blocks</x-block> method</u>,
+                Note that in the example above <u>we omitted the second parameter of the <x-block>block</x-block> method</u>,
                 this way we can access four useful methods that allow us to touch the component's original
                 classes in an easy way in order to make modifications while maintaining the rest of the original content.
             </p>
@@ -122,10 +122,10 @@
     </x-section>
     <x-slot:navigation>
         <x-slot:back>
-            <x-layout.footer-navigation href="{{ route('documentation.personalization.concept') }}" text="Personalization Concept" back />
+            <x-layout.footer-navigation :href="route('documentation.personalization.concept')" text="Personalization Concept" back />
         </x-slot:back>
         <x-slot:next>
-            <x-layout.footer-navigation href="{{ route('documentation.personalization.deep') }}" text="Deep Personalization" />
+            <x-layout.footer-navigation :href="route('documentation.personalization.deep')" text="Deep Personalization" />
         </x-slot:next>
     </x-slot:navigation>
 </x-layout>

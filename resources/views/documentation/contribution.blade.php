@@ -82,7 +82,7 @@
     </x-section>
     <x-slot:navigation>
         <x-slot:back>
-            <x-layout.footer-navigation href="{{ route('documentation.dark-theme') }}" text="Dark Theme" back />
+            <x-layout.footer-navigation :href="route('documentation.dark-theme')" text="Dark Theme" back />
         </x-slot:back>
     </x-slot:navigation>
 </x-layout>

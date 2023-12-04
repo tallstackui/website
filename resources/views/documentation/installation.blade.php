@@ -53,10 +53,10 @@
     </x-section>
     <x-slot:navigation>
         <x-slot:back>
-            <x-layout.footer-navigation href="{{ route('documentation.get-started') }}" text="Get Started" back />
+            <x-layout.footer-navigation :href="route('documentation.get-started')" text="Get Started" back />
         </x-slot:back>
         <x-slot:next>
-            <x-layout.footer-navigation href="{{ route('documentation.form.input') }}" text="Form Input" />
+            <x-layout.footer-navigation :href="route('documentation.form.input')" text="Form Input" />
         </x-slot:next>
     </x-slot:navigation>
 </x-layout>

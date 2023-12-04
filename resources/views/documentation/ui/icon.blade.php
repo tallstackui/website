@@ -43,10 +43,10 @@
     </x-section>
     <x-slot:navigation>
         <x-slot:back>
-            <x-layout.footer-navigation href="{{ route('documentation.ui.error') }}" text="Error" back />
+            <x-layout.footer-navigation :href="route('documentation.ui.error')" text="Error" back />
         </x-slot:back>
         <x-slot:next>
-            <x-layout.footer-navigation href="{{ route('documentation.ui.modal') }}" text="Modal" />
+            <x-layout.footer-navigation :href="route('documentation.ui.modal')" text="Modal" />
         </x-slot:next>
     </x-slot:navigation>
 </x-layout>

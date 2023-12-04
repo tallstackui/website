@@ -5,25 +5,24 @@ namespace App\Enums\Examples\Form;
 class Number
 {
     public const BASIC = <<<'HTML'
-    <x-number wire:model.live="quantity" />
+    <x-number />
     HTML;
 
     public const LABEL_HINT = <<<'HTML'
     <x-number label="Quantity"
-              hint="Press the plus button to increase one by one"
-              wire:model.live="quantity" />
+              hint="Press the plus button to increase one by one" />
     HTML;
 
     public const MIN_MAX = <<<'HTML'
-    <x-number min="1" max="10" wire:model.live="quantity" />
+    <x-number min="1" max="10" />
     HTML;
 
     public const DELAY = <<<'HTML'
-    <x-number delay="1" min="1" max="10" wire:model.live="quantity" />
+    <x-number delay="1" min="1" max="10" />
     HTML;
 
     public const ICON = <<<'HTML'
-    <x-number wire:model.live="quantity" chevron />
+    <x-number chevron />
     HTML;
 
     public const PERSONALIZATION = <<<'HTML'
