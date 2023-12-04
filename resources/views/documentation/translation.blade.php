@@ -12,8 +12,11 @@
         <p class="mt-4">1. Run the following command to publish the translations file:</p>
         <x-code language="shell" :contents="$command"/>
     </x-section>
-    <x-section title="Content" :copy="false">
+    <x-section title="Files" :copy="false">
         <p>This command will publish the TallStackUI translation files for the root path of your application.</p>
+    </x-section>
+    <x-section title="Missing Content" :copy="false">
+        <p>Didn't find the translation file for your language? <a href="https://github.com/tallstackui/tallstackui" class="underline" target="_blank">Send us a pull!</a></p>
     </x-section>
     <x-slot:navigation>
         <x-slot:back>

@@ -6,22 +6,24 @@ class DarkTheme
 {
     public const TAILWINDCSS = <<<'HTML'
     export default {
-        darkMode: 'class',
+        darkMode: 'class', // [tl! add]
 
         // ...
     }
     HTML;
 
     public const HELPER = <<<'HTML'
-    <html x-data="tallstackui_darkTheme()"
+    <html ...
+          x-data="tallstackui_darkTheme()" {{-- [tl! add:1] --}}
           x-bind:class="{ 'dark bg-gray-700': darkTheme, 'bg-white': !darkTheme }">
         <!-- ... -->
     </html>
     HTML;
 
     public const CUSTOMIZED = <<<'HTML'
-    <html x-data="tallstackui_darkTheme('other-name')"
-          x-bind:class="{ 'dark bg-gray-700': darkTheme, 'bg-white': !darkTheme }">
+    <html ...
+          x-data="tallstackui_darkTheme('other-name')" {{-- [tl! focus] --}}
+          ...>
         <!-- ... -->
     </html>
     HTML;

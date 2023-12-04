@@ -26,18 +26,17 @@ class Select
     /* Styled Common */
 
     public const STYLED_BASIC = <<<'HTML'
-    <x-select.styled wire:model="value" :options="[1,2,3]" />
+    <x-select.styled :options="[1,2,3]" />
     HTML;
 
     public const STYLED_LABEL_HINT = <<<'HTML'
     <x-select.styled label="Select One Option"
                      hint="You can choose 1, 2 or 3"
-                     wire:model="value"
                      :options="[1,2,3]" />
     HTML;
 
     public const STYLED_MULTIDIMENSIONAL = <<<'HTML'
-    <x-select.styled wire:model="value" :options="[
+    <x-select.styled  :options="[
         ['label' => 'TALL', 'value' => 1],
         ['label' => 'LIVT', 'value' => 2],
     ]" select="label:label|value:value" />
@@ -50,7 +49,7 @@ class Select
     HTML;
 
     public const STYLED_SEARCHABLE = <<<'HTML'
-    <x-select.styled wire:model="value" :options="[
+    <x-select.styled :options="[
         ['label' => 'TALL', 'value' => 1],
         ['label' => 'LIVT', 'value' => 2],
     ]" select="label:label|value:value" searchable />
@@ -59,7 +58,6 @@ class Select
     public const STYLED_SLOT = <<<'HTML'
     <x-select.styled label="Select One Option"
                      hint="Enter any random value to see the slot"
-                     wire:model="value"
                      searchable
                      :options="[1,2,3]">
         <x-slot:after>
@@ -77,15 +75,14 @@ class Select
     public const SEARCHABLE = <<<'HTML'
     <x-select.styled :request="route('api.users')"
                      select="label:name|value:id"
-                     wire:model="value" />
+                      />
     HTML;
 
     public const SEARCHABLE_LABEL_HINT = <<<'HTML'
     <x-select.styled :request="route('api.users')"
                      select="label:name|value:id"
                      label="Select One User"
-                     hint="You can choose whoever you want"
-                     wire:model="value" />
+                     hint="You can choose whoever you want" />
     HTML;
 
     public const SEARCHABLE_MULTIPLE = <<<'HTML'
@@ -93,7 +90,6 @@ class Select
 
     <x-select.styled :request="route('api.users')"
                      select="label:name|value:id"
-                     wire:model="options"
                      multiple />
     HTML;
 
@@ -105,16 +101,14 @@ class Select
                         'method' => 'get',
                         'params' => ['library' => 'TallStackUi'],
                      ]"
-                     select="label:name|value:id"
-                     wire:model="value" />
+                     select="label:name|value:id" />
     HTML;
 
     public const SEARCHABLE_SLOT = <<<'HTML'
     <x-select.styled :request="route('api.users')"
                      select="label:name|value:id"
                      label="Select One User"
-                     hint="Enter any random value to see the slot"
-                     wire:model="value">
+                     hint="Enter any random value to see the slot">
         <x-slot:after>
             <div class="px-2 mb-2 flex justify-center items-center">
                 <x-button x-on:click="show = false; $dispatch('confirmed', { term: search })">

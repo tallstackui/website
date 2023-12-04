@@ -262,7 +262,8 @@
     },
     "docs.translation": {
         "0": "Translation Files",
-        "1": "Content"
+        "1": "Files",
+        "2": "Missing Content"
     },
     "docs.personalization.soft": {
         "0": "Concept",
