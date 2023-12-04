@@ -82,7 +82,7 @@
     <x-section title="Interacting with Default Classes" :copy="false">
         <p class="mb-4">
             Although all the examples above are valid, they overwrite the original block classes by defining the second parameter
-            of the <x-block>blocks</x-block> method, this is a way of doing a <u>complete replacement of the original component classes
+            of the <x-block>block</x-block> method, this is a way of doing a <u>complete replacement of the original component classes
             by the blocks</u>, an expected behavior when the soft personalization was created. Luckily we have an easy way to interact
             with the original classes by touching their content but preserving everything else. Let's take a look at an example:
             <x-code :contents="$replace" :copy="false"/>

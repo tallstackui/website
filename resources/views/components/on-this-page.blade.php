@@ -31,5 +31,11 @@
                 @endif
             </ol>
         </nav>
+        <div class="mt-4 flex items-center justify-center rounded-full border border-pink-600 bg-pink-700 text-sm font-medium text-pink-50 p">
+            <a href="https://github.com/sponsors/devajmeireles" target="_blank" class="inline-flex items-center gap-x-2">
+                Sponsor the TallStackUI
+                <x-icon name="arrow-up-right" class="h-4 w-4" />
+            </a>
+        </div>
     </div>
 @endif
