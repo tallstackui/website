@@ -84,9 +84,10 @@ new class extends Component {
                 </div>
                 <div class="mt-2 space-y-2">
                     @if ($original)
-                        <p>Name:
-                            <x-badge :text="$original['block']" color="pink" outline/>
-                        </p>
+                        <div class="flex items-center gap-2">
+                            <span>Name:</span>
+                            <p class="text-pink-500">{{ $original['block'] }}</p>
+                        </div>
                         <p>Original Content:</p>
                         <div class="text-[#C3E88D] overflow-auto custom-scrollbar rounded-lg bg-[#292D3E] p-4 my-2">
                             {{ $original['class'] }}
