@@ -163,7 +163,7 @@
             <x-layout.footer-navigation href="{{ route('documentation.ui.avatar') }}" text="Avatar" back />
         </x-slot:back>
         <x-slot:next>
-            <x-layout.footer-navigation href="{{ route('documentation.ui.button') }}" text="Button" />
+            <x-layout.footer-navigation href="{{ route('documentation.ui.banner') }}" text="Banner" />
         </x-slot:next>
     </x-slot:navigation>
 </x-layout>
