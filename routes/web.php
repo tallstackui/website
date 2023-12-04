@@ -2,7 +2,6 @@
 
 use App\Enums\Example;
 use App\Http\Controllers\Documentation\Internal;
-use App\Http\Controllers\Documentation\Personalization;
 use Illuminate\Support\Facades\Route;
 
 Route::view('/', 'welcome', Example::Welcome->variables())->name('welcome');
@@ -38,7 +37,7 @@ Route::prefix('/docs')
                 Route::view('/button', 'documentation.ui.button', Example::Button->variables())->name('button');
                 Route::view('/card', 'documentation.ui.card', Example::Card->variables())->name('card');
                 Route::view('/dropdown', 'documentation.ui.dropdown', Example::Dropdown->variables())->name('dropdown');
-                Route::view('/error', 'documentation.ui.errors', Example::Error->variables())->name('error');
+                Route::view('/error', 'documentation.ui.error', Example::Error->variables())->name('error');
                 Route::view('/icon', 'documentation.ui.icon', Example::Icon->variables())->name('icon');
                 Route::view('/modal', 'documentation.ui.modal', Example::Modal->variables())->name('modal');
                 Route::view('/loading', 'documentation.ui.loading', Example::Loading->variables())->name('loading');
@@ -56,7 +55,7 @@ Route::prefix('/docs')
             });
 
         Route::controller(Internal::class)
-            ->prefix('/interal')
+            ->prefix('/internal')
             ->name('internal.')
             ->group(function () {
                 Route::get('/error', 'index')->name('error');
@@ -65,13 +64,12 @@ Route::prefix('/docs')
                 Route::get('/wrapper', 'wrapper')->name('wrapper');
             });
 
-        Route::view('/dark-theme', 'documentation.ui.dark-theme', Example::DarkTheme->variables())->name('dark-theme');
+        Route::view('/dark-theme', 'documentation.helpers.dark-theme', Example::DarkTheme->variables())->name('dark-theme');
         Route::view('/configuration', 'documentation.configuration', Example::Configuration->variables())->name('configuration');
         Route::view('/translation', 'documentation.translation', Example::Translation->variables())->name('translation');
         Route::view('/contribution', 'documentation.contribution', Example::Contribution->variables())->name('contribution');
 
-        Route::controller(Personalization::class)
-            ->prefix('/personalization')
+        Route::prefix('/personalization')
             ->name('personalization.')
             ->group(function () {
                 Route::view('/concept', 'documentation.personalization.concept')->name('concept');
