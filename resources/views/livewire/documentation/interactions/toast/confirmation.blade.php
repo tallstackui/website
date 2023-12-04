@@ -35,5 +35,5 @@ new class extends Component {
 } ?>
 
 <div>
-    <x-button color="secondary" wire:click="confirm">Confirm</x-button>
+    <x-button color="red" wire:click="confirm">Confirm</x-button>
 </div>

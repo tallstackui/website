@@ -70,7 +70,7 @@ class SoftPersonalization
            TallStackUi::personalize()
                ->form('input')
                ->block('input.class.base', 'w-full rounded-full')
-               ->and // [tl! highlight]
+               ->and // [tl! add]
                ->avatar()
                ->block('wrapper.sizes.sm', 'w-8 h-8 text-xs')
 
@@ -79,7 +79,7 @@ class SoftPersonalization
            TallStackUi::personalize()
                ->form('input')
                ->block('input.class.base', 'w-full rounded-full')
-               ->and() // [tl! highlight]
+               ->and() // [tl! add]
                ->avatar()
                ->block('wrapper.sizes.sm', 'w-8 h-8 text-xs')
         }
@@ -99,7 +99,7 @@ class SoftPersonalization
            TallStackUi::personalize()
                ->form('input')
                ->block('input.class.base', new InputPersonalization())
-               ->block('icon.wrapper', fn (array $data) => 'pointer-events-none absolute')
+               ->block('icon.wrapper', fn (array $data) => 'px-4 py-2')
                ->block('icon.paddings.left', 'pl-10');
 
            // or ...
@@ -108,7 +108,7 @@ class SoftPersonalization
                ->form('input')
                ->block([
                     'input.class' => new InputPersonalization(),
-                    'icon.wrapper' => fn (array $data) => 'pointer-events-none absolute',
+                    'icon.wrapper' => fn (array $data) => 'px-4 py-2',
                     'icon.paddings.left' => 'pl-10',
                ]);
         }
@@ -117,7 +117,7 @@ class SoftPersonalization
 
     public const INVOKABLE_EXAMPLE = <<<'HTML'
     use TallStackUi\Facades\TallStackUi;
-    use App\TallStackUi\InputPersonalization; // [tl! highlight]
+    use App\TallStackUi\InputPersonalization; // [tl! focus]
 
     class AppServiceProvider extends ServiceProvider
     {
@@ -127,7 +127,7 @@ class SoftPersonalization
 
            TallStackUi::personalize()
                ->form('input')
-               ->block('input.class.base', new InputPersonalization()); // [tl! highlight]
+               ->block('input.class.base', new InputPersonalization()); // [tl! focus]
         }
     }
     HTML;
@@ -161,15 +161,15 @@ class SoftPersonalization
 
            TallStackUi::personalize()
                ->form('input')
-               ->block('input.class.base')
-               ->replace('rounded-md', 'rounded-full'); // [tl! highlight]
+               ->block('input.class.base') // [tl! highlight]
+               ->replace('rounded-md', 'rounded-full'); // [tl! focus]
 
            // or...
 
           TallStackUi::personalize()
               ->form('input')
-              ->block('input.class.base')
-              ->replace([ // [tl! highlight:3]
+              ->block('input.class.base') // [tl! highlight]
+              ->replace([ // [tl! focus:3]
                   'rounded-md' => 'rounded-full',
                   'border-0' => 'border-1',
               ]);
@@ -189,10 +189,10 @@ class SoftPersonalization
            TallStackUi::personalize()
                ->form('input')
                ->block('input.class.base')
-               ->replace('rounded-md', 'rounded-full') // string or array
-               ->remove('rounded-md') // string or array
-               ->append('px-4') // string only
-               ->prepend('py-4'); // string only
+               ->replace('rounded-md', 'rounded-full') // string or array [tl! highlight]
+               ->remove('rounded-md') // string or array [tl! highlight]
+               ->append('px-4') // string [tl! highlight]
+               ->prepend('py-4'); // string [tl! highlight]
         }
     }
     HTML;
@@ -236,12 +236,12 @@ class SoftPersonalization
     content: [
         // If you are personalizing into AppServiceProvider or other
 
-        './app/Providers/MyCustomServiceProvider.php',
+        './app/Providers/MyCustomServiceProvider.php', // [tl! add:1]
         './app/Providers/AppServiceProvider.php',
 
         // If you are using invokable classes...
 
-        './app/TallStackUi/**/*.php',
+        './app/TallStackUi/**/*.php', // [tl! add]
     ],
     HTML;
 }

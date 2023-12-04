@@ -175,7 +175,7 @@
                     </ul>
                 </li>
                 <li class="relative ml-4">
-                    <x-layout.navigation.link :href="route('documentation.contribution')" text="Colors" />
+                    <x-layout.navigation.link :href="route('documentation.contribution')" text="Contribution Guide" />
                 </li>
             </ul>
         </li>

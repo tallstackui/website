@@ -58,7 +58,7 @@ class DeepPersonalization
             parent::__construct();
         }
 
-        public function personalization(): array // [tl! focus:3]
+        public function personalization(): array // [tl! add:3]
         {
             return [/* ... */];
         }
@@ -211,7 +211,7 @@ class DeepPersonalization
     content: [
         // ...
 
-        './app/View/Components/**/*.php',
+        './app/View/Components/**/*.php', // [tl! add]
     ],
     HTML;
 }

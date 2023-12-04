@@ -48,11 +48,6 @@ class Checkbox
     <x-checkbox color="white" label="White" />
     HTML;
 
-    public const LIVEWIRE = <<<'HTML'
-    <x-checkbox label="Receive Alert"
-                wire:model="alert" />
-    HTML;
-
     public const PERSONALIZATION = <<<'HTML'
     TallStackUi::personalize()
         ->form('checkbox')
