@@ -65,7 +65,7 @@
                             <x-layout.navigation.link :href="route('documentation.ui.alert')" text="Alert" />
                         </li>
                         <li class="relative ml-4">
-                            <x-layout.navigation.link :href="route('documentation.ui.avatar')" text="Alert" />
+                            <x-layout.navigation.link :href="route('documentation.ui.avatar')" text="Avatar" />
                         </li>
                         <li class="relative ml-4">
                             <x-layout.navigation.link :href="route('documentation.ui.badge')" text="Badge" />
