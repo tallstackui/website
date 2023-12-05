@@ -82,11 +82,18 @@ new class extends Component {
                         @endforeach
                     </div>
                 </div>
-                <div class="mt-2 space-y-2">
+                <div class="mt-4 space-y-2">
                     @if ($original)
-                        <div class="flex items-center gap-2">
+                        @php($hash = md5($original['block']))
+                        <div x-data="clipboard()" class="flex items-center gap-1">
                             <span>Name:</span>
-                            <p class="text-pink-500">{{ $original['block'] }}</p>
+                            <x-badge color="pink" sm outline>
+                                {{ $original['block'] }}
+                            </x-badge>
+                            <button data-ref="{{ $hash }}" x-on:click="raw('{{ $original['block'] }}', '{{ $hash }}')">
+                                <x-icon name="document" class="text-gray-500 h-5 w-5" x-show="!notification" />
+                                <x-icon name="document-check" class="h-5 w-5 text-pink-500" x-show="notification" />
+                            </button>
                         </div>
                         <p>Original Content:</p>
                         <div class="text-[#C3E88D] overflow-auto custom-scrollbar rounded-lg bg-[#292D3E] p-4 my-2">
