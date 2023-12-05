@@ -8,16 +8,18 @@ class Toast
     <html>
         <body>
             <x-toast />
+
+            <!--... -->
         </body>
     </html>
     HTML;
 
     public const TRAIT = <<<HTML
-    use TallStackUi\Traits\Interactions; // [tl! add]
+    use TallStackUi\Traits\Interactions;
 
     class CreateUser extends Component
     {
-        use Interactions; // [tl! add]
+        use Interactions;
 
         // ...
     }

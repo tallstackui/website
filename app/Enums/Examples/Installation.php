@@ -11,7 +11,7 @@ class Installation
     public const CLOAK = <<<'HTML'
     <html>
         <head>
-            <style> [x-cloak] { display: none; } </style> {{-- [tl! add] --}}
+            <style> [x-cloak] { display: none; } </style> {{-- [tl! highlight] --}}
 
             <!-- ... -->
         </head>
@@ -23,7 +23,7 @@ class Installation
         <head>
             <!-- ... -->
 
-            <tallstackui:script /> {{-- [tl! add] --}}
+            <tallstackui:script /> {{-- [tl! highlight] --}}
             @vite(['resources/css/app.css', 'resources/js/app.js'])
         </head>
     </html>
@@ -45,18 +45,16 @@ class Installation
     HTML;
 
     public const TAILWINDCSS = <<<'HTML'
-    // ...
-
     import forms from '@tailwindcss/forms'; // [tl! highlight]
 
     presets: [
-        require('./vendor/tallstackui/tallstackui/tailwind.config.js') // [tl! add]
+        require('./vendor/tallstackui/tallstackui/tailwind.config.js') // [tl! highlight]
     ],
 
     content: [
         // ...
 
-        './vendor/tallstackui/tallstackui/src/**/*.php', // [tl! add]
+        './vendor/tallstackui/tallstackui/src/**/*.php', // [tl! highlight]
     ],
 
     plugins: [forms], // [tl! highlight]
@@ -67,7 +65,7 @@ class Installation
         <body>
             <!-- ... -->
 
-            @livewireScripts {{-- [tl! add] --}}
+            @livewireScripts {{-- [tl! highlight] --}}
         </body>
     </html>
     HTML;

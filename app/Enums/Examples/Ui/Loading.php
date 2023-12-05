@@ -14,7 +14,7 @@ class Loading
     <!-- resources/views/livewire/post.blade.php -->
 
     <div>
-        <x-loading /> {{-- [tl! add] --}}
+        <x-loading /> {{-- [tl! highlight] --}}
 
         <form wire:submit="save">
             <input type="text" wire:model="title">

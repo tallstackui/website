@@ -6,7 +6,7 @@ class DarkTheme
 {
     public const TAILWINDCSS = <<<'HTML'
     export default {
-        darkMode: 'class', // [tl! add]
+        darkMode: 'class', // [tl! highlight]
 
         // ...
     }
@@ -14,7 +14,7 @@ class DarkTheme
 
     public const HELPER = <<<'HTML'
     <html ...
-          x-data="tallstackui_darkTheme()" {{-- [tl! add:1] --}}
+          x-data="tallstackui_darkTheme()" {{-- [tl! highlight:1] --}}
           x-bind:class="{ 'dark bg-gray-700': darkTheme, 'bg-white': !darkTheme }">
         <!-- ... -->
     </html>

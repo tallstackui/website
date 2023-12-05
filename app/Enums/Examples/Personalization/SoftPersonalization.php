@@ -70,7 +70,7 @@ class SoftPersonalization
            TallStackUi::personalize()
                ->form('input')
                ->block('input.class.base', 'w-full rounded-full')
-               ->and // [tl! add]
+               ->and // [tl! highlight]
                ->avatar()
                ->block('wrapper.sizes.sm', 'w-8 h-8 text-xs')
 
@@ -79,7 +79,7 @@ class SoftPersonalization
            TallStackUi::personalize()
                ->form('input')
                ->block('input.class.base', 'w-full rounded-full')
-               ->and() // [tl! add]
+               ->and() // [tl! highlight]
                ->avatar()
                ->block('wrapper.sizes.sm', 'w-8 h-8 text-xs')
         }
@@ -236,12 +236,12 @@ class SoftPersonalization
     content: [
         // If you are personalizing into AppServiceProvider or other
 
-        './app/Providers/MyCustomServiceProvider.php', // [tl! add:1]
+        './app/Providers/MyCustomServiceProvider.php', // [tl! highlight:1]
         './app/Providers/AppServiceProvider.php',
 
         // If you are using invokable classes...
 
-        './app/TallStackUi/**/*.php', // [tl! add]
+        './app/TallStackUi/**/*.php', // [tl! highlight]
     ],
     HTML;
 }
