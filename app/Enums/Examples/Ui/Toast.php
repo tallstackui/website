@@ -7,7 +7,7 @@ class Toast
     public const TAG = <<<'HTML'
     <html>
         <body>
-            <x-toast />
+            <x-toast /> <!-- [tl! highlight] -->
 
             <!--... -->
         </body>
@@ -15,11 +15,11 @@ class Toast
     HTML;
 
     public const TRAIT = <<<HTML
-    use TallStackUi\Traits\Interactions;
+    use TallStackUi\Traits\Interactions; // [tl! highlight]
 
     class CreateUser extends Component
     {
-        use Interactions;
+        use Interactions; // [tl! highlight]
 
         // ...
     }

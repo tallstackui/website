@@ -7,7 +7,7 @@ class Dialog
     public const TAG = <<<'HTML'
     <html>
         <body>
-            <x-dialog />
+            <x-dialog /> <!-- [tl! highlight] -->
 
             <!--... -->
         </body>
@@ -15,11 +15,11 @@ class Dialog
     HTML;
 
     public const TRAIT = <<<HTML
-    use TallStackUi\Traits\Interactions;
+    use TallStackUi\Traits\Interactions; // [tl! highlight]
 
     class CreateUser extends Component
     {
-        use Interactions;
+        use Interactions; // [tl! highlight]
 
         // ...
     }
