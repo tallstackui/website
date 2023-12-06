@@ -140,7 +140,7 @@ class Banner
     public function save(): void
     {
         $this->banner()
-            ->close() // Add a close button
+            ->close() // Add the close button
             ->success('...');
 
         $this->banner()

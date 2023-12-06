@@ -14,7 +14,7 @@ class Number
     HTML;
 
     public const MIN_MAX = <<<'HTML'
-    <x-number min="1" max="10" />
+    <x-number min="2" max="5" />
     HTML;
 
     public const DELAY = <<<'HTML'

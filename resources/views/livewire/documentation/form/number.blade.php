@@ -9,6 +9,13 @@ new class extends Component {
 
     public int $model = 0;
     public int $quantity = 1;
+
+    public function mount(): void
+    {
+        if ($this->model === 2) {
+            $this->quantity = 2;
+        }
+    }
 } ?>
 
 <div>
@@ -17,7 +24,7 @@ new class extends Component {
     @elseif ($model === 1)
         <x-number label="Quantity" hint="Press the plus button to increase one by one" min="1" max="10" wire:model.live="quantity" />
     @elseif ($model === 2)
-        <x-number min="1" max="10" wire:model.live="quantity" />
+        <x-number min="2" max="5" wire:model.live="quantity" />
     @elseif ($model === 3)
         <x-number delay="1" min="1" max="10" wire:model.live="quantity" />
     @elseif ($model === 4)

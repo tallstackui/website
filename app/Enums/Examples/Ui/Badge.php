@@ -37,7 +37,8 @@ class Badge
     HTML;
 
     public const SIZES = <<<'HTML'
-    <x-badge text="Default" />
+    <x-badge text="XS" xs />
+    <x-badge text="SM" sm />
     <x-badge text="MD" md />
     <x-badge text="LG" lg />
     HTML;
