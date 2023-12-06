@@ -32,6 +32,16 @@
             <livewire:documentation.interactions.toast.timeout/>
         </x-preview>
     </x-section>
+    <x-section title="Expandable" description="An option to show minimized description texts.">
+        <x-preview :contents="$expandable">
+            <livewire:documentation.interactions.toast.expandable/>
+        </x-preview>
+        <p class="mt-2">
+            You can configure Toast to be extensible by default in <a href="{{ route('documentation.configuration') }}" class="underline">the configuration file.</a> When you
+            do that, you can optionally ignore the expandable for specific Toast:
+        </p>
+        <x-code :contents="$ignoringExpandable" :copy="false" />
+    </x-section>
     <x-available-configuration />
     <x-slot:navigation>
         <x-slot:back>

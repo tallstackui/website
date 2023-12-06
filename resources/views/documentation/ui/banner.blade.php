@@ -52,6 +52,10 @@
             when launching a banner, so in the layout the banner must be added as follows:
         </p>
         <x-code language="blade" :contents="$livewire" />
+        <p>
+            When using the banner integrated with Livewire then the banner will be displayed as fixed.
+            This is a strategy adopted so that the banner is displayed if the user is below the top of the page.
+        </p>
     </x-section>
     <x-section title="Usage" anchor="livewire-integration-usage" :copy="false">
         1. Use the Interactions trait in your Livewire component.

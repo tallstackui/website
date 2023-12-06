@@ -41,6 +41,20 @@
             </div>
         </x-preview>
     </x-section>
+    <x-section title="Footer Slot">
+        <x-preview language="blade" :contents="$footer">
+            <div class="space-y-2">
+                <x-alert>
+                    TallStackUi
+                    <x-slot:footer>
+                        <div class="flex justify-end">
+                            <x-badge text="TallStackUi" />
+                        </div>
+                    </x-slot:footer>
+                </x-alert>
+            </div>
+        </x-preview>
+    </x-section>
     <x-section title="Color Variations">
         <x-preview language="blade" :contents="$colors">
             <div class="space-y-2">

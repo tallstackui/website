@@ -50,7 +50,7 @@ new class extends Component {
 <div>
     <x-modal id="{{ $id }}">
         <x-warning class="mb-4">
-            This content is part of <a href="{{ route('documentation.personalization.concept') }}" class="underline">TallStackUi personalization.</a>
+            This content is part of <a href="{{ route('documentation.personalization.concept') }}" class="underline">TallStackUI personalization.</a>
         </x-warning>
         <x-slot:title>
             <div class="flex items-center justify-start gap-2">

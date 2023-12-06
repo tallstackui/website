@@ -53,9 +53,10 @@
         "1": "Title",
         "2": "Close Option",
         "3": "Icon Slot",
-        "4": "Color Variations",
-        "5": "Light Variations",
-        "6": "Outline Variations"
+        "4": "Footer Slot",
+        "5": "Color Variations",
+        "6": "Light Variations",
+        "7": "Outline Variations"
     },
     "docs.ui.avatar": {
         "0": "Basic Usage",
@@ -254,7 +255,8 @@
         "1": "Basic Usage",
         "2": "Confirmations",
         "3": "Time Control",
-        "4": "Configurations"
+        "4": "Expandable",
+        "5": "Configurations"
     },
     "docs.configuration": {
         "0": "Configuration File",
