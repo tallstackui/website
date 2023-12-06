@@ -11,7 +11,7 @@
         </p>
         <x-code language="blade" :contents="$laravel1035Bug" :copy="false" />
         <p>
-            To fix this issue, <span class="underline decoration-red-500 decoration-4 underline-offset-4">ensure your Laravel is updated to a version higher
+            <span class="underline decoration-red-500 decoration-4 underline-offset-4">To fix this issue, ensure your Laravel is updated to a version higher
                 than 10.35.</span> This issue was found by AJ and <a href="https://github.com/laravel/framework/issues/49206" class="underline" target="_blank">reported to the Laravel team.</a> A Laravel
             community member fixed the issue in <a href="https://github.com/laravel/framework/pull/49216" class="underline" target="_blank">a pull request.</a>
         </p>
