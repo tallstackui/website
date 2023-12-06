@@ -52,12 +52,13 @@ class Banner
     public const ANIMATED = <<<'HTML'
     <html>
         <body>
+            <!-- Default: entering in 3 seconds -->
             <x-banner text="Welcome to the TallStackUI!" animated />
 
-            <!-- entering in 2 seconds, leaving in 5 seconds -->
+            <!-- Entering in 2 seconds, leaving in 5 seconds -->
             <x-banner text="Welcome to the TallStackUI!" animated :enter="2" :leave="5" />
 
-            <!-- only leaving effect -->
+            <!-- Only leaving effect -->
             <x-banner text="Welcome to the TallStackUI!" animated :enter="null" :leave="5" />
         </body>
     </html>
@@ -66,7 +67,7 @@ class Banner
     public const DATES = <<<'HTML'
     <html>
         <body>
-            <!-- string -->
+            <!-- String -->
             <x-banner text="Welcome to the TallStackUI!" until="2023-12-31" />
 
             <!-- Carbon instance -->

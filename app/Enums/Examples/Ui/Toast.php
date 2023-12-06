@@ -88,7 +88,7 @@ class Toast
 
     $this->toast()
         ->expandable(false) // [tl! highlight]
-        ->success('Success', 'This Toast is not expandable.');
+        ->success('Success', 'This Toast will not be expandable.');
     HTML;
 
     public const Z_INDEX = <<<'HTML'
