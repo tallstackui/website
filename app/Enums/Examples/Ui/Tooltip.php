@@ -41,9 +41,10 @@ class Tooltip
     HTML;
 
     public const SIZES = <<<'HTML'
-    <x-tooltip text="SM" sm />
-    <x-tooltip text="MD" md />
-    <x-tooltip text="LG" lg />
+    <x-tooltip text="XS" xs/>
+    <x-tooltip text="SM" sm/>
+    <x-tooltip text="MD" md/>
+    <x-tooltip text="LG" lg/>
     HTML;
 
     public const HTML = <<<'HTML'

@@ -94,6 +94,13 @@ class Banner
             <!-- Light variation -->
             <x-banner text="Welcome to the TallStackUI!" color="primary" light />
             <x-banner text="Welcome to the TallStackUI!" color="secondary" light />
+
+            <!-- Hexadecimal colors -->
+            <x-banner text="Welcome to the TallStackUI!"
+                      :color="[
+                          'background' => '#fde68a',
+                          'text' => '#1f2937',
+                      ]" />
         </body>
     </html>
     HTML;

@@ -56,7 +56,8 @@
     <x-section title="Size Variations">
         <x-preview language="blade" :contents="$sizes">
             <div class="flex items-center gap-2">
-                <x-badge text="Default"/>
+                <x-badge text="XS" xs/>
+                <x-badge text="SM" sm/>
                 <x-badge text="MD" md/>
                 <x-badge text="LG" lg/>
             </div>
@@ -64,7 +65,7 @@
     </x-section>
     <x-section title="Color Variations">
         <x-preview language="blade" :contents="$colors">
-            <div class="gap-2">
+            <div class="flex-row space-y-2">
                 <x-badge text="Primary" />
                 <x-badge text="Secondary" color="secondary" />
                 <x-badge text="Slate" color="slate" />
@@ -96,7 +97,7 @@
     </x-section>
     <x-section title="Light Variations">
         <x-preview language="blade" :contents="$lights">
-            <div class="gap-2">
+            <div class="flex-row space-y-2">
                 <x-badge text="Primary" light />
                 <x-badge text="Secondary" color="secondary" light />
                 <x-badge text="Slate" color="slate" light />
@@ -128,7 +129,7 @@
     </x-section>
     <x-section title="Outline Variations">
         <x-preview language="blade" :contents="$outlines">
-            <div class="gap-2">
+            <div class="flex-row space-y-2">
                 <x-badge text="Primary" outline />
                 <x-badge text="Secondary" color="secondary" outline />
                 <x-badge text="Slate" color="slate" outline />

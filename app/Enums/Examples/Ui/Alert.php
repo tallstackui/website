@@ -47,6 +47,17 @@ class Alert
     </x-alert>
     HTML;
 
+    public const FOOTER = <<<'HTML'
+    <x-alert>
+        TallStackUi
+        <x-slot:footer>
+            <div class="flex justify-end">
+                <x-badge text="TallStackUi" />
+            </div>
+        </x-slot:footer>
+    </x-alert>
+    HTML;
+
     public const COLORS = <<<'HTML'
     <x-alert title="TallStackUi" text="Primary" />
     <x-alert title="TallStackUi" text="Secondary" color="secondary" />

@@ -58,7 +58,7 @@ class OnThisPage extends Component
         })->toArray();
     }
 
-    private function map(string $item, int $child, string $parent = null, array $structure = null): array
+    private function map(string $item, int $child, ?string $parent = null, ?array $structure = null): array
     {
         $data = [
             $child => [

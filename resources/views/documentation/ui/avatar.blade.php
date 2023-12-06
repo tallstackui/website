@@ -47,6 +47,7 @@
     </x-section>
     <x-section title="Size Variations">
         <x-preview language="blade" :contents="$sizes">
+            <x-avatar text="XS" xs />
             <x-avatar text="SM" sm />
             <x-avatar text="MD" md />
             <x-avatar text="LG" lg />

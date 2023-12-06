@@ -1,6 +1,6 @@
 <x-layout>
     <x-slot:title>
-        Form Input Password
+        Form Password
     </x-slot:title>
     <x-slot:description>
         Form password component. Show or hide password value.

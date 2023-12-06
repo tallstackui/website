@@ -77,6 +77,20 @@ class Toast
         ->success('Success', 'This is a success message.');
     HTML;
 
+    public const EXPANDABLE = <<<'HTML'
+    $this->toast()
+        ->expandable()
+        ->success('Success', 'When the description has more than 30 characters, the toast can be optionally expandable.');
+    HTML;
+
+    public const IGNORING_EXPANDABLE = <<<'HTML'
+    // ...
+
+    $this->toast()
+        ->expandable(false) // [tl! highlight]
+        ->success('Success', 'This Toast is not expandable.');
+    HTML;
+
     public const Z_INDEX = <<<'HTML'
     <x-toast z-index="z-50" />
     HTML;

@@ -39,6 +39,7 @@
     <x-section title="Size Variations">
         <x-preview language="blade" :contents="$sizes">
             <div class="inline-flex space-x-2">
+                <x-tooltip text="XS" xs/>
                 <x-tooltip text="SM" sm/>
                 <x-tooltip text="MD" md/>
                 <x-tooltip text="LG" lg/>
