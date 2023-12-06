@@ -17,6 +17,7 @@ use App\Enums\Examples\Personalization\ColorPersonalization;
 use App\Enums\Examples\Personalization\DeepPersonalization;
 use App\Enums\Examples\Personalization\SoftPersonalization;
 use App\Enums\Examples\Translation;
+use App\Enums\Examples\Troubleshooting;
 use App\Enums\Examples\Ui\Alert;
 use App\Enums\Examples\Ui\Avatar;
 use App\Enums\Examples\Ui\Badge;
@@ -59,6 +60,7 @@ enum Example: string
     case Input = Input::class;
     case Number = Number::class;
     case Installation = Installation::class;
+    case Troubleshooting = Troubleshooting::class;
     case Password = Password::class;
     case Radio = Radio::class;
     case Select = Select::class;

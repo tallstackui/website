@@ -18,6 +18,7 @@ test('can access all routes', function (string $route) {
 })->with([
     fn () => route('documentation.get-started'),
     fn () => route('documentation.installation'),
+    fn () => route('documentation.troubleshooting'),
     //
     fn () => route('documentation.form.input'),
     fn () => route('documentation.form.password'),

@@ -91,7 +91,7 @@ new class extends Component {
                                 {{ $original['block'] }}
                             </x-badge>
                             <button data-ref="{{ $hash }}" x-on:click="raw('{{ $original['block'] }}', '{{ $hash }}')">
-                                <x-icon name="document" class="text-gray-500 h-5 w-5" x-show="!notification" />
+                                <x-icon name="document" class="h-5 w-5 text-gray-500" x-show="!notification" />
                                 <x-icon name="document-check" class="h-5 w-5 text-pink-500" x-show="notification" />
                             </button>
                         </div>

@@ -27,6 +27,9 @@
                 <li class="relative ml-4">
                     <x-layout.navigation.link :href="route('documentation.installation')" text="Installation" />
                 </li>
+                <li class="relative ml-4">
+                    <x-layout.navigation.link :href="route('documentation.troubleshooting')" text="Troubleshooting" />
+                </li>
             </ul>
         </li>
         <li>

@@ -15,6 +15,8 @@ Route::prefix('/docs')
         Route::view('/get-started', 'get-started')->name('get-started');
         Route::view('/installation', 'documentation.installation', Example::Installation->variables())->name('installation');
 
+        Route::view('/troubleshooting', 'documentation.troubleshooting', Example::Troubleshooting->variables())->name('troubleshooting');
+
         Route::prefix('/form')
             ->name('form.')
             ->group(function () {
