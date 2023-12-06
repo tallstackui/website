@@ -15,5 +15,5 @@ new class extends Component {
 } ?>
 
 <div>
-    <x-button color="green" wire:click="success">Expandable</x-button>
+    <x-button color="green" wire:click="success">Show Expandable</x-button>
 </div>
