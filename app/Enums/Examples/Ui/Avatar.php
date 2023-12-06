@@ -38,6 +38,7 @@ class Avatar
     HTML;
 
     public const SIZES = <<<'HTML'
+    <x-avatar text="XS" xs />
     <x-avatar text="SM" sm />
     <x-avatar text="MD" md />
     <x-avatar text="LG" lg />
