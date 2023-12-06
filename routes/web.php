@@ -33,7 +33,12 @@ Route::prefix('/docs')
             ->name('ui.')
             ->group(function () {
                 Route::view('/alert', 'documentation.ui.alert', Example::Alert->variables())->name('alert');
-                Route::view('/avatar', 'documentation.ui.avatar', Example::Avatar->variables())->name('avatar');
+                Route::get('/avatar', function () {
+                    // We need to auth the user to be able to use `auth()->user()` in the view.
+                    auth()->loginUsingId(1);
+
+                    return view('documentation.ui.avatar', Example::Avatar->variables());
+                })->name('avatar');
                 Route::view('/badge', 'documentation.ui.badge', Example::Badge->variables())->name('badge');
                 Route::view('/banner', 'documentation.ui.banner', Example::Banner->variables())->name('banner');
                 Route::view('/button', 'documentation.ui.button', Example::Button->variables())->name('button');
