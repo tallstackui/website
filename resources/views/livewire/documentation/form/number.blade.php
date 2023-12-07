@@ -20,14 +20,14 @@ new class extends Component {
 
 <div>
     @if ($model === 0)
-        <x-number wire:model.live="quantity" />
+        <x-number wire:model="quantity" />
     @elseif ($model === 1)
-        <x-number label="Quantity" hint="Press the plus button to increase one by one" min="1" max="10" wire:model.live="quantity" />
+        <x-number label="Quantity" hint="Press the plus button to increase one by one" min="1" max="10" wire:model="quantity" />
     @elseif ($model === 2)
-        <x-number min="2" max="5" wire:model.live="quantity" />
+        <x-number min="2" max="5" wire:model="quantity" />
     @elseif ($model === 3)
-        <x-number delay="1" min="1" max="10" wire:model.live="quantity" />
+        <x-number delay="1" min="1" max="10" wire:model="quantity" />
     @elseif ($model === 4)
-        <x-number wire:model.live="quantity" chevron />
+        <x-number wire:model="quantity" chevron />
     @endif
 </div>
