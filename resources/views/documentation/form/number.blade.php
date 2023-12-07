@@ -28,7 +28,7 @@
             <livewire:documentation.form.number :model="3" />
         </x-preview>
         <x-warning class="mt-4">
-            The delay option is in MS (milliseconds).
+            The delay calculation happens as delay * 100.
         </x-warning>
     </x-section>
     <x-section title="Chevron Icons" description="An option to use other icons instead of defaults.">
