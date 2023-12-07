@@ -36,6 +36,13 @@
             <livewire:documentation.form.number :model="4" />
         </x-preview>
     </x-section>
+    <x-section title="Livewire Bind Concern">
+        <p>
+            Although the number component can be used with <x-block>wire:model.live</x-block>, due to the way Livewire works,
+            we recommend that you use it with <x-block>wire:model</x-block> or <x-block>wire:model.blur</x-block> to avoid value
+            synchronization issues between the component and the Livewire.
+        </p>
+    </x-section>
     <x-slot:navigation>
         <x-slot:back>
             <x-layout.footer-navigation :href="route('documentation.form.textarea')" text="Form Textarea" back />
