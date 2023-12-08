@@ -13,7 +13,30 @@ class Checkbox
     <x-checkbox label="Receive Alert" position="left" />
     HTML;
 
+    public const HTML = <<<'HTML'
+    <x-checkbox>
+        <x-slot:label>
+            I agree to the <a href="#">terms and conditions</a>
+        </x-slot:label>
+    </x-checkbox>
+    HTML;
+
+    public const ALIGNMENT = <<<'HTML'
+    <x-checkbox>
+        <x-slot:label>
+            Align on Middle
+        </x-slot:label>
+    </x-checkbox>
+
+    <x-checkbox>
+        <x-slot:label start>
+            Align on Start
+        </x-slot:label>
+    </x-checkbox>
+    HTML;
+
     public const SIZES = <<<'HTML'
+    <x-checkbox xs />
     <x-checkbox sm />
     <x-checkbox md />
     <x-checkbox lg />

@@ -13,7 +13,30 @@ class Radio
     <x-radio label="Receive Alert" position="left" />
     HTML;
 
+    public const HTML = <<<'HTML'
+    <x-radio>
+        <x-slot:label>
+            I agree to the <a href="#">terms and conditions</a>
+        </x-slot:label>
+    </x-radio>
+    HTML;
+
+    public const ALIGNMENT = <<<'HTML'
+    <x-radio>
+        <x-slot:label>
+            Align on Middle
+        </x-slot:label>
+    </x-radio>
+
+    <x-radio>
+        <x-slot:label start>
+            Align on Start
+        </x-slot:label>
+    </x-radio>
+    HTML;
+
     public const SIZES = <<<'HTML'
+    <x-radio xs />
     <x-radio sm />
     <x-radio md />
     <x-radio lg />

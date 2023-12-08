@@ -21,9 +21,35 @@
             </div>
         </x-preview>
     </x-section>
+    <x-section title="Slot">
+        <x-preview language="blade" :contents="$html">
+            <x-toggle>
+                <x-slot:label>
+                    I agree to the <a href="#">terms and conditions</a>
+                </x-slot:label>
+            </x-toggle>
+        </x-preview>
+    </x-section>
+    <x-section title="Alignment">
+        <x-preview language="blade" :contents="$alignment">
+            <div class="space-y-4">
+                <x-toggle>
+                    <x-slot:label>
+                        Align on Middle
+                    </x-slot:label>
+                </x-toggle>
+                <x-toggle>
+                    <x-slot:label start>
+                        Align on Start
+                    </x-slot:label>
+                </x-toggle>
+            </div>
+        </x-preview>
+    </x-section>
     <x-section title="Size Variations">
         <x-preview language="blade" :contents="$sizes">
             <div class="inline-flex space-x-2">
+                <x-toggle xs />
                 <x-toggle sm />
                 <x-toggle md />
                 <x-toggle lg />

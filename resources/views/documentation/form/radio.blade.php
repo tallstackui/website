@@ -21,9 +21,35 @@
             </div>
         </x-preview>
     </x-section>
+    <x-section title="Slot">
+        <x-preview language="blade" :contents="$html">
+            <x-radio>
+                <x-slot:label>
+                    I agree to the <a href="#">terms and conditions</a>
+                </x-slot:label>
+            </x-radio>
+        </x-preview>
+    </x-section>
+    <x-section title="Alignment">
+        <x-preview language="blade" :contents="$alignment">
+            <div class="space-y-4">
+                <x-radio>
+                    <x-slot:label>
+                        Align on Middle
+                    </x-slot:label>
+                </x-radio>
+                <x-radio>
+                    <x-slot:label start>
+                        Align on Start
+                    </x-slot:label>
+                </x-radio>
+            </div>
+        </x-preview>
+    </x-section>
     <x-section title="Size Variations">
         <x-preview language="blade" :contents="$sizes">
             <div class="inline-flex space-x-2">
+                <x-radio xs />
                 <x-radio sm />
                 <x-radio md />
                 <x-radio lg />

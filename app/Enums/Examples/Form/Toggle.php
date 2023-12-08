@@ -13,7 +13,30 @@ class Toggle
     <x-toggle label="Receive Alert" position="left" />
     HTML;
 
+    public const HTML = <<<'HTML'
+    <x-toggle>
+        <x-slot:label>
+            I agree to the <a href="#">terms and conditions</a>
+        </x-slot:label>
+    </x-toggle>
+    HTML;
+
+    public const ALIGNMENT = <<<'HTML'
+    <x-toggle>
+        <x-slot:label>
+            Align on Middle
+        </x-slot:label>
+    </x-toggle>
+
+    <x-toggle>
+        <x-slot:label start>
+            Align on Start
+        </x-slot:label>
+    </x-toggle>
+    HTML;
+
     public const SIZES = <<<'HTML'
+    <x-toggle xs />
     <x-toggle sm />
     <x-toggle md />
     <x-toggle lg />

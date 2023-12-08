@@ -27,6 +27,7 @@ test('can access all routes', function (string $route) {
     fn () => route('documentation.form.checkbox'),
     fn () => route('documentation.form.radio'),
     fn () => route('documentation.form.toggle'),
+    fn () => route('documentation.form.range'),
     //
     fn () => route('documentation.ui.alert'),
     fn () => route('documentation.ui.avatar'),
