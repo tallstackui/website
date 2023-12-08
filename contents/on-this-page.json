@@ -34,24 +34,24 @@
     "docs.form.checkbox": {
         "0": "Basic Usage",
         "1": "Label",
-        "2": "Slot",
-        "3": "Alignment",
+        "2": "Label Slot",
+        "3": "Label Alignment",
         "4": "Size Variations",
         "5": "Color Variations"
     },
     "docs.form.radio": {
         "0": "Basic Usage",
         "1": "Label",
-        "2": "Slot",
-        "3": "Alignment",
+        "2": "Label Slot",
+        "3": "Label Alignment",
         "4": "Size Variations",
         "5": "Color Variations"
     },
     "docs.form.toggle": {
         "0": "Basic Usage",
         "1": "Label",
-        "2": "Slot",
-        "3": "Alignment",
+        "2": "Label Slot",
+        "3": "Label Alignment",
         "4": "Size Variations",
         "5": "Color Variations"
     },

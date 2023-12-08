@@ -21,7 +21,7 @@
             </div>
         </x-preview>
     </x-section>
-    <x-section title="Slot">
+    <x-section title="Label Slot">
         <x-preview language="blade" :contents="$html">
             <x-radio>
                 <x-slot:label>
@@ -30,17 +30,17 @@
             </x-radio>
         </x-preview>
     </x-section>
-    <x-section title="Alignment">
+    <x-section title="Label Alignment">
         <x-preview language="blade" :contents="$alignment">
             <div class="space-y-4">
                 <x-radio>
                     <x-slot:label>
-                        Align on Middle
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
                     </x-slot:label>
                 </x-radio>
                 <x-radio>
                     <x-slot:label start>
-                        Align on Start
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
                     </x-slot:label>
                 </x-radio>
             </div>
