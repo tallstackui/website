@@ -2,6 +2,13 @@
     <x-slot:title>
         Troubleshooting
     </x-slot:title>
+    <x-section title="Non-existent Component" :copy="false">
+        <p>
+            Whenever you update TallStackUI, check whether there have been changes to the <x-block>config.php</x-block>
+            file. As this file can be published for your application, if a new component is added,
+            this file needs to be updated with the addition of the new component.
+        </p>
+    </x-section>
     <x-section title="Losing Component Attributes" :copy="false">
         <p>
             If you are using TallStackUI <u>on a version lower than Laravel 10.35</u> you will face

@@ -21,9 +21,35 @@
             </div>
         </x-preview>
     </x-section>
+    <x-section title="Slot">
+        <x-preview language="blade" :contents="$html">
+            <x-checkbox>
+                <x-slot:label>
+                    I agree to the <a href="#">terms and conditions</a>
+                </x-slot:label>
+            </x-checkbox>
+        </x-preview>
+    </x-section>
+    <x-section title="Alignment">
+        <x-preview language="blade" :contents="$alignment">
+            <div class="space-y-4">
+                <x-checkbox>
+                    <x-slot:label>
+                        Align on Middle
+                    </x-slot:label>
+                </x-checkbox>
+                <x-checkbox>
+                    <x-slot:label start>
+                        Align on Start
+                    </x-slot:label>
+                </x-checkbox>
+            </div>
+        </x-preview>
+    </x-section>
     <x-section title="Size Variations">
         <x-preview language="blade" :contents="$sizes">
             <div class="inline-flex space-x-2">
+                <x-checkbox xs />
                 <x-checkbox sm />
                 <x-checkbox md />
                 <x-checkbox lg />

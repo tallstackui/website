@@ -34,20 +34,26 @@
     "docs.form.checkbox": {
         "0": "Basic Usage",
         "1": "Label",
-        "2": "Size Variations",
-        "4": "Color Variations"
+        "2": "Slot",
+        "3": "Alignment",
+        "4": "Size Variations",
+        "5": "Color Variations"
     },
     "docs.form.radio": {
         "0": "Basic Usage",
         "1": "Label",
-        "2": "Size Variations",
-        "4": "Color Variations"
+        "2": "Slot",
+        "3": "Alignment",
+        "4": "Size Variations",
+        "5": "Color Variations"
     },
     "docs.form.toggle": {
         "0": "Basic Usage",
         "1": "Label",
-        "2": "Size Variations",
-        "4": "Color Variations"
+        "2": "Slot",
+        "3": "Alignment",
+        "4": "Size Variations",
+        "5": "Color Variations"
     },
     "docs.ui.alert": {
         "0": "Basic Usage",

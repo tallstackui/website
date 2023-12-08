@@ -48,7 +48,7 @@
                             <x-layout.navigation.link :href="route('documentation.form.textarea')" text="Textarea" />
                         </li>
                         <li class="relative ml-4">
-                            <x-layout.navigation.link :href="route('documentation.form.number')" text="Number" new />
+                            <x-layout.navigation.link :href="route('documentation.form.number')" text="Number" />
                         </li>
                         <li class="relative ml-4">
                             <x-layout.navigation.link :href="route('documentation.form.checkbox')" text="Checkbox" />
@@ -74,7 +74,7 @@
                             <x-layout.navigation.link :href="route('documentation.ui.badge')" text="Badge" />
                         </li>
                         <li class="relative ml-4">
-                            <x-layout.navigation.link :href="route('documentation.ui.banner')" text="Banner" new />
+                            <x-layout.navigation.link :href="route('documentation.ui.banner')" text="Banner" />
                         </li>
                         <li class="relative ml-4">
                             <x-layout.navigation.link :href="route('documentation.ui.button')" text="Button" />
@@ -95,7 +95,7 @@
                             <x-layout.navigation.link :href="route('documentation.ui.modal')" text="Modal" />
                         </li>
                         <li class="relative ml-4">
-                            <x-layout.navigation.link :href="route('documentation.ui.loading')" text="Loading" new />
+                            <x-layout.navigation.link :href="route('documentation.ui.loading')" text="Loading" />
                         </li>
                         <li class="relative ml-4">
                             <x-layout.navigation.link :href="route('documentation.ui.select')" text="Select" />
