@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::withoutMiddleware('throttle:api')
     ->get('/users', function (Request $request) {
-        $selected = json_decode($request->get('selected', []), true);
+        $selected = json_decode($request->get('selected', ''), true);
 
         return User::query()
             ->when(

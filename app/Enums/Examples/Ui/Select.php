@@ -126,7 +126,7 @@ class Select
 
     Route::get('/users', function (Request $request) {
         // getting initial selected values
-        $selected = json_decode($request->get('selected', []), true);
+        $selected = json_decode($request->get('selected', ''), true);
 
         return User::query()
             // searching when type in the select input
