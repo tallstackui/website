@@ -55,6 +55,12 @@
         "4": "Size Variations",
         "5": "Color Variations"
     },
+    "docs.form.range": {
+        "0": "Basic Usage",
+        "1": "Label",
+        "4": "Size Variations",
+        "5": "Color Variations"
+    },
     "docs.ui.alert": {
         "0": "Basic Usage",
         "1": "Title",

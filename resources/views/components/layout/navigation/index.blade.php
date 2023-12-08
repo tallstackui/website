@@ -59,6 +59,9 @@
                         <li class="relative ml-4">
                             <x-layout.navigation.link :href="route('documentation.form.toggle')" text="Toggle" />
                         </li>
+                        <li class="relative ml-4">
+                            <x-layout.navigation.link :href="route('documentation.form.range')" text="Range" new />
+                        </li>
                     </ul>
                 </li>
                 <li class="relative ml-4">

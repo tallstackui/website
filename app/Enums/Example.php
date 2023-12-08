@@ -10,6 +10,7 @@ use App\Enums\Examples\Form\Input;
 use App\Enums\Examples\Form\Number;
 use App\Enums\Examples\Form\Password;
 use App\Enums\Examples\Form\Radio;
+use App\Enums\Examples\Form\Range;
 use App\Enums\Examples\Form\Textarea;
 use App\Enums\Examples\Form\Toggle;
 use App\Enums\Examples\Installation;
@@ -71,6 +72,7 @@ enum Example: string
     case Translation = Translation::class;
     case Toast = Toast::class;
     case Toggle = Toggle::class;
+    case Range = Range::class;
     case Tooltip = Tooltip::class;
     case Modal = Modal::class;
     case Loading = Loading::class;
