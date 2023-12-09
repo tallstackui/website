@@ -87,11 +87,18 @@ new class extends Component {
                         @php($hash = md5($original['block']))
                         <div x-data="clipboard()" class="flex items-center gap-1">
                             <span>Name:</span>
-                            <x-badge color="pink" sm outline>
-                                {{ $original['block'] }}
-                            </x-badge>
+                            <div class="block dark:hidden">
+                                <x-badge color="pink" sm outline>
+                                    {{ $original['block'] }}
+                                </x-badge>
+                            </div>
+                            <div class="hidden dark:block">
+                                <x-badge color="white" sm outline>
+                                    {{ $original['block'] }}
+                                </x-badge>
+                            </div>
                             <button data-ref="{{ $hash }}" x-on:click="raw('{{ $original['block'] }}', '{{ $hash }}')">
-                                <x-icon name="document" class="h-5 w-5 text-gray-500" x-show="!notification" />
+                                <x-icon name="document" class="h-5 w-5 text-gray-500 dark:text-white" x-show="!notification" />
                                 <x-icon name="document-check" class="h-5 w-5 text-pink-500" x-show="notification" />
                             </button>
                         </div>

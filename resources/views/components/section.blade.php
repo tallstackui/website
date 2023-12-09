@@ -2,7 +2,7 @@
 
 @php($anchor ??= str($title)->slug()->lower())
 
-<section x-data="{ anchor : false, @if ($copy) code : false @endif }" id="{{ $anchor }}" {{ $attributes->merge(['class' => 'text-gray-600 mb-6 dark:text-slate-400']) }} @if ($id) id="{{ $id }}" @endif>
+<section x-data="{ anchor : false, code : false }" id="{{ $anchor }}" {{ $attributes->merge(['class' => 'text-gray-600 mb-6 dark:text-slate-400']) }} @if ($id) id="{{ $id }}" @endif>
     @if ($title || $copy)
         <div @class(['flex items-center justify-between', 'mb-2' => $description === null])>
             @if ($title)
