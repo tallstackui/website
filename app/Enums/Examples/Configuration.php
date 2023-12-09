@@ -53,10 +53,12 @@ class Configuration
         | Loading
         |----------------------------------------------------------------------
         |
+        | z-index: controls the default z-index.
         | blur: enables the background blur effect by default.
         | opacity: enables the background opacity by default.
         */
         'loading' => [
+            'z-index' => 'z-50',
             'blur' => false,
             'opacity' => true,
         ],
@@ -97,5 +99,13 @@ class Configuration
     ],
 
     // ...
+    HTML;
+
+    public const TAILWINDCSS = <<<'HTML'
+    content: [
+        // ...
+
+        './config/tallstackui.php', // [tl! highlight]
+    ],
     HTML;
 }

@@ -13,22 +13,22 @@
             <u>we suggest you opt for soft personalization.</u>
         </p>
     </x-section>
-    <x-section class="grid grid-cols-2 gap-2" :copy="false">
+    <x-section class="grid grid-cols-2 gap-4" :copy="false">
         <div class="col-span-full md:col-span-1">
-            <x-card>
+            <div class="bg-white dark:bg-slate-800 p-6 rounded-lg">
                 <a class="inline-flex items-center gap-2" href="{{ route('documentation.personalization.soft') }}">
                     <u>Soft</u> Personalization
                     <x-icon name="arrow-up-right" class="h-5 w-5 text-pink-500" />
                 </a>
-            </x-card>
+            </div>
         </div>
         <div class="col-span-full md:col-span-1">
-            <x-card>
+            <div class="bg-white dark:bg-slate-800 p-6 rounded-lg">
                 <a class="inline-flex items-center gap-2" href="{{ route('documentation.personalization.deep') }}">
                     <u>Deep</u> Personalization
                     <x-icon name="arrow-up-right" class="h-5 w-5 text-pink-500" />
                 </a>
-            </x-card>
+            </div>
         </div>
     </x-section>
     <x-slot:navigation>

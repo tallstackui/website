@@ -8,7 +8,7 @@
     <x-slot:personalization>
         <livewire:documentation.personalization :$personalization component="dialog" />
     </x-slot:personalization>
-    <x-section title="Configuration">
+    <x-section title="Configuration" :copy="false">
         1. Insert the Dialog component on your main layout.
         <x-code language="html" :contents="$tag"/>
         2. Use the Interactions trait in your Livewire component.

@@ -161,14 +161,14 @@ class SoftPersonalization
 
            TallStackUi::personalize()
                ->form('input')
-               ->block('input.class.base') // [tl! highlight]
+               ->block('input.class.base')
                ->replace('rounded-md', 'rounded-full'); // [tl! focus]
 
            // or...
 
           TallStackUi::personalize()
               ->form('input')
-              ->block('input.class.base') // [tl! highlight]
+              ->block('input.class.base')
               ->replace([ // [tl! focus:3]
                   'rounded-md' => 'rounded-full',
                   'border-0' => 'border-1',

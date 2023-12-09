@@ -16,7 +16,7 @@
         <p>This command will publish the TallStackUI translation files for the root path of your application.</p>
     </x-section>
     <x-section title="Missing Content" :copy="false">
-        <p>Didn't find the translation file for your language? <a href="https://github.com/tallstackui/tallstackui" class="underline" target="_blank">Send us a pull!</a></p>
+        <p>Didn't find the translation file for your language? <a href="https://github.com/tallstackui/tallstackui" class="underline" target="_blank">Collaborate sending us a pull request!</a></p>
     </x-section>
     <x-slot:navigation>
         <x-slot:back>

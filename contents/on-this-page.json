@@ -273,7 +273,8 @@
     },
     "docs.configuration": {
         "0": "Configuration File",
-        "1": "Content"
+        "1": "Content",
+        "2": "Tracing TailwindCSS Classes"
     },
     "docs.translation": {
         "0": "Translation Files",
