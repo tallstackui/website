@@ -2,6 +2,7 @@
 
 namespace App\Enums;
 
+use App\Enums\Examples\Alpine;
 use App\Enums\Examples\Configuration;
 use App\Enums\Examples\Contribution;
 use App\Enums\Examples\DarkTheme;
@@ -77,6 +78,7 @@ enum Example: string
     case Modal = Modal::class;
     case Loading = Loading::class;
     case Welcome = Welcome::class;
+    case Alpine = Alpine::class;
 
     public function variables(): array
     {

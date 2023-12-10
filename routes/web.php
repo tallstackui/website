@@ -85,4 +85,10 @@ Route::prefix('/docs')
                 Route::view('/soft', 'documentation.personalization.soft', Example::SoftPersonalization->variables())->name('soft');
                 Route::view('/deep', 'documentation.personalization.deep', Example::DeepPersonalization->variables())->name('deep');
             });
+
+        Route::prefix('/integrations')
+            ->name('integrations.')
+            ->group(function () {
+                Route::view('/alpine', 'documentation.integrations.alpine', Example::Alpine->variables())->name('alpine');
+            });
     });
