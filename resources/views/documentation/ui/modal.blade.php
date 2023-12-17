@@ -123,6 +123,19 @@
             <x-warning text="Applicable only on desktop devices." />
         </div>
     </x-section>
+    <x-section title="Centered">
+        <x-preview language="blade" :contents="$center">
+            <x-modal id="center" title="TallStackUi" center>
+                TallStackUi
+            </x-modal>
+            <x-button x-on:click="$modalOpen('center')">
+                Open
+            </x-button>
+        </x-preview>
+        <div class="mt-2 block sm:hidden">
+            <x-warning text="Applicable only on desktop devices." />
+        </div>
+    </x-section>
     <x-section title="Z Index">
         <x-preview language="blade" :contents="$zIndex">
             <x-modal id="z-modal" title="TallStackUi" z-index="z-10">

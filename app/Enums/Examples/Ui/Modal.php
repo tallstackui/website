@@ -54,6 +54,12 @@ class Modal
     </x-modal>
     HTML;
 
+    public const CENTER = <<<'HTML'
+    <x-modal title="TallStackUi" center>
+        TallStackUi
+    </x-modal>
+    HTML;
+
     public const Z_INDEX = <<<'HTML'
     <x-modal title="TallStackUi" z-index="z-10">
         TallStackUi

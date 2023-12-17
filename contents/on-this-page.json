@@ -189,12 +189,13 @@
         "2": "Footer Slot",
         "3": "Background Blur",
         "4": "Size Variations",
-        "5": "Z Index",
-        "6": "Persistent",
-        "7": "Wireable",
-        "8": "Wireable Personalized",
-        "9": "AlpineJS Helper",
-        "10": "Configurations"
+        "5": "Centered",
+        "6": "Z Index",
+        "7": "Persistent",
+        "8": "Wireable",
+        "9": "Wireable Personalized",
+        "10": "AlpineJS Helper",
+        "11": "Configurations"
     },
     "docs.ui.loading": {
         "0": "Concept",
