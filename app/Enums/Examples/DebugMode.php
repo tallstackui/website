@@ -13,9 +13,24 @@ class DebugMode
 
     'debug' => [
         'status' => env('TALLSTACKUI_DEBUG', false),
+        /*
+        |----------------------------------------------------------------------
+        | You can control in which environments the debug mode is enabled.
+        |----------------------------------------------------------------------
+        */
         'environments' => [
             'local',
-            'testing',
+            'sandbox',
+            'staging',
+        ],
+        /*
+        |----------------------------------------------------------------------
+        | You can skip debug mode for certain specific components
+        | by setting the exact component name in this array.
+        |----------------------------------------------------------------------
+        */
+        'skip' => [
+            //
         ],
     ],
 

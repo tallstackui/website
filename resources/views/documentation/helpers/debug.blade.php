@@ -47,17 +47,16 @@
     </x-section>
     <x-section title="Available Configurations" :copy="false">
         <p>
-            If you want to set the status other than through the <x-block>.env</x-block> file,
-            or control which environments debug will be available in, then
-            you will need to publish the TallStackUI configuration file
-            and make adjustments to the debug configuration. <a href="{{ route('documentation.configuration') }}" class="underline" target="_blank">
+            Debug mode has a settings section in the TallStackUI configuration file.
+            Through this configuration, you can configure several things, such as skipping debug
+            mode for specific components. <a href="{{ route('documentation.configuration') }}" class="underline" target="_blank">
             Click here to know how to publish the configuration file.</a>
         </p>
         <x-code :contents="$configuration" :copy="false" />
     </x-section>
     <x-section title="Cautions" :copy="false">
         <ul class="list-decimal list-inside">
-            <li><u>We recommend that you only use debug mode in dev. environment.</u></li>
+            <li><u>We recommend that you only use debug mode in dev. environments.</u></li>
             <li>Some alerts may be seen in the browser console when debug mode is activated.</li>
         </ul>
     </x-section>
