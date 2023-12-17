@@ -31,6 +31,7 @@ use App\Enums\Examples\Ui\Dialog;
 use App\Enums\Examples\Ui\Dropdown;
 use App\Enums\Examples\Ui\Error;
 use App\Enums\Examples\Ui\Icon;
+use App\Enums\Examples\Ui\Link;
 use App\Enums\Examples\Ui\Loading;
 use App\Enums\Examples\Ui\Modal;
 use App\Enums\Examples\Ui\Select;
@@ -78,6 +79,7 @@ enum Example: string
     case Tooltip = Tooltip::class;
     case Modal = Modal::class;
     case Loading = Loading::class;
+    case Link = Link::class;
     case Welcome = Welcome::class;
     case Alpine = Alpine::class;
     case DebugMode = DebugMode::class;
