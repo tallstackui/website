@@ -5,14 +5,14 @@ namespace App\Enums\Examples;
 class DebugMode
 {
     public const ENV = <<<'HTML'
-    TALLSTACKUI_DEBUG=true
+    TALLSTACKUI_DEBUG_MODE=true
     HTML;
 
     public const CONFIGURATION = <<<'HTML'
     // ...
 
     'debug' => [
-        'status' => env('TALLSTACKUI_DEBUG', false),
+        'status' => env('TALLSTACKUI_DEBUG_MODE', false),
         /*
         |----------------------------------------------------------------------
         | You can control in which environments the debug mode is enabled.
