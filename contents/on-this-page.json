@@ -197,6 +197,15 @@
         "10": "AlpineJS Helper",
         "11": "Configurations"
     },
+    "docs.ui.link": {
+        "0": "Basic Usage",
+        "1": "Size Variations",
+        "2": "Icon Slot",
+        "3": "Target Blank & Bold Options",
+        "4": "Query String & Fragment Options",
+        "5": "Color Variations",
+        "6": "Without Color"
+    },
     "docs.ui.loading": {
         "0": "Concept",
         "1": "Attributes",
