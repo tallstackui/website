@@ -19,6 +19,13 @@
         "2": "Required Label Indicator",
         "3": "Invalidate"
     },
+    "docs.form.color": {
+        "0": "Basic Usage",
+        "1": "Label & Hint",
+        "2": "Picker Mode",
+        "3": "Custom Colors",
+        "4": "Invalidate"
+    },
     "docs.form.number": {
         "0": "Basic Usage",
         "1": "Label & Hint",
