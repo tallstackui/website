@@ -19,7 +19,7 @@
         <div class="mt-4 flex justify-center">
             <x-button text="This is the TallStackUI" color="purple" icon="photo" position="right" using="custom" attributes="of laravel" />
         </div>
-        <p class="mt-4">... Could you tell me exactly what attributes we are using on this WITHOUT having to go to the editor?</p>
+        <p class="mt-4">... Could you tell me exactly what attributes we are using on this?</p>
         <p class="mt-4">
             Debug mode solves this problem by providing a complete overview of the state of all
             components on the page, regardless of where they are or whether they were called
@@ -48,7 +48,7 @@
     <x-section title="Available Configurations" :copy="false">
         <p>
             Debug mode has a settings section in the TallStackUI configuration file.
-            Through this configuration, you can configure several things, such as skipping debug
+            Through this configuration, you can configure several things, such as ignore debug
             mode for specific components. <a href="{{ route('documentation.configuration') }}" class="underline" target="_blank">
             Click here to know how to publish the configuration file.</a>
         </p>

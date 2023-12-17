@@ -14,6 +14,9 @@
                 TallStackUI
             </x-link>
         </x-preview>
+        <x-warning class="mt-4">
+            The href attribute will be mandatory until fragment is defined.
+        </x-warning>
     </x-section>
     <x-section title="Size Variations">
         <x-preview language="blade" :contents="$sizes">
@@ -27,7 +30,7 @@
             <div class="flex items-center gap-x-2">
                 <x-link :href="route('documentation.ui.link')"
                         text="TallStackUI"
-                        icon="arrow-up-left" />
+                        icon="link" />
                 <x-link :href="route('documentation.ui.link')"
                         text="TallStackUI"
                         icon="arrow-up-right"
@@ -35,11 +38,12 @@
             </div>
         </x-preview>
     </x-section>
-    <x-section title="Target Blank & Bold Options">
-        <x-preview language="blade" :contents="$blankBold">
+    <x-section title="Target Blank & Style Options">
+        <x-preview language="blade" :contents="$blankBoldUnderline">
             <div class="flex items-center gap-x-2">
                 <x-link :href="route('documentation.ui.link')" text="TallStackUI" blank />
                 <x-link :href="route('documentation.ui.link')" text="TallStackUI" bold />
+                <x-link :href="route('documentation.ui.link')" text="TallStackUI" underline />
             </div>
         </x-preview>
     </x-section>

@@ -66,7 +66,7 @@
     </x-section>
     <x-section title="Size Variations">
         <x-preview language="blade" :contents="$sizes">
-            <div class="flex flex-col space-y-2 lg:space-x-2 lg:space-y-0 lg:flex-row">
+            <div class="flex flex-col items-start space-y-2">
                 <x-slide id="default-size-slide" title="TallStackUi">
                     Default (lg)
                 </x-slide>
