@@ -5654,18 +5654,18 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/tallstackui/tallstackui.git",
-                "reference": "92a9388c7139b39cb919b45a2f03280f31ea52ff"
+                "reference": "3300eb26e413d15b4e2966ca9c1838cbfcc9116b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tallstackui/tallstackui/zipball/92a9388c7139b39cb919b45a2f03280f31ea52ff",
-                "reference": "92a9388c7139b39cb919b45a2f03280f31ea52ff",
+                "url": "https://api.github.com/repos/tallstackui/tallstackui/zipball/3300eb26e413d15b4e2966ca9c1838cbfcc9116b",
+                "reference": "3300eb26e413d15b4e2966ca9c1838cbfcc9116b",
                 "shasum": ""
             },
             "require": {
                 "laravel/framework": "^10.0",
                 "livewire/livewire": "^3.0",
-                "php": "^8.1|^8.2|^8.3"
+                "php": "^8.1"
             },
             "require-dev": {
                 "larastan/larastan": "^2.7",
@@ -5714,7 +5714,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-12-17T07:36:41+00:00"
+            "time": "2023-12-17T14:39:58+00:00"
         },
         {
             "name": "tijsverkoyen/css-to-inline-styles",

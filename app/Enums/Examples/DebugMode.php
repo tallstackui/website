@@ -25,11 +25,11 @@ class DebugMode
         ],
         /*
         |----------------------------------------------------------------------
-        | You can skip debug mode for certain specific components
+        | You can ignore debug mode for certain specific components
         | by setting the exact component name in this array.
         |----------------------------------------------------------------------
         */
-        'skip' => [
+        'ignore' => [
             //
         ],
     ],
