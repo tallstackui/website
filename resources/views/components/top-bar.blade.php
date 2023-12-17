@@ -1,5 +1,12 @@
-<div class="flex flex-col items-center justify-center bg-pink-900 px-6 py-2 space-y-2 md:space-y-0 md:space-x-4 md:flex-row">
-    <p class="text-sm font-medium text-white">
-        {!! $slot !!}
-    </p>
-</div>
+<x-banner :color="[
+            'background' => 'bg-pink-900',
+            'text' => 'text-white'
+        ]" until="2023-12-22">
+    <b>Release 1.5.0 is here!</b> 🎉 <u>3 new components, debug mode, and more.</u>
+    <x-link :color="null" href="https://github.com/tallstackui/tallstackui/releases/tag/1.5.0"
+            icon="arrow-up-right"
+            position="right"
+            blank>
+        Click here to learn more
+    </x-link>
+</x-banner>

@@ -38,7 +38,7 @@
 <body class="min-h-full flex-col justify-center bg-gray-100 dark:bg-slate-900" x-bind:class="{ 'bg-dots-white' : darkTheme, 'bg-dots-darker' : !darkTheme }" x-data="{ mobile : false }" x-cloak>
     <x-dialog />
     <x-toast />
-    <x-release-alert />
+    <x-top-bar />
     <x-layout.header />
     <div class="flex flex-col">
         <x-layout.banner />
