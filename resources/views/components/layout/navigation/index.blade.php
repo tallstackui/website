@@ -45,6 +45,9 @@
                             <x-layout.navigation.link :href="route('documentation.form.password')" text="Password" />
                         </li>
                         <li class="relative ml-4">
+                            <x-layout.navigation.link :href="route('documentation.form.color')" text="Color" new />
+                        </li>
+                        <li class="relative ml-4">
                             <x-layout.navigation.link :href="route('documentation.form.textarea')" text="Textarea" />
                         </li>
                         <li class="relative ml-4">

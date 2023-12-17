@@ -22,6 +22,7 @@ Route::prefix('/docs')
             ->group(function () {
                 Route::view('/input', 'documentation.form.input', Example::Input->variables())->name('input');
                 Route::view('/password', 'documentation.form.password', Example::Password->variables())->name('password');
+                Route::view('/color', 'documentation.form.color', Example::Color->variables())->name('color');
                 Route::view('/textarea', 'documentation.form.textarea', Example::Textarea->variables())->name('textarea');
                 Route::view('/number', 'documentation.form.number', Example::Number->variables())->name('number');
                 Route::view('/checkbox', 'documentation.form.checkbox', Example::Checkbox->variables())->name('checkbox');

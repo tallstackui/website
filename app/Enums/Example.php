@@ -8,6 +8,7 @@ use App\Enums\Examples\Contribution;
 use App\Enums\Examples\DarkTheme;
 use App\Enums\Examples\DebugMode;
 use App\Enums\Examples\Form\Checkbox;
+use App\Enums\Examples\Form\Color;
 use App\Enums\Examples\Form\Input;
 use App\Enums\Examples\Form\Number;
 use App\Enums\Examples\Form\Password;
@@ -67,6 +68,7 @@ enum Example: string
     case Installation = Installation::class;
     case Troubleshooting = Troubleshooting::class;
     case Password = Password::class;
+    case Color = Color::class;
     case Radio = Radio::class;
     case Select = Select::class;
     case Slide = Slide::class;
