@@ -11,6 +11,7 @@ use App\Enums\Examples\Form\Checkbox;
 use App\Enums\Examples\Form\Input;
 use App\Enums\Examples\Form\Number;
 use App\Enums\Examples\Form\Password;
+use App\Enums\Examples\Form\Pin;
 use App\Enums\Examples\Form\Radio;
 use App\Enums\Examples\Form\Range;
 use App\Enums\Examples\Form\Textarea;
@@ -83,6 +84,7 @@ enum Example: string
     case Welcome = Welcome::class;
     case Alpine = Alpine::class;
     case DebugMode = DebugMode::class;
+    case Pin = Pin::class;
 
     public function variables(): array
     {

@@ -28,6 +28,7 @@ Route::prefix('/docs')
                 Route::view('/radio', 'documentation.form.radio', Example::Radio->variables())->name('radio');
                 Route::view('/toggle', 'documentation.form.toggle', Example::Toggle->variables())->name('toggle');
                 Route::view('/range', 'documentation.form.range', Example::Range->variables())->name('range');
+                Route::view('/pin', 'documentation.form.pin', Example::Pin->variables())->name('pin');
             });
 
         Route::prefix('/ui')

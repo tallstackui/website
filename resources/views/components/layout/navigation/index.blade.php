@@ -62,6 +62,9 @@
                         <li class="relative ml-4">
                             <x-layout.navigation.link :href="route('documentation.form.range')" text="Range" />
                         </li>
+                        <li class="relative ml-4">
+                            <x-layout.navigation.link :href="route('documentation.form.pin')" text="Pin" new />
+                        </li>
                     </ul>
                 </li>
                 <li class="relative ml-4">

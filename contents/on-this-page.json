@@ -69,6 +69,15 @@
         "5": "Color Variations",
         "3": "Invalidate"
     },
+    "docs.form.pin": {
+        "0": "Concept",
+        "1": "Basic Usage",
+        "2": "Label & Hint",
+        "3": "Prefix",
+        "4": "Clear",
+        "5": "Masks",
+        "6": "Invalidate"
+    },
     "docs.ui.alert": {
         "0": "Basic Usage",
         "1": "Title",
