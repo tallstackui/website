@@ -211,7 +211,8 @@
             "contents": {
                 "0": "Basic Usage",
                 "1": "Label & Hint",
-                "2": "Multi-dimensional Array"
+                "2": "Multi-dimensional Array",
+                "3": "Invalidate"
             }
         },
         "Styled": {
