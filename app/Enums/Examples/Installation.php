@@ -11,7 +11,7 @@ class Installation
     public const CLOAK = <<<'HTML'
     <html>
         <head>
-            <style> [x-cloak] { display: none; } </style> {{-- [tl! focus] --}}
+            <style> [x-cloak] { display: none; } </style> {{-- [tl! focus, highlight] --}}
 
             <!-- ... -->
         </head>
@@ -50,7 +50,7 @@ class Installation
         <body>
             <!-- ... -->
 
-            @livewireScripts {{-- [tl! focus] --}}
+            @livewireScripts {{-- [tl! focus, highlight] --}}
         </body>
     </html>
     HTML;

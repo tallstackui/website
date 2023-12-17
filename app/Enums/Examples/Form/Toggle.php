@@ -71,6 +71,10 @@ class Toggle
     <x-toggle color="white" label="White" />
     HTML;
 
+    public const INVALIDATE = <<<'HTML'
+    <x-toggle label="Receive Alert" invalidate />
+    HTML;
+
     public const PERSONALIZATION = <<<'HTML'
     TallStackUi::personalize()
         ->form('toggle')

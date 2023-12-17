@@ -36,6 +36,11 @@
             <livewire:documentation.form.number :model="4" />
         </x-preview>
     </x-section>
+    <x-section title="Invalidate" description="An option to not show validation error message.">
+        <x-preview language="blade" :contents="$invalidate">
+            <x-number label="Quantity" invalidate />
+        </x-preview>
+    </x-section>
     <x-section title="Livewire Bind Concern">
         <p>
             Although the number component can be used with <x-block>wire:model.live</x-block>, due to the way Livewire works,

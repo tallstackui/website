@@ -23,6 +23,11 @@
             <x-password label="Password *" hint="Insert your password" value="TallStackUi" />
         </x-preview>
     </x-section>
+    <x-section title="Invalidate" description="An option to not show validation error message">
+        <x-preview language="blade" :contents="$invalidate">
+            <x-password label="Password" hint="Insert your best password" value="TallStackUi"  invalidate />
+        </x-preview>
+    </x-section>
     <x-slot:navigation>
         <x-slot:back>
             <x-layout.footer-navigation :href="route('documentation.form.input')" text="Form Input" back />

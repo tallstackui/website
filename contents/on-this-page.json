@@ -10,26 +10,30 @@
         "1": "Label & Hint",
         "2": "Required Label Indicator",
         "3": "Icon Slot",
-        "4": "Prefix & Suffix"
+        "4": "Prefix & Suffix",
+        "5": "Invalidate"
     },
     "docs.form.password": {
         "0": "Basic Usage",
         "1": "Label & Hint",
-        "2": "Required Label Indicator"
+        "2": "Required Label Indicator",
+        "3": "Invalidate"
     },
     "docs.form.number": {
         "0": "Basic Usage",
         "1": "Label & Hint",
         "2": "Min & Max Control",
         "3": "Delay Control",
-        "4": "Livewire Bind Concern"
+        "4": "Invalidate",
+        "5": "Livewire Bind Concern"
     },
     "docs.form.textarea": {
         "0": "Basic Usage",
         "1": "Label & Hint",
         "2": "Required Label Indicator",
         "3": "Resize",
-        "4": "Resize Auto"
+        "4": "Resize Auto",
+        "5": "Invalidate"
     },
     "docs.form.checkbox": {
         "0": "Basic Usage",
@@ -37,7 +41,8 @@
         "2": "Label Slot",
         "3": "Label Alignment",
         "4": "Size Variations",
-        "5": "Color Variations"
+        "5": "Color Variations",
+        "6": "Invalidate"
     },
     "docs.form.radio": {
         "0": "Basic Usage",
@@ -45,7 +50,8 @@
         "2": "Label Slot",
         "3": "Label Alignment",
         "4": "Size Variations",
-        "5": "Color Variations"
+        "5": "Color Variations",
+        "6": "Invalidate"
     },
     "docs.form.toggle": {
         "0": "Basic Usage",
@@ -53,13 +59,15 @@
         "2": "Label Slot",
         "3": "Label Alignment",
         "4": "Size Variations",
-        "5": "Color Variations"
+        "5": "Color Variations",
+        "6": "Invalidate"
     },
     "docs.form.range": {
         "0": "Basic Usage",
         "1": "Label",
         "4": "Size Variations",
-        "5": "Color Variations"
+        "5": "Color Variations",
+        "3": "Invalidate"
     },
     "docs.ui.alert": {
         "0": "Basic Usage",

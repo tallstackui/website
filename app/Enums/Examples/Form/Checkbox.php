@@ -71,6 +71,10 @@ class Checkbox
     <x-checkbox color="white" label="White" />
     HTML;
 
+    public const INVALIDATE = <<<'HTML'
+    <x-checkbox label="Receive Alert" invalidate />
+    HTML;
+
     public const PERSONALIZATION = <<<'HTML'
     TallStackUi::personalize()
         ->form('checkbox')
