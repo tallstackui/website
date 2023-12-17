@@ -6,6 +6,7 @@ use App\Enums\Examples\Alpine;
 use App\Enums\Examples\Configuration;
 use App\Enums\Examples\Contribution;
 use App\Enums\Examples\DarkTheme;
+use App\Enums\Examples\DebugMode;
 use App\Enums\Examples\Form\Checkbox;
 use App\Enums\Examples\Form\Input;
 use App\Enums\Examples\Form\Number;
@@ -79,6 +80,7 @@ enum Example: string
     case Loading = Loading::class;
     case Welcome = Welcome::class;
     case Alpine = Alpine::class;
+    case DebugMode = DebugMode::class;
 
     public function variables(): array
     {

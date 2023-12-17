@@ -318,5 +318,12 @@
         "3": "Dusk Tests",
         "4": "Run Tests",
         "5": "Synchronize Changes"
+    },
+    "docs.debug": {
+        "0": "Concept",
+        "1": "Example",
+        "2": "Activate Debug Mode",
+        "3": "Available Configurations",
+        "4": "Cautions"
     }
 }

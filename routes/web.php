@@ -76,6 +76,7 @@ Route::prefix('/docs')
         Route::view('/configuration', 'documentation.configuration', Example::Configuration->variables())->name('configuration');
         Route::view('/translation', 'documentation.translation', Example::Translation->variables())->name('translation');
         Route::view('/contribution', 'documentation.contribution', Example::Contribution->variables())->name('contribution');
+        Route::view('/debug', 'documentation.helpers.debug', Example::DebugMode->variables())->name('debug');
 
         Route::prefix('/personalization')
             ->name('personalization.')
