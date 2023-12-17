@@ -1,6 +1,9 @@
 <x-layout>
     <x-slot:title>
         Link
+        <x-slot:version>
+            v1.5
+        </x-slot:version>
     </x-slot:title>
     <x-slot:description>
         Link component.
@@ -98,4 +101,12 @@
             </div>
         </x-preview>
     </x-section>
+    <x-slot:navigation>
+        <x-slot:back>
+            <x-layout.footer-navigation :href="route('documentation.ui.modal')" text="Modal" back />
+        </x-slot:back>
+        <x-slot:next>
+            <x-layout.footer-navigation :href="route('documentation.ui.loading')" text="Loading" />
+        </x-slot:next>
+    </x-slot:navigation>
 </x-layout>

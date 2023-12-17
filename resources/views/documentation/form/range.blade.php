@@ -1,6 +1,9 @@
 <x-layout>
     <x-slot:title>
         Form Range
+        <x-slot:version>
+            v1.4
+        </x-slot:version>
     </x-slot:title>
     <x-slot:description>
         Form range component.

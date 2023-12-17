@@ -52,7 +52,14 @@
                         </div>
                         <header class="mb-6 space-y-1">
                             @if ($title)
-                                <h1 class="text-3xl font-semibold tracking-tight text-pink-900 font-display dark:text-slate-300">{{ $title }}</h1>
+                                <div class="flex items-start gap-x-2">
+                                    <h1 class="text-3xl font-semibold tracking-tight text-pink-900 font-display dark:text-slate-300">{{ $title }}</h1>
+                                    @if ($version)
+                                        <x-badge color="pink" light xs round>
+                                            {!! $version !!}
+                                        </x-badge>
+                                    @endif
+                                </div>
                             @endif
                             @if ($description)
                                 <p class="text-sm text-slate-500 dark:text-slate-400">{{ $description }}</p>
