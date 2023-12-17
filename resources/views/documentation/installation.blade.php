@@ -18,14 +18,6 @@
         <x-code language="blade" :contents="$cloak" :copy="false" />
         <p>3. Add the TallStackUI script above the <x-block>vite</x-block> tag in your layout:</p>
         <x-code language="blade" :contents="$script" :copy="false" />
-        <p>If you prefer, you can load the script and styles separately:</p>
-        <x-code language="blade" :contents="$manual" :copy="false" />
-        <x-warning>
-            <ul class="text-sm list-inside list-decimal">
-                <li>You must add above the @verbatim @vite @endverbatim tag.</li>
-                <li><u class="font-semibold">You do not need to load the style separately</u> if you choose to follow step 4 below.</li>
-            </ul>
-        </x-warning>
         <p class="mt-4">4. Edit the <x-block>tailwind.config.js</x-block> of your application inserting this content:</p>
         <x-code language="js" :contents="$tailwindcss" :copy="false" />
         <x-warning>

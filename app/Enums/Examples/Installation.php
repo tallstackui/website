@@ -11,7 +11,7 @@ class Installation
     public const CLOAK = <<<'HTML'
     <html>
         <head>
-            <style> [x-cloak] { display: none; } </style> {{-- [tl! highlight] --}}
+            <style> [x-cloak] { display: none; } </style> {{-- [tl! focus] --}}
 
             <!-- ... -->
         </head>
@@ -24,21 +24,6 @@ class Installation
             <!-- ... -->
 
             <tallstackui:script /> {{-- [tl! highlight] --}}
-            @vite(['resources/css/app.css', 'resources/js/app.js'])
-        </head>
-    </html>
-    HTML;
-
-    public const MANUAL = <<<'HTML'
-    <html>
-        <head>
-            <!-- Blade Directives -->
-            @tallStackUiScript {{-- [tl! highlight:1] --}}
-            @tallStackUiStyle
-
-            <!-- ... or Livewire Style -->
-            <tallstackui:script /> {{-- [tl! highlight:1] --}}
-            <tallstackui:style />
             @vite(['resources/css/app.css', 'resources/js/app.js'])
         </head>
     </html>
@@ -65,7 +50,7 @@ class Installation
         <body>
             <!-- ... -->
 
-            @livewireScripts {{-- [tl! highlight] --}}
+            @livewireScripts {{-- [tl! focus] --}}
         </body>
     </html>
     HTML;
