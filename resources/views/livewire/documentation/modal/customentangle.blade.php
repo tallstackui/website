@@ -7,8 +7,8 @@ $tallstackui = state('tallstackui', false);
 ?>
 
 <div>
-    <x-modal title="TallStackUi" wire="tallstackui">
-        TallStackUi
+    <x-modal title="TallStackUI" wire="tallstackui">
+        TallStackUI
     </x-modal>
     <x-button wire:click="$toggle('tallstackui')">
         Open Modal

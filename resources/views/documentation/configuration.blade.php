@@ -23,15 +23,6 @@
         </div>
         <x-code :contents="$content" :copy="false"/>
     </x-section>
-    <x-section title="Track TailwindCSS Classes" :copy="false">
-        <p class="mb-4">
-            As you can see, one of the possible settings to be adjusted in the configuration file
-            is the <x-block>z-index</x-block> of certain components. If you intend to make changes to a component's
-            <x-block>z-index</x-block> through the configuration file, it will be important for TailwindCSS watch
-            the configuration file in the <x-block>tailwind.config.js</x-block> file:
-        </p>
-        <x-code language="js" :contents="$tailwindcss" :copy="false"/>
-    </x-section>
     <x-slot:navigation>
         <x-slot:back>
             <layout.footer-navigation :href="route('documentation.internal.wrapper')" text="Internal Wrapper" back />

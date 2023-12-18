@@ -3,7 +3,7 @@
         Installation
     </x-slot:title>
     <x-section title="Requirements" :copy="false">
-        <p>TallStackUi was created with a <b class="font-semibold text-pink-500 underline">focus on Livewire 3</b> so the usage requirements are:</p>
+        <p>TallStackUI was created with a <b class="font-semibold text-pink-500 underline">focus on Livewire 3</b> so the usage requirements are:</p>
         <ul class="mt-4 ml-4 list-inside list-decimal space-y-2">
             <li>PHP 8.x</li>
             <li>Laravel 10</li>
@@ -40,7 +40,7 @@
     <x-section title="Livewire SPA Mode" :copy="false">
         <p>
             If you are using the new Livewire SPA mode you must load the TallStackUI to the first page rendered
-            in your application and persist in all other pages that want to use TallStackUi.
+            in your application and persist in all other pages that want to use TallStackUI.
         </p>
     </x-section>
     <x-slot:navigation>

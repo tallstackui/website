@@ -11,7 +11,7 @@
     </x-slot:personalization>
     <x-section title="Basic Usage" anchor="normal-basic-usage">
         <x-preview language="blade" :contents="$basic">
-            <x-button>TallStackUi</x-button>
+            <x-button>TallStackUI</x-button>
         </x-preview>
     </x-section>
     <x-section title="Tag A Usage" anchor="normal-tag-a-usage">

@@ -7,8 +7,8 @@ $tallstackui = state('tallstackui', false);
 ?>
 
 <div>
-    <x-slide title="TallStackUi" wire="tallstackui">
-        TallStackUi
+    <x-slide title="TallStackUI" wire="tallstackui">
+        TallStackUI
     </x-slide>
     <x-button wire:click="$toggle('tallstackui')">
         Open Slide
