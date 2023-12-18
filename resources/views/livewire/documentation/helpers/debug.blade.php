@@ -8,13 +8,15 @@ new class extends Component {
     public function mount(): void
     {
         config()->set('tallstackui.debug.status', true);
-        config()->set('tallstackui.debug.environments', ['production']);
+
+        config()->set('tallstackui.debug.environments', ['local', 'production']);
     }
 
     public function rendered(): void
     {
         config()->set('tallstackui.debug.status', false);
-        config()->set('tallstackui.debug.environments', []);
+
+        config()->set('tallstackui.debug.environments', ['local']);
     }
 } ?>
 
