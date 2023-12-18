@@ -70,7 +70,7 @@ class DeepPersonalization
     }
     HTML;
 
-    public const OVERRIDE_COLORS = <<<'HTML'
+    public const COLORS = <<<'HTML'
     namespace App\View\Components;
 
     use Illuminate\Contracts\View\View;
@@ -81,60 +81,19 @@ class DeepPersonalization
         {
             return [
                 'solid' => [
-                    'white' => '...',
-                    'black' => '...',
                     'primary' => '...',
-                    'secondary' => '...',
-                    'slate' => '...',
-                    'gray' => '...',
-                    'zinc' => '...',
-                    'neutral' => '...',
-                    'stone' => '...',
-                    'red' => '...',
-                    'orange' => '...',
-                    'amber' => '...',
-                    'yellow' => '...',
-                    'lime' => '...',
-                    'green' => '...',
-                    'emerald' => '...',
-                    'teal' => '...',
-                    'cyan' => '...',
-                    'sky' => '...',
-                    'blue' => '...',
-                    'indigo' => '...',
-                    'violet' => '...',
-                    'purple' => '...',
-                    'fuchsia' => '...',
-                    'pink' => '...',
-                    'rose' => '...',
+
+                    // all other colors goes here: 'red' => '...'
                 ],
                 'outline' => [
-                    'white' => '...',
-                    'black' => '...',
                     'primary' => '...',
-                    'secondary' => '...',
-                    'slate' => '...',
-                    'gray' => '...',
-                    'zinc' => '...',
-                    'neutral' => '...',
-                    'stone' => '...',
-                    'red' => '...',
-                    'orange' => '...',
-                    'amber' => '...',
-                    'yellow' => '...',
-                    'lime' => '...',
-                    'green' => '...',
-                    'emerald' => '...',
-                    'teal' => '...',
-                    'cyan' => '...',
-                    'sky' => '...',
-                    'blue' => '...',
-                    'indigo' => '...',
-                    'violet' => '...',
-                    'purple' => '...',
-                    'fuchsia' => '...',
-                    'pink' => '...',
-                    'rose' => '...',
+
+                    // all other colors goes here: 'red' => '...'
+                ],
+                'light' => [
+                    'primary' => '...',
+
+                    // all other colors goes here: 'red' => '...'
                 ],
             ];
         }
@@ -143,64 +102,104 @@ class DeepPersonalization
         {
             return [
                 'solid' => [
-                    'white' => '...',
-                    'black' => '...',
                     'primary' => '...',
-                    'secondary' => '...',
-                    'slate' => '...',
-                    'gray' => '...',
-                    'zinc' => '...',
-                    'neutral' => '...',
-                    'stone' => '...',
-                    'red' => '...',
-                    'orange' => '...',
-                    'amber' => '...',
-                    'yellow' => '...',
-                    'lime' => '...',
-                    'green' => '...',
-                    'emerald' => '...',
-                    'teal' => '...',
-                    'cyan' => '...',
-                    'sky' => '...',
-                    'blue' => '...',
-                    'indigo' => '...',
-                    'violet' => '...',
-                    'purple' => '...',
-                    'fuchsia' => '...',
-                    'pink' => '...',
-                    'rose' => '...',
+
+                    // all other colors goes here: 'red' => '...'
                 ],
                 'outline' => [
-                    'white' => '...',
-                    'black' => '...',
                     'primary' => '...',
-                    'secondary' => '...',
-                    'slate' => '...',
-                    'gray' => '...',
-                    'zinc' => '...',
-                    'neutral' => '...',
-                    'stone' => '...',
-                    'red' => '...',
-                    'orange' => '...',
-                    'amber' => '...',
-                    'yellow' => '...',
-                    'lime' => '...',
-                    'green' => '...',
-                    'emerald' => '...',
-                    'teal' => '...',
-                    'cyan' => '...',
-                    'sky' => '...',
-                    'blue' => '...',
-                    'indigo' => '...',
-                    'violet' => '...',
-                    'purple' => '...',
-                    'fuchsia' => '...',
-                    'pink' => '...',
-                    'rose' => '...',
+
+                    // all other colors goes here: 'red' => '...'
+                ],
+                'light' => [
+                    'primary' => '...',
+
+                    // all other colors goes here: 'red' => '...'
                 ],
             ];
         }
     }
+    HTML;
+
+    public const COLORS_PERSONALIZATION_EXAMPLE = <<<'HTML'
+    namespace App\View\Components;
+
+    use Illuminate\Contracts\View\View;
+
+    class CustomButton extends \TallStackUi\View\Components\Button\Button // [tl! highlight]
+    {
+        public function backgroundColor(): array
+        {
+            return [
+                'solid' => [
+                    'primary' => 'bg-primary-500 border-primary-500',
+                ],
+            ];
+        }
+    }
+    HTML;
+
+    public const PREPARE_TAILWIND_FOR_CUSTOM_COLOR = <<<'HTML'
+    theme: {
+        extend: {
+            // ...
+
+            colors: {
+                'ocean': { // this will be the name of the color [tl! highlight]
+                    '50': '#f1f8fe',
+                    '100': '#e3effb',
+                    '200': '#c0e0f7',
+                    '300': '#88c7f1',
+                    '400': '#49aae7',
+                    '500': '#2292d8',
+                    '600': '#1472b5',
+                    '700': '#115b93',
+                    '800': '#124e7a',
+                    '900': '#154265',
+                    '950': '#0e2a43',
+                },
+            }
+        },
+    },
+    HTML;
+
+    public const APPLYING_CUSTOM_COLORS_USING_DEEP_PERSONALIZATION = <<<'HTML'
+    namespace App\View\Components;
+
+    use Illuminate\Contracts\View\View;
+
+    class CustomButton extends \TallStackUi\View\Components\Button\Button
+    {
+        public function backgroundColor(): array
+        {
+            return [
+                'solid' => [
+                    // other indexes goes here ...
+
+                    'ocean' => 'bg-ocean-500 border-ocean-500 ...', // [tl! highlight]
+                ],
+                'outline' => [
+                    // other indexes goes here ...
+
+                    'ocean' => 'bg-transparent border-ocean-500 ...', // [tl! highlight]
+                ],
+                'light' =>
+                    // other indexes goes here ...
+
+                    'ocean' => 'bg-ocean-300 border-ocean-300 ...', // [tl! highlight]
+                ],
+            ];
+        }
+    }
+    HTML;
+
+    public const USING_COMPONENT_WITH_CUSTOM_COLORS = <<<'HTML'
+    <x-button icon="users"
+              color="ocean" {{-- [tl! highlight:1] --}}
+              outline
+              position="right">
+        Users
+    </x-button>
     HTML;
 
     public const VIEWS = <<<'HTML'

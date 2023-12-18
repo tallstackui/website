@@ -65,7 +65,7 @@ class SoftPersonalization
     {
         public function boot(): void
         {
-            // ...
+            // 1. Property
 
            TallStackUi::personalize()
                ->form('input')
@@ -74,7 +74,7 @@ class SoftPersonalization
                ->avatar()
                ->block('wrapper.sizes.sm', 'w-8 h-8 text-xs')
 
-           // or...
+           // 2. Method
 
            TallStackUi::personalize()
                ->form('input')
@@ -94,8 +94,6 @@ class SoftPersonalization
     {
         public function boot(): void
         {
-            // ...
-
            TallStackUi::personalize()
                ->form('input')
                ->block('input.class.base', new InputPersonalization())
@@ -123,8 +121,6 @@ class SoftPersonalization
     {
         public function boot(): void
         {
-            // ...
-
            TallStackUi::personalize()
                ->form('input')
                ->block('input.class.base', new InputPersonalization()); // [tl! focus]
@@ -157,8 +153,6 @@ class SoftPersonalization
     {
         public function boot(): void
         {
-            // ...
-
            TallStackUi::personalize()
                ->form('input')
                ->block('input.class.base')
@@ -184,15 +178,17 @@ class SoftPersonalization
     {
         public function boot(): void
         {
-            // ...
-
            TallStackUi::personalize()
                ->form('input')
                ->block('input.class.base')
-               ->replace('rounded-md', 'rounded-full') // string or array [tl! highlight]
-               ->remove('rounded-md') // string or array [tl! highlight]
-               ->append('px-4') // string [tl! highlight]
-               ->prepend('py-4'); // string [tl! highlight]
+               // string or array [tl! highlight:7]
+               ->replace('rounded-md', 'rounded-full')
+               // string or array
+               ->remove('w-full')
+               // string
+               ->append('px-4')
+               // string
+               ->prepend('py-4');
         }
     }
     HTML;
@@ -204,8 +200,6 @@ class SoftPersonalization
     {
         public function boot(): void
         {
-            // ...
-
            TallStackUi::personalize()
                ->form('input')
                ->block('input.class.base')

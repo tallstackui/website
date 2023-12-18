@@ -23,7 +23,7 @@
         </div>
         <x-code :contents="$content" :copy="false"/>
     </x-section>
-    <x-section title="Tracing TailwindCSS Classes" :copy="false">
+    <x-section title="Track TailwindCSS Classes" :copy="false">
         <p class="mb-4">
             As you can see, one of the possible settings to be adjusted in the configuration file
             is the <x-block>z-index</x-block> of certain components. If you intend to make changes to a component's

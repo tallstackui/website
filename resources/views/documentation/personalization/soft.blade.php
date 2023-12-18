@@ -106,7 +106,7 @@
             </p>
         </p>
     </x-section>
-    <x-section title="Tracing TailwindCSS Classes" :copy="false">
+    <x-section title="Track TailwindCSS Classes" :copy="false">
         <p class="mb-4">
             If you are personalizing your components, there is something you should know. As classes are TailwindCSS
             classes you need to ensure that TailwindCSS watches the files from which the classes you defined come,

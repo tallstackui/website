@@ -309,7 +309,7 @@
     "docs.configuration": {
         "0": "Configuration File",
         "1": "Content",
-        "2": "Tracing TailwindCSS Classes"
+        "2": "Track TailwindCSS Classes"
     },
     "docs.translation": {
         "0": "Translation Files",
@@ -325,16 +325,17 @@
         "5": "Invokable Class",
         "6": "Component Data Parameters",
         "7": "Interacting with Default Classes",
-        "8": "Tracing TailwindCSS Classes",
+        "8": "Track TailwindCSS Classes",
         "9": "Personalizable Blocks"
     },
     "docs.personalization.deep": {
         "0": "Concept",
         "1": "Publishing Configuration File",
-        "2": "Overriding Component Class",
-        "3": "Overriding Component Colors",
-        "4": "Publishing Blade Files",
-        "5": "Tracing TailwindCSS Classes"
+        "2": "Override Component Class",
+        "3": "Override Component Colors",
+        "4": "Create Custom Colors",
+        "5": "Publish Blade Files",
+        "6": "Track TailwindCSS Classes"
     },
     "docs.contribution": {
         "0": "Possibilities",
