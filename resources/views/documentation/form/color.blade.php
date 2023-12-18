@@ -21,7 +21,7 @@
             <x-color label="Color" hint="Select your favorite color or insert a hexadecimal value." />
         </x-preview>
     </x-section>
-    <x-section title="Picker Mode" description="An option to pick the color through all TailwindCSS available colors.">
+    <x-section title="Picker Mode" description="An option to pick the color using a different selector.">
         <x-preview language="blade" :contents="$picker">
             <x-color picker />
         </x-preview>

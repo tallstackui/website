@@ -18,7 +18,7 @@
             </x-link>
         </x-preview>
         <x-warning class="mt-4">
-            The href attribute will be mandatory until fragment is defined.
+            The href attribute will be mandatory unless the fragment is defined.
         </x-warning>
     </x-section>
     <x-section title="Size Variations">

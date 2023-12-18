@@ -30,7 +30,7 @@
             <x-pin length="5" label="Insert the code" hint="We sent a 5-digit code to your email." />
         </x-preview>
     </x-section>
-    <x-section title="Prefix" description="An option to prefix a character related to the desired code format.">
+    <x-section title="Prefix" description="An option to prefix a character related to the desired short code format.">
         <x-preview language="blade" :contents="$prefix">
             <x-pin prefix="G-" length="5" />
         </x-preview>

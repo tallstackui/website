@@ -56,7 +56,7 @@
                                     <h1 class="text-3xl font-semibold tracking-tight text-pink-900 font-display dark:text-slate-300">{{ $title }}</h1>
                                     @if ($version)
                                         <x-badge color="pink" light xs round>
-                                            {!! $version !!}
+                                            >= {!! $version !!}
                                         </x-badge>
                                     @endif
                                 </div>
