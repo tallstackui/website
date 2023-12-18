@@ -15,9 +15,11 @@
     <meta name="twitter:creator" content="@devajmeireles">
     <meta name="twitter:title" content="TallStackUI">
     <meta name="twitter:description" content="TallStackUI: New friendly TALL Stack Component Library">
+    <meta name="twitter:image" content="{{ asset('assets/images/og.png') }}">
 
     <meta property="og:url" content="{{ config('app.url') }}" />
     <meta property="og:title" content="TallStackUI: New friendly TALL Stack Component Library" />
+    <meta property="og:image" content="{{ asset('assets/images/og.png') }}" />
 
     <link rel="apple-touch-icon" href="{{ asset('assets/images/apple-touch-icon.png') }}" >
     <link rel="icon" ype="image/x-icon" href="{{ asset('assets/images/favicon.ico') }}">
@@ -96,7 +98,7 @@
         </div>
     </div>
     <div class="fixed bottom-4 right-4 px-4 py-2">
-        <x-button.circle icon="chevron-up" 
+        <x-button.circle icon="chevron-up"
                          color="pink"
                          x-data="{ visible: false }"
                          x-on:scroll.window="visible = window.scrollY > 100"
