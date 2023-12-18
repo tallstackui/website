@@ -45,6 +45,9 @@
                             <x-layout.navigation.link :href="route('documentation.form.password')" text="Password" />
                         </li>
                         <li class="relative ml-4">
+                            <x-layout.navigation.link :href="route('documentation.form.color')" text="Color" new />
+                        </li>
+                        <li class="relative ml-4">
                             <x-layout.navigation.link :href="route('documentation.form.textarea')" text="Textarea" />
                         </li>
                         <li class="relative ml-4">
@@ -60,7 +63,10 @@
                             <x-layout.navigation.link :href="route('documentation.form.toggle')" text="Toggle" />
                         </li>
                         <li class="relative ml-4">
-                            <x-layout.navigation.link :href="route('documentation.form.range')" text="Range" new />
+                            <x-layout.navigation.link :href="route('documentation.form.range')" text="Range" />
+                        </li>
+                        <li class="relative ml-4">
+                            <x-layout.navigation.link :href="route('documentation.form.pin')" text="Pin" new />
                         </li>
                     </ul>
                 </li>
@@ -96,6 +102,9 @@
                         </li>
                         <li class="relative ml-4">
                             <x-layout.navigation.link :href="route('documentation.ui.modal')" text="Modal" />
+                        </li>
+                        <li class="relative ml-4">
+                            <x-layout.navigation.link :href="route('documentation.ui.link')" text="Link" new />
                         </li>
                         <li class="relative ml-4">
                             <x-layout.navigation.link :href="route('documentation.ui.loading')" text="Loading" />
@@ -177,6 +186,9 @@
                     <ul role="list" class="mt-4 space-y-2 dark:border-slate-800 lg:space-y-4 lg:mt-4 lg:border-slate-200">
                         <li class="relative ml-4">
                             <x-layout.navigation.link :href="route('documentation.dark-theme')" text="Dark Theme" />
+                        </li>
+                        <li class="relative ml-4">
+                            <x-layout.navigation.link :href="route('documentation.debug')" text="Debug Mode" new />
                         </li>
                     </ul>
                 </li>

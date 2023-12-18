@@ -24,6 +24,10 @@ class Textarea
     <x-textarea label="Name" hint="Insert the description" />
     HTML;
 
+    public const INVALIDATE = <<<'HTML'
+    <x-textarea label="Name" hint="Insert the description" invalidate />
+    HTML;
+
     public const PERSONALIZATION = <<<'HTML'
     TallStackUi::personalize()
         ->form('textarea')

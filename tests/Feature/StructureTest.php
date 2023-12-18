@@ -22,12 +22,14 @@ test('can access all routes', function (string $route) {
     //
     fn () => route('documentation.form.input'),
     fn () => route('documentation.form.password'),
+    fn () => route('documentation.form.color'),
     fn () => route('documentation.form.textarea'),
     fn () => route('documentation.form.number'),
     fn () => route('documentation.form.checkbox'),
     fn () => route('documentation.form.radio'),
     fn () => route('documentation.form.toggle'),
     fn () => route('documentation.form.range'),
+    fn () => route('documentation.form.pin'),
     //
     fn () => route('documentation.ui.alert'),
     fn () => route('documentation.ui.avatar'),
@@ -44,6 +46,7 @@ test('can access all routes', function (string $route) {
     fn () => route('documentation.ui.tooltip'),
     fn () => route('documentation.ui.modal'),
     fn () => route('documentation.ui.loading'),
+    fn () => route('documentation.ui.link'),
     //
     fn () => route('documentation.interaction.dialog'),
     fn () => route('documentation.interaction.toast'),

@@ -11,7 +11,7 @@
     <x-section title="Basic Usage">
         <x-preview language="blade" :contents="$basic">
             <x-slide id="basic-slide">
-                TallStackUi
+                TallStackUI
             </x-slide>
             <x-button x-on:click="$slideOpen('basic-slide')">
                 Open Slide
@@ -21,7 +21,7 @@
     <x-section title="Left Side">
         <x-preview language="blade" :contents="$left">
             <x-slide id="left-slide" left>
-                TallStackUi
+                TallStackUI
             </x-slide>
             <x-button x-on:click="$slideOpen('left-slide')">
                 Open Slide
@@ -32,9 +32,9 @@
         <x-preview language="blade" :contents="$title">
             <x-slide id="title-slide">
                 <x-slot:title>
-                    TallStackUi
+                    TallStackUI
                 </x-slot:title>
-                TallStackUi
+                TallStackUI
             </x-slide>
             <x-button x-on:click="$slideOpen('title-slide')">
                 Open Slide
@@ -44,7 +44,7 @@
     <x-section title="Footer Slot">
         <x-preview language="blade" :contents="$footer">
             <x-slide id="footer-slide">
-                TallStackUi
+                TallStackUI
                 <x-slot:footer start>
                     TallStackUi
                 </x-slot:footer>
@@ -66,7 +66,7 @@
     </x-section>
     <x-section title="Size Variations">
         <x-preview language="blade" :contents="$sizes">
-            <div class="flex flex-col space-y-2 lg:space-x-2 lg:space-y-0 lg:flex-row">
+            <div class="flex flex-col items-start space-y-2">
                 <x-slide id="default-size-slide" title="TallStackUi">
                     Default (lg)
                 </x-slide>

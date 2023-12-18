@@ -1,6 +1,9 @@
 <x-layout>
     <x-slot:title>
         Banner
+        <x-slot:version>
+            v1.1
+        </x-slot:version>
     </x-slot:title>
     <x-slot:description>
         Banner component.
@@ -12,10 +15,12 @@
         <p>
             <u>Version 1.1.0</u> of TallStackUI introduces a new component: Banner. This component
             has two approaches of use: static use for displaying fixed or random messages or Livewire
-            integration for displaying messages from the backend to frontend. <b>An example of the banner
-            component is the banner at the top of the TallStackUI documentation!</b>
+            integration for displaying messages from the backend to frontend.
         </p>
     </x-section>
+    <x-warning class="mb-4">
+        An example of the banner component is the banner at the top of the documentation.
+    </x-warning>
     <x-section title="Usage" anchor="static-usage" :copy="false">
         <p>To use the component you must add it to your application's layout, within the body tag, but above anything else:</p>
         <x-code language="blade" :contents="$introduction" />
@@ -66,6 +71,11 @@
     </x-section>
     <x-section title="Available Options" anchor="livewire-integration-available-options" :copy="false">
         <x-code language="php" :contents="$options"/>
+    </x-section>
+    <x-section title="Example" anchor="livewire-integration-example">
+        <x-preview :contents="$example">
+            <livewire:documentation.interactions.banner.examples />
+        </x-preview>
     </x-section>
     <x-slot:navigation>
         <x-slot:back>

@@ -14,15 +14,14 @@
     </x-section>
     <x-section title="Publishing Configuration File" :copy="false">
         <p>
-            To start deep personalization you must publish the TallStackUI configuration file.
-            <a class="underline" href="{{ route('documentation.configuration') }}">Click here to visit the documentation.</a>
+            <a class="underline" href="{{ route('documentation.configuration') }}">To start deep personalization you must publish the TallStackUI configuration file.</a>
         </p>
     </x-section>
-    <x-section title="Overriding Component Class" :copy="false">
+    <x-section title="Override Component Class" :copy="false">
         <p>
             As deep personalization consists of having absolute control over the component, <u>the idea behind
             this form of personalization is to overwrite the original TallStackUI component</u>, which is why more
-            technical knowledge is necessary. Let's look at an example:
+            technical knowledge is necessary. Let's take look at an example:
         </p>
         <p class="mt-2">1. Create a Blade component:</p>
         <x-code language="shell" :contents="$command"/>
@@ -43,75 +42,41 @@
             <a href="{{ route('documentation.personalization.soft') }}" class="underline">soft personalization</a> can still be applied to components.
         </x-warning>
     </x-section>
-    <x-section title="Overriding Component Colors" :copy="false">
+    <x-section title="Override Component Colors" :copy="false">
         <p>
             One of the great advantages of deep personalization is being able to touch the current color classes by
-            replacing their content. This can be done in all components that have color definitions. Let's look at an example:
+            replacing their content. This can be done in all components that have color definitions. Let's take look at an example:
         </p>
         <p class="mt-2">Assuming you want to change the button colors, then this will be the approach to take:</p>
-        <x-code :contents="$overrideColors" :copy="false"/>
-        <p class="mb-4">
-            Note that in the example above the methods are defined with the term "Color" at the end. Also note that these
-            methods must return an array containing an array of arrays, where the button type opens a new array containing
-            the list of all possible class variations. This will cause TallStackUI to use these color classes instead of the
-            default color classes. See below a list of components that have color personalizations and their method references
-            and original content:
+        <x-code :contents="$colors" :copy="false"/>
+        <p class="my-4">
+            Note that in the example above the methods are defined with the term <x-block>Color</x-block> at the end.
+            Also note that these methods must return an array containing an array of arrays, where the button type opens a
+            new array containing the list of the colors you want to personalize. This will cause TallStackUI to use these
+            color classes instead of the default color classes. See below a list of components that have color personalization
+            and their respective information:
         </p>
         <x-table>
             <x-table.thead>
                 <x-table.tr>
                     <x-table.th label="Component" />
                     <x-table.th label="Methods" />
-                    <x-table.th label="Default Content" />
+                    <x-table.th label="Styles" />
                 </x-table.tr>
             </x-table.thead>
             <x-table.tbody>
                 <x-table.tr>
                     <x-table.td>
-                        <p class="font-mono">Button\Button</p>
-                    </x-table.td>
-                    <x-table.td>
-                        <x-badge color="pink" outline>backgroundColor</x-badge>
-                        <x-badge color="pink" outline>iconColor</x-badge>
-                    </x-table.td>
-                    <x-table.td>
-                        <x-button.circle href="https://github.com/tallstackui/tallstackui/blob/develop/src/View/Personalizations/Support/Colors/ButtonColors.php"
-                                         target="_blank"
-                                         icon="arrow-up-right"
-                                         color="pink"
-                                         sm />
-                    </x-table.td>
-                </x-table.tr>
-                <x-table.tr>
-                    <x-table.td>
-                        <p class="font-mono">Button\Circle</p>
-                    </x-table.td>
-                    <x-table.td>
-                        <x-badge color="pink" outline>backgroundColor</x-badge>
-                        <x-badge color="pink" outline>iconColor</x-badge>
-                    </x-table.td>
-                    <x-table.td>
-                        <x-button.circle href="https://github.com/tallstackui/tallstackui/blob/main/src/View/Personalizations/Support/Colors/ButtonColors.php"
-                                         target="_blank"
-                                         icon="arrow-up-right"
-                                         color="pink"
-                                         sm />
-                    </x-table.td>
-                </x-table.tr>
-                <x-table.tr>
-                    <x-table.td>
                         <p class="font-mono">Alert</p>
                     </x-table.td>
                     <x-table.td>
-                        <x-badge color="pink" outline>backgroundColor</x-badge>
-                        <x-badge color="pink" outline>textColor</x-badge>
+                        <x-badge color="pink">backgroundColor</x-badge>
+                        <x-badge color="pink">textColor</x-badge>
                     </x-table.td>
                     <x-table.td>
-                        <x-button.circle href="https://github.com/tallstackui/tallstackui/blob/main/src/View/Personalizations/Support/Colors/AlertColors.php"
-                                         target="_blank"
-                                         icon="arrow-up-right"
-                                         color="pink"
-                                         sm />
+                        <x-badge color="pink">solid</x-badge>
+                        <x-badge color="pink">outline</x-badge>
+                        <x-badge color="pink">light</x-badge>
                     </x-table.td>
                 </x-table.tr>
                 <x-table.tr>
@@ -119,14 +84,13 @@
                         <p class="font-mono">Avatar</p>
                     </x-table.td>
                     <x-table.td>
-                        <x-badge color="pink" outline>backgroundColor</x-badge>
+                        <x-badge color="pink">backgroundColor</x-badge>
                     </x-table.td>
-                    <x-table.td>
-                        <x-button.circle href="https://github.com/tallstackui/tallstackui/blob/main/src/View/Personalizations/Support/Colors/AvatarColors.php"
-                                         target="_blank"
-                                         icon="arrow-up-right"
-                                         color="pink"
-                                         sm />
+                    <x-table.td class="flex items-center gap-x-1">
+                        <x-badge color="pink">No styles.</x-badge>
+                        <x-tooltip text="You should return only an array with the color name as the key, and the classes as the value."
+                                   color="pink"
+                                   outline />
                     </x-table.td>
                 </x-table.tr>
                 <x-table.tr>
@@ -134,16 +98,55 @@
                         <p class="font-mono">Badge</p>
                     </x-table.td>
                     <x-table.td>
-                        <x-badge color="pink" outline>backgroundColor</x-badge>
-                        <x-badge color="pink" outline>textColor</x-badge>
-                        <x-badge color="pink" outline>iconColor</x-badge>
+                        <x-badge color="pink">backgroundColor</x-badge>
+                        <x-badge color="pink">textColor</x-badge>
+                        <x-badge color="pink">iconColor</x-badge>
                     </x-table.td>
                     <x-table.td>
-                        <x-button.circle href="https://github.com/tallstackui/tallstackui/blob/main/src/View/Personalizations/Support/Colors/BadgeColors.php"
-                                         target="_blank"
-                                         icon="arrow-up-right"
-                                         color="pink"
-                                         sm />
+                        <x-badge color="pink">solid</x-badge>
+                        <x-badge color="pink">outline</x-badge>
+                        <x-badge color="pink">light</x-badge>
+                    </x-table.td>
+                </x-table.tr>
+                <x-table.tr>
+                    <x-table.td>
+                        <p class="font-mono">Banner</p>
+                    </x-table.td>
+                    <x-table.td>
+                        <x-badge color="pink">backgroundColor</x-badge>
+                        <x-badge color="pink">textColor</x-badge>
+                    </x-table.td>
+                    <x-table.td>
+                        <x-badge color="pink">solid</x-badge>
+                        <x-badge color="pink">light</x-badge>
+                    </x-table.td>
+                </x-table.tr>
+                <x-table.tr>
+                    <x-table.td>
+                        <p class="font-mono">Button\Button</p>
+                    </x-table.td>
+                    <x-table.td>
+                        <x-badge color="pink">backgroundColor</x-badge>
+                        <x-badge color="pink">iconColor</x-badge>
+                    </x-table.td>
+                    <x-table.td>
+                        <x-badge color="pink">solid</x-badge>
+                        <x-badge color="pink">outline</x-badge>
+                        <x-badge color="pink">light</x-badge>
+                    </x-table.td>
+                </x-table.tr>
+                <x-table.tr>
+                    <x-table.td>
+                        <p class="font-mono">Button\Circle</p>
+                    </x-table.td>
+                    <x-table.td>
+                        <x-badge color="pink">backgroundColor</x-badge>
+                        <x-badge color="pink">iconColor</x-badge>
+                    </x-table.td>
+                    <x-table.td>
+                        <x-badge color="pink">solid</x-badge>
+                        <x-badge color="pink">outline</x-badge>
+                        <x-badge color="pink">light</x-badge>
                     </x-table.td>
                 </x-table.tr>
                 <x-table.tr>
@@ -151,16 +154,15 @@
                         <p class="font-mono">Errors</p>
                     </x-table.td>
                     <x-table.td>
-                        <x-badge color="pink" outline>backgroundColor</x-badge>
-                        <x-badge color="pink" outline>textColor</x-badge>
-                        <x-badge color="pink" outline>borderColor</x-badge>
+                        <x-badge color="pink">backgroundColor</x-badge>
+                        <x-badge color="pink">textColor</x-badge>
+                        <x-badge color="pink">borderColor</x-badge>
                     </x-table.td>
-                    <x-table.td>
-                        <x-button.circle href="https://github.com/tallstackui/tallstackui/blob/main/src/View/Personalizations/Support/Colors/ErrorsColors.php"
-                                         target="_blank"
-                                         icon="arrow-up-right"
-                                         color="pink"
-                                         sm />
+                    <x-table.td class="flex items-center gap-x-1">
+                        <x-badge color="pink">No styles.</x-badge>
+                        <x-tooltip text="You should return only an array with the color name as the key, and the classes as the value."
+                                   color="pink"
+                                   outline />
                     </x-table.td>
                 </x-table.tr>
                 <x-table.tr>
@@ -168,14 +170,13 @@
                         <p class="font-mono">Form\Radio</p>
                     </x-table.td>
                     <x-table.td>
-                        <x-badge color="pink" outline>backgroundColor</x-badge>
+                        <x-badge color="pink">backgroundColor</x-badge>
                     </x-table.td>
-                    <x-table.td>
-                        <x-button.circle href="https://github.com/tallstackui/tallstackui/blob/main/src/View/Personalizations/Support/Colors/RadioColors.php"
-                                         target="_blank"
-                                         icon="arrow-up-right"
-                                         color="pink"
-                                         sm />
+                    <x-table.td class="flex items-center gap-x-1">
+                        <x-badge color="pink">No styles.</x-badge>
+                        <x-tooltip text="You should return only an array with the color name as the key, and the classes as the value."
+                                   color="pink"
+                                   outline />
                     </x-table.td>
                 </x-table.tr>
                 <x-table.tr>
@@ -183,14 +184,13 @@
                         <p class="font-mono">Form\Checkbox</p>
                     </x-table.td>
                     <x-table.td>
-                        <x-badge color="pink" outline>backgroundColor</x-badge>
+                        <x-badge color="pink">backgroundColor</x-badge>
                     </x-table.td>
-                    <x-table.td>
-                        <x-button.circle href="https://github.com/tallstackui/tallstackui/blob/main/src/View/Personalizations/Support/Colors/RadioColors.php"
-                                         target="_blank"
-                                         icon="arrow-up-right"
-                                         color="pink"
-                                         sm />
+                    <x-table.td class="flex items-center gap-x-1">
+                        <x-badge color="pink">No styles.</x-badge>
+                        <x-tooltip text="You should return only an array with the color name as the key, and the classes as the value."
+                                   color="pink"
+                                   outline />
                     </x-table.td>
                 </x-table.tr>
                 <x-table.tr>
@@ -198,14 +198,41 @@
                         <p class="font-mono">Form\Toggle</p>
                     </x-table.td>
                     <x-table.td>
-                        <x-badge color="pink" outline>backgroundColor</x-badge>
+                        <x-badge color="pink">backgroundColor</x-badge>
+                    </x-table.td>
+                    <x-table.td class="flex items-center gap-x-1">
+                        <x-badge color="pink">No styles.</x-badge>
+                        <x-tooltip text="You should return only an array with the color name as the key, and the classes as the value."
+                                   color="pink"
+                                   outline />
+                    </x-table.td>
+                </x-table.tr>
+                <x-table.tr>
+                    <x-table.td>
+                        <p class="font-mono">Form\Range</p>
                     </x-table.td>
                     <x-table.td>
-                        <x-button.circle href="https://github.com/tallstackui/tallstackui/blob/main/src/View/Personalizations/Support/Colors/ToggleColors.php"
-                                         target="_blank"
-                                         icon="arrow-up-right"
-                                         color="pink"
-                                         sm />
+                        <x-badge color="pink">thumbColor</x-badge>
+                    </x-table.td>
+                    <x-table.td class="flex items-center gap-x-1">
+                        <x-badge color="pink">No styles.</x-badge>
+                        <x-tooltip text="You should return only an array with the color name as the key, and the classes as the value."
+                                   color="pink"
+                                   outline />
+                    </x-table.td>
+                </x-table.tr>
+                <x-table.tr>
+                    <x-table.td>
+                        <p class="font-mono">Link</p>
+                    </x-table.td>
+                    <x-table.td>
+                        <x-badge color="pink">textColor</x-badge>
+                    </x-table.td>
+                    <x-table.td class="flex items-center gap-x-1">
+                        <x-badge color="pink">No styles.</x-badge>
+                        <x-tooltip text="You should return only an array with the color name as the key, and the classes as the value."
+                                   color="pink"
+                                   outline />
                     </x-table.td>
                 </x-table.tr>
                 <x-table.tr>
@@ -213,22 +240,44 @@
                         <p class="font-mono">Tooltip</p>
                     </x-table.td>
                     <x-table.td>
-                        <x-badge color="pink" outline>iconColor</x-badge>
+                        <x-badge color="pink">backgroundColor</x-badge>
                     </x-table.td>
-                    <x-table.td>
-                        <x-button.circle href="https://github.com/tallstackui/tallstackui/blob/main/src/View/Personalizations/Support/Colors/TooltipColors.php"
-                                         target="_blank"
-                                         icon="arrow-up-right"
-                                         color="pink"
-                                         sm />
+                    <x-table.td class="flex items-center gap-x-1">
+                        <x-badge color="pink">No styles.</x-badge>
+                        <x-tooltip text="You should return only an array with the color name as the key, and the classes as the value."
+                                   color="pink"
+                                   outline />
                     </x-table.td>
                 </x-table.tr>
             </x-table.tbody>
         </x-table>
+        <p class="my-4">
+            <u>You could define only what you want to personalize.</u> For example:
+        </p>
+        <x-code :contents="$colorsPersonalizationExample" :copy="false"/>
+        <p class="my-4">
+            In this case the personalization will only be applied for buttons <x-block>solid</x-block> with the color <x-block>primary</x-block>.
+        </p>
     </x-section>
-    <x-section title="Publishing Blade Files" :copy="false">
+    <x-section title="Create Custom Colors" :copy="false">
+        <p>
+            Since the name of colors used is not validated in favor of controlling
+            which colors you can use in TallStackUI, you can easily create custom
+            colors using deep personalization. Here is a complete example of how to do this:
+        </p>
+        <p class="mt-2">1. Create the color in the TailwindCSS configuration file:</p>
+        <x-code language="js" :contents="$prepareTailwindForCustomColor"/>
+        <p>2. Create new indexes of your custom color name:</p>
+        <x-code language="php" :contents="$applyingCustomColorsUsingDeepPersonalization" :copy="false"/>
+        <p>3. Use the component with the name of your custom color:</p>
+        <x-code language="blade" :contents="$usingComponentWithCustomColors" :copy="false"/>
+        <x-warning class="mt-4">
+            Make sure to build your assets to see your new custom color.
+        </x-warning>
+    </x-section>
+    <x-section title="Publish Blade Files" :copy="false">
         <p class="mb-4">
-            You can also edit the Blade files of the TallStackUI components. Use this command to publish the files:
+            You can edit the Blade files of the TallStackUI components. Use this command to publish the files:
         </p>
         <x-code language="shell" :contents="$views"/>
     </x-section>

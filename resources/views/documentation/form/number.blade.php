@@ -1,6 +1,9 @@
 <x-layout>
     <x-slot:title>
         Form Number
+        <x-slot:version>
+            v1.2
+        </x-slot:version>
     </x-slot:title>
     <x-slot:description>
         Form number component.
@@ -10,22 +13,22 @@
     </x-slot:personalization>
     <x-section title="Basic Usage">
         <x-preview language="blade" :contents="$basic">
-            <livewire:documentation.form.number />
+            <x-number />
         </x-preview>
     </x-section>
     <x-section title="Label & Hint">
         <x-preview language="blade" :contents="$labelHint">
-            <livewire:documentation.form.number :model="1" />
+            <x-number label="Quantity" hint="Press the plus button to increase one by one" />
         </x-preview>
     </x-section>
     <x-section title="Min & Max Control">
         <x-preview language="blade" :contents="$minMax">
-            <livewire:documentation.form.number :model="2" />
+            <x-number label="Quantity" hint="Press the plus button to increase one by one" min="1" max="10" />
         </x-preview>
     </x-section>
     <x-section title="Delay Control" description="An option to control the velocity to increase/decrease when pressing buttons">
         <x-preview language="blade" :contents="$delay">
-            <livewire:documentation.form.number :model="3" />
+            <x-number delay="1" min="1" max="10" />
         </x-preview>
         <x-warning class="mt-4">
             The delay calculation happens as delay * 100.
@@ -33,14 +36,19 @@
     </x-section>
     <x-section title="Chevron Icons" description="An option to use other icons instead of defaults.">
         <x-preview language="blade" :contents="$icon">
-            <livewire:documentation.form.number :model="4" />
+            <x-number chevron />
+        </x-preview>
+    </x-section>
+    <x-section title="Invalidate" description="An option to not show validation error message.">
+        <x-preview language="blade" :contents="$invalidate">
+            <x-number label="Quantity" invalidate />
         </x-preview>
     </x-section>
     <x-section title="Livewire Bind Concern">
         <p>
-            Although the number component can be used with <x-block>wire:model.live</x-block>, due to the way Livewire works,
-            we recommend that you use it with <x-block>wire:model</x-block> or <x-block>wire:model.blur</x-block> to avoid value
-            synchronization issues between the component and the Livewire.
+            Although the number component can be used with <x-block>wire:model.live</x-block> and <x-block>wire:model.blur</x-block>, due to the way Livewire works,
+            we recommend that you use it with <x-block>wire:model</x-block> to avoid value
+            synchronization issues between the component and the Livewire updates.
         </p>
     </x-section>
     <x-slot:navigation>

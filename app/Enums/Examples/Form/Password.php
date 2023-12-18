@@ -20,6 +20,13 @@ class Password
                 value="TallStackUi" />
     HTML;
 
+    public const INVALIDATE = <<<'HTML'
+    <x-password label="Password"
+                hint="Insert your best password"
+                value="TallStackUi"
+                invalidate />
+    HTML;
+
     public const PERSONALIZATION = <<<'HTML'
     TallStackUi::personalize()
         ->form('password')

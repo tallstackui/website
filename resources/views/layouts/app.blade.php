@@ -40,7 +40,8 @@
 <body class="min-h-full flex-col justify-center bg-gray-100 dark:bg-slate-900" x-bind:class="{ 'bg-dots-white' : darkTheme, 'bg-dots-darker' : !darkTheme }" x-data="{ mobile : false }" x-cloak>
     <x-dialog />
     <x-toast />
-    <x-release-alert />
+    <x-top-bar />
+    <x-banner wire />
     <x-layout.header />
     <div class="flex flex-col">
         <x-layout.banner />
@@ -54,7 +55,14 @@
                         </div>
                         <header class="mb-6 space-y-1">
                             @if ($title)
-                                <h1 class="text-3xl font-semibold tracking-tight text-pink-900 font-display dark:text-slate-300">{{ $title }}</h1>
+                                <div class="flex items-start gap-x-2">
+                                    <h1 class="text-3xl font-semibold tracking-tight text-pink-900 font-display dark:text-slate-300">{{ $title }}</h1>
+                                    @if ($version)
+                                        <x-badge color="pink" light xs round>
+                                            >= {!! $version !!}
+                                        </x-badge>
+                                    @endif
+                                </div>
                             @endif
                             @if ($description)
                                 <p class="text-sm text-slate-500 dark:text-slate-400">{{ $description }}</p>
@@ -103,7 +111,7 @@
                          x-data="{ visible: false }"
                          x-on:scroll.window="visible = window.scrollY > 100"
                          x-on:click="window.scrollTo({ top: 0, behavior: 'smooth' })"
-                         x-show="visible"  />
+                         x-show="visible"/>
     </div>
     @livewireScripts
 </body>

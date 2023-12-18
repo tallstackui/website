@@ -26,6 +26,10 @@ class Input
     <x-input suffix="@gmail.com" label="E-mail" />
     HTML;
 
+    public const INVALIDATE = <<<'HTML'
+    <x-input label="Name" invalidate />
+    HTML;
+
     public const PERSONALIZATION = <<<'HTML'
     TallStackUi::personalize()
         ->form('input')

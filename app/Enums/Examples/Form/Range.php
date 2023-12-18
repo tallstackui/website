@@ -47,6 +47,10 @@ class Range
     <x-range color="white" label="White" />
     HTML;
 
+    public const INVALIDATE = <<<'HTML'
+    <x-range label="Quantity" invalidate />
+    HTML;
+
     public const PERSONALIZATION = <<<'HTML'
     TallStackUi::personalize()
         ->form('range')

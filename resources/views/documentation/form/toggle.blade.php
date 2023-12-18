@@ -88,6 +88,11 @@
             </div>
         </x-preview>
     </x-section>
+    <x-section title="Invalidate" description="An option to not show validation error message.">
+        <x-preview language="blade" :contents="$invalidate">
+            <x-toggle label="Receive Alert" invalidate />
+        </x-preview>
+    </x-section>
     <x-slot:navigation>
         <x-slot:back>
             <x-layout.footer-navigation :href="route('documentation.form.radio')" text="Form Radio" back />

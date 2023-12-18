@@ -23,6 +23,13 @@ class Select
     ]" select="label:label|value:value" />
     HTML;
 
+    public const NATIVE_INVALIDATE = <<<'HTML'
+    <x-select.native label="Select One Option"
+                     hint="You can choose 1, 2 or 3"
+                     :options="[1,2,3]"
+                     invalidate />
+    HTML;
+
     /* Styled Common */
 
     public const STYLED_BASIC = <<<'HTML'

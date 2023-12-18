@@ -71,6 +71,10 @@ class Radio
     <x-radio color="white" label="White" />
     HTML;
 
+    public const INVALIDATE = <<<'HTML'
+    <x-radio label="Receive Alert" invalidate />
+    HTML;
+
     public const PERSONALIZATION = <<<'HTML'
     TallStackUi::personalize()
         ->form('radio')

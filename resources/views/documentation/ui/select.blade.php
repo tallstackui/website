@@ -27,6 +27,18 @@
             ]" select="label:label|value:value"/>
         </x-preview>
     </x-section>
+    <x-section title="Invalidate" description="An option to not show validation error message." anchor="native-invalidate">
+        <x-preview language="blade" :contents="$nativeInvalidate">
+            <x-select.native label="Select One Option"
+                             hint="You can choose 1, 2 or 3"
+                             :options="[1,2,3]"
+                             invalidate
+            />
+        </x-preview>
+    </x-section>
+    <x-warning>
+        This option is also available for the other select components below.
+    </x-warning>
     <x-separator text="Styled Select" />
     <x-section title="Basic Usage" anchor="styled-basic-usage" description="Customized styled select component to interact with Livewire.">
         <x-preview language="blade" :contents="$styledBasic">

@@ -10,26 +10,37 @@
         "1": "Label & Hint",
         "2": "Required Label Indicator",
         "3": "Icon Slot",
-        "4": "Prefix & Suffix"
+        "4": "Prefix & Suffix",
+        "5": "Invalidate"
     },
     "docs.form.password": {
         "0": "Basic Usage",
         "1": "Label & Hint",
-        "2": "Required Label Indicator"
+        "2": "Required Label Indicator",
+        "3": "Invalidate"
+    },
+    "docs.form.color": {
+        "0": "Basic Usage",
+        "1": "Label & Hint",
+        "2": "Picker Mode",
+        "3": "Custom Colors",
+        "4": "Invalidate"
     },
     "docs.form.number": {
         "0": "Basic Usage",
         "1": "Label & Hint",
         "2": "Min & Max Control",
         "3": "Delay Control",
-        "4": "Livewire Bind Concern"
+        "4": "Invalidate",
+        "5": "Livewire Bind Concern"
     },
     "docs.form.textarea": {
         "0": "Basic Usage",
         "1": "Label & Hint",
         "2": "Required Label Indicator",
         "3": "Resize",
-        "4": "Resize Auto"
+        "4": "Resize Auto",
+        "5": "Invalidate"
     },
     "docs.form.checkbox": {
         "0": "Basic Usage",
@@ -37,7 +48,8 @@
         "2": "Label Slot",
         "3": "Label Alignment",
         "4": "Size Variations",
-        "5": "Color Variations"
+        "5": "Color Variations",
+        "6": "Invalidate"
     },
     "docs.form.radio": {
         "0": "Basic Usage",
@@ -45,7 +57,8 @@
         "2": "Label Slot",
         "3": "Label Alignment",
         "4": "Size Variations",
-        "5": "Color Variations"
+        "5": "Color Variations",
+        "6": "Invalidate"
     },
     "docs.form.toggle": {
         "0": "Basic Usage",
@@ -53,13 +66,24 @@
         "2": "Label Slot",
         "3": "Label Alignment",
         "4": "Size Variations",
-        "5": "Color Variations"
+        "5": "Color Variations",
+        "6": "Invalidate"
     },
     "docs.form.range": {
         "0": "Basic Usage",
         "1": "Label",
-        "4": "Size Variations",
-        "5": "Color Variations"
+        "2": "Size Variations",
+        "3": "Color Variations",
+        "4": "Invalidate"
+    },
+    "docs.form.pin": {
+        "0": "Concept",
+        "1": "Basic Usage",
+        "2": "Label & Hint",
+        "3": "Prefix",
+        "4": "Clear",
+        "5": "Masks",
+        "6": "Invalidate"
     },
     "docs.ui.alert": {
         "0": "Basic Usage",
@@ -113,7 +137,8 @@
             "contents": {
                 "0": "Concept",
                 "1": "Usage",
-                "2": "Available Options"
+                "2": "Available Options",
+                "3": "Example"
             }
         }
     },
@@ -181,12 +206,22 @@
         "2": "Footer Slot",
         "3": "Background Blur",
         "4": "Size Variations",
-        "5": "Z Index",
-        "6": "Persistent",
-        "7": "Wireable",
-        "8": "Wireable Personalized",
-        "9": "AlpineJS Helper",
-        "10": "Configurations"
+        "5": "Centered",
+        "6": "Z Index",
+        "7": "Persistent",
+        "8": "Wireable",
+        "9": "Wireable Personalized",
+        "10": "AlpineJS Helper",
+        "11": "Configurations"
+    },
+    "docs.ui.link": {
+        "0": "Basic Usage",
+        "1": "Size Variations",
+        "2": "Icon Slot",
+        "3": "Target Blank & Style Options",
+        "4": "Query String & Fragment Options",
+        "5": "Color Variations",
+        "6": "Without Color"
     },
     "docs.ui.loading": {
         "0": "Concept",
@@ -203,7 +238,8 @@
             "contents": {
                 "0": "Basic Usage",
                 "1": "Label & Hint",
-                "2": "Multi-dimensional Array"
+                "2": "Multi-dimensional Array",
+                "3": "Invalidate"
             }
         },
         "Styled": {
@@ -273,8 +309,7 @@
     },
     "docs.configuration": {
         "0": "Configuration File",
-        "1": "Content",
-        "2": "Tracing TailwindCSS Classes"
+        "1": "Content"
     },
     "docs.translation": {
         "0": "Translation Files",
@@ -290,23 +325,31 @@
         "5": "Invokable Class",
         "6": "Component Data Parameters",
         "7": "Interacting with Default Classes",
-        "8": "Tracing TailwindCSS Classes",
+        "8": "Track TailwindCSS Classes",
         "9": "Personalizable Blocks"
     },
     "docs.personalization.deep": {
         "0": "Concept",
         "1": "Publishing Configuration File",
-        "2": "Overriding Component Class",
-        "3": "Overriding Component Colors",
-        "4": "Publishing Blade Files",
-        "5": "Tracing TailwindCSS Classes"
+        "2": "Override Component Class",
+        "3": "Override Component Colors",
+        "4": "Create Custom Colors",
+        "5": "Publish Blade Files",
+        "6": "Track TailwindCSS Classes"
     },
     "docs.contribution": {
         "0": "Possibilities",
-        "1": "Writing Codes",
+        "1": "Patterns",
         "2": "Prepare Environment",
         "3": "Dusk Tests",
         "4": "Run Tests",
         "5": "Synchronize Changes"
+    },
+    "docs.debug": {
+        "0": "Concept",
+        "1": "Example",
+        "2": "Activate Debug Mode",
+        "3": "Available Configurations",
+        "4": "Cautions"
     }
 }

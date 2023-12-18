@@ -42,7 +42,7 @@ new class extends Component {
                            'url' => route('api.users'),
                            'method' => 'get',
                            'params' => [
-                               'library' => 'TallStackUi',
+                               'library' => 'TallStackUI',
                            ],
                        ]"
                         select="label:name|value:id"

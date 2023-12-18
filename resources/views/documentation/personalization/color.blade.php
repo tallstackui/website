@@ -12,6 +12,12 @@
             and colors to your liking by following the TailwindCSS custom color concept.
         </p>
     </x-section>
+    <x-warning class="mb-4">
+        Are you looking for how to create custom colors? If yes,
+        <x-link :href="route('documentation.personalization.deep')" fragment="create-custom-colors" color="null" bold underline>
+            click here!
+        </x-link>
+    </x-warning>
     <x-section title="Personalizing Colors" :copy="false">
         <p class="mb-4">1. Open the TailwindCSS configuration file and enter the following content:</p>
         <x-code language="js" :contents="$content" :copy="false"/>

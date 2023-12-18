@@ -155,6 +155,15 @@ class Banner
     }
     HTML;
 
+    public const EXAMPLE = <<<'HTML'
+    public function success(): void
+    {
+        $this->banner()
+            ->close()
+            ->success('This is a banner with a success message dispatched through Livewire.');
+    }
+    HTML;
+
     public const PERSONALIZATION = <<<'HTML'
     TallStackUi::personalize()
         ->banner()

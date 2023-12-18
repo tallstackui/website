@@ -38,7 +38,7 @@
     @vite(['resources/css/app.scss', 'resources/js/app.js'])
 </head>
 <body class="min-h-full flex-col justify-center bg-gray-100 dark:bg-slate-900" x-bind:class="{ 'bg-dots-white' : darkTheme, 'bg-dots-darker' : !darkTheme }">
-    <x-release-alert />
+    <x-top-bar />
     <div id="docsearch" class="hidden"></div>
     <div class="flex flex-col">
         <main class="relative mx-auto flex w-full max-w-screen-2xl flex-auto justify-center sm:px-2 lg:px-8 xl:px-12">

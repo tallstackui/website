@@ -6,10 +6,13 @@ use App\Enums\Examples\Alpine;
 use App\Enums\Examples\Configuration;
 use App\Enums\Examples\Contribution;
 use App\Enums\Examples\DarkTheme;
+use App\Enums\Examples\DebugMode;
 use App\Enums\Examples\Form\Checkbox;
+use App\Enums\Examples\Form\Color;
 use App\Enums\Examples\Form\Input;
 use App\Enums\Examples\Form\Number;
 use App\Enums\Examples\Form\Password;
+use App\Enums\Examples\Form\Pin;
 use App\Enums\Examples\Form\Radio;
 use App\Enums\Examples\Form\Range;
 use App\Enums\Examples\Form\Textarea;
@@ -30,6 +33,7 @@ use App\Enums\Examples\Ui\Dialog;
 use App\Enums\Examples\Ui\Dropdown;
 use App\Enums\Examples\Ui\Error;
 use App\Enums\Examples\Ui\Icon;
+use App\Enums\Examples\Ui\Link;
 use App\Enums\Examples\Ui\Loading;
 use App\Enums\Examples\Ui\Modal;
 use App\Enums\Examples\Ui\Select;
@@ -64,6 +68,7 @@ enum Example: string
     case Installation = Installation::class;
     case Troubleshooting = Troubleshooting::class;
     case Password = Password::class;
+    case Color = Color::class;
     case Radio = Radio::class;
     case Select = Select::class;
     case Slide = Slide::class;
@@ -77,8 +82,11 @@ enum Example: string
     case Tooltip = Tooltip::class;
     case Modal = Modal::class;
     case Loading = Loading::class;
+    case Link = Link::class;
     case Welcome = Welcome::class;
     case Alpine = Alpine::class;
+    case DebugMode = DebugMode::class;
+    case Pin = Pin::class;
 
     public function variables(): array
     {

@@ -1,6 +1,9 @@
 <x-layout>
     <x-slot:title>
         Form Range
+        <x-slot:version>
+            v1.4
+        </x-slot:version>
     </x-slot:title>
     <x-slot:description>
         Form range component.
@@ -59,6 +62,11 @@
                 <x-range color="black" label="Black" />
                 <x-range color="white" label="White" />
             </div>
+        </x-preview>
+    </x-section>
+    <x-section title="Invalidate" description="An option to not show validation error message.">
+        <x-preview language="blade" :contents="$invalidate">
+            <x-range label="Quantity" invalidate />
         </x-preview>
     </x-section>
     <x-slot:navigation>

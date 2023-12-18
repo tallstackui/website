@@ -11,7 +11,7 @@
     <x-section title="Basic Usage">
         <x-preview language="blade" :contents="$basic">
             <x-modal id="basic-modal">
-                TallStackUi
+                TallStackUI
             </x-modal>
             <x-button x-on:click="$modalOpen('basic-modal')">
                 Open Modal
@@ -22,9 +22,9 @@
         <x-preview language="blade" :contents="$title">
             <x-modal id="title-modal">
                 <x-slot:title>
-                    TallStackUi
+                    TallStackUI
                 </x-slot:title>
-                TallStackUi
+                TallStackUI
             </x-modal>
             <x-button x-on:click="$modalOpen('title-modal')">
                 Open Modal
@@ -33,8 +33,8 @@
     </x-section>
     <x-section title="Footer Slot">
         <x-preview language="blade" :contents="$footer">
-            <x-modal id="footer-modal" title="TallStackUi">
-                TallStackUi
+            <x-modal id="footer-modal" title="TallStackUI">
+                TallStackUI
                 <x-slot:footer>
                     TallStackUi
                 </x-slot:footer>
@@ -46,7 +46,7 @@
     </x-section>
     <x-section title="Background Blur">
         <x-preview language="blade" :contents="$blur">
-            <x-modal id="blur-modal" title="TallStackUi" blur>
+            <x-modal id="blur-modal" title="TallStackUI" blur>
                 TallStackUi
             </x-modal>
             <x-button x-on:click="$modalOpen('blur-modal')">
@@ -56,32 +56,32 @@
     </x-section>
     <x-section title="Size Variations">
         <x-preview language="blade" :contents="$sizes">
-            <div class="flex flex-col space-y-2 lg:space-x-2 lg:space-y-0 lg:flex-row">
-                <x-modal id="default-size-modal" title="TallStackUi">
+            <div class="flex flex-col items-start space-y-2">
+                <x-modal id="default-size-modal" title="TallStackUI">
                     Default (2xl)
                 </x-modal>
-                <x-modal id="sm-size-modal" title="TallStackUi" size="sm">
+                <x-modal id="sm-size-modal" title="TallStackUI" size="sm">
                     sm
                 </x-modal>
-                <x-modal id="md-size-modal" title="TallStackUi" size="md">
+                <x-modal id="md-size-modal" title="TallStackUI" size="md">
                     md
                 </x-modal>
-                <x-modal id="lg-size-modal" title="TallStackUi" size="lg">
+                <x-modal id="lg-size-modal" title="TallStackUI" size="lg">
                     lg
                 </x-modal>
-                <x-modal id="xl-size-modal" title="TallStackUi" size="xl">
+                <x-modal id="xl-size-modal" title="TallStackUI" size="xl">
                     xl
                 </x-modal>
-                <x-modal id="3xl-size-modal" title="TallStackUi" size="3xl">
+                <x-modal id="3xl-size-modal" title="TallStackUI" size="3xl">
                     3xl
                 </x-modal>
-                <x-modal id="4xl-size-modal" title="TallStackUi" size="4xl">
+                <x-modal id="4xl-size-modal" title="TallStackUI" size="4xl">
                     4xl
                 </x-modal>
-                <x-modal id="5xl-size-modal" title="TallStackUi" size="5xl">
+                <x-modal id="5xl-size-modal" title="TallStackUI" size="5xl">
                     5xl
                 </x-modal>
-                <x-modal id="6xl-size-modal" title="TallStackUi" size="6xl">
+                <x-modal id="6xl-size-modal" title="TallStackUI" size="6xl">
                     6xl
                 </x-modal>
                 <x-modal id="7xl-size-modal" title="TallStackUi" size="7xl">
@@ -118,6 +118,19 @@
                     7xl
                 </x-button>
             </div>
+        </x-preview>
+        <div class="mt-2 block sm:hidden">
+            <x-warning text="Applicable only on desktop devices." />
+        </div>
+    </x-section>
+    <x-section title="Centered">
+        <x-preview language="blade" :contents="$center">
+            <x-modal id="center" title="TallStackUi" center>
+                TallStackUi
+            </x-modal>
+            <x-button x-on:click="$modalOpen('center')">
+                Open
+            </x-button>
         </x-preview>
         <div class="mt-2 block sm:hidden">
             <x-warning text="Applicable only on desktop devices." />
