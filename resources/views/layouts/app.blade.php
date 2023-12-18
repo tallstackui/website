@@ -39,6 +39,7 @@
     <x-dialog />
     <x-toast />
     <x-top-bar />
+    <x-banner wire />
     <x-layout.header />
     <div class="flex flex-col">
         <x-layout.banner />

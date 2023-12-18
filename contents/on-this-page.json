@@ -72,9 +72,9 @@
     "docs.form.range": {
         "0": "Basic Usage",
         "1": "Label",
-        "4": "Size Variations",
-        "5": "Color Variations",
-        "3": "Invalidate"
+        "2": "Size Variations",
+        "3": "Color Variations",
+        "4": "Invalidate"
     },
     "docs.form.pin": {
         "0": "Concept",
@@ -137,7 +137,8 @@
             "contents": {
                 "0": "Concept",
                 "1": "Usage",
-                "2": "Available Options"
+                "2": "Available Options",
+                "3": "Example"
             }
         }
     },
