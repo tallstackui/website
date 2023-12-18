@@ -31,12 +31,18 @@ class Contribution
     ./vendor/bin/dusk-updater detect --auto-update
     HTML;
 
+    public const ALL_TESTS = <<<'HTML'
+    composer ci
+    HTML;
+
     public const FEATURE = <<<'HTML'
     composer test:feature
     HTML;
 
     public const BROWSER = <<<'HTML'
     composer test:browser
+
+    # Use: composer test:browser:ci, to run the tests without UI.
     HTML;
 
     public const PINT = <<<'HTML'

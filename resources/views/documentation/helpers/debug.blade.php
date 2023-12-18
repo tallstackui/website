@@ -35,8 +35,8 @@
         </p>
         <livewire:documentation.helpers.debug />
         <p class="mt-4">
-            Did you notice that there are some little icons next to the button and the
-            icon within the button? <u>Put the mouse over them!</u> This is the debug of the
+            <u>Did you notice that there are some little icons next to the button and the
+            icon within the button? Put the mouse over them!</u> This is the debug of the
             button component and also the component inside it, the icon. Note that all
             properties, including custom attributes, those that are not component
             properties, are displayed in a list for you.
