@@ -58,7 +58,7 @@
                         :query="['status' => 'active']" />
                 <x-link :href="route('documentation.ui.link')"
                         text="TallStackUI"
-                        fragment="#query-string-fragment-options" />
+                        fragment="query-string-fragment-options" />
             </div>
         </x-preview>
     </x-section>

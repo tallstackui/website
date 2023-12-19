@@ -69,7 +69,7 @@ class Link
 
     <x-link :href="https://google.com.br/"
             text="TallStackUI"
-            fragment="#query-string-fragment-options" />
+            fragment="query-string-fragment-options" />
     HTML;
 
     public const COLORS = <<<'HTML'

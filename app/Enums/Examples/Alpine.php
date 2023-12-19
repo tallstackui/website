@@ -21,7 +21,7 @@ class Alpine
              value="200.000" />
 
     <script>
-    function creditCardMask(input) {
+    function creditCardMask(input) { // [tl! highlight]
         return input.startsWith('34') || input.startsWith('37')
             ? '9999 999999 99999'
             : '9999 9999 9999 9999'

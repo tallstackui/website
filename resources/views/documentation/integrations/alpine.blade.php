@@ -24,6 +24,10 @@
                          hint="Insert your desired salary"
                          value="200.000"
                          x-mask:dynamic="$money($input, ',')" />
+                <x-input label="Credit Card"
+                         hint="Insert your credit card number"
+                         x-mask:dynamic="creditCardMask"
+                         value="4444555566667777" />
             </div>
         </x-preview>
     </x-section>
@@ -35,4 +39,11 @@
             <x-layout.footer-navigation :href="route('documentation.contribution')" text="Contribution Guide" />
         </x-slot:next>
     </x-slot:navigation>
+    <script>
+        function creditCardMask(input) {
+            return input.startsWith('34') || input.startsWith('37')
+                ? '9999 999999 99999'
+                : '9999 9999 9999 9999'
+        }
+    </script>
 </x-layout>
