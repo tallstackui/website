@@ -111,7 +111,10 @@ class Banner
         <body>
             <x-banner wire />
 
-            <!-- ... -->
+            <!-- or -->
+
+            <!-- Allowed: sm, md, lg -->
+            <x-banner wire size="lg" />
         </body>
     </html>
     HTML;

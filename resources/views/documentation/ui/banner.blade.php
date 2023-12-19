@@ -52,9 +52,10 @@
     <x-separator text="Livewire Integration" />
     <x-section title="Concept" anchor="livewire-integration-concept" :copy="false">
         <p>
-            Unlike the static format, <u>the use of the banner with Livewire integration does
-            not have any configurable options in the layout.</u> All available options must be configured
-            when launching a banner, so in the layout the banner must be added as follows:
+            Unlike the static format, <u>the use of the banner with Livewire integration can
+            only have the <x-block>size</x-block> configurable option in the layout.</u> All other available
+            options must be configured when dispatching the banner through Livewire,
+            so in the layout, the banner must be added as follows:
         </p>
         <x-code language="blade" :contents="$livewire" />
         <p>
