@@ -59,8 +59,9 @@
     </x-section>
     <x-section title="Cautions" :copy="false">
         <ul class="list-decimal list-inside">
-            <li>Debug mode is skipped when running unit tests.</li>
             <li><u>We recommend that you only use debug mode in dev. environments.</u></li>
+            <li>Debug mode is skipped when running unit tests.</li>
+            <li>The <x-block>slot mode</x-block> in debug tooltip indicates you are set the component content through slots.</li>
             <li>Some alerts may be seen in the browser console when debug mode is activated.</li>
         </ul>
     </x-section>

@@ -39,6 +39,9 @@
         <x-preview language="blade" :contents="$clear">
             <livewire:documentation.form.pin />
         </x-preview>
+        <x-warning class="mt-4">
+            The clear button will only be displayed when the input is not empty.
+        </x-warning>
     </x-section>
     <x-section title="Masks" description="An option to limit the input types.">
         <x-preview language="blade" :contents="$masks">

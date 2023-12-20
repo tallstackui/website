@@ -9,7 +9,7 @@
             availability. Beforehand we want to tell you a little about our motivation.
         </p>
     </x-section>
-    <x-section class="space-y-4" title="Motivation Behinds TallStackUI" :copy="false">
+    <x-section class="space-y-4" title="Motivations" :copy="false">
         <p>
             Hey! I'm <a href="https://github.com/devajmeireles" class="underline" target="_blank">AJ</a>,
             creator of TallStackUI and FullStack PHP developer since 10 years ago. I'm passionate about TALL
@@ -27,6 +27,16 @@
             TallStackUI is a solution to solve a personal problem while serving the community. <u>The main
                 guarantee you will have is the fact that I, the author, and all contributors are the main
                 users of the library</u>, guaranteeing useful components and frequent updates.
+        </p>
+    </x-section>
+    <x-section class="space-y-4" title="Usage Purpose" :copy="false">
+        <p>
+            TallStackUI offers two component types: <b>1)</b> Static: those that have no interaction with
+            Livewire and serve only UI purposes <i>(alert, badge, link, avatar, and others)</i>. <b>2)</b> Reactive:
+            those that are designed to be used via Livewire <i>(input, select, color, dialog, toast, and others).</i>
+            Although some components can be used out of Livewire components, TallStackUI was created and designed
+            to be used through Livewire components. This means that if a component does not work completely out
+            of a Livewire component, then you must use it inside the Livewire components.
         </p>
     </x-section>
     <x-slot:navigation>

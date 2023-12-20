@@ -205,7 +205,8 @@
                anchor="circle-size-variations"
                description="An option to use any Heroicon.">
         <x-preview language="blade" :contents="$circleSizes">
-            <x-button.circle text="SM" sm/>
+            <x-button.circle text="X" xs/>
+            <x-button.circle text="S" sm/>
             <x-button.circle text="MD" />
             <x-button.circle text="LG" lg/>
         </x-preview>

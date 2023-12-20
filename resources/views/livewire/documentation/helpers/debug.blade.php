@@ -15,8 +15,6 @@ new class extends Component {
     public function rendered(): void
     {
         config()->set('tallstackui.debug.status', false);
-
-        config()->set('tallstackui.debug.environments', ['local']);
     }
 } ?>
 
