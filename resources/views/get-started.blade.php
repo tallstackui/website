@@ -29,16 +29,6 @@
                 users of the library</u>, guaranteeing useful components and frequent updates.
         </p>
     </x-section>
-    <x-section class="space-y-4" title="Usage Purpose" :copy="false">
-        <p>
-            TallStackUI offers two component types: <b>1)</b> Static: those that have no interaction with
-            Livewire and serve only UI purposes <i>(alert, badge, link, avatar, and others)</i>. <b>2)</b> Reactive:
-            those that are designed to be used via Livewire <i>(input, select, color, dialog, toast, and others).</i>
-            Although some components can be used out of Livewire components, TallStackUI was created and designed
-            to be used through Livewire components. This means that if a component does not work completely out
-            of a Livewire component, then you must use it inside the Livewire components.
-        </p>
-    </x-section>
     <x-slot:navigation>
         <x-slot:next>
             <x-layout.footer-navigation href="{{ route('documentation.installation') }}" text="Installation" />
