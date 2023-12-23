@@ -17,6 +17,7 @@ use App\Enums\Examples\Form\Radio;
 use App\Enums\Examples\Form\Range;
 use App\Enums\Examples\Form\Textarea;
 use App\Enums\Examples\Form\Toggle;
+use App\Enums\Examples\Form\WithoutLivewire;
 use App\Enums\Examples\Installation;
 use App\Enums\Examples\Personalization\ColorPersonalization;
 use App\Enums\Examples\Personalization\DeepPersonalization;
@@ -87,6 +88,7 @@ enum Example: string
     case Alpine = Alpine::class;
     case DebugMode = DebugMode::class;
     case Pin = Pin::class;
+    case WithoutLivewire = WithoutLivewire::class;
 
     public function variables(): array
     {

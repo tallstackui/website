@@ -15,7 +15,9 @@
         Many modern applications need to validate and authorize things such
         as user registration or even login, through mechanisms such as 2FA.
         Pin input is an ideal component for situations where you need to
-        request a pin (short code) from the user.
+        request a pin (short code) from the user. <u>Starting from version 1.5.3</u>,
+        the pin component has a behavior to forces typing to start from the
+        first entry, following the logic of the component.
     </x-section>
     <x-section title="Basic Usage">
         <x-preview language="blade" :contents="$basic">

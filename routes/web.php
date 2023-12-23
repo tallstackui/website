@@ -78,6 +78,7 @@ Route::prefix('/docs')
         Route::view('/dark-theme', 'documentation.helpers.dark-theme', Example::DarkTheme->variables())->name('dark-theme');
         Route::view('/configuration', 'documentation.configuration', Example::Configuration->variables())->name('configuration');
         Route::view('/translation', 'documentation.translation', Example::Translation->variables())->name('translation');
+        Route::view('/without-livewire', 'documentation.without-livewire', Example::WithoutLivewire->variables())->name('without-livewire');
         Route::view('/contribution', 'documentation.contribution', Example::Contribution->variables())->name('contribution');
         Route::view('/debug', 'documentation.helpers.debug', Example::DebugMode->variables())->name('debug');
 

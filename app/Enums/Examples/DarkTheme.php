@@ -28,6 +28,14 @@ class DarkTheme
     </html>
     HTML;
 
+    public const INITIALIZE_AS_TRUE = <<<'HTML'
+    <html ...
+          x-data="tallstackui_darkTheme('other-name', true)" {{-- [tl! focus, highlight] --}}
+          ...>
+        <!-- ... -->
+    </html>
+    HTML;
+
     public const BUTTON = <<<'HTML'
     <x-button x-on:click="darkTheme = !darkTheme">Light / Dark Mode</x-button>
     HTML;

@@ -297,7 +297,8 @@
         "0": "Configuration",
         "1": "Basic Usage",
         "2": "Confirmations",
-        "3": "Configurations"
+        "3": "Color Personalization",
+        "4": "Configurations"
     },
     "docs.interaction.toast": {
         "0": "Configuration",
@@ -305,7 +306,8 @@
         "2": "Confirmations",
         "3": "Time Control",
         "4": "Expandable",
-        "5": "Configurations"
+        "5": "Color Personalization",
+        "6": "Configurations"
     },
     "docs.configuration": {
         "0": "Configuration File",
@@ -315,6 +317,11 @@
         "0": "Translation Files",
         "1": "Files",
         "2": "Missing Content"
+    },
+    "docs.without-livewire": {
+        "0": "Concept",
+        "1": "Example",
+        "2": "Concerns"
     },
     "docs.personalization.soft": {
         "0": "Concept",

@@ -59,6 +59,7 @@ test('can access all routes', function (string $route) {
     fn () => route('documentation.dark-theme'),
     fn () => route('documentation.configuration'),
     fn () => route('documentation.translation'),
+    fn () => route('documentation.without-livewire'),
     fn () => route('documentation.contribution'),
     //
     fn () => route('documentation.personalization.concept'),

@@ -151,6 +151,34 @@
                 </x-table.tr>
                 <x-table.tr>
                     <x-table.td>
+                        <p class="font-mono">Dialog</p>
+                    </x-table.td>
+                    <x-table.td class="flex items-center gap-x-1">
+                        <x-badge color="pink">
+                            cancelColor
+                        </x-badge>
+                        <x-tooltip text="cancelColor: should returns a color as string (primary, red, blue, yellow, etc.)"
+                                   color="pink"
+                                   outline />
+                        <x-badge color="pink">
+                            confirmColor
+                        </x-badge>
+                        <x-tooltip text="confirmColor: returns an array where key is the types: success, error, info, warning, and question. The value of each key is the TailwindCSS classes."
+                                   color="pink"
+                                   outline />
+                        <x-badge color="pink">
+                            iconColor
+                        </x-badge>
+                        <x-tooltip text="iconColor: returns an array with two keys: background e icon, and inside of each key an array with the types: success, error, info, warning, and question. The value of each key is the TailwindCSS classes."
+                                   color="pink"
+                                   outline />
+                    </x-table.td>
+                    <x-table.td>
+                        N/A
+                    </x-table.td>
+                </x-table.tr>
+                <x-table.tr>
+                    <x-table.td>
                         <p class="font-mono">Errors</p>
                     </x-table.td>
                     <x-table.td>
@@ -233,6 +261,22 @@
                         <x-tooltip text="You should return only an array with the color name as the key, and the classes as the value."
                                    color="pink"
                                    outline />
+                    </x-table.td>
+                </x-table.tr>
+                <x-table.tr>
+                    <x-table.td>
+                        <p class="font-mono">Toast</p>
+                    </x-table.td>
+                    <x-table.td class="flex items-center gap-x-1">
+                        <x-badge color="pink">
+                            iconColor
+                        </x-badge>
+                        <x-tooltip text="iconColor: returns an array where key is the types: success, error, info, warning, and question. The value of each key is the TailwindCSS classes."
+                                   color="pink"
+                                   outline />
+                    </x-table.td>
+                    <x-table.td>
+                        N/A
                     </x-table.td>
                 </x-table.tr>
                 <x-table.tr>

@@ -24,6 +24,9 @@
         <x-code language="blade" :contents="$helper" :copy="false"/>
         <p>Alternatively, you can customize the name of the state stored in local storage of the browser, <b class="underline">default name is dark-theme</b></p>
         <x-code language="blade" :contents="$customized" :copy="false"/>
+        <p><u>Starting from version 1.5.3</u> you can force the <x-block>darkTheme</x-block> variable to be initialized to true:</p>
+        <x-code language="blade" :contents="$initializeAsTrue" :copy="false"/>
+        <p class="mb-4">This is useful if your theme is dark theme by default.</p>
         <p>3. Create a button to control the dark theme:</p>
         <x-code language="blade" :contents="$button" :copy="false" />
         <x-warning text="This button must be covered by the layout that received the helper above." />

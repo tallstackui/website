@@ -42,6 +42,16 @@
         </p>
         <x-code :contents="$ignoringExpandable" :copy="false" />
     </x-section>
+    <x-section title="Color Personalization">
+        <p>
+            <x-link :href="route('documentation.personalization.deep')"
+                    fragment="override-component-colors"
+                    :color="null"
+                    underline>
+                Starting from version 1.5.3 you can customize Toast colors through deep personalization.
+            </x-link>
+        </p>
+    </x-section>
     <x-available-configuration />
     <x-slot:navigation>
         <x-slot:back>
