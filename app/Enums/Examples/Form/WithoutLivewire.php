@@ -5,7 +5,7 @@ namespace App\Enums\Examples\Form;
 class WithoutLivewire
 {
     public const EXAMPLE = <<<'HTML'
-    <form class="space-y-2" action={{ route('user.register') }} method="post">
+    <form action="{{ route('user.register') }}" method="post">
         @csrf
 
         <x-input label="Name" name="input" :value="old('name')" />
