@@ -19,5 +19,5 @@ new class extends Component {
 } ?>
 
 <div class="mt-4 flex justify-center">
-    <x-button text="This is the TallStackUI" color="purple" icon="photo" position="right" using="custom" attributes="of laravel" />
+    <x-button text="This is the TallStackUI" color="purple" icon="photo" position="right" id="example" />
 </div>
