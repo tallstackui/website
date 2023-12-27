@@ -81,6 +81,13 @@
             interact with the table and make things like add an action button for each row.
         </p>
         <x-code :contents="$columns" :copy="false" />
+        <p>
+            <a href="https://livewire.laravel.com/docs/nesting#rendering-children-in-a-loop" class="underline" target="_blank">
+            As mentioned in the Livewire documentation</a>, for cases where you want to render
+            components in a loop, using the Blade <x-block>@verbatim @column @endverbatim</x-block>
+            directive, you must specify a unique key for each component:
+        </p>
+        <x-code :contents="$loop" :copy="false" />
     </x-section>
     <x-slot:navigation>
         <x-slot:back>

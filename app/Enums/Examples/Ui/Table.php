@@ -223,7 +223,8 @@ class Table
             return [
                 'headers' => [
                     ['index' => 'id', 'label' => '#'],
-                    ['index' => 'name', 'label' => 'Member'],
+                    // You can disable the sorting of a column
+                    ['index' => 'name', 'label' => 'Member', 'sortable' => false],
                 ],
                 'rows' => User::query()
                     ->orderBy(...array_values($this->sort)) // [tl! highlight]
@@ -325,6 +326,46 @@ class Table
                 <x-button.circle color="red"
                                  icon="trash"
                                  wire:click="delete('{{ $row->id }}', '{{ $type }}')" />
+            @endcolumn
+        </x-table>
+    </div>
+    HTML;
+
+    public const LOOP = <<<'HTML'
+    <?php
+
+    use App\Models\User;
+    use Livewire\Volt\Component;
+    use Illuminate\Database\Eloquent\Builder;
+
+    new class extends Component {
+
+        public ?int $quantity = 10;
+
+        public ?string $search = null;
+
+        public function with(): array
+        {
+            return [
+                'headers' => [
+                    ['index' => 'id', 'label' => '#'],
+                    ['index' => 'name', 'label' => 'Member'],
+                    ['index' => 'action'],
+                ],
+                'rows' => User::query()
+                    ->when($this->search, function (Builder $query) {
+                        return $query->where('name', 'like', "%{$this->search}%");
+                    })
+                    ->paginate($this->quantity)
+                    ->withQueryString(),
+            ];
+        }
+    }; ?>
+
+    <div>
+        <x-table :$headers :$rows filter paginate>
+            @column('action', $row)
+                <livewire:delete.user :user="$row" :key="uniqid()" /> <!-- [tl! highlight] -->
             @endcolumn
         </x-table>
     </div>

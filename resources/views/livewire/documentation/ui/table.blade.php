@@ -39,7 +39,7 @@ new class extends Component {
         return [
             'headers' => [
                 ['index' => 'id', 'label' => '#'],
-                ['index' => 'name', 'label' => 'Member Name'],
+                ['index' => 'name', 'label' => 'Member Name', 'sortable' => false],
             ],
             'rows' => User::query()
                 ->when($this->search, fn (Builder $query) => $query->where('name', 'like', "%{$this->search}%"))
