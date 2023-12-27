@@ -40,6 +40,7 @@ use App\Enums\Examples\Ui\Modal;
 use App\Enums\Examples\Ui\Select;
 use App\Enums\Examples\Ui\Slide;
 use App\Enums\Examples\Ui\Tab;
+use App\Enums\Examples\Ui\Table;
 use App\Enums\Examples\Ui\Toast;
 use App\Enums\Examples\Ui\Tooltip;
 use App\Enums\Examples\Welcome;
@@ -75,6 +76,7 @@ enum Example: string
     case Slide = Slide::class;
     case SoftPersonalization = SoftPersonalization::class;
     case Tab = Tab::class;
+    case Table = Table::class;
     case Textarea = Textarea::class;
     case Translation = Translation::class;
     case Toast = Toast::class;

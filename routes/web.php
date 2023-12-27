@@ -55,6 +55,7 @@ Route::prefix('/docs')
                 Route::view('/select', 'documentation.ui.select', Example::Select->variables())->name('select');
                 Route::view('/slide', 'documentation.ui.slide', Example::Slide->variables())->name('slide');
                 Route::view('/tab', 'documentation.ui.tab', Example::Tab->variables())->name('tab');
+                Route::view('/table', 'documentation.ui.table', Example::Table->variables())->name('table');
                 Route::view('/tooltip', 'documentation.ui.tooltip', Example::Tooltip->variables())->name('tooltip');
             });
 
