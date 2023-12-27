@@ -110,6 +110,14 @@ class Modal
     </x-button>
     HTML;
 
+    public const EVENTS = <<<'HTML'
+    <x-modal title="TallStackUi"
+             x-on:open="alert('Opened!')"
+             x-on:close="alert('Closed!')">
+        TallStackUi
+    </x-modal>
+    HTML;
+
     public const PERSONALIZATION = <<<'HTML'
     TallStackUi::personalize()
         ->modal()

@@ -173,6 +173,22 @@
     <x-section title="AlpineJS Helper" description="Helpers to open and close the modal using AlpineJS.">
         <x-code language="blade" :contents="$alpinejs"/>
     </x-section>
+    <x-section title="Events" description="An option to listen event when the modal is opening or closing.">
+        <x-preview language="blade" :contents="$events">
+            <x-modal id="event-open" title="TallStackUi" x-on:open="alert('Opened!')">
+                TallStackUi
+            </x-modal>
+            <x-modal id="event-close" title="TallStackUi" x-on:close="alert('Closed!')">
+                TallStackUi
+            </x-modal>
+            <x-button x-on:click="$modalOpen('event-open')">
+                Open Event
+            </x-button>
+            <x-button x-on:click="$modalOpen('event-close')">
+                Close Event
+            </x-button>
+        </x-preview>
+    </x-section>
     <x-available-configuration />
     <x-slot:navigation>
         <x-slot:back>

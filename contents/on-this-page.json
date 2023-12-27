@@ -212,7 +212,8 @@
         "8": "Wireable",
         "9": "Wireable Personalized",
         "10": "AlpineJS Helper",
-        "11": "Configurations"
+        "11": "Events",
+        "12": "Configurations"
     },
     "docs.ui.link": {
         "0": "Basic Usage",

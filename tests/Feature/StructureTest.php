@@ -43,6 +43,7 @@ test('can access all routes', function (string $route) {
     fn () => route('documentation.ui.select'),
     fn () => route('documentation.ui.slide'),
     fn () => route('documentation.ui.tab'),
+    fn () => route('documentation.ui.table'),
     fn () => route('documentation.ui.tooltip'),
     fn () => route('documentation.ui.modal'),
     fn () => route('documentation.ui.loading'),
