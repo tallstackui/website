@@ -131,7 +131,7 @@ class Table
 
     new class extends Component {
 
-        public int $quantity = 10; // [tl! highlight]
+        public int $quantity = 2; // [tl! highlight]
 
         public ?string $search = null; // [tl! highlight]
 
@@ -155,11 +155,18 @@ class Table
     <div>
         <x-table :$headers :$rows filter />
 
-        <!-- You can control the quantities of the quantity selector -->
-        <x-table :$headers :$rows filter :quantity="[2,5,10]" />
+        <!-- You can control the quantity of the quantity selector -->
+        <x-table :$headers
+                 :$rows
+                 filter
+                 :quantity="[2,5,10]" />
 
         <!-- You can specify different properties for the filter -->
-        <x-table :$headers :$rows filter :filters="['quantity' => 'foo', 'search' => 'bar']" />
+        <x-table :$headers
+                 :$rows
+                 filter
+                 :quantity="[2,5,10]"
+                 :filters="['quantity' => 'foo', 'search' => 'bar']" />
     </div>
     HTML;
 
@@ -201,8 +208,8 @@ class Table
     public const SORT = <<<'HTML'
     <?php
 
-    use Livewire\Volt\Component;
     use App\Models\User;
+    use Livewire\Volt\Component;
 
     new class extends Component {
 
@@ -234,8 +241,8 @@ class Table
     public const PAGINATE = <<<'HTML'
     <?php
 
-    use Livewire\Volt\Component;
     use App\Models\User;
+    use Livewire\Volt\Component;
 
     new class extends Component {
 
@@ -247,7 +254,7 @@ class Table
                     ['index' => 'name', 'label' => 'Member'],
                 ],
                 'rows' => User::query()
-                    ->paginate(10)
+                    ->paginate(2)
                     ->withQueryString()
             ];
         }
@@ -255,6 +262,64 @@ class Table
 
     <div>
         <x-table :$headers :$rows paginate />
+
+        <!-- Disabling TallStackUI paginator element to
+            create your own element based on Livewire pagination features -->
+        <x-table :$headers :$rows paginate :paginator="null" />
+    </div>
+    HTML;
+
+    public const COLUMNS = <<<'HTML'
+    <?php
+
+    use App\Models\User;
+    use Livewire\Volt\Component;
+    use Illuminate\Database\Eloquent\Builder;
+
+    new class extends Component {
+
+        public int $quantity = 10;
+
+        public ?string $search = null;
+
+        public function with(): array
+        {
+            return [
+                'headers' => [
+                    ['index' => 'id', 'label' => '#'],
+                    ['index' => 'name', 'label' => 'Member'],
+                    ['index' => 'action'], // [tl! highlight]
+                ],
+                'rows' => User::query()
+                    ->when($this->search, function (Builder $query) {
+                        return $query->where('name', 'like', "%{$this->search}%");
+                    })
+                    ->paginate($this->quantity)
+                    ->withQueryString(),
+                'type' => 'data', // [tl! highlight]
+            ];
+        }
+    }; ?>
+
+    <div>
+        <!-- 1: -->
+        <x-table :$headers :$rows filter paginate>
+            <!-- The $row represents the instance of \App\Model\User of each row -->
+            @column('action', $row) <!-- [tl! highlight] -->
+                <x-button.circle color="red"
+                                 icon="trash"
+                                 wire:click="delete('{{ $row->id }}')" />
+            @endcolumn
+        </x-table>
+
+        <!-- 2: You can pass extra variables to the directive -->
+        <x-table :$headers :$rows filter paginate>
+            @column('action', $row, $type) <!-- [tl! highlight] -->
+                <x-button.circle color="red"
+                                 icon="trash"
+                                 wire:click="delete('{{ $row->id }}', '{{ $type }}')" />
+            @endcolumn
+        </x-table>
     </div>
     HTML;
 
