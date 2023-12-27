@@ -59,7 +59,7 @@
             The search input bind the property using wire:model.live with debounce of 500ms.
         </x-warning>
     </x-section>
-    <x-section title="Loading Effect" description="An option to display a loading effect when interacts with the table.">
+    <x-section title="Loading Effect" description="An option to display a loading effect when interacts with the table elements.">
         <x-preview language="blade" :contents="$loading" :background="false">
             <livewire:documentation.ui.table :mode="5" />
         </x-preview>

@@ -310,8 +310,9 @@
         "0": "Configuration",
         "1": "Basic Usage",
         "2": "Confirmations",
-        "3": "Color Personalization",
-        "4": "Configurations"
+        "4": "Events",
+        "5": "Color Personalization",
+        "6": "Configurations"
     },
     "docs.interaction.toast": {
         "0": "Configuration",
@@ -319,8 +320,9 @@
         "2": "Confirmations",
         "3": "Time Control",
         "4": "Expandable",
-        "5": "Color Personalization",
-        "6": "Configurations"
+        "5": "Events",
+        "6": "Color Personalization",
+        "7": "Configurations"
     },
     "docs.configuration": {
         "0": "Configuration File",

@@ -27,6 +27,11 @@
             <livewire:documentation.interactions.dialog.confirmation/>
         </x-preview>
     </x-section>
+    <x-section title="Events">
+        <x-preview language="blade" :contents="$events">
+            <livewire:documentation.interactions.dialog.events/>
+        </x-preview>
+    </x-section>
     <x-section title="Color Personalization">
         <p>
             <x-link :href="route('documentation.personalization.deep')"

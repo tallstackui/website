@@ -42,6 +42,11 @@
         </p>
         <x-code :contents="$ignoringExpandable" :copy="false" />
     </x-section>
+    <x-section title="Events">
+        <x-preview language="blade" :contents="$events">
+            <livewire:documentation.interactions.toast.events/>
+        </x-preview>
+    </x-section>
     <x-section title="Color Personalization">
         <p>
             <x-link :href="route('documentation.personalization.deep')"
