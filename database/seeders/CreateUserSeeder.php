@@ -9,16 +9,16 @@ class CreateUserSeeder extends Seeder
 {
     public function run(): void
     {
-        User::factory()->create(['name' => 'Taylor Otwell']);
-        User::factory()->create(['name' => 'Nuno Maduro']);
-        User::factory()->create(['name' => 'Dries Vints']);
-        User::factory()->create(['name' => 'Jess Archer']);
-        User::factory()->create(['name' => 'James Brooks']);
-        User::factory()->create(['name' => 'Mohamed Said']);
-        User::factory()->create(['name' => 'Tim MacDonald']);
-        User::factory()->create(['name' => 'Joe Dixon']);
-        User::factory()->create(['name' => 'Mior Muhammad Zaki Mior Khairuddin']);
-        User::factory()->create(['name' => 'Guus Leeuw']);
-        User::factory()->create(['name' => 'Christoph Rumpel']);
+        User::create(['name' => 'Taylor Otwell', 'email' => 'taylor@laravel.com', 'password' => bcrypt('password')]);
+        User::create(['name' => 'Nuno Maduro', 'email' => 'nuno@laravel.com', 'password' => bcrypt('password')]);
+        User::create(['name' => 'Dries Vints', 'email' => 'dries@laravel.com', 'password' => bcrypt('password')]);
+        User::create(['name' => 'Jess Archer', 'email' => 'jess@laravel.com', 'password' => bcrypt('password')]);
+        User::create(['name' => 'James Brooks', 'email' => 'james@laravel.com', 'password' => bcrypt('password')]);
+        User::create(['name' => 'Mohamed Said', 'email' => 'mohamed@laravel.com', 'password' => bcrypt('password')]);
+        User::create(['name' => 'Tim MacDonald', 'email' => 'tim@laravel.com', 'password' => bcrypt('password')]);
+        User::create(['name' => 'Joe Dixon', 'email' => 'joe@laravel.com', 'password' => bcrypt('password')]);
+        User::create(['name' => 'Mior Muhammad Zaki Mior Khairuddin', 'email' => 'mior@laravel.com', 'password' => bcrypt('password')]);
+        User::create(['name' => 'Guus Leeuw', 'email' => 'guus@laravel.com', 'password' => bcrypt('password')]);
+        User::create(['name' => 'Christoph Rumpel', 'email' => 'christoph@laravel.com', 'password' => bcrypt('password')]);
     }
 }
