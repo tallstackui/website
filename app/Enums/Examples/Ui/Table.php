@@ -155,7 +155,7 @@ class Table
     <div>
         <x-table :$headers :$rows filter />
 
-        <!-- You can control the quantity of the quantity selector -->
+        <!-- You can control the items of the quantity selector -->
         <x-table :$headers
                  :$rows
                  filter
@@ -283,6 +283,11 @@ class Table
         public int $quantity = 10;
 
         public ?string $search = null;
+
+        public function delete(string $id): void
+        {
+            dd($id);
+        }
 
         public function with(): array
         {

@@ -74,12 +74,20 @@
             <livewire:documentation.ui.table :mode="7" />
         </x-preview>
     </x-section>
-    <x-section title="Interacting With Data">
+    <x-section title="Interacting With Data" :copy="false">
         <p>
             The table component provides a custom Blade directive <x-block>@verbatim @column @endverbatim</x-block>
             to allow you to interact with the table columns about the data provided in each row. Allowing you to
             interact with the table and make things like add an action button for each row.
         </p>
-        <x-code :contents="$columns" />
+        <x-code :contents="$columns" :copy="false" />
     </x-section>
+    <x-slot:navigation>
+        <x-slot:back>
+            <x-layout.footer-navigation :href="route('documentation.ui.tab')" text="Tab" back />
+        </x-slot:back>
+        <x-slot:next>
+            <x-layout.footer-navigation :href="route('documentation.ui.tooltip')" text="Tooltip" />
+        </x-slot:next>
+    </x-slot:navigation>
 </x-layout>
