@@ -79,7 +79,6 @@ class Dialog
     <x-dialog blur />
     HTML;
 
-
     public const EVENTS = <<<'HTML'
     <!-- The listeners receive the dialog object through $event.detail -->
     <div x-on:dialog:accepted.window="alert($event.detail.description)"
