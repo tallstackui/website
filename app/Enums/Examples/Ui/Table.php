@@ -131,7 +131,7 @@ class Table
 
     new class extends Component {
 
-        public int $quantity = 2; // [tl! highlight]
+        public ?int $quantity = 2; // [tl! highlight]
 
         public ?string $search = null; // [tl! highlight]
 
@@ -179,7 +179,7 @@ class Table
 
     new class extends Component {
 
-        public int $quantity = 10;
+        public ?int $quantity = 10;
 
         public ?string $search = null;
 
@@ -280,7 +280,7 @@ class Table
 
     new class extends Component {
 
-        public int $quantity = 10;
+        public ?int $quantity = 10;
 
         public ?string $search = null;
 

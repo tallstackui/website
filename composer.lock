@@ -5653,16 +5653,16 @@
         },
         {
             "name": "tallstackui/tallstackui",
-            "version": "v1.6.2",
+            "version": "v1.6.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/tallstackui/tallstackui.git",
-                "reference": "48b2be20a7917faabc7c41a046c4356cf76c31c6"
+                "reference": "e519b9e501e4cbf828c37641453fe6356ef203a8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tallstackui/tallstackui/zipball/48b2be20a7917faabc7c41a046c4356cf76c31c6",
-                "reference": "48b2be20a7917faabc7c41a046c4356cf76c31c6",
+                "url": "https://api.github.com/repos/tallstackui/tallstackui/zipball/e519b9e501e4cbf828c37641453fe6356ef203a8",
+                "reference": "e519b9e501e4cbf828c37641453fe6356ef203a8",
                 "shasum": ""
             },
             "require": {
@@ -5708,7 +5708,7 @@
             "description": "A curated list of TallStack UI Components",
             "support": {
                 "issues": "https://github.com/tallstackui/tallstackui/issues",
-                "source": "https://github.com/tallstackui/tallstackui/tree/v1.6.2"
+                "source": "https://github.com/tallstackui/tallstackui/tree/v1.6.4"
             },
             "funding": [
                 {
@@ -5716,7 +5716,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-12-27T17:35:44+00:00"
+            "time": "2023-12-27T20:25:22+00:00"
         },
         {
             "name": "tijsverkoyen/css-to-inline-styles",

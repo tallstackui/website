@@ -10,7 +10,7 @@ new class extends Component {
 
     public int $mode = 1;
 
-    public int $quantity = 2;
+    public ?int $quantity = 2;
 
     public ?string $search = null;
 
