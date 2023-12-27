@@ -119,6 +119,9 @@
                             <x-layout.navigation.link :href="route('documentation.ui.tab')" text="Tab" />
                         </li>
                         <li class="relative ml-4">
+                            <x-layout.navigation.link :href="route('documentation.ui.table')" text="Table" new />
+                        </li>
+                        <li class="relative ml-4">
                             <x-layout.navigation.link :href="route('documentation.ui.tooltip')" text="Tooltip" />
                         </li>
                     </ul>

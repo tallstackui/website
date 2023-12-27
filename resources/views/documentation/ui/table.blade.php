@@ -11,6 +11,11 @@
     <x-slot:personalization>
         <livewire:documentation.personalization :$personalization component="table" />
     </x-slot:personalization>
+    <x-warning class="mb-4">
+        All examples in this page use Livewire through Laravel Volt because the TallStackUI
+        documentation uses Livewire through Laravel Volt instead of pure Livewire components.
+        You can use the table component in pure Livewire components, i.e. without Laravel Volt.
+    </x-warning>
     <x-section title="Concept" :copy="false">
         <p>
             Although many packages can add table features to your project, <u>starting from
@@ -31,9 +36,6 @@
         <p class="mt-4"><b>2)</b> Data that comes from the database</p>
         <x-code language="blade" :contents="$exampleEloquent" :copy="false" />
     </x-section>
-    <x-warning class="mb-4">
-        All examples below use Livewire through Laravel Volt components.
-    </x-warning>
     <x-section title="Basic Usage">
         <x-preview language="blade" :contents="$basic" :background="false">
             <livewire:documentation.ui.table :mode="1" />
@@ -72,7 +74,7 @@
             <livewire:documentation.ui.table :mode="7" />
         </x-preview>
     </x-section>
-    <x-section title="Interacting With Table Columns">
+    <x-section title="Interacting With Data">
         <p>
             The table component provides a custom Blade directive <x-block>@verbatim @column @endverbatim</x-block>
             to allow you to interact with the table columns about the data provided in each row. Allowing you to

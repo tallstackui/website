@@ -284,6 +284,18 @@
         "2": "Wireable",
         "3": "Live Wireable"
     },
+    "docs.ui.table": {
+        "0": "Concept",
+        "1": "Data for Table",
+        "2": "Basic Usage",
+        "3": "Without Header",
+        "4": "Striped Style",
+        "5": "Filters",
+        "6": "Loading Effect",
+        "7": "Sorting",
+        "8": "Pagination",
+        "9": "Interacting With Data"
+    },
     "docs.ui.tooltip": {
         "0": "Basic Usage",
         "1": "Available Positions",

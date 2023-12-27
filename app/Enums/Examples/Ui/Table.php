@@ -9,11 +9,13 @@ class Table
         $headers = [
             ['index' => 'id', 'label' => '#'],
             ['index' => 'name', 'label' => 'Member'],
+            // ...
         ];
 
         $rows = [
             ['id' => 1, 'name' => 'Taylor Otwell'],
             ['id' => 2, 'name' => 'Nuno Maduro'],
+            // ...
         ];
     @endphp
 
@@ -22,8 +24,6 @@ class Table
 
     public const EXAMPLE_ELOQUENT = <<<'HTML'
     <?php
-
-    // Example of Livewire through Laravel Volt.
 
     use App\Models\User;
     use Livewire\Volt\Component;
@@ -263,8 +263,10 @@ class Table
     <div>
         <x-table :$headers :$rows paginate />
 
-        <!-- Disabling TallStackUI paginator element to
-            create your own element based on Livewire pagination features -->
+        <!--
+        You can disable the TallStackUI paginator element. When you do that
+        the table component will use the Livewire paginator element.
+        -->
         <x-table :$headers :$rows paginate :paginator="null" />
     </div>
     HTML;
