@@ -73,6 +73,9 @@
         <x-preview language="blade" :contents="$paginate" :background="false">
             <livewire:documentation.ui.table :mode="7" />
         </x-preview>
+        <x-warning>
+            The paginator element has a different style when in mobile.
+        </x-warning>
     </x-section>
     <x-section title="Interacting With Data" :copy="false">
         <p>

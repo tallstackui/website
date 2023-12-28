@@ -51,9 +51,7 @@
         </x-warning>
     </x-section>
     <x-section title="JavaScript API" description="JavaScript API to interact with Toast.">
-        <x-preview language="blade" :contents="$javascript">
-            <livewire:documentation.interactions.toast.javascript/>
-        </x-preview>
+        <x-code language="blade" :contents="$javascript" :copy="false" />
     </x-section>
     <x-section title="Color Personalization">
         <p>

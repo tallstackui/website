@@ -35,6 +35,9 @@
             We recommend that you use listeners in one place, whether in the base layout or once per component.
         </x-warning>
     </x-section>
+    <x-section title="JavaScript API" description="JavaScript API to interact with Dialog.">
+        <x-code language="blade" :contents="$javascript" :copy="false" />
+    </x-section>
     <x-section title="Color Personalization">
         <p>
             <x-link :href="route('documentation.personalization.deep')"
