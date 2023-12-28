@@ -223,8 +223,8 @@ class Table
             return [
                 'headers' => [
                     ['index' => 'id', 'label' => '#'],
-                    // You can disable the sorting of a column
-                    ['index' => 'name', 'label' => 'Member', 'sortable' => false],
+                    // You can disable the sorting for specific columns
+                    ['index' => 'name', 'label' => 'Member', 'sortable' => false], // [tl! highlight]
                 ],
                 'rows' => User::query()
                     ->orderBy(...array_values($this->sort)) // [tl! highlight]

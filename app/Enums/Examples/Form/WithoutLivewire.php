@@ -29,7 +29,6 @@ class WithoutLivewire
         <x-toggle label="Enable Notifications" name="toggle" :value="old('toggle')" />
 
         <x-select.styled :options="['TALL', 'LIVT']"
-                         select="label:label|value:value"
                          label="Select One Option"
                          name="select_options"
                          searchable
@@ -46,5 +45,41 @@ class WithoutLivewire
         </x-button>
 
     </form>
+    HTML;
+
+    public const JSON_DECODE_BLADE = <<<'HTML'
+    <form action="{{ route('user.register') }}" method="post">
+        @csrf
+
+        <x-select.styled :options="['TALL', 'LIVT']" {{-- [tl! focus:6] --}}
+                         label="Select One Option"
+                         name="select_options"
+                         searchable
+                         multiple {{-- [tl! highlight] --}}
+                         :value="old('select_options')" />
+
+        <x-button type="submit">
+            Submit
+        </x-button>
+
+    </form>
+    HTML;
+
+    public const JSON_DECODE_CONTROLLER = <<<'HTML'
+    namespace App\Http\Controllers;
+
+    use Illuminate\Http\Request;
+
+    class RegisterController extends Controller
+    {
+        // ...
+
+        public function create(Request $request)
+        {
+            $selectOptions = json_decode($request->get('select_options')); // [tl! highlight]
+
+            // ...
+        }
+    }
     HTML;
 }

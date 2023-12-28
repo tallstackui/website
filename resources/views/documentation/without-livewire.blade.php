@@ -31,5 +31,13 @@
             about the <x-block>select</x-block> component, it is expected that you can use it with all available options,
             similar to how we use it via Livewire.
         </p>
+        <p class="mt-6">
+            For cases where you want to use the <x-block>select.styled</x-block> component with the <x-block>multiple</x-block> option,
+            then obtaining the value in the controller must do the <x-block>json_decode</x-block> of the value:
+        </p>
+        <p class="mt-4"><b>1)</b> Blade:</p>
+        <x-code language="blade" :contents="$jsonDecodeBlade" :copy="false" />
+        <p><b>2)</b> Controller:</p>
+        <x-code :contents="$jsonDecodeController" :copy="false" />
     </x-section>
 </x-layout>
