@@ -166,7 +166,7 @@
                     <x-layout.navigation.link :href="route('documentation.translation')" text="Translations" />
                 </li>
                 <li class="relative ml-4">
-                    <x-layout.navigation.link :href="route('documentation.without-livewire')" text="Without Livewire" new />
+                    <x-layout.navigation.link :href="route('documentation.without-livewire')" text="Without Livewire" />
                 </li>
                 <li class="relative ml-4">
                     <h2 class="font-medium text-pink-900 font-display dark:text-pink-500">Personalization</h2>

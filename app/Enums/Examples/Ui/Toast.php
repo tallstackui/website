@@ -146,7 +146,7 @@ class Toast
             }, component); // [tl! highlight]
 
             // Alternatively, you can pass the component id as an
-            // empty string to use the first component of this page.
+            // empty string to use the FIRST LIVEWIRE COMPONENT OF THIS PAGE.
 
             confirm = () => $toast('Success', 'This is a info message.').confirm({
                 confirm: {
