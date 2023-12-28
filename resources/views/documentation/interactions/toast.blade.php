@@ -42,9 +42,17 @@
         </p>
         <x-code :contents="$ignoringExpandable" :copy="false" />
     </x-section>
-    <x-section title="Events">
+    <x-section title="Events" description="An option to listen to events.">
         <x-preview language="blade" :contents="$events">
             <livewire:documentation.interactions.toast.events/>
+        </x-preview>
+        <x-warning class="mt-4">
+            We recommend that you use listeners in one place, whether in the base layout or once per component.
+        </x-warning>
+    </x-section>
+    <x-section title="JavaScript API" description="JavaScript API to interact with Toast.">
+        <x-preview language="blade" :contents="$javascript">
+            <livewire:documentation.interactions.toast.javascript/>
         </x-preview>
     </x-section>
     <x-section title="Color Personalization">

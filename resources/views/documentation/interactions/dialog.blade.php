@@ -27,10 +27,13 @@
             <livewire:documentation.interactions.dialog.confirmation/>
         </x-preview>
     </x-section>
-    <x-section title="Events">
+    <x-section title="Events" description="An option to listen to events.">
         <x-preview language="blade" :contents="$events">
             <livewire:documentation.interactions.dialog.events/>
         </x-preview>
+        <x-warning class="mt-4">
+            We recommend that you use listeners in one place, whether in the base layout or once per component.
+        </x-warning>
     </x-section>
     <x-section title="Color Personalization">
         <p>

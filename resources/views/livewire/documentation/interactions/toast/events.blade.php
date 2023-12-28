@@ -34,8 +34,17 @@ new class extends Component {
     }
 } ?>
 
-<div x-on:toast:accepted.window="alert($event.detail.description)"
-     x-on:toast:rejected.window="alert($event.detail.description)"
-     x-on:toast:timeout.window="alert($event.detail.description)">
+<div x-on:toast:accepted.window="show($event.detail)"
+     x-on:toast:rejected.window="show($event.detail)"
+     x-on:toast:timeout.window="show($event.detail)">
     <x-button color="red" wire:click="confirm">Confirm</x-button>
 </div>
+
+<script>
+    show = (toast) => {
+        // This approach was used to avoid show alerts for other toasts.
+        if (toast.component !== @js($__livewire->__id)) return;
+
+        alert(toast.description);
+    }
+</script>

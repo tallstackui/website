@@ -87,6 +87,59 @@ class Dialog
     </div>
     HTML;
 
+    public const JAVASCRIPT = <<<'HTML'
+    <div>
+        <x-button color="green" onclick="show()">Success</x-button>
+        <x-button color="red" onclick="error()">Error</x-button>
+        <x-button color="yellow" onclick="warning()">Warning</x-button>
+        <x-button color="info" onclick="info()">Info</x-button>
+        <x-button color="secondary" onclick="confirm()">Confirmation</x-button>
+
+        <script>
+            show = () => $dialog('Success', 'This is a success message.').success();
+            error = () => $dialog('Success', 'This is a error message.').error();
+            warning = () => $dialog('Success', 'This is a warning message.').warning();
+            info = () => $dialog('Success', 'This is a info message.').info();
+
+            // Confirmation
+
+            // For use confirmations and interact with methods,
+            // you need to pass the component id where the method is.
+
+            const component = Livewire.find('your-component-id-goes-here').id; // [tl! highlight]
+
+            confirm = () => $dialog('Success', 'This is a info message.').confirm({
+                confirm: {
+                    text: 'Confirm',
+                    method: 'confirmed',
+                    params: 'Confirmed Successfully'
+                },
+                cancel: {
+                    text: 'Cancel',
+                    method: 'cancelled',
+                    params: 'Cancelled Successfully'
+                }
+            }, component); // [tl! highlight]
+
+            // Alternatively, you can pass the component id as an
+            // empty string to use the first component of this page.
+
+            confirm = () => $dialog('Success', 'This is a info message.').confirm({
+                confirm: {
+                    text: 'Confirm',
+                    method: 'confirmed',
+                    params: 'Confirmed Successfully'
+                },
+                cancel: {
+                    text: 'Cancel',
+                    method: 'cancelled',
+                    params: 'Cancelled Successfully'
+                }
+            }, ''); // [tl! highlight]
+        </script>
+    </div>
+    HTML;
+
     public const PERSONALIZATION = <<<'HTML'
     TallStackUi::personalize()
         ->dialog()
