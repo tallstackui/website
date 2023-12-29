@@ -2,4 +2,6 @@
         '<u>Release 1.6.0 introduced the new Table component.</u> Filters, sorting, pagination and more!',
         'Make sure to update the TallStackUI in your project periodically.',
         '<u>Release 1.6.0 also introduced events</u> for Modal, Toast & Dialog.',
+        '<u>Release 1.7.0 introduces the new Clipboard component.</u> An easy way to offer a copy effect on your projects!',
+        'Do you like the TallStackUI? <u>Send us a star on GitHub! It\'s free!</u>',
     ]" />

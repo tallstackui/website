@@ -5653,16 +5653,16 @@
         },
         {
             "name": "tallstackui/tallstackui",
-            "version": "v1.6.8",
+            "version": "v1.7.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/tallstackui/tallstackui.git",
-                "reference": "10c25ea10023c74b491b0a508f9d9f5986b5e49c"
+                "reference": "3af35a7695b0aacfe610cb763c0d902a15aa2a51"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tallstackui/tallstackui/zipball/10c25ea10023c74b491b0a508f9d9f5986b5e49c",
-                "reference": "10c25ea10023c74b491b0a508f9d9f5986b5e49c",
+                "url": "https://api.github.com/repos/tallstackui/tallstackui/zipball/3af35a7695b0aacfe610cb763c0d902a15aa2a51",
+                "reference": "3af35a7695b0aacfe610cb763c0d902a15aa2a51",
                 "shasum": ""
             },
             "require": {
@@ -5708,7 +5708,7 @@
             "description": "A curated list of TallStack UI Components",
             "support": {
                 "issues": "https://github.com/tallstackui/tallstackui/issues",
-                "source": "https://github.com/tallstackui/tallstackui/tree/v1.6.8"
+                "source": "https://github.com/tallstackui/tallstackui/tree/v1.7.0"
             },
             "funding": [
                 {
@@ -5716,7 +5716,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-12-29T01:52:12+00:00"
+            "time": "2023-12-29T17:18:26+00:00"
         },
         {
             "name": "tijsverkoyen/css-to-inline-styles",
@@ -9781,28 +9781,28 @@
         },
         {
             "name": "ta-tikoma/phpunit-architecture-test",
-            "version": "0.7.5",
+            "version": "0.7.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ta-tikoma/phpunit-architecture-test.git",
-                "reference": "9eb08437e8f0c0c75cc947a373cf49672c335827"
+                "reference": "a252cd9488fd62f3c8c6cafa303b1b96e9df24e0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ta-tikoma/phpunit-architecture-test/zipball/9eb08437e8f0c0c75cc947a373cf49672c335827",
-                "reference": "9eb08437e8f0c0c75cc947a373cf49672c335827",
+                "url": "https://api.github.com/repos/ta-tikoma/phpunit-architecture-test/zipball/a252cd9488fd62f3c8c6cafa303b1b96e9df24e0",
+                "reference": "a252cd9488fd62f3c8c6cafa303b1b96e9df24e0",
                 "shasum": ""
             },
             "require": {
-                "nikic/php-parser": "^4.15.4",
+                "nikic/php-parser": "^4.18.0",
                 "php": "^8.1.0",
                 "phpdocumentor/reflection-docblock": "^5.3.0",
-                "phpunit/phpunit": "^10.1.1",
-                "symfony/finder": "^6.2.7 || ^7.0.0"
+                "phpunit/phpunit": "^10.5.5",
+                "symfony/finder": "^6.4.0 || ^7.0.0"
             },
             "require-dev": {
-                "laravel/pint": "^1.9.0",
-                "phpstan/phpstan": "^1.10.13"
+                "laravel/pint": "^1.13.7",
+                "phpstan/phpstan": "^1.10.50"
             },
             "type": "library",
             "autoload": {
@@ -9834,9 +9834,9 @@
             ],
             "support": {
                 "issues": "https://github.com/ta-tikoma/phpunit-architecture-test/issues",
-                "source": "https://github.com/ta-tikoma/phpunit-architecture-test/tree/0.7.5"
+                "source": "https://github.com/ta-tikoma/phpunit-architecture-test/tree/0.7.6"
             },
-            "time": "2023-10-12T15:31:50+00:00"
+            "time": "2023-12-29T13:14:58+00:00"
         },
         {
             "name": "theseer/tokenizer",

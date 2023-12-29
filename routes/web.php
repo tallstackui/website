@@ -46,6 +46,7 @@ Route::prefix('/docs')
                 Route::view('/banner', 'documentation.ui.banner', Example::Banner->variables())->name('banner');
                 Route::view('/button', 'documentation.ui.button', Example::Button->variables())->name('button');
                 Route::view('/card', 'documentation.ui.card', Example::Card->variables())->name('card');
+                Route::view('/clipboard', 'documentation.ui.clipboard', Example::Clipboard->variables())->name('clipboard');
                 Route::view('/dropdown', 'documentation.ui.dropdown', Example::Dropdown->variables())->name('dropdown');
                 Route::view('/error', 'documentation.ui.error', Example::Error->variables())->name('error');
                 Route::view('/icon', 'documentation.ui.icon', Example::Icon->variables())->name('icon');
