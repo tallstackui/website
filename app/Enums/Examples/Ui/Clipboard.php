@@ -24,6 +24,10 @@ class Clipboard
                  text="TallStackUI" />
     HTML;
 
+    public const SECRET = <<<'HTML'
+    <x-clipboard text="TallStackUI" secret />
+    HTML;
+
     public const ICON = <<<'HTML'
     <x-clipboard text="TallStackUI" icon />
 

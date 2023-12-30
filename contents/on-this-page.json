@@ -180,6 +180,14 @@
         "1": "Header Slot",
         "2": "Footer Slot"
     },
+    "docs.ui.clipboard": {
+        "0": "Basic Usage",
+        "1": "Button at Left",
+        "2": "Label & Hint",
+        "3": "Secret Content",
+        "4": "Icon Style",
+        "5": "Using Different Icons"
+    },
     "docs.ui.dropdown": {
         "0": "Basic Usage",
         "1": "Available Positions",

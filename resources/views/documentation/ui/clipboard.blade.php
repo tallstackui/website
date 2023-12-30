@@ -32,6 +32,13 @@
             </x-clipboard>
         </x-preview>
     </x-section>
+    <x-section title="Secret Content" description="An option to transform the input in a password type.">
+        <x-preview language="blade" :contents="$secret">
+            <x-clipboard label="Library" hint="Copy the name of the library" secret>
+                TallStackUi
+            </x-clipboard>
+        </x-preview>
+    </x-section>
     <x-section title="Icon Style">
         <x-preview language="blade" :contents="$icon">
             <x-clipboard icon>
