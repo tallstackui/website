@@ -1,7 +1,6 @@
-<x-banner :color="['background' => 'bg-pink-900', 'text' => 'text-white']" until="2023-12-31" :text="[
-        '<u>Release 1.6.0 introduced the new Table component.</u> Filters, sorting, pagination and more!',
-        'Make sure to update the TallStackUI in your project periodically.',
-        '<u>Release 1.6.0 also introduced events</u> for Modal, Toast & Dialog.',
-        '<u>Release 1.7.0 introduces the new Clipboard component.</u> An easy way to offer a copy effect on your projects!',
-        'Do you like the TallStackUI? <u>Send us a star on GitHub! It\'s free!</u>',
-    ]" />
+<x-banner :color="['background' => 'bg-pink-900', 'text' => 'text-white']" until="2024-01-05">
+    Happy New Year! 🎉
+    <x-link href="https://discord.gg/sfr66WXh4A" blank underline colorless>
+        Join us on Discord server for help and early updates. Click here!
+    </x-link>
+</x-banner>
