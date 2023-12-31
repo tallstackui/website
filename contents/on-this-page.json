@@ -285,7 +285,8 @@
         "7": "Wireable",
         "8": "Wireable Personalized",
         "9": "AlpineJS Helper",
-        "10": "Configurations"
+        "10": "Events",
+        "11": "Configurations"
     },
     "docs.ui.tab": {
         "0": "Basic Usage",

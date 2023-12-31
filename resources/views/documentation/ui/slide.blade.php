@@ -170,6 +170,22 @@
     <x-section title="AlpineJS Helper" description="Helpers to open and close the slide using AlpineJS.">
         <x-code language="blade" :contents="$alpinejs"/>
     </x-section>
+    <x-section title="Events" description="An option to listen event when the slide is opening or closing.">
+        <x-preview language="blade" :contents="$events">
+            <x-slide id="event-open" title="TallStackUi" x-on:open="alert('Opened!')">
+                TallStackUi
+            </x-slide>
+            <x-slide id="event-close" title="TallStackUi" x-on:close="alert('Closed!')">
+                TallStackUi
+            </x-slide>
+            <x-button x-on:click="$slideOpen('event-open')">
+                Open Event
+            </x-button>
+            <x-button x-on:click="$slideOpen('event-close')">
+                Close Event
+            </x-button>
+        </x-preview>
+    </x-section>
     <x-available-configuration />
     <x-slot:navigation>
         <x-slot:back>

@@ -55,9 +55,6 @@
                 TallStackUi
             </x-clipboard>
         </x-preview>
-        <x-warning class="mt-4">
-            Another way to use different icons is through soft personalization.
-        </x-warning>
     </x-section>
     <x-slot:navigation>
         <x-slot:back>

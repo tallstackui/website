@@ -51,7 +51,8 @@ class Toast
                 'method' => 'confirmed',
                 'params' => 'Confirmed Successfully' // Can be a string or array
             ],
-            /* Cancel is optional */
+            // Cancel is optional and when not defined
+            // the cancel button will not be displayed.
             'cancel' => [
                 'text' => 'Cancel',
                 'method' => 'cancelled',

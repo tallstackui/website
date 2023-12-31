@@ -110,6 +110,14 @@ class Slide
     </x-button>
     HTML;
 
+    public const EVENTS = <<<'HTML'
+    <x-slide title="TallStackUi"
+             x-on:open="alert('Opened!')"
+             x-on:close="alert('Closed!')">
+        TallStackUi
+    </x-slide>
+    HTML;
+
     public const PERSONALIZATION = <<<'HTML'
     TallStackUi::personalize()
         ->slide()
