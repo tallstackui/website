@@ -2,7 +2,7 @@
     <x-slot:title>
         Installation
     </x-slot:title>
-    <x-section title="Requirements" :copy="false">
+    <x-section title="Requirements" disable-copy>
         <p>TallStackUI was created with a <b class="font-semibold text-pink-500 underline">focus on Livewire 3</b> so the usage requirements are:</p>
         <ul class="mt-4 ml-4 list-inside list-decimal space-y-2">
             <li>PHP 8.x</li>
@@ -11,22 +11,22 @@
             <li>TailwindCSS 3</li>
         </ul>
     </x-section>
-    <x-section title="Installation" :copy="false">
+    <x-section title="Installation" disable-copy>
         <p>1. Run the following command to include the TallStackUI as a composer dependency:</p>
         <x-code language="shell" :contents="$installation" />
         <p>2. Prepare the AlpineJS <x-block>x-cloak</x-block> directive:</p>
-        <x-code language="blade" :contents="$cloak" :copy="false" />
+        <x-code language="blade" :contents="$cloak" disable-copy />
         <p>3. Add the TallStackUI script above the <x-block>vite</x-block> tag in your layout:</p>
-        <x-code language="blade" :contents="$script" :copy="false" />
+        <x-code language="blade" :contents="$script" disable-copy />
         <p class="mt-4">4. Edit the <x-block>tailwind.config.js</x-block> of your application inserting this content:</p>
-        <x-code language="js" :contents="$tailwindcss" :copy="false" />
+        <x-code language="js" :contents="$tailwindcss" disable-copy />
         <x-warning>
             Your TailwindCSS setup must also load the <a href="https://tailwindcss.com/docs/plugins#forms" class="underline" target="_blank">form plugin</a>
         </x-warning>
         <p class="mt-4">5. Build the assets and do a full cleanup in the Laravel:</p>
         <x-code language="shell" :contents="$build" />
     </x-section>
-    <x-section title="Component Prefix" :copy="false">
+    <x-section title="Component Prefix" disable-copy>
         <p>
             Although TallStackUI offers many components out of the box, you may want to create Blade components
             with the same names as TallStackUI components, or you can even start a new Laravel project with Laravel
@@ -38,15 +38,15 @@
             You must publish the configuration file to be able to edit it.
             <a href="{{ route('documentation.configuration') }}" class="underline" target="_blank">Learn more about it by clicking here.</a>
         </x-warning>
-        <x-code :contents="$prefixing" :copy="false" />
+        <x-code :contents="$prefixing" disable-copy />
         <p>
             As the annotation itself mentions, when using a prefix, for example,
             like <x-block>ts-</x-block> then the way of using all TallStackUI components will be with <x-block>ts-</x-block>,
             for example:
         </p>
-        <x-code language="blade" :contents="$prefixExamples" :copy="false" />
+        <x-code language="blade" :contents="$prefixExamples" disable-copy />
     </x-section>
-    <x-section title="AlpineJS Requirement" :copy="false">
+    <x-section title="AlpineJS Requirement" disable-copy>
         <p>
             Livewire 3 brings AlpineJS together when you have Livewire components in the page. This made life
             easier for TallStack developers, but it brought up one concern that you need to be aware of.
@@ -54,10 +54,10 @@
             component but want to use TallStackUI components.</u> To do this, make sure you load AlpineJS
             independently of Livewire:
         </p>
-        <x-code language="blade" :contents="$alpine" :copy="false" />
+        <x-code language="blade" :contents="$alpine" disable-copy />
         <a href="https://livewire.laravel.com/docs/installation#manually-including-livewires-frontend-assets" class="underline" target="_blank">Learn more about it in the Livewire documentation.</a>
     </x-section>
-    <x-section title="Livewire SPA Mode" :copy="false">
+    <x-section title="Livewire SPA Mode" disable-copy>
         <p>
             If you are using the new Livewire SPA mode you must load the TallStackUI to the first page rendered
             in your application and persist in all other pages that want to use TallStackUI.

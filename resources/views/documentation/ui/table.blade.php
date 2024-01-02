@@ -16,14 +16,14 @@
         documentation uses Livewire through Laravel Volt instead of pure Livewire components.
         You can use the table component in pure Livewire components, i.e. without Laravel Volt.
     </x-warning>
-    <x-section title="Concept" :copy="false">
+    <x-section title="Concept" disable-copy>
         <p>
             Although many packages can add table features to your project, <u>starting from
                 version 1.6.0</u> of TallStackUI you can take advantage of the simple table component,
             but with all the basic features necessary for a table to work through Livewire components.
         </p>
     </x-section>
-    <x-section title="Data for Table" :copy="false">
+    <x-section title="Data for Table" disable-copy>
         <p>
             You have two ways to provide data to create a table: <b>1)</b> Simple data through an array
             or <b>2)</b> Data that comes from the database, using <a href="https://laravel.com/docs/10.x/pagination#paginating-eloquent-results" class="underline" target="_blank">
@@ -32,9 +32,9 @@
             sorting and pagination will be more difficult to implement.</u>
         </p>
         <p class="mt-4"><b>1)</b> Simple data through an array</p>
-        <x-code language="blade" :contents="$exampleArray" :copy="false" />
+        <x-code language="blade" :contents="$exampleArray" disable-copy />
         <p class="mt-4"><b>2)</b> Data that comes from the database</p>
-        <x-code language="blade" :contents="$exampleEloquent" :copy="false" />
+        <x-code language="blade" :contents="$exampleEloquent" disable-copy />
     </x-section>
     <x-section title="Basic Usage">
         <x-preview language="blade" :contents="$basic" :background="false">
@@ -74,20 +74,20 @@
             <livewire:documentation.ui.table :mode="7" />
         </x-preview>
     </x-section>
-    <x-section title="Interacting With Data" :copy="false">
+    <x-section title="Interacting With Data" disable-copy>
         <p>
             The table component provides a custom Blade directive <x-block>@verbatim @interact @endverbatim</x-block>
             to allow you to interact with the table columns about the data provided in each row. Allowing you to
             interact with the table and make things like add an action button for each row.
         </p>
-        <x-code :contents="$columns" :copy="false" />
+        <x-code :contents="$columns" disable-copy />
         <p>
             <a href="https://livewire.laravel.com/docs/nesting#rendering-children-in-a-loop" class="underline" target="_blank">
             As mentioned in the Livewire documentation</a>, for cases where you want to render
             components in a loop, using the Blade <x-block>@verbatim @interact @endverbatim</x-block>
             directive, you must specify a unique key for each component:
         </p>
-        <x-code :contents="$loop" :copy="false" />
+        <x-code :contents="$loop" disable-copy />
     </x-section>
     <x-slot:navigation>
         <x-slot:back>

@@ -8,7 +8,7 @@
     <x-slot:personalization>
         <livewire:documentation.personalization :$personalization component="dialog" />
     </x-slot:personalization>
-    <x-section title="Configuration" :copy="false">
+    <x-section title="Configuration" disable-copy>
         1. Insert the Dialog component on your main layout.
         <x-code language="html" :contents="$tag"/>
         2. Use the Interactions trait in your Livewire component.
@@ -36,7 +36,7 @@
         </x-warning>
     </x-section>
     <x-section title="JavaScript API" description="JavaScript API to interact with Dialog.">
-        <x-code language="blade" :contents="$javascript" :copy="false" />
+        <x-code language="blade" :contents="$javascript" disable-copy />
     </x-section>
     <x-section title="Color Personalization">
         <p>

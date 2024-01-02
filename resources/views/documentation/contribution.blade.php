@@ -5,7 +5,7 @@
     <x-slot:description>
         TallStackUI Contribuition Guide.
     </x-slot:description>
-    <x-section title="Possibilities" :copy="false">
+    <x-section title="Possibilities" disable-copy>
         <p>
             There are several ways to contribute to a library like TallStackUI, <b class="underline">don't think it's just with code.</b>
             Even if you're not an experienced developer, don't worry, there are other ways to help. Do you know
@@ -18,7 +18,7 @@
             have many ways to contribute. Choose one and go for it!
         </p>
     </x-section>
-    <x-section title="Patterns" :copy="false">
+    <x-section title="Patterns" disable-copy>
         <p>
             Before we really get into the guide on how to contribute with code, we want you to know a few things:
         </p>
@@ -29,7 +29,7 @@
             <li>All codes need to be tested with <a href="https://pestphp.com" target="_blank" class="underline">Pest</a></li>
         </ul>
     </x-section>
-    <x-section title="Prepare Environment" :copy="false">
+    <x-section title="Prepare Environment" disable-copy>
         <p>Let's prepare your environment for your first contribution:</p>
         <p class="mt-2">1. Fork the <a href="https://github.com/tallstackui/tallstackui" class="underline" target="_blank">repository</a></p>
         <p>2. Clone the repository forked for your computer.</p>
@@ -41,14 +41,14 @@
         <x-code language="shell" :contents="$link" />
         <p>9. The expected folder structure should be: <x-block>packages/tallstackui/tallstackui</x-block></p>
         <p>10. Open the <x-block>composer.json</x-block> of the Laravel project and insert the following content:</p>
-        <x-code language="json" :contents="$composer" :copy="false" />
+        <x-code language="json" :contents="$composer" disable-copy />
         <p>11. In the same <x-block>composer.json</x-block> file, change the <x-block>minimum-stability</x-block> to <x-block>dev</x-block></p>
         <p>12. After that, run the following command in the terminal:</p>
         <x-code language="shell" :contents="$command" />
         <p>13. <a href="{{ route('documentation.installation') }}" class="underline">Install the TallStackUI</a> in the Laravel project following the guide <i class="font-bold">(skip the step 1 of the tutorial)</i></p>
         <p>14. You are ready to start the work!</p>
     </x-section>
-    <x-section title="Dusk Tests" :copy="false">
+    <x-section title="Dusk Tests" disable-copy>
         <p>
             Some of the TallStackUI tests are written using <a href="https://laravel.com/docs/10.x/dusk" class="underline" target="_blank">Laravel Dusk</a>
             through the <a href="https://github.com/orchestral/testbench-dusk" class="underline" target="_blank">Orchestral Testbench Dusk.</a>
@@ -59,7 +59,7 @@
         <p class="mt-2">Alternatively, you can use:</p>
         <x-code language="shell" :contents="$alternative" />
     </x-section>
-    <x-section title="Run Tests" :copy="false">
+    <x-section title="Run Tests" disable-copy>
         <p>1. Run all tests:</p>
         <x-code language="shell" :contents="$allTests" />
         <p>2. Run only the Feature tests:</p>
@@ -71,7 +71,7 @@
         <p>5. Validate Type Coverage & PhpStan:</p>
         <x-code language="shell" :contents="$analyse" />
     </x-section>
-    <x-section title="Synchronize Changes" :copy="false">
+    <x-section title="Synchronize Changes" disable-copy>
         <p>
             Sometimes you can make changes to components, but the change is not noticed, it is
             like a cache state in the Laravel project. If this is the case,

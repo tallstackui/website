@@ -359,7 +359,7 @@
         "5": "Invokable Class",
         "6": "Component Data Parameters",
         "7": "Interacting with Default Classes",
-        "8": "Track TailwindCSS Classes",
+        "8": "Tracing TailwindCSS Classes",
         "9": "Personalizable Blocks"
     },
     "docs.personalization.deep": {
@@ -369,7 +369,7 @@
         "3": "Override Component Colors",
         "4": "Create Custom Colors",
         "5": "Publish Blade Files",
-        "6": "Track TailwindCSS Classes"
+        "6": "Tracing TailwindCSS Classes"
     },
     "docs.contribution": {
         "0": "Possibilities",

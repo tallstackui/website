@@ -1,4 +1,4 @@
-@props(['contents' => null, 'language' => 'php', 'unpadding' => false, 'copy' => true, 'personalization' => false])
+@props(['contents' => null, 'language' => 'php', 'unpadding' => false, 'disableCopy' => null, 'personalization' => false])
 
 @php
     $contents ??= $slot->toHtml();
@@ -6,7 +6,7 @@
 @endphp
 
 <div class="relative">
-    @if ($copy)
+    @if (!$disableCopy)
     <div class="absolute right-0 top-0">
         <x-copy-code :$contents :$margin />
     </div>

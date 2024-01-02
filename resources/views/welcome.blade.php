@@ -159,7 +159,7 @@
                             </div>
                             <div class="mt-20 sm:mt-24 md:mx-auto md:max-w-2xl lg:mx-0 lg:mt-0">
                                 <div class="shadow-lg md:rounded-3xl">
-                                    <x-code :contents="$personalization" :copy="false" />
+                                    <x-code :contents="$personalization" disable-copy />
                                 </div>
                             </div>
                         </div>

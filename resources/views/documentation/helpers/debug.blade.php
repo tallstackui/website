@@ -8,7 +8,7 @@
     <x-slot:description>
         Native debug mode utility.
     </x-slot:description>
-    <x-section title="Concept" :copy="false">
+    <x-section title="Concept" disable-copy>
         <p>
             If you use TallStackUI you must suffer from a common problem among all developers,
             even those who do not use TallStackUI: to know the attributes of a component we
@@ -29,7 +29,7 @@
             directly or from within other components such as parent and child.
         </p>
     </x-section>
-    <x-section title="Example" :copy="false">
+    <x-section title="Example" disable-copy>
         <p>
             Now that you understand the concept, see debug mode in action:
         </p>
@@ -42,22 +42,22 @@
             properties, are displayed in a list for you.
         </p>
     </x-section>
-    <x-section title="Activate Debug Mode" :copy="false">
+    <x-section title="Activate Debug Mode" disable-copy>
         <p>
             For a quick and easy activation, you can just create a new env variable in your <x-block>.env</x-block> file:
         </p>
-        <x-code language="env" :contents="$env" :copy="false" />
+        <x-code language="env" :contents="$env" disable-copy />
     </x-section>
-    <x-section title="Available Configurations" :copy="false">
+    <x-section title="Available Configurations" disable-copy>
         <p>
             Debug mode has a settings section in the TallStackUI configuration file.
             Through this configuration, you can configure several things, such as ignore debug
             mode for specific components. <a href="{{ route('documentation.configuration') }}" class="underline" target="_blank">
             Click here to know how to publish the configuration file.</a>
         </p>
-        <x-code :contents="$configuration" :copy="false" />
+        <x-code :contents="$configuration" disable-copy />
     </x-section>
-    <x-section title="Cautions" :copy="false">
+    <x-section title="Cautions" disable-copy>
         <ul class="list-decimal list-inside">
             <li><u>We recommend that you only use debug mode in dev. environments.</u></li>
             <li>Debug mode is skipped when running unit tests.</li>
