@@ -34,6 +34,10 @@
             For cases like this, <u>where there are name conflicts</u>, you can define a prefix for the TallStackUI
             components through the configuration file:
         </p>
+        <x-warning class="mb-4 mt-2">
+            You must publish the configuration file to be able to edit it.
+            <a href="{{ route('documentation.configuration') }}" class="underline" target="_blank">Learn more about it by clicking here.</a>
+        </x-warning>
         <x-code :contents="$prefixing" :copy="false" />
         <p>
             As the annotation itself mentions, when using a prefix, for example,
