@@ -3,7 +3,7 @@
 @php
     use Illuminate\Support\Facades\Route;
 
-    $activated ??= str($href)->contains(Route::current()->compiled->getStaticPrefix());
+    $activated ??= (str($href)->remove(config('app.url'))->value() === Route::current()->compiled->getStaticPrefix());
 @endphp
 
 <a href="{{ $href }}" {{ $attributes->class([
