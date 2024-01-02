@@ -1960,16 +1960,16 @@
         },
         {
             "name": "livewire/livewire",
-            "version": "v3.3.3",
+            "version": "v3.3.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/livewire/livewire.git",
-                "reference": "6dd3bec8c711cd792742be4620057637e261e6f7"
+                "reference": "470290c99b001d61751b4fe7e56327db4370cb87"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/livewire/livewire/zipball/6dd3bec8c711cd792742be4620057637e261e6f7",
-                "reference": "6dd3bec8c711cd792742be4620057637e261e6f7",
+                "url": "https://api.github.com/repos/livewire/livewire/zipball/470290c99b001d61751b4fe7e56327db4370cb87",
+                "reference": "470290c99b001d61751b4fe7e56327db4370cb87",
                 "shasum": ""
             },
             "require": {
@@ -2022,7 +2022,7 @@
             "description": "A front-end framework for Laravel.",
             "support": {
                 "issues": "https://github.com/livewire/livewire/issues",
-                "source": "https://github.com/livewire/livewire/tree/v3.3.3"
+                "source": "https://github.com/livewire/livewire/tree/v3.3.4"
             },
             "funding": [
                 {
@@ -2030,7 +2030,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-12-20T05:34:05+00:00"
+            "time": "2024-01-01T17:22:47+00:00"
         },
         {
             "name": "livewire/volt",
@@ -5653,16 +5653,16 @@
         },
         {
             "name": "tallstackui/tallstackui",
-            "version": "v1.7.1",
+            "version": "v1.8.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/tallstackui/tallstackui.git",
-                "reference": "1689219d6627c67ab0c6819e6de7c97af08f14f7"
+                "reference": "1504dc42d2408dcff83ca6f94feeb7e9e8db4aa7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tallstackui/tallstackui/zipball/1689219d6627c67ab0c6819e6de7c97af08f14f7",
-                "reference": "1689219d6627c67ab0c6819e6de7c97af08f14f7",
+                "url": "https://api.github.com/repos/tallstackui/tallstackui/zipball/1504dc42d2408dcff83ca6f94feeb7e9e8db4aa7",
+                "reference": "1504dc42d2408dcff83ca6f94feeb7e9e8db4aa7",
                 "shasum": ""
             },
             "require": {
@@ -5708,7 +5708,7 @@
             "description": "A curated list of TallStack UI Components",
             "support": {
                 "issues": "https://github.com/tallstackui/tallstackui/issues",
-                "source": "https://github.com/tallstackui/tallstackui/tree/v1.7.1"
+                "source": "https://github.com/tallstackui/tallstackui/tree/v1.8.0"
             },
             "funding": [
                 {
@@ -5716,7 +5716,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-12-31T03:49:17+00:00"
+            "time": "2024-01-02T03:15:28+00:00"
         },
         {
             "name": "tijsverkoyen/css-to-inline-styles",
