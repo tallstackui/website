@@ -2,6 +2,7 @@
     "docs.installation": {
         "0": "Requirements",
         "1": "Installation",
+        "2": "Component Prefix",
         "3": "AlpineJS Requirement",
         "4": "Livewire SPA Mode"
     },

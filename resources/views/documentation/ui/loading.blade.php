@@ -18,6 +18,10 @@
             situations where you are waiting for a Livewire component to finish an operation.
         </p>
     </x-section>
+    <x-warning class="mb-6">
+        Since the <b>wire:loading</b> is not applied to the initial render state of a Livewire component,
+        then the loading component does not apply to initial rendering, but rather to Livewire updates.
+    </x-warning>
     <x-section title="Attributes" :copy="false">
         <p>
             When using the Loading component you shouldn't specify the <x-block>wire:loading</x-block>

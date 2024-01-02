@@ -26,6 +26,22 @@
         <p class="mt-4">5. Build the assets and do a full cleanup in the Laravel:</p>
         <x-code language="shell" :contents="$build" />
     </x-section>
+    <x-section title="Component Prefix" :copy="false">
+        <p>
+            Although TallStackUI offers many components out of the box, you may want to create Blade components
+            with the same names as TallStackUI components, or you can even start a new Laravel project with Laravel
+            Breeze or Laravel JetStream and continue using some of the components they have offer, as <x-block>dropdown</x-block>.
+            For cases like this, <u>where there are name conflicts</u>, you can define a prefix for the TallStackUI
+            components through the configuration file:
+        </p>
+        <x-code :contents="$prefixing" :copy="false" />
+        <p>
+            As the annotation itself mentions, when using a prefix, for example,
+            like <x-block>ts-</x-block> then the way of using all TallStackUI components will be with <x-block>ts-</x-block>,
+            for example:
+        </p>
+        <x-code language="blade" :contents="$prefixExamples" :copy="false" />
+    </x-section>
     <x-section title="AlpineJS Requirement" :copy="false">
         <p>
             Livewire 3 brings AlpineJS together when you have Livewire components in the page. This made life
