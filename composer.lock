@@ -5653,16 +5653,16 @@
         },
         {
             "name": "tallstackui/tallstackui",
-            "version": "v1.8.0",
+            "version": "v1.8.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/tallstackui/tallstackui.git",
-                "reference": "1504dc42d2408dcff83ca6f94feeb7e9e8db4aa7"
+                "reference": "935399ea4574e1a5347fe7f0b6f5532de83c216e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tallstackui/tallstackui/zipball/1504dc42d2408dcff83ca6f94feeb7e9e8db4aa7",
-                "reference": "1504dc42d2408dcff83ca6f94feeb7e9e8db4aa7",
+                "url": "https://api.github.com/repos/tallstackui/tallstackui/zipball/935399ea4574e1a5347fe7f0b6f5532de83c216e",
+                "reference": "935399ea4574e1a5347fe7f0b6f5532de83c216e",
                 "shasum": ""
             },
             "require": {
@@ -5708,7 +5708,7 @@
             "description": "A curated list of TallStack UI Components",
             "support": {
                 "issues": "https://github.com/tallstackui/tallstackui/issues",
-                "source": "https://github.com/tallstackui/tallstackui/tree/v1.8.0"
+                "source": "https://github.com/tallstackui/tallstackui/tree/v1.8.1"
             },
             "funding": [
                 {
@@ -5716,7 +5716,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-01-02T03:15:28+00:00"
+            "time": "2024-01-02T15:24:35+00:00"
         },
         {
             "name": "tijsverkoyen/css-to-inline-styles",
@@ -6198,16 +6198,16 @@
         },
         {
             "name": "fakerphp/faker",
-            "version": "v1.23.0",
+            "version": "v1.23.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/FakerPHP/Faker.git",
-                "reference": "e3daa170d00fde61ea7719ef47bb09bb8f1d9b01"
+                "reference": "bfb4fe148adbf78eff521199619b93a52ae3554b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/FakerPHP/Faker/zipball/e3daa170d00fde61ea7719ef47bb09bb8f1d9b01",
-                "reference": "e3daa170d00fde61ea7719ef47bb09bb8f1d9b01",
+                "url": "https://api.github.com/repos/FakerPHP/Faker/zipball/bfb4fe148adbf78eff521199619b93a52ae3554b",
+                "reference": "bfb4fe148adbf78eff521199619b93a52ae3554b",
                 "shasum": ""
             },
             "require": {
@@ -6233,11 +6233,6 @@
                 "ext-mbstring": "Required for multibyte Unicode string functionality."
             },
             "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-main": "v1.21-dev"
-                }
-            },
             "autoload": {
                 "psr-4": {
                     "Faker\\": "src/Faker/"
@@ -6260,9 +6255,9 @@
             ],
             "support": {
                 "issues": "https://github.com/FakerPHP/Faker/issues",
-                "source": "https://github.com/FakerPHP/Faker/tree/v1.23.0"
+                "source": "https://github.com/FakerPHP/Faker/tree/v1.23.1"
             },
-            "time": "2023-06-12T08:44:38+00:00"
+            "time": "2024-01-02T13:46:09+00:00"
         },
         {
             "name": "fidry/cpu-core-counter",

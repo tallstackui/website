@@ -73,13 +73,10 @@
         <x-preview language="blade" :contents="$paginate" :background="false">
             <livewire:documentation.ui.table :mode="7" />
         </x-preview>
-        <x-warning>
-            The paginator element has a different style when in mobile.
-        </x-warning>
     </x-section>
     <x-section title="Interacting With Data" :copy="false">
         <p>
-            The table component provides a custom Blade directive <x-block>@verbatim @column @endverbatim</x-block>
+            The table component provides a custom Blade directive <x-block>@verbatim @interact @endverbatim</x-block>
             to allow you to interact with the table columns about the data provided in each row. Allowing you to
             interact with the table and make things like add an action button for each row.
         </p>
@@ -87,7 +84,7 @@
         <p>
             <a href="https://livewire.laravel.com/docs/nesting#rendering-children-in-a-loop" class="underline" target="_blank">
             As mentioned in the Livewire documentation</a>, for cases where you want to render
-            components in a loop, using the Blade <x-block>@verbatim @column @endverbatim</x-block>
+            components in a loop, using the Blade <x-block>@verbatim @interact @endverbatim</x-block>
             directive, you must specify a unique key for each component:
         </p>
         <x-code :contents="$loop" :copy="false" />

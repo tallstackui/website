@@ -64,6 +64,6 @@ new class extends Component {
     @elseif ($mode === 6)
         <x-table :$headers :$rows :$sort/>
     @elseif ($mode === 7)
-        <x-table :$headers :$rows paginate/>
+        <x-table :$headers :$rows paginate id="demo"/>
     @endif
 </div>

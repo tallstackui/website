@@ -262,13 +262,21 @@ class Table
     }; ?>
 
     <div>
-        <x-table :$headers :$rows paginate />
+        <!--
+        The `id` parameter must be set in order to use the pagination. You need
+        to set a different id for each table when you have multiples tables in
+        the same page.
+        -->
+        <x-table :$headers :$rows paginate id="users" />
+
+        <!-- You can use the paginator with mobile style even when in desktop -->
+        <x-table :$headers :$rows paginate id="users" simple-pagination />
 
         <!--
         You can disable the TallStackUI paginator element. When you do that
         the table component will use the Livewire paginator element.
         -->
-        <x-table :$headers :$rows paginate :paginator="null" />
+        <x-table :$headers :$rows paginate :paginator="null" id="users" />
     </div>
     HTML;
 
@@ -311,22 +319,22 @@ class Table
 
     <div>
         <!-- 1: -->
-        <x-table :$headers :$rows filter paginate>
+        <x-table :$headers :$rows filter paginate id="users">
             <!-- The $row represents the instance of \App\Model\User of each row -->
-            @column('action', $row) <!-- [tl! highlight] -->
+            @interact('column_action', $row) <!-- [tl! highlight] -->
                 <x-button.circle color="red"
                                  icon="trash"
                                  wire:click="delete('{{ $row->id }}')" />
-            @endcolumn
+            @endinteract
         </x-table>
 
         <!-- 2: You can pass extra variables to the directive -->
-        <x-table :$headers :$rows filter paginate>
-            @column('action', $row, $type) <!-- [tl! highlight] -->
+        <x-table :$headers :$rows filter paginate id="users">
+            @interact('column_action', $row, $type) <!-- [tl! highlight] -->
                 <x-button.circle color="red"
                                  icon="trash"
                                  wire:click="delete('{{ $row->id }}', '{{ $type }}')" />
-            @endcolumn
+            @endinteract
         </x-table>
     </div>
     HTML;
@@ -363,10 +371,10 @@ class Table
     }; ?>
 
     <div>
-        <x-table :$headers :$rows filter paginate>
-            @column('action', $row)
+        <x-table :$headers :$rows filter paginate id="users">
+            @interact('column_action', $row)
                 <livewire:delete.user :user="$row" :key="uniqid()" /> <!-- [tl! highlight] -->
-            @endcolumn
+            @endinteract
         </x-table>
     </div>
     HTML;
