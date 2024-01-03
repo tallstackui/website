@@ -93,7 +93,7 @@ $save = function () {
                         <x-pin prefix="TS-"
                                length="5"
                                clear
-                               label="Secret Confirmation Code *"
+                               label="Secret Code *"
                                hint="Enter the code: 12345"
                                wire:model="secret" />
                     </div>
