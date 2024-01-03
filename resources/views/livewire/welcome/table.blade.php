@@ -14,16 +14,22 @@ new class extends Component {
 
     public ?string $search = null;
 
+    public array $sort = [
+        'column' => 'id',
+        'direction' => 'asc',
+    ];
+
     public function with(): array
     {
         return [
             'headers' => [
                 ['index' => 'id', 'label' => '#'],
                 ['index' => 'name', 'label' => 'Member'],
-                ['index' => 'action', 'label' => 'Remove of Laravel Team'],
+                ['index' => 'action', 'label' => 'Remove of Laravel Team', 'sortable' => false],
             ],
             'rows' => User::query()
                 ->when($this->search, fn(Builder $query) => $query->where('name', 'like', "%{$this->search}%"))
+                ->orderBy(...array_values($this->sort))
                 ->paginate($this->quantity)
                 ->withQueryString()
         ];
@@ -40,6 +46,7 @@ new class extends Component {
 <div>
     <x-table :$headers
              :$rows
+             :$sort
              filter
              paginate
              :quantity="[2,5,7]"

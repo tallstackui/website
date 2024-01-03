@@ -136,7 +136,7 @@
                             <dl class="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-4">
                                 <div class="flex flex-col">
                                     <dt class="flex items-center gap-x-3 text-lg font-semibold uppercase leading-7 text-gray-700 dark:text-pink-500">
-                                        <x-icon name="bolt" class="h-6 w-6 text-pink-500 dark:text-dark-400" />
+                                        <x-icon name="bolt" class="h-6 w-6 text-pink-500 dark:text-white" />
                                         Ready-to-use
                                     </dt>
                                     <dd class="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-600 dark:text-gray-400">
@@ -145,7 +145,7 @@
                                 </div>
                                 <div class="flex flex-col">
                                     <dt class="flex items-center gap-x-3 text-lg font-semibold uppercase leading-7 text-gray-700 dark:text-pink-500">
-                                        <x-icon name="wrench" class="h-6 w-6 text-pink-500 dark:text-dark-400" />
+                                        <x-icon name="wrench" class="h-6 w-6 text-pink-500 dark:text-white" />
                                         Easy Installation
                                     </dt>
                                     <dd class="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-600 dark:text-gray-400">
@@ -154,7 +154,7 @@
                                 </div>
                                 <div class="flex flex-col">
                                     <dt class="flex items-center gap-x-3 text-lg font-semibold uppercase leading-7 text-gray-700 dark:text-pink-500">
-                                        <x-icon name="paint-brush" class="h-6 w-6 text-pink-500 dark:text-dark-400" />
+                                        <x-icon name="paint-brush" class="h-6 w-6 text-pink-500 dark:text-white" />
                                         Full Personalized
                                     </dt>
                                     <dd class="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-600 dark:text-gray-400">
@@ -163,7 +163,7 @@
                                 </div>
                                 <div class="flex flex-col">
                                     <dt class="flex items-center gap-x-3 text-lg font-semibold uppercase leading-7 text-gray-700 dark:text-pink-500">
-                                        <x-icon name="wrench-screwdriver" class="h-6 w-6 text-pink-500 dark:text-dark-400" />
+                                        <x-icon name="wrench-screwdriver" class="h-6 w-6 text-pink-500 dark:text-white" />
                                         Continuous Updates
                                     </dt>
                                     <dd class="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-600 dark:text-gray-400">
@@ -294,7 +294,7 @@
                                 </div>
                             </dl>
                         </div>
-                        <div class="mt-16 flex justify-center">
+                        <div class="mt-20 flex justify-center">
                             <a href="{{ route('documentation.get-started') }}" class="text-2xl font-semibold text-gray-700 dark:text-pink-600">
                                 ... And muuuch more 🔥 Start your next idea using TallStackUI now!
                             </a>
