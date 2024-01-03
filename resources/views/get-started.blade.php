@@ -2,14 +2,14 @@
     <x-slot:title>
         Get Started
     </x-slot:title>
-    <x-section :copy="false">
+    <x-section disable-copy>
         <p>
             This is the TallStackUI, a library of ready-to-use components for TALL Stack applications.
             TallStackUI is unlike anything you've ever seen, from its conception to construction and general
             availability. Beforehand we want to tell you a little about our motivation.
         </p>
     </x-section>
-    <x-section class="space-y-4" title="Motivations" :copy="false">
+    <x-section class="space-y-4" title="Motivations" disable-copy>
         <p>
             Hey! I'm <a href="https://github.com/devajmeireles" class="underline" target="_blank">AJ</a>,
             creator of TallStackUI and FullStack PHP developer since 10 years ago. I'm passionate about TALL

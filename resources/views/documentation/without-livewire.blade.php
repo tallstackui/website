@@ -8,7 +8,7 @@
     <x-slot:description>
         TallStackUI Form Components Without Livewire.
     </x-slot:description>
-    <x-section title="Concept" :copy="false">
+    <x-section title="Concept" disable-copy>
         TallStackUI is a component library that was designed for Livewire 3, but after various
         requests from the entire user community, <u>starting from version 1.5.3</u> you can use form
         components out of Livewire components. Before version 1.5.3 you could already use the
@@ -16,10 +16,10 @@
         a certain "workaround" to work. Now all components can be used, including selects. See
         the examples below to learn how to use it.
     </x-section>
-    <x-section title="Example" :copy="false">
-        <x-code language="blade" :contents="$example" :copy="false" />
+    <x-section title="Example" disable-copy>
+        <x-code language="blade" :contents="$example" disable-copy />
     </x-section>
-    <x-section title="Concerns" :copy="false">
+    <x-section title="Concerns" disable-copy>
         <p>
             As you can see in the example above, all form components can be used in a form out of
             the Livewire context. If you notice that something is not working correctly, <b>we ask
@@ -36,8 +36,8 @@
             then obtaining the value in the controller must do the <x-block>json_decode</x-block> of the value:
         </p>
         <p class="mt-4"><b>1)</b> Blade:</p>
-        <x-code language="blade" :contents="$jsonDecodeBlade" :copy="false" />
+        <x-code language="blade" :contents="$jsonDecodeBlade" disable-copy />
         <p><b>2)</b> Controller:</p>
-        <x-code :contents="$jsonDecodeController" :copy="false" />
+        <x-code :contents="$jsonDecodeController" disable-copy />
     </x-section>
 </x-layout>

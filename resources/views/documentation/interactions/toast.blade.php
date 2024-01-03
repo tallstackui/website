@@ -8,7 +8,7 @@
     <x-slot:personalization>
         <livewire:documentation.personalization :$personalization component="toast" />
     </x-slot:personalization>
-    <x-section title="Configuration" :copy="false">
+    <x-section title="Configuration" disable-copy>
         1. Insert the Toast component on your main layout.
         <x-code language="html" :contents="$tag"/>
         2. Use the Interactions trait in your Livewire component.
@@ -40,7 +40,7 @@
             You can configure Toast to be extensible by default in <a href="{{ route('documentation.configuration') }}" class="underline">the configuration file.</a> When you
             do that, you can optionally ignore the expandable for specific Toast:
         </p>
-        <x-code :contents="$ignoringExpandable" :copy="false" />
+        <x-code :contents="$ignoringExpandable" disable-copy />
     </x-section>
     <x-section title="Events" description="An option to listen to events.">
         <x-preview language="blade" :contents="$events">
@@ -51,7 +51,7 @@
         </x-warning>
     </x-section>
     <x-section title="JavaScript API" description="JavaScript API to interact with Toast.">
-        <x-code language="blade" :contents="$javascript" :copy="false" />
+        <x-code language="blade" :contents="$javascript" disable-copy />
     </x-section>
     <x-section title="Color Personalization">
         <p>

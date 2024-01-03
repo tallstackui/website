@@ -1,19 +1,19 @@
-@props(['title' => null, 'description' => null, 'anchor' => null, 'id' => null, 'p' => null, 'copy' => true])
+@props(['title' => null, 'description' => null, 'anchor' => null, 'id' => null, 'p' => null, 'disableCopy' => null])
 
 @php($anchor ??= str($title)->slug()->lower())
 
 <section x-data="{ anchor : false, code : false }" id="{{ $anchor }}" {{ $attributes->merge(['class' => 'text-gray-600 mb-6 dark:text-slate-400']) }} @if ($id) id="{{ $id }}" @endif>
-    @if ($title || $copy)
+    @if ($title)
         <div @class(['flex items-center justify-between', 'mb-2' => $description === null])>
             @if ($title)
             <h2 @class(['text-xl tracking-tight text-pink-600 font-medium cursor-pointer']) x-on:mouseover="anchor = true" x-on:mouseleave="anchor = false">
                 <a href="#{{ $anchor }}">
-                    <span class="text-gray-400 dark:text-gray-600" x-show="anchor">#</span>
+                    <span class="text-gray-400 dark:text-gray-400" x-show="anchor">#</span>
                     {{ $title }}
                 </a>
             </h2>
             @endif
-            @if ($copy)
+            @if (!$disableCopy)
                 <div class="flex rounded-md bg-transparent">
                     <button class="flex items-center gap-x-1 overflow-hidden rounded-md p-1 text-sm transition focus:outline-none sm:px-2"
                             :class="{

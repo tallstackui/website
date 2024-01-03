@@ -5,7 +5,7 @@
     <x-slot:description>
         Native AlpineJS integration.
     </x-slot:description>
-    <x-section title="Concept" :copy="false">
+    <x-section title="Concept" disable-copy>
         <p>
             TallStackUI was designed to work only with Livewire in version 3, and Livewire natively
             delivers AlpineJS in its core in this new version. Therefore, you can take advantage of

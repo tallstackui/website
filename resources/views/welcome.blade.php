@@ -39,6 +39,8 @@
 </head>
 <body class="min-h-full flex-col justify-center bg-gray-100 dark:bg-slate-900" x-bind:class="{ 'bg-dots-white' : darkTheme, 'bg-dots-darker' : !darkTheme }">
     <x-top-bar />
+    <x-toast />
+    <x-dialog />
     <div id="docsearch" class="hidden"></div>
     <div class="flex flex-col">
         <main class="relative mx-auto flex w-full max-w-screen-2xl flex-auto justify-center sm:px-2 lg:px-8 xl:px-12">
@@ -54,132 +56,280 @@
                         </div>
                     </nav>
                 </header>
-                <section class="relative isolate px-6 lg:px-8">
-                    <div class="mx-auto max-w-4xl pt-28 pb-20">
-                        <div class="text-center">
-                            <x-svg.tallstackui />
-                            <div>
-                                <p class="text-2xl leading-8 text-gray-700 dark:text-white">
-                                    Your new friendly
-                                    <span class="relative inline-block">
-                                        <span class="z-10 w-full font-semibold">TALL Stack</span>
-                                        <span class="absolute bottom-0 left-0 h-1 w-full bg-pink-500"></span>
-                                    </span> component library.
-                                </p>
-                            </div>
-                            <div class="mt-10 flex items-center justify-center gap-x-2">
-                                <x-button :href="route('documentation.get-started')"
-                                          color="pink"
-                                          position="right"
-                                          lg>
-                                    Get Started
-                                </x-button>
-                                {{-- workaround... --}}
-                                <div class="block dark:hidden">
-                                    <x-button href="https://github.com/tallstackui/tallstackui"
-                                              target="_blank"
-                                              color="pink"
-                                              position="right"
-                                              outline
-                                              lg>
-                                        Source Code
-                                    </x-button>
+                <section class="relative isolate bg-transparent">
+                    <div class="relative">
+                        <div class="relative pb-16">
+                            <main class="mt-16 sm:mt-24">
+                                <div class="mx-auto max-w-7xl">
+                                    <div class="lg:grid lg:grid-cols-12 lg:gap-8">
+                                        <div class="px-6 sm:text-center md:mx-auto md:max-w-2xl lg:col-span-6 lg:flex lg:items-center lg:text-left">
+                                            <div>
+                                                <div class="hidden sm:mb-4 sm:flex sm:justify-center lg:justify-start">
+                                                    <x-button href="https://discord.gg/sfr66WXh4A"
+                                                              target="_blank"
+                                                              sm
+                                                              round
+                                                              color="pink"
+                                                              icon="arrow-up-right"
+                                                              position="right">
+                                                        Join us on Discord server for support and early updates!
+                                                    </x-button>
+                                                </div>
+                                                <h1 class="text-4xl font-bold tracking-tight text-pink-900 dark:text-white sm:text-5xl md:text-6xl">
+                                                    Turbocharge your experience with ready-to-use <i>TALL Stack</i> components.
+                                                </h1>
+                                                <p class="mt-3 text-base text-gray-700 font-base dark:text-gray-300 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl">
+                                                    TallStackUI is a powerful
+                                                    <span class="relative inline-block">
+                                                        <span class="absolute bottom-0 left-0 -z-50 h-1 w-full bg-pink-500"></span>
+                                                        <span class="z-50 w-full font-semibold">suite of 30+ Blade components</span>
+                                                    </span> that elevate your workflow of <i>Livewire</i> applications.
+                                                </p>
+                                                <div class="mt-4 flex items-center gap-x-2">
+                                                    <x-button :href="route('documentation.get-started')"
+                                                              color="pink"
+                                                              position="right"
+                                                              lg>
+                                                        Get Started
+                                                    </x-button>
+                                                    {{-- workaround... --}}
+                                                    <div class="block dark:hidden">
+                                                        <x-button href="https://github.com/tallstackui/tallstackui"
+                                                                  target="_blank"
+                                                                  color="pink"
+                                                                  position="right"
+                                                                  outline
+                                                                  lg>
+                                                            Source Code
+                                                        </x-button>
+                                                    </div>
+                                                    <div class="hidden dark:block">
+                                                        <x-button href="https://github.com/tallstackui/tallstackui"
+                                                                  target="_blank"
+                                                                  color="white"
+                                                                  position="right"
+                                                                  outline
+                                                                  lg>
+                                                            Source Code
+                                                        </x-button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="mt-16 sm:mt-24 lg:col-span-6 lg:mt-0">
+                                            <livewire:welcome.form />
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="hidden dark:block">
-                                    <x-button href="https://github.com/tallstackui/tallstackui"
-                                              target="_blank"
-                                              color="white"
-                                              position="right"
-                                              outline
-                                              lg>
-                                        Source Code
-                                    </x-button>
-                                </div>
-                            </div>
+                            </main>
                         </div>
                     </div>
                 </section>
-                <section class="bg-transparent">
+                <section class="mt-10 bg-transparent">
                     <div class="mx-auto max-w-7xl px-6 lg:px-8">
                         <div class="mx-auto max-w-2xl lg:text-center">
-                            <p class="mt-2 text-3xl font-bold tracking-tight text-gray-700 dark:text-gray-300 sm:text-4xl">
-                                Turbocharge your experience with ready-to-use TALL Stack components.
-                            </p>
-                            <p class="mt-6 leading-8 text-gray-600 text-md dark:text-gray-400 md:text-lg">
-                                Elevate your TALL Stack workflow with a wide range of flexible components.
+                            <p class="mt-2 text-3xl font-bold tracking-tight text-gray-700 dark:text-white sm:text-4xl">
+                                What makes TallStackUI different?
                             </p>
                         </div>
                         <div class="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
-                            <dl class="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-3">
+                            <dl class="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-4">
                                 <div class="flex flex-col">
                                     <dt class="flex items-center gap-x-3 text-lg font-semibold uppercase leading-7 text-gray-700 dark:text-pink-500">
-                                        <x-icon name="cloud-arrow-up" class="h-6 w-6 text-pink-500 dark:text-gray-300" />
+                                        <x-icon name="bolt" class="h-6 w-6 text-pink-500 dark:text-white" />
                                         Ready-to-use
                                     </dt>
-                                    <dd class="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-600 dark:text-gray-400">
-                                        <p class="flex-auto">More than 20 ready-to-use components, and more than 10 components are in development.</p>
+                                    <dd class="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-600 dark:text-gray-300">
+                                        <p class="flex-auto">More than 30 ready-to-use components, and more than 10 components are in development.</p>
                                     </dd>
                                 </div>
                                 <div class="flex flex-col">
                                     <dt class="flex items-center gap-x-3 text-lg font-semibold uppercase leading-7 text-gray-700 dark:text-pink-500">
-                                        <x-icon name="wrench" class="h-6 w-6 text-pink-500 dark:text-gray-300" />
+                                        <x-icon name="wrench" class="h-6 w-6 text-pink-500 dark:text-white" />
                                         Easy Installation
                                     </dt>
-                                    <dd class="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-600 dark:text-gray-400">
+                                    <dd class="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-600 dark:text-gray-300">
                                         <p class="flex-auto">Components in less than five minutes. A quick installation to save your development time.</p>
                                     </dd>
                                 </div>
                                 <div class="flex flex-col">
                                     <dt class="flex items-center gap-x-3 text-lg font-semibold uppercase leading-7 text-gray-700 dark:text-pink-500">
-                                        <x-icon name="paint-brush" class="h-6 w-6 text-pink-500 dark:text-gray-300" />
+                                        <x-icon name="paint-brush" class="h-6 w-6 text-pink-500 dark:text-white" />
                                         Full Personalized
                                     </dt>
-                                    <dd class="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-600 dark:text-gray-400">
+                                    <dd class="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-600 dark:text-gray-300">
                                         <p class="flex-auto">New and unique customization approaches. You've never seen anything like this before.</p>
                                     </dd>
                                 </div>
+                                <div class="flex flex-col">
+                                    <dt class="flex items-center gap-x-3 text-lg font-semibold uppercase leading-7 text-gray-700 dark:text-pink-500">
+                                        <x-icon name="wrench-screwdriver" class="h-6 w-6 text-pink-500 dark:text-white" />
+                                        Continuous Updates
+                                    </dt>
+                                    <dd class="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-600 dark:text-gray-300">
+                                        <p class="flex-auto">Developers committed to constantly updating the library to add new content or improve current.</p>
+                                    </dd>
+                                </div>
                             </dl>
-                            <x-icon name="arrow-down-circle" class="mx-auto mt-16 h-12 w-12 animate-bounce text-pink-500 dark:text-pink-700" outline />
                         </div>
                     </div>
                 </section>
+                <x-icon name="arrow-down-circle" class="mx-auto mt-16 h-12 w-12 animate-bounce text-pink-500 dark:text-pink-700" outline />
+                <section class="mt-10 bg-transparent">
+                    <div class="mx-auto max-w-7xl px-6 lg:px-8">
+                        <div class="mx-auto max-w-2xl lg:text-center">
+                            <p class="mt-2 text-3xl font-bold tracking-tight text-gray-700 dark:text-white sm:text-4xl">
+                                Everything you need in a single place to start your next TALL Stack project.
+                            </p>
+                            <p class="mt-6 text-lg leading-8 text-gray-700 dark:text-gray-400">
+                                See some of our <b class="text-pink-700 dark:text-gray-300">30+ Blade components</b> in a quick overview.
+                            </p>
+                        </div>
+                        <div class="mx-auto mt-16 max-w-2xl space-y-4 lg:max-w-none">
+                            <dl class="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-1">
+                                <div class="flex flex-col">
+                                    <dt class="flex items-center gap-x-3 text-base font-semibold leading-7 text-gray-700 dark:text-pink-600">
+                                        ALERTS
+                                    </dt>
+                                    <dd class="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-300 space-y-2">
+                                        <x-alert>Your text goes here...</x-alert>
+                                        <x-alert color="pink">... With a lot of color variations</x-alert>
+                                        <x-alert icon="check-circle" light close title="Light">... And with different styles!</x-alert>
+                                    </dd>
+                                </div>
+                            </dl>
+                            <dl class="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-1">
+                                <div class="flex flex-col">
+                                    <dt class="flex items-center gap-x-3 text-base font-semibold leading-7 text-gray-700 dark:text-pink-600">
+                                        BADGES
+                                    </dt>
+                                    <dd class="mt-4 text-base leading-7 text-gray-300 space-y-2">
+                                        <x-badge>Your text goes here...</x-badge>
+                                        <x-badge color="pink">... with a lot of color variations</x-badge>
+                                        <x-badge color="sky" round icon="check-circle" outline>and</x-badge>
+                                        <x-badge color="sky" square light>with</x-badge>
+                                        <x-badge color="sky" round>different</x-badge>
+                                        <x-badge color="sky" square icon="check-circle">styles</x-badge>
+                                        <x-badge color="pink">
+                                            <x-slot:left>
+                                                <p class="mr-2 text-xs text-amber-400">+99</p>
+                                            </x-slot:left>
+                                            and possibilities!
+                                        </x-badge>
+                                    </dd>
+                                </div>
+                            </dl>
+                            <dl class="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-1">
+                                <div class="flex flex-col">
+                                    <dt class="flex items-center gap-x-3 text-base font-semibold leading-7 text-gray-700 dark:text-pink-600">
+                                        MODAL & SLIDES
+                                    </dt>
+                                    <dd class="mt-4 text-base leading-7 text-gray-300 space-y-2">
+                                        <x-modal title="TallStackUi" id="modal-example">
+                                            Your form content goes here...
+                                            <x-slot:footer>
+                                                <x-button color="red" x-on:click="$modalClose('modal-example')">
+                                                    Close
+                                                </x-button>
+                                            </x-slot:footer>
+                                        </x-modal>
+                                        <x-modal title="TallStackUi" blur id="modal-blur-example">
+                                            Your form content goes here...
+                                            <x-slot:footer>
+                                                <x-button color="red" x-on:click="$modalClose('modal-blur-example')">
+                                                    Close
+                                                </x-button>
+                                            </x-slot:footer>
+                                        </x-modal>
+                                        <x-slide title="TallStackUi" id="slide-example">
+                                            ... Can you imagine a complete form content here?
+                                        </x-slide>
+                                        <x-slide title="TallStackUi" blur id="slide-full-example" size="full">
+                                            ... Can you imagine a big content here?
+                                            <x-slot:footer end>
+                                                <x-button color="red" x-on:click="$slideClose('slide-full-example')">
+                                                    Close
+                                                </x-button>
+                                            </x-slot:footer>
+                                        </x-slide>
+                                        <x-button x-on:click="$modalOpen('modal-example')">
+                                            Modal
+                                        </x-button>
+                                        <x-button x-on:click="$modalOpen('modal-blur-example')">
+                                            Modal <i>(Blur)</i>
+                                        </x-button>
+                                        <x-button color="pink" x-on:click="$slideOpen('slide-example')">
+                                            Slide
+                                        </x-button>
+                                        <x-button color="pink" x-on:click="$slideOpen('slide-full-example')">
+                                            Slide <i>(Full)</i>
+                                        </x-button>
+                                    </dd>
+                                </div>
+                            </dl>
+                            <dl class="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-1">
+                                <div class="flex flex-col">
+                                    <dt class="flex items-center gap-x-3 text-base font-semibold leading-7 text-gray-700 dark:text-pink-600">
+                                        CLIPBOARD
+                                    </dt>
+                                    <dd class="mt-4 text-base leading-7 text-gray-300 space-y-2">
+                                        <x-clipboard label="Normal"
+                                                     text="TallStackUI" />
+                                        <x-clipboard label="Secret 🫢"
+                                                     hint="Click to copy the secret content"
+                                                     text="TallStackUI is the best TALL Stack UI library" secret />
+                                        <x-clipboard icon
+                                                     text="TallStackUI is the best TALL Stack UI library" />
+                                    </dd>
+                                </div>
+                            </dl>
+                            <dl class="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-1">
+                                <div class="flex flex-col">
+                                    <dt class="flex items-center gap-x-3 text-base font-semibold leading-7 text-gray-700 dark:text-pink-600">
+                                        TABLE
+                                    </dt>
+                                    <dd class="mt-4 text-base leading-7 text-gray-300 space-y-2">
+                                        <livewire:welcome.table />
+                                    </dd>
+                                </div>
+                            </dl>
+                        </div>
+                    </div>
+                </section>
+                <x-icon name="arrow-down-circle" class="mx-auto mt-16 h-12 w-12 animate-bounce text-pink-500 dark:text-pink-700" outline />
                 <section class="mt-16 bg-transparent">
                     <div class="relative isolate overflow-hidden">
-                        <div class="mx-auto max-w-7xl pt-10 pb-16 sm:pb-32 lg:grid lg:grid-cols-2 lg:gap-x-8 lg:px-8 lg:py-40">
+                        <div class="mx-auto max-w-7xl pt-10 pb-16 lg:grid lg:grid-cols-2 lg:gap-x-8 lg:px-8">
                             <div class="px-6 lg:px-0 lg:pt-4">
                                 <div class="mx-auto max-w-2xl">
                                     <div class="max-w-lg">
                                         <h1 class="mt-10 text-4xl font-bold tracking-tight text-gray-700 dark:text-white sm:text-6xl">A personalization approach never seen before.</h1>
-                                        <p class="mt-6 text-lg leading-8 text-gray-600 dark:text-gray-400">Enjoy <u class="text-pink-500 font-semibold">soft personalization</u> to customize your components at runtime. In just a few minutes and without technical effort, you can personalize all the TallStackUI components.</p>
+                                        <p class="mt-6 text-lg leading-8 text-gray-600 dark:text-gray-300">Enjoy <u class="font-semibold text-pink-700 dark:text-gray-300">soft personalization</u> to customize your components at runtime. In just a few minutes and without technical effort, you can personalize all the TallStackUI components.</p>
                                         <div class="mt-10 flex items-center gap-x-6">
-                                            <a href="{{ route('documentation.personalization.soft') }}" class="text-sm font-semibold leading-6 text-gray-700 dark:text-white">Learn more <span aria-hidden="true">→</span></a>
+                                            <a href="{{ route('documentation.personalization.soft') }}" class="text-sm font-semibold leading-6 text-gray-700 dark:text-gray-400">Learn more <span aria-hidden="true">→</span></a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="mt-20 sm:mt-24 md:mx-auto md:max-w-2xl lg:mx-0 lg:mt-0">
                                 <div class="shadow-lg md:rounded-3xl">
-                                    <x-code :contents="$personalization" :copy="false" />
+                                    <x-code :contents="$personalization" disable-copy />
                                 </div>
                             </div>
                         </div>
                     </div>
+                    <div class="mt-8 flex justify-center">
+                        <a href="{{ route('documentation.get-started') }}" class="text-2xl font-semibold text-gray-700 dark:text-pink-600">
+                            ... And muuuch more 🔥 Start your next idea using TallStackUI now!
+                        </a>
+                    </div>
                 </section>
-                <section class="relative isolate overflow-hidden bg-transparent px-6 pt-16 lg:px-8">
-                    <div class="mx-auto max-w-2xl lg:max-w-4xl">
-                        <figure>
-                            <blockquote class="text-center text-xl font-semibold italic leading-8 text-gray-700 dark:text-gray-300 sm:text-2xl sm:leading-9">
-                                <p class="text-center">
-                                    “I was tired of relying on component libraries that had been abandoned over time. Since I have a SaaS based on the TALL Stack, I decided to create TallStackUI to maintain the library I use, ensuring regular updates.”
-                                </p>
-                            </blockquote>
-                            <figcaption class="mt-10">
-                                <div class="mt-4 flex items-center justify-center text-xl space-x-3">
-                                    <a class="font-semibold text-pink-500" href="https://github.com/devajmeireles" target="_blank">AJ Meireles,</a>
-                                    <div class="text-gray-600 dark:text-gray-400">Creator of TallStackUI.</div>
-                                </div>
-                            </figcaption>
-                        </figure>
+                <section class="relative isolate overflow-hidden bg-transparent px-6 pt-24 lg:px-8">
+                    <div class="flex justify-center">
+                        <p class="font-normal text-gray-700 dark:text-gray-300">
+                            TallStackUI is a project designed, created and mainly maintained
+                            by <a href="https://github.com/devajmeireles" class="font-medium underline" target="_blank">AJ Meireles</a>, in partnership with many incredible developers.
+                        </p>
                     </div>
                 </section>
             </div>
@@ -190,11 +340,12 @@
                     <x-github />
                 </div>
                 <div class="mt-8 md:order-1 md:mt-0">
-                    <p class="text-center text-xs leading-5 text-gray-500 dark:text-gray-300">&copy; {{ now()->year }}, TallStackUI. All rights reserved.</p>
+                    <p class="text-center text-xs leading-5 text-gray-500 dark:text-gray-500">&copy; {{ now()->year }}, TallStackUI. All rights reserved.</p>
                 </div>
             </div>
         </footer>
     </div>
+    <x-back-to-top />
     @livewireScripts
 </body>
 </html>

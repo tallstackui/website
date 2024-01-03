@@ -96,7 +96,7 @@
             <livewire:documentation.ui.select.searchable :model="5"/>
         </x-preview>
     </x-section>
-    <x-section title="Filtering Using Eloquent" anchor="styled-api-filtering-using-eloquent" :copy="false">
+    <x-section title="Filtering Using Eloquent" anchor="styled-api-filtering-using-eloquent" disable-copy>
         <p>
             If you are using the select component to filter records in the database
             through Eloquent, this code may be useful. This is a snippet code that can be applied

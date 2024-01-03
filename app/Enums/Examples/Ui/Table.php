@@ -284,10 +284,12 @@ class Table
     <?php
 
     use App\Models\User;
+    use Livewire\WithPagination;
     use Livewire\Volt\Component;
     use Illuminate\Database\Eloquent\Builder;
 
     new class extends Component {
+        use WithPagination;
 
         public ?int $quantity = 10;
 
@@ -343,10 +345,12 @@ class Table
     <?php
 
     use App\Models\User;
+    use Livewire\WithPagination;
     use Livewire\Volt\Component;
     use Illuminate\Database\Eloquent\Builder;
 
     new class extends Component {
+        use WithPagination;
 
         public ?int $quantity = 10;
 

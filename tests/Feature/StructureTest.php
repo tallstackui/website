@@ -41,14 +41,14 @@ test('can access all routes', function (string $route) {
     fn () => route('documentation.ui.dropdown'),
     fn () => route('documentation.ui.error'),
     fn () => route('documentation.ui.icon'),
+    fn () => route('documentation.ui.modal'),
+    fn () => route('documentation.ui.link'),
+    fn () => route('documentation.ui.loading'),
     fn () => route('documentation.ui.select'),
     fn () => route('documentation.ui.slide'),
     fn () => route('documentation.ui.tab'),
     fn () => route('documentation.ui.table'),
     fn () => route('documentation.ui.tooltip'),
-    fn () => route('documentation.ui.modal'),
-    fn () => route('documentation.ui.loading'),
-    fn () => route('documentation.ui.link'),
     //
     fn () => route('documentation.interaction.dialog'),
     fn () => route('documentation.interaction.toast'),
@@ -58,14 +58,18 @@ test('can access all routes', function (string $route) {
     fn () => route('documentation.internal.label'),
     fn () => route('documentation.internal.wrapper'),
     //
-    fn () => route('documentation.dark-theme'),
     fn () => route('documentation.configuration'),
     fn () => route('documentation.translation'),
     fn () => route('documentation.without-livewire'),
-    fn () => route('documentation.contribution'),
     //
     fn () => route('documentation.personalization.concept'),
     fn () => route('documentation.personalization.soft'),
     fn () => route('documentation.personalization.deep'),
     fn () => route('documentation.personalization.color'),
+    //
+    fn () => route('documentation.dark-theme'),
+    fn () => route('documentation.debug'),
+    fn () => route('documentation.integrations.alpine'),
+    //
+    fn () => route('documentation.contribution'),
 ]);
