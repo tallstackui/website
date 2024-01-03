@@ -35,8 +35,9 @@
             components through the configuration file:
         </p>
         <x-warning class="mb-4 mt-2">
-            You must publish the configuration file to be able to edit it.
-            <a href="{{ route('documentation.configuration') }}" class="underline" target="_blank">Learn more about it by clicking here.</a>
+            <a href="{{ route('documentation.configuration') }}" class="underline" target="_blank">
+                You must publish the configuration file to be able to edit it.
+            </a>
         </x-warning>
         <x-code :contents="$prefixing" disable-copy />
         <p>

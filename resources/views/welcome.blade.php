@@ -14,11 +14,11 @@
     <meta name="twitter:site" content="{{ config('app.url') }}">
     <meta name="twitter:creator" content="@devajmeireles">
     <meta name="twitter:title" content="TallStackUI">
-    <meta name="twitter:description" content="TallStackUI: New friendly TALL Stack Component Library">
+    <meta name="twitter:description" content="TallStackUI: TALL Stack components ready-to-use.">
     <meta name="twitter:image" content="{{ asset('assets/images/og.png') }}">
 
     <meta property="og:url" content="{{ config('app.url') }}" />
-    <meta property="og:title" content="TallStackUI: New friendly TALL Stack Component Library" />
+    <meta property="og:title" content="TallStackUI: TALL Stack components ready-to-use." />
     <meta property="og:image" content="{{ asset('assets/images/og.png') }}" />
 
     <link rel="apple-touch-icon" href="{{ asset('assets/images/apple-touch-icon.png') }}" >
@@ -186,11 +186,9 @@
                             </p>
                         </div>
                         <div class="mx-auto mt-16 max-w-2xl space-y-4 lg:max-w-none">
+                            <x-separator text="ALERTS" dark />
                             <dl class="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-1">
                                 <div class="flex flex-col">
-                                    <dt class="flex items-center gap-x-3 text-base font-semibold leading-7 text-gray-700 dark:text-pink-600">
-                                        ALERTS
-                                    </dt>
                                     <dd class="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-300 space-y-2">
                                         <x-alert>Your text goes here...</x-alert>
                                         <x-alert color="pink">... With a lot of color variations</x-alert>
@@ -198,11 +196,9 @@
                                     </dd>
                                 </div>
                             </dl>
+                            <x-separator text="BADGES" dark />
                             <dl class="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-1">
                                 <div class="flex flex-col">
-                                    <dt class="flex items-center gap-x-3 text-base font-semibold leading-7 text-gray-700 dark:text-pink-600">
-                                        BADGES
-                                    </dt>
                                     <dd class="mt-4 text-base leading-7 text-gray-300 space-y-2">
                                         <x-badge>Your text goes here...</x-badge>
                                         <x-badge color="pink">... with a lot of color variations</x-badge>
@@ -219,12 +215,10 @@
                                     </dd>
                                 </div>
                             </dl>
+                            <x-separator text="MODAL & SLIDES" dark />
                             <dl class="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-1">
                                 <div class="flex flex-col">
-                                    <dt class="flex items-center gap-x-3 text-base font-semibold leading-7 text-gray-700 dark:text-pink-600">
-                                        MODAL & SLIDES
-                                    </dt>
-                                    <dd class="mt-4 text-base leading-7 text-gray-300 space-y-2">
+                                    <dd class="mt-4 text-base leading-7 flex flex-col sm:flex-row sm:space-x-2 text-gray-300 space-y-2">
                                         <x-modal title="TallStackUi" id="modal-example">
                                             Your form content goes here...
                                             <x-slot:footer>
@@ -267,11 +261,9 @@
                                     </dd>
                                 </div>
                             </dl>
+                            <x-separator text="CLIPBOARD" dark />
                             <dl class="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-1">
                                 <div class="flex flex-col">
-                                    <dt class="flex items-center gap-x-3 text-base font-semibold leading-7 text-gray-700 dark:text-pink-600">
-                                        CLIPBOARD
-                                    </dt>
                                     <dd class="mt-4 text-base leading-7 text-gray-300 space-y-2">
                                         <x-clipboard label="Normal"
                                                      text="TallStackUI" />
@@ -283,11 +275,29 @@
                                     </dd>
                                 </div>
                             </dl>
+                            <x-separator text="SELECT API SEARCH" dark />
                             <dl class="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-1">
                                 <div class="flex flex-col">
-                                    <dt class="flex items-center gap-x-3 text-base font-semibold leading-7 text-gray-700 dark:text-pink-600">
-                                        TABLE
-                                    </dt>
+                                    <dd class="mt-4 text-base leading-7 text-gray-300 space-y-2">
+                                        <x-select.styled label="Preferred Laravel Developer"
+                                                         :request="route('api.users')"
+                                                         select="label:name|value:id"
+                                                         multiple />
+                                    </dd>
+                                </div>
+                            </dl>
+                            <x-separator text="TAILWIND COLOR PICKER" dark />
+                            <dl class="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-1">
+                                <div class="flex flex-col">
+                                    <dd class="mt-4 text-base leading-7 text-gray-300 space-y-4">
+                                        <x-color label="Range Mode" selectable />
+                                        <x-color label="List Mode" picker selectable />
+                                    </dd>
+                                </div>
+                            </dl>
+                            <x-separator text="TABLE" dark />
+                            <dl class="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-1">
+                                <div class="flex flex-col">
                                     <dd class="mt-4 text-base leading-7 text-gray-300 space-y-2">
                                         <livewire:welcome.table />
                                     </dd>

@@ -243,9 +243,11 @@ class Table
     <?php
 
     use App\Models\User;
+    use Livewire\WithPagination;
     use Livewire\Volt\Component;
 
     new class extends Component {
+        use WithPagination;
 
         public function with(): array
         {

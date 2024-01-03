@@ -14,11 +14,11 @@
     <meta name="twitter:site" content="{{ config('app.url') }}">
     <meta name="twitter:creator" content="@devajmeireles">
     <meta name="twitter:title" content="TallStackUI">
-    <meta name="twitter:description" content="TallStackUI: New friendly TALL Stack Component Library">
+    <meta name="twitter:description" content="TallStackUI: TALL Stack components ready-to-use.">
     <meta name="twitter:image" content="{{ asset('assets/images/og.png') }}">
 
     <meta property="og:url" content="{{ config('app.url') }}" />
-    <meta property="og:title" content="TallStackUI: New friendly TALL Stack Component Library" />
+    <meta property="og:title" content="TallStackUI: TALL Stack components ready-to-use." />
     <meta property="og:image" content="{{ asset('assets/images/og.png') }}" />
 
     <link rel="apple-touch-icon" href="{{ asset('assets/images/apple-touch-icon.png') }}" >

@@ -24,8 +24,9 @@
         "0": "Basic Usage",
         "1": "Label & Hint",
         "2": "Picker Mode",
-        "3": "Custom Colors",
-        "4": "Invalidate"
+        "3": "Selectable",
+        "4": "Custom Colors",
+        "5": "Invalidate"
     },
     "docs.form.number": {
         "0": "Basic Usage",

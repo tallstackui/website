@@ -26,6 +26,14 @@
             <x-color picker />
         </x-preview>
     </x-section>
+    <x-section title="Selectable" description="An option to force the color selection through the color selector box.">
+        <x-preview language="blade" :contents="$selectable">
+            <x-color selectable picker />
+        </x-preview>
+        <x-warning class="mt-4">
+            This will transform the input in readonly and open the color selector box when the input is clicked.
+        </x-warning>
+    </x-section>
     <x-section title="Custom Colors" description="An option to specific your own hexadecimal colors.">
         <x-preview language="blade" :contents="$custom">
             <x-color :colors="['#83493D', '#3D8357', '#693D83', '#3AB3D1', '#5DD116']" />

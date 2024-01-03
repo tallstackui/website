@@ -17,6 +17,10 @@ class Color
     <x-color picker />
     HTML;
 
+    public const SELECTABLE = <<<'HTML'
+    <x-color selectable />
+    HTML;
+
     public const CUSTOM = <<<'HTML'
     <x-color :colors="['#83493D', '#3D8357', '#693D83', '#3AB3D1', '#5DD116']" />
     HTML;
