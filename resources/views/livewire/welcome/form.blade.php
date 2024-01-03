@@ -63,7 +63,7 @@ $save = function () {
                 </div>
                 <div class="col-span-1">
                     <x-number label="Age *"
-                             hint="Your age"
+                             hint="Your current age"
                              icon="user"
                              delay="1"
                              wire:model="age" />
@@ -72,10 +72,10 @@ $save = function () {
                     <x-select.styled label="Country *"
                                      hint="Select your country"
                                      wire:model="country"
-                                     :options="['Brazil', 'United States', 'Canada', 'Other']" />
+                                     :options="['Brazil', 'U.S', 'Canada', 'Other']" />
                 </div>
                 <div class="col-span-1">
-                    <x-color label="Theme Color *"
+                    <x-color label="Color *"
                              hint="Select the theme color"
                              picker
                              wire:model="color" />

@@ -78,7 +78,7 @@
                                                 <h1 class="text-4xl font-bold tracking-tight text-pink-900 dark:text-white sm:text-5xl md:text-6xl">
                                                     Turbocharge your experience with ready-to-use <i>TALL Stack</i> components.
                                                 </h1>
-                                                <p class="mt-3 text-base text-gray-700 font-base dark:text-dark-400 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl">
+                                                <p class="mt-3 text-base text-gray-700 font-base dark:text-gray-300 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl">
                                                     TallStackUI is a powerful
                                                     <span class="relative inline-block">
                                                         <span class="absolute bottom-0 left-0 -z-50 h-1 w-full bg-pink-500"></span>
@@ -139,7 +139,7 @@
                                         <x-icon name="bolt" class="h-6 w-6 text-pink-500 dark:text-white" />
                                         Ready-to-use
                                     </dt>
-                                    <dd class="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-600 dark:text-gray-400">
+                                    <dd class="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-600 dark:text-gray-300">
                                         <p class="flex-auto">More than 30 ready-to-use components, and more than 10 components are in development.</p>
                                     </dd>
                                 </div>
@@ -148,7 +148,7 @@
                                         <x-icon name="wrench" class="h-6 w-6 text-pink-500 dark:text-white" />
                                         Easy Installation
                                     </dt>
-                                    <dd class="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-600 dark:text-gray-400">
+                                    <dd class="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-600 dark:text-gray-300">
                                         <p class="flex-auto">Components in less than five minutes. A quick installation to save your development time.</p>
                                     </dd>
                                 </div>
@@ -157,7 +157,7 @@
                                         <x-icon name="paint-brush" class="h-6 w-6 text-pink-500 dark:text-white" />
                                         Full Personalized
                                     </dt>
-                                    <dd class="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-600 dark:text-gray-400">
+                                    <dd class="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-600 dark:text-gray-300">
                                         <p class="flex-auto">New and unique customization approaches. You've never seen anything like this before.</p>
                                     </dd>
                                 </div>
@@ -166,23 +166,23 @@
                                         <x-icon name="wrench-screwdriver" class="h-6 w-6 text-pink-500 dark:text-white" />
                                         Continuous Updates
                                     </dt>
-                                    <dd class="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-600 dark:text-gray-400">
+                                    <dd class="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-600 dark:text-gray-300">
                                         <p class="flex-auto">Developers committed to constantly updating the library to add new content or improve current.</p>
                                     </dd>
                                 </div>
                             </dl>
-                            <x-icon name="arrow-down-circle" class="mx-auto mt-16 h-12 w-12 animate-bounce text-pink-500 dark:text-pink-700" outline />
                         </div>
                     </div>
                 </section>
+                <x-icon name="arrow-down-circle" class="mx-auto mt-16 h-12 w-12 animate-bounce text-pink-500 dark:text-pink-700" outline />
                 <section class="mt-10 bg-transparent">
                     <div class="mx-auto max-w-7xl px-6 lg:px-8">
                         <div class="mx-auto max-w-2xl lg:text-center">
                             <p class="mt-2 text-3xl font-bold tracking-tight text-gray-700 dark:text-white sm:text-4xl">
                                 Everything you need in a single place to start your next TALL Stack project.
                             </p>
-                            <p class="mt-6 text-lg leading-8 text-gray-700 dark:text-dark-400">
-                                See some of our <b class="text-pink-700 dark:text-dark-300">30+ Blade components</b> in a quick overview.
+                            <p class="mt-6 text-lg leading-8 text-gray-700 dark:text-gray-400">
+                                See some of our <b class="text-pink-700 dark:text-gray-300">30+ Blade components</b> in a quick overview.
                             </p>
                         </div>
                         <div class="mx-auto mt-16 max-w-2xl space-y-4 lg:max-w-none">
@@ -294,13 +294,9 @@
                                 </div>
                             </dl>
                         </div>
-                        <div class="mt-20 flex justify-center">
-                            <a href="{{ route('documentation.get-started') }}" class="text-2xl font-semibold text-gray-700 dark:text-pink-600">
-                                ... And muuuch more 🔥 Start your next idea using TallStackUI now!
-                            </a>
-                        </div>
                     </div>
                 </section>
+                <x-icon name="arrow-down-circle" class="mx-auto mt-16 h-12 w-12 animate-bounce text-pink-500 dark:text-pink-700" outline />
                 <section class="mt-16 bg-transparent">
                     <div class="relative isolate overflow-hidden">
                         <div class="mx-auto max-w-7xl pt-10 pb-16 lg:grid lg:grid-cols-2 lg:gap-x-8 lg:px-8">
@@ -308,9 +304,9 @@
                                 <div class="mx-auto max-w-2xl">
                                     <div class="max-w-lg">
                                         <h1 class="mt-10 text-4xl font-bold tracking-tight text-gray-700 dark:text-white sm:text-6xl">A personalization approach never seen before.</h1>
-                                        <p class="mt-6 text-lg leading-8 text-gray-600 dark:text-gray-400">Enjoy <u class="font-semibold text-pink-500">soft personalization</u> to customize your components at runtime. In just a few minutes and without technical effort, you can personalize all the TallStackUI components.</p>
+                                        <p class="mt-6 text-lg leading-8 text-gray-600 dark:text-gray-300">Enjoy <u class="font-semibold text-pink-700 dark:text-gray-300">soft personalization</u> to customize your components at runtime. In just a few minutes and without technical effort, you can personalize all the TallStackUI components.</p>
                                         <div class="mt-10 flex items-center gap-x-6">
-                                            <a href="{{ route('documentation.personalization.soft') }}" class="text-sm font-semibold leading-6 text-gray-700 dark:text-dark-400">Learn more <span aria-hidden="true">→</span></a>
+                                            <a href="{{ route('documentation.personalization.soft') }}" class="text-sm font-semibold leading-6 text-gray-700 dark:text-gray-400">Learn more <span aria-hidden="true">→</span></a>
                                         </div>
                                     </div>
                                 </div>
@@ -322,10 +318,15 @@
                             </div>
                         </div>
                     </div>
+                    <div class="mt-8 flex justify-center">
+                        <a href="{{ route('documentation.get-started') }}" class="text-2xl font-semibold text-gray-700 dark:text-pink-600">
+                            ... And muuuch more 🔥 Start your next idea using TallStackUI now!
+                        </a>
+                    </div>
                 </section>
-                <section class="relative isolate overflow-hidden bg-transparent px-6 pt-10 lg:px-8">
+                <section class="relative isolate overflow-hidden bg-transparent px-6 pt-24 lg:px-8">
                     <div class="flex justify-center">
-                        <p class="font-normal text-gray-700 dark:text-white">
+                        <p class="font-normal text-gray-700 dark:text-gray-300">
                             TallStackUI is a project designed, created and mainly maintained
                             by <a href="https://github.com/devajmeireles" class="font-medium underline" target="_blank">AJ Meireles</a>, in partnership with many incredible developers.
                         </p>
@@ -339,11 +340,12 @@
                     <x-github />
                 </div>
                 <div class="mt-8 md:order-1 md:mt-0">
-                    <p class="text-center text-xs leading-5 text-gray-500 dark:text-dark-400">&copy; {{ now()->year }}, TallStackUI. All rights reserved.</p>
+                    <p class="text-center text-xs leading-5 text-gray-500 dark:text-gray-500">&copy; {{ now()->year }}, TallStackUI. All rights reserved.</p>
                 </div>
             </div>
         </footer>
     </div>
+    <x-back-to-top />
     @livewireScripts
 </body>
 </html>
