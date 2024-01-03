@@ -269,6 +269,9 @@ class Table
         -->
         <x-table :$headers :$rows paginate id="users" />
 
+        <!-- You can disable the auto-scrolling behavior of the paginator -->
+        <x-table :$headers :$rows paginate id="users" noScroll />
+
         <!-- You can use the paginator with mobile style even when in desktop -->
         <x-table :$headers :$rows paginate id="users" simple-pagination />
 
