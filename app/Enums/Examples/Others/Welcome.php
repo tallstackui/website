@@ -11,23 +11,16 @@ class Welcome
     {
         public function boot(): void
         {
-            // ...
-
            TallStackUi::personalize()
-               ->form('input')
-               ->block('input.class.base')
-               ->replace('rounded-md', 'rounded-full');
-
-           TallStackUi::personalize()
-               ->alert()
-               ->block('wrapper')
-               ->remove('rounded-lg');
-
-           TallStackUi::personalize()
-               ->badge()
-               ->block('wrapper.class')
-               ->append('py-4')
-               ->and()
+                // Determining the component...
+               ->badge() // [tl! highlight]
+               // Pointing the block...
+               ->block('wrapper.class') // [tl! highlight]
+               // Personalizing!
+               ->replace('rounded-md', 'rounded-sm') // [tl! highlight]
+               // Sequentially we can...
+               ->and() // [tl! highlight]
+               // Personalize other components!
                ->avatar()
                ->block('content.text.class')
                ->prepend('text-2xl');

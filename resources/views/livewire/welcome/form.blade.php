@@ -38,15 +38,17 @@ $save = function () {
     })->validate();
 
     $this->dialog()->success('Success!', 'You have completed the example form successfully. Welcome to the TallStackUI community!');
+
+    $this->reset();
 };
 
 ?>
 
 <div>
     <x-card>
-        <p class="font-medium leading-6 mb-4">Example, <u>User Registration</u></p>
         <form wire:submit.prevent="save">
-            <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+            <x-errors close />
+            <div class="mt-2 grid grid-cols-1 gap-4 sm:grid-cols-2">
                 <div class="col-span-1">
                     <x-input label="Name *"
                              hint="Your full name"
@@ -60,7 +62,7 @@ $save = function () {
                              wire:model="email" />
                 </div>
                 <div class="col-span-1">
-                    <x-number label="Age"
+                    <x-number label="Age *"
                              hint="Your age"
                              icon="user"
                              delay="1"
@@ -73,7 +75,7 @@ $save = function () {
                                      :options="['Brazil', 'United States', 'Canada', 'Other']" />
                 </div>
                 <div class="col-span-1">
-                    <x-color label="Theme Color"
+                    <x-color label="Theme Color *"
                              hint="Select the theme color"
                              picker
                              wire:model="color" />
@@ -92,7 +94,7 @@ $save = function () {
                                length="5"
                                clear
                                label="Secret Confirmation Code *"
-                               hint="Enter the code sent to your e-mail: 12345"
+                               hint="Enter the code: 12345"
                                wire:model="secret" />
                     </div>
                     @if ($secret_accepted)
@@ -114,6 +116,7 @@ $save = function () {
                     Submit
                 </x-button>
             </div>
+            <p class="text-xs font-medium leading-6 text-dark-400/30 dark:text-gray-500/30">* This form is an example</p>
         </form>
     </x-card>
 </div>
