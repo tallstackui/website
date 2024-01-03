@@ -186,7 +186,7 @@
                             </p>
                         </div>
                         <div class="mx-auto mt-16 max-w-2xl space-y-4 lg:max-w-none">
-                            <x-separator text="ALERTS" dark />
+                            <h2 class="flex justify-center text-2xl font-medium text-gray-700 dark:text-gray-300">Alerts 👇🏻</h2>
                             <dl class="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-1">
                                 <div class="flex flex-col">
                                     <dd class="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-300 space-y-2">
@@ -196,7 +196,7 @@
                                     </dd>
                                 </div>
                             </dl>
-                            <x-separator text="BADGES" dark />
+                            <h2 class="pt-4 flex justify-center text-2xl font-medium text-gray-700 dark:text-gray-300">Badges 👇🏻</h2>
                             <dl class="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-1">
                                 <div class="flex flex-col">
                                     <dd class="mt-4 text-base leading-7 text-gray-300 space-y-2">
@@ -215,10 +215,10 @@
                                     </dd>
                                 </div>
                             </dl>
-                            <x-separator text="MODAL & SLIDES" dark />
+                            <h2 class="pt-4 flex justify-center text-2xl font-medium text-gray-700 dark:text-gray-300">Modal & Slides 👇🏻</h2>
                             <dl class="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-1">
                                 <div class="flex flex-col">
-                                    <dd class="mt-4 text-base leading-7 flex flex-col sm:flex-row sm:space-x-2 text-gray-300 space-y-2">
+                                    <dd class="mt-4 flex flex-col text-base leading-7 text-gray-300 space-y-2 sm:space-x-2 sm:flex-row">
                                         <x-modal title="TallStackUi" id="modal-example">
                                             Your form content goes here...
                                             <x-slot:footer>
@@ -261,7 +261,7 @@
                                     </dd>
                                 </div>
                             </dl>
-                            <x-separator text="CLIPBOARD" dark />
+                            <h2 class="pt-4 flex justify-center text-2xl font-medium text-gray-700 dark:text-gray-300">Clipboard 👇🏻</h2>
                             <dl class="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-1">
                                 <div class="flex flex-col">
                                     <dd class="mt-4 text-base leading-7 text-gray-300 space-y-2">
@@ -275,7 +275,7 @@
                                     </dd>
                                 </div>
                             </dl>
-                            <x-separator text="SELECT API SEARCH" dark />
+                            <h2 class="pt-4 flex justify-center text-2xl font-medium text-gray-700 dark:text-gray-300">Select Through API 👇🏻</h2>
                             <dl class="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-1">
                                 <div class="flex flex-col">
                                     <dd class="mt-4 text-base leading-7 text-gray-300 space-y-2">
@@ -286,7 +286,7 @@
                                     </dd>
                                 </div>
                             </dl>
-                            <x-separator text="TAILWIND COLOR PICKER" dark />
+                            <h2 class="pt-4 flex justify-center text-2xl font-medium text-gray-700 dark:text-gray-300">Color Picker 👇🏻</h2>
                             <dl class="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-1">
                                 <div class="flex flex-col">
                                     <dd class="mt-4 text-base leading-7 text-gray-300 space-y-4">
@@ -295,7 +295,7 @@
                                     </dd>
                                 </div>
                             </dl>
-                            <x-separator text="TABLE" dark />
+                            <h2 class="pt-4 flex justify-center text-2xl font-medium text-gray-700 dark:text-gray-300">... and Table 👇🏻</h2>
                             <dl class="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-1">
                                 <div class="flex flex-col">
                                     <dd class="mt-4 text-base leading-7 text-gray-300 space-y-2">
