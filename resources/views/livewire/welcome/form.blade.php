@@ -46,8 +46,8 @@ $save = function () {
 
 <div>
     <x-card>
+        <x-errors close />
         <form wire:submit.prevent="save">
-            <x-errors close />
             <div class="mt-2 grid grid-cols-1 gap-4 sm:grid-cols-2">
                 <div class="col-span-1">
                     <x-input label="Name *"
