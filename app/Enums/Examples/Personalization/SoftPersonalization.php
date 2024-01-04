@@ -208,6 +208,49 @@ class SoftPersonalization
     }
     HTML;
 
+    public const SCOPED_PERSONALIZATION = <<<'HTML'
+    <!-- Displaying a normal Alert component -->
+    <x-alert>This is a normal Alert component</x-alert>
+
+    <!-- Displaying a fully round alert component -->
+    <x-alert :personalize="[
+        'wrapper' => [
+            'replace' => [
+                'rounded-lg' => 'rounded-full',
+            ],
+        ]
+    ]">
+        This is a fully round Alert component
+    </x-alert>
+    HTML;
+
+    public const SCOPED_PERSONALIZATION_EXAMPLES = <<<'HTML'
+    <x-alert :personalize="[
+        {{-- Override all content [tl! highlight]--}}
+        'content.wrapper' => 'flex items-start',
+        'wrapper' => [
+            {{-- Replacing [tl! highlight]--}}
+            'replace' => [
+                'rounded-lg' => 'rounded-full',
+            ],
+        ],
+        'text.title' => [
+            {{-- Removing [tl! highlight]--}}
+            'remove' => 'text-lg',
+        ],
+        'text.description' => [
+            {{-- Appending [tl! highlight]--}}
+            'append' => 'p-4',
+        ],
+        'icon.size' => [
+            {{-- Prepending [tl! highlight]--}}
+            'prepend' => 'mr-4',
+        ]
+    ]">
+        This is a fully personalized Alert component
+    </x-alert>
+    HTML;
+
     public const DATA = <<<'HTML'
     [
       "id" => null

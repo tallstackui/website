@@ -106,6 +106,44 @@
             </p>
         </p>
     </x-section>
+    <x-section title="Scoped Personalization" disable-copy>
+        <p>
+            Although soft personalization is powerful and easy to use, there is one problem: all soft
+            personalization is applied to all components, and it is not possible to assign specific
+            personalization to a component only once. Therefore, <u>starting from version 1.9.0 you can
+            set the scoped personalization.</u> Just as in VueJS where we have CSS scoped, CSS applied only
+            to the component to be defined, TallStackUI offers the <x-block>personalize</x-block> attribute in all components
+            allowing interaction with the classes so that the personalization is applied only to the
+            component that defines the personalization. Let's take a look at an example:
+        </p>
+        <x-code language="blade" :contents="$scopedPersonalization" disable-copy/>
+        <p class="mb-2">Considering this code above, then this will be the result:</p>
+        <div class="space-y-4">
+            <x-alert>This is a normal Alert component</x-alert>
+
+            <x-alert :personalize="[
+                'wrapper' => [
+                    'replace' => [
+                        'rounded-lg' => 'rounded-full',
+                    ],
+                ]
+            ]">
+                This is a fully round Alert component
+            </x-alert>
+        </div>
+        <p class="mt-2">
+            Just like soft personalization, scoped personalization needs to target a
+            specific block that will receive the personalization. Let's take a look at other
+            examples and possibilities:
+        </p>
+        <x-code language="blade" :contents="$scopedPersonalizationExamples" disable-copy/>
+        <x-warning class="mt-4">
+            Unlike soft personalization, scoped personalization will not throw an exception
+            when the block to be personalized does not exist. Therefore, if there is an error
+            in the block name or wrong block name, the application will not generate a visual
+            error for the end user, the personalization will just not be applied.
+        </x-warning>
+    </x-section>
     <x-section title="Tracing TailwindCSS Classes" disable-copy>
         <p class="mb-4">
             If you are personalizing your components, there is something you should know. As classes are TailwindCSS

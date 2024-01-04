@@ -360,8 +360,9 @@
         "5": "Invokable Class",
         "6": "Component Data Parameters",
         "7": "Interacting with Default Classes",
-        "8": "Tracing TailwindCSS Classes",
-        "9": "Personalizable Blocks"
+        "8": "Scoped Personalization",
+        "9": "Tracing TailwindCSS Classes",
+        "10": "Personalizable Blocks"
     },
     "docs.personalization.deep": {
         "0": "Concept",
