@@ -264,21 +264,23 @@ class Table
     }; ?>
 
     <div>
-        <!--
-        The `id` parameter must be set in order to use the pagination. You need
-        to set a different id for each table when you have multiples tables in
-        the same page.
-        -->
-        <x-table :$headers :$rows paginate id="users" />
+        <x-table :$headers :$rows paginate />
 
         <!-- You can use the paginator with mobile style even when in desktop -->
-        <x-table :$headers :$rows paginate id="users" simple-pagination />
+        <x-table :$headers :$rows paginate simple-pagination />
+
+        <!--
+        You can enable view persistence for the table by setting the `persistent`
+        and `id` parameters. The `id` parameter is necessary to avoid conflicts
+        when there is more than one table on the same page.
+        -->
+        <x-table :$headers :$rows paginate persistent id="users" />
 
         <!--
         You can disable the TallStackUI paginator element. When you do that
         the table component will use the Livewire paginator element.
         -->
-        <x-table :$headers :$rows paginate :paginator="null" id="users" />
+        <x-table :$headers :$rows paginate :paginator="null" />
     </div>
     HTML;
 
