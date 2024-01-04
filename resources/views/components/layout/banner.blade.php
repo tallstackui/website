@@ -5,11 +5,7 @@
                 <x-svg.tallstackui-light />
             </div>
             <p class="text-md leading-8 text-white">
-                Your new friendly
-                <span class="relative inline-block">
-                    <span class="z-10 w-full font-semibold">TALL Stack</span>
-                    <span class="absolute bottom-0 left-0 h-1 w-full bg-pink-400"></span>
-                </span> component library.
+                Powerful suite of Blade components for TALL Stack apps.
             </p>
         </div>
     </div>
