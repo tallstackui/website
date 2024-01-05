@@ -23,8 +23,8 @@ new class extends Component {
         <x-select.styled wire:model="value" :options="[1,2,3]" />
     @elseif ($model === 2)
         <x-select.styled label="Select One Option"
+                         placeholder="Custom Placeholder"
                          hint="You can choose 1, 2 or 3"
-                         wire:model="value"
                          :options="[1,2,3]"
         />
     @elseif ($model === 3)

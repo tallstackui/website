@@ -45,8 +45,8 @@
             <livewire:documentation.ui.select.styled/>
         </x-preview>
     </x-section>
-    <x-section title="Label & Hint" anchor="styled-label-hint">
-        <x-preview language="blade" :contents="$styledLabelHint">
+    <x-section title="Label & Hint & Placeholder" anchor="styled-label-hint-placeholder">
+        <x-preview language="blade" :contents="$styledLabelHintPlaceholder">
             <livewire:documentation.ui.select.styled :model="2"/>
         </x-preview>
     </x-section>
@@ -76,7 +76,7 @@
             <livewire:documentation.ui.select.searchable/>
         </x-preview>
     </x-section>
-    <x-section title="Label & Hint" anchor="styled-api-label-hint">
+    <x-section title="Label & Hint & Placeholder" anchor="styled-api-label-hint-placeholder">
         <x-preview language="blade" :contents="$searchableLabelHint">
             <livewire:documentation.ui.select.searchable :model="2"/>
         </x-preview>

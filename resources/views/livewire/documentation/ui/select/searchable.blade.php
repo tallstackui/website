@@ -27,9 +27,9 @@ new class extends Component {
     @elseif ($model === 2)
         <x-select.styled :request="route('api.users')"
                         select="label:name|value:id"
+                        placeholder="Custom Placeholder"
                         label="Select One User"
                         hint="You can choose whoever you want"
-                        wire:model="value"
         />
     @elseif ($model === 3)
         <x-select.styled :request="route('api.users')"

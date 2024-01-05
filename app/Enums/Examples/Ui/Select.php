@@ -36,8 +36,9 @@ class Select
     <x-select.styled :options="[1,2,3]" />
     HTML;
 
-    public const STYLED_LABEL_HINT = <<<'HTML'
+    public const STYLED_LABEL_HINT_PLACEHOLDER = <<<'HTML'
     <x-select.styled label="Select One Option"
+                     placeholder="Custom Placeholder"
                      hint="You can choose 1, 2 or 3"
                      :options="[1,2,3]" />
     HTML;

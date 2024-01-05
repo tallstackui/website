@@ -50,7 +50,6 @@ new class extends Component {
              filter
              paginate
              :quantity="[2,5,7]"
-             loading
              id="users">
         @interact('column_action', $user)
         <x-button.circle color="red"

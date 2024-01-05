@@ -257,7 +257,7 @@
             "prefix": true,
             "contents": {
                 "0": "Basic Usage",
-                "1": "Label & Hint",
+                "1": "Label & Hint & Placeholder",
                 "2": "Multiple",
                 "3": "Multi-dimensional Array",
                 "4": "Searchable",
@@ -268,7 +268,7 @@
             "prefix": true,
             "contents": {
                 "0": "Basic Usage",
-                "1": "Label & Hint",
+                "1": "Label & Hint & Placeholder",
                 "2": "Multiple",
                 "3": "Advanced Usage",
                 "4": "Slot After",
