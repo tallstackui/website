@@ -21,6 +21,7 @@ use App\Enums\Examples\Others\DebugMode;
 use App\Enums\Examples\Others\Installation;
 use App\Enums\Examples\Others\Translation;
 use App\Enums\Examples\Others\Troubleshooting;
+use App\Enums\Examples\Others\Updates;
 use App\Enums\Examples\Others\Welcome;
 use App\Enums\Examples\Personalization\ColorPersonalization;
 use App\Enums\Examples\Personalization\DeepPersonalization;
@@ -91,6 +92,7 @@ enum Example: string
     case Tooltip = Tooltip::class;
     case Translation = Translation::class;
     case Troubleshooting = Troubleshooting::class;
+    case Updates = Updates::class;
     case Welcome = Welcome::class;
     case WithoutLivewire = WithoutLivewire::class;
 

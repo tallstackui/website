@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "23b84970cc2af0d6b8d4cd2bdceaad49",
+    "content-hash": "2bc1d0c1bd188d9515a477d6760c3f42",
     "packages": [
         {
             "name": "brick/math",
@@ -5653,16 +5653,16 @@
         },
         {
             "name": "tallstackui/tallstackui",
-            "version": "v1.9.2",
+            "version": "1.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/tallstackui/tallstackui.git",
-                "reference": "397228295d39f570f94ea0f957f1ef2249c6b246"
+                "reference": "056b0efeffa14fac6ff5c7ab5969862137a4aab5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tallstackui/tallstackui/zipball/397228295d39f570f94ea0f957f1ef2249c6b246",
-                "reference": "397228295d39f570f94ea0f957f1ef2249c6b246",
+                "url": "https://api.github.com/repos/tallstackui/tallstackui/zipball/056b0efeffa14fac6ff5c7ab5969862137a4aab5",
+                "reference": "056b0efeffa14fac6ff5c7ab5969862137a4aab5",
                 "shasum": ""
             },
             "require": {
@@ -5678,6 +5678,7 @@
                 "pestphp/pest": "^2.0",
                 "pestphp/pest-plugin-type-coverage": "^2.2"
             },
+            "default-branch": true,
             "type": "library",
             "extra": {
                 "laravel": {
@@ -5708,7 +5709,7 @@
             "description": "A curated list of TallStack UI Components",
             "support": {
                 "issues": "https://github.com/tallstackui/tallstackui/issues",
-                "source": "https://github.com/tallstackui/tallstackui/tree/v1.9.2"
+                "source": "https://github.com/tallstackui/tallstackui/tree/1.x"
             },
             "funding": [
                 {
@@ -5716,7 +5717,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-01-05T17:39:46+00:00"
+            "time": "2024-01-08T13:36:10+00:00"
         },
         {
             "name": "tijsverkoyen/css-to-inline-styles",
@@ -10212,7 +10213,9 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "tallstackui/tallstackui": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
