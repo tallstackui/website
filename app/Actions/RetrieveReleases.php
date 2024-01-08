@@ -16,12 +16,20 @@ class RetrieveReleases
             return collect();
         }
 
+        if ($cache = Cache::get('releases')) {
+            return $cache;
+        }
+
+        $response = Http::withToken($token.'1')->get('https://api.github.com/repos/tallstackui/tallstackui/releases');
+
+        if ($response->failed()) {
+            return collect();
+        }
+
         return Cache::remember(
             'releases',
             now()->addDay(),
-            fn () => Http::withToken($token)
-                ->get('https://api.github.com/repos/tallstackui/tallstackui/releases')
-                ->collect()
+            fn () => $response->collect()
         );
     }
 }

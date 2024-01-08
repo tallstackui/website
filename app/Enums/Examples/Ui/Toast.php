@@ -28,18 +28,18 @@ class Toast
     public const DISPATCH = <<<'HTML'
     public function save(): void
     {
-        $this->toast()->success('...');
-        $this->toast()->error('...');
-        $this->toast()->warning('...');
-        $this->toast()->info('...');
+        $this->toast()->success('...')->send();
+        $this->toast()->error('...')->send();
+        $this->toast()->warning('...')->send();
+        $this->toast()->info('...')->send();
     }
     HTML;
 
     public const BASIC = <<<'HTML'
-    $this->toast()->success('Success', 'This is a success message.');
-    $this->toast()->error('Error', 'This is an error message.');
-    $this->toast()->warning('Warning', 'This is a warning message.');
-    $this->toast()->info('Info', 'This is an info message.');
+    $this->toast()->success('Success', 'This is a success message.')->send();
+    $this->toast()->error('Error', 'This is an error message.')->send();
+    $this->toast()->warning('Warning', 'This is a warning message.')->send();
+    $this->toast()->info('Info', 'This is an info message.')->send();
     HTML;
 
     public const CONFIRMATION = <<<'HTML'
@@ -63,25 +63,27 @@ class Toast
 
     public function confirmed(string $message): void
     {
-        $this->toast()->success('Success', $message);
+        $this->toast()->success('Success', $message)->send();
     }
 
     public function cancelled(string $message): void
     {
-        $this->toast()->error('Cancelled', $message);
+        $this->toast()->error('Cancelled', $message)->send();
     }
     HTML;
 
     public const TIME = <<<'HTML'
     $this->toast()
         ->timeout(seconds: 10)
-        ->success('Success', 'This is a success message.');
+        ->success('Success', 'This is a success message.')
+        ->send();
     HTML;
 
     public const EXPANDABLE = <<<'HTML'
     $this->toast()
         ->expandable()
-        ->success('Success', 'When the description has more than 30 characters, the toast can be optionally expandable.');
+        ->success('Success', 'When the description has more than 30 characters, the toast can be optionally expandable.')
+        ->send();
     HTML;
 
     public const IGNORING_EXPANDABLE = <<<'HTML'
@@ -89,18 +91,8 @@ class Toast
 
     $this->toast()
         ->expandable(false) // [tl! highlight]
-        ->success('Success', 'This Toast will not be expandable.');
-    HTML;
-
-    public const Z_INDEX = <<<'HTML'
-    <x-toast z-index="z-50" />
-    HTML;
-
-    public const POSITIONS = <<<'HTML'
-    <x-toast position="top-right" />
-    <x-toast position="top-left" />
-    <x-toast position="bottom-left" />
-    <x-toast position="bottom-right" />
+        ->success('Success', 'This Toast will not be expandable.')
+        ->send();
     HTML;
 
     public const EVENTS = <<<'HTML'

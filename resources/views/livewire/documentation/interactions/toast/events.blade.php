@@ -25,12 +25,12 @@ new class extends Component {
 
     public function confirmed(string $message): void
     {
-        $this->toast()->success('Success', $message);
+        $this->toast()->success('Success', $message)->send();
     }
 
     public function cancelled(string $message): void
     {
-        $this->toast()->error('Cancelled', $message);
+        $this->toast()->error('Cancelled', $message)->send();
     }
 } ?>
 

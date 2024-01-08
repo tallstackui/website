@@ -28,18 +28,18 @@ class Dialog
     public const DISPATCH = <<<'HTML'
     public function save(): void
     {
-        $this->dialog()->success('...');
-        $this->dialog()->error('...');
-        $this->dialog()->warning('...');
-        $this->dialog()->info('...');
+        $this->dialog()->success('...')->send();
+        $this->dialog()->error('...')->send();
+        $this->dialog()->warning('...')->send();
+        $this->dialog()->info('...')->send();
     }
     HTML;
 
     public const BASIC = <<<'HTML'
-    $this->dialog()->success('Success', 'This is a success message.');
-    $this->dialog()->error('Error', 'This is an error message.');
-    $this->dialog()->warning('Warning', 'This is a warning message.');
-    $this->dialog()->info('Info', 'This is an info message.');
+    $this->dialog()->success('Success', 'This is a success message.')->send();
+    $this->dialog()->error('Error', 'This is an error message.')->send();
+    $this->dialog()->warning('Warning', 'This is a warning message.')->send();
+    $this->dialog()->info('Info', 'This is an info message.')->send();
     HTML;
 
     public const CONFIRMATION = <<<'HTML'
@@ -63,12 +63,12 @@ class Dialog
 
     public function confirmed(string $message): void
     {
-        $this->dialog()->success('Success', $message);
+        $this->dialog()->success('Success', $message)->send();
     }
 
     public function cancelled(string $message): void
     {
-        $this->dialog()->error('Cancelled', $message);
+        $this->dialog()->error('Cancelled', $message)->send();
     }
     HTML;
 

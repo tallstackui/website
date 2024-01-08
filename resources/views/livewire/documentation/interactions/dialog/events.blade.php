@@ -29,14 +29,14 @@ new class extends Component {
 
     public function confirmed(string $message): void
     {
-        $this->dialog()->success('Success', $message);
+        $this->dialog()->success('Success', $message)->send();
 
         $this->events = false;
     }
 
     public function cancelled(string $message): void
     {
-        $this->dialog()->error('Cancelled', $message);
+        $this->dialog()->error('Cancelled', $message)->send();
 
         $this->events = false;
     }
