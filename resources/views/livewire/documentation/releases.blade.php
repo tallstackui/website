@@ -5,6 +5,7 @@ use Livewire\WithPagination;
 use App\Actions\RetrieveReleases;
 use Illuminate\Pagination\LengthAwarePaginator;
 use Illuminate\Support\Carbon;
+use Illuminate\Support\Collection;
 
 new class extends Component {
     use WithPagination;
@@ -16,7 +17,7 @@ new class extends Component {
         $releases = RetrieveReleases::execute();
 
         $releases = $releases->filter(fn (array $release) => $release['draft'] === false && $release['prerelease'] === false)
-            ->when($this->breaking, fn (array $releases) => $releases->filter(fn ($release) => str_contains($release['body'], 'Breaking Change')))
+            ->when($this->breaking, fn (Collection $releases) => $releases->filter(fn($release) => str_contains($release['body'], 'Breaking Change')))
             ->map(function (array $release) {
                 return [
                     'version' => $release['name'],
@@ -39,12 +40,12 @@ new class extends Component {
 
 <div>
     <div class="flex justify-end mb-4">
-        <x-toggle wire:model.live="breaking" color="pink" label="Breaking Changes Only" />
+        <x-toggle wire:model.live="breaking" color="pink" label="Breaking Changes Only"/>
     </div>
     <x-table :$headers :$rows paginate simple-pagination>
         @interact('column_action', $row)
         <div class="flex items-center space-x-2">
-            <x-button.circle href="{{ $row['url'] }}" target="_blank" icon="arrow-up-right" color="pink" />
+            <x-button.circle href="{{ $row['url'] }}" target="_blank" icon="arrow-up-right" color="pink"/>
             @if (str_contains($row['body'], 'Breaking Change'))
                 <x-badge color="red">Breaking Changes</x-badge>
             @endif
