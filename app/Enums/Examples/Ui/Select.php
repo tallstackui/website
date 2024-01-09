@@ -24,10 +24,7 @@ class Select
     HTML;
 
     public const NATIVE_INVALIDATE = <<<'HTML'
-    <x-select.native label="Select One Option"
-                     hint="You can choose 1, 2 or 3"
-                     :options="[1,2,3]"
-                     invalidate />
+    <x-select.native :options="[1,2,3]" invalidate />
     HTML;
 
     /* Styled Common */
@@ -43,6 +40,10 @@ class Select
                      :options="[1,2,3]" />
     HTML;
 
+    public const STYLED_REQUIRED = <<<'HTML'
+    <x-select.styled :options="[1,2,3]" required />
+    HTML;
+
     public const STYLED_MULTIDIMENSIONAL = <<<'HTML'
     <x-select.styled  :options="[
         ['label' => 'TALL', 'value' => 1],
@@ -51,9 +52,7 @@ class Select
     HTML;
 
     public const STYLED_MULTIPLE = <<<'HTML'
-    <!-- The Livewire property to bind must be an array -->
-
-    <x-select.styled wire:model="options" :options="[1,2,3,4,5,6]" multiple />
+    <x-select.styled :options="[1,2,3,4,5,6]" multiple />
     HTML;
 
     public const STYLED_SEARCHABLE = <<<'HTML'
@@ -64,10 +63,7 @@ class Select
     HTML;
 
     public const STYLED_SLOT = <<<'HTML'
-    <x-select.styled label="Select One Option"
-                     hint="Enter any random value to see the slot"
-                     searchable
-                     :options="[1,2,3]">
+    <x-select.styled searchable :options="[1,2,3]">
         <x-slot:after>
             <div class="px-2 mb-2 flex justify-center items-center">
                 <x-button x-on:click="show = false; $dispatch('confirmed', { term: search })">
@@ -78,29 +74,33 @@ class Select
     </x-select.styled>
     HTML;
 
-    /* Styled Searchable */
+    /* Styled API */
 
-    public const SEARCHABLE = <<<'HTML'
+    public const STYLED_API = <<<'HTML'
     <x-select.styled :request="route('api.users')"
                      select="label:name|value:id" />
     HTML;
 
-    public const SEARCHABLE_LABEL_HINT = <<<'HTML'
+    public const STYLED_API_LABEL_HINT = <<<'HTML'
     <x-select.styled :request="route('api.users')"
                      select="label:name|value:id"
                      label="Select One User"
                      hint="You can choose whoever you want" />
     HTML;
 
-    public const SEARCHABLE_MULTIPLE = <<<'HTML'
-    <!-- The Livewire property to bind must be an array -->
+    public const STYLED_API_REQUIRED = <<<'HTML'
+    <x-select.styled :request="route('api.users')"
+                     select="label:name|value:id"
+                     required />
+    HTML;
 
+    public const STYLED_API_MULTIPLE = <<<'HTML'
     <x-select.styled :request="route('api.users')"
                      select="label:name|value:id"
                      multiple />
     HTML;
 
-    public const SEARCHABLE_ADVANCED = <<<'HTML'
+    public const STYLED_API_ADVANCED = <<<'HTML'
     <!-- Method can be 'get' or 'post' -->
 
     <x-select.styled :request="[
@@ -110,7 +110,7 @@ class Select
                      ]" select="label:name|value:id" />
     HTML;
 
-    public const SEARCHABLE_SLOT = <<<'HTML'
+    public const STYLED_API_SLOT = <<<'HTML'
     <x-select.styled :request="route('api.users')"
                      select="label:name|value:id"
                      label="Select One User"
@@ -165,12 +165,6 @@ class Select
     public const PERSONALIZATION_STYLED = <<<'HTML'
     TallStackUi::personalize()
         ->select('styled')
-        ->block('block', 'classes');
-    HTML;
-
-    public const PERSONALIZATION_SEARCHABLE = <<<'HTML'
-    TallStackUi::personalize()
-        ->select('searchable')
         ->block('block', 'classes');
     HTML;
 }

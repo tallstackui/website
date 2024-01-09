@@ -29,11 +29,7 @@
     </x-section>
     <x-section title="Invalidate" description="An option to not show validation error message." anchor="native-invalidate">
         <x-preview language="blade" :contents="$nativeInvalidate">
-            <x-select.native label="Select One Option"
-                             hint="You can choose 1, 2 or 3"
-                             :options="[1,2,3]"
-                             invalidate
-            />
+            <x-select.native :options="[1,2,3]" invalidate />
         </x-preview>
     </x-section>
     <x-warning>
@@ -42,58 +38,114 @@
     <x-separator text="Styled Select" />
     <x-section title="Basic Usage" anchor="styled-basic-usage" description="Customized styled select component to interact with Livewire.">
         <x-preview language="blade" :contents="$styledBasic">
-            <livewire:documentation.ui.select.styled/>
+            <x-select.styled :options="[1,2,3]" />
         </x-preview>
     </x-section>
     <x-section title="Label & Hint & Placeholder" anchor="styled-label-hint-placeholder">
         <x-preview language="blade" :contents="$styledLabelHintPlaceholder">
-            <livewire:documentation.ui.select.styled :model="2"/>
+            <x-select.styled label="Select One Option"
+                             placeholder="Custom Placeholder"
+                             hint="You can choose 1, 2 or 3"
+                             :options="[1,2,3]" />
         </x-preview>
+    </x-section>
+    <x-section title="Required" description="An option to make the select component required." anchor="styled-required">
+        <x-preview language="blade" :contents="$styledRequired">
+            <x-select.styled :options="[1,2,3]" required />
+        </x-preview>
+        <x-warning class="mt-4">
+            The user will not be able to deselect the selected option after selecting an option.
+        </x-warning>
     </x-section>
     <x-section title="Multiple" anchor="styled-multiple">
         <x-preview language="blade" :contents="$styledMultiple">
-            <livewire:documentation.ui.select.styled :model="3"/>
+            <x-select.styled :options="[1,2,3,4,5,6]" multiple />
         </x-preview>
     </x-section>
     <x-section title="Multi-dimensional Array" anchor="styled-multi-dimensional-array" description="An option to use multi-dimensional array.">
         <x-preview language="blade" :contents="$styledMultidimensional">
-            <livewire:documentation.ui.select.styled :model="4"/>
+            <x-select.styled :options="[
+                ['label' => 'TALL', 'value' => 1],
+                ['label' => 'LIVT', 'value' => 2],
+            ]" select="label:label|value:value" />
         </x-preview>
     </x-section>
     <x-section title="Searchable" anchor="styled-searchable">
         <x-preview language="blade" :contents="$styledSearchable">
-            <livewire:documentation.ui.select.styled :model="5"/>
+            <x-select.styled :options="[
+                ['label' => 'TALL', 'value' => 1],
+                ['label' => 'LIVT', 'value' => 2],
+            ]" select="label:label|value:value" searchable />
         </x-preview>
     </x-section>
-    <x-section title="Slot After" anchor="styled-slot-after" description="An option to interact with the search term">
+    <x-section title="Slot After" anchor="styled-slot-after" description="An option to interact with the search term when nothing is found.">
         <x-preview language="blade" :contents="$styledSlot">
-            <livewire:documentation.ui.select.styled :model="6"/>
+            <x-select.styled searchable :options="[1,2,3]">
+                <x-slot:after>
+                    <div class="px-2 mb-2 flex justify-center items-center">
+                        <x-button x-on:click="show = false; $interaction('dialog').success('Done!', `Term: ${search}`).send()">
+                            <span x-html="`Create user <b>${search}</b>`"></span>
+                        </x-button>
+                    </div>
+                </x-slot:after>
+            </x-select.styled>
         </x-preview>
     </x-section>
     <x-separator text="Styled API Select" />
     <x-section title="Basic Usage" anchor="styled-api-basic-usage" description="Customized styled select component to interact with APIs.">
-        <x-preview language="blade" :contents="$searchable">
-            <livewire:documentation.ui.select.searchable/>
+        <x-preview language="blade" :contents="$styledApi">
+            <x-select.styled :request="route('api.users')"
+                             select="label:name|value:id" />
         </x-preview>
     </x-section>
     <x-section title="Label & Hint & Placeholder" anchor="styled-api-label-hint-placeholder">
-        <x-preview language="blade" :contents="$searchableLabelHint">
-            <livewire:documentation.ui.select.searchable :model="2"/>
+        <x-preview language="blade" :contents="$styledApiLabelHint">
+            <x-select.styled :request="route('api.users')"
+                             select="label:name|value:id"
+                             placeholder="Custom Placeholder"
+                             label="Select One User"
+                             hint="You can choose whoever you want" />
         </x-preview>
     </x-section>
+    <x-section title="Required" description="An option to make the select component required." anchor="styled-required">
+        <x-preview language="blade" :contents="$styledApiRequired">
+            <x-select.styled :request="route('api.users')"
+                             select="label:name|value:id"
+                             required />
+        </x-preview>
+        <x-warning class="mt-4">
+            The user will not be able to deselect the selected option after selecting an option.
+        </x-warning>
+    </x-section>
     <x-section title="Multiple" anchor="styled-api-multiple">
-        <x-preview language="blade" :contents="$searchableMultiple">
-            <livewire:documentation.ui.select.searchable :model="3"/>
+        <x-preview language="blade" :contents="$styledApiMultiple">
+            <x-select.styled :request="route('api.users')"
+                             select="label:name|value:id"
+                             multiple />
         </x-preview>
     </x-section>
     <x-section title="Advanced Usage" anchor="styled-api-advanced-usage">
-        <x-preview language="blade" :contents="$searchableAdvanced">
-            <livewire:documentation.ui.select.searchable :model="4"/>
+        <x-preview language="blade" :contents="$styledApiAdvanced">
+            <x-select.styled :request="[
+                           'url' => route('api.users'),
+                           'method' => 'get',
+                           'params' => [
+                               'library' => 'TallStackUI',
+                           ],
+                       ]" select="label:name|value:id" />
         </x-preview>
     </x-section>
-    <x-section title="Slot After" anchor="styled-api-slot-after" description="An option to interact with the search term">
-        <x-preview language="blade" :contents="$searchableSlot">
-            <livewire:documentation.ui.select.searchable :model="5"/>
+    <x-section title="Slot After" anchor="styled-api-slot-after" description="An option to interact with the search term when nothing is found.">
+        <x-preview language="blade" :contents="$styledApiSlot">
+            <x-select.styled :request="route('api.users')" select="label:name|value:id">
+                <x-slot:after>
+                    <div class="px-2 mb-2 flex justify-center items-center">
+                        <x-button x-on:click="show = false; $interaction('dialog').success('Done!', `Term: ${search}`).send()">
+                            <span x-html="`Create user <b>${search}</b>`"></span>
+                        </x-button>
+                    </div>
+                </x-slot:after>
+            </x-select.styled>
         </x-preview>
     </x-section>
     <x-section title="Filtering Using Eloquent" anchor="styled-api-filtering-using-eloquent" disable-copy>
