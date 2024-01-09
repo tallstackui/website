@@ -82,8 +82,7 @@ class Select
 
     public const SEARCHABLE = <<<'HTML'
     <x-select.styled :request="route('api.users')"
-                     select="label:name|value:id"
-                      />
+                     select="label:name|value:id" />
     HTML;
 
     public const SEARCHABLE_LABEL_HINT = <<<'HTML'
@@ -108,8 +107,7 @@ class Select
                         'url' => route('api.users'),
                         'method' => 'get',
                         'params' => ['library' => 'TallStackUi'],
-                     ]"
-                     select="label:name|value:id" />
+                     ]" select="label:name|value:id" />
     HTML;
 
     public const SEARCHABLE_SLOT = <<<'HTML'
