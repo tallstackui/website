@@ -76,7 +76,7 @@
                                                     </x-button>
                                                 </div>
                                                 <h1 class="text-4xl font-bold tracking-tight text-pink-900 dark:text-white sm:text-5xl md:text-6xl">
-                                                    Turbocharge your experience with ready-to-use <i>TALL Stack</i> components.
+                                                    Turbocharge your workflow with ready-to-use <i>TALL Stack</i> components.
                                                 </h1>
                                                 <p class="mt-3 text-base text-gray-700 font-base dark:text-gray-300 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl">
                                                     TallStackUI is a powerful

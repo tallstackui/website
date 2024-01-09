@@ -37,7 +37,9 @@ $save = function () {
         });
     })->validate();
 
-    $this->dialog()->success('Success!', 'You have completed the example form successfully. Welcome to the TallStackUI community!');
+    $this->dialog()
+        ->success('Success!', 'You have completed the example form successfully. Welcome to the TallStackUI community!')
+        ->send();
 
     $this->reset();
 };
@@ -72,11 +74,13 @@ $save = function () {
                     <x-select.styled label="Country *"
                                      hint="Select your country"
                                      wire:model="country"
+                                     required
                                      :options="['Brazil', 'U.S', 'Canada', 'Other']" />
                 </div>
                 <div class="col-span-1">
                     <x-color label="Color *"
                              hint="Select the theme color"
+                             selectable
                              picker
                              wire:model="color" />
                 </div>
@@ -86,6 +90,7 @@ $save = function () {
                                      select="label:name|value:id"
                                      label="Preferable Laravel Developer *"
                                      hint="You can choose more than one"
+                                     required
                                      wire:model="developer" />
                 </div>
                 <div class="col-span-full">
