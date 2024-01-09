@@ -6,6 +6,11 @@
         "3": "AlpineJS Requirement",
         "4": "Livewire SPA Mode"
     },
+    "docs.updates": {
+        "0": "Concept",
+        "1": "Updating",
+        "2": "Releases"
+    },
     "docs.form.input": {
         "0": "Basic Usage",
         "1": "Label & Hint",
@@ -258,10 +263,11 @@
             "contents": {
                 "0": "Basic Usage",
                 "1": "Label & Hint & Placeholder",
-                "2": "Multiple",
-                "3": "Multi-dimensional Array",
-                "4": "Searchable",
-                "5": "Slot After"
+                "2": "Required",
+                "3": "Multiple",
+                "4": "Multi-dimensional Array",
+                "5": "Searchable",
+                "6": "Slot After"
             }
         },
         "Styled API": {
@@ -269,10 +275,11 @@
             "contents": {
                 "0": "Basic Usage",
                 "1": "Label & Hint & Placeholder",
-                "2": "Multiple",
-                "3": "Advanced Usage",
-                "4": "Slot After",
-                "5": "Filtering Using Eloquent"
+                "2": "Required",
+                "3": "Multiple",
+                "4": "Advanced Usage",
+                "5": "Slot After",
+                "6": "Filtering Using Eloquent"
             }
         }
     },
