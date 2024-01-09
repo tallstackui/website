@@ -9,18 +9,11 @@ new class extends Component {
 
     public function confirm(): void
     {
-        $this->toast()->confirm('Warning!', 'Are you sure?', [
-            'confirm' => [
-                'text' => 'Confirm',
-                'method' => 'confirmed',
-                'params' => 'Confirmed Successfully'
-            ],
-            'cancel' => [
-                'text' => 'Cancel',
-                'method' => 'cancelled',
-                'params' => 'Cancelled Successfully'
-            ]
-        ]);
+        $this->toast()
+            ->question('Warning!', 'Are you sure?')
+            ->confirm('Confirm', 'confirmed', 'Confirmed Successfully')
+            ->cancel('Cancel', 'cancelled', 'Cancelled Successfully')
+            ->send();
     }
 
     public function confirmed(string $message): void
