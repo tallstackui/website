@@ -19,6 +19,7 @@ test('can access all routes', function (string $route) {
     fn () => route('documentation.get-started'),
     fn () => route('documentation.installation'),
     fn () => route('documentation.troubleshooting'),
+    fn () => route('documentation.updates'),
     //
     fn () => route('documentation.form.input'),
     fn () => route('documentation.form.password'),

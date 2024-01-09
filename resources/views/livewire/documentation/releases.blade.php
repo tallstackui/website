@@ -40,7 +40,7 @@ new class extends Component {
 
 <div>
     <div class="flex justify-end mb-4">
-        <x-toggle wire:model.live="breaking" color="pink" label="Breaking Changes Only"/>
+        <x-toggle wire:model.live="breaking" color="pink" label="Filter for Breaking Changes"/>
     </div>
     <x-table :$headers :$rows paginate simple-pagination>
         @interact('column_action', $row)

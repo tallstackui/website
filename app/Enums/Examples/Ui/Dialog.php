@@ -144,7 +144,7 @@ class Dialog
 
             const component = Livewire.find('your-component-id-goes-here').id; // [tl! highlight]
 
-            confirm = () => $interaction('Success', 'This is a info message.')
+            confirm = () => $interaction('dialog')
                 .wireable(component) // [tl! highlight]
                 .question('Warning', 'Are you sure?')
                 .confirm('Confirm', 'confirmed', 'Confirmed Successfully')
@@ -154,7 +154,7 @@ class Dialog
             // Alternatively, you can pass the component id as an
             // empty string to use the FIRST LIVEWIRE COMPONENT OF THE PAGE.
 
-            confirm = () => $interaction('Success', 'This is a info message.')
+            confirm = () => $interaction('dialog')
                 .wireable() // [tl! highlight]
                 .question('Warning', 'Are you sure?')
                 .confirm('Confirm', 'confirmed', 'Confirmed Successfully')
