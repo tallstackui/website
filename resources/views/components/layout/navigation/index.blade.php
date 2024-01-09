@@ -95,7 +95,7 @@
                             <x-layout.navigation.link :href="route('documentation.ui.card')" text="Card" />
                         </li>
                         <li class="relative ml-4">
-                            <x-layout.navigation.link :href="route('documentation.ui.clipboard')" text="Clipboard" new />
+                            <x-layout.navigation.link :href="route('documentation.ui.clipboard')" text="Clipboard" />
                         </li>
                         <li class="relative ml-4">
                             <x-layout.navigation.link :href="route('documentation.ui.dropdown')" text="Dropdown" />
@@ -125,7 +125,7 @@
                             <x-layout.navigation.link :href="route('documentation.ui.tab')" text="Tab" />
                         </li>
                         <li class="relative ml-4">
-                            <x-layout.navigation.link :href="route('documentation.ui.table')" text="Table" new />
+                            <x-layout.navigation.link :href="route('documentation.ui.table')" text="Table" />
                         </li>
                         <li class="relative ml-4">
                             <x-layout.navigation.link :href="route('documentation.ui.tooltip')" text="Tooltip" />
