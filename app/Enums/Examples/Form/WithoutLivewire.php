@@ -40,6 +40,8 @@ class WithoutLivewire
                          name="search_api"
                          :value="old('search_api')" />
 
+        <x-tag label="Frameworks" name="frameworks" :value="['Laravel', 'Symfony', 'CodeIgniter']" />
+
         <x-button type="submit">
             Submit
         </x-button>
@@ -51,11 +53,15 @@ class WithoutLivewire
     <form action="{{ route('user.register') }}" method="post">
         @csrf
 
-        <x-select.styled :options="['TALL', 'LIVT']" {{-- [tl! focus:6] --}}
+        <x-tag label="Frameworks"
+               name="frameworks"
+               :value="['Laravel', 'Symfony', 'CodeIgniter']" />
+
+        <x-select.styled :options="['TALL', 'LIVT']"
                          label="Select One Option"
                          name="select_options"
                          searchable
-                         multiple {{-- [tl! highlight] --}}
+                         multiple
                          :value="old('select_options')" />
 
         <x-button type="submit">
@@ -77,6 +83,8 @@ class WithoutLivewire
         public function create(Request $request)
         {
             $selectOptions = json_decode($request->get('select_options')); // [tl! highlight]
+
+            $tagFrameworks = json_decode($request->get('frameworks')); // [tl! highlight]
 
             // ...
         }

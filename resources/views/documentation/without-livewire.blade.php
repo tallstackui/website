@@ -26,14 +26,14 @@
             that you help us <x-link href="https://github.com/tallstackui/tallstackui/issues/new/choose" blank underline :color="null">
             by submitting a bug report.</x-link></b> The only requirement, as shown in the example above, is
             that the components receive the <x-block>name</x-block> attribute, including so that validation error messages
-            are displayed correctly. Specifically for the <x-block>select</x-block> and <x-block>pin</x-block> components, a "hidden" input
-            will be added to the page with the name of the attribute passed to these components. Still talking
+            are displayed correctly. Specifically for the <x-block>select</x-block>, <x-block>pin</x-block> and <x-block>tag</x-block>
+            components, a "hidden" input will be added to the page with the name of the attribute passed to these components. Still talking
             about the <x-block>select</x-block> component, it is expected that you can use it with all available options,
             similar to how we use it via Livewire.
         </p>
         <p class="mt-6">
             For cases where you want to use the <x-block>select.styled</x-block> component with the <x-block>multiple</x-block> option,
-            then obtaining the value in the controller must do the <x-block>json_decode</x-block> of the value:
+            or <x-block>tag</x-block> component, then obtaining the value in the controller must do the <x-block>json_decode</x-block> of the value:
         </p>
         <p class="mt-4"><b>1)</b> Blade:</p>
         <x-code language="blade" :contents="$jsonDecodeBlade" disable-copy />

@@ -63,6 +63,9 @@
                             <x-layout.navigation.link :href="route('documentation.form.radio')" text="Radio" />
                         </li>
                         <li class="relative ml-4">
+                            <x-layout.navigation.link :href="route('documentation.form.tag')" text="Tag" new />
+                        </li>
+                        <li class="relative ml-4">
                             <x-layout.navigation.link :href="route('documentation.form.toggle')" text="Toggle" />
                         </li>
                         <li class="relative ml-4">
