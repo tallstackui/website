@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "2bc1d0c1bd188d9515a477d6760c3f42",
+    "content-hash": "0486273ed2ce3aad2b77fce22dbfa2c8",
     "packages": [
         {
             "name": "brick/math",
@@ -5655,12 +5655,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/tallstackui/tallstackui.git",
-                "reference": "f8d73be28375ad7114d46940912f5dc0b469660a"
+                "reference": "252d8509c89102495d147a16be01f07f23829b6d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tallstackui/tallstackui/zipball/f8d73be28375ad7114d46940912f5dc0b469660a",
-                "reference": "f8d73be28375ad7114d46940912f5dc0b469660a",
+                "url": "https://api.github.com/repos/tallstackui/tallstackui/zipball/252d8509c89102495d147a16be01f07f23829b6d",
+                "reference": "252d8509c89102495d147a16be01f07f23829b6d",
                 "shasum": ""
             },
             "require": {
@@ -5715,7 +5715,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-01-10T13:00:49+00:00"
+            "time": "2024-01-10T13:52:39+00:00"
         },
         {
             "name": "tijsverkoyen/css-to-inline-styles",
@@ -10211,7 +10211,7 @@
         }
     ],
     "aliases": [],
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "stability-flags": {
         "tallstackui/tallstackui": 20
     },
