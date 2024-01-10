@@ -360,7 +360,7 @@
                     <x-github />
                 </div>
                 <div class="mt-8 md:order-1 md:mt-0">
-                    <p class="text-center text-xs leading-5 text-gray-500 dark:text-gray-500">&copy; {{ now()->year }}, TallStackUI. All rights reserved.</p>
+                    <p class="text-center text-xs leading-5 text-gray-500 dark:text-gray-400">&copy; {{ now()->year }}, TallStackUI. All rights reserved.</p>
                 </div>
             </div>
         </footer>

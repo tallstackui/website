@@ -90,7 +90,6 @@ $save = function () {
                                      select="label:name|value:id"
                                      label="Preferable Laravel Developer *"
                                      hint="You can choose more than one"
-                                     required
                                      wire:model="developer" />
                 </div>
                 <div class="col-span-full">
