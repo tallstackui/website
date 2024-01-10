@@ -104,7 +104,7 @@ class Link
     public const WITHOUT_COLOR = <<<'HTML'
     <x-link href="https://google.com.br/"
             text="TallStackUI"
-            :color="null" />
+            colorless />
     HTML;
 
     public const PERSONALIZATION = <<<'HTML'

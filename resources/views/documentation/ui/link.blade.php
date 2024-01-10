@@ -97,7 +97,7 @@
     <x-section title="Without Color">
         <x-preview language="blade" :contents="$withoutColor">
             <div class="flex flex-col gap-x-2">
-                <x-link :href="route('documentation.ui.link')" text="TallStackUI" :color="null" />
+                <x-link :href="route('documentation.ui.link')" text="TallStackUI" colorless />
             </div>
         </x-preview>
     </x-section>
