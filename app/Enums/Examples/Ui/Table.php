@@ -284,6 +284,25 @@ class Table
     </div>
     HTML;
 
+    public const SLOTS = <<<'HTML'
+    <!-- This is a resumed example without the full explanation -->
+
+    <x-table header="Header Slot"
+             footer="Footer Slot"
+             ... />
+
+    <!-- Or -->
+
+    <x-table ...>
+        <x-slot:header>
+            Raw Header Slot
+        </x-slot:header>
+        <x-slot:footer>
+            Raw Footer Slot
+        </x-slot:footer>
+    </x-table>
+    HTML;
+
     public const COLUMNS = <<<'HTML'
     <?php
 

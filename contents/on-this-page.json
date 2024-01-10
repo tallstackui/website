@@ -313,7 +313,8 @@
         "6": "Loading Effect",
         "7": "Sorting",
         "8": "Pagination",
-        "9": "Interacting With Data"
+        "9": "Slots",
+        "10": "Interacting With Data"
     },
     "docs.ui.tooltip": {
         "0": "Basic Usage",

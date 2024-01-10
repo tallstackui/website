@@ -74,6 +74,11 @@
             <livewire:documentation.ui.table :mode="7" />
         </x-preview>
     </x-section>
+    <x-section title="Slots">
+        <x-preview language="blade" :contents="$slots" :background="false">
+            <livewire:documentation.ui.table :mode="8" />
+        </x-preview>
+    </x-section>
     <x-section title="Interacting With Data" disable-copy>
         <p>
             The table component provides a custom Blade directive <x-block>@verbatim @interact @endverbatim</x-block>
