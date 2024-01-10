@@ -10,15 +10,17 @@ class Tag
 
     public const LABEL_HINT = <<<'HTML'
     <x-tag label="Frameworks"
-           hint="Select your preferred frameworks"
-           :value="['Laravel', 'Symfony', 'CodeIgniter']" />
+           hint="Select your preferred frameworks" />
     HTML;
 
     public const LIMIT = <<<'HTML'
     <x-tag label="Frameworks"
            hint="Select your preferred frameworks"
-           :limit="2"
-           :value="['Laravel']" />
+           :limit="2" />
+    HTML;
+
+    public const PREFIX = <<<'HTML'
+    <x-tag prefix="#" />
     HTML;
 
     public const INVALIDATE = <<<'HTML'

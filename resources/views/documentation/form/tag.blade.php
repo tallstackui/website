@@ -34,6 +34,15 @@
                    :value="['Laravel']" />
         </x-preview>
     </x-section>
+    <x-section title="Prefix" description="An option to set a single-character prefix.">
+        <x-preview language="blade" :contents="$prefix">
+            <x-tag prefix="#"
+                   :value="['Laravel', 'Symfony', 'CodeIgniter']" />
+        </x-preview>
+        <x-warning class="mt-4">
+            The prefix must be a single character.
+        </x-warning>
+    </x-section>
     <x-section title="Invalidate" description="An option to not show validation error message.">
         <x-preview language="blade" :contents="$invalidate">
             <x-tag invalidate />
