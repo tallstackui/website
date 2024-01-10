@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "0486273ed2ce3aad2b77fce22dbfa2c8",
+    "content-hash": "70161de0697e301e75f6f189bb638e48",
     "packages": [
         {
             "name": "brick/math",
@@ -5651,7 +5651,7 @@
         },
         {
             "name": "tallstackui/tallstackui",
-            "version": "1.x-dev",
+            "version": "v1.10.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/tallstackui/tallstackui.git",
@@ -5676,7 +5676,6 @@
                 "pestphp/pest": "^2.0",
                 "pestphp/pest-plugin-type-coverage": "^2.2"
             },
-            "default-branch": true,
             "type": "library",
             "extra": {
                 "laravel": {
@@ -5707,7 +5706,7 @@
             "description": "A curated list of TallStack UI Components",
             "support": {
                 "issues": "https://github.com/tallstackui/tallstackui/issues",
-                "source": "https://github.com/tallstackui/tallstackui/tree/1.x"
+                "source": "https://github.com/tallstackui/tallstackui/tree/v1.10.0"
             },
             "funding": [
                 {
@@ -10211,10 +10210,8 @@
         }
     ],
     "aliases": [],
-    "minimum-stability": "dev",
-    "stability-flags": {
-        "tallstackui/tallstackui": 20
-    },
+    "minimum-stability": "stable",
+    "stability-flags": [],
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
