@@ -195,6 +195,7 @@
                                         <x-alert icon="check-circle" light close title="Light">... And with different styles!</x-alert>
                                     </dd>
                                 </div>
+                                <p></p>
                             </dl>
                             <h2 class="pt-4 flex justify-center text-2xl font-medium text-gray-700 dark:text-gray-300">Badges 👇🏻</h2>
                             <dl class="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-1">
@@ -266,6 +267,7 @@
                                 <div class="flex flex-col">
                                     <dd class="mt-4 text-base leading-7 text-gray-300 space-y-2">
                                         <x-tag label="Frameworks"
+                                               prefix="#"
                                                hint="Select your preferred frameworks"
                                                :value="['Laravel', 'Symfony', 'CodeIgniter']" />
                                     </dd>
