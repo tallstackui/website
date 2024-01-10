@@ -23,5 +23,9 @@ Route::withoutMiddleware('throttle:api')
             })
             ->limit(10)
             ->get()
-            ->map(fn (User $user) => $user->only('id', 'name'));
+            ->map(fn (User $user) => [
+                'id' => $user->id,
+                'name' => $user->name,
+                'image' => "https://unavatar.io/github/{$user->username}",
+            ]);
     })->name('api.users');

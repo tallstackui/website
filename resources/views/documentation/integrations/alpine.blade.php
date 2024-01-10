@@ -46,7 +46,7 @@
                 : '9999 9999 9999 9999'
         }
     </script>
-    <x-section title="Firefox Issue">
+    <x-section title="Mozilla Firefox Issue">
         <p>
             Although the AlpineJS plugin works great, there is a small issue
             detected for Mozilla Firefox browsers. As part of a workaround,
