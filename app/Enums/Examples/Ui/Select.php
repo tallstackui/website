@@ -51,6 +51,34 @@ class Select
     ]" select="label:label|value:value" />
     HTML;
 
+    public const STYLED_DISABLED = <<<'HTML'
+    <x-select.styled :options="[
+        ['label' => 'TALL', 'value' => 1, 'disabled' => true],
+        ['label' => 'LIVT', 'value' => 2],
+    ]" select="label:label|value:value" />
+    HTML;
+
+    public const STYLED_LIMIT = <<<'HTML'
+    <!-- Applicable only when selection is multiple -->
+
+    <x-select.styled :limit="2" :options="[
+        ['label' => 'TALL', 'value' => 1],
+        ['label' => 'LIVT', 'value' => 2],
+        ['label' => 'Blade', 'value' => 3],
+        ['label' => 'API', 'value' => 4],
+    ]" select="label:label|value:value" multiple />
+    HTML;
+
+    public const STYLED_IMAGE = <<<'HTML'
+    <!-- The index of the image can be: `image`, `img`, or `img_src` -->
+
+    <x-select.styled :options="[
+        ['label' => 'Taylor Otwell', 'value' => 1, 'image' => 'https://unavatar.io/github/taylorotwell'],
+        ['label' => 'Nuno Maduro', 'value' => 2, 'image' => 'https://unavatar.io/github/nunomaduro'],
+        ['label' => 'Jess Archer', 'value' => 3, 'image' => 'https://unavatar.io/github/jessarcher'],
+    ]" select="label:label|value:value" />
+    HTML;
+
     public const STYLED_MULTIPLE = <<<'HTML'
     <x-select.styled :options="[1,2,3,4,5,6]" multiple />
     HTML;

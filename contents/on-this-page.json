@@ -266,20 +266,20 @@
                 "2": "Required",
                 "3": "Multiple",
                 "4": "Multi-dimensional Array",
-                "5": "Searchable",
-                "6": "Slot After"
+                "5": "Disable Options",
+                "6": "Limit Selection",
+                "7": "Image Preview",
+                "8": "Searchable",
+                "9": "Slot After"
             }
         },
         "Styled API": {
             "prefix": true,
             "contents": {
-                "0": "Basic Usage",
-                "1": "Label & Hint & Placeholder",
-                "2": "Required",
-                "3": "Multiple",
-                "4": "Advanced Usage",
-                "5": "Slot After",
-                "6": "Filtering Using Eloquent"
+                "0": "Concept",
+                "1": "Basic Usage",
+                "2": "Advanced Usage",
+                "3": "Filtering Using Eloquent"
             }
         }
     },
