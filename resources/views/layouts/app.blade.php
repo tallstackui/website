@@ -69,7 +69,7 @@
                             @endif
                             @if ($personalization)
                                 <div class="mt-2 inline-flex space-x-2">
-                                    {!! $personalization !!}
+                                    {{ $personalization }}
                                 </div>
                             @endif
                         </header>
