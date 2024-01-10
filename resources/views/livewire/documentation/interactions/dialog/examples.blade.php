@@ -8,22 +8,22 @@ new class extends Component {
 
     public function success(): void
     {
-        $this->dialog()->success('Success', 'This is a success message.');
+        $this->dialog()->success('Success', 'This is a success message.')->send();
     }
 
     public function error(): void
     {
-        $this->dialog()->error('Error', 'This is an error message.');
+        $this->dialog()->error('Error', 'This is an error message.')->send();
     }
 
     public function warning(): void
     {
-        $this->dialog()->warning('Warning', 'This is a warning message.');
+        $this->dialog()->warning('Warning', 'This is a warning message.')->send();
     }
 
     public function info(): void
     {
-        $this->dialog()->info('Info', 'This is an info message.');
+        $this->dialog()->info('Info', 'This is an info message.')->send();
     }
 } ?>
 

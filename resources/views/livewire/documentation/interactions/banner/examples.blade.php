@@ -10,7 +10,8 @@ new class extends Component {
     {
         $this->banner()
             ->close()
-            ->success('This is a banner with a success message dispatched through Livewire.');
+            ->success('This is a banner with a success message dispatched through Livewire.')
+            ->send();
     }
 } ?>
 

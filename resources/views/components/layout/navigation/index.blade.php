@@ -30,6 +30,9 @@
                 <li class="relative ml-4">
                     <x-layout.navigation.link :href="route('documentation.troubleshooting')" text="Troubleshooting" />
                 </li>
+                <li class="relative ml-4">
+                    <x-layout.navigation.link :href="route('documentation.updates')" text="Updates" />
+                </li>
             </ul>
         </li>
         <li>
@@ -58,6 +61,9 @@
                         </li>
                         <li class="relative ml-4">
                             <x-layout.navigation.link :href="route('documentation.form.radio')" text="Radio" />
+                        </li>
+                        <li class="relative ml-4">
+                            <x-layout.navigation.link :href="route('documentation.form.tag')" text="Tag" new />
                         </li>
                         <li class="relative ml-4">
                             <x-layout.navigation.link :href="route('documentation.form.toggle')" text="Toggle" />
@@ -92,7 +98,7 @@
                             <x-layout.navigation.link :href="route('documentation.ui.card')" text="Card" />
                         </li>
                         <li class="relative ml-4">
-                            <x-layout.navigation.link :href="route('documentation.ui.clipboard')" text="Clipboard" new />
+                            <x-layout.navigation.link :href="route('documentation.ui.clipboard')" text="Clipboard" />
                         </li>
                         <li class="relative ml-4">
                             <x-layout.navigation.link :href="route('documentation.ui.dropdown')" text="Dropdown" />
@@ -122,7 +128,7 @@
                             <x-layout.navigation.link :href="route('documentation.ui.tab')" text="Tab" />
                         </li>
                         <li class="relative ml-4">
-                            <x-layout.navigation.link :href="route('documentation.ui.table')" text="Table" new />
+                            <x-layout.navigation.link :href="route('documentation.ui.table')" text="Table" />
                         </li>
                         <li class="relative ml-4">
                             <x-layout.navigation.link :href="route('documentation.ui.tooltip')" text="Tooltip" />

@@ -8,22 +8,22 @@ new class extends Component {
 
     public function success(): void
     {
-        $this->toast()->success('Success', 'This is a success message.');
+        $this->toast()->success('Success', 'This is a success message.')->send();
     }
 
     public function error(): void
     {
-        $this->toast()->error('Error', 'This is an error message.');
+        $this->toast()->error('Error', 'This is an error message.')->send();
     }
 
     public function warning(): void
     {
-        $this->toast()->warning('Warning', 'This is a warning message.');
+        $this->toast()->warning('Warning', 'This is a warning message.')->send();
     }
 
     public function info(): void
     {
-        $this->toast()->info('Info', 'This is an info message.');
+        $this->toast()->info('Info', 'This is an info message.')->send();
     }
 } ?>
 

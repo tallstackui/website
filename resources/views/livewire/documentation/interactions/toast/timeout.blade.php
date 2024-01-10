@@ -10,7 +10,8 @@ new class extends Component {
     {
         $this->toast()
             ->timeout(seconds: 10)
-            ->success('Success', 'This is a success message.');
+            ->success('Success', 'This is a success message.')
+            ->send();
     }
 } ?>
 

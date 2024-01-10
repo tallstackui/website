@@ -21,7 +21,7 @@ new class extends Component {
 
     public function boot(): void
     {
-        $this->quantity = in_array($this->mode, [4, 5, 7]) ? 2 : 10;
+        $this->quantity = in_array($this->mode, [4, 5, 7, 8]) ? 2 : 10;
     }
 
     public function updatingQuantity(): void
@@ -65,5 +65,7 @@ new class extends Component {
         <x-table :$headers :$rows :$sort/>
     @elseif ($mode === 7)
         <x-table :$headers :$rows paginate persistent id="demo"/>
+    @elseif ($mode === 8)
+        <x-table :$headers :$rows paginate header="Header Slot" footer="Footer Slot" />
     @endif
 </div>

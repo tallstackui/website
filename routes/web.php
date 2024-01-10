@@ -14,7 +14,7 @@ Route::prefix('/docs')
     ->group(function () {
         Route::view('/get-started', 'get-started')->name('get-started');
         Route::view('/installation', 'documentation.installation', Example::Installation->variables())->name('installation');
-
+        Route::view('/updates', 'documentation.updates', Example::Updates->variables())->name('updates');
         Route::view('/troubleshooting', 'documentation.troubleshooting', Example::Troubleshooting->variables())->name('troubleshooting');
 
         Route::prefix('/form')
@@ -27,6 +27,7 @@ Route::prefix('/docs')
                 Route::view('/number', 'documentation.form.number', Example::Number->variables())->name('number');
                 Route::view('/checkbox', 'documentation.form.checkbox', Example::Checkbox->variables())->name('checkbox');
                 Route::view('/radio', 'documentation.form.radio', Example::Radio->variables())->name('radio');
+                Route::view('/tag', 'documentation.form.tag', Example::Tag->variables())->name('tag');
                 Route::view('/toggle', 'documentation.form.toggle', Example::Toggle->variables())->name('toggle');
                 Route::view('/range', 'documentation.form.range', Example::Range->variables())->name('range');
                 Route::view('/pin', 'documentation.form.pin', Example::Pin->variables())->name('pin');

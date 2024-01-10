@@ -133,10 +133,10 @@ class Banner
     public const DISPATCH = <<<'HTML'
     public function save(): void
     {
-        $this->banner()->success('...');
-        $this->banner()->error('...');
-        $this->banner()->warning('...');
-        $this->banner()->info('...');
+        $this->banner()->success('...')->send();
+        $this->banner()->error('...')->send();
+        $this->banner()->warning('...')->send();
+        $this->banner()->info('...')->send();
     }
     HTML;
 
@@ -145,16 +145,19 @@ class Banner
     {
         $this->banner()
             ->close() // Add the close button
-            ->success('...');
+            ->success('...')
+            ->send();
 
         $this->banner()
             ->enter(seconds: 3) // Enter in 3 seconds
             ->leave(seconds: 10) // Leave in 10 seconds
-            ->success('...');
+            ->success('...')
+            ->send();
 
         $this->banner()
             ->leave(seconds: 10) // Controlling only the seconds to leave
-            ->success('...');
+            ->success('...')
+            ->send();
     }
     HTML;
 
@@ -163,7 +166,8 @@ class Banner
     {
         $this->banner()
             ->close()
-            ->success('This is a banner with a success message dispatched through Livewire.');
+            ->success('This is a banner with a success message dispatched through Livewire.')
+            ->send();
     }
     HTML;
 

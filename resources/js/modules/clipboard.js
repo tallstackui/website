@@ -32,7 +32,7 @@ export default (text = null, hash = null) => ({
 
             event.clearSelection();
 
-            setTimeout(() => this.notification = false, 500);
+            setTimeout(() => this.notification = false, 3000);
         });
 
         clipboard.on('error', () => alert('Failed to copy!'));

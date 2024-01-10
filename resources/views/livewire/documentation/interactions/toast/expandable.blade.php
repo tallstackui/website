@@ -10,7 +10,8 @@ new class extends Component {
     {
         $this->toast()
             ->expandable()
-            ->success('Success', 'When the description has more than 30 characters, the toast can be optionally expandable.');
+            ->success('Success', 'When the description has more than 30 characters, the toast can be optionally expandable.')
+            ->send();
     }
 } ?>
 

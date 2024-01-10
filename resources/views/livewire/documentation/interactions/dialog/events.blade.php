@@ -13,37 +13,31 @@ new class extends Component {
     {
         $this->events = true;
 
-        $this->dialog()->confirm('Warning!', 'Are you sure?', [
-            'confirm' => [
-                'text' => 'Confirm',
-                'method' => 'confirmed',
-                'params' => 'Confirmed Successfully'
-            ],
-            'cancel' => [
-                'text' => 'Cancel',
-                'method' => 'cancelled',
-                'params' => 'Cancelled Successfully'
-            ]
-        ]);
+        $this->dialog()
+            ->question('Warning!', 'Are you sure?')
+            ->confirm('Confirm', 'confirmed', 'Confirmed Successfully')
+            ->cancel('Cancel', 'cancelled', 'Cancelled Successfully')
+            ->send();
     }
 
     public function confirmed(string $message): void
     {
-        $this->dialog()->success('Success', $message);
+        $this->dialog()->success('Success', $message)->send();
 
         $this->events = false;
     }
 
     public function cancelled(string $message): void
     {
-        $this->dialog()->error('Cancelled', $message);
+        $this->dialog()->error('Cancelled', $message)->send();
 
         $this->events = false;
     }
 } ?>
 
 <div x-on:dialog:accepted.window="show($event.detail)"
-     x-on:dialog:rejected.window="show($event.detail)">
+     x-on:dialog:rejected.window="show($event.detail)"
+     x-on:dialog:dismissed.window="show($event.detail)">
     <x-button color="red" wire:click="confirm">Confirm</x-button>
 </div>
 

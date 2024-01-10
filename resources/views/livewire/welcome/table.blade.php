@@ -39,7 +39,9 @@ new class extends Component {
     {
         $user = explode(' ', $user)[0];
 
-        $this->toast()->error("Naaah!", "{$user} can't leave Laravel team! 😝");
+        $this->toast()
+            ->error("Naaah!", "{$user} can't leave Laravel team! 😝")
+            ->send();
     }
 }; ?>
 

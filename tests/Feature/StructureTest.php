@@ -1,9 +1,12 @@
 <?php
 
 use Database\Seeders\CreateUserSeeder;
+use Illuminate\Support\Facades\Http;
 
 beforeEach(function () {
     fakeTorchlight();
+
+    Http::fake(['api.github.com/*' => Http::response([])]);
 
     $this->seed(CreateUserSeeder::class);
 });
@@ -19,6 +22,7 @@ test('can access all routes', function (string $route) {
     fn () => route('documentation.get-started'),
     fn () => route('documentation.installation'),
     fn () => route('documentation.troubleshooting'),
+    fn () => route('documentation.updates'),
     //
     fn () => route('documentation.form.input'),
     fn () => route('documentation.form.password'),
@@ -27,6 +31,7 @@ test('can access all routes', function (string $route) {
     fn () => route('documentation.form.number'),
     fn () => route('documentation.form.checkbox'),
     fn () => route('documentation.form.radio'),
+    fn () => route('documentation.form.tag'),
     fn () => route('documentation.form.toggle'),
     fn () => route('documentation.form.range'),
     fn () => route('documentation.form.pin'),
