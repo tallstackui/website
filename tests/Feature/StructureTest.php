@@ -1,9 +1,12 @@
 <?php
 
 use Database\Seeders\CreateUserSeeder;
+use Illuminate\Support\Facades\Http;
 
 beforeEach(function () {
     fakeTorchlight();
+
+    Http::fake(['api.github.com/*' => Http::response([])]);
 
     $this->seed(CreateUserSeeder::class);
 });

@@ -20,7 +20,7 @@ class RetrieveReleases
             return $cache;
         }
 
-        $response = Http::withToken($token.'1')->get('https://api.github.com/repos/tallstackui/tallstackui/releases');
+        $response = Http::withToken($token)->get('https://api.github.com/repos/tallstackui/tallstackui/releases');
 
         if ($response->failed()) {
             return collect();
