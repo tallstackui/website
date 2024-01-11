@@ -27,7 +27,7 @@
     </x-section>
     <x-section title="Format Validator" description="An option to visually validate the format of the entered password.">
         <x-preview language="blade" :contents="$formatValidator">
-            <x-password :rules="['min:8', 'symbols', 'numbers', 'mixed']" />
+            <x-password :rules="['min:8', 'symbols:!@#', 'numbers', 'mixed']" />
         </x-preview>
         <x-warning class="mt-4">
             <ul class="list-decimal list-inside text-sm">
