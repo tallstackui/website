@@ -23,7 +23,9 @@
         "0": "Basic Usage",
         "1": "Label & Hint",
         "2": "Required Label Indicator",
-        "3": "Invalidate"
+        "3": "Format Validator",
+        "4": "Password Generator",
+        "5": "Invalidate"
     },
     "docs.form.color": {
         "0": "Basic Usage",
