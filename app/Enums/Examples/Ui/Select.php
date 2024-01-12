@@ -79,6 +79,16 @@ class Select
     ]" select="label:label|value:value" />
     HTML;
 
+    public const STYLED_DESCRIPTION = <<<'HTML'
+    <!-- The index of the description can be: `description` or `note` -->
+
+    <x-select.styled :options="[
+        ['label' => 'Taylor Otwell', 'value' => 1, 'description' => 'Taylor Otwell is the creator of Laravel'],
+        ['label' => 'Nuno Maduro', 'value' => 2, 'description' => 'Nuno Maduro is the creator of PestPHP'],
+        ['label' => 'Jess Archer', 'value' => 3, 'description' => 'Jess Archer is the creator of Laravel Prompts'],
+    ]" select="label:label|value:value" />
+    HTML;
+
     public const STYLED_MULTIPLE = <<<'HTML'
     <x-select.styled :options="[1,2,3,4,5,6]" multiple />
     HTML;

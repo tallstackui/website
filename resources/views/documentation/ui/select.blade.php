@@ -97,6 +97,15 @@
             ]" select="label:label|value:value" />
         </x-preview>
     </x-section>
+    <x-section title="Description" anchor="styled-description">
+        <x-preview language="blade" :contents="$styledDescription">
+            <x-select.styled :options="[
+                ['label' => 'Taylor Otwell', 'value' => 1, 'description' => 'Taylor Otwell is the creator of Laravel'],
+                ['label' => 'Nuno Maduro', 'value' => 2, 'description' => 'Nuno Maduro is the creator of PestPHP'],
+                ['label' => 'Jess Archer', 'value' => 3, 'description' => 'Jess Archer is the creator of Laravel Prompts'],
+            ]" select="label:label|value:value" />
+        </x-preview>
+    </x-section>
     <x-section title="Searchable" anchor="styled-searchable">
         <x-preview language="blade" :contents="$styledSearchable">
             <x-select.styled :options="[
