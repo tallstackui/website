@@ -31,10 +31,17 @@
                 @endif
             </ol>
         </nav>
-        <div class="hidden mt-4 items-center justify-center rounded-full border border-pink-600 bg-pink-700 text-sm font-medium text-pink-50 p md:block md:flex">
-            <x-link href="https://github.com/sponsors/devajmeireles" icon="arrow-up-right" position="right" blank color="white">
-                Sponsor the TallStackUI
-            </x-link>
+        <div class="mt-4 hidden space-y-2 md:flex md:flex-col">
+            <div class="flex items-center justify-center rounded-full border border-pink-600 bg-pink-700 text-sm font-medium text-pink-50 p">
+                <x-link href="https://github.com/sponsors/devajmeireles" icon="arrow-up-right" position="right" blank color="white">
+                    Sponsor the TallStackUI
+                </x-link>
+            </div>
+            <div class="flex items-center justify-center rounded-full border border-purple-600 bg-purple-700 text-sm font-medium text-purple-50 p">
+                <x-link href="https://discord.gg/sfr66WXh4A" icon="arrow-up-right" position="right" blank color="white">
+                    Join TallStackUI on Discord
+                </x-link>
+            </div>
         </div>
     </div>
 @endif

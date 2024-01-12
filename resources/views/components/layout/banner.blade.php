@@ -4,7 +4,9 @@
             <div class="w-72 sm:w-1/4">
                 <x-svg.tallstackui-light />
             </div>
-            <p class="text-md leading-8 text-white">
+        </div>
+        <div class="flex justify-center">
+            <p class="text-sm leading-8 text-white md:text-md">
                 Powerful suite of Blade components for TALL Stack apps.
             </p>
         </div>

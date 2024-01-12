@@ -23,4 +23,15 @@
             community member fixed the issue in <a href="https://github.com/laravel/framework/pull/49216" class="underline" target="_blank">a pull request.</a>
         </p>
     </x-section>
+    <x-section title="Errors When Using Livewire in SPA Mode" disable-copy>
+        <p>
+            If you are using the new Livewire SPA mode you must load the TallStackUI in the first page rendered
+            in your application and persist in all other pages that want to use TallStackUI. For example, if your
+            applications has a <x-block>welcome.blade.php</x-block> which is the first page rendered, so it must
+            contain the script of the TallStackUI <i>(step 3 of the installation page, at this same page)</i> and
+            also the next ones, when navigating using <x-block>wire:navigate</x-block>. This is necessary
+            because using Livewire's SPA mode, Livewire only evaluates what is a script and the TallStackUI
+            script loader is not actually a script, but rather a route to a script.
+        </p>
+    </x-section>
 </x-layout>
