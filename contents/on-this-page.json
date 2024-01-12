@@ -271,8 +271,9 @@
                 "5": "Disable Options",
                 "6": "Limit Selection",
                 "7": "Image Preview",
-                "8": "Searchable",
-                "9": "Slot After"
+                "8": "Description",
+                "9": "Searchable",
+                "10": "Slot After"
             }
         },
         "Styled API": {

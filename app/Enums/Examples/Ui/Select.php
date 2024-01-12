@@ -119,25 +119,6 @@ class Select
                      select="label:name|value:id" />
     HTML;
 
-    public const STYLED_API_LABEL_HINT = <<<'HTML'
-    <x-select.styled :request="route('api.users')"
-                     select="label:name|value:id"
-                     label="Select One User"
-                     hint="You can choose whoever you want" />
-    HTML;
-
-    public const STYLED_API_REQUIRED = <<<'HTML'
-    <x-select.styled :request="route('api.users')"
-                     select="label:name|value:id"
-                     required />
-    HTML;
-
-    public const STYLED_API_MULTIPLE = <<<'HTML'
-    <x-select.styled :request="route('api.users')"
-                     select="label:name|value:id"
-                     multiple />
-    HTML;
-
     public const STYLED_API_ADVANCED = <<<'HTML'
     <!-- Method can be 'get' or 'post' -->
 
@@ -146,21 +127,6 @@ class Select
                         'method' => 'get',
                         'params' => ['library' => 'TallStackUi'],
                      ]" select="label:name|value:id" />
-    HTML;
-
-    public const STYLED_API_SLOT = <<<'HTML'
-    <x-select.styled :request="route('api.users')"
-                     select="label:name|value:id"
-                     label="Select One User"
-                     hint="Enter any random value to see the slot">
-        <x-slot:after>
-            <div class="px-2 mb-2 flex justify-center items-center">
-                <x-button x-on:click="show = false; $dispatch('confirmed', { term: search })">
-                    <span x-html="`Create user <b>${search}</b>`"></span>
-                </x-button>
-            </div>
-        </x-slot:after>
-    </x-select.styled>
     HTML;
 
     public const ELOQUENT = <<<'HTML'
