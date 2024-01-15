@@ -38,11 +38,6 @@ class DeepPersonalization
         {
             parent::__construct(); // [tl! highlight]
         }
-
-        public function render(): View
-        {
-            return view('components.input');
-        }
     }
     HTML;
 
@@ -61,11 +56,6 @@ class DeepPersonalization
         public function personalization(): array // [tl! focus:3]
         {
             return [/* ... */];
-        }
-
-        public function render(): View
-        {
-            return view('components.input');
         }
     }
     HTML;

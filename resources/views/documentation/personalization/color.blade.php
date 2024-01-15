@@ -13,10 +13,7 @@
         </p>
     </x-section>
     <x-warning class="mb-4">
-        Are you looking for how to create custom colors? If yes,
-        <x-link :href="route('documentation.personalization.deep')" fragment="create-custom-colors" color="null" bold underline>
-            click here!
-        </x-link>
+        If you are looking for how to create custom colors, <a href="{{ route('documentation.personalization.deep').'#create-custom-colors' }}" class="underline">use this guide.</a>
     </x-warning>
     <x-section title="Personalizing Colors" disable-copy>
         <p class="mb-4">1. Open the TailwindCSS configuration file and enter the following content:</p>

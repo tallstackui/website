@@ -30,9 +30,9 @@
         <p>
             Although TallStackUI offers many components out of the box, you may want to create Blade components
             with the same names as TallStackUI components, or you can even start a new Laravel project with Laravel
-            Breeze or Laravel JetStream and continue using some of the components they have offer, as <x-block>dropdown</x-block>.
-            For cases like this, <u>where there are name conflicts</u>, you can define a prefix for the TallStackUI
-            components through the configuration file:
+            Breeze or Laravel JetStream and continue using some of the components they have offer, for example the
+            <x-block>x-dropdown</x-block> component. For cases like this, <u>where there are name conflicts</u>,
+            you can define a prefix for the TallStackUI components through the configuration file:
         </p>
         <x-warning class="mb-4 mt-2">
             <a href="{{ route('documentation.configuration') }}" class="underline" target="_blank">

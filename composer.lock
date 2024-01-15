@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "70161de0697e301e75f6f189bb638e48",
+    "content-hash": "77a56bfd021459f391086e7cd39a481c",
     "packages": [
         {
             "name": "brick/math",
@@ -5651,16 +5651,16 @@
         },
         {
             "name": "tallstackui/tallstackui",
-            "version": "v1.11.3",
+            "version": "v1.11.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/tallstackui/tallstackui.git",
-                "reference": "843640e3717777c61ea6bcc68c99e7301d195c1d"
+                "reference": "c55a41428bfda7e3a65c5d40861e05f359bf3479"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tallstackui/tallstackui/zipball/843640e3717777c61ea6bcc68c99e7301d195c1d",
-                "reference": "843640e3717777c61ea6bcc68c99e7301d195c1d",
+                "url": "https://api.github.com/repos/tallstackui/tallstackui/zipball/c55a41428bfda7e3a65c5d40861e05f359bf3479",
+                "reference": "c55a41428bfda7e3a65c5d40861e05f359bf3479",
                 "shasum": ""
             },
             "require": {
@@ -5706,7 +5706,7 @@
             "description": "TallStackUI is a powerful suite of Blade components that elevate your workflow of Livewire applications.",
             "support": {
                 "issues": "https://github.com/tallstackui/tallstackui/issues",
-                "source": "https://github.com/tallstackui/tallstackui/tree/v1.11.3"
+                "source": "https://github.com/tallstackui/tallstackui/tree/v1.11.4"
             },
             "funding": [
                 {
@@ -5714,7 +5714,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-01-12T13:31:08+00:00"
+            "time": "2024-01-12T16:24:31+00:00"
         },
         {
             "name": "tijsverkoyen/css-to-inline-styles",
@@ -6498,69 +6498,6 @@
                 "source": "https://github.com/Jean85/pretty-package-versions/tree/2.0.5"
             },
             "time": "2021-10-08T21:21:46+00:00"
-        },
-        {
-            "name": "laravel/envoy",
-            "version": "v2.8.7",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/laravel/envoy.git",
-                "reference": "dd7635009d8d22a34a9f9c2a4e282d23ee234a07"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/laravel/envoy/zipball/dd7635009d8d22a34a9f9c2a4e282d23ee234a07",
-                "reference": "dd7635009d8d22a34a9f9c2a4e282d23ee234a07",
-                "shasum": ""
-            },
-            "require": {
-                "guzzlehttp/guzzle": "^6.0|^7.0",
-                "illuminate/support": "^6.0|^7.0|^8.0|^9.0|^10.0",
-                "php": "^7.2|^8.0",
-                "symfony/console": "^4.3|^5.0|^6.0",
-                "symfony/process": "^4.3|^5.0|^6.0"
-            },
-            "require-dev": {
-                "phpstan/phpstan": "^1.10",
-                "phpunit/phpunit": "^8.0|^9.0"
-            },
-            "suggest": {
-                "ext-posix": "Required to determine the System user on Unix systems."
-            },
-            "bin": [
-                "bin/envoy"
-            ],
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "2.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Laravel\\Envoy\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Taylor Otwell",
-                    "email": "taylor@laravel.com"
-                }
-            ],
-            "description": "Elegant SSH tasks for PHP.",
-            "keywords": [
-                "laravel",
-                "ssh"
-            ],
-            "support": {
-                "issues": "https://github.com/laravel/envoy/issues",
-                "source": "https://github.com/laravel/envoy/tree/v2.8.7"
-            },
-            "time": "2024-01-09T17:59:31+00:00"
         },
         {
             "name": "laravel/pint",

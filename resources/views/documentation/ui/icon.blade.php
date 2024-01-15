@@ -5,6 +5,9 @@
     <x-slot:description>
         Native support to all <a href="https://heroicons.com" class="underline" target="_blank">Heroicons.</a>
     </x-slot:description>
+    <x-warning class="my-2">
+        TallStackUI currently only supports <a href="https://heroicons.com" class="underline" target="_blank">Heroicons.</a>
+    </x-warning>
     <x-section title="Basic Usage">
         <x-preview language="blade" :contents="$basic">
             <div class="inline-flex space-x-2">
