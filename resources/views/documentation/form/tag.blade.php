@@ -12,7 +12,9 @@
         <livewire:documentation.personalization :$personalization component="tag" />
     </x-slot:personalization>
     <x-warning class="mb-4">
-        The tags can be inserted by pressing the <b>enter</b> or <b>comma</b> keys, and can be removed by pressing the <b>backspace</b> key.
+        In desktop devices the tags can be inserted by pressing the <b>enter</b> or <b>comma</b> keys,
+        and can be removed by pressing the <b>backspace</b> key. In mobile devices the tags can only be inserted
+        using <b>enter</b> key.
     </x-warning>
     <x-section title="Basic Usage">
         <x-preview language="blade" :contents="$basic">
@@ -50,9 +52,6 @@
                    x-on:remove="alert(`Removed: ${$event.detail.tag}`)"
                    x-on:erase="alert(`Erased: ${$event.detail.tags}`)" />
         </x-preview>
-        <x-warning class="mt-4">
-            The prefix must be a single character.
-        </x-warning>
     </x-section>
     <x-section title="Invalidate" description="An option to not show validation error message.">
         <x-preview language="blade" :contents="$invalidate">

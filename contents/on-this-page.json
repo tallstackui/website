@@ -70,6 +70,14 @@
         "5": "Color Variations",
         "6": "Invalidate"
     },
+    "docs.form.tag": {
+        "0": "Basic Usage",
+        "1": "Label & Hint",
+        "2": "Limit Options",
+        "3": "Prefix",
+        "4": "Events",
+        "5": "Invalidate"
+    },
     "docs.form.toggle": {
         "0": "Basic Usage",
         "1": "Label",
