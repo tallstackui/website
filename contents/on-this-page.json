@@ -203,8 +203,9 @@
         "1": "Button at Left",
         "2": "Label & Hint",
         "3": "Secret Content",
-        "4": "Icon Style",
-        "5": "Using Different Icons"
+        "4": "Events",
+        "5": "Icon Style",
+        "6": "Using Different Icons"
     },
     "docs.ui.dropdown": {
         "0": "Basic Usage",
@@ -219,7 +220,8 @@
         "1": "Filtering Properties",
         "2": "Title Customization",
         "3": "Close Option",
-        "4": "Color Variations"
+        "4": "Footer Slot",
+        "5": "Color Variations"
     },
     "docs.ui.icon": {
         "0": "Basic Usage",
