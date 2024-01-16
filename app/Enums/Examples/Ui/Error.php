@@ -24,6 +24,22 @@ class Error
     <x-errors close />
     HTML;
 
+    public const SLOT = <<<'HTML'
+    <x-errors footer="Footer Slot" />
+
+    <!-- or -->
+
+    <x-errors>
+        <x-slot:footer>
+            <div class="flex justify-end">
+                <p class="text-sm text-red-500">
+                    Footer Slot
+                </p>
+            </div>
+        </x-slot:footer>
+    </x-errors>
+    HTML;
+
     public const COLORS = <<<'HTML'
     <!-- Default: red -->
 

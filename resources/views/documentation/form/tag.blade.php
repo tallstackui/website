@@ -43,6 +43,17 @@
             The prefix must be a single character.
         </x-warning>
     </x-section>
+    <x-section title="Events">
+        <x-preview language="blade" :contents="$events">
+            <x-tag :value="['Laravel', 'Symfony', 'CodeIgniter']"
+                   x-on:add="alert(`Introduced: ${$event.detail.tag}`)"
+                   x-on:remove="alert(`Removed: ${$event.detail.tag}`)"
+                   x-on:erase="alert(`Erased: ${$event.detail.tags}`)" />
+        </x-preview>
+        <x-warning class="mt-4">
+            The prefix must be a single character.
+        </x-warning>
+    </x-section>
     <x-section title="Invalidate" description="An option to not show validation error message.">
         <x-preview language="blade" :contents="$invalidate">
             <x-tag invalidate />

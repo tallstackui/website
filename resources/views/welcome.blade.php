@@ -282,8 +282,6 @@
                                         <x-clipboard label="Secret 🫢"
                                                      hint="Click to copy the secret content"
                                                      text="TallStackUI is the best TALL Stack UI library" secret />
-                                        <x-clipboard icon
-                                                     text="TallStackUI is the best TALL Stack UI library" />
                                     </dd>
                                 </div>
                             </dl>

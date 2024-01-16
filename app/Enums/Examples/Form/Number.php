@@ -17,6 +17,10 @@ class Number
     <x-number min="2" max="5" />
     HTML;
 
+    public const CENTRALIZED = <<<'HTML'
+    <x-number centralized />
+    HTML;
+
     public const DELAY = <<<'HTML'
     <x-number delay="1" min="1" max="10" />
     HTML;

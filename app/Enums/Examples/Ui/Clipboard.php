@@ -28,6 +28,14 @@ class Clipboard
     <x-clipboard text="TallStackUI" secret />
     HTML;
 
+    public const EVENTS = <<<'HTML'
+    <!-- The listener receive the content copied in $event.detail.text -->
+
+    <x-clipboard x-on:copy="alert(`Copied: ${$event.detail.text}`)">
+        TallStackUi
+    </x-clipboard>
+    HTML;
+
     public const ICON = <<<'HTML'
     <x-clipboard text="TallStackUI" icon />
 

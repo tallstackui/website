@@ -68,6 +68,7 @@ $save = function () {
                              hint="Your current age"
                              icon="user"
                              delay="1"
+                             centralized
                              wire:model="age" />
                 </div>
                 <div class="col-span-1">

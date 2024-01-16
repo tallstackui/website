@@ -7,6 +7,7 @@ new class extends Component {
     public ?string $title = null;
     public ?string $color = 'red';
     public ?bool $close = false;
+    public ?bool $slot = false;
 
     public function mount(): void
     {
@@ -16,5 +17,17 @@ new class extends Component {
 } ?>
 
 <div>
-    <x-errors :$only :$title :$color :$close />
+    @if (!$slot)
+        <x-errors :$only :$title :$color :$close />
+    @else
+        <x-errors :$only :$title :$color :$close>
+            <x-slot:footer>
+                <div class="flex justify-end">
+                    <p class="text-sm text-red-500">
+                        Footer Slot
+                    </p>
+                </div>
+            </x-slot:footer>
+        </x-errors>
+    @endif
 </div>

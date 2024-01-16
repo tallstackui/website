@@ -39,9 +39,10 @@
         "0": "Basic Usage",
         "1": "Label & Hint",
         "2": "Min & Max Control",
-        "3": "Delay Control",
-        "4": "Invalidate",
-        "5": "Livewire Bind Concern"
+        "3": "Centralized",
+        "4": "Delay Control",
+        "5": "Invalidate",
+        "6": "Livewire Bind Concern"
     },
     "docs.form.textarea": {
         "0": "Basic Usage",

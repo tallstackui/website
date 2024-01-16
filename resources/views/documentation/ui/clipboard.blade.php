@@ -39,6 +39,13 @@
             </x-clipboard>
         </x-preview>
     </x-section>
+    <x-section title="Events">
+        <x-preview language="blade" :contents="$events">
+            <x-clipboard x-on:copy="alert(`Copied: ${$event.detail.text}`)">
+                TallStackUi
+            </x-clipboard>
+        </x-preview>
+    </x-section>
     <x-section title="Icon Style">
         <x-preview language="blade" :contents="$icon">
             <x-clipboard icon>

@@ -63,7 +63,7 @@
                             <x-layout.navigation.link :href="route('documentation.form.radio')" text="Radio" />
                         </li>
                         <li class="relative ml-4">
-                            <x-layout.navigation.link :href="route('documentation.form.tag')" text="Tag" new />
+                            <x-layout.navigation.link :href="route('documentation.form.tag')" text="Tag" />
                         </li>
                         <li class="relative ml-4">
                             <x-layout.navigation.link :href="route('documentation.form.toggle')" text="Toggle" />
@@ -166,7 +166,7 @@
             </ul>
         </li>
         <li>
-            <h2 class="font-medium text-pink-900 font-display dark:text-pink-500">Diggin Deeper</h2>
+            <h2 class="font-medium text-pink-900 font-display dark:text-pink-500">Digging Deeper</h2>
             <ul role="list" class="mt-4 space-y-2 dark:border-slate-800 lg:space-y-4 lg:mt-4 lg:border-slate-200">
                 <li class="relative ml-4">
                     <x-layout.navigation.link :href="route('documentation.configuration')" text="Configurations" />

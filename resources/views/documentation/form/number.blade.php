@@ -26,6 +26,11 @@
             <x-number label="Quantity" hint="Press the plus button to increase one by one" min="1" max="10" />
         </x-preview>
     </x-section>
+    <x-section title="Centralized">
+        <x-preview language="blade" :contents="$centralized">
+            <x-number centralized />
+        </x-preview>
+    </x-section>
     <x-section title="Delay Control" description="An option to control the velocity to increase/decrease when pressing buttons">
         <x-preview language="blade" :contents="$delay">
             <x-number delay="1" min="1" max="10" />

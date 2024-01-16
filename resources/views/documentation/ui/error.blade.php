@@ -25,7 +25,12 @@
     </x-section>
     <x-section title="Close Option" description="An option to allow the user to hide the errors">
         <x-preview language="blade" :contents="$close">
-            <livewire:documentation.ui.errors :close="true"/>
+            <livewire:documentation.ui.errors close/>
+        </x-preview>
+    </x-section>
+    <x-section title="Footer Slot">
+        <x-preview language="blade" :contents="$slot">
+            <livewire:documentation.ui.errors slot/>
         </x-preview>
     </x-section>
     <x-section title="Color Variations">
