@@ -84,6 +84,14 @@
             with no chance of globally affecting other components.
         </p>
     </x-section>
+    <x-section title="Is there a release schedule?" disable-copy>
+        <p class="mb-4">
+            No! <u>As we find things worthy of release we simply ship them immediately, except for days like Friday,
+            Saturday, and Sunday.</u> That's why it's always good to pay attention and periodically update the TallStackUI
+            in your project. To do that, just run this command through your terminal in the root of the project:
+        </p>
+        <x-clipboard text="composer update tallstackui/tallstackui"/>
+    </x-section>
     <x-section title="Is there a price to pay to use TallStackUI?" disable-copy>
         <p>
             Although there is a sponsorship program, which raises funds to encourage the work of developers
