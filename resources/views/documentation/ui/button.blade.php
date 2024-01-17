@@ -14,7 +14,7 @@
             <x-button>TallStackUI</x-button>
         </x-preview>
     </x-section>
-    <x-section title="Tag A Usage" anchor="normal-tag-a-usage">
+    <x-section title="Button as Link" anchor="normal-button-as-link">
         <x-preview language="blade" :contents="$a">
             <x-button href="https://google.com.br" target="_blank">TallStackUi</x-button>
         </x-preview>
@@ -191,7 +191,7 @@
             <x-button.circle>TS</x-button.circle>
         </x-preview>
     </x-section>
-    <x-section title="Tag A Button" anchor="circle-tag-a-usage">
+    <x-section title="Button as Link" anchor="circle-button-as-link">
         <x-preview language="blade" :contents="$circleA">
             <x-button.circle href="https://google.com.br" target="_blank">TS</x-button.circle>
         </x-preview>
@@ -205,10 +205,10 @@
                anchor="circle-size-variations"
                description="An option to use any Heroicon.">
         <x-preview language="blade" :contents="$circleSizes">
-            <x-button.circle text="X" xs/>
-            <x-button.circle text="S" sm/>
-            <x-button.circle text="MD" />
-            <x-button.circle text="LG" lg/>
+            <x-button.circle icon="pencil" xs/>
+            <x-button.circle icon="pencil" sm/>
+            <x-button.circle icon="pencil" />
+            <x-button.circle icon="pencil" lg/>
         </x-preview>
     </x-section>
     <x-section title="Loading Effect" anchor="circle-loading-effect">

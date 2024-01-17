@@ -38,7 +38,7 @@
                 </x-link>
             </div>
             <div class="flex items-center justify-center rounded-full border border-purple-600 bg-purple-700 text-sm font-medium text-purple-50 p">
-                <x-link href="https://discord.gg/sfr66WXh4A" icon="arrow-up-right" position="right" blank color="white">
+                <x-link href="{{ $discord }}" icon="arrow-up-right" position="right" blank color="white">
                     Join TallStackUI on Discord
                 </x-link>
             </div>

@@ -8,11 +8,11 @@
     <x-section title="Why use TallStackUI instead of something like FilamentPHP?" disable-copy>
         <p>
             <u>FilamentPHP is one of the best form builders</u>, with little time and effort
-            you can have a complete administrative panel, however, there are some scenarios
+            you can have a complete CRUD panel, however, there are some scenarios
             in which using a tool like it is not favorable. TallStackUI, on the other hand,
             is a component library for UI, that is: <span class="font-semibold">TallStackUI does not generate PHP code,
             and it does not take care of business rules, so the code that makes the application
-            work is completely under your control, only the UI - visual, will be available through
+            work is completely under your control, only the UI - visually, will be available through
             the TallStackUI components.</span> If you need something fast, tools like Filament are always
             the best way to go. However, if you or your project are careful about dependencies, or
             you want to have control over all PHP code but save time just on the UI, TallStackUI is the best way.
@@ -30,7 +30,7 @@
     <x-section title="Can I use TallStackUI at the same time as using other UI libraries?" disable-copy>
         <p>
             Yes, totally! TallStackUI components support a <a href="{{ route('documentation.installation').'#component-prefix' }}" class="underline">prefix key</a>,
-            which consists of prefixing TallStackUI components avoiding conflicts in component names.
+            which consists of prefixing TallStackUI components avoiding conflicts in component names of other libraries.
         </p>
     </x-section>
     <x-section title="What can and cannot I personalize in TallStackUI?" disable-copy>
@@ -45,8 +45,8 @@
                 <p class="mt-2">
                     <a href="{{ route('documentation.personalization.soft') }}" class="underline">Soft Personalization is an innovative and unique method, created exclusively by TallStackUI,</a>
                     which allows components to be personalized at runtime, through a service provider.
-                    The idea behind soft personalization is to tap into personalizable blocks of each
-                    component and change your content. Although it may seem limited, soft personalization
+                    <span class="font-semibold">The idea behind soft personalization is to tap into personalizable blocks of each
+                    component and change your content.</span> Although it may seem limited, soft personalization
                     is very powerful and offers, in addition to facilitating the personalization process,
                     countless possibilities including a way to personalize "inline" components, that is,
                     personalization is applied with a kind of scope to a single component instead of all components.
@@ -72,10 +72,22 @@
             We currently have over 30 components and expect the release of over 15 more new components in 2024.
         </p>
     </x-section>
+    <x-section title="What makes TallStackUI a special library for my projects?" disable-copy>
+        <p>
+            TallStackUI was built by developers who are experts in PHP, JavaScript, and automated testing.
+            This causes us to adopt some strict stances on quality control, written code, and testing.
+            TallStackUI is guided for PHP 8.1 (support for PHP 8.1 or more!), following the PSR 12, with
+            automated unit and browser tests with PestPHP, code analyses with LaraStan, without TypeScript
+            to write simple and easy-to-understand JavaScript code, generating easy maintenance and less
+            chance of bugs. Furthermore, our components do not have direct coupling, for example: a component
+            that is used within 10 other components, meaning that possible bugs are isolated per component,
+            with no chance of globally affecting other components.
+        </p>
+    </x-section>
     <x-section title="Is there a price to pay to use TallStackUI?" disable-copy>
         <p>
             Although there is a sponsorship program, which raises funds to encourage the work of developers
-            of tools like TallStackUI, TallStackUI itself is free and does not require payment. However,
+            of tools like TallStackUI, <span class="font-semibold">TallStackUI itself is free and does not require payment.</span> However,
             if you agree to support the library, <a href="https://github.com/sponsors/devajmeireles" class="underline" target="_blank">you can do so by sponsoring the creator.</a>
         </p>
     </x-section>
@@ -89,9 +101,12 @@
     <x-section title="How to follow news from TallStackUI?" disable-copy>
         <p>
             You can follow AJ, the creator of TallStackUI, on social media: <a href="https://www.linkedin.com/in/devajmeireles/" class="underline" target="_blank">LinkedIn</a> and <a href="https://twitter.com/devajmeireles" class="underline" target="_blank">X</a>, and also join our
-            <a href="https://discord.gg/sfr66WXh4A" class="underline" target="_blank">Discord server</a>, which already has more than 100 people, so you'll have access to early updates and news.
+            <a href="{{ $discord }}" class="underline" target="_blank">Discord server</a>, which already has more than 100 people, so you'll have access to early updates and news.
         </p>
     </x-section>
+    <x-warning>
+        Is there an answer missing here? Join our <a href="{{ $discord }}" class="underline" target="_blank">Discord server</a> to help us.
+    </x-warning>
     <x-slot:navigation>
         <x-slot:back>
             <x-layout.footer-navigation :href="route('documentation.updates')" text="Updates" back />

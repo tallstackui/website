@@ -22,7 +22,7 @@
             possible impacts on large projects that depend on everything working well.
         </p>
         <p>
-            Feel invited to <a href="https://discord.gg/sfr66WXh4A" class="underline" target="_blank">join our Discord</a> server to interact with the community and get early access to news.
+            Feel invited to <a href="{{ $discord }}" class="underline" target="_blank">join our Discord</a> server to interact with the community and get early access to news.
         </p>
     </x-section>
     <x-slot:navigation>

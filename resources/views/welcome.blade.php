@@ -65,7 +65,7 @@
                                         <div class="px-6 sm:text-center md:mx-auto md:max-w-2xl lg:col-span-6 lg:flex lg:items-center lg:text-left">
                                             <div>
                                                 <div class="hidden sm:mb-4 sm:flex sm:justify-center lg:justify-start">
-                                                    <x-button href="https://discord.gg/sfr66WXh4A"
+                                                    <x-button href="{{ $discord }}"
                                                               target="_blank"
                                                               sm
                                                               round
