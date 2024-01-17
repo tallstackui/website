@@ -33,11 +33,23 @@ class Select
     <x-select.styled :options="[1,2,3]" />
     HTML;
 
-    public const STYLED_LABEL_HINT_PLACEHOLDER = <<<'HTML'
+    public const STYLED_LABEL_HINT = <<<'HTML'
     <x-select.styled label="Select One Option"
                      placeholder="Custom Placeholder"
                      hint="You can choose 1, 2 or 3"
                      :options="[1,2,3]" />
+    HTML;
+
+    public const STYLED_PLACEHOLDERS = <<<'HTML'
+    <!-- Changing only the placeholder of the input -->
+    <x-select.styled placeholder="Custom Placeholder" ... />
+
+    <!-- Changing all placeholders -->
+    <x-select.styled :placeholders="[
+                        'default' => 'This is the default placeholder',
+                        'search'  => 'This is the search placeholder',
+                        'empty'   => 'This is the empty placeholder',
+                     ]" ... />
     HTML;
 
     public const STYLED_REQUIRED = <<<'HTML'

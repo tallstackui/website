@@ -275,16 +275,17 @@
             "prefix": true,
             "contents": {
                 "0": "Basic Usage",
-                "1": "Label & Hint & Placeholder",
-                "2": "Required",
-                "3": "Multiple",
-                "4": "Multi-dimensional Array",
-                "5": "Disable Options",
-                "6": "Limit Selection",
-                "7": "Image Preview",
-                "8": "Description",
-                "9": "Searchable",
-                "10": "Slot After"
+                "1": "Label & Hint",
+                "2": "Placeholders",
+                "3": "Required",
+                "4": "Multiple",
+                "5": "Multi-dimensional Array",
+                "6": "Disable Options",
+                "7": "Limit Selection",
+                "8": "Image Preview",
+                "9": "Description",
+                "10": "Searchable",
+                "11": "Slot After"
             }
         },
         "Styled API": {

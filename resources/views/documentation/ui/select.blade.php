@@ -41,12 +41,20 @@
             <x-select.styled :options="[1,2,3]" />
         </x-preview>
     </x-section>
-    <x-section title="Label & Hint & Placeholder" anchor="styled-label-hint-placeholder">
-        <x-preview language="blade" :contents="$styledLabelHintPlaceholder">
+    <x-section title="Label & Hint" anchor="styled-label-hint">
+        <x-preview language="blade" :contents="$styledLabelHint">
             <x-select.styled label="Select One Option"
-                             placeholder="Custom Placeholder"
                              hint="You can choose 1, 2 or 3"
                              :options="[1,2,3]" />
+        </x-preview>
+    </x-section>
+    <x-section title="Placeholders" anchor="styled-placeholders">
+        <x-preview language="blade" :contents="$styledPlaceholders">
+            <x-select.styled :placeholders="[
+                                'default' => 'This is the default placeholder',
+                                'search' => 'This is the search placeholder',
+                                'empty' => 'This is the empty placeholder',
+                            ]" searchable :options="[1,2,3]" />
         </x-preview>
     </x-section>
     <x-section title="Required" description="An option to make the select component required." anchor="styled-required">
