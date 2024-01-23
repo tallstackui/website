@@ -42,6 +42,7 @@ use App\Enums\Examples\Ui\Icon;
 use App\Enums\Examples\Ui\Link;
 use App\Enums\Examples\Ui\Loading;
 use App\Enums\Examples\Ui\Modal;
+use App\Enums\Examples\Ui\Reaction;
 use App\Enums\Examples\Ui\Select;
 use App\Enums\Examples\Ui\Slide;
 use App\Enums\Examples\Ui\Tab;
@@ -83,6 +84,7 @@ enum Example: string
     case Pin = Pin::class;
     case Radio = Radio::class;
     case Range = Range::class;
+    case Reaction = Reaction::class;
     case Select = Select::class;
     case Slide = Slide::class;
     case SoftPersonalization = SoftPersonalization::class;

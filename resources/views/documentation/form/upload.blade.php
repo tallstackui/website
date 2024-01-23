@@ -11,6 +11,12 @@
     <x-slot:personalization>
         <livewire:documentation.personalization :$personalization component="upload" />
     </x-slot:personalization>
+    <x-warning class="mb-4">
+        Files can be uploaded through selection or drag-and-drop. Furthermore, by default when
+        sending a png, jpg, jpeg or gif file, a preview is offered when clicking on the
+        file image. To disable the preview, simply pass the <b>:preview="false"</b> parameter
+        to the component.
+    </x-warning>
     <x-section title="Basic Usage">
         <x-preview language="blade" :contents="$basic">
             <livewire:documentation.form.upload.single :model="1" />
@@ -65,7 +71,7 @@
         </x-preview>
         <p class="mt-4">
             You can use the <x-block>when-uploaded</x-block> parameter directly in the slot
-            to only render the slot as a file has been uploaded:
+            to <b>only render the slot as a file has been uploaded:</b>
         </p>
         <div class="mt-4">
             <x-code language="blade" :contents="$footerSlotWhenUploaded" />
