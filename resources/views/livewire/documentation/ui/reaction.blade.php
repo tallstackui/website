@@ -42,5 +42,7 @@ new class extends Component {
         <x-reaction react-method="wow">
             React to the TallStackUI
         </x-reaction>
+    @elseif ($model === 7)
+        <x-reaction x-on:react="alert(`Reacted: ${JSON.stringify($event.detail.reaction)}`)" />
     @endif
 </div>

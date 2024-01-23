@@ -70,6 +70,11 @@
             <livewire:documentation.ui.reaction :model="6" />
         </x-preview>
     </x-section>
+    <x-section title="Events">
+        <x-preview language="blade" :contents="$events">
+            <livewire:documentation.ui.reaction :model="7" />
+        </x-preview>
+    </x-section>
     <x-slot:navigation>
         <x-slot:back>
             <x-layout.footer-navigation :href="route('documentation.ui.loading')" text="Loading" back />

@@ -6,13 +6,13 @@ class Reaction
 {
     public const METHOD = <<<'HTML'
     use Livewire\Component;
-    
+
     class MyComponent extends Component
     {
         public function react(string $reaction) // [tl! highlight]
         {
             // Your logic here...
-    
+
             // $reaction will be thumbs-up, thumbs-down, the emoji name.
         }
     }
@@ -32,7 +32,7 @@ class Reaction
 
     public const POSITION = <<<'HTML'
     <!-- Accept all positions of Tooltip component -->
-    
+
     <x-reaction position="top" />
     HTML;
 
@@ -42,7 +42,7 @@ class Reaction
 
     public const QUANTITY_BIND = <<<'HTML'
     <!-- $quantity is an integer Livewire public property -->
-    
+
     <x-reaction wire:model="quantity" :$quantity />
     HTML;
 
@@ -69,7 +69,7 @@ class Reaction
         'party-popper',
         'clown',
         'check-mark' -->
-    
+
     <x-reaction :only="['thumbs-up', 'thumbs-down', 'heart']" />
     HTML;
 
@@ -77,6 +77,12 @@ class Reaction
     <x-reaction>
         React to the TallStackUI
     </x-reaction>
+    HTML;
+
+    public const EVENTS = <<<'HTML'
+    <!-- The listener receive the uploaded file $event.detail.reaction -->
+
+    <x-reaction x-on:react="alert(`Reacted: ${$event.detail.reaction.reaction}`)" />
     HTML;
 
     public const PERSONALIZATION = <<<'HTML'
