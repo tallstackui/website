@@ -103,6 +103,15 @@
         "5": "Masks",
         "6": "Invalidate"
     },
+    "docs.form.upload": {
+        "0": "Basic Usage",
+        "1": "Label & Hint & Tip",
+        "3": "Delete",
+        "4": "Multiple",
+        "5": "Restricting File Types",
+        "6": "Footer Slot",
+        "7": "Events"
+    },
     "docs.ui.alert": {
         "0": "Basic Usage",
         "1": "Title",
@@ -260,6 +269,16 @@
         "4": "Text Slot",
         "5": "Target & Delay Options",
         "6": "Configurations"
+    },
+    "docs.ui.reaction": {
+        "0": "Concept",
+        "1": "Persist Reactions",
+        "3": "Basic Usage",
+        "4": "Animated Style",
+        "5": "Tooltip Position",
+        "6": "Quantity Slot",
+        "7": "Using Less Icons",
+        "8": "Slot"
     },
     "docs.ui.select": {
         "Native": {
