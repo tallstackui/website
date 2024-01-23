@@ -19,8 +19,6 @@ class DeleteLivewireTemporaryUpload extends Command
             return;
         }
 
-        $this->newLine();
-
-        $this->info('The temporary upload folder of Livewire has been deleted.');
+        $this->components->info('The temporary upload folder of Livewire has been deleted.');
     }
 }
