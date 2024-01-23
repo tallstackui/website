@@ -9,9 +9,9 @@ class Upload
     HTML;
 
     public const LABEL_HINT_TIP = <<<'HTML'
-    <x-upload label="Photos"
-              hint="Sent us your images"
-              tip="Drag and drop your images here"/>
+    <x-upload label="Screenshot"
+              hint="We need to analyze your screenshot"
+              tip="Drag and drop your screenshot here" />
     HTML;
 
     public const DELETE = <<<'HTML'

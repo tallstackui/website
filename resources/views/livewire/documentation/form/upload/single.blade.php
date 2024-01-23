@@ -43,9 +43,9 @@ new class extends Component {
     @if ($model === 1)
         <x-upload wire:model="photo1"/>
     @elseif ($model === 2)
-        <x-upload label="Photos"
-                  hint="Sent us your images"
-                  tip="Drag and drop your images here"
+        <x-upload label="Screenshot"
+                  hint="We need to analyze your screenshot"
+                  tip="Drag and drop your screenshot here"
                   wire:model="photo2"/>
     @elseif ($model === 3)
         <x-upload wire:model="photo3" delete/>
