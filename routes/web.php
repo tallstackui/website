@@ -32,6 +32,7 @@ Route::prefix('/docs')
                 Route::view('/toggle', 'documentation.form.toggle', Example::Toggle->variables())->name('toggle');
                 Route::view('/range', 'documentation.form.range', Example::Range->variables())->name('range');
                 Route::view('/pin', 'documentation.form.pin', Example::Pin->variables())->name('pin');
+                Route::view('/upload', 'documentation.form.upload', Example::Upload->variables())->name('upload');
             });
 
         Route::prefix('/ui')
@@ -55,6 +56,7 @@ Route::prefix('/docs')
                 Route::view('/modal', 'documentation.ui.modal', Example::Modal->variables())->name('modal');
                 Route::view('/link', 'documentation.ui.link', Example::Link->variables())->name('link');
                 Route::view('/loading', 'documentation.ui.loading', Example::Loading->variables())->name('loading');
+                Route::view('/reaction', 'documentation.ui.reaction', Example::Reaction->variables())->name('reaction');
                 Route::view('/select', 'documentation.ui.select', Example::Select->variables())->name('select');
                 Route::view('/slide', 'documentation.ui.slide', Example::Slide->variables())->name('slide');
                 Route::view('/tab', 'documentation.ui.tab', Example::Tab->variables())->name('tab');

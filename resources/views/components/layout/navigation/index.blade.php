@@ -77,6 +77,9 @@
                         <li class="relative ml-4">
                             <x-layout.navigation.link :href="route('documentation.form.pin')" text="Pin" />
                         </li>
+                        <li class="relative ml-4">
+                            <x-layout.navigation.link :href="route('documentation.form.upload')" text="Upload" new />
+                        </li>
                     </ul>
                 </li>
                 <li class="relative ml-4">
@@ -120,6 +123,9 @@
                         </li>
                         <li class="relative ml-4">
                             <x-layout.navigation.link :href="route('documentation.ui.loading')" text="Loading" />
+                        </li>
+                        <li class="relative ml-4">
+                            <x-layout.navigation.link :href="route('documentation.ui.reaction')" text="Reaction" new />
                         </li>
                         <li class="relative ml-4">
                             <x-layout.navigation.link :href="route('documentation.ui.select')" text="Select" />

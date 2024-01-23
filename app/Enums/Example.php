@@ -13,6 +13,7 @@ use App\Enums\Examples\Form\Range;
 use App\Enums\Examples\Form\Tag;
 use App\Enums\Examples\Form\Textarea;
 use App\Enums\Examples\Form\Toggle;
+use App\Enums\Examples\Form\Upload;
 use App\Enums\Examples\Form\WithoutLivewire;
 use App\Enums\Examples\Others\Alpine;
 use App\Enums\Examples\Others\Configuration;
@@ -41,6 +42,7 @@ use App\Enums\Examples\Ui\Icon;
 use App\Enums\Examples\Ui\Link;
 use App\Enums\Examples\Ui\Loading;
 use App\Enums\Examples\Ui\Modal;
+use App\Enums\Examples\Ui\Reaction;
 use App\Enums\Examples\Ui\Select;
 use App\Enums\Examples\Ui\Slide;
 use App\Enums\Examples\Ui\Tab;
@@ -82,6 +84,7 @@ enum Example: string
     case Pin = Pin::class;
     case Radio = Radio::class;
     case Range = Range::class;
+    case Reaction = Reaction::class;
     case Select = Select::class;
     case Slide = Slide::class;
     case SoftPersonalization = SoftPersonalization::class;
@@ -95,6 +98,7 @@ enum Example: string
     case Translation = Translation::class;
     case Troubleshooting = Troubleshooting::class;
     case Updates = Updates::class;
+    case Upload = Upload::class;
     case Welcome = Welcome::class;
     case WithoutLivewire = WithoutLivewire::class;
 

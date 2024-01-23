@@ -36,6 +36,7 @@ test('can access all routes', function (string $route) {
     fn () => route('documentation.form.toggle'),
     fn () => route('documentation.form.range'),
     fn () => route('documentation.form.pin'),
+    fn () => route('documentation.form.upload'),
     //
     fn () => route('documentation.ui.alert'),
     fn () => route('documentation.ui.avatar'),
@@ -50,6 +51,7 @@ test('can access all routes', function (string $route) {
     fn () => route('documentation.ui.modal'),
     fn () => route('documentation.ui.link'),
     fn () => route('documentation.ui.loading'),
+    fn () => route('documentation.ui.reaction'),
     fn () => route('documentation.ui.select'),
     fn () => route('documentation.ui.slide'),
     fn () => route('documentation.ui.tab'),
