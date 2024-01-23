@@ -77,6 +77,9 @@
                         <li class="relative ml-4">
                             <x-layout.navigation.link :href="route('documentation.form.pin')" text="Pin" />
                         </li>
+                        <li class="relative ml-4">
+                            <x-layout.navigation.link :href="route('documentation.form.upload')" text="Upload" new />
+                        </li>
                     </ul>
                 </li>
                 <li class="relative ml-4">

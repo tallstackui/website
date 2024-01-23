@@ -13,6 +13,7 @@ use App\Enums\Examples\Form\Range;
 use App\Enums\Examples\Form\Tag;
 use App\Enums\Examples\Form\Textarea;
 use App\Enums\Examples\Form\Toggle;
+use App\Enums\Examples\Form\Upload;
 use App\Enums\Examples\Form\WithoutLivewire;
 use App\Enums\Examples\Others\Alpine;
 use App\Enums\Examples\Others\Configuration;
@@ -95,6 +96,7 @@ enum Example: string
     case Translation = Translation::class;
     case Troubleshooting = Troubleshooting::class;
     case Updates = Updates::class;
+    case Upload = Upload::class;
     case Welcome = Welcome::class;
     case WithoutLivewire = WithoutLivewire::class;
 

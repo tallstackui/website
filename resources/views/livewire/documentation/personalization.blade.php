@@ -67,6 +67,7 @@ new class extends Component {
                 <p class="text-base font-medium">Example:</p>
                 <x-code :contents="$personalization" personalization unpadding/>
             </div>
+            <p class="text-sm underline pb-4">The soft personalization should be done in <x-block>boot</x-block> method of service providers.</p>
         @endif
         @if ($blocks)
             <div class="px-2 sm:px-0">

@@ -32,6 +32,7 @@ Route::prefix('/docs')
                 Route::view('/toggle', 'documentation.form.toggle', Example::Toggle->variables())->name('toggle');
                 Route::view('/range', 'documentation.form.range', Example::Range->variables())->name('range');
                 Route::view('/pin', 'documentation.form.pin', Example::Pin->variables())->name('pin');
+                Route::view('/upload', 'documentation.form.upload', Example::Upload->variables())->name('upload');
             });
 
         Route::prefix('/ui')
