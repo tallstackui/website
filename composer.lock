@@ -2204,16 +2204,16 @@
         },
         {
             "name": "nesbot/carbon",
-            "version": "2.72.1",
+            "version": "2.72.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/briannesbitt/Carbon.git",
-                "reference": "2b3b3db0a2d0556a177392ff1a3bf5608fa09f78"
+                "reference": "3e7edc41b58d65509baeb0d4a14c8fa41d627130"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/2b3b3db0a2d0556a177392ff1a3bf5608fa09f78",
-                "reference": "2b3b3db0a2d0556a177392ff1a3bf5608fa09f78",
+                "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/3e7edc41b58d65509baeb0d4a14c8fa41d627130",
+                "reference": "3e7edc41b58d65509baeb0d4a14c8fa41d627130",
                 "shasum": ""
             },
             "require": {
@@ -2307,7 +2307,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2023-12-08T23:47:49+00:00"
+            "time": "2024-01-19T00:21:53+00:00"
         },
         {
             "name": "nette/schema",
@@ -5655,12 +5655,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/tallstackui/tallstackui.git",
-                "reference": "8bc2117b0ae10805852266365302a18365a34a4f"
+                "reference": "bcabf8ba36a8bbef89852dafe45ebd56261023f1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tallstackui/tallstackui/zipball/8bc2117b0ae10805852266365302a18365a34a4f",
-                "reference": "8bc2117b0ae10805852266365302a18365a34a4f",
+                "url": "https://api.github.com/repos/tallstackui/tallstackui/zipball/bcabf8ba36a8bbef89852dafe45ebd56261023f1",
+                "reference": "bcabf8ba36a8bbef89852dafe45ebd56261023f1",
                 "shasum": ""
             },
             "require": {
@@ -5715,7 +5715,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-01-23T00:32:32+00:00"
+            "time": "2024-01-23T14:07:28+00:00"
         },
         {
             "name": "tijsverkoyen/css-to-inline-styles",

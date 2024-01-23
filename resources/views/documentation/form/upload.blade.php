@@ -12,8 +12,8 @@
         <livewire:documentation.personalization :$personalization component="upload" />
     </x-slot:personalization>
     <x-warning class="mb-4">
-        Files can be uploaded through selection or drag-and-drop. Furthermore, by default when
-        sending a png, jpg, jpeg or gif file, a preview is offered when clicking on the
+        Files can be uploaded through selection or drag-and-drop. Also, when
+        sending a <u>png, jpg, jpeg or gif file</u>, a preview is offered when clicking on the
         file image. To disable the preview, simply pass the <b>:preview="false"</b> parameter
         to the component.
     </x-warning>
