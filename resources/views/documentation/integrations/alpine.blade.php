@@ -46,7 +46,7 @@
                 : '9999 9999 9999 9999'
         }
     </script>
-    <x-section title="Mozilla Firefox Issue">
+    <x-section title="Mozilla Firefox Issue" disable-copy>
         <p>
             Although the AlpineJS plugin works great, there is a small issue
             detected for Mozilla Firefox browsers. As part of a workaround,

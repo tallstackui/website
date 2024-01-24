@@ -16,6 +16,9 @@
         sending a <u>png, jpg, jpeg or gif file</u>, a preview is offered when clicking on the
         file image. To disable the preview, simply pass the <b>:preview="false"</b> parameter
         to the component.
+        <p class="mt-4 text-xs font-semibold underline">
+            All files uploaded as part of the test on this page are deleted each hour.
+        </p>
     </x-warning>
     <x-section title="Basic Usage">
         <x-preview language="blade" :contents="$basic">
