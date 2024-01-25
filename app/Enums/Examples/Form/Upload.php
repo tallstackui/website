@@ -25,31 +25,30 @@ class Upload
     HTML;
 
     public const DELETE_METHOD = <<<'HTML'
+    use Illuminate\Support\Arr;
     use Illuminate\Http\UploadedFile;
     
-    public function deleteUpload(string $originalName, string $temporaryName): void
+    public function deleteUpload(array $content): void
     {
-        // Change this for the name of the property
-        // that you are using to store the temporary files
-        if (!$this->photos) {
+        if (! $this->photo) {
             return;
         }
 
-        $files = Arr::wrap($this->photos);
+        $files = Arr::wrap($this->photo);
 
         /** @var UploadedFile $file */
-        $file = collect($files)->filter(fn (UploadedFile $item) => $item->getFilename() === $temporaryName)->first();
+        $file = collect($files)->filter(fn (UploadedFile $item) => $item->getFilename() === $content['temporary_name'])->first();
 
         // 1. Here we delete the file. Even if we have a error here, we simply 
         // ignore it because as long as the file is not persisted, it is 
         // temporary and will be deleted at some point if there is a failure here.
         rescue(fn () => $file->delete(), report: false);
 
-        $collect = collect($files)->filter(fn (UploadedFile $item) => $item->getFilename() !== $temporaryName);
+        $collect = collect($files)->filter(fn (UploadedFile $item) => $item->getFilename() !== $content['temporary_name']);
 
         // 2. We guarantee restore of remaining files regardless of upload 
         // type, whether you are dealing with multiple or single uploads
-        $this->photos = is_array($this->photos) ? $collect->toArray() : $collect->first();
+        $this->photo = is_array($this->photo) ? $collect->toArray() : $collect->first();
     }
     HTML;
 
@@ -92,6 +91,8 @@ class Upload
             // 4. We finishing by removing the duplicates
             $this->photos = collect($file)->unique(fn (UploadedFile $item) => $item->getClientOriginalName())->toArray();
         }
+        
+        // ...
     }
     HTML;
 
@@ -138,6 +139,74 @@ class Upload
     
     <!-- The listener receive the uploaded file $event.detail.file -->
     <x-upload delete x-on:remove="console.log($event.detail.file)" />
+    HTML;
+
+    public const PREPARE_STATIC_USAGE = <<<'HTML'
+    use Livewire\Component;
+    use Illuminate\Support\Facades\File;
+    use Illuminate\Support\Facades\Storage;
+    use Symfony\Component\Finder\SplFileInfo;
+
+    class MyComponent extends Component
+    {
+        // For static usage the property must be an array [tl! highlight:1]
+        public $photos = [];
+
+        public function mount(): void
+        {
+            // We get all files and map the contents of the files 
+            // to ensure a necessary structure for the component.
+            $this->photo = collect(File::allFiles(public_path('storage/images')))->map(fn (SplFileInfo $file) => [
+                'name' => $file->getFilename(),
+                'extension' => $file->getExtension(),
+                'size' => $file->getSize(),
+                'path' => $file->getPath(),
+                'url' => Storage::url('images/'.$file->getFilename()),
+            ])->toArray();
+        }
+        
+        // ...
+    }
+    HTML;
+
+    public const BLADE_COMPONENT_FOR_STATIC_USAGE = <<<'HTML'
+    <!-- All other options is available:
+        label, hint, tip, 
+        footer slot,
+        events (only remove)
+        rename delete method -->
+    
+    <!-- WITHOUT delete action -->
+    <x-upload wire:model="photos" static />
+    
+    <!-- WITH delete action -->
+    <x-upload wire:model="photos" static delete />
+    
+    <!-- In static mode you can set a custom placeholder for the input -->
+    <x-upload wire:model="photos"
+             :placeholder="count($photos) . ' images'" {{-- [tl! add] --}}
+             static 
+             delete />
+    HTML;
+
+    public const DELETING_FILE_IN_STATIC_USAGE = <<<'HTML'
+    use Illuminate\Support\Arr;
+    use Illuminate\Support\Facades\File;
+
+    public function deleteUpload(array $content): void
+    {
+        if (empty($this->photos)) {
+            return;
+        }
+
+        File::delete($content['path']);
+
+        $files = Arr::wrap($this->photos);
+
+        $this->photos = collect($files)
+            ->filter(fn (array $item) => $item['name'] !== $content['real_name'])
+            ->toArray();
+    }
     HTML;
 
     public const PERSONALIZATION = <<<'HTML'

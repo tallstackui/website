@@ -104,13 +104,26 @@
         "6": "Invalidate"
     },
     "docs.form.upload": {
-        "0": "Basic Usage",
-        "1": "Label & Hint & Tip",
-        "3": "Delete",
-        "4": "Multiple",
-        "5": "Restricting File Types",
-        "6": "Footer Slot",
-        "7": "Events"
+        "Upload": {
+            "prefix": true,
+            "contents": {
+                "0": "Basic Usage",
+                "1": "Label & Hint & Tip",
+                "3": "Delete",
+                "4": "Multiple",
+                "5": "Restricting File Types",
+                "6": "Footer Slot",
+                "7": "Events"
+            }
+        },
+        "Static": {
+            "prefix": true,
+            "contents": {
+                "0": "Concept",
+                "1": "Prepare the Usage",
+                "2": "Demonstration"
+            }
+        }
     },
     "docs.ui.alert": {
         "0": "Basic Usage",

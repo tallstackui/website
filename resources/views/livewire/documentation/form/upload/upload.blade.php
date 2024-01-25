@@ -18,22 +18,22 @@ new class extends Component {
 
     public int $model = 1;
 
-    public function deleteUpload($original, $temporary)
+    public function deleteUpload(array $content): void
     {
         $property = $this->model === 3 ? 'photo3' : 'photo7';
 
-        if (!$this->{$property}) {
+        if (! $this->{$property}) {
             return;
         }
 
         $files = Arr::wrap($this->{$property});
 
         /** @var UploadedFile $file */
-        $file = collect($files)->filter(fn(UploadedFile $item) => $item->getFilename() === $temporary)->first();
+        $file = collect($files)->filter(fn (UploadedFile $item) => $item->getFilename() === $content['temporary_name'])->first();
 
-        rescue(fn() => $file->delete(), report: false);
+        rescue(fn () => $file->delete(), report: false);
 
-        $collect = collect($files)->filter(fn(UploadedFile $item) => $item->getFilename() !== $temporary);
+        $collect = collect($files)->filter(fn (UploadedFile $item) => $item->getFilename() !== $content['temporary_name']);
 
         $this->{$property} = is_array($this->{$property}) ? $collect->toArray() : $collect->first();
     }
