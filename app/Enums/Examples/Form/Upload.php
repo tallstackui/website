@@ -156,7 +156,7 @@ class Upload
         {
             // We get all files and map the contents of the files 
             // to ensure a necessary structure for the component.
-            $this->photo = collect(File::allFiles(public_path('storage/images')))->map(fn (SplFileInfo $file) => [
+            $this->photos = collect(File::allFiles(public_path('storage/images')))->map(fn (SplFileInfo $file) => [
                 'name' => $file->getFilename(),
                 'extension' => $file->getExtension(),
                 'size' => $file->getSize(),

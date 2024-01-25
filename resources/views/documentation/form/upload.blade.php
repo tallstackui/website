@@ -95,7 +95,7 @@
     <x-section title="Prepare the Usage" anchor="static-prepare-the-usage">
         <p>
             1. Use the Livewire component <x-block>mount</x-block> method to prepare and store
-            the files in a property that will be bind to the component into the Blade:
+            the files in a property that will be bind in the component Blade file:
         </p>
         <x-code :contents="$prepareStaticUsage" disable-copy />
         <p>2. Prepare the Blade file of the component:</p>
@@ -110,6 +110,11 @@
         <x-preview>
             <livewire:documentation.form.upload.static />
         </x-preview>
+        <p class="mt-4">
+            Keep in mind that in all this example we use existing images in the application,
+            however you can bring your existing images, for example, on S3. The code is
+            yours, you can do whatever you want.
+        </p>
     </x-section>
     <x-slot:navigation>
         <x-slot:back>
