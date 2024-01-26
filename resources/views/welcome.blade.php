@@ -140,7 +140,7 @@
                                         Ready-to-use
                                     </dt>
                                     <dd class="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-600 dark:text-gray-300">
-                                        <p class="flex-auto">More than 30 ready-to-use components, and more than 10 components are in development.</p>
+                                        <p class="flex-auto">More than 30 ready-to-use components, and more than 15 components are in development.</p>
                                     </dd>
                                 </div>
                                 <div class="flex flex-col">

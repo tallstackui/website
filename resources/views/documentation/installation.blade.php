@@ -26,6 +26,13 @@
         <p class="mt-4">5. Build the assets and do a full cleanup in the Laravel:</p>
         <x-code language="shell" :contents="$build" />
     </x-section>
+    <div class="pb-4">
+        <x-alert icon="check-circle" color="green">
+            If you've gotten this far by completing all the steps above, you're probably ready
+            to try TallStackUI in your projects. Continue reading the rest of the content on
+            this page to improve your knowledge in this first contact with the TallStackUI.
+        </x-alert>
+    </div>
     <x-section title="Component Prefix" disable-copy>
         <p>
             Although TallStackUI offers many components out of the box, you may want to create Blade components
@@ -36,7 +43,7 @@
         </p>
         <x-warning class="mb-4 mt-2">
             <a href="{{ route('documentation.configuration') }}" class="underline" target="_blank">
-                You must publish the configuration file to be able to edit it.
+                You must publish the configuration file to be able to edit your content.
             </a>
         </x-warning>
         <x-code :contents="$prefixing" disable-copy />
