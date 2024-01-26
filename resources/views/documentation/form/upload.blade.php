@@ -110,11 +110,6 @@
         <x-preview>
             <livewire:documentation.form.upload.static />
         </x-preview>
-        <p class="mt-4">
-            Keep in mind that in all this example we use existing images in the application,
-            however you can bring your existing images, for example, on S3. The code is
-            yours, you can do whatever you want.
-        </p>
     </x-section>
     <x-slot:navigation>
         <x-slot:back>

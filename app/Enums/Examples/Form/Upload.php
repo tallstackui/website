@@ -30,6 +30,18 @@ class Upload
     
     public function deleteUpload(array $content): void
     {
+        /* 
+         the $content contains:
+         [
+             'temporary_name',
+             'real_name',
+             'extension',
+             'size',
+             'path',
+             'url',
+         ] 
+         */
+    
         if (! $this->photo) {
             return;
         }
@@ -163,6 +175,10 @@ class Upload
                 'path' => $file->getPath(),
                 'url' => Storage::url('images/'.$file->getFilename()),
             ])->toArray();
+            
+            // In this example we are using the images that exists 
+            // in the application server, but you can use any other 
+            // files for example, files that are stored in the S3 bucket.
         }
         
         // ...
@@ -170,11 +186,11 @@ class Upload
     HTML;
 
     public const BLADE_COMPONENT_FOR_STATIC_USAGE = <<<'HTML'
-    <!-- All other options is available:
+    <!-- All other options is available when static:
         label, hint, tip, 
         footer slot,
-        events (only remove)
-        rename delete method -->
+        events (only remove event)
+        renaming delete method -->
     
     <!-- WITHOUT delete action -->
     <x-upload wire:model="photos" static />
@@ -182,9 +198,9 @@ class Upload
     <!-- WITH delete action -->
     <x-upload wire:model="photos" static delete />
     
-    <!-- In static mode you can set a custom placeholder for the input -->
+    <!-- You can set a custom placeholder for the input -->
     <x-upload wire:model="photos"
-             :placeholder="count($photos) . ' images'" {{-- [tl! add] --}}
+             :placeholder="count($photos) . ' images'" {{-- [tl! highlight] --}}
              static 
              delete />
     HTML;
@@ -195,6 +211,18 @@ class Upload
 
     public function deleteUpload(array $content): void
     {
+        /* 
+         the $content contains:
+         [
+             'temporary_name',
+             'real_name', // same of 'temporary_name' in static mode
+             'extension',
+             'size',
+             'path',
+             'url',
+         ] 
+         */
+    
         if (empty($this->photos)) {
             return;
         }
