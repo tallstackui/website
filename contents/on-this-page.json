@@ -320,7 +320,8 @@
                 "8": "Image Preview",
                 "9": "Description",
                 "10": "Searchable",
-                "11": "Slot After"
+                "11": "Slot After",
+                "12": "Events"
             }
         },
         "Styled API": {
