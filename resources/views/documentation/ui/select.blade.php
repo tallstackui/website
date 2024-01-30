@@ -135,6 +135,19 @@
             </x-select.styled>
         </x-preview>
     </x-section>
+    <x-section title="Events" anchor="styled-events">
+        <x-preview language="blade" :contents="$styledEvents">
+            <x-select.styled :options="[
+                ['label' => 'TALL', 'value' => 1],
+                ['label' => 'LIVT', 'value' => 2],
+            ]" select="label:label|value:value"
+               x-on:select="alert(`Select: ${JSON.stringify($event.detail.select)}`)"
+               x-on:remove="alert(`Remove: ${JSON.stringify($event.detail.select)}`)"
+               x-on:erase="alert(`Try again with browser console opened!`); console.log(JSON.stringify($event.detail.selects))"
+               multiple />
+        </x-preview>
+    </x-section>
+    {{-- Styled API Select --}}
     <x-separator text="Styled API Select" />
     <x-section title="Concept" anchor="styled-api-concept">
         The styled select component allows you to search for values through an API.

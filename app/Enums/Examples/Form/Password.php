@@ -36,6 +36,10 @@ class Password
     <x-password generator :rules="['min:8', 'symbols', 'numbers', 'mixed']" />
     HTML;
 
+    public const EVENTS = <<<'HTML'
+    <x-password x-on:reveal="alert('Password Revealed')" />
+    HTML;
+
     public const INVALIDATE = <<<'HTML'
     <x-password label="Password"
                 hint="Insert your best password"

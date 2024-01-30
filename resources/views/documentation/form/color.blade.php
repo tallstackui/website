@@ -39,6 +39,11 @@
             <x-color :colors="['#83493D', '#3D8357', '#693D83', '#3AB3D1', '#5DD116']" />
         </x-preview>
     </x-section>
+    <x-section title="Events">
+        <x-preview language="blade" :contents="$events">
+            <x-color picker x-on:set="alert(`Selected Color: ${$event.detail.color}`)" />
+        </x-preview>
+    </x-section>
     <x-section title="Invalidate" description="An option to not show validation error message.">
         <x-preview language="blade" :contents="$invalidate">
             <x-color invalidate />

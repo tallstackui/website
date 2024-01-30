@@ -25,7 +25,8 @@
         "2": "Required Label Indicator",
         "3": "Format Validator",
         "4": "Password Generator",
-        "5": "Invalidate"
+        "5": "Events",
+        "6": "Invalidate"
     },
     "docs.form.color": {
         "0": "Basic Usage",
@@ -33,7 +34,8 @@
         "2": "Picker Mode",
         "3": "Selectable",
         "4": "Custom Colors",
-        "5": "Invalidate"
+        "5": "Events",
+        "6": "Invalidate"
     },
     "docs.form.number": {
         "0": "Basic Usage",
@@ -243,7 +245,8 @@
         "2": "Title Customization",
         "3": "Close Option",
         "4": "Footer Slot",
-        "5": "Color Variations"
+        "5": "Color Variations",
+        "6": "Events"
     },
     "docs.ui.icon": {
         "0": "Basic Usage",
@@ -317,7 +320,8 @@
                 "8": "Image Preview",
                 "9": "Description",
                 "10": "Searchable",
-                "11": "Slot After"
+                "11": "Slot After",
+                "12": "Events"
             }
         },
         "Styled API": {

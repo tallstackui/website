@@ -47,6 +47,11 @@
             </ul>
         </x-warning>
     </x-section>
+    <x-section title="Events">
+        <x-preview language="blade" :contents="$events">
+            <x-password value="TallStackUI" x-on:reveal="alert('Password Revealed')" />
+        </x-preview>
+    </x-section>
     <x-section title="Invalidate" description="An option to not show validation error message">
         <x-preview language="blade" :contents="$invalidate">
             <x-password label="Password" hint="Insert your best password" value="TallStackUi"  invalidate />
