@@ -34,7 +34,8 @@
         "2": "Picker Mode",
         "3": "Selectable",
         "4": "Custom Colors",
-        "5": "Invalidate"
+        "5": "Events",
+        "6": "Invalidate"
     },
     "docs.form.number": {
         "0": "Basic Usage",
