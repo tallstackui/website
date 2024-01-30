@@ -245,7 +245,8 @@
         "2": "Title Customization",
         "3": "Close Option",
         "4": "Footer Slot",
-        "5": "Color Variations"
+        "5": "Color Variations",
+        "6": "Events"
     },
     "docs.ui.icon": {
         "0": "Basic Usage",

@@ -71,6 +71,10 @@ class Error
     <x-errors color="white" />
     HTML;
 
+    public const EVENTS = <<<'HTML'
+    <x-errors close x-on:close="alert('Errors Closed')" />
+    HTML;
+
     public const PERSONALIZATION = <<<'HTML'
     TallStackUi::personalize()
         ->dropdown('errors')

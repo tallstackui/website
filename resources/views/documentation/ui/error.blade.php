@@ -65,6 +65,11 @@
             </div>
         </x-preview>
     </x-section>
+    <x-section title="Events">
+        <x-preview language="blade" :contents="$events">
+            <livewire:documentation.ui.errors events />
+        </x-preview>
+    </x-section>
     <x-slot:navigation>
         <x-slot:back>
             <x-layout.footer-navigation :href="route('documentation.ui.dropdown')" text="Dropdown" back />
