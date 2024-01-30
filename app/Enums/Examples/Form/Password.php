@@ -37,7 +37,7 @@ class Password
     HTML;
 
     public const EVENTS = <<<'HTML'
-    <x-password x-on:reveal="alert('Password Revealed')" />
+    <x-password x-on:reveal="alert(`Password Revealed: ${$event.detail.status}`)" />
     HTML;
 
     public const INVALIDATE = <<<'HTML'
