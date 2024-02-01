@@ -37,6 +37,10 @@
         <x-preview :contents="$time">
             <livewire:documentation.interactions.toast.timeout/>
         </x-preview>
+        <p class="mt-2">
+            <u>Starting from version 1.14.2</u>, you can set a default timeout through <a href="{{ route('documentation.configuration') }}" class="underline">configuration file:</a>
+        </p>
+        <x-code :contents="$defaultTime" disable-copy />
     </x-section>
     <x-section title="Expandable" description="An option to show minimized description texts.">
         <x-preview :contents="$expandable">

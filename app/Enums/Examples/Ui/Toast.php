@@ -110,6 +110,20 @@ class Toast
         ->send();
     HTML;
 
+    public const DEFAULT_TIME = <<<'HTML'
+    // In config/tallstackui.php file
+    'toast' => [
+        // ...
+        'timeout' => 10, // [tl! highlight]
+    ],
+    
+    // Then use the timeout() method without parameters
+    $this->toast()
+        ->timeout() // [tl! highlight]
+        ->success('Success', 'This is a success message.')
+        ->send();
+    HTML;
+
     public const EXPANDABLE = <<<'HTML'
     $this->toast()
         ->expandable()
