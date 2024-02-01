@@ -23,31 +23,31 @@
     </x-warning>
     <x-section title="Usage" anchor="static-usage" disable-copy>
         <p>To use the component you must add it to your application's layout, within the body tag, but above anything else:</p>
-        <x-code language="blade" :contents="$introduction" />
+        <x-code language="blade" :contents="$introduction" disable-copy />
     </x-section>
     <x-section title="Messages" anchor="static-messages" disable-copy>
-        <x-code language="blade" :contents="$texts" />
+        <x-code language="blade" :contents="$texts" disable-copy />
         <x-warning>
             You can take advantage of collections to get an array of messages from the database.
         </x-warning>
     </x-section>
     <x-section title="Left Slot" anchor="static-left-slot" disable-copy>
-        <x-code language="blade" :contents="$slot" />
+        <x-code language="blade" :contents="$slot" disable-copy />
     </x-section>
     <x-section title="Close Option" anchor="static-close-option" disable-copy>
-        <x-code language="blade" :contents="$close" />
+        <x-code language="blade" :contents="$close" disable-copy />
     </x-section>
     <x-section title="Animations" anchor="static-animations" disable-copy>
-        <x-code language="blade" :contents="$animated" />
+        <x-code language="blade" :contents="$animated" disable-copy />
     </x-section>
     <x-section title="Date Limit" anchor="static-date-limit" description="An option to control the final date to display the banner." disable-copy>
-        <x-code language="blade" :contents="$dates" />
+        <x-code language="blade" :contents="$dates" disable-copy />
     </x-section>
     <x-section title="Size Variations" anchor="static-size-variations" disable-copy>
-        <x-code language="blade" :contents="$sizes" />
+        <x-code language="blade" :contents="$sizes" disable-copy />
     </x-section>
     <x-section title="Color Variations & Light Option" anchor="static-color-variations-light-option" disable-copy>
-        <x-code language="blade" :contents="$colors" />
+        <x-code language="blade" :contents="$colors" disable-copy />
     </x-section>
     <x-separator text="Livewire Integration" />
     <x-section title="Concept" anchor="livewire-integration-concept" disable-copy>
@@ -57,7 +57,7 @@
             options must be configured when dispatching the banner through Livewire,
             so in the layout, the banner must be added as follows:
         </p>
-        <x-code language="blade" :contents="$livewire" />
+        <x-code language="blade" :contents="$livewire" disable-copy />
         <p>
             When using the banner integrated with Livewire then the banner will be displayed as fixed.
             This is a strategy adopted so that the banner is displayed if the user is below the top of the page.
@@ -65,13 +65,13 @@
     </x-section>
     <x-section title="Usage" anchor="livewire-integration-usage" disable-copy>
         1. Use the Interactions trait in your Livewire component.
-        <x-code language="php" :contents="$trait"/>
+        <x-code language="php" :contents="$trait" disable-copy/>
         2. Dispatch the Banner from a method.
-        <x-code language="php" :contents="$dispatch"/>
+        <x-code language="php" :contents="$dispatch" disable-copy/>
         <x-warning text="This is an example. You can't dispatch all at the same time." />
     </x-section>
     <x-section title="Available Options" anchor="livewire-integration-available-options" disable-copy>
-        <x-code language="php" :contents="$options"/>
+        <x-code language="php" :contents="$options" disable-copy/>
     </x-section>
     <x-section title="Example" anchor="livewire-integration-example">
         <x-preview :contents="$example">
