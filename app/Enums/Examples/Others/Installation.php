@@ -8,22 +8,13 @@ class Installation
     composer require tallstackui/tallstackui
     HTML;
 
-    public const CLOAK = <<<'HTML'
-    <html>
-        <head>
-            <style> [x-cloak] { display: none; } </style> {{-- [tl! focus, highlight] --}}
-
-            <!-- ... -->
-        </head>
-    </html>
-    HTML;
-
-    public const SCRIPT = <<<'HTML'
+    public const LAYOUT = <<<'HTML'
     <html>
         <head>
             <!-- ... -->
 
-            <tallstackui:script /> {{-- [tl! highlight] --}}
+            <tallstackui:script /> {{-- [tl! highlight:1] --}}
+            @livewireStyles
             @vite(['resources/css/app.css', 'resources/js/app.js'])
         </head>
     </html>
@@ -85,6 +76,13 @@ class Installation
 
     public const ALPINE = <<<'HTML'
     <html>
+        <head>
+            <!-- ... -->
+
+            <tallstackui:script />
+            @livewireStyles
+            @vite(['resources/css/app.css', 'resources/js/app.js'])
+        </head>
         <body>
             <!-- ... -->
 

@@ -12,18 +12,19 @@
         </ul>
     </x-section>
     <x-section title="Installation" disable-copy>
-        <p>1. Run the following command to include the TallStackUI as a composer dependency:</p>
+        <p>1. Include the TallStackUI as a composer dependency of your project:</p>
         <x-code language="shell" :contents="$installation" />
-        <p>2. Prepare the AlpineJS <x-block>x-cloak</x-block> directive:</p>
-        <x-code language="blade" :contents="$cloak" disable-copy />
-        <p>3. Add the TallStackUI script above the <x-block>vite</x-block> tag in your layout:</p>
-        <x-code language="blade" :contents="$script" disable-copy />
-        <p class="mt-4">4. Edit the <x-block>tailwind.config.js</x-block> of your application inserting this content:</p>
+        <p>2. Prepare your base layout:
+        <x-code language="blade" :contents="$layout" disable-copy />
+        <x-warning>
+            The TallStackUI script must be loaded <b class="underline">above of the the @verbatim @vite @endverbatim tag.</b>
+        </x-warning>
+        <p class="mt-4">3. Edit the <x-block>tailwind.config.js</x-block> of your application inserting this content:</p>
         <x-code language="js" :contents="$tailwindcss" disable-copy />
         <x-warning>
-            Your TailwindCSS setup must also load the <a href="https://tailwindcss.com/docs/plugins#forms" class="underline" target="_blank">form plugin</a>
+            Your TailwindCSS setup must load the <a href="https://tailwindcss.com/docs/plugins#forms" class="underline" target="_blank">form plugin</a>
         </x-warning>
-        <p class="mt-4">5. Build the assets and do a full cleanup in the Laravel:</p>
+        <p class="mt-4">4. Run the following command:</p>
         <x-code language="shell" :contents="$build" />
     </x-section>
     <div class="pb-4">
