@@ -38,6 +38,9 @@
                 <x-input suffix="@gmail.com" label="E-mail" />
             </div>
         </x-preview>
+        <x-warning class="mt-4">
+            The usage of prefix or suffix will disable the browser's autocomplete.
+        </x-warning>
     </x-section>
     <x-section title="Invalidate" description="An option to not show validation error message.">
         <x-preview language="blade" :contents="$invalidate">
