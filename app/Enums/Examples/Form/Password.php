@@ -37,7 +37,11 @@ class Password
     HTML;
 
     public const EVENTS = <<<'HTML'
-    <x-password x-on:reveal="alert(`Password Revealed: ${$event.detail.status}`)" />
+    <x-password value="TallStackUI"
+                generator
+                :rules="['min:8', 'symbols', 'numbers', 'mixed']"
+                x-on:reveal="alert(`Password Revealed: ${$event.detail.status}`)"
+                x-on:generate="alert(`Password Generated: ${$event.detail.password}`)" />
     HTML;
 
     public const INVALIDATE = <<<'HTML'

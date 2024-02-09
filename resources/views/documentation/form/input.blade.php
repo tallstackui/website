@@ -12,6 +12,9 @@
         <x-preview language="blade" :contents="$basic">
             <x-input />
         </x-preview>
+        <x-warning class="mt-4">
+            The input type will be set to <b>text</b> when not specified.
+        </x-warning>
     </x-section>
     <x-section title="Label & Hint">
         <x-preview language="blade" :contents="$labelHint">
@@ -38,6 +41,9 @@
                 <x-input suffix="@gmail.com" label="E-mail" />
             </div>
         </x-preview>
+        <x-warning class="mt-4">
+            The usage of prefix or suffix will disable the browser's autocomplete.
+        </x-warning>
     </x-section>
     <x-section title="Invalidate" description="An option to not show validation error message.">
         <x-preview language="blade" :contents="$invalidate">

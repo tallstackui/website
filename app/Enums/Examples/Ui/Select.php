@@ -127,7 +127,6 @@ class Select
     public const STYLED_EVENTS = <<<'HTML'
     <!-- Select: receive the select object in $event.detail.select -->
     <!-- Remove: receive the removed object in $event.detail.select -->
-    <!-- Erase: receive the selected values in $event.detail.selects -->
 
     <x-select.styled :options="[
         ['label' => 'TALL', 'value' => 1],
@@ -135,7 +134,6 @@ class Select
     ]" select="label:label|value:value"
        x-on:select="alert(`Select: ${JSON.stringify($event.detail.select)}`)"
        x-on:remove="alert(`Remove: ${JSON.stringify($event.detail.select)}`)"
-       x-on:erase="console.log(JSON.stringify($event.detail.selects)"
        multiple />
     HTML;
 

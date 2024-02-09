@@ -49,7 +49,11 @@
     </x-section>
     <x-section title="Events">
         <x-preview language="blade" :contents="$events">
-            <x-password value="TallStackUI" x-on:reveal="alert(`Password Revealed: ${$event.detail.status}`)" />
+            <x-password value="TallStackUI"
+                        generator
+                        :rules="['min:8', 'symbols', 'numbers', 'mixed']"
+                        x-on:reveal="alert(`Password Revealed: ${$event.detail.status}`)"
+                        x-on:generate="alert(`Password Generated: ${$event.detail.password}`)" />
         </x-preview>
     </x-section>
     <x-section title="Invalidate" description="An option to not show validation error message">
