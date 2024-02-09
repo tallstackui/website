@@ -143,7 +143,6 @@
             ]" select="label:label|value:value"
                x-on:select="alert(`Select: ${JSON.stringify($event.detail.select)}`)"
                x-on:remove="alert(`Remove: ${JSON.stringify($event.detail.select)}`)"
-               x-on:erase="alert(`Try again with browser console opened!`); console.log(JSON.stringify($event.detail.selects))"
                multiple />
         </x-preview>
     </x-section>
