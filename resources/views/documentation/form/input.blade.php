@@ -12,6 +12,9 @@
         <x-preview language="blade" :contents="$basic">
             <x-input />
         </x-preview>
+        <x-warning class="mt-4">
+            The input type will be set to <b>text</b> when not specified.
+        </x-warning>
     </x-section>
     <x-section title="Label & Hint">
         <x-preview language="blade" :contents="$labelHint">
