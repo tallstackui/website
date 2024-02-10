@@ -42,7 +42,7 @@
             </div>
         </x-preview>
         <x-warning class="mt-4">
-            The usage of prefix or suffix will disable the browser's autocomplete.
+            Using a prefix or suffix will disable browser autocomplete as long as this is not explicitly defined.
         </x-warning>
     </x-section>
     <x-section title="Invalidate" description="An option to not show validation error message.">
