@@ -37,7 +37,7 @@
     <x-section title="Date" class="mt-4">
         <x-preview language="blade" :contents="$date">
             <div class="space-y-2">
-                <x-date label="Date" hint="Single selection" format="DD MMMM YYYY" />
+                <x-date label="Date" hint="Single selection" helpers format="DD MMMM YYYY" />
                 <x-date label="Date" hint="Range selection" range format="DD MMMM YYYY" />
                 <x-date label="Date" hint="Multiple selection" multiple format="DD MMMM YYYY" />
             </div>
@@ -96,7 +96,7 @@
                 <div class="col-span-full sm:col-span-1">
                     <x-stats number="50"
                              title="Components"
-                             footer="Our goal"
+                             footer="Our goal..."
                              icon="wrench-screwdriver"
                              outline
                              animated
@@ -105,7 +105,7 @@
                 <div class="col-span-full sm:col-span-1">
                     <x-stats number="0"
                              title="Weeks W/O Updates"
-                             footer="With frequent updates"
+                             footer="With frequent updates..."
                              icon="arrow-path"
                              outline
                              animated
@@ -114,7 +114,7 @@
                 <div class="col-span-full sm:col-span-1">
                     <x-stats number="100000"
                              title="Downloads"
-                             footer="And growing fast"
+                             footer="... And growing fast!"
                              icon="arrow-down-on-square"
                              outline
                              animated
