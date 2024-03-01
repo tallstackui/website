@@ -127,6 +127,19 @@
             }
         }
     },
+    "docs.form.date": {
+        "1": "Basic Usage",
+        "2": "Label & Hint",
+        "3": "Available Formats",
+        "4": "Helpers",
+        "5": "Min & Max Dates",
+        "6": "Min & Max Years",
+        "7": "Disable Dates",
+        "8": "Range Mode",
+        "9": "Multiple Mode",
+        "10": "Events",
+        "11": "Invalidate"
+    },
     "docs.ui.alert": {
         "0": "Basic Usage",
         "1": "Title",

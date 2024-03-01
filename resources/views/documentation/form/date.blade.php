@@ -37,7 +37,7 @@
         <x-warning class="mt-4">
             <ul class="ml-2 list-inside list-decimal text-sm">
                 <li>You can use <a href="https://day.js.org/docs/en/display/format" target="_blank" class="underline">all Day.js formats.</a></li>
-                <li><b>The formats are applicable for visual purposes only.</b> The default "backend" format will always be <b>YYYY-MM-DD</b></li>
+                <li><b>The formats are applicable only visually.</b> The default "backend" format will always be <b>YYYY-MM-DD</b></li>
             </ul>
         </x-warning>
     </x-section>
