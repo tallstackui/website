@@ -8,6 +8,7 @@ Route::view('/', 'welcome', Example::Welcome->variables())->name('welcome');
 
 Route::redirect('/docs', '/docs/get-started');
 Route::redirect('/install', '/docs/installation');
+Route::redirect('/summer', '/docs/summer-release');
 
 Route::prefix('/docs')
     ->name('documentation.')
@@ -17,6 +18,7 @@ Route::prefix('/docs')
         Route::view('/troubleshooting', 'documentation.troubleshooting', Example::Troubleshooting->variables())->name('troubleshooting');
         Route::view('/updates', 'documentation.updates', Example::Updates->variables())->name('updates');
         Route::view('/faq', 'documentation.faq', Example::Updates->variables())->name('faq');
+        Route::view('/summer-release', 'documentation.summer-release', Example::SummerRelease->variables())->name('summer-release');
 
         Route::prefix('/form')
             ->name('form.')

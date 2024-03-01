@@ -36,6 +36,9 @@
                 <li class="relative ml-4">
                     <x-layout.navigation.link :href="route('documentation.faq')" text="F.A.Q" />
                 </li>
+                <li class="relative ml-4">
+                    <x-layout.navigation.link :href="route('documentation.summer-release')" text="Summer Release" new />
+                </li>
             </ul>
         </li>
         <li>

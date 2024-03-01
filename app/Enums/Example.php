@@ -21,6 +21,7 @@ use App\Enums\Examples\Others\Contribution;
 use App\Enums\Examples\Others\DarkTheme;
 use App\Enums\Examples\Others\DebugMode;
 use App\Enums\Examples\Others\Installation;
+use App\Enums\Examples\Others\SummerRelease;
 use App\Enums\Examples\Others\Translation;
 use App\Enums\Examples\Others\Troubleshooting;
 use App\Enums\Examples\Others\Updates;
@@ -88,6 +89,7 @@ enum Example: string
     case Select = Select::class;
     case Slide = Slide::class;
     case SoftPersonalization = SoftPersonalization::class;
+    case SummerRelease = SummerRelease::class;
     case Tab = Tab::class;
     case Table = Table::class;
     case Tag = Tag::class;
