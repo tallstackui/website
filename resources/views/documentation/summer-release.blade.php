@@ -49,7 +49,7 @@
     </x-section>
     <x-section title="New Component: Form Step" class="mt-4">
         <x-preview language="blade" :contents="$step">
-            <x-step selected="1" helpers circles>
+            <x-step selected="1" helpers panels>
                 <x-step.items step="1"
                               title="Starting"
                               description="Tall">

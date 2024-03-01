@@ -1,7 +1,4 @@
-@php
-    $now = now();
-    $current = $now->format('h:i A');
-@endphp
+@php($current = now()->format('h:i A'))
 
 <x-layout>
     <x-slot:title>
@@ -23,7 +20,7 @@
     </x-section>
     <x-section title="Label & Hint">
         <x-preview language="blade" :contents="$basic">
-            <x-time label="Date" hint="Select your DoB" />
+            <x-time label="Time" hint="Select the hour" />
         </x-preview>
     </x-section>
     <x-section title="Available Formats">
@@ -37,6 +34,26 @@
     <x-section title="Helper">
         <x-preview language="blade" :contents="$basic">
             <x-time format="24" helper />
+        </x-preview>
+    </x-section>
+    <x-section title="Step Hour & Minute">
+        <x-preview language="blade" :contents="$basic">
+            <x-time step-hour="3" step-minute="15" />
+        </x-preview>
+    </x-section>
+    <x-section title="Footer Slot">
+        <x-preview language="blade" :contents="$basic">
+            <x-time>
+                <x-slot:footer>
+                    Footer Slot
+                </x-slot:footer>
+            </x-time>
+        </x-preview>
+    </x-section>
+    <x-section title="Events">
+        <x-preview language="blade" :contents="$basic">
+            <x-time x-on:hour="alert(`Hour Selected: ${$event.detail.hour}`)"
+                    x-on:minute="alert(`Minute Selected: ${$event.detail.minute}`)"/>
         </x-preview>
     </x-section>
     <x-section title="Invalidate" description="An option to not show validation error message.">

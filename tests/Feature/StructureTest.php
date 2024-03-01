@@ -38,6 +38,7 @@ test('can access all routes', function (string $route) {
     fn () => route('documentation.form.pin'),
     fn () => route('documentation.form.upload'),
     fn () => route('documentation.form.date'),
+    fn () => route('documentation.form.time'),
     //
     fn () => route('documentation.ui.alert'),
     fn () => route('documentation.ui.avatar'),
