@@ -13,6 +13,7 @@ use App\Enums\Examples\Form\Radio;
 use App\Enums\Examples\Form\Range;
 use App\Enums\Examples\Form\Tag;
 use App\Enums\Examples\Form\Textarea;
+use App\Enums\Examples\Form\Time;
 use App\Enums\Examples\Form\Toggle;
 use App\Enums\Examples\Form\Upload;
 use App\Enums\Examples\Form\WithoutLivewire;
@@ -96,6 +97,7 @@ enum Example: string
     case Table = Table::class;
     case Tag = Tag::class;
     case Textarea = Textarea::class;
+    case Time = Time::class;
     case Toast = Toast::class;
     case Toggle = Toggle::class;
     case Tooltip = Tooltip::class;

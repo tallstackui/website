@@ -75,7 +75,7 @@
                             <x-layout.navigation.link :href="route('documentation.form.tag')" text="Tag" />
                         </li>
                         <li class="relative ml-4">
-                            <x-layout.navigation.link :href="route('documentation.form.checkbox')" text="Time" new />
+                            <x-layout.navigation.link :href="route('documentation.form.time')" text="Time" new />
                         </li>
                         <li class="relative ml-4">
                             <x-layout.navigation.link :href="route('documentation.form.textarea')" text="Textarea" />
