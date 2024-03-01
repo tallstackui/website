@@ -35,12 +35,12 @@ class Date
 
     public const DISABLED = <<<'HTML'
     <!-- Array -->
-    <x-date :disable="[now()->subDay()->format('Y-m-d'), now()->addDay()->format('Y-m-d')]" />
+    <x-date :disable="['2020-01-01','2020-01-02','2020-01-03']" />
     
     <!-- or -->
 
     <!-- Collection -->
-    <x-date :disable="collect([now()->subDay()->format('Y-m-d'), now()->addDay()->format('Y-m-d')])" />
+    <x-date :disable="collect(['2020-01-01','2020-01-02','2020-01-03'])" />
     HTML;
 
     public const RANGE = <<<'HTML'
@@ -70,6 +70,13 @@ class Date
     -->
     
     <x-date multiple />
+    HTML;
+
+    public const EVENTS = <<<'HTML'
+    <!-- The listeners receive the content through $event.detail.date -->
+    
+    <x-date x-on:select="alert(`Selected Date: ${$event.detail.date}`)" 
+            x-on:clear="alert(`Cleaned!`)" />
     HTML;
 
     public const INVALIDATE = <<<'HTML'
