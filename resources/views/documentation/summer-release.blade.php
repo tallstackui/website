@@ -1,4 +1,7 @@
 <x-layout torchlight>
+    <x-slot:title>
+        Summer Release
+    </x-slot:title>
     <div class="flex justify-center">
         <h1 class="text-4xl font-bold text-pink-500 dark:text-dark-300">The Summer Release 🏖️</h1>
     </div>
@@ -11,44 +14,27 @@
         of the news, but also remember to navigate individually on the documentation pages.
     </p>
     <x-section title="Support for New Icon Libraries" class="mt-4" disable-copy>
-        <p>
-            Starting from the Summer Release, TallStackUI supports 3 icon libraries:
-        </p>
         <ul class="mt-2 ml-2 list-inside list-decimal">
             <li>Heroicons (about 300 icons)</li>
             <li>Phosphoricons (about 7K icons)</li>
             <li>Google (about 10K icons)</li>
         </ul>
-        <p class="mt-2">
-            You must adapt your <x-block>config/tallstackui.php</x-block> to the new expected format:
-        </p>
-        <p class="mt-2 font-bold">Before:</p>
-        <x-code :contents="$oldIconsConfig" disable-copy />
-        <p class="font-bold">After:</p>
-        <x-code :contents="$newIconsConfig" disable-copy />
-        <x-warning>
-            <ul class="list-decimal list-inside text-sm">
-                <li>Make sure your icon configuration is in the new expected format.</li>
-                <li>Visit the icon documentation to learn how to configure different icons.</li>
-            </ul>
-        </x-warning>
     </x-section>
-    <x-separator text="NEW COMPONENTS" />
-    <x-section title="Date" class="mt-4">
+    <x-section title="New Component: Date" class="mt-4">
         <x-preview language="blade" :contents="$date">
             <div class="space-y-2">
-                <x-date label="Date" hint="Single selection" helpers format="DD MMMM YYYY" />
-                <x-date label="Date" hint="Range selection" range format="DD MMMM YYYY" />
-                <x-date label="Date" hint="Multiple selection" multiple format="DD MMMM YYYY" />
+                <x-date label="Date" hint="Single selection" name="date" :value="now()->format('Y-m-d')" helpers format="DD MMMM YYYY" />
+                <x-date label="Date" hint="Range selection" range :value="[now()->format('Y-m-d'), now()->addWeeks(2)->format('Y-m-d')]" format="DD MMMM YYYY" />
+                <x-date label="Date" hint="Multiple selection" multiple :value="[now()->format('Y-m-d'), now()->addDay()->format('Y-m-d')]" format="DD MMMM YYYY" />
             </div>
         </x-preview>
         <p class="mt-2">
-            <x-link color="pink" href="#" icon="arrow-up-right" position="right">
-                Review the component documentation by clicking here
+            <x-link sm color="pink" href="#" icon="arrow-up-right" position="right">
+                Review the component documentation
             </x-link>
         </p>
     </x-section>
-    <x-section title="Time" class="mt-4">
+    <x-section title="New Component: Time" class="mt-4">
         <x-preview language="blade" :contents="$time">
             <div class="space-y-2">
                 <x-time label="Time" hint="Format 12 hours" name="time" value="09:22 AM" />
@@ -56,16 +42,14 @@
             </div>
         </x-preview>
         <p class="mt-2">
-            <x-link color="pink" href="#" icon="arrow-up-right" position="right">
-                Review the component documentation by clicking here
+            <x-link sm color="pink" href="#" icon="arrow-up-right" position="right">
+                Review the component documentation
             </x-link>
         </p>
     </x-section>
-    <x-section title="Form Step" class="mt-4">
+    <x-section title="New Component: Form Step" class="mt-4">
         <x-preview language="blade" :contents="$step">
-            <x-step selected="1"
-                    helpers
-                    simple>
+            <x-step selected="1" helpers circles>
                 <x-step.items step="1"
                               title="Starting"
                               description="Tall">
@@ -85,12 +69,12 @@
             </x-step>
         </x-preview>
         <p class="mt-2">
-            <x-link color="pink" href="#" icon="arrow-up-right" position="right">
-                Review the component documentation by clicking here
+            <x-link sm color="pink" href="#" icon="arrow-up-right" position="right">
+                Review the component documentation
             </x-link>
         </p>
     </x-section>
-    <x-section title="Stats" class="mt-4">
+    <x-section title="New Component: Stats" class="mt-4">
         <x-preview language="blade" :contents="$stats" :background="false">
             <div class="grid grid-cols-3 gap-2">
                 <div class="col-span-full sm:col-span-1">
@@ -123,18 +107,18 @@
             </div>
         </x-preview>
         <p class="mt-2">
-            <x-link color="pink" href="#" icon="arrow-up-right" position="right">
-                Review the component documentation by clicking here
+            <x-link sm color="pink" href="#" icon="arrow-up-right" position="right">
+                Review the component documentation
             </x-link>
         </p>
     </x-section>
-    <x-section title="Theme Switch" class="mt-4">
+    <x-section title="New Component: Theme Switch" class="mt-4">
         <x-preview language="blade" :contents="$themeSwitch">
             <x-theme-switch xl />
         </x-preview>
         <p class="mt-2">
-            <x-link color="pink" href="#" icon="arrow-up-right" position="right">
-                Review the component documentation by clicking here
+            <x-link sm color="pink" href="#" icon="arrow-up-right" position="right">
+                Review the component documentation
             </x-link>
         </p>
     </x-section>

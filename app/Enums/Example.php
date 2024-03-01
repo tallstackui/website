@@ -4,6 +4,7 @@ namespace App\Enums;
 
 use App\Enums\Examples\Form\Checkbox;
 use App\Enums\Examples\Form\Color;
+use App\Enums\Examples\Form\Date;
 use App\Enums\Examples\Form\Input;
 use App\Enums\Examples\Form\Number;
 use App\Enums\Examples\Form\Password;
@@ -68,6 +69,7 @@ enum Example: string
     case ColorPersonalization = ColorPersonalization::class;
     case Configuration = Configuration::class;
     case Contribution = Contribution::class;
+    case Date = Date::class;
     case DarkTheme = DarkTheme::class;
     case DebugMode = DebugMode::class;
     case DeepPersonalization = DeepPersonalization::class;

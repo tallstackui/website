@@ -35,6 +35,7 @@ Route::prefix('/docs')
                 Route::view('/range', 'documentation.form.range', Example::Range->variables())->name('range');
                 Route::view('/pin', 'documentation.form.pin', Example::Pin->variables())->name('pin');
                 Route::view('/upload', 'documentation.form.upload', Example::Upload->variables())->name('upload');
+                Route::view('/date', 'documentation.form.date', Example::Date->variables())->name('date');
             });
 
         Route::prefix('/ui')

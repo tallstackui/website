@@ -48,40 +48,43 @@
                     <h2 class="font-medium text-pink-900 font-display dark:text-pink-500">Form</h2>
                     <ul role="list" class="mt-4 space-y-2 dark:border-slate-800 lg:space-y-4 lg:mt-4 lg:border-slate-200">
                         <li class="relative ml-4">
+                            <x-layout.navigation.link :href="route('documentation.form.checkbox')" text="Checkbox" />
+                        </li>
+                        <li class="relative ml-4">
+                            <x-layout.navigation.link :href="route('documentation.form.date')" text="Date" new />
+                        </li>
+                        <li class="relative ml-4">
                             <x-layout.navigation.link :href="route('documentation.form.input')" text="Input" />
-                        </li>
-                        <li class="relative ml-4">
-                            <x-layout.navigation.link :href="route('documentation.form.password')" text="Password" />
-                        </li>
-                        <li class="relative ml-4">
-                            <x-layout.navigation.link :href="route('documentation.form.color')" text="Color" />
-                        </li>
-                        <li class="relative ml-4">
-                            <x-layout.navigation.link :href="route('documentation.form.textarea')" text="Textarea" />
                         </li>
                         <li class="relative ml-4">
                             <x-layout.navigation.link :href="route('documentation.form.number')" text="Number" />
                         </li>
                         <li class="relative ml-4">
-                            <x-layout.navigation.link :href="route('documentation.form.checkbox')" text="Checkbox" />
-                        </li>
-                        <li class="relative ml-4">
-                            <x-layout.navigation.link :href="route('documentation.form.radio')" text="Radio" />
-                        </li>
-                        <li class="relative ml-4">
-                            <x-layout.navigation.link :href="route('documentation.form.tag')" text="Tag" />
-                        </li>
-                        <li class="relative ml-4">
-                            <x-layout.navigation.link :href="route('documentation.form.toggle')" text="Toggle" />
-                        </li>
-                        <li class="relative ml-4">
-                            <x-layout.navigation.link :href="route('documentation.form.range')" text="Range" />
+                            <x-layout.navigation.link :href="route('documentation.form.password')" text="Password" />
                         </li>
                         <li class="relative ml-4">
                             <x-layout.navigation.link :href="route('documentation.form.pin')" text="Pin" />
                         </li>
                         <li class="relative ml-4">
-                            <x-layout.navigation.link :href="route('documentation.form.upload')" text="Upload" new />
+                            <x-layout.navigation.link :href="route('documentation.form.radio')" text="Radio" />
+                        </li>
+                        <li class="relative ml-4">
+                            <x-layout.navigation.link :href="route('documentation.form.range')" text="Range" />
+                        </li>
+                        <li class="relative ml-4">
+                            <x-layout.navigation.link :href="route('documentation.form.tag')" text="Tag" />
+                        </li>
+                        <li class="relative ml-4">
+                            <x-layout.navigation.link :href="route('documentation.form.checkbox')" text="Time" new />
+                        </li>
+                        <li class="relative ml-4">
+                            <x-layout.navigation.link :href="route('documentation.form.textarea')" text="Textarea" />
+                        </li>
+                        <li class="relative ml-4">
+                            <x-layout.navigation.link :href="route('documentation.form.toggle')" text="Toggle" />
+                        </li>
+                        <li class="relative ml-4">
+                            <x-layout.navigation.link :href="route('documentation.form.upload')" text="Upload" />
                         </li>
                     </ul>
                 </li>
@@ -128,7 +131,7 @@
                             <x-layout.navigation.link :href="route('documentation.ui.loading')" text="Loading" />
                         </li>
                         <li class="relative ml-4">
-                            <x-layout.navigation.link :href="route('documentation.ui.reaction')" text="Reaction" new />
+                            <x-layout.navigation.link :href="route('documentation.ui.reaction')" text="Reaction" />
                         </li>
                         <li class="relative ml-4">
                             <x-layout.navigation.link :href="route('documentation.ui.select')" text="Select" />
