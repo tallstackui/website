@@ -140,6 +140,17 @@
         "10": "Events",
         "11": "Invalidate"
     },
+    "docs.form.time": {
+        "1": "Basic Usage",
+        "2": "Label & Hint",
+        "3": "Available Formats",
+        "4": "Min & Max Hours and Minutes",
+        "5": "Helper",
+        "6": "Step Hour & Minute",
+        "7": "Footer Slot",
+        "10": "Events",
+        "11": "Invalidate"
+    },
     "docs.ui.alert": {
         "0": "Basic Usage",
         "1": "Title",
