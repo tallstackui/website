@@ -34,13 +34,21 @@ class Date
     HTML;
 
     public const DISABLED = <<<'HTML'
-    <!-- Array -->
+    <!-- Simple Array -->
     <x-date :disable="['2020-01-01','2020-01-02','2020-01-03']" />
     
-    <!-- or -->
+    <!-- Multiple Arrays -->
+    <x-date :disable="[
+        ['2020-01-01','2020-01-02','2020-01-03'],
+        ['2020-01-04','2020-01-05','2020-01-06']
+    ]" />
 
     <!-- Collection -->
     <x-date :disable="collect(['2020-01-01','2020-01-02','2020-01-03'])" />
+
+    <!-- You can also use CarbonInterval to 
+    easily generate an interval of dates -->
+    <x-date :disable="\Carbon\CarbonInterval::days(1)->toPeriod(now(), now()->addWeek())->toArray()" />
     HTML;
 
     public const RANGE = <<<'HTML'

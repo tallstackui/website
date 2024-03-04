@@ -31,7 +31,7 @@
             <div class="space-y-2">
                 <x-date format="YYYY-MM-DD" :value="$current" />
                 <x-date format="YYYY, MMMM, DD" :value="$current" />
-                <x-date format="DD [of] MMMM [of] YYYY" :value="$current" />
+                <x-date format="MMMM, DD, YYYY" :value="$current" />
             </div>
         </x-preview>
         <x-warning class="mt-4">

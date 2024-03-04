@@ -56,8 +56,11 @@ test('can access all routes', function (string $route) {
     fn () => route('documentation.ui.reaction'),
     fn () => route('documentation.ui.select'),
     fn () => route('documentation.ui.slide'),
+    fn () => route('documentation.ui.stats'),
+    fn () => route('documentation.ui.step'),
     fn () => route('documentation.ui.tab'),
     fn () => route('documentation.ui.table'),
+    fn () => route('documentation.ui.theme-switch'),
     fn () => route('documentation.ui.tooltip'),
     //
     fn () => route('documentation.interaction.dialog'),
