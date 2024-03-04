@@ -31,6 +31,14 @@
             </div>
         </x-preview>
     </x-section>
+    <x-section title="Min & Max Hour and Minutes">
+        <x-preview language="blade" :contents="$basic">
+            <div class="space-y-2">
+                <x-time label="Min Hour: 5, Max Hour: 10" :min-hour="5" :max-hour="10" />
+                <x-time label="Min Minute: 30, Max Minute: 45" :min-minute="30" :max-minute="45" />
+            </div>
+        </x-preview>
+    </x-section>
     <x-section title="Helper">
         <x-preview language="blade" :contents="$basic">
             <x-time format="24" helper />
@@ -53,7 +61,8 @@
     <x-section title="Events">
         <x-preview language="blade" :contents="$basic">
             <x-time x-on:hour="alert(`Hour Selected: ${$event.detail.hour}`)"
-                    x-on:minute="alert(`Minute Selected: ${$event.detail.minute}`)"/>
+                    x-on:minute="alert(`Minute Selected: ${$event.detail.minute}`)"
+                    x-on:interval="alert(`Interval Changed: ${$event.detail.interval}`)"/>
         </x-preview>
     </x-section>
     <x-section title="Invalidate" description="An option to not show validation error message.">
