@@ -54,6 +54,10 @@
             for example:
         </p>
         <x-code language="blade" :contents="$prefixExamples" disable-copy />
+        <p>
+            <u>Starting from version 1.20</u>, you can configure the prefix directly through the terminal using this command:
+        </p>
+        <x-code language="shell" :contents="$prefixCommand" />
     </x-section>
     <x-section title="AlpineJS Requirement" disable-copy>
         <p>

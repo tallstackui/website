@@ -121,7 +121,7 @@
                     </x-step.items>
                 </x-step>
                 <p class="text-lg font-medium text-pink-700 dark:text-dark-300">Panels</p>
-                <x-step selected="1" helpers simple>
+                <x-step selected="1" helpers panels>
                     <x-step.items step="1"
                                   title="Starting"
                                   description="Step One">
