@@ -64,7 +64,7 @@ Route::prefix('/docs')
                 Route::view('/select', 'documentation.ui.select', Example::Select->variables())->name('select');
                 Route::view('/slide', 'documentation.ui.slide', Example::Slide->variables())->name('slide');
                 Route::view('/stats', 'documentation.ui.stats', Example::Stats->variables())->name('stats');
-                Route::view('/step', 'documentation.ui.step', Example::Stats->variables())->name('step');
+                Route::view('/step', 'documentation.ui.step', Example::Step->variables())->name('step');
                 Route::view('/tab', 'documentation.ui.tab', Example::Tab->variables())->name('tab');
                 Route::view('/table', 'documentation.ui.table', Example::Table->variables())->name('table');
                 Route::view('/theme-switch', 'documentation.ui.theme-switch', Example::ThemeSwitch->variables())->name('theme-switch');

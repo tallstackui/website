@@ -372,6 +372,18 @@
         "10": "Events",
         "11": "Configurations"
     },
+    "docs.ui.step": {
+        "0": "Basic Usage",
+        "1": "Title & Description",
+        "2": "Final Step",
+        "3": "Helpers",
+        "4": "Allow Navigation Previous",
+        "5": "Alternative Styles",
+        "6": "Finish Slot",
+        "7": "Wireable",
+        "8": "Live Wireable",
+        "9": "Events"
+    },
     "docs.ui.tab": {
         "0": "Basic Usage",
         "1": "Slots",
