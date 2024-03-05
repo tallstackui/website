@@ -391,6 +391,12 @@
         "9": "Slots",
         "10": "Interacting With Data"
     },
+    "docs.ui.theme-switch": {
+        "0": "Concept",
+        "1": "Basic Usage",
+        "2": "Sizes",
+        "3": "Icons Only"
+    },
     "docs.ui.tooltip": {
         "0": "Basic Usage",
         "1": "Available Positions",

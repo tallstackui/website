@@ -11,13 +11,6 @@
     <x-slot:personalization>
         <livewire:documentation.personalization :$personalization component="step" />
     </x-slot:personalization>
-    <x-section title="Concept" anchor="static-concept" disable-copy>
-        <p>
-            <u>Version 1.20.0</u> of TallStackUI introduces a new component: Step.
-            Step actually has the same concept as "form with multiple steps",
-            we preferred to adopt the name "Step" so that it would be a reduced form.
-        </p>
-    </x-section>
     <x-section title="Basic Usage">
         <x-preview language="blade" :contents="$basic">
             <x-step selected="1" navigate>
@@ -98,6 +91,28 @@
             </x-step>
         </x-preview>
     </x-section>
+    <x-section title="Allow Navigation Previous" description="An option to enable the navigation to the previous.">
+        <x-preview language="blade" :contents="$basic">
+            <x-step selected="1" helpers previous>
+                <x-step.items step="1"
+                                 title="Starting"
+                                 description="Step One">
+                    Step one...
+                </x-step.items>
+                <x-step.items step="2"
+                                 title="Advancing"
+                                 description="Step Two">
+                    Step two...
+                </x-step.items>
+                <x-step.items step="3"
+                                 title="Finishing"
+                                 description="Step Three"
+                                 completed>
+                    Step three... <b>finished!</b>
+                </x-step.items>
+            </x-step>
+        </x-preview>
+    </x-section>
     <x-section title="Alternative Styles">
         <x-preview language="blade" :contents="$basic">
             <div class="space-y-2">
@@ -115,8 +130,7 @@
                     </x-step.items>
                     <x-step.items step="3"
                                   title="Finishing"
-                                  description="Step Three"
-                                  completed>
+                                  description="Step Three">
                         Step three... <b>finished!</b>
                     </x-step.items>
                 </x-step>
@@ -134,8 +148,7 @@
                     </x-step.items>
                     <x-step.items step="3"
                                   title="Finishing"
-                                  description="Step Three"
-                                  completed>
+                                  description="Step Three">
                         Step three... <b>finished!</b>
                     </x-step.items>
                 </x-step>
@@ -172,8 +185,7 @@
             <x-step selected="1"
                     helpers
                     x-on:change="alert(`Changed: ${$event.detail.step}`)"
-                    x-on:finish="alert(`Finished: ${$event.detail.step}`)"
-                    finish>
+                    x-on:finish="alert(`Finished: ${$event.detail.step}`)">
                 <x-step.items step="1"
                               title="Starting"
                               description="Step One">

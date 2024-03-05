@@ -1,9 +1,9 @@
 <x-layout>
     <x-slot:title>
-        Dark Theme Helper
+        Dark Theme helper
     </x-slot:title>
     <x-slot:description>
-        Helper to easy manage dark theme.
+        Helper to easily manage dark theme.
     </x-slot:description>
     <x-section disable-copy>
         <p class="mb-2">
@@ -15,7 +15,7 @@
         <x-warning>
             The dark theme helper needs AlpineJS to work, and Livewire 3 automatically delivers AlpineJS only when
             there are Livewire components on the page. To ensure the dark theme helper works even if there are no
-            Livewire components on the page, load AlpineJS using the @verbatim @livewireScripts @endverbatim directive
+            Livewire components on the page, load AlpineJS using the <b> @verbatim @livewireScripts @endverbatim </b> directive
             <a href="https://livewire.laravel.com/docs/installation#manually-including-livewires-frontend-assets" class="underline" target="_blank">as mentioned in the documentation.</a>
         </x-warning>
         <p class="mt-4">1. Enable the dark theme support in your TailwindCSS configuration file:</p>

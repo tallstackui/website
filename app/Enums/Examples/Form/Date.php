@@ -46,8 +46,7 @@ class Date
     <!-- Collection -->
     <x-date :disable="collect(['2020-01-01','2020-01-02','2020-01-03'])" />
 
-    <!-- You can also use CarbonInterval to 
-    easily generate an interval of dates -->
+    <!-- Carbon Interval-->
     <x-date :disable="\Carbon\CarbonInterval::days(1)->toPeriod(now(), now()->addWeek())->toArray()" />
     HTML;
 
