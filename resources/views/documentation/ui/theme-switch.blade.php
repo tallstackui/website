@@ -19,8 +19,7 @@
             or deactivating it with the respective sun and moon icons.
         </p>
         <x-warning class="mt-2">
-            You can only use this component if are using the <a href="{{ route('documentation.dark-theme') }}" class="underline">dark theme helper</a>
-            to manage the dark theme state of your application.
+            You can only use this component if are using the <a href="{{ route('documentation.dark-theme') }}" class="underline">dark theme helper.</a>
         </x-warning>
     </x-section>
     <x-section title="Basic Usage">

@@ -183,7 +183,7 @@
         </x-preview>
     </x-section>
     <x-section title="Live Wireable">
-        <x-preview language="blade" :contents="$wireable">
+        <x-preview language="blade" :contents="$liveWireable">
             <livewire:documentation.ui.step live />
         </x-preview>
     </x-section>
