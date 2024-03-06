@@ -7,11 +7,6 @@ class Icon
     public const BASIC = <<<'HTML'
     <x-icon name="users" class="h-5 w-5"/>
     <x-icon name="clipboard" class="h-5 w-5"/>
-
-    <!-- You can specify the icon using 
-    the attributes "name" or "icon" -->
-    <x-icon icon="users" class="h-5 w-5" />
-    <x-icon icon="clipboard" class="h-5 w-5"/>
     HTML;
 
     public const VARIATIONS = <<<'HTML'

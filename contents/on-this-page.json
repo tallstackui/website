@@ -274,9 +274,12 @@
         "6": "Events"
     },
     "docs.ui.icon": {
-        "0": "Basic Usage",
-        "1": "Outline Variations",
-        "2": "Left & Right Slots"
+        "0": "Concept",
+        "1": "Supported Icon Libraries",
+        "2": "Setup Icons",
+        "3": "Basic Usage",
+        "4": "Variations",
+        "5": "Left & Right Slots"
     },
     "docs.ui.modal": {
         "0": "Basic Usage",
@@ -428,7 +431,7 @@
         "3": "Size Variations",
         "4": "HTML Content",
         "5": "Color Variations",
-        "6": "Outline Variations"
+        "6": "Variations"
     },
     "docs.interaction.dialog": {
         "0": "Configuration",
