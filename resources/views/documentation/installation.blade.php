@@ -6,7 +6,7 @@
         <p>TallStackUI was created with a <b class="font-semibold text-pink-500 underline">focus on Livewire 3</b> so the usage requirements are:</p>
         <ul class="mt-4 ml-4 list-inside list-decimal space-y-2">
             <li>PHP 8.1 or above</li>
-            <li>Laravel 10</li>
+            <li>Laravel 10 or Laravel 11</li>
             <li>Livewire 3</li>
             <li>TailwindCSS 3</li>
         </ul>
