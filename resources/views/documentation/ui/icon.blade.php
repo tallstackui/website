@@ -7,11 +7,11 @@
     </x-slot:description>
     <x-section title="Concept" disable-copy>
         <p>
-            <u>Before version 1.20, TallStackUI only supported one icon library, Heroicons.</u> Although it is
-            well done, Heroicons has one main problem: the low number of icons, there are only around
-            300 icons. Due to many requests, starting from version 1.20, TallStackUI now supports three
-            icon libraries, offering more than 10K icons. With update 1.20 a small change needs to be
-            made so that you can use the new supported icons, this change must be made in the
+            <u>Before version 1.20, TallStackUI only supported one icon library, Heroicons.</u> Heroicons
+            is a beautiful library, but there is a single problem: the low number of icons, there are
+            only around 300 icons. Due to many requests, <u>starting from version 1.20, TallStackUI now supports three
+            icon libraries, offering more than 10K icons.</u> A small change needs to be
+            made so that you can use the new supported icon libraries, this change must be made in the
             <a href="{{ route('documentation.configuration') }}" class="underline">configuration file.</a>
         </p>
         <div class="mt-4">
@@ -20,7 +20,7 @@
             <p>This is the <b class="underline">new icon configuration</b> for the configuration file:</p>
             <x-code :contents="$newConfiguration" />
             <x-warning class="mt-2">
-                If you have been using TallStackUI since before version 1.20, you must update
+                <b class="underline">If you have been using TallStackUI since before version 1.20</b>, you must update
                 your configuration file to adapt it to the new icon configuration, otherwise,
                 you will not be able to use the new icon libraries and also can get some exceptions.
             </x-warning>
@@ -52,8 +52,8 @@
                 This command is responsible for downloading and preparing the new icon library
                 within your project's vendor folder. Due to the way the icons are downloaded
                 and stored in vendor folder, when deploying your project to production you will
-                have to run the same command in the other environment. To avoid manual work,
-                you can add this instruction to a Composer hook:
+                have to run the same command in the production environment. To avoid this manual
+                work, you can add this instruction to a Composer hook:
             </p>
             <x-code language="json" :contents="$composerHook" />
             <p>
