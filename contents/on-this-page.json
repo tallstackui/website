@@ -373,6 +373,17 @@
         "10": "Events",
         "11": "Configurations"
     },
+    "docs.ui.stats": {
+        "0": "Basic Usage",
+        "1": "Title",
+        "2": "Link",
+        "3": "Icons",
+        "4": "Color Variations",
+        "5": "Indicators",
+        "6": "Animated Effect",
+        "7": "Number Format",
+        "8": "Slots"
+    },
     "docs.ui.step": {
         "0": "Basic Usage",
         "1": "Title & Description",

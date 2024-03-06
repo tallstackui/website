@@ -27,7 +27,20 @@
     </x-section>
     <x-section title="Link" description="An option to allow the navigation when clicking on the card.">
         <x-preview language="blade" :contents="$link" :background="false">
-            <x-stats href="https://tallstackui.com" target="_blank" :number="100" />
+            <div class="grid grid-cols-3 gap-2">
+                <x-stats href="https://tallstackui.com"
+                         target="_blank"
+                         title="Components"
+                         :number="50" />
+                <x-stats href="https://tallstackui.com"
+                         target="_blank"
+                         title="Users"
+                         :number="500" />
+                <x-stats href="https://tallstackui.com"
+                         target="_blank"
+                         title="Downloads"
+                         :number="10.000" />
+            </div>
         </x-preview>
     </x-section>
     <x-section title="Icons">
@@ -74,7 +87,7 @@
             </x-warning>
         </x-preview>
     </x-section>
-    <x-section title="Increase & Decrease Symbols">
+    <x-section title="Indicators">
         <x-preview language="blade" :contents="$symbols" :background="false">
             <div class="grid grid-cols-2 gap-2">
                 <x-stats :number="50" increase />
@@ -108,7 +121,7 @@
             </x-warning>
         </x-preview>
     </x-section>
-    <x-section title="Header, Right & Footer Slot">
+    <x-section title="Slots">
         <x-preview language="blade" :contents="$slots" :background="false">
             <x-stats :number="50" header="TallStackUI" footer="The best TALL Stack component library">
                 <x-slot:right>

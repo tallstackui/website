@@ -82,6 +82,7 @@ class Stats
     HTML;
 
     public const SLOTS = <<<'HTML'
+    <!-- Default Styles -->
     <x-stats :number="50" header="TallStackUI" footer="The best TALL Stack component library">
         <x-slot:right>
             <x-icon name="wrench-screwdriver" class="w-6 h-6 text-pink-500" />
@@ -90,6 +91,7 @@ class Stats
 
     <!-- or -->
 
+    <!-- Raw Content -->
     <x-stats :number="50">
         <x-slot:header>
             TallStackUI
