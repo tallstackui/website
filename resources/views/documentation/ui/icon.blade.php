@@ -8,9 +8,9 @@
     <x-section title="Concept" disable-copy>
         <p>
             <u>Before version 1.20, TallStackUI only supported one icon library, Heroicons.</u> Heroicons
-            is a beautiful library, but there is a single problem: the low number of icons, there are
+            is a beautiful library, but there is a problem: the low number of icons, there are
             only around 300 icons. Due to many requests, <u>starting from version 1.20, TallStackUI now supports three
-            icon libraries, offering more than 10K icons.</u> A small change needs to be
+            icon libraries,</u> offering more than 10K icons. A small change needs to be
             made so that you can use the new supported icon libraries, this change must be made in the
             <a href="{{ route('documentation.configuration') }}" class="underline">configuration file.</a>
         </p>
@@ -38,27 +38,25 @@
     </x-section>
     <x-section title="Setup Icons" disable-copy>
         <p>
-            If you want to change the icon library to one of the supported ones follow these steps:
+            If you want to change the icon library to one of the supported ones follow these steps.
+            Let's assume you want to use the PhosphorIcons library in your project.
         </p>
         <div class="mt-4">
             <p>1) Edit the configuration file according you want:</p>
             <x-code :contents="$startSetupIconLibrary" disable-copy />
-            <x-warning>
-                In this example, we assume that you want to use the PhosphorIcons library.
-            </x-warning>
             <p class="mt-2">2) Save the file and run the following command in your terminal:</p>
             <x-code language="shell" :contents="$commandSetupIcon" />
             <p>
                 This command is responsible for downloading and preparing the new icon library
-                within your project's vendor folder. Due to the way the icons are downloaded
-                and stored in vendor folder, when deploying your project to production you will
-                have to run the same command in the production environment. To avoid this manual
-                work, you can add this instruction to a Composer hook:
+                within your project. Due to the way the icons are downloaded and stored, when
+                deploying your project to production you will have to run the same command in
+                the production environment. To avoid this manual work, you can add this
+                instruction to a Composer hook:
             </p>
             <x-code language="json" :contents="$composerHook" />
             <p>
                 Using this approach, every time you run the <x-block>composer install</x-block>
-                or <x-block>composer update</x-block> command, the icon library will be downloaded
+                or <x-block>composer update</x-block> commands, the icon library will be downloaded
                 and prepared automatically, avoiding need to run the command manually.
             </p>
         </div>
@@ -72,12 +70,12 @@
         </x-preview>
     </x-section>
     <x-section title="Variations">
-        <x-code language="blade" :contents="$variations" disable-copy />
-        <p class="mt-2">
+        <p>
             The variations will be available depending on the type of icon library. For example, for Heroicons
             you can use <x-block>outline</x-block>, as it is an available style, but this same style will not be applied to
             Phosphoricons. As for Google icons, the variations are linked to the icon name.
         </p>
+        <x-code language="blade" :contents="$variations" disable-copy />
     </x-section>
     <x-section title="Left & Right Slots">
         <x-preview language="blade" :contents="$leftRight">

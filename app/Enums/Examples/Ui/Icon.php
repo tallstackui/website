@@ -20,7 +20,8 @@ class Icon
     <x-icon name="users" bold />
     <x-icon name="users" duotone />
 
-    <!-- Google -->
+    <!-- Google --> 
+    <!-- Normal, tt: duotone, s: sharp, r: rounded -->
     <x-icon name="group" />
     <x-icon name="group-tt" />
     <x-icon name="group-s" />
