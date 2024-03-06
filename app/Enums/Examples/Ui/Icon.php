@@ -16,7 +16,7 @@ class Icon
 
     public const VARIATIONS = <<<'HTML'
     <!-- HeroIcons -->
-    <x-icon name="users" outline/>
+    <x-icon name="users" outline />
 
     <!-- PhosphorIcons -->
     <x-icon name="users" thin />
