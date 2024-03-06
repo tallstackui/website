@@ -7,7 +7,6 @@
     </x-slot:description>
     <x-slot:personalization>
         <livewire:documentation.personalization :$personalization component="tab" />
-        <livewire:documentation.personalization :personalization="$personalizationItems" component="tab.items" />
     </x-slot:personalization>
     <x-section title="Basic Usage">
         <x-preview language="blade" :background="false" :contents="$basic">
