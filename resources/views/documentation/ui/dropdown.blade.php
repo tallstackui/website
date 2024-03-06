@@ -32,7 +32,21 @@
             </div>
         </x-preview>
     </x-section>
-    <x-section title="Icon Slot">
+    <x-section title="Links">
+        <x-preview language="blade" :contents="$links">
+            <div class="flex justify-end md:justify-center">
+                <x-dropdown icon="chevron-down" position="bottom-end">
+                    <a href="https://google.com.br" target="_blank">
+                        <x-dropdown.items text="Google" />
+                    </a>
+                    <a href="https://twitter.com" target="_blank">
+                        <x-dropdown.items text="Twitter" separator />
+                    </a>
+                </x-dropdown>
+            </div>
+        </x-preview>
+    </x-section>
+    <x-section title="Icon">
         <x-preview language="blade" :contents="$icons">
             <div class="flex justify-end md:justify-center">
                 <x-dropdown icon="chevron-down" position="bottom-end">
@@ -42,7 +56,7 @@
             </div>
         </x-preview>
     </x-section>
-    <x-section title="Icon Slot Static" description="An option to use icons without rotate animation">
+    <x-section title="Static Icon" description="An option to use icons without rotate animation">
         <x-preview language="blade" :contents="$iconsStatic">
             <div class="flex justify-end md:justify-center">
                 <x-dropdown icon="ellipsis-vertical" static position="bottom-end">

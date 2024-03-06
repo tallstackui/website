@@ -65,4 +65,17 @@ class Internal extends Controller
             'personalization' => $personalization,
         ]);
     }
+
+    public function floating(): View
+    {
+        $personalization = <<<'HTML'
+        TallStackUi::personalize()
+            ->floating()
+            ->block('block', 'classes');
+        HTML;
+
+        return view('documentation.internal.floating', [
+            'personalization' => $personalization,
+        ]);
+    }
 }

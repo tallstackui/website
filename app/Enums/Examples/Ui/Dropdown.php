@@ -33,6 +33,17 @@ class Dropdown
     </x-dropdown>
     HTML;
 
+    public const LINKS = <<<'HTML'
+    <x-dropdown icon="chevron-down" position="bottom-end">
+        <a href="https://google.com.br" target="_blank">
+            <x-dropdown.items text="Google" />
+        </a>
+        <a href="https://twitter.com" target="_blank">
+            <x-dropdown.items text="Twitter" separator />
+        </a>
+    </x-dropdown>
+    HTML;
+
     public const ICONS = <<<'HTML'
     <x-dropdown icon="chevron-down">
         <x-dropdown.items text="Settings" />

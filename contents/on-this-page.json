@@ -258,10 +258,11 @@
     "docs.ui.dropdown": {
         "0": "Basic Usage",
         "1": "Available Positions",
-        "2": "Icon Slot",
-        "3": "Icon Slot Static",
-        "4": "Header Slot",
-        "5": "Action Slot"
+        "2": "Links",
+        "3": "Icon",
+        "4": "Static Icon",
+        "5": "Header Slot",
+        "6": "Action Slot"
     },
     "docs.ui.error": {
         "0": "Basic Usage",

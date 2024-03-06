@@ -51,6 +51,9 @@
                             <x-layout.navigation.link :href="route('documentation.form.checkbox')" text="Checkbox" />
                         </li>
                         <li class="relative ml-4">
+                            <x-layout.navigation.link :href="route('documentation.form.color')" text="Color" />
+                        </li>
+                        <li class="relative ml-4">
                             <x-layout.navigation.link :href="route('documentation.form.date')" text="Date" new />
                         </li>
                         <li class="relative ml-4">
@@ -175,6 +178,9 @@
                     <ul role="list" class="mt-4 space-y-2 dark:border-slate-800 lg:space-y-4 lg:mt-4 lg:border-slate-200">
                         <li class="relative ml-4">
                             <x-layout.navigation.link :href="route('documentation.internal.error')" text="Error" />
+                        </li>
+                        <li class="relative ml-4">
+                            <x-layout.navigation.link :href="route('documentation.internal.floating')" text="Floating" />
                         </li>
                         <li class="relative ml-4">
                             <x-layout.navigation.link :href="route('documentation.internal.hint')" text="Hint" />

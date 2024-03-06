@@ -3,7 +3,7 @@
         Wrapper Component
     </x-slot:title>
     <x-slot:description>
-        The generic wrapper component used in others components.
+        The generic wrapper component used to wrapper form components.
     </x-slot:description>
     <x-slot:personalization>
         <livewire:documentation.personalization :personalization="$personalization['input']" component="wrapper.input" />

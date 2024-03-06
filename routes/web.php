@@ -86,6 +86,7 @@ Route::prefix('/docs')
                 Route::get('/hint', 'hint')->name('hint');
                 Route::get('/label', 'label')->name('label');
                 Route::get('/wrapper', 'wrapper')->name('wrapper');
+                Route::get('/floating', 'floating')->name('floating');
             });
 
         Route::view('/dark-theme', 'documentation.helpers.dark-theme', Example::DarkTheme->variables())->name('dark-theme');
