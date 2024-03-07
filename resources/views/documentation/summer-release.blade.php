@@ -44,18 +44,18 @@
             </li>
         </ul>
         <x-warning class="mt-4">
-            Have you noticed any strange behavior or issues with your
-            app after updating? <a href="{{ $issues }}" class="underline">Please open an issue on our GitHub repository.</a>
+            Have you noticed any strange behavior or issues after updating?
+            <a href="{{ $issues }}" class="underline">Please open an issue on our GitHub repository.</a>
         </x-warning>
     </x-section>
     <x-separator text="NEWS" />
-    <x-section title="News" disable-copy>
-        <ul class="mt-2 ml-4 list-inside list-decimal space-y-2">
+    <x-section title="Resume" disable-copy>
+        <ul class="mt-2 ml-4 list-inside list-decimal">
             <li class="marker:font-bold">
                 Uncountable improvements in the components.
             </li>
             <li class="marker:font-bold">
-                Uncountable quantity of bug fixes.
+                Uncountable quantities of bug fixes.
             </li>
             <li class="marker:font-bold">
                 Five new components.
@@ -63,11 +63,20 @@
             <li class="marker:font-bold">
                 Support for three icon libraries.
             </li>
+            <li class="marker:font-bold">
+                Command to set up <a href="{{ route('documentation.installation').'#component-prefix' }}">component prefixes.</a>
+            </li>
         </ul>
+    </x-section>
+    <x-section title="Setup Prefix Command" class="mt-4" disable-copy>
+        <x-preview language="blade">
+            <p class="mb-4"><u>Starting from version 1.20,</u> TallStackUI introduce a command to easily setup prefix for the components:</p>
+            <x-code language="shell" :contents="$setupPrefix" />
+        </x-preview>
     </x-section>
     <x-section title="Icons Library" class="mt-4" disable-copy>
         <x-preview language="blade">
-            <p>TallStackUI now supports three icon libraries:</p>
+            <p><u>Starting from version 1.20,</u> TallStackUI supports three icon libraries:</p>
             <div class="space-y-2">
                 <ul class="mt-2 ml-2 list-inside list-decimal">
                     <li><a href="https://heroicons.com/" target="_blank">Heroicons</a></li>
@@ -82,8 +91,8 @@
             </p>
         </x-preview>
     </x-section>
-    <x-section title="Date Component" class="mt-4" disable-copy>
-        <x-preview language="blade" :contents="$date">
+    <x-section title="New Date Component" class="mt-4" disable-copy>
+        <x-preview language="blade">
             <div class="space-y-2">
                 <x-date label="Date" hint="Single selection" name="date" :value="now()->format('Y-m-d')" helpers format="DD MMMM YYYY" />
                 <x-date label="Date" hint="Range selection" range :value="[now()->format('Y-m-d'), now()->addWeeks(2)->format('Y-m-d')]" format="DD MMMM YYYY" />
@@ -96,8 +105,8 @@
             </p>
         </x-preview>
     </x-section>
-    <x-section title="Time Component" class="mt-4" disable-copy>
-        <x-preview language="blade" :contents="$time">
+    <x-section title="New Time Component" class="mt-4" disable-copy>
+        <x-preview language="blade">
             <div class="space-y-2">
                 <x-time label="Time" hint="Format 12 hours" name="time" value="09:22 AM" />
                 <x-time label="Time" hint="Format 24 hours" helper name="time" value="21:36" format="24" />
@@ -109,8 +118,8 @@
             </p>
         </x-preview>
     </x-section>
-    <x-section title="Form Step Component" class="mt-4" disable-copy>
-        <x-preview language="blade" :contents="$step">
+    <x-section title="New Form Step Component" class="mt-4" disable-copy>
+        <x-preview language="blade">
             <x-step selected="1" helpers panels>
                 <x-step.items step="1"
                               title="Starting"
@@ -136,8 +145,8 @@
             </p>
         </x-preview>
     </x-section>
-    <x-section title="Stats Component" class="mt-4" disable-copy>
-        <x-preview language="blade" :contents="$stats" :background="false">
+    <x-section title="New Stats Component" class="mt-4" disable-copy>
+        <x-preview language="blade" :background="false">
             <div class="grid grid-cols-3 gap-2">
                 <div class="col-span-full sm:col-span-1">
                     <x-stats number="50"
@@ -174,8 +183,8 @@
             </p>
         </x-preview>
     </x-section>
-    <x-section title="Theme Switch Component" class="mt-4" disable-copy>
-        <x-preview language="blade" :contents="$themeSwitch">
+    <x-section title="New Theme Switch Component" class="mt-4" disable-copy>
+        <x-preview language="blade">
             <x-theme-switch xl />
             <p class="mt-2">
                 <x-link sm color="pink" :href="route('documentation.ui.theme-switch')" icon="arrow-up-right" position="right">
