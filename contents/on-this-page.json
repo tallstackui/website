@@ -422,7 +422,7 @@
         "0": "Concept",
         "1": "Basic Usage",
         "2": "Sizes",
-        "3": "Icons Only"
+        "3": "Only Icons"
     },
     "docs.ui.tooltip": {
         "0": "Basic Usage",
@@ -459,8 +459,7 @@
     },
     "docs.translation": {
         "0": "Translation Files",
-        "1": "Files",
-        "2": "Missing Content"
+        "1": "Missing Content"
     },
     "docs.without-livewire": {
         "0": "Concept",
