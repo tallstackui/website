@@ -96,7 +96,7 @@
     </x-section>
     <x-section title="Allow Navigation Previous" description="An option to enable the navigation to the previous.">
         <x-preview language="blade" :contents="$navigatePrevious">
-            <x-step selected="1" helpers previous>
+            <x-step selected="1" helpers navigate-previous>
                 <x-step.items step="1"
                                  title="Starting"
                                  description="Step One">

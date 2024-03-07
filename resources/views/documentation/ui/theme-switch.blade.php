@@ -42,7 +42,7 @@
     </x-section>
     <x-section title="Icons Only" description="An option to only display icons, without the toggle.">
         <x-preview language="blade" :contents="$icons">
-            <x-theme-switch icons />
+            <x-theme-switch only-icons />
         </x-preview>
     </x-section>
     <x-slot:navigation>

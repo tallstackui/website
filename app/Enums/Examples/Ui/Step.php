@@ -80,7 +80,7 @@ class Step
     HTML;
 
     public const NAVIGATE_PREVIOUS = <<<'HTML'
-    <x-step selected="1" helpers previous>
+    <x-step selected="1" helpers navigate-previous>
         <x-step.items step="1"
                       title="Starting"
                       description="Step One">

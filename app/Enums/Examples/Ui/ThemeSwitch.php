@@ -17,7 +17,7 @@ class ThemeSwitch
     HTML;
 
     public const ICONS = <<<'HTML'
-    <x-theme-switch icons />
+    <x-theme-switch only-icons />
     HTML;
 
     public const PERSONALIZATION = <<<'HTML'
