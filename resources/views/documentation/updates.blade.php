@@ -1,3 +1,7 @@
+@php
+    foreach (apply_prefix($__data) as $key => $value) $$key = $value;
+@endphp
+
 <x-layout>
     <x-slot:title>
         Updates
@@ -25,7 +29,7 @@
         <p class="mt-4">Updating only TallStackUI:</p>
         <x-code language="shell" :contents="$updatingTallstackui" />
     </x-section>
-    <x-section title="Releases">
+    <x-section title="Releases" disable-copy>
         <livewire:documentation.releases />
     </x-section>
 </x-layout>
