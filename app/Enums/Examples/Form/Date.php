@@ -18,6 +18,14 @@ class Date
     <x-date format="DD [of] MMMM [of] YYYY" />
     HTML;
 
+    public const CREATE_FROM_FORMAT = <<<'HTML'
+    $date = '20/02/2024'; // 20/02/2024
+    
+    $date = now()->createFromFormat('d/m/Y', $date)->format('Y-m-d');
+    
+    echo $date; // 2024-02-20
+    HTML;
+
     public const HELPERS = <<<'HTML'
     <x-date helpers />
     HTML;
@@ -80,8 +88,6 @@ class Date
     HTML;
 
     public const EVENTS = <<<'HTML'
-    <!-- The listeners receive the content through $event.detail.date -->
-    
     <x-date x-on:select="alert(`Selected Date: ${$event.detail.date}`)" 
             x-on:clear="alert(`Cleaned!`)" />
     HTML;

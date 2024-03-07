@@ -27,12 +27,12 @@
             <li class="marker:font-bold">
                 The "floating box" that is displayed in components such as Select Styled and Form
                 Upload is now a single object shared between several components, so if
-                you need to customize this box, be sure to check the Internal Components
-                documentation, we named it Floating.
+                you need to personalize this box, be sure to check the
+                <a href="{{ route('documentation.internal.floating') }}" class="underline">Internal Components > Floating.</a>
             </li>
             <li class="marker:font-bold">
                 Tab component items have lost their individual personalization in exchange
-                for the customizations now being centralized in the tab component, the parent component.
+                for the personalization now being centralized in the tab component, the parent component.
             </li>
             <li class="marker:font-bold">
                 The icon configuration received a new structure in the TallStackUI
@@ -40,27 +40,27 @@
             </li>
         </ul>
         <x-warning class="mt-4">
-            Have you noticed any strange behavior or issues after updating?
-            <a href="{{ $issues }}" class="underline">Please open an issue on our GitHub repository.</a>
+            If you notice any strange behavior or issues after the update,
+            <a href="{{ $issues }}" class="underline">please open an issue on our GitHub repository.</a>
         </x-warning>
     </x-section>
     <x-separator text="NEWS" />
     <x-section title="Resume" disable-copy>
         <ul class="mt-2 ml-4 list-inside list-decimal">
             <li class="marker:font-bold">
-                Uncountable improvements in the components.
+                Uncountable improvements in the components 🔍
             </li>
             <li class="marker:font-bold">
-                Uncountable quantities of bug fixes.
+                Uncountable quantities of bug fixes 🛠️
             </li>
             <li class="marker:font-bold">
-                Five new components.
+                Five new components 💫
             </li>
             <li class="marker:font-bold">
-                Support for three icon libraries.
+                Support for three icon libraries 🎨
             </li>
             <li class="marker:font-bold">
-                Command to set up <a href="{{ route('documentation.installation').'#component-prefix' }}">component prefixes.</a>
+                Command to set up <a href="{{ route('documentation.installation').'#component-prefix' }}">component prefixes</a> ⌨️
             </li>
         </ul>
     </x-section>

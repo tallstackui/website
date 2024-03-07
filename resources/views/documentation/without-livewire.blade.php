@@ -32,13 +32,15 @@
             that the components receive the <x-block>name</x-block> attribute, including so that validation error messages
             are displayed correctly.
         </p>
+    </x-section>
+    <x-section title="Parse Request Value" disable-copy>
         <p class="mt-2">
-            Some components, such as <x-block>select.styled, dates, tags</x-block> send an array to the backend,
-            in these cases you must use the <x-block>json_decode</x-block> function to access the items of the array.
+            Some components, such as <x-block>select.styled, date, tags</x-block> and others, send an array to the backend.
+            In these cases you must use the PHP <x-block>json_decode</x-block> function to access the items of the array.
         </p>
         <p class="mt-4"><b>1)</b> Preparing the Blade:</p>
         <x-code language="blade" :contents="$jsonDecodeBlade" disable-copy />
-        <p><b>2)</b> Using the <x-block>json_decode</x-block> to access the array of items:</p>
+        <p><b>2)</b> Using the PHP <x-block>json_decode</x-block> to access the array of items:</p>
         <x-code :contents="$jsonDecodeController" disable-copy />
     </x-section>
 </x-layout>

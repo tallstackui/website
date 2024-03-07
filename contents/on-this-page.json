@@ -324,7 +324,7 @@
         "7": "Using Less Icons",
         "8": "Slot"
     },
-    "docs.ui.select": {
+    "docs.form.select": {
         "Native": {
             "prefix": true,
             "contents": {

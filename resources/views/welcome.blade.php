@@ -289,9 +289,9 @@
                             <dl class="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-1">
                                 <div class="flex flex-col">
                                     <dd class="mt-4 text-base leading-7 text-gray-300 space-y-2">
-                                        <x-date label="Normal" :value="now()->format('Y-m-d')" format="DD, MMMM, YYYY" />
-                                        <x-date label="Range" range :value="[now()->format('Y-m-d'), now()->addWeek()->format('Y-m-d')]" format="DD, MMMM, YYYY" />
-                                        <x-date label="Multiple" multiple :value="[now()->format('Y-m-d'), now()->addDay()->format('Y-m-d')]" format="DD, MMMM, YYYY" />
+                                        <x-date label="Normal" name="normal" :value="now()->subMonth()->format('Y-m-d')" format="DD, MMMM, YYYY" />
+                                        <x-date label="Range" range name="range" :value="[now()->format('Y-m-d'), now()->addWeek()->format('Y-m-d')]" format="DD, MMMM, YYYY" />
+                                        <x-date label="Multiple" multiple name="multiple" :value="[now()->format('Y-m-d'), now()->addDay()->format('Y-m-d')]" format="DD, MMMM, YYYY" />
                                     </dd>
                                 </div>
                             </dl>
@@ -299,7 +299,7 @@
                             <dl class="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-1">
                                 <div class="flex flex-col">
                                     <dd class="mt-4 text-base leading-7 text-gray-300 space-y-2">
-                                        <x-time label="Format 12 Hours" :value="now()->format('h:i')" helper />
+                                        <x-time label="Format 12 Hours" :value="now()->format('h:i A')" helper />
                                         <x-time label="Format 24 Hours" :value="now()->format('h:i')" format="24" helper />
                                     </dd>
                                 </div>
