@@ -84,7 +84,7 @@
             <x-layout.footer-navigation :href="route('documentation.ui.loading')" text="Loading" back />
         </x-slot:back>
         <x-slot:next>
-            <x-layout.footer-navigation :href="route('documentation.ui.select')" text="Select" />
+            <x-layout.footer-navigation :href="route('documentation.form.select')" text="Select" />
         </x-slot:next>
     </x-slot:navigation>
 </x-layout>
