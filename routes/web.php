@@ -35,6 +35,7 @@ Route::prefix('/docs')
                 Route::view('/range', 'documentation.form.range', Example::Range->variables())->name('range');
                 Route::view('/pin', 'documentation.form.pin', Example::Pin->variables())->name('pin');
                 Route::view('/upload', 'documentation.form.upload', Example::Upload->variables())->name('upload');
+                Route::view('/select', 'documentation.form.select', Example::Select->variables())->name('select');
                 Route::view('/date', 'documentation.form.date', Example::Date->variables())->name('date');
                 Route::view('/time', 'documentation.form.time', Example::Time->variables())->name('time');
             });
@@ -61,7 +62,6 @@ Route::prefix('/docs')
                 Route::view('/link', 'documentation.ui.link', Example::Link->variables())->name('link');
                 Route::view('/loading', 'documentation.ui.loading', Example::Loading->variables())->name('loading');
                 Route::view('/reaction', 'documentation.ui.reaction', Example::Reaction->variables())->name('reaction');
-                Route::view('/select', 'documentation.ui.select', Example::Select->variables())->name('select');
                 Route::view('/slide', 'documentation.ui.slide', Example::Slide->variables())->name('slide');
                 Route::view('/stats', 'documentation.ui.stats', Example::Stats->variables())->name('stats');
                 Route::view('/step', 'documentation.ui.step', Example::Step->variables())->name('step');

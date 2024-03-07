@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Enums\Examples\Ui;
+namespace App\Enums\Examples\Form;
 
 class Select
 {
