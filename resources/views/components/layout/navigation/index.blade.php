@@ -17,7 +17,7 @@
             </button>
         </div>
         <x-button color="pink" class="w-full uppercase" x-on:click="$modalOpen('prefix-modal')" xs>
-            {{ __('Set Prefix') }}
+            {{ __('PREFIXING EXAMPLES') }}
         </x-button>
     </div>
     <ul role="list" class="space-y-9">
