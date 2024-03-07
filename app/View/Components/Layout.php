@@ -28,4 +28,9 @@ class Layout extends Component
     {
         return view('layouts.app');
     }
+
+    public function hydrate()
+    {
+        dd(1);
+    }
 }

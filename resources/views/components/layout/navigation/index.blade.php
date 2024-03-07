@@ -1,10 +1,10 @@
 <nav {{ $attributes->merge(['class' => 'text-base lg:text-sm']) }}>
-    <div class="mb-4 pr-4 sm:flex-1 sm:pr-0">
-        <div class="bg-white dark:bg-slate-900 relative">
+    <div class="mb-4 pr-4 space-y-2 sm:flex-1 sm:pr-0">
+        <div class="relative bg-white dark:bg-slate-900">
             <button type="button"
                     x-on:click="document.querySelector('#docsearch').firstChild.click()"
-                    class="hidden w-full lg:flex items-center text-sm leading-6 text-slate-400 rounded-md ring-1 ring-slate-300 hover:bg-slate-100 dark:ring-slate-800 shadow-sm py-1.5 pl-2 pr-3 dark:bg-slate-800 dark:highlight-white/5 dark:hover:bg-slate-700">
-                <x-icon name="magnifying-glass" class="w-5 h-5 mr-4" />Quick search...
+                    class="hidden w-full items-center rounded-md pr-3 pl-2 text-sm leading-6 text-slate-400 shadow-sm ring-1 ring-slate-300 py-1.5 hover:bg-slate-100 dark:highlight-white/5 dark:bg-slate-800 dark:ring-slate-800 lg:flex dark:hover:bg-slate-700">
+                <x-icon name="magnifying-glass" class="mr-4 h-5 w-5" />Quick search...
                 <div x-data="{ isWindows: /win/i.test(navigator.userAgent), isMac: /mac/i.test(navigator.userAgent) }" class="ml-auto pl-3 text-xs font-semibold">
                     <div x-show="isWindows">Ctrl K</div>
                     <div x-show="isMac" class="flex items-center">
@@ -16,6 +16,7 @@
                 </div>
             </button>
         </div>
+        <livewire:prefix-selector />
     </div>
     <ul role="list" class="space-y-9">
         <li>
