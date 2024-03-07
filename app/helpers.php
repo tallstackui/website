@@ -5,9 +5,7 @@ use Illuminate\Support\Facades\Cookie;
 if (! function_exists('apply_prefix')) {
     function apply_prefix(array $data): array
     {
-        $prefix = Cookie::get('prefix');
-
-        if ($prefix === null) {
+        if (($prefix = Cookie::get('prefix')) === null) {
             return $data;
         }
 

@@ -27,21 +27,18 @@
         <p>
             As you can see in the example above, all form components can be used in a form out of
             the Livewire context. If you notice that something is not working correctly, <b>we ask
-            that you help us <x-link href="https://github.com/tallstackui/tallstackui/issues/new/choose" blank underline :color="null">
+            that you help us <x-link :href="$issues" blank underline :color="null">
             by submitting a bug report.</x-link></b> The only requirement, as shown in the example above, is
             that the components receive the <x-block>name</x-block> attribute, including so that validation error messages
-            are displayed correctly. Specifically for the <x-block>select</x-block>, <x-block>pin</x-block> and <x-block>tag</x-block>
-            components, a "hidden" input will be added to the page with the name of the attribute passed to these components. Still talking
-            about the <x-block>select</x-block> component, it is expected that you can use it with all available options,
-            similar to how we use it via Livewire.
+            are displayed correctly.
         </p>
-        <p class="mt-6">
-            For cases where you want to use the <x-block>select.styled</x-block> component with the <x-block>multiple</x-block> option,
-            or <x-block>tag</x-block> component, then obtaining the value in the controller must do the <x-block>json_decode</x-block> of the value:
+        <p class="mt-2">
+            Some components, such as <x-block>select.styled, dates, tags</x-block> send an array to the backend,
+            in these cases you must use the <x-block>json_decode</x-block> function to access the items of the array.
         </p>
-        <p class="mt-4"><b>1)</b> Blade:</p>
+        <p class="mt-4"><b>1)</b> Preparing the Blade:</p>
         <x-code language="blade" :contents="$jsonDecodeBlade" disable-copy />
-        <p><b>2)</b> Controller:</p>
+        <p><b>2)</b> Using the <x-block>json_decode</x-block> to access the array of items:</p>
         <x-code :contents="$jsonDecodeController" disable-copy />
     </x-section>
 </x-layout>

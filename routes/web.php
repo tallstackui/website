@@ -8,7 +8,7 @@ Route::view('/', 'welcome', Example::Welcome->variables())->name('welcome');
 
 Route::redirect('/docs', '/docs/get-started');
 Route::redirect('/install', '/docs/installation');
-Route::redirect('/summer', '/docs/summer-release');
+Route::redirect('/summer-release', '/docs/summer-release');
 
 Route::prefix('/docs')
     ->name('documentation.')

@@ -31,7 +31,7 @@ $save = function () {
 
 <div class="ml-0.5">
     <x-modal id="prefix-modal"
-             :title="__('CONFIGURE PREFIX')"
+             :title="__('PREFIXING CODE EXAMPLES')"
              center
              blur
              persistent>

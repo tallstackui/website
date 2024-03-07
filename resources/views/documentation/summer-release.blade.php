@@ -1,10 +1,6 @@
-@php
-    foreach (apply_prefix($__data) as $key => $value) $$key = $value;
-@endphp
-
 <x-layout torchlight>
     <x-slot:title>
-        The Summer Release 🏖
+        The Summer Release 🏖 (v1.20)
     </x-slot:title>
     <p class="mt-4 text-gray-600 dark:text-dark-400">
         After more than 30 days of work, <b>we present the Summer Release!</b>
