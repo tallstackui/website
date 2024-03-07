@@ -1,6 +1,7 @@
 @php
     $now = now();
     $current = $now->format('Y-m-d');
+    foreach (apply_prefix($__data) as $key => $value) $$key = $value;
 @endphp
 
 <x-layout>

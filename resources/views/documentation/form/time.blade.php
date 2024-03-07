@@ -1,4 +1,7 @@
-@php($current = now()->format('h:i A'))
+@php
+    $current = now()->format('h:i A');
+    foreach (apply_prefix($__data) as $key => $value) $$key = $value;
+@endphp
 
 <x-layout>
     <x-slot:title>
