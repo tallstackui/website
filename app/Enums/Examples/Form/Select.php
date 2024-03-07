@@ -152,6 +152,10 @@ class Select
                         'method' => 'get',
                         'params' => ['library' => 'TallStackUi'],
                      ]" select="label:name|value:id" />
+
+    <!-- Secret trick: "params" is updated when you make changes. 
+    This means that if you define a variable and make any changes 
+    to that variable, the next request will send the updated "params".-->
     HTML;
 
     public const ELOQUENT = <<<'HTML'

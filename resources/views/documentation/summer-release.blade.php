@@ -60,13 +60,13 @@
                 Support for three icon libraries 🎨
             </li>
             <li class="marker:font-bold">
-                Command to set up <a href="{{ route('documentation.installation').'#component-prefix' }}">component prefixes</a> ⌨️
+                Command to set up <a href="{{ route('documentation.installation').'#component-prefix' }}" class="underline">component prefixes</a> ⌨️
             </li>
         </ul>
     </x-section>
     <x-section title="Setup Prefix Command" class="mt-4" disable-copy>
         <x-preview language="blade">
-            <p class="mb-4"><u>Starting from version 1.20,</u> TallStackUI introduce a command to easily setup prefix for the components:</p>
+            <p class="mb-4"><u>Starting from version 1.20,</u> TallStackUI introduce a command to easily setup <a href="{{ route('documentation.installation').'#component-prefix' }}" class="underline">prefix for the components:</a></p>
             <x-code language="shell" :contents="$setupPrefix" />
         </x-preview>
     </x-section>
