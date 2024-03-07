@@ -59,7 +59,7 @@ $save = function () {
                 </div>
                 <div class="col-span-1">
                     <x-input label="E-mail *"
-                             hint="Use your g-mail"
+                             hint="Use your Gmail"
                              suffix="@gmail.com"
                              wire:model="email" />
                 </div>

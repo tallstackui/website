@@ -1,6 +1,6 @@
 <x-layout torchlight>
     <x-slot:title>
-        The Summer Release 🏖 (v1.20)
+        The Summer Release 🏖
     </x-slot:title>
     <p class="mt-4 text-gray-600 dark:text-dark-400">
         After more than 30 days of work, <b>we present the Summer Release!</b>

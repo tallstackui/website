@@ -285,6 +285,25 @@
                                     </dd>
                                 </div>
                             </dl>
+                            <h2 class="pt-4 flex justify-center text-2xl font-medium text-gray-700 dark:text-gray-300">Date Picker 👇🏻</h2>
+                            <dl class="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-1">
+                                <div class="flex flex-col">
+                                    <dd class="mt-4 text-base leading-7 text-gray-300 space-y-2">
+                                        <x-date label="Normal" :value="now()->format('Y-m-d')" format="DD, MMMM, YYYY" />
+                                        <x-date label="Range" range :value="[now()->format('Y-m-d'), now()->addWeek()->format('Y-m-d')]" format="DD, MMMM, YYYY" />
+                                        <x-date label="Multiple" multiple :value="[now()->format('Y-m-d'), now()->addDay()->format('Y-m-d')]" format="DD, MMMM, YYYY" />
+                                    </dd>
+                                </div>
+                            </dl>
+                            <h2 class="pt-4 flex justify-center text-2xl font-medium text-gray-700 dark:text-gray-300">Time Picker 👇🏻</h2>
+                            <dl class="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-1">
+                                <div class="flex flex-col">
+                                    <dd class="mt-4 text-base leading-7 text-gray-300 space-y-2">
+                                        <x-time label="Format 12 Hours" :value="now()->format('h:i')" helper />
+                                        <x-time label="Format 24 Hours" :value="now()->format('h:i')" format="24" helper />
+                                    </dd>
+                                </div>
+                            </dl>
                             <h2 class="pt-4 flex justify-center text-2xl font-medium text-gray-700 dark:text-gray-300">Select Through API 👇🏻</h2>
                             <dl class="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-1">
                                 <div class="flex flex-col">
