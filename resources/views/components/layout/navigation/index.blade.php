@@ -16,7 +16,9 @@
                 </div>
             </button>
         </div>
-        <livewire:prefix-selector />
+        <x-button color="pink" class="w-full uppercase" x-on:click="$modalOpen('prefix-modal')" xs>
+            {{ __('Set Prefix') }}
+        </x-button>
     </div>
     <ul role="list" class="space-y-9">
         <li>
