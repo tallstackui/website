@@ -290,9 +290,9 @@
                                 <div class="flex flex-col">
                                     <dd class="mt-4 text-base leading-7 text-gray-300 space-y-2">
                                         @php($now = now()->format('Y-m-d'))
-                                        <x-date label="Normal" name="normal" :value="$now" format="DD, MMMM, YYYY" />
-                                        <x-date label="Range" range name="range" :value="[$now, now()->addWeek()->format('Y-m-d')]" format="DD, MMMM, YYYY" />
-                                        <x-date label="Multiple" multiple name="multiple" :value="[$now, now()->addDay()->format('Y-m-d')]" format="DD, MMMM, YYYY" />
+                                        <x-date label="Normal" name="normal" :value="$now" format="MMMM, DD, YYYY" />
+                                        <x-date label="Range" range name="range" :value="[$now, now()->addWeek()->format('Y-m-d')]" format="MMMM, DD, YYYY" />
+                                        <x-date label="Multiple" multiple name="multiple" :value="[$now, now()->addDay()->format('Y-m-d')]" format="MMMM, DD, YYYY" />
                                     </dd>
                                 </div>
                             </dl>

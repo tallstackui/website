@@ -19,11 +19,14 @@ class Date
     HTML;
 
     public const CREATE_FROM_FORMAT = <<<'HTML'
+    // Your current date
     $date = '20/02/2024'; // 20/02/2024
     
+    // Formatting
     $date = now()->createFromFormat('d/m/Y', $date)->format('Y-m-d');
     
-    echo $date; // 2024-02-20
+    // Same date, but now in the correct format
+    $date; // 2024-02-20
     HTML;
 
     public const HELPERS = <<<'HTML'

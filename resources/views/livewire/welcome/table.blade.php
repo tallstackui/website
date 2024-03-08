@@ -40,7 +40,7 @@ new class extends Component {
         $user = explode(' ', $user)[0];
 
         $this->toast()
-            ->error("Naaah!", "{$user} can't leave Laravel team! 😝")
+            ->error("Naaah!", "{$user} can't leave the Laravel team! 😝")
             ->send();
     }
 }; ?>
@@ -51,8 +51,15 @@ new class extends Component {
              :$sort
              filter
              paginate
+             loading
              :quantity="[2,5,7]"
              id="users">
+        @interact('column_name', $user)
+            <div class="flex items-center gap-2">
+                <img src="https://unavatar.io/github/{{  $user->username }}" alt="{{ $user->name }}" class="w-8 h-8 rounded-full"/>
+                {{ $user->name }}
+            </div>
+        @endinteract
         @interact('column_action', $user)
         <x-button.circle color="red"
                          icon="trash"

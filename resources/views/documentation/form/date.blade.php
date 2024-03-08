@@ -43,9 +43,9 @@
             </ul>
         </x-warning>
         <p class="mt-2">
-            Regardless of the format of your date, to send it to the component you
-            must follow the pattern <x-block>YYYY-MM-DD</x-block>. Therefore, if your date is different
-            from <x-block>YYYY-MM-DD</x-block>, the correct thing to do is to use Carbon's <x-block>createFromFormat</x-block>.
+            Regardless of the format of the date, to send the date to the component you
+            must follow the pattern <x-block>YYYY-MM-DD</x-block>. If the date are using a format different
+            than <x-block>YYYY-MM-DD</x-block>, the correct thing to do is to use Carbon's <x-block>createFromFormat</x-block>.
             Let's take a look at an example considering the Brazilian date format:
         </p>
         <x-code :contents="$createFromFormat" />
