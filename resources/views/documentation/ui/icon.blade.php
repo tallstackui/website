@@ -19,9 +19,9 @@
             <a href="{{ route('documentation.configuration') }}" class="underline">configuration file.</a>
         </p>
         <div class="mt-4">
-            <p>This is the <b class="underline">old icon configuration</b> in the configuration file:</p>
+            <p>This is the <b class="underline">old icon configuration</b> in the configuration file <b>before v1.20:</b></p>
             <x-code :contents="$oldConfiguration" disable-copy />
-            <p>This is the <b class="underline">new icon configuration</b> for the configuration file:</p>
+            <p>This is the <b class="underline">new icon configuration</b> for the configuration file <b>after v1.20:</b></p>
             <x-code :contents="$newConfiguration" />
             <x-warning class="mt-2">
                 <b class="underline">If you have been using TallStackUI since before version 1.20</b>, you must update
