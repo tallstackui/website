@@ -5630,12 +5630,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/tallstackui/tallstackui.git",
-                "reference": "0d2dccac9139e20994ae493909c64ba1032dcaaa"
+                "reference": "6ee8a7bab9d15e5564b6f846d0a71d2f0d55062e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tallstackui/tallstackui/zipball/0d2dccac9139e20994ae493909c64ba1032dcaaa",
-                "reference": "0d2dccac9139e20994ae493909c64ba1032dcaaa",
+                "url": "https://api.github.com/repos/tallstackui/tallstackui/zipball/6ee8a7bab9d15e5564b6f846d0a71d2f0d55062e",
+                "reference": "6ee8a7bab9d15e5564b6f846d0a71d2f0d55062e",
                 "shasum": ""
             },
             "require": {
@@ -5688,7 +5688,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-03-07T17:29:32+00:00"
+            "time": "2024-03-08T01:30:31+00:00"
         },
         {
             "name": "tijsverkoyen/css-to-inline-styles",
