@@ -60,7 +60,7 @@
                 Support for three icon libraries 🎨
             </li>
             <li class="marker:font-bold">
-                Command to set up <a href="{{ route('documentation.installation').'#component-prefix' }}" class="underline">component prefixes</a> ⌨️
+                Artisan command to set up component prefixes ⌨️
             </li>
         </ul>
     </x-section>
