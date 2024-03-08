@@ -35,11 +35,11 @@ $save = function () {
              center
              blur
              persistent>
-        <p class="mb-2">
+        <p class="mb-4">
             The documentation code examples are displayed without the <a href="{{ route('documentation.installation').'#' }}" class="underline">component prefix.</a>
-            In this form, you can configure the prefix you use so that all code examples
-            are displayed using the prefix, which makes it easier for you to copy and paste
-            the code without having to worry about manually defining the prefix in the code.
+            In this form, you can set the prefix you use in your projects. All code examples
+            will be displayed using the prefix, which makes it easier for you to copy and paste
+            the code examples.
         </p>
         <form id="prefix" wire:submit="save">
             <x-input label="Prefix"
