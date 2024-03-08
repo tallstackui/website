@@ -289,9 +289,10 @@
                             <dl class="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-1">
                                 <div class="flex flex-col">
                                     <dd class="mt-4 text-base leading-7 text-gray-300 space-y-2">
-                                        <x-date label="Normal" name="normal" :value="now()->subMonth()->format('Y-m-d')" format="DD, MMMM, YYYY" />
-                                        <x-date label="Range" range name="range" :value="[now()->format('Y-m-d'), now()->addWeek()->format('Y-m-d')]" format="DD, MMMM, YYYY" />
-                                        <x-date label="Multiple" multiple name="multiple" :value="[now()->format('Y-m-d'), now()->addDay()->format('Y-m-d')]" format="DD, MMMM, YYYY" />
+                                        @php($now = now()->format('Y-m-d'))
+                                        <x-date label="Normal" name="normal" :value="$now" format="DD, MMMM, YYYY" />
+                                        <x-date label="Range" range name="range" :value="[$now, now()->addWeek()->format('Y-m-d')]" format="DD, MMMM, YYYY" />
+                                        <x-date label="Multiple" multiple name="multiple" :value="[$now, now()->addDay()->format('Y-m-d')]" format="DD, MMMM, YYYY" />
                                     </dd>
                                 </div>
                             </dl>
