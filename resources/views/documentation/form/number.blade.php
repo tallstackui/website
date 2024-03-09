@@ -35,6 +35,11 @@
             <x-number centralized />
         </x-preview>
     </x-section>
+    <x-section title="Selectable" description="An option to do not allow the interaction with the input.">
+        <x-preview language="blade" :contents="$selectable">
+            <x-number selectable />
+        </x-preview>
+    </x-section>
     <x-section title="Delay Control" description="An option to control the velocity to increase/decrease when pressing buttons">
         <x-preview language="blade" :contents="$delay">
             <x-number delay="1" min="1" max="10" />

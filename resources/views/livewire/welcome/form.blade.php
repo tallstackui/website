@@ -69,6 +69,7 @@ $save = function () {
                              icon="user"
                              delay="1"
                              centralized
+                             selectable
                              wire:model="age" />
                 </div>
                 <div class="col-span-1">
