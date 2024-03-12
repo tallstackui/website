@@ -67,7 +67,7 @@ new class extends Component {
                 <p class="text-base font-medium">Example:</p>
                 <x-code :contents="$personalization" personalization unpadding/>
             </div>
-            <p class="text-sm underline pb-4">The soft personalization should be done in <x-block>boot</x-block> method of service providers.</p>
+            <p class="pb-4 text-sm underline">The soft personalization should be done in <x-block>boot</x-block> method of service providers.</p>
         @endif
         @if ($blocks)
             <div class="px-2 sm:px-0">
@@ -85,26 +85,13 @@ new class extends Component {
                 </div>
                 <div class="mt-4 space-y-2">
                     @if ($original)
-                        @php($hash = md5($original['block']))
-                        <div x-data="clipboard()" class="flex items-center gap-1">
-                            <span>Name:</span>
-                            <div class="block dark:hidden">
-                                <x-badge color="pink" sm outline>
-                                    {{ $original['block'] }}
-                                </x-badge>
-                            </div>
-                            <div class="hidden dark:block">
-                                <x-badge color="white" sm outline>
-                                    {{ $original['block'] }}
-                                </x-badge>
-                            </div>
-                            <button data-ref="{{ $hash }}" x-on:click="raw('{{ $original['block'] }}', '{{ $hash }}')">
-                                <x-icon name="document" class="h-5 w-5 text-gray-500 dark:text-white" x-show="!notification" />
-                                <x-icon name="document-check" class="h-5 w-5 text-pink-500" x-show="notification" />
-                            </button>
+                        <div>
+                            <x-clipboard :id="uniqid()"
+                                         label="Name"
+                                         :text="$original['block']" />
                         </div>
-                        <p>Original Content:</p>
-                        <div class="text-[#C3E88D] overflow-auto custom-scrollbar rounded-lg bg-[#292D3E] p-4 my-2">
+                        <p class="block text-sm font-semibold text-gray-600 dark:text-dark-400">Original Content:</p>
+                        <div class="text-[#C3E88D] overflow-auto custom-scrollbar rounded-lg bg-[#292D3E] p-4">
                             {{ $original['class'] }}
                         </div>
                     @endif

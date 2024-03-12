@@ -1,3 +1,7 @@
+@php
+    foreach (apply_prefix($__data) as $key => $value) $$key = $value;
+@endphp
+
 <x-layout>
     <x-slot:title>
         Select
@@ -154,6 +158,10 @@
         the difference is that instead of defining the options using the <x-block>options</x-block>
         parameter, you must specify the URL from which the results will come, together
         with the <x-block>select</x-block> parameter, which is mandatory for this mode.
+        <x-warning class="mt-4">
+            For identification purposes, a header <b>X-Tallstack-Ui</b> is sent in the request.
+
+        </x-warning>
     </x-section>
     <x-section title="Basic Usage" anchor="styled-api-basic-usage" description="Customized styled select component to interact with APIs.">
         <x-preview language="blade" :contents="$styledApi">
@@ -171,15 +179,14 @@
                            ],
                        ]" select="label:name|value:id" />
         </x-preview>
-    </x-section>
-    <x-section title="Filtering Using Eloquent" anchor="styled-api-filtering-using-eloquent" disable-copy>
-        <p>
-            If you are using the select component to filter records in the database
-            through Eloquent, this code may be useful. This is a snippet code that can be applied
-            as a route in the <x-block>routes/api.php</x-block> file.
+        <p class="mt-4">
+            The <x-block>params</x-block> are updated when you make changes. This means that if you are using this
+            component within the Livewire components and create a variable to be used in <x-block>params</x-block>, when
+            making any changes to this variable and Livewire hydrate the page, the next time the select
+            is opened to make a new request, <x-block>params</x-block> will be updated in the request. This is useful
+            to allow you to use the <x-block>params</x-block> to interact dynamically with the query of the request.
         </p>
     </x-section>
-    <x-code :contents="$eloquent" />
     <x-slot:navigation>
         <x-slot:back>
             <x-layout.footer-navigation :href="route('documentation.ui.modal')" text="Modal" back />

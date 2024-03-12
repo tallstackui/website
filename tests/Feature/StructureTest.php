@@ -24,6 +24,7 @@ test('can access all routes', function (string $route) {
     fn () => route('documentation.troubleshooting'),
     fn () => route('documentation.updates'),
     fn () => route('documentation.faq'),
+    fn () => route('documentation.summer-release'),
     //
     fn () => route('documentation.form.input'),
     fn () => route('documentation.form.password'),
@@ -37,6 +38,9 @@ test('can access all routes', function (string $route) {
     fn () => route('documentation.form.range'),
     fn () => route('documentation.form.pin'),
     fn () => route('documentation.form.upload'),
+    fn () => route('documentation.form.date'),
+    fn () => route('documentation.form.time'),
+    fn () => route('documentation.form.select'),
     //
     fn () => route('documentation.ui.alert'),
     fn () => route('documentation.ui.avatar'),
@@ -52,10 +56,12 @@ test('can access all routes', function (string $route) {
     fn () => route('documentation.ui.link'),
     fn () => route('documentation.ui.loading'),
     fn () => route('documentation.ui.reaction'),
-    fn () => route('documentation.ui.select'),
     fn () => route('documentation.ui.slide'),
+    fn () => route('documentation.ui.stats'),
+    fn () => route('documentation.ui.step'),
     fn () => route('documentation.ui.tab'),
     fn () => route('documentation.ui.table'),
+    fn () => route('documentation.ui.theme-switch'),
     fn () => route('documentation.ui.tooltip'),
     //
     fn () => route('documentation.interaction.dialog'),
@@ -63,6 +69,7 @@ test('can access all routes', function (string $route) {
     //
     fn () => route('documentation.internal.error'),
     fn () => route('documentation.internal.hint'),
+    fn () => route('documentation.internal.floating'),
     fn () => route('documentation.internal.label'),
     fn () => route('documentation.internal.wrapper'),
     //

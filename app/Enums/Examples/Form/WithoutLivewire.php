@@ -5,7 +5,7 @@ namespace App\Enums\Examples\Form;
 class WithoutLivewire
 {
     public const EXAMPLE = <<<'HTML'
-    <form action="{{ route('user.register') }}" method="post">
+    <form action="{{ route('users.profile') }}" method="post">
         @csrf
 
         <x-input label="Name" name="input" :value="old('name')" />
@@ -41,6 +41,10 @@ class WithoutLivewire
                          :value="old('search_api')" />
 
         <x-tag label="Frameworks" name="frameworks" :value="['Laravel', 'Symfony', 'CodeIgniter']" />
+        
+        <x-date label="DoB" name="dob" value="2024-02-27" />
+        
+        <x-time label="Preferred Hour" name="hour" value="02:30 PM" />
 
         <x-button type="submit">
             Submit
@@ -50,7 +54,7 @@ class WithoutLivewire
     HTML;
 
     public const JSON_DECODE_BLADE = <<<'HTML'
-    <form action="{{ route('user.register') }}" method="post">
+    <form action="{{ route('users.profile') }}" method="post">
         @csrf
 
         <x-tag label="Frameworks"
@@ -63,6 +67,11 @@ class WithoutLivewire
                          searchable
                          multiple
                          :value="old('select_options')" />
+                         
+         <x-date label="Vacation Dates"
+                 name="vacation" 
+                 range
+                 :value="['2024-02-26', '2024-02-27']" />
 
         <x-button type="submit">
             Submit
@@ -80,11 +89,13 @@ class WithoutLivewire
     {
         // ...
 
-        public function create(Request $request)
+        public function store(Request $request)
         {
             $selectOptions = json_decode($request->get('select_options')); // [tl! highlight]
 
             $tagFrameworks = json_decode($request->get('frameworks')); // [tl! highlight]
+            
+            $vacationDates = json_decode($request->get('vacation')); // [tl! highlight]
 
             // ...
         }

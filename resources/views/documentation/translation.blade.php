@@ -1,3 +1,7 @@
+@php
+    foreach (apply_prefix($__data) as $key => $value) $$key = $value;
+@endphp
+
 <x-layout>
     <x-slot:title>
         Translations
@@ -11,8 +15,6 @@
         </p>
         <p class="mt-4">1. Run the following command to publish the translations file:</p>
         <x-code language="shell" :contents="$command"/>
-    </x-section>
-    <x-section title="Files" disable-copy>
         <p>This command will publish the TallStackUI translation files for the root path of your application.</p>
     </x-section>
     <x-section title="Missing Content" disable-copy>

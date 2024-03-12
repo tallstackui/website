@@ -1,3 +1,7 @@
+@php
+    foreach (apply_prefix($__data) as $key => $value) $$key = $value;
+@endphp
+
 <x-layout>
     <x-slot:title>
         Tooltip
@@ -87,37 +91,8 @@
             </div>
         </x-preview>
     </x-section>
-    <x-section title="Outline Variations">
-        <x-preview language="blade" :contents="$outlines">
-            <div class="gap-2 space-y-2">
-                <x-tooltip text="primary" outline />
-                <x-tooltip text="secondary" color="secondary" outline />
-                <x-tooltip text="slate" color="slate" outline />
-                <x-tooltip text="gray" color="gray" outline />
-                <x-tooltip text="zinc" color="zinc" outline />
-                <x-tooltip text="neutral" color="neutral" outline />
-                <x-tooltip text="stone" color="stone" outline />
-                <x-tooltip text="red" color="red" outline />
-                <x-tooltip text="orange" color="orange" outline />
-                <x-tooltip text="amber" color="amber" outline />
-                <x-tooltip text="yellow" color="yellow" outline />
-                <x-tooltip text="lime" color="lime" outline />
-                <x-tooltip text="green" color="green" outline />
-                <x-tooltip text="emerald" color="emerald" outline />
-                <x-tooltip text="teal" color="teal" outline />
-                <x-tooltip text="cyan" color="cyan" outline />
-                <x-tooltip text="sky" color="sky" outline />
-                <x-tooltip text="blue" color="blue" outline />
-                <x-tooltip text="indigo" color="indigo" outline />
-                <x-tooltip text="violet" color="violet" outline />
-                <x-tooltip text="purple" color="purple" outline />
-                <x-tooltip text="fuchsia" color="fuchsia" outline />
-                <x-tooltip text="pink" color="pink" outline />
-                <x-tooltip text="rose" color="rose" outline />
-                <x-tooltip text="black" color="black" outline />
-                <x-tooltip text="white" color="white" outline />
-            </div>
-        </x-preview>
+    <x-section title="Variations" disable-copy>
+        <p>The concept of variation follows the same patterns as <a href="{{ route('documentation.ui.icon').'#variations' }}" class="underline">icon variations.</a></p>
     </x-section>
     <x-slot:navigation>
         <x-slot:back>

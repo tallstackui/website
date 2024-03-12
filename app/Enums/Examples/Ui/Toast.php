@@ -141,7 +141,6 @@ class Toast
     HTML;
 
     public const EVENTS = <<<'HTML'
-    <!-- The listeners receive the toast object through $event.detail -->
     <div x-on:toast:accepted.window="alert($event.detail.description)"
          x-on:toast:rejected.window="alert($event.detail.description)"
          x-on:toast:timeout.window="alert($event.detail.description)">

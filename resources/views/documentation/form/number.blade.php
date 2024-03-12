@@ -1,3 +1,7 @@
+@php
+    foreach (apply_prefix($__data) as $key => $value) $$key = $value;
+@endphp
+
 <x-layout>
     <x-slot:title>
         Form Number
@@ -29,6 +33,11 @@
     <x-section title="Centralized">
         <x-preview language="blade" :contents="$centralized">
             <x-number centralized />
+        </x-preview>
+    </x-section>
+    <x-section title="Selectable" description="An option to do not allow the interaction with the input.">
+        <x-preview language="blade" :contents="$selectable">
+            <x-number selectable />
         </x-preview>
     </x-section>
     <x-section title="Delay Control" description="An option to control the velocity to increase/decrease when pressing buttons">

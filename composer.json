@@ -13,7 +13,7 @@
         "laravel/tinker": "^2.8",
         "livewire/livewire": "^3.0",
         "livewire/volt": "^1.0",
-        "tallstackui/tallstackui": "^1.13",
+        "tallstackui/tallstackui": "^1.20",
         "torchlight/torchlight-laravel": "^0.5.14"
     },
     "require-dev": {
@@ -33,7 +33,10 @@
             "App\\": "app/",
             "Database\\Factories\\": "database/factories/",
             "Database\\Seeders\\": "database/seeders/"
-        }
+        },
+        "files": [
+            "app/helpers.php"
+        ]
     },
     "autoload-dev": {
         "psr-4": {

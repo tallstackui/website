@@ -21,6 +21,10 @@ class Number
     <x-number centralized />
     HTML;
 
+    public const SELECTABLE = <<<'HTML'
+    <x-number selectable />
+    HTML;
+
     public const DELAY = <<<'HTML'
     <x-number delay="1" min="1" max="10" />
     HTML;

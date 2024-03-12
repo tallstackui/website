@@ -74,6 +74,10 @@ class Installation
     <x-ts-input /> {{-- [tl! add] --}}
     HTML;
 
+    public const PREFIX_COMMAND = <<<'HTML'
+    php artisan tallstackui:setup-prefix
+    HTML;
+
     public const ALPINE = <<<'HTML'
     <html>
         <head>

@@ -1,3 +1,7 @@
+@php
+    foreach (apply_prefix($__data) as $key => $value) $$key = $value;
+@endphp
+
 <x-layout>
     <x-slot:title>
         Configurations
@@ -8,7 +12,7 @@
     <x-section title="Configuration File" disable-copy>
         <p>
             TallStackUI offers a configuration file that allows you to control several things, in addition to
-            listing all available components for possible personalizations, something we will talk about later.
+            listing all available components for possible personalization, something we will talk about later.
             Use this file to configure some things about certain components.
         </p>
         <p class="mt-4">1. Run the following command to publish the configuration file:</p>

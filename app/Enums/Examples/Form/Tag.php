@@ -24,9 +24,7 @@ class Tag
     HTML;
 
     public const EVENTS = <<<'HTML'
-    <!-- 1. The listeners receive the content through $event.detail -->
-
-    <!-- 2. For the erase event the correct index is
+    <!-- For the erase event the correct index is
         $event.detail.tags instead of $event.detail.tag -->
 
     <x-tag ...

@@ -1,3 +1,5 @@
+<livewire:prefix-selector />
+
 <div class="relative z-40 lg:hidden" role="dialog" aria-modal="true" x-show="mobile" x-cloak>
     <div x-show="mobile"
          x-transition:enter="transition-opacity ease-linear duration-300"
@@ -42,9 +44,9 @@
     </div>
 </div>
 
+
 <div class="hidden lg:relative lg:block lg:flex-none">
     <div class="sticky top-[4.75rem] -ml-0.5 h-[calc(100vh-4.75rem)] w-64 overflow-y-auto soft-scrollbar overflow-x-hidden py-4 pl-0.5 pr-8 xl:w-72 xl:pr-16">
         <x-layout.navigation />
     </div>
 </div>
-

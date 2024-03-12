@@ -24,6 +24,17 @@ class Input
     public const PREFIX_SUFFIX = <<<'HTML'
     <x-input prefix="https://" label="Domain" />
     <x-input suffix="@gmail.com" label="E-mail" />
+
+    <!-- or -->
+
+    <x-input>
+        <x-slot:prefix>
+            Prefix
+        </x-slot:prefix>
+        <x-slot:suffix>
+            Suffix
+        </x-slot:suffix>
+    </x-input>
     HTML;
 
     public const INVALIDATE = <<<'HTML'

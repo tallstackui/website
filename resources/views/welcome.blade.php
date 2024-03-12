@@ -51,8 +51,7 @@
                             <x-svg.banner class="h-8 w-10" />
                         </div>
                         <div class="hidden gap-10 lg:flex lg:flex-1 lg:justify-end">
-                            <x-icon x-on:click="darkTheme = false" name="sun" class="h-6 w-6 cursor-pointer text-gray-500" x-show="darkTheme" />
-                            <x-icon x-on:click="darkTheme = true" name="moon" class="h-6 w-6 cursor-pointer text-gray-500" x-show="!darkTheme" />
+                            <x-theme-switch xl only-icons />
                         </div>
                     </nav>
                 </header>
@@ -282,6 +281,26 @@
                                         <x-clipboard label="Secret 🫢"
                                                      hint="Click to copy the secret content"
                                                      text="TallStackUI is the best TALL Stack UI library" secret />
+                                    </dd>
+                                </div>
+                            </dl>
+                            <h2 class="pt-4 flex justify-center text-2xl font-medium text-gray-700 dark:text-gray-300">Date Picker 👇🏻</h2>
+                            <dl class="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-1">
+                                <div class="flex flex-col">
+                                    <dd class="mt-4 text-base leading-7 text-gray-300 space-y-2">
+                                        @php($now = now()->format('Y-m-d'))
+                                        <x-date label="Normal" name="normal" :value="$now" format="MMMM, DD, YYYY" />
+                                        <x-date label="Range" range name="range" :value="[$now, now()->addWeek()->format('Y-m-d')]" format="MMMM, DD, YYYY" />
+                                        <x-date label="Multiple" multiple name="multiple" :value="[$now, now()->addDay()->format('Y-m-d')]" format="MMMM, DD, YYYY" />
+                                    </dd>
+                                </div>
+                            </dl>
+                            <h2 class="pt-4 flex justify-center text-2xl font-medium text-gray-700 dark:text-gray-300">Time Picker 👇🏻</h2>
+                            <dl class="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-1">
+                                <div class="flex flex-col">
+                                    <dd class="mt-4 text-base leading-7 text-gray-300 space-y-2">
+                                        <x-time label="Format 12 Hours" :value="now()->format('h:i A')" helper />
+                                        <x-time label="Format 24 Hours" :value="now()->format('h:i')" format="24" helper />
                                     </dd>
                                 </div>
                             </dl>

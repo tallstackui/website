@@ -1,4 +1,7 @@
-@php($defaults = \TallStackUi\View\Components\Form\Password::defaults())
+@php
+    foreach (apply_prefix($__data) as $key => $value) $$key = $value;
+    $defaults = \TallStackUi\View\Components\Form\Password::defaults();
+@endphp
 
 <x-layout>
     <x-slot:title>

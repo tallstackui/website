@@ -42,9 +42,10 @@
         "1": "Label & Hint",
         "2": "Min & Max Control",
         "3": "Centralized",
-        "4": "Delay Control",
-        "5": "Invalidate",
-        "6": "Livewire Bind Concern"
+        "4": "Selectable",
+        "5": "Delay Control",
+        "6": "Invalidate",
+        "7": "Livewire Bind Concern"
     },
     "docs.form.textarea": {
         "0": "Basic Usage",
@@ -126,6 +127,30 @@
                 "2": "Demonstration"
             }
         }
+    },
+    "docs.form.date": {
+        "1": "Basic Usage",
+        "2": "Label & Hint",
+        "3": "Available Formats",
+        "4": "Helpers",
+        "5": "Min & Max Dates",
+        "6": "Min & Max Years",
+        "7": "Disable Dates",
+        "8": "Range Mode",
+        "9": "Multiple Mode",
+        "10": "Events",
+        "11": "Invalidate"
+    },
+    "docs.form.time": {
+        "1": "Basic Usage",
+        "2": "Label & Hint",
+        "3": "Available Formats",
+        "4": "Min & Max Hours and Minutes",
+        "5": "Helper",
+        "6": "Step Hour & Minute",
+        "7": "Footer Slot",
+        "10": "Events",
+        "11": "Invalidate"
     },
     "docs.ui.alert": {
         "0": "Basic Usage",
@@ -234,10 +259,11 @@
     "docs.ui.dropdown": {
         "0": "Basic Usage",
         "1": "Available Positions",
-        "2": "Icon Slot",
-        "3": "Icon Slot Static",
-        "4": "Header Slot",
-        "5": "Action Slot"
+        "2": "Links",
+        "3": "Icon",
+        "4": "Static Icon",
+        "5": "Header Slot",
+        "6": "Action Slot"
     },
     "docs.ui.error": {
         "0": "Basic Usage",
@@ -249,9 +275,12 @@
         "6": "Events"
     },
     "docs.ui.icon": {
-        "0": "Basic Usage",
-        "1": "Outline Variations",
-        "2": "Left & Right Slots"
+        "0": "Concept",
+        "1": "Supported Icon Libraries",
+        "2": "Setup Icons",
+        "3": "Basic Usage",
+        "4": "Variations",
+        "5": "Left & Right Slots"
     },
     "docs.ui.modal": {
         "0": "Basic Usage",
@@ -296,7 +325,7 @@
         "7": "Using Less Icons",
         "8": "Slot"
     },
-    "docs.ui.select": {
+    "docs.form.select": {
         "Native": {
             "prefix": true,
             "contents": {
@@ -329,8 +358,7 @@
             "contents": {
                 "0": "Concept",
                 "1": "Basic Usage",
-                "2": "Advanced Usage",
-                "3": "Filtering Using Eloquent"
+                "2": "Advanced Usage"
             }
         }
     },
@@ -347,6 +375,29 @@
         "9": "AlpineJS Helper",
         "10": "Events",
         "11": "Configurations"
+    },
+    "docs.ui.stats": {
+        "0": "Basic Usage",
+        "1": "Title",
+        "2": "Link",
+        "3": "Icons",
+        "4": "Color Variations",
+        "5": "Indicators",
+        "6": "Animated Effect",
+        "7": "Number Format",
+        "8": "Slots"
+    },
+    "docs.ui.step": {
+        "0": "Basic Usage",
+        "1": "Title & Description",
+        "2": "Final Step",
+        "3": "Helpers",
+        "4": "Allow Navigation Previous",
+        "5": "Alternative Styles",
+        "6": "Finish Slot",
+        "7": "Wireable",
+        "8": "Live Wireable",
+        "9": "Events"
     },
     "docs.ui.tab": {
         "0": "Basic Usage",
@@ -367,6 +418,12 @@
         "9": "Slots",
         "10": "Interacting With Data"
     },
+    "docs.ui.theme-switch": {
+        "0": "Concept",
+        "1": "Basic Usage",
+        "2": "Sizes",
+        "3": "Only Icons"
+    },
     "docs.ui.tooltip": {
         "0": "Basic Usage",
         "1": "Available Positions",
@@ -374,7 +431,7 @@
         "3": "Size Variations",
         "4": "HTML Content",
         "5": "Color Variations",
-        "6": "Outline Variations"
+        "6": "Variations"
     },
     "docs.interaction.dialog": {
         "0": "Configuration",
@@ -402,13 +459,12 @@
     },
     "docs.translation": {
         "0": "Translation Files",
-        "1": "Files",
-        "2": "Missing Content"
+        "1": "Missing Content"
     },
     "docs.without-livewire": {
         "0": "Concept",
         "1": "Example",
-        "2": "Concerns"
+        "2": "Parse Request Value"
     },
     "docs.personalization.soft": {
         "0": "Concept",

@@ -8,6 +8,7 @@ Route::view('/', 'welcome', Example::Welcome->variables())->name('welcome');
 
 Route::redirect('/docs', '/docs/get-started');
 Route::redirect('/install', '/docs/installation');
+Route::redirect('/summer-release', '/docs/summer-release');
 
 Route::prefix('/docs')
     ->name('documentation.')
@@ -17,6 +18,7 @@ Route::prefix('/docs')
         Route::view('/troubleshooting', 'documentation.troubleshooting', Example::Troubleshooting->variables())->name('troubleshooting');
         Route::view('/updates', 'documentation.updates', Example::Updates->variables())->name('updates');
         Route::view('/faq', 'documentation.faq', Example::Updates->variables())->name('faq');
+        Route::view('/summer-release', 'documentation.summer-release', Example::SummerRelease->variables())->name('summer-release');
 
         Route::prefix('/form')
             ->name('form.')
@@ -33,6 +35,9 @@ Route::prefix('/docs')
                 Route::view('/range', 'documentation.form.range', Example::Range->variables())->name('range');
                 Route::view('/pin', 'documentation.form.pin', Example::Pin->variables())->name('pin');
                 Route::view('/upload', 'documentation.form.upload', Example::Upload->variables())->name('upload');
+                Route::view('/select', 'documentation.form.select', Example::Select->variables())->name('select');
+                Route::view('/date', 'documentation.form.date', Example::Date->variables())->name('date');
+                Route::view('/time', 'documentation.form.time', Example::Time->variables())->name('time');
             });
 
         Route::prefix('/ui')
@@ -57,10 +62,12 @@ Route::prefix('/docs')
                 Route::view('/link', 'documentation.ui.link', Example::Link->variables())->name('link');
                 Route::view('/loading', 'documentation.ui.loading', Example::Loading->variables())->name('loading');
                 Route::view('/reaction', 'documentation.ui.reaction', Example::Reaction->variables())->name('reaction');
-                Route::view('/select', 'documentation.ui.select', Example::Select->variables())->name('select');
                 Route::view('/slide', 'documentation.ui.slide', Example::Slide->variables())->name('slide');
+                Route::view('/stats', 'documentation.ui.stats', Example::Stats->variables())->name('stats');
+                Route::view('/step', 'documentation.ui.step', Example::Step->variables())->name('step');
                 Route::view('/tab', 'documentation.ui.tab', Example::Tab->variables())->name('tab');
                 Route::view('/table', 'documentation.ui.table', Example::Table->variables())->name('table');
+                Route::view('/theme-switch', 'documentation.ui.theme-switch', Example::ThemeSwitch->variables())->name('theme-switch');
                 Route::view('/tooltip', 'documentation.ui.tooltip', Example::Tooltip->variables())->name('tooltip');
             });
 
@@ -79,6 +86,7 @@ Route::prefix('/docs')
                 Route::get('/hint', 'hint')->name('hint');
                 Route::get('/label', 'label')->name('label');
                 Route::get('/wrapper', 'wrapper')->name('wrapper');
+                Route::get('/floating', 'floating')->name('floating');
             });
 
         Route::view('/dark-theme', 'documentation.helpers.dark-theme', Example::DarkTheme->variables())->name('dark-theme');
