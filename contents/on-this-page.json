@@ -464,8 +464,7 @@
     "docs.without-livewire": {
         "0": "Concept",
         "1": "Example",
-        "2": "Concerns",
-        "3": "Parse Request Value"
+        "2": "Parse Request Value"
     },
     "docs.personalization.soft": {
         "0": "Concept",

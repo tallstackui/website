@@ -33,8 +33,7 @@ $save = function () {
     <x-modal id="prefix-modal"
              :title="__('PREFIXING CODE EXAMPLES')"
              center
-             blur
-             persistent>
+             blur>
         <p class="mb-4">
             The documentation code examples are displayed without the <a href="{{ route('documentation.installation').'#' }}" class="underline">component prefix.</a>
             In this form, you can set the prefix you use in your projects. All code examples

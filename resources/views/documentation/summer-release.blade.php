@@ -48,6 +48,9 @@
     <x-section title="Resume" disable-copy>
         <ul class="mt-2 ml-4 list-inside list-decimal">
             <li class="marker:font-bold">
+                Support for Livewire 11 🚀
+            </li>
+            <li class="marker:font-bold">
                 Uncountable improvements in the components 🔍
             </li>
             <li class="marker:font-bold">

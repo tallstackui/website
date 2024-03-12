@@ -37,26 +37,20 @@
             </ul>
             <p class="text-lg font-medium">Can't be used out of Livewire component ❌</p>
             <ul class="ml-2 list-inside list-decimal">
-                <li>Upload</li>
-                <li>Table</li>
-                <li>Reactions</li>
                 <li>Loading</li>
+                <li>Upload</li>
+                <li>Reactions</li>
+                <li>Table</li>
             </ul>
             <x-warning>
-                Of course, many other components can be used out of Livewire components, such as alert,
-                modal, dropdown, etc. These are components that do not contain any logic that depends on Livewire.
+                Many other components can be used out of Livewire components, such as alert,
+                modal, dropdown, etc. These are components that do not contain any logic that
+                depends on Livewire.
             </x-warning>
         </div>
     </x-section>
     <x-section title="Example" disable-copy>
         <x-code language="blade" :contents="$example" disable-copy />
-    </x-section>
-    <x-section title="Concerns" disable-copy>
-        <p>
-            As you can see in the example above, the only requirement is that the
-            components must receive the <x-block>name</x-block> attribute, including
-            so that validation error messages are displayed correctly.
-        </p>
     </x-section>
     <x-section title="Parse Request Value" disable-copy>
         <p class="mt-2">
