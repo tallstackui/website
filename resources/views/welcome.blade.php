@@ -51,8 +51,7 @@
                             <x-svg.banner class="h-8 w-10" />
                         </div>
                         <div class="hidden gap-10 lg:flex lg:flex-1 lg:justify-end">
-                            <x-icon x-on:click="darkTheme = false" name="sun" class="h-6 w-6 cursor-pointer text-gray-500" x-show="darkTheme" />
-                            <x-icon x-on:click="darkTheme = true" name="moon" class="h-6 w-6 cursor-pointer text-gray-500" x-show="!darkTheme" />
+                            <x-theme-switch xl only-icons />
                         </div>
                     </nav>
                 </header>
