@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "2530447a17491614a60df17b95fb194c",
+    "content-hash": "ac6c5ea6b820878599392a5933f54f8e",
     "packages": [
         {
             "name": "brick/math",
@@ -5626,33 +5626,32 @@
         },
         {
             "name": "tallstackui/tallstackui",
-            "version": "1.x-dev",
+            "version": "v1.20.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/tallstackui/tallstackui.git",
-                "reference": "0f61bb44f82090792ca08aabc1dff9fbf5a72c17"
+                "reference": "35b9e467b03c4a7edb453f67b407d9571a50b56e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tallstackui/tallstackui/zipball/0f61bb44f82090792ca08aabc1dff9fbf5a72c17",
-                "reference": "0f61bb44f82090792ca08aabc1dff9fbf5a72c17",
+                "url": "https://api.github.com/repos/tallstackui/tallstackui/zipball/35b9e467b03c4a7edb453f67b407d9571a50b56e",
+                "reference": "35b9e467b03c4a7edb453f67b407d9571a50b56e",
                 "shasum": ""
             },
             "require": {
-                "laravel/framework": "^10.0",
+                "laravel/framework": "^10.0|^11.0",
                 "livewire/livewire": "^3.0",
                 "php": "^8.1"
             },
             "require-dev": {
                 "larastan/larastan": "^2.7",
                 "laravel/pint": "^1.13",
-                "orchestra/testbench": "^8.12",
-                "orchestra/testbench-dusk": "^8.12",
+                "orchestra/testbench": "8.x-dev|9.x-dev",
+                "orchestra/testbench-dusk": "8.x-dev|9.x-dev",
                 "pestphp/pest": "^2.0",
                 "pestphp/pest-plugin-type-coverage": "^2.2",
-                "rector/rector": "^0.19.4"
+                "rector/rector": "^1.0"
             },
-            "default-branch": true,
             "type": "library",
             "extra": {
                 "laravel": {
@@ -5680,7 +5679,7 @@
             "description": "TallStackUI is a powerful suite of Blade components that elevate your workflow of Livewire applications.",
             "support": {
                 "issues": "https://github.com/tallstackui/tallstackui/issues",
-                "source": "https://github.com/tallstackui/tallstackui/tree/1.x"
+                "source": "https://github.com/tallstackui/tallstackui/tree/v1.20.0"
             },
             "funding": [
                 {
@@ -5688,7 +5687,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-03-12T04:55:46+00:00"
+            "time": "2024-03-12T16:33:13+00:00"
         },
         {
             "name": "tijsverkoyen/css-to-inline-styles",
@@ -10195,9 +10194,7 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "tallstackui/tallstackui": 20
-    },
+    "stability-flags": [],
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
