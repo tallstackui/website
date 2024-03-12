@@ -14,29 +14,54 @@
     </x-slot:description>
     <x-section title="Concept" disable-copy>
         TallStackUI is a component library that was designed for Livewire 3, but after various
-        requests from the entire user community, <u>starting from version 1.5.3</u> you can use form
-        components out of Livewire components. Before version 1.5.3 you could already use the
-        form components, but some did not work well and the error validation messages required
-        a certain "workaround" to work. Now all components can be used, including selects. See
-        the examples below to learn how to use it.
+        requests from the entire user community, <u>starting from version 1.5.3</u> <b>you can use form
+        components out of Livewire components.</b> Check below the list of all components that
+        can be used out of Livewire components, and also those that cannot.
+        <div class="mt-2 space-y-2">
+            <p class="text-lg font-medium">Can be used out of Livewire component ✅</p>
+            <ul class="ml-2 list-inside list-decimal">
+                <li>Checkbox</li>
+                <li>Color</li>
+                <li>Date</li>
+                <li>Input</li>
+                <li>Number</li>
+                <li>Password</li>
+                <li>Pin</li>
+                <li>Radio</li>
+                <li>Range</li>
+                <li>Tag</li>
+                <li>Time</li>
+                <li>Textarea</li>
+                <li>Toggle</li>
+                <li>Select</li>
+            </ul>
+            <p class="text-lg font-medium">Can't be used out of Livewire component ❌</p>
+            <ul class="ml-2 list-inside list-decimal">
+                <li>Upload</li>
+                <li>Table</li>
+                <li>Reactions</li>
+                <li>Loading</li>
+            </ul>
+            <x-warning>
+                Of course, many other components can be used out of Livewire components, such as alert,
+                modal, dropdown, etc. These are components that do not contain any logic that depends on Livewire.
+            </x-warning>
+        </div>
     </x-section>
     <x-section title="Example" disable-copy>
         <x-code language="blade" :contents="$example" disable-copy />
     </x-section>
     <x-section title="Concerns" disable-copy>
         <p>
-            As you can see in the example above, all form components can be used in a form out of
-            the Livewire context. If you notice that something is not working correctly, <b>we ask
-            that you help us <x-link :href="$issues" blank underline :color="null">
-            by submitting a bug report.</x-link></b> The only requirement, as shown in the example above, is
-            that the components receive the <x-block>name</x-block> attribute, including so that validation error messages
-            are displayed correctly.
+            As you can see in the example above, the only requirement is that the
+            components must receive the <x-block>name</x-block> attribute, including
+            so that validation error messages are displayed correctly.
         </p>
     </x-section>
     <x-section title="Parse Request Value" disable-copy>
         <p class="mt-2">
-            Some components, such as <x-block>select.styled, date, tags</x-block> and others, send an array to the backend.
-            In these cases you must use the PHP <x-block>json_decode</x-block> function to access the items of the array.
+            Some components, such as <x-block>select.styled, date, tags</x-block> and others, send an array to the backend
+            when the form is submitted. In these cases you must use the PHP <x-block>json_decode</x-block> function to access the items of the array.
         </p>
         <p class="mt-4"><b>1)</b> Preparing the Blade:</p>
         <x-code language="blade" :contents="$jsonDecodeBlade" disable-copy />

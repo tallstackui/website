@@ -41,6 +41,11 @@
                 <x-time label="Min Minute: 30, Max Minute: 45" :min-minute="30" :max-minute="45" />
             </div>
         </x-preview>
+        <x-warning class="mt-4">
+            Due to the way the component works, the <b>min</b> and <b>max</b>
+            hours/minutes do not limit the range, but rather the post-selected
+            value when time is selected.
+        </x-warning>
     </x-section>
     <x-section title="Helper" description="An option to easily select the current time.">
         <x-preview language="blade" :contents="$helper">

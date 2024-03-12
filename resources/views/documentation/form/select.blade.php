@@ -187,14 +187,6 @@
             to allow you to use the <x-block>params</x-block> to interact dynamically with the query of the request.
         </p>
     </x-section>
-    <x-section title="Filtering Using Eloquent" anchor="styled-api-filtering-using-eloquent" disable-copy>
-        <p>
-            If you are using the select component to filter records in the database
-            through Eloquent, this code may be useful. This is a snippet code that can be applied
-            as a route in the <x-block>routes/api.php</x-block> file.
-        </p>
-    </x-section>
-    <x-code :contents="$eloquent" />
     <x-slot:navigation>
         <x-slot:back>
             <x-layout.footer-navigation :href="route('documentation.ui.modal')" text="Modal" back />

@@ -358,8 +358,7 @@
             "contents": {
                 "0": "Concept",
                 "1": "Basic Usage",
-                "2": "Advanced Usage",
-                "3": "Filtering Using Eloquent"
+                "2": "Advanced Usage"
             }
         }
     },
