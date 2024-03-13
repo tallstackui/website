@@ -187,12 +187,4 @@
             to allow you to use the <x-block>params</x-block> to interact dynamically with the query of the request.
         </p>
     </x-section>
-    <x-slot:navigation>
-        <x-slot:back>
-            <x-layout.footer-navigation :href="route('documentation.ui.modal')" text="Modal" back />
-        </x-slot:back>
-        <x-slot:next>
-            <x-layout.footer-navigation :href="route('documentation.ui.slide')" text="Slide" />
-        </x-slot:next>
-    </x-slot:navigation>
 </x-layout>

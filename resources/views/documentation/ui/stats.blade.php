@@ -134,12 +134,4 @@
             </x-stats>
         </x-preview>
     </x-section>
-    <x-slot:navigation>
-        <x-slot:back>
-            <x-layout.footer-navigation :href="route('documentation.ui.slide')" text="Slide" back />
-        </x-slot:back>
-        <x-slot:next>
-            <x-layout.footer-navigation :href="route('documentation.ui.step')" text="Step" />
-        </x-slot:next>
-    </x-slot:navigation>
 </x-layout>

@@ -42,12 +42,4 @@
             <x-textarea label="Name" hint="Insert the description" invalidate />
         </x-preview>
     </x-section>
-    <x-slot:navigation>
-        <x-slot:back>
-            <x-layout.footer-navigation :href="route('documentation.form.password')" text="Form Password" back />
-        </x-slot:back>
-        <x-slot:next>
-            <x-layout.footer-navigation :href="route('documentation.form.number')" text="Form Number" />
-        </x-slot:next>
-    </x-slot:navigation>
 </x-layout>

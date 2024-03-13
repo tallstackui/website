@@ -64,12 +64,4 @@
             <x-password label="Password" hint="Insert your best password" value="TallStackUi"  invalidate />
         </x-preview>
     </x-section>
-    <x-slot:navigation>
-        <x-slot:back>
-            <x-layout.footer-navigation :href="route('documentation.form.input')" text="Form Input" back />
-        </x-slot:back>
-        <x-slot:next>
-            <x-layout.footer-navigation :href="route('documentation.form.textarea')" text="Form Textarea" />
-        </x-slot:next>
-    </x-slot:navigation>
 </x-layout>

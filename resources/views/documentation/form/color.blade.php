@@ -53,12 +53,4 @@
             <x-color invalidate />
         </x-preview>
     </x-section>
-    <x-slot:navigation>
-        <x-slot:back>
-            <x-layout.footer-navigation :href="route('documentation.form.password')" text="Form Password" back />
-        </x-slot:back>
-        <x-slot:next>
-            <x-layout.footer-navigation :href="route('documentation.form.textarea')" text="Form Textarea" />
-        </x-slot:next>
-    </x-slot:navigation>
 </x-layout>

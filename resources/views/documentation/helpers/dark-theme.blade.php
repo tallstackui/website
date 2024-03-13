@@ -39,12 +39,4 @@
         <p class="mt-2">5. Now all you need to do is adapt all your CSS classes to the dark theme variation:</p>
         <x-code language="blade" :contents="$example" disable-copy/>
     </x-section>
-    <x-slot:navigation>
-        <x-slot:back>
-            <x-layout.footer-navigation :href="route('documentation.personalization.color')" text="Colors" back />
-        </x-slot:back>
-        <x-slot:next>
-            <x-layout.footer-navigation :href="route('documentation.contribution')" text="Contribution Guide" />
-        </x-slot:next>
-    </x-slot:navigation>
 </x-layout>

@@ -191,12 +191,4 @@
         </x-preview>
     </x-section>
     <x-available-configuration />
-    <x-slot:navigation>
-        <x-slot:back>
-            <x-layout.footer-navigation :href="route('documentation.form.select')" text="Select" back />
-        </x-slot:back>
-        <x-slot:next>
-            <x-layout.footer-navigation :href="route('documentation.ui.tab')" text="Tab" />
-        </x-slot:next>
-    </x-slot:navigation>
 </x-layout>

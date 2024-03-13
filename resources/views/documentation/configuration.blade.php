@@ -27,12 +27,4 @@
         </div>
         <x-code :contents="$content" disable-copy/>
     </x-section>
-    <x-slot:navigation>
-        <x-slot:back>
-            <x-layout.footer-navigation :href="route('documentation.internal.wrapper')" text="Internal Wrapper" back />
-        </x-slot:back>
-        <x-slot:next>
-            <x-layout.footer-navigation :href="route('documentation.translation')" text="Translations" />
-        </x-slot:next>
-    </x-slot:navigation>
 </x-layout>

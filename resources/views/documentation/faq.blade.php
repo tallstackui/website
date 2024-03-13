@@ -119,12 +119,4 @@
     <x-warning>
         Is there an answer missing here? Join our <a href="{{ $discord }}" class="underline" target="_blank">Discord server</a> to help us.
     </x-warning>
-    <x-slot:navigation>
-        <x-slot:back>
-            <x-layout.footer-navigation :href="route('documentation.updates')" text="Updates" back />
-        </x-slot:back>
-        <x-slot:next>
-            <x-layout.footer-navigation :href="route('documentation.form.input')" text="Form Input" />
-        </x-slot:next>
-    </x-slot:navigation>
 </x-layout>

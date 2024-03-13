@@ -194,12 +194,4 @@
         </x-preview>
     </x-section>
     <x-available-configuration />
-    <x-slot:navigation>
-        <x-slot:back>
-            <x-layout.footer-navigation :href="route('documentation.ui.icon')" text="Icon" back />
-        </x-slot:back>
-        <x-slot:next>
-            <x-layout.footer-navigation :href="route('documentation.ui.loading')" text="Loading" />
-        </x-slot:next>
-    </x-slot:navigation>
 </x-layout>

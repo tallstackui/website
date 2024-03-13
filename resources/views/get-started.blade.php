@@ -25,9 +25,4 @@
             Feel invited to <a href="{{ $discord }}" class="underline" target="_blank">join our Discord</a> server to interact with the community and get early access to news.
         </p>
     </x-section>
-    <x-slot:navigation>
-        <x-slot:next>
-            <x-layout.footer-navigation href="{{ route('documentation.installation') }}" text="Installation" />
-        </x-slot:next>
-    </x-slot:navigation>
 </x-layout>

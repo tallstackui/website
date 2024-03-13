@@ -39,12 +39,4 @@
             </x-card>
         </x-preview>
     </x-section>
-    <x-slot:navigation>
-        <x-slot:back>
-            <x-layout.footer-navigation :href="route('documentation.ui.button')" text="Button" back />
-        </x-slot:back>
-        <x-slot:next>
-            <x-layout.footer-navigation :href="route('documentation.ui.dropdown')" text="Dropdown" />
-        </x-slot:next>
-    </x-slot:navigation>
 </x-layout>

@@ -94,12 +94,4 @@
     <x-section title="Variations" disable-copy>
         <p>The concept of variation follows the same patterns as <a href="{{ route('documentation.ui.icon').'#variations' }}" class="underline">icon variations.</a></p>
     </x-section>
-    <x-slot:navigation>
-        <x-slot:back>
-            <x-layout.footer-navigation :href="route('documentation.ui.tab')" text="Tab" back />
-        </x-slot:back>
-        <x-slot:next>
-            <x-layout.footer-navigation :href="route('documentation.interaction.dialog')" text="Dialog" />
-        </x-slot:next>
-    </x-slot:navigation>
 </x-layout>

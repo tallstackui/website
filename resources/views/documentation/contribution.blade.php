@@ -86,9 +86,4 @@
             We suggest you to create an alias to facilitate the execution of this command.
         </x-warning>
     </x-section>
-    <x-slot:navigation>
-        <x-slot:back>
-            <x-layout.footer-navigation :href="route('documentation.dark-theme')" text="Dark Theme" back />
-        </x-slot:back>
-    </x-slot:navigation>
 </x-layout>

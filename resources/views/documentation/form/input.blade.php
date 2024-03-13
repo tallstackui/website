@@ -54,12 +54,4 @@
             <x-input label="Name" invalidate />
         </x-preview>
     </x-section>
-    <x-slot:navigation>
-        <x-slot:back>
-            <x-layout.footer-navigation :href="route('documentation.installation')" text="Installation" back />
-        </x-slot:back>
-        <x-slot:next>
-            <x-layout.footer-navigation :href="route('documentation.form.password')" text="Form Password" />
-        </x-slot:next>
-    </x-slot:navigation>
 </x-layout>

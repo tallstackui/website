@@ -62,12 +62,4 @@
             <x-tag invalidate />
         </x-preview>
     </x-section>
-    <x-slot:navigation>
-        <x-slot:back>
-            <x-layout.footer-navigation :href="route('documentation.form.radio')" text="Form Radio" back />
-        </x-slot:back>
-        <x-slot:next>
-            <x-layout.footer-navigation :href="route('documentation.form.toggle')" text="Form Toggle" />
-        </x-slot:next>
-    </x-slot:navigation>
 </x-layout>

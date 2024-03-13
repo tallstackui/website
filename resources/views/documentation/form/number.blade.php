@@ -65,12 +65,4 @@
             synchronization issues between the component and the Livewire updates.
         </p>
     </x-section>
-    <x-slot:navigation>
-        <x-slot:back>
-            <x-layout.footer-navigation :href="route('documentation.form.textarea')" text="Form Textarea" back />
-        </x-slot:back>
-        <x-slot:next>
-            <x-layout.footer-navigation :href="route('documentation.form.checkbox')" text="Form Checkbox" />
-        </x-slot:next>
-    </x-slot:navigation>
 </x-layout>

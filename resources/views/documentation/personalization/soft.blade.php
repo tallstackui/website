@@ -162,12 +162,4 @@
             All component documentation mentions their respective blocks in a button at the top of each page.
         </p>
     </x-section>
-    <x-slot:navigation>
-        <x-slot:back>
-            <x-layout.footer-navigation :href="route('documentation.personalization.concept')" text="Personalization Concept" back />
-        </x-slot:back>
-        <x-slot:next>
-            <x-layout.footer-navigation :href="route('documentation.personalization.deep')" text="Deep Personalization" />
-        </x-slot:next>
-    </x-slot:navigation>
 </x-layout>

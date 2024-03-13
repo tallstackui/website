@@ -35,12 +35,4 @@
             </div>
         </div>
     </x-section>
-    <x-slot:navigation>
-        <x-slot:back>
-            <x-layout.footer-navigation :href="route('documentation.translation')" text="Translations" back />
-        </x-slot:back>
-        <x-slot:next>
-            <x-layout.footer-navigation :href="route('documentation.personalization.soft')" text="Soft Personalization" />
-        </x-slot:next>
-    </x-slot:navigation>
 </x-layout>

@@ -216,12 +216,4 @@
             </x-step>
         </x-preview>
     </x-section>
-    <x-slot:navigation>
-        <x-slot:back>
-            <x-layout.footer-navigation :href="route('documentation.ui.stats')" text="Stats" back />
-        </x-slot:back>
-        <x-slot:next>
-            <x-layout.footer-navigation :href="route('documentation.ui.tab')" text="Tab" />
-        </x-slot:next>
-    </x-slot:navigation>
 </x-layout>

@@ -35,14 +35,6 @@
             </div>
         </x-preview>
     </x-section>
-    <x-slot:navigation>
-        <x-slot:back>
-            <x-layout.footer-navigation :href="route('documentation.dark-theme')" text="Dark Theme" back />
-        </x-slot:back>
-        <x-slot:next>
-            <x-layout.footer-navigation :href="route('documentation.contribution')" text="Contribution Guide" />
-        </x-slot:next>
-    </x-slot:navigation>
     <script>
         function creditCardMask(input) {
             return input.startsWith('34') || input.startsWith('37')
@@ -57,19 +49,4 @@
             you can use the code tip in <a href="https://github.com/alpinejs/alpine/discussions/3748" class="underline" target="_blank">this AlpineJS GitHub discussion.</a>
         </p>
     </x-section>
-    <x-slot:navigation>
-        <x-slot:back>
-            <x-layout.footer-navigation :href="route('documentation.dark-theme')" text="Dark Theme" back />
-        </x-slot:back>
-        <x-slot:next>
-            <x-layout.footer-navigation :href="route('documentation.contribution')" text="Contribution Guide" />
-        </x-slot:next>
-    </x-slot:navigation>
-    <script>
-        function creditCardMask(input) {
-            return input.startsWith('34') || input.startsWith('37')
-                ? '9999 999999 99999'
-                : '9999 9999 9999 9999'
-        }
-    </script>
 </x-layout>
