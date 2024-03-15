@@ -58,6 +58,10 @@
             <u>Starting from version 1.20</u>, you can configure the prefix directly through the terminal using this command:
         </p>
         <x-code language="shell" :contents="$prefixCommand" />
+        <p>
+            If you prefer to define a prefix through environment variables, then you can create a variable with
+            the name <x-block>TALLSTACKUI_PREFIX</x-block> and set the value of the variable with the desired prefix.
+        </p>
     </x-section>
     <x-section title="AlpineJS Requirement" disable-copy>
         <p>
