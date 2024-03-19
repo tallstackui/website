@@ -122,7 +122,7 @@ $save = function () {
                     Submit
                 </x-button>
             </div>
-            <p class="text-xs font-medium leading-6 text-dark-400/30 dark:text-gray-500/30">* This form is an example</p>
+            <p class="text-xs font-medium leading-6 text-dark-800/30 dark:text-dark-100/50">* This form is an example</p>
         </form>
     </x-card>
 </div>

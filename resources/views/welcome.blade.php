@@ -51,14 +51,15 @@
                             <x-svg.banner class="h-8 w-10" />
                         </div>
                         <div class="hidden gap-10 lg:flex lg:flex-1 lg:justify-end">
-                            <x-theme-switch xl only-icons />
+                            <x-icon x-on:click="darkTheme = false" name="sun" class="h-6 w-6 cursor-pointer text-yellow-500" x-show="darkTheme" />
+                            <x-icon x-on:click="darkTheme = true" name="moon" class="h-6 w-6 cursor-pointer text-blue-500" x-show="!darkTheme" />
                         </div>
                     </nav>
                 </header>
                 <section class="relative isolate bg-transparent">
                     <div class="relative">
                         <div class="relative pb-16">
-                            <main class="mt-16 sm:mt-24">
+                            <main class="mt-16">
                                 <div class="mx-auto max-w-7xl">
                                     <div class="lg:grid lg:grid-cols-12 lg:gap-8">
                                         <div class="px-6 sm:text-center md:mx-auto md:max-w-2xl lg:col-span-6 lg:flex lg:items-center lg:text-left">
@@ -71,7 +72,7 @@
                                                               color="pink"
                                                               icon="arrow-up-right"
                                                               position="right">
-                                                        Join us on Discord server for support and early updates!
+                                                        Join us on Discord server for chat and early updates!
                                                     </x-button>
                                                 </div>
                                                 <h1 class="text-4xl font-bold tracking-tight text-pink-900 dark:text-white sm:text-5xl md:text-6xl">
@@ -84,7 +85,7 @@
                                                         <span class="z-50 w-full font-semibold">suite of 30+ Blade components</span>
                                                     </span> that elevate your workflow of <i>Livewire</i> applications.
                                                 </p>
-                                                <div class="mt-4 flex items-center gap-x-2">
+                                                <div class="mt-6 flex items-center gap-x-2">
                                                     <x-button :href="route('documentation.get-started')"
                                                               color="pink"
                                                               position="right"
@@ -98,7 +99,7 @@
                                                                   color="pink"
                                                                   position="right"
                                                                   outline
-                                                                  lg>
+                                                                  md>
                                                             Source Code
                                                         </x-button>
                                                     </div>
@@ -108,7 +109,7 @@
                                                                   color="white"
                                                                   position="right"
                                                                   outline
-                                                                  lg>
+                                                                  md>
                                                             Source Code
                                                         </x-button>
                                                     </div>
@@ -174,11 +175,36 @@
                     </div>
                 </section>
                 <x-icon name="arrow-down-circle" class="mx-auto mt-16 h-12 w-12 animate-bounce text-pink-500 dark:text-pink-700" outline />
-                <section class="mt-10 bg-transparent">
+                <section class="mt-20 bg-transparent">
                     <div class="mx-auto max-w-7xl px-6 lg:px-8">
                         <div class="mx-auto max-w-2xl lg:text-center">
                             <p class="mt-2 text-3xl font-bold tracking-tight text-gray-700 dark:text-white sm:text-4xl">
-                                Everything you need in a single place to start your next TALL Stack project.
+                                Our Sponsors
+                            </p>
+                            <p class="mt-6 text-lg leading-8 text-gray-700 dark:text-gray-400">
+                                TallStackUI is an open-source project used by many people and supported by the community.
+                                We appreciate all the support we receive. Here are some of our sponsors. Want to see your
+                                logo here? <x-link href="https://github.com/sponsors/devajmeireles" color="pink" underline blank>Support us!</x-link>
+                            </p>
+                        </div>
+                        <div class="mx-auto mt-10 max-w-2xl lg:max-w-none">
+                            <div class="flex justify-center gap-4">
+                                <a href="https://www.jetbrains.com/phpstorm/" target="_blank">
+                                    <x-svg.sponsors.jb class="h-32 w-32" />
+                                </a>
+                                <a href="https://www.dothnews.com.br/" target="_blank">
+                                    <x-svg.sponsors.dothnews class="h-32 w-32" fill="#1c79e1" />
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <x-icon name="arrow-down-circle" class="mx-auto mt-16 h-12 w-12 animate-bounce text-pink-500 dark:text-pink-700" outline />
+                <section class="mt-20 bg-transparent">
+                    <div class="mx-auto max-w-7xl px-6 lg:px-8">
+                        <div class="mx-auto max-w-2xl lg:text-center">
+                            <p class="mt-2 text-3xl font-bold tracking-tight text-gray-700 dark:text-white sm:text-4xl">
+                                Everything you need in a single place to start your next <i>TALL Stack</i> project.
                             </p>
                             <p class="mt-6 text-lg leading-8 text-gray-700 dark:text-gray-400">
                                 See some of our <b class="text-pink-700 dark:text-gray-300">30+ Blade components</b> in a quick overview.
@@ -196,7 +222,7 @@
                                 </div>
                                 <p></p>
                             </dl>
-                            <h2 class="pt-4 flex justify-center text-2xl font-medium text-gray-700 dark:text-gray-300">Badges 👇🏻</h2>
+                            <h2 class="flex justify-center pt-4 text-2xl font-medium text-gray-700 dark:text-gray-300">Badges 👇🏻</h2>
                             <dl class="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-1">
                                 <div class="flex flex-col">
                                     <dd class="mt-4 text-base leading-7 text-gray-300 space-y-2">
@@ -215,7 +241,7 @@
                                     </dd>
                                 </div>
                             </dl>
-                            <h2 class="pt-4 flex justify-center text-2xl font-medium text-gray-700 dark:text-gray-300">Modal & Slides 👇🏻</h2>
+                            <h2 class="flex justify-center pt-4 text-2xl font-medium text-gray-700 dark:text-gray-300">Modal & Slides 👇🏻</h2>
                             <dl class="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-1">
                                 <div class="flex flex-col">
                                     <dd class="mt-4 flex flex-col text-base leading-7 text-gray-300 space-y-2 sm:space-x-2 sm:flex-row">
@@ -261,7 +287,7 @@
                                     </dd>
                                 </div>
                             </dl>
-                            <h2 class="pt-4 flex justify-center text-2xl font-medium text-gray-700 dark:text-gray-300">Tags 👇🏻</h2>
+                            <h2 class="flex justify-center pt-4 text-2xl font-medium text-gray-700 dark:text-gray-300">Tags 👇🏻</h2>
                             <dl class="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-1">
                                 <div class="flex flex-col">
                                     <dd class="mt-4 text-base leading-7 text-gray-300 space-y-2">
@@ -272,7 +298,7 @@
                                     </dd>
                                 </div>
                             </dl>
-                            <h2 class="pt-4 flex justify-center text-2xl font-medium text-gray-700 dark:text-gray-300">Clipboard 👇🏻</h2>
+                            <h2 class="flex justify-center pt-4 text-2xl font-medium text-gray-700 dark:text-gray-300">Clipboard 👇🏻</h2>
                             <dl class="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-1">
                                 <div class="flex flex-col">
                                     <dd class="mt-4 text-base leading-7 text-gray-300 space-y-2">
@@ -284,7 +310,7 @@
                                     </dd>
                                 </div>
                             </dl>
-                            <h2 class="pt-4 flex justify-center text-2xl font-medium text-gray-700 dark:text-gray-300">Date Picker 👇🏻</h2>
+                            <h2 class="flex justify-center pt-4 text-2xl font-medium text-gray-700 dark:text-gray-300">Date Picker 👇🏻</h2>
                             <dl class="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-1">
                                 <div class="flex flex-col">
                                     <dd class="mt-4 text-base leading-7 text-gray-300 space-y-2">
@@ -295,7 +321,7 @@
                                     </dd>
                                 </div>
                             </dl>
-                            <h2 class="pt-4 flex justify-center text-2xl font-medium text-gray-700 dark:text-gray-300">Time Picker 👇🏻</h2>
+                            <h2 class="flex justify-center pt-4 text-2xl font-medium text-gray-700 dark:text-gray-300">Time Picker 👇🏻</h2>
                             <dl class="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-1">
                                 <div class="flex flex-col">
                                     <dd class="mt-4 text-base leading-7 text-gray-300 space-y-2">
@@ -304,7 +330,7 @@
                                     </dd>
                                 </div>
                             </dl>
-                            <h2 class="pt-4 flex justify-center text-2xl font-medium text-gray-700 dark:text-gray-300">Select Through API 👇🏻</h2>
+                            <h2 class="flex justify-center pt-4 text-2xl font-medium text-gray-700 dark:text-gray-300">Select Through API 👇🏻</h2>
                             <dl class="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-1">
                                 <div class="flex flex-col">
                                     <dd class="mt-4 text-base leading-7 text-gray-300 space-y-2">
@@ -315,7 +341,7 @@
                                     </dd>
                                 </div>
                             </dl>
-                            <h2 class="pt-4 flex justify-center text-2xl font-medium text-gray-700 dark:text-gray-300">Color Picker 👇🏻</h2>
+                            <h2 class="flex justify-center pt-4 text-2xl font-medium text-gray-700 dark:text-gray-300">Color Picker 👇🏻</h2>
                             <dl class="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-1">
                                 <div class="flex flex-col">
                                     <dd class="mt-4 text-base leading-7 text-gray-300 space-y-4">
@@ -324,7 +350,7 @@
                                     </dd>
                                 </div>
                             </dl>
-                            <h2 class="pt-4 flex justify-center text-2xl font-medium text-gray-700 dark:text-gray-300">... and Table 👇🏻</h2>
+                            <h2 class="flex justify-center pt-4 text-2xl font-medium text-gray-700 dark:text-gray-300">... and Table 👇🏻</h2>
                             <dl class="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-1">
                                 <div class="flex flex-col">
                                     <dd class="mt-4 text-base leading-7 text-gray-300 space-y-2">
@@ -336,7 +362,7 @@
                     </div>
                 </section>
                 <x-icon name="arrow-down-circle" class="mx-auto mt-16 h-12 w-12 animate-bounce text-pink-500 dark:text-pink-700" outline />
-                <section class="mt-16 bg-transparent">
+                <section class="mt-10 bg-transparent">
                     <div class="relative isolate overflow-hidden">
                         <div class="mx-auto max-w-7xl pt-10 pb-16 lg:grid lg:grid-cols-2 lg:gap-x-8 lg:px-8">
                             <div class="px-6 lg:px-0 lg:pt-4">
@@ -359,7 +385,7 @@
                     </div>
                     <div class="mt-8 flex justify-center">
                         <a href="{{ route('documentation.get-started') }}" class="text-2xl font-semibold text-gray-700 dark:text-pink-600">
-                            ... And muuuch more 🔥 Start your next idea using TallStackUI now!
+                            ... And muuuch more 🔥 Start your next <i>TALL</i> idea using TallStackUI!
                         </a>
                     </div>
                 </section>
@@ -374,7 +400,7 @@
             </div>
         </main>
         <footer class="bg-transparent">
-            <div class="mx-auto max-w-7xl px-6 py-12 md:flex md:items-center md:justify-between lg:px-8">
+            <div class="mx-auto max-w-7xl pb-12 md:flex md:items-center md:justify-between lg:px-8">
                 <div class="flex justify-center space-x-6 md:order-2">
                     <x-github />
                 </div>
