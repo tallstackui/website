@@ -315,6 +315,20 @@
         "5": "Target & Delay Options",
         "6": "Configurations"
     },
+    "docs.ui.progress": {
+        "Normal": {
+            "prefix": true,
+            "contents": {
+                "0": "Basic Usage"
+            }
+        },
+        "Circle": {
+            "prefix": true,
+            "contents": {
+                "0": "Basic Usage"
+            }
+        }
+    },
     "docs.ui.reaction": {
         "0": "Concept",
         "1": "Persist Reactions",
