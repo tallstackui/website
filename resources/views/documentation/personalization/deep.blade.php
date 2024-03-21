@@ -167,13 +167,13 @@
                         <x-badge color="pink">
                             confirmColor
                         </x-badge>
-                        <x-tooltip text="returns an array where key is the types: success, error, info, warning, and question. The value of each key is the TailwindCSS classes."
+                        <x-tooltip text="returns an array where key is the types: success, error, info, warning, and question. The value of each key is TailwindCSS classes."
                                    color="pink"
                                    outline />
                         <x-badge color="pink">
                             iconColor
                         </x-badge>
-                        <x-tooltip text="returns an array with two keys: background e icon, and inside of each key an array with the types: success, error, info, warning, and question. The value of each key is the TailwindCSS classes."
+                        <x-tooltip text="returns an array with two keys: background e icon, and inside of each key an array with the types: success, error, info, warning, and question. The value of each key is TailwindCSS classes."
                                    color="pink"
                                    outline />
                     </x-custom-table.td>
@@ -269,13 +269,42 @@
                 </x-custom-table.tr>
                 <x-custom-table.tr>
                     <x-custom-table.td>
+                        <p class="font-mono">Progress</p>
+                    </x-custom-table.td>
+                    <x-custom-table.td>
+                        <x-badge color="pink">
+                            backgroundColor
+                        </x-badge>
+                    </x-custom-table.td>
+                    <x-custom-table.td>
+                        <x-badge color="pink">solid</x-badge>
+                        <x-badge color="pink">light</x-badge>
+                    </x-custom-table.td>
+                </x-custom-table.tr>
+                <x-custom-table.tr>
+                    <x-custom-table.td>
+                        <p class="font-mono">Stats</p>
+                    </x-custom-table.td>
+                    <x-custom-table.td class="flex items-center gap-x-1">
+                        <x-badge color="pink">
+                            backgroundColor
+                        </x-badge>
+                    </x-custom-table.td>
+                    <x-custom-table.td>
+                        <x-badge color="pink">solid</x-badge>
+                        <x-badge color="pink">light</x-badge>
+                        <x-badge color="pink">outline</x-badge>
+                    </x-custom-table.td>
+                </x-custom-table.tr>
+                <x-custom-table.tr>
+                    <x-custom-table.td>
                         <p class="font-mono">Toast</p>
                     </x-custom-table.td>
                     <x-custom-table.td class="flex items-center gap-x-1">
                         <x-badge color="pink">
                             iconColor
                         </x-badge>
-                        <x-tooltip text="Returns an array where key is the types: success, error, info, warning, and question. The value of each key is the TailwindCSS classes."
+                        <x-tooltip text="Returns an array where key is the types: success, error, info, warning, and question. The value of each key is TailwindCSS classes."
                                    color="pink"
                                    outline />
                     </x-custom-table.td>
