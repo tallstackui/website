@@ -189,7 +189,7 @@
             </div>
         </x-preview>
     </x-section>
-    <x-separator text="Circle Button" />
+    <x-separator text="Circle" />
     <x-section title="Basic Usage" anchor="circle-basic-usage">
         <x-preview language="blade" :contents="$circle">
             <x-button.circle>TS</x-button.circle>

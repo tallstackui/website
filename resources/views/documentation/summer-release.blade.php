@@ -3,7 +3,7 @@
         The Summer Release 🏖
     </x-slot:title>
     <p class="mt-4 text-gray-600 dark:text-dark-400">
-        After more than 30 days of work, <b>we present the Summer Release!</b>
+        After more than 30 days of work, <b>we present the Summer Release (v1.20)!</b>
         <u>The Summer Release is nothing more than a special release, containing many
         new features, released in March 2024.</u> We dedicated ourselves to the
         maximum to introduce new features, improve various current components, and

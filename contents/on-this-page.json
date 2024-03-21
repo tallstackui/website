@@ -319,13 +319,22 @@
         "Normal": {
             "prefix": true,
             "contents": {
-                "0": "Basic Usage"
+                "0": "Basic Usage",
+                "1": "Styles",
+                "2": "Without Text",
+                "3": "Size Variations",
+                "4": "Color Variations",
+                "5": "Light Variations"
             }
         },
         "Circle": {
             "prefix": true,
             "contents": {
-                "0": "Basic Usage"
+                "0": "Basic Usage",
+                "1": "Strokes",
+                "3": "Size Variations",
+                "4": "Color Variations",
+                "5": "Light Variations"
             }
         }
     },
