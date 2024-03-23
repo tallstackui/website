@@ -114,10 +114,19 @@
             </div>
         </x-preview>
     </x-section>
+    <x-section title="Footer Slot" anchor="normal-footer-slot">
+        <x-preview language="blade" :contents="$footerSlot">
+            <x-progress :percent="50">
+                <x-slot:footer>
+                    TallStackUI
+                </x-slot:footer>
+            </x-progress>
+        </x-preview>
+    </x-section>
     <x-separator text="Circle" />
     <x-section title="Basic Usage" anchor="circle-basic-usage">
         <x-preview language="blade" :contents="$circleBasic">
-            <div class="space-y-2">
+            <div class="flex flex-row items-center gap-2">
                 <x-progress.circle :percent="50" />
                 <x-progress.circle percent="50.55" />
             </div>
@@ -134,7 +143,7 @@
     </x-section>
     <x-section title="Size Variations" anchor="circle-size-variations">
         <x-preview language="blade" :contents="$circleSizes">
-            <div class="flex flex-row items-center">
+            <div class="flex flex-row items-center gap-2">
                 <x-progress.circle :percent="50" xs />
                 <x-progress.circle :percent="50" sm />
                 <x-progress.circle :percent="50" md />
@@ -144,7 +153,7 @@
     </x-section>
     <x-section title="Color Variations" anchor="circle-color-variations">
         <x-preview language="blade" :contents="$circleColors">
-            <div class="grid grid-cols-3 sm:grid-cols-5">
+            <div class="grid grid-cols-3 sm:grid-cols-5 gap-2">
                 <x-progress.circle :percent="50" />
                 <x-progress.circle :percent="50" color="secondary" />
                 <x-progress.circle :percent="50" color="slate" />
@@ -176,7 +185,7 @@
     </x-section>
     <x-section title="Light Variations" anchor="circle-light-variations">
         <x-preview language="blade" :contents="$circleLights">
-            <div class="grid grid-cols-3 sm:grid-cols-5">
+            <div class="grid grid-cols-3 sm:grid-cols-5 gap-2">
                 <x-progress.circle :percent="50" light />
                 <x-progress.circle :percent="50" color="secondary" light />
                 <x-progress.circle :percent="50" color="slate" light />
@@ -204,6 +213,15 @@
                 <x-progress.circle :percent="50" color="black" light />
                 <x-progress.circle :percent="50" color="white" light />
             </div>
+        </x-preview>
+    </x-section>
+    <x-section title="Footer Slot" anchor="circle-footer-slot">
+        <x-preview language="blade" :contents="$circleFooterSlot">
+            <x-progress.circle :percent="50">
+                <x-slot:footer>
+                    TallStackUI
+                </x-slot:footer>
+            </x-progress.circle>
         </x-preview>
     </x-section>
 </x-layout>

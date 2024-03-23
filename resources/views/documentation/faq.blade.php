@@ -70,7 +70,7 @@
             </li>
         </ul>
     </x-section>
-    <x-section title="Are there any roadmap of upcoming TallStackUI releases?" disable-copy>
+    <x-section title="Is there any roadmap for upcoming TallStackUI new features?" disable-copy>
         <p>
             Internally, yes. We like to prepare things with surprises, so the roadmap remains solely with the team, internally.
             We currently have over 30 components and expect the release of over 15 more new components in 2024.
@@ -88,7 +88,7 @@
             with no chance of globally affecting other components.
         </p>
     </x-section>
-    <x-section title="Is there a release schedule?" disable-copy>
+    <x-section title="There is a release schedule?" disable-copy>
         <p class="mb-4">
             No! <u>As we find things worthy of release we simply ship them immediately, except for days like Friday,
             Saturday, and Sunday.</u> That's why it's always good to pay attention and periodically update the TallStackUI

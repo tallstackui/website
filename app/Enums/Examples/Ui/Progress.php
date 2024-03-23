@@ -87,6 +87,14 @@ class Progress
     <x-progress :percent="50" color="white" light />
     HTML;
 
+    public const FOOTER_SLOT = <<<'HTML'
+    <x-progress :percent="50">
+        <x-slot:footer>
+            TallStackUI
+        </x-slot:footer>
+    </x-progress>
+    HTML;
+
     public const CIRCLE_BASIC = <<<'HTML'
     <!-- As integer -->
     <x-progress.circle :percent="50" />
@@ -162,6 +170,14 @@ class Progress
     <x-progress.circle :percent="50" color="rose" light />
     <x-progress.circle :percent="50" color="black" light />
     <x-progress.circle :percent="50" color="white" light />
+    HTML;
+
+    public const CIRCLE_FOOTER_SLOT = <<<'HTML'
+    <x-progress :percent="50">
+        <x-slot:footer>
+            TallStackUI
+        </x-slot:footer>
+    </x-progress>
     HTML;
 
     public const PERSONALIZATION = <<<'HTML'

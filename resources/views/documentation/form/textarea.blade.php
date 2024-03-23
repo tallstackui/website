@@ -22,7 +22,7 @@
             <x-textarea label="Name" hint="Insert the description" />
         </x-preview>
     </x-section>
-    <x-section title="Required Label Indicator" description="An asterisk in the label to indicate that the field is required.">
+    <x-section title="Required Label Indicator" description="An option to display an asterisk indicating that the field is required.">
         <x-preview language="blade" :contents="$asterisk">
             <x-textarea label="Description *" />
         </x-preview>
@@ -32,7 +32,7 @@
             <x-textarea resize />
         </x-preview>
     </x-section>
-    <x-section title="Resize Auto" description="Start to type in the textarea to see the resize-auto in action.">
+    <x-section title="Resize Auto" description="An option to auto increase the size of textarea.">
         <x-preview language="blade" :contents="$resizeAuto">
             <x-textarea :rows="1" resize-auto />
         </x-preview>

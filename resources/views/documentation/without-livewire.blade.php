@@ -19,7 +19,7 @@
         can be used out of Livewire components, and also those that cannot.
         <div class="mt-2 space-y-2">
             <p class="text-lg font-medium">Can be used out of Livewire component ✅</p>
-            <ul class="ml-2 list-inside list-decimal">
+            <ul class="ml-2 list-inside list-decimal marker:font-bold">
                 <li>Checkbox</li>
                 <li>Color</li>
                 <li>Date</li>
@@ -36,7 +36,7 @@
                 <li>Select</li>
             </ul>
             <p class="text-lg font-medium">Can't be used out of Livewire component ❌</p>
-            <ul class="ml-2 list-inside list-decimal">
+            <ul class="ml-2 list-inside list-decimal marker:font-bold">
                 <li>Loading</li>
                 <li>Upload</li>
                 <li>Reactions</li>

@@ -33,7 +33,12 @@
         <p class="mb-4">This is useful if your theme is dark theme by default.</p>
         <p>3. Create a button to control the dark theme:</p>
         <x-code language="blade" :contents="$button" disable-copy />
-        <x-warning text="This button must be covered by the layout that received the helper above." />
+        <x-warning>
+            <ul class="list-decimal list-inside text-sm marker:font-bold">
+                <li>This button must be covered by the layout that received the <b>tallstackui_darkTheme</b> helper.</li>
+                <li>If you prefer, <a href="{{ route('documentation.ui.theme-switch') }}" class="underline" >TallStackUI offer the Theme Switch component</a> to easily manage the dark theme.</li>
+            </ul>
+        </x-warning>
         <p class="mt-2">4. Rebuild your assets:</p>
         <x-code language="shell" :contents="$assets" />
         <p class="mt-2">5. Now all you need to do is adapt all your CSS classes to the dark theme variation:</p>

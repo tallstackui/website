@@ -45,8 +45,6 @@ class DarkTheme
     HTML;
 
     public const EXAMPLE = <<<'HTML'
-    <!-- ... -->
-
     <p class="text-gray-700 dark:text-white">Hello World</p>
     <div class="bg-white dark:gray-800">Hello World</div>
     HTML;
