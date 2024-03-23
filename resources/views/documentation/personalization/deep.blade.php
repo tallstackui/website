@@ -87,14 +87,14 @@
                     <x-custom-table.td>
                         <p class="font-mono">Avatar</p>
                     </x-custom-table.td>
-                    <x-custom-table.td>
-                        <x-badge color="pink">backgroundColor</x-badge>
-                    </x-custom-table.td>
                     <x-custom-table.td class="flex items-center gap-x-1">
-                        <x-badge color="pink">No styles.</x-badge>
+                        <x-badge color="pink">backgroundColor</x-badge>
                         <x-tooltip text="You should return only an array with the color name as the key, and the classes as the value."
                                    color="pink"
                                    outline />
+                    </x-custom-table.td>
+                    <x-custom-table.td>
+                        N/A
                     </x-custom-table.td>
                 </x-custom-table.tr>
                 <x-custom-table.tr>
@@ -167,13 +167,13 @@
                         <x-badge color="pink">
                             confirmColor
                         </x-badge>
-                        <x-tooltip text="returns an array where key is the types: success, error, info, warning, and question. The value of each key is the TailwindCSS classes."
+                        <x-tooltip text="returns an array where key is the types: success, error, info, warning, and question. The value of each key is TailwindCSS classes."
                                    color="pink"
                                    outline />
                         <x-badge color="pink">
                             iconColor
                         </x-badge>
-                        <x-tooltip text="returns an array with two keys: background e icon, and inside of each key an array with the types: success, error, info, warning, and question. The value of each key is the TailwindCSS classes."
+                        <x-tooltip text="returns an array with two keys: background e icon, and inside of each key an array with the types: success, error, info, warning, and question. The value of each key is TailwindCSS classes."
                                    color="pink"
                                    outline />
                     </x-custom-table.td>
@@ -185,86 +185,121 @@
                     <x-custom-table.td>
                         <p class="font-mono">Errors</p>
                     </x-custom-table.td>
-                    <x-custom-table.td>
-                        <x-badge color="pink">backgroundColor</x-badge>
-                        <x-badge color="pink">textColor</x-badge>
-                        <x-badge color="pink">borderColor</x-badge>
-                    </x-custom-table.td>
                     <x-custom-table.td class="flex items-center gap-x-1">
-                        <x-badge color="pink">No styles.</x-badge>
+                        <x-badge color="pink">backgroundColor</x-badge>
                         <x-tooltip text="You should return only an array with the color name as the key, and the classes as the value."
                                    color="pink"
                                    outline />
+                        <x-badge color="pink">textColor</x-badge>
+                        <x-tooltip text="You should return only an array with the color name as the key, and the classes as the value."
+                                   color="pink"
+                                   outline />
+                        <x-badge color="pink">borderColor</x-badge>
+                        <x-tooltip text="You should return only an array with the color name as the key, and the classes as the value."
+                                   color="pink"
+                                   outline />
+                    </x-custom-table.td>
+                    <x-custom-table.td>
+                        N/A
                     </x-custom-table.td>
                 </x-custom-table.tr>
                 <x-custom-table.tr>
                     <x-custom-table.td>
                         <p class="font-mono">Form\Radio</p>
                     </x-custom-table.td>
-                    <x-custom-table.td>
-                        <x-badge color="pink">backgroundColor</x-badge>
-                    </x-custom-table.td>
                     <x-custom-table.td class="flex items-center gap-x-1">
-                        <x-badge color="pink">No styles.</x-badge>
+                        <x-badge color="pink">backgroundColor</x-badge>
                         <x-tooltip text="You should return only an array with the color name as the key, and the classes as the value."
                                    color="pink"
                                    outline />
+                    </x-custom-table.td>
+                    <x-custom-table.td>
+                        <x-badge color="pink">No styles.</x-badge>
                     </x-custom-table.td>
                 </x-custom-table.tr>
                 <x-custom-table.tr>
                     <x-custom-table.td>
                         <p class="font-mono">Form\Checkbox</p>
                     </x-custom-table.td>
-                    <x-custom-table.td>
-                        <x-badge color="pink">backgroundColor</x-badge>
-                    </x-custom-table.td>
                     <x-custom-table.td class="flex items-center gap-x-1">
-                        <x-badge color="pink">No styles.</x-badge>
+                        <x-badge color="pink">backgroundColor</x-badge>
                         <x-tooltip text="You should return only an array with the color name as the key, and the classes as the value."
                                    color="pink"
                                    outline />
+                    </x-custom-table.td>
+                    <x-custom-table.td>
+                        N/A
                     </x-custom-table.td>
                 </x-custom-table.tr>
                 <x-custom-table.tr>
                     <x-custom-table.td>
                         <p class="font-mono">Form\Toggle</p>
                     </x-custom-table.td>
-                    <x-custom-table.td>
-                        <x-badge color="pink">backgroundColor</x-badge>
-                    </x-custom-table.td>
                     <x-custom-table.td class="flex items-center gap-x-1">
-                        <x-badge color="pink">No styles.</x-badge>
+                        <x-badge color="pink">backgroundColor</x-badge>
                         <x-tooltip text="You should return only an array with the color name as the key, and the classes as the value."
                                    color="pink"
                                    outline />
+                    </x-custom-table.td>
+                    <x-custom-table.td>
+                        N/A
                     </x-custom-table.td>
                 </x-custom-table.tr>
                 <x-custom-table.tr>
                     <x-custom-table.td>
                         <p class="font-mono">Form\Range</p>
                     </x-custom-table.td>
-                    <x-custom-table.td>
-                        <x-badge color="pink">thumbColor</x-badge>
-                    </x-custom-table.td>
                     <x-custom-table.td class="flex items-center gap-x-1">
-                        <x-badge color="pink">No styles.</x-badge>
+                        <x-badge color="pink">thumbColor</x-badge>
                         <x-tooltip text="You should return only an array with the color name as the key, and the classes as the value."
                                    color="pink"
                                    outline />
+                    </x-custom-table.td>
+                    <x-custom-table.td>
+                        N/A
                     </x-custom-table.td>
                 </x-custom-table.tr>
                 <x-custom-table.tr>
                     <x-custom-table.td>
                         <p class="font-mono">Link</p>
                     </x-custom-table.td>
-                    <x-custom-table.td>
-                        <x-badge color="pink">textColor</x-badge>
-                    </x-custom-table.td>
                     <x-custom-table.td class="flex items-center gap-x-1">
-                        <x-badge color="pink">No styles.</x-badge>
+                        <x-badge color="pink">textColor</x-badge>
                         <x-tooltip text="You should return only an array with the color name as the key, and the classes as the value."
                                    color="pink"
                                    outline />
+                    </x-custom-table.td>
+                    <x-custom-table.td>
+                        N/A
+                    </x-custom-table.td>
+                </x-custom-table.tr>
+                <x-custom-table.tr>
+                    <x-custom-table.td>
+                        <p class="font-mono">Progress</p>
+                    </x-custom-table.td>
+                    <x-custom-table.td>
+                        <x-badge color="pink">
+                            backgroundColor
+                        </x-badge>
+                    </x-custom-table.td>
+                    <x-custom-table.td>
+                        <x-badge color="pink">solid</x-badge>
+                        <x-badge color="pink">light</x-badge>
+                    </x-custom-table.td>
+                </x-custom-table.tr>
+                <x-custom-table.tr>
+                    <x-custom-table.td>
+                        <p class="font-mono">Stats</p>
+                    </x-custom-table.td>
+                    <x-custom-table.td class="flex items-center gap-x-1">
+                        <x-badge color="pink">
+                            backgroundColor
+                        </x-badge>
+                    </x-custom-table.td>
+                    <x-custom-table.td>
+                        <x-badge color="pink">solid</x-badge>
+                        <x-badge color="pink">light</x-badge>
+                        <x-badge color="pink">outline</x-badge>
                     </x-custom-table.td>
                 </x-custom-table.tr>
                 <x-custom-table.tr>
@@ -275,7 +310,7 @@
                         <x-badge color="pink">
                             iconColor
                         </x-badge>
-                        <x-tooltip text="Returns an array where key is the types: success, error, info, warning, and question. The value of each key is the TailwindCSS classes."
+                        <x-tooltip text="Returns an array where key is the types: success, error, info, warning, and question. The value of each key is TailwindCSS classes."
                                    color="pink"
                                    outline />
                     </x-custom-table.td>
@@ -287,14 +322,14 @@
                     <x-custom-table.td>
                         <p class="font-mono">Tooltip</p>
                     </x-custom-table.td>
-                    <x-custom-table.td>
-                        <x-badge color="pink">backgroundColor</x-badge>
-                    </x-custom-table.td>
                     <x-custom-table.td class="flex items-center gap-x-1">
-                        <x-badge color="pink">No styles.</x-badge>
+                        <x-badge color="pink">backgroundColor</x-badge>
                         <x-tooltip text="You should return only an array with the color name as the key, and the classes as the value."
                                    color="pink"
                                    outline />
+                    </x-custom-table.td>
+                    <x-custom-table.td>
+                        N/A
                     </x-custom-table.td>
                 </x-custom-table.tr>
             </x-custom-table.tbody>
@@ -304,7 +339,7 @@
         </p>
         <x-code :contents="$colorsPersonalizationExample" disable-copy/>
         <p class="my-4">
-            In this case the personalization will only be applied for buttons <x-block>solid</x-block> with the color <x-block>primary</x-block>.
+            In this case the color personalization will only be applied for buttons <x-block>solid</x-block> with the color <x-block>primary</x-block>.
         </p>
     </x-section>
     <x-section title="Create Custom Colors" disable-copy>
@@ -313,12 +348,12 @@
             which colors you can use in TallStackUI, you can easily create custom
             colors using deep personalization. Here is a complete example of how to do this:
         </p>
-        <p class="mt-2">1. Create the color in the TailwindCSS configuration file:</p>
-        <x-code language="js" :contents="$prepareTailwindForCustomColor"/>
-        <p>2. Create new indexes of your custom color name:</p>
-        <x-code language="php" :contents="$applyingCustomColorsUsingDeepPersonalization" disable-copy/>
-        <p>3. Use the component with the name of your custom color:</p>
-        <x-code language="blade" :contents="$usingComponentWithCustomColors" disable-copy/>
+        <p class="mt-2"><b>1.</b> Create the color in the TailwindCSS configuration file:</p>
+        <x-code language="js" :contents="$prepareTailwindForCustomColor" />
+        <p><b>2.</b> Create new indexes of your custom color name:</p>
+        <x-code language="php" :contents="$applyingCustomColorsUsingDeepPersonalization" disable-copy />
+        <p><b>3.</b> Use the component with the name of your custom color:</p>
+        <x-code language="blade" :contents="$usingComponentWithCustomColors" disable-copy />
         <x-warning class="mt-4">
             Make sure to build your assets to see your new custom color.
         </x-warning>
@@ -327,7 +362,7 @@
         <p class="mb-4">
             You can edit the Blade files of the TallStackUI components. Use this command to publish the files:
         </p>
-        <x-code language="shell" :contents="$views"/>
+        <x-code language="shell" :contents="$views" />
     </x-section>
     <x-section title="Tracing TailwindCSS Classes" disable-copy>
         <p class="mb-4">
@@ -335,6 +370,6 @@
             component classes so that TailwindCSS generates all the classes that come out of the files. Your
             <x-block>tailwind.config.js</x-block> needs to receive the following content:
         </p>
-        <x-code language="js" :contents="$tailwindcss" disable-copy/>
+        <x-code language="js" :contents="$tailwindcss" disable-copy />
     </x-section>
 </x-layout>

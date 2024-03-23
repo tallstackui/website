@@ -40,7 +40,7 @@
                     <x-layout.navigation.link :href="route('documentation.faq')" text="F.A.Q" />
                 </li>
                 <li class="relative ml-4">
-                    <x-layout.navigation.link :href="route('documentation.summer-release')" text="Summer Release" new />
+                    <x-layout.navigation.link :href="route('documentation.summer-release')" text="Summer Release" />
                 </li>
             </ul>
         </li>
@@ -57,7 +57,7 @@
                             <x-layout.navigation.link :href="route('documentation.form.color')" text="Color" />
                         </li>
                         <li class="relative ml-4">
-                            <x-layout.navigation.link :href="route('documentation.form.date')" text="Date" new />
+                            <x-layout.navigation.link :href="route('documentation.form.date')" text="Date" />
                         </li>
                         <li class="relative ml-4">
                             <x-layout.navigation.link :href="route('documentation.form.input')" text="Input" />
@@ -81,7 +81,7 @@
                             <x-layout.navigation.link :href="route('documentation.form.tag')" text="Tag" />
                         </li>
                         <li class="relative ml-4">
-                            <x-layout.navigation.link :href="route('documentation.form.time')" text="Time" new />
+                            <x-layout.navigation.link :href="route('documentation.form.time')" text="Time" />
                         </li>
                         <li class="relative ml-4">
                             <x-layout.navigation.link :href="route('documentation.form.textarea')" text="Textarea" />
@@ -140,16 +140,19 @@
                             <x-layout.navigation.link :href="route('documentation.ui.loading')" text="Loading" />
                         </li>
                         <li class="relative ml-4">
+                            <x-layout.navigation.link :href="route('documentation.ui.progress')" text="Progress" new />
+                        </li>
+                        <li class="relative ml-4">
                             <x-layout.navigation.link :href="route('documentation.ui.reaction')" text="Reaction" />
                         </li>
                         <li class="relative ml-4">
                             <x-layout.navigation.link :href="route('documentation.ui.slide')" text="Slide" />
                         </li>
                         <li class="relative ml-4">
-                            <x-layout.navigation.link :href="route('documentation.ui.stats')" text="Stats" new />
+                            <x-layout.navigation.link :href="route('documentation.ui.stats')" text="Stats" />
                         </li>
                         <li class="relative ml-4">
-                            <x-layout.navigation.link :href="route('documentation.ui.step')" text="Step" new />
+                            <x-layout.navigation.link :href="route('documentation.ui.step')" text="Step" />
                         </li>
                         <li class="relative ml-4">
                             <x-layout.navigation.link :href="route('documentation.ui.tab')" text="Tab" />
@@ -158,7 +161,7 @@
                             <x-layout.navigation.link :href="route('documentation.ui.table')" text="Table" />
                         </li>
                         <li class="relative ml-4">
-                            <x-layout.navigation.link :href="route('documentation.ui.theme-switch')" text="Theme Switch" new />
+                            <x-layout.navigation.link :href="route('documentation.ui.theme-switch')" text="Theme Switch" />
                         </li>
                         <li class="relative ml-4">
                             <x-layout.navigation.link :href="route('documentation.ui.tooltip')" text="Tooltip" />

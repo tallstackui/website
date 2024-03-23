@@ -61,6 +61,7 @@ Route::prefix('/docs')
                 Route::view('/modal', 'documentation.ui.modal', Example::Modal->variables())->name('modal');
                 Route::view('/link', 'documentation.ui.link', Example::Link->variables())->name('link');
                 Route::view('/loading', 'documentation.ui.loading', Example::Loading->variables())->name('loading');
+                Route::view('/progress', 'documentation.ui.progress', Example::Progress->variables())->name('progress');
                 Route::view('/reaction', 'documentation.ui.reaction', Example::Reaction->variables())->name('reaction');
                 Route::view('/slide', 'documentation.ui.slide', Example::Slide->variables())->name('slide');
                 Route::view('/stats', 'documentation.ui.stats', Example::Stats->variables())->name('stats');

@@ -188,12 +188,15 @@
                             </p>
                         </div>
                         <div class="mx-auto mt-10 max-w-2xl lg:max-w-none">
-                            <div class="flex justify-center gap-4">
+                            <div class="flex justify-center items-center gap-4">
                                 <a href="https://www.jetbrains.com/phpstorm/" target="_blank">
                                     <x-svg.sponsors.jb class="h-32 w-32" />
                                 </a>
                                 <a href="https://www.dothnews.com.br/" target="_blank">
                                     <x-svg.sponsors.dothnews class="h-32 w-32" fill="#1c79e1" />
+                                </a>
+                                <a href="https://www.araxis.com/" target="_blank">
+                                    <x-svg.sponsors.araxis class="h-12 w-12" fill="#1c79e1" />
                                 </a>
                             </div>
                         </div>

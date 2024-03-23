@@ -25,7 +25,7 @@
             <x-input label="Name" hint="Insert your name" />
         </x-preview>
     </x-section>
-    <x-section title="Required Label Indicator" description="An asterisk in the label to indicate that the field is required.">
+    <x-section title="Required Label Indicator" description="An option to display an asterisk indicating that the field is required.">
         <x-preview language="blade" :contents="$asterisk">
             <x-input label="Name *" hint="Insert your name" />
         </x-preview>

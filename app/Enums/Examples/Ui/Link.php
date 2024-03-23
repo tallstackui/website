@@ -105,6 +105,12 @@ class Link
     <x-link href="https://google.com.br/"
             text="TallStackUI"
             colorless />
+
+    <!-- or -->
+
+    <x-link href="https://google.com.br/"
+            text="TallStackUI"
+            :color="null" />
     HTML;
 
     public const PERSONALIZATION = <<<'HTML'

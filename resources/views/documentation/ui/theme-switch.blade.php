@@ -33,11 +33,13 @@
     </x-section>
     <x-section title="Sizes">
         <x-preview language="blade" :contents="$sizes">
-            <x-theme-switch xs />
-            <x-theme-switch sm />
-            <x-theme-switch md />
-            <x-theme-switch lg />
-            <x-theme-switch xl />
+            <div class="space-y-2">
+                <x-theme-switch xs />
+                <x-theme-switch sm />
+                <x-theme-switch md />
+                <x-theme-switch lg />
+                <x-theme-switch xl />
+            </div>
         </x-preview>
     </x-section>
     <x-section title="Only Icons" description="An option to only display icons, without the toggle.">

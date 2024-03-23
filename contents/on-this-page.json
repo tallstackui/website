@@ -315,6 +315,31 @@
         "5": "Target & Delay Options",
         "6": "Configurations"
     },
+    "docs.ui.progress": {
+        "Normal": {
+            "prefix": true,
+            "contents": {
+                "0": "Basic Usage",
+                "1": "Styles",
+                "2": "Without Text",
+                "3": "Size Variations",
+                "4": "Color Variations",
+                "5": "Light Variations",
+                "6": "Footer Slot"
+            }
+        },
+        "Circle": {
+            "prefix": true,
+            "contents": {
+                "0": "Basic Usage",
+                "1": "Strokes",
+                "3": "Size Variations",
+                "4": "Color Variations",
+                "5": "Light Variations",
+                "6": "Footer Slot"
+            }
+        }
+    },
     "docs.ui.reaction": {
         "0": "Concept",
         "1": "Persist Reactions",
