@@ -164,9 +164,14 @@ class Table
         <!-- You can specify different properties for the filter -->
         <x-table :$headers
                  :$rows
-                 filter
-                 :quantity="[2,5,10]"
-                 :filters="['quantity' => 'foo', 'search' => 'bar']" />
+                 :filter="['quantity' => 'foo', 'search' => 'bar']"
+                 :quantity="[2,5,10]" />
+
+        <!-- You can disable one of the filters -->
+        <x-table :$headers
+                 :$rows
+                 :filter="['quantity' => 'quantity']"
+                 :quantity="[2,5,10]" />
     </div>
     HTML;
 
