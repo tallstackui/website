@@ -11,10 +11,9 @@
     </x-slot:description>
     <x-section title="Concept" disable-copy>
         <p>
-            TallStackUI was designed to work only with Livewire in version 3, and Livewire natively
-            delivers AlpineJS in its core in this new version. Therefore, you can take advantage of
-            everything that AlpineJS offers you, such as the Mask plugin. Let's take a look at some
-            examples using the <a href="https://alpinejs.dev/plugins/mask" class="underline" target="_blank">AlpineJS Mask plugin</a> in the TallStackUI inputs.
+            Since TallStackUI is a library focused on the TALL Stack, which in turn makes use of AlpineJS
+            to handle all JavaScript, you can use AlpineJS masks in your components, through the <a href="https://alpinejs.dev/plugins/mask" class="underline" target="_blank">AlpineJS Mask</a>
+            plugin, which is delivered by default with Livewire 3.
         </p>
     </x-section>
     <x-section title="Maskable Inputs">

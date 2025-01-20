@@ -9,7 +9,7 @@
     <x-slot:description>
         TallStackUI translations.
     </x-slot:description>
-    <x-section title="Translation Files" disable-copy>
+    <x-section title="Concept" disable-copy>
         <p>
             You have the freedom to customize various texts that are used internally in TallStackUI components.
             While some texts can also be customized as placeholders in their respective components, the general

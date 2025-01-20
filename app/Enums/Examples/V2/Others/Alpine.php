@@ -31,6 +31,8 @@ class Alpine
              hint="Insert your desired salary"
              x-mask:dynamic="$money($input, ',')" {{-- [tl! highlight] --}}
              value="200.000" />
+             
+    <!-- Custom Dynamic Mask -->
 
     <x-input label="Credit Card"
              hint="Insert your credit card number"
@@ -38,7 +40,7 @@ class Alpine
              value="200.000" />
 
     <script>
-    function creditCardMask(input) { // [tl! highlight]
+    function creditCardMask(input) {
         return input.startsWith('34') || input.startsWith('37')
             ? '9999 999999 99999'
             : '9999 9999 9999 9999'
