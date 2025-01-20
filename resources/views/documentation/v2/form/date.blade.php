@@ -105,9 +105,4 @@
             <x-date x-on:select="alert(`Selected Date: ${$event.detail.date}`)" x-on:clear="alert(`Cleaned!`)" />
         </x-preview>
     </x-section>
-    <x-section title="Invalidate" description="An option to not show validation error message.">
-        <x-preview language="blade" :contents="$invalidate">
-            <x-date invalidate />
-        </x-preview>
-    </x-section>
 </x-layout>

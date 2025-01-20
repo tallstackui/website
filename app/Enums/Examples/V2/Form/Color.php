@@ -28,10 +28,6 @@ class Color
     <x-color x-on:set="alert(`Selected Color: ${$event.detail.color}`)" />
     HTML;
 
-    public const INVALIDATE = <<<'HTML'
-    <x-color invalidate />
-    HTML;
-
     public const PERSONALIZATION = <<<'HTML'
     TallStackUi::personalize()
         ->form('color')

@@ -75,9 +75,4 @@
                     x-on:interval="alert(`Interval Changed: ${$event.detail.interval}`)"/>
         </x-preview>
     </x-section>
-    <x-section title="Invalidate" description="An option to not show validation error message.">
-        <x-preview language="blade" :contents="$invalidate">
-            <x-time invalidate />
-        </x-preview>
-    </x-section>
 </x-layout>

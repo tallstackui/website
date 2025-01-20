@@ -54,9 +54,4 @@
                    x-on:erase="alert(`Erased: ${$event.detail.tags}`)" />
         </x-preview>
     </x-section>
-    <x-section title="Invalidate" description="An option to not show validation error message.">
-        <x-preview language="blade" :contents="$invalidate">
-            <x-tag invalidate />
-        </x-preview>
-    </x-section>
 </x-layout>

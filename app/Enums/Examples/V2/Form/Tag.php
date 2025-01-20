@@ -32,10 +32,6 @@ class Tag
            x-on:erase="alert(`Erased: ${$event.detail.tags}`)" />
     HTML;
 
-    public const INVALIDATE = <<<'HTML'
-    <x-tag invalidate />
-    HTML;
-
     public const PERSONALIZATION = <<<'HTML'
     TallStackUi::personalize()
         ->form('tag')

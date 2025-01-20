@@ -45,10 +45,5 @@
             <x-color picker x-on:set="alert(`Selected Color: ${$event.detail.color}`)" />
         </x-preview>
     </x-section>
-    <x-section title="Invalidate" description="An option to not show validation error message.">
-        <x-preview language="blade" :contents="$invalidate">
-            <x-color invalidate />
-        </x-preview>
-    </x-section>
     <x-available-configuration />
 </x-layout>

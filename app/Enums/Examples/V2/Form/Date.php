@@ -98,10 +98,6 @@ class Date
             x-on:clear="alert(`Cleaned!`)" />
     HTML;
 
-    public const INVALIDATE = <<<'HTML'
-    <x-date invalidate />
-    HTML;
-
     public const PERSONALIZATION = <<<'HTML'
     TallStackUi::personalize()
         ->form('date')

@@ -92,9 +92,4 @@
             </div>
         </x-preview>
     </x-section>
-    <x-section title="Invalidate" description="An option to not show validation error message.">
-        <x-preview language="blade" :contents="$invalidate">
-            <x-checkbox label="Receive Alert" invalidate />
-        </x-preview>
-    </x-section>
 </x-layout>

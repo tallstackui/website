@@ -47,13 +47,6 @@ class Password
                 x-on:generate="alert(`Password Generated: ${$event.detail.password}`)" />
     HTML;
 
-    public const INVALIDATE = <<<'HTML'
-    <x-password label="Password"
-                hint="Insert your best password"
-                value="TallStackUi"
-                invalidate />
-    HTML;
-
     public const PERSONALIZATION = <<<'HTML'
     TallStackUi::personalize()
         ->form('password')

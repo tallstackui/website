@@ -21,10 +21,6 @@ class Select
     ]" select="label:label|value:value" />
     HTML;
 
-    public const NATIVE_INVALIDATE = <<<'HTML'
-    <x-select.native :options="[1,2,3]" invalidate />
-    HTML;
-
     /* Styled Common */
 
     public const STYLED_BASIC = <<<'HTML'

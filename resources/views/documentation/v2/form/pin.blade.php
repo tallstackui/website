@@ -63,9 +63,4 @@
             The clear event needs the clear option to be enabled.
         </x-warning>
     </x-section>
-    <x-section title="Invalidate" description="An option to not show validation error message.">
-        <x-preview language="blade" :contents="$invalidate">
-            <x-pin length="5" invalidate />
-        </x-preview>
-    </x-section>
 </x-layout>

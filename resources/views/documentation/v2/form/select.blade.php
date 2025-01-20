@@ -31,11 +31,6 @@
             ]" select="label:label|value:value"/>
         </x-preview>
     </x-section>
-    <x-section title="Invalidate" description="An option to not show validation error message." anchor="native-invalidate">
-        <x-preview language="blade" :contents="$nativeInvalidate">
-            <x-select.native :options="[1,2,3]" invalidate />
-        </x-preview>
-    </x-section>
     <x-warning>
         This option is also available for the other select components below.
     </x-warning>

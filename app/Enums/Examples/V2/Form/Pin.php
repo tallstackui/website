@@ -32,10 +32,6 @@ class Pin
     <x-pin length="5" clear x-on:clear="alert(`Cleared: ${$event.detail.model}`)" />
     HTML;
 
-    public const INVALIDATE = <<<'HTML'
-    <x-pin length="5" invalidate />
-    HTML;
-
     public const PERSONALIZATION = <<<'HTML'
     TallStackUi::personalize()
         ->form('pin')

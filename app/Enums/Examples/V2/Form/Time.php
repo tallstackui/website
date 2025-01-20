@@ -54,10 +54,6 @@ class Time
             x-on:interval="alert(`Interval Changed: ${$event.detail.interval}`)"/>
     HTML;
 
-    public const INVALIDATE = <<<'HTML'
-    <x-time invalidate />
-    HTML;
-
     public const PERSONALIZATION = <<<'HTML'
     TallStackUi::personalize()
         ->form('time')

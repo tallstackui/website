@@ -32,10 +32,6 @@ class Number
     <x-number chevron />
     HTML;
 
-    public const INVALIDATE = <<<'HTML'
-    <x-number label="Quantity" invalidate />
-    HTML;
-
     public const PERSONALIZATION = <<<'HTML'
     TallStackUi::personalize()
         ->form('number')
