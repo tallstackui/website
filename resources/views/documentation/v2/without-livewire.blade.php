@@ -37,12 +37,13 @@
                 <li>Loading</li>
                 <li>Upload</li>
                 <li>Reactions</li>
+                <li>Signature</li>
                 <li>Table</li>
             </ul>
             <x-warning>
                 Many other components can be used out of Livewire components, such as alert,
-                modal, dropdown, etc. These are components that do not contain any logic that
-                depends on Livewire.
+                modal, dropdown, etc. <b>These are components that do not contain any logic that
+                depends on Livewire.</b>
             </x-warning>
         </div>
     </x-section>

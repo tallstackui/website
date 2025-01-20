@@ -25,7 +25,7 @@
         <p>You can also force the <x-block>darkTheme</x-block> variable to be initialized to true:</p>
         <x-code language="blade" :contents="$initializeAsTrue" disable-copy/>
         <p class="mb-4">This is useful if your theme is dark theme by default.</p>
-        <p>3. Create a button to control the dark theme:</p>
+        <p>Create a button to control the dark theme:</p>
         <x-code language="blade" :contents="$button" disable-copy />
         <x-warning>
             <ul class="list-inside text-sm marker:font-bold">
@@ -33,9 +33,9 @@
                 <li>If you prefer, <a href="{{ route('documentation.v2.ui.theme-switch') }}" wire:navigate class="underline">TallStackUI offer the Theme Switch component</a> to easily manage the dark theme.</li>
             </ul>
         </x-warning>
-        <p class="mt-2">4. Rebuild your assets:</p>
+        <p class="mt-2">Rebuild your assets using this command:</p>
         <x-code language="shell" :contents="$assets" />
-        <p class="mt-2">5. Now all you need to do is adapt all your CSS classes to the dark theme variation:</p>
+        <p class="mt-2">Finally, all you need to do is adapt all your CSS classes to the dark theme variation:</p>
         <x-code language="blade" :contents="$example" disable-copy/>
     </x-section>
 </x-layout>

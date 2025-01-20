@@ -9,7 +9,6 @@ class DebugMode
     HTML;
 
     public const CONFIGURATION = <<<'HTML'
-    // ...
     use TallStackUi\View\Components;
 
     /*
