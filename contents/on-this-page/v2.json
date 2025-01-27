@@ -534,10 +534,8 @@
         "0": "Concept",
         "1": "Publishing Configuration File",
         "2": "Override Component Class",
-        "3": "Override Component Colors",
-        "4": "Create Custom Colors",
-        "5": "Publish Blade Files",
-        "6": "Tracing TailwindCSS Classes"
+        "3": "Publish Blade Files",
+        "4": "Tracing TailwindCSS Classes"
     },
     "docs.contribution": {
         "0": "Possibilities",

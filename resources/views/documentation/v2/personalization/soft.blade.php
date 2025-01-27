@@ -108,7 +108,8 @@
         <p>
             While soft personalization is powerful and easy to use, there is a catch: <u>all soft personalization are applied to all components</u>,
             and you cannot assign specific personalization to a component only once. However, just like in VueJS, where we have scoped CSS -
-            CSS applied only to the component that defined the scope, TallStackUI offers the same concept of scoped personalization.
+            CSS applied only to the component that defined the scope, soft personalization offers the same concept of scoped personalization -
+            personalization that will only be applied to the components that have the scope defined.
             Let's take a look at an example:
         </p>
         <div class="my-4 space-y-4">
