@@ -537,6 +537,14 @@
         "3": "Publish Blade Files",
         "4": "Tracing TailwindCSS Classes"
     },
+    "docs.personalization.color": {
+        "0": "Concept",
+        "1": "Change Colors Definitions",
+        "2": "Create or Manipulate Colors",
+        "3": "Caveats of Color Manipulation",
+        "4": "Change the Default Namespace",
+        "5": "Create Custom Color"
+    },
     "docs.contribution": {
         "0": "Possibilities",
         "1": "Patterns",

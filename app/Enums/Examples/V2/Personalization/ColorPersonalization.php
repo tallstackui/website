@@ -60,4 +60,251 @@ class ColorPersonalization
     public const BUILD = <<<'HTML'
     npm run build && php artisan optimize:clear
     HTML;
+
+    public const COMMAND = <<<'HTML'
+    php artisan tallstackui:colors
+    HTML;
+
+    public const COLOR_CLASS = <<<'HTML'
+    // app/View/Components/TallStackUi/Colors/AlertColors.php
+    
+    namespace App\View\Components\TallStackUi\Colors;
+    
+    use Illuminate\View\Component;
+    
+    class AlertColors
+    {
+        /**
+         * Background colors.
+         */
+        public function backgroundColors(Component $component): array
+        {
+            return [
+                'solid' => [
+                    'white' => null,
+                    'black' => null,
+                    'primary' => null,
+                    'secondary' => null,
+                    'slate' => null,
+                    'gray' => null,
+                    'zinc' => null,
+                    'neutral' => null,
+                    'stone' => null,
+                    'red' => null,
+                    'orange' => null,
+                    'amber' => null,
+                    'yellow' => null,
+                    'lime' => null,
+                    'green' => null,
+                    'emerald' => null,
+                    'teal' => null,
+                    'cyan' => null,
+                    'sky' => null,
+                    'blue' => null,
+                    'indigo' => null,
+                    'violet' => null,
+                    'purple' => null,
+                    'fuchsia' => null,
+                    'pink' => null,
+                    'rose' => null,
+                ],
+                'outline' => [
+                    'white' => null,
+                    'black' => null,
+                    'primary' => null,
+                    'secondary' => null,
+                    'slate' => null,
+                    'gray' => null,
+                    'zinc' => null,
+                    'neutral' => null,
+                    'stone' => null,
+                    'red' => null,
+                    'orange' => null,
+                    'amber' => null,
+                    'yellow' => null,
+                    'lime' => null,
+                    'green' => null,
+                    'emerald' => null,
+                    'teal' => null,
+                    'cyan' => null,
+                    'sky' => null,
+                    'blue' => null,
+                    'indigo' => null,
+                    'violet' => null,
+                    'purple' => null,
+                    'fuchsia' => null,
+                    'pink' => null,
+                    'rose' => null,
+                ],
+                'light' => [
+                    'white' => null,
+                    'black' => null,
+                    'primary' => null,
+                    'secondary' => null,
+                    'slate' => null,
+                    'gray' => null,
+                    'zinc' => null,
+                    'neutral' => null,
+                    'stone' => null,
+                    'red' => null,
+                    'orange' => null,
+                    'amber' => null,
+                    'yellow' => null,
+                    'lime' => null,
+                    'green' => null,
+                    'emerald' => null,
+                    'teal' => null,
+                    'cyan' => null,
+                    'sky' => null,
+                    'blue' => null,
+                    'indigo' => null,
+                    'violet' => null,
+                    'purple' => null,
+                    'fuchsia' => null,
+                    'pink' => null,
+                    'rose' => null,
+                ],
+            ];
+        }
+    
+        /**
+         * Text colors.
+         */
+        public function textColors(Component $component): array
+        {
+            return [
+                'solid' => [
+                    'white' => null,
+                    'black' => null,
+                    'primary' => null,
+                    'secondary' => null,
+                    'slate' => null,
+                    'gray' => null,
+                    'zinc' => null,
+                    'neutral' => null,
+                    'stone' => null,
+                    'red' => null,
+                    'orange' => null,
+                    'amber' => null,
+                    'yellow' => null,
+                    'lime' => null,
+                    'green' => null,
+                    'emerald' => null,
+                    'teal' => null,
+                    'cyan' => null,
+                    'sky' => null,
+                    'blue' => null,
+                    'indigo' => null,
+                    'violet' => null,
+                    'purple' => null,
+                    'fuchsia' => null,
+                    'pink' => null,
+                    'rose' => null,
+                ],
+                'outline' => [
+                    'white' => null,
+                    'black' => null,
+                    'primary' => null,
+                    'secondary' => null,
+                    'slate' => null,
+                    'gray' => null,
+                    'zinc' => null,
+                    'neutral' => null,
+                    'stone' => null,
+                    'red' => null,
+                    'orange' => null,
+                    'amber' => null,
+                    'yellow' => null,
+                    'lime' => null,
+                    'green' => null,
+                    'emerald' => null,
+                    'teal' => null,
+                    'cyan' => null,
+                    'sky' => null,
+                    'blue' => null,
+                    'indigo' => null,
+                    'violet' => null,
+                    'purple' => null,
+                    'fuchsia' => null,
+                    'pink' => null,
+                    'rose' => null,
+                ],
+                'light' => [
+                    'white' => null,
+                    'black' => null,
+                    'primary' => null,
+                    'secondary' => null,
+                    'slate' => null,
+                    'gray' => null,
+                    'zinc' => null,
+                    'neutral' => null,
+                    'stone' => null,
+                    'red' => null,
+                    'orange' => null,
+                    'amber' => null,
+                    'yellow' => null,
+                    'lime' => null,
+                    'green' => null,
+                    'emerald' => null,
+                    'teal' => null,
+                    'cyan' => null,
+                    'sky' => null,
+                    'blue' => null,
+                    'indigo' => null,
+                    'violet' => null,
+                    'purple' => null,
+                    'fuchsia' => null,
+                    'pink' => null,
+                    'rose' => null,
+                ],
+            ];
+        }
+    }
+    HTML;
+
+    public const NAMESPACE_ENV_VARIABLE = <<<'HTML'
+    TALLSTACKUI_COLOR_CLASSES_NAMESPACE="App\\View\\Components\\TallStackUi\\Colors"
+    HTML;
+
+    public const CREATE_CUSTOM_COLOR = <<<'HTML'
+    namespace App\View\Components\TallStackUi\Colors;
+    
+    use Illuminate\View\Component;
+    
+    class AlertColors
+    {
+        /**
+         * Background colors.
+         */
+        public function backgroundColors(Component $component): array
+        {
+            // You can omit all other colors if you don't want to change them. [tl! highlight]
+            return [
+                'solid' => [
+                    'foo-bar' => 'bg-red-900 border-red-300', // [tl! add]
+                ],
+                // 'outline' => [/* ... */],
+                // 'light' => [/* ... */],
+            ];
+        }
+    
+        /**
+         * Text colors.
+         */
+        public function textColors(Component $component): array
+        {
+            return [
+                'solid' => [
+                    'foo-bar' => 'text-red-900', // [tl! add]
+                ],
+                // 'outline' => [/* ... */],
+                // 'light' => [/* ... */],
+            ];
+        }
+    }
+    HTML;
+
+    public const USE_CUSTOM_COLOR = <<<'HTML'
+    <x-alert text="My custom color is foo-bar" color="foo-bar" />
+    HTML;
 }

@@ -9,21 +9,86 @@
     <x-slot:description>
         The colors personalization.
     </x-slot:description>
-    <x-section disable-copy>
+    <x-section title="Concept" disable-copy>
         <p>
-            All TallStackUI components are based on three custom colors: primary, secondary and dark. Additionally,
-            all other <a class="underline" href="https://tailwindcss.com/docs/customizing-colors" target="_blank">colors are the original TailwindCSS colors.</a> You can customize the primary, secondary,
-            and colors to your liking by following the TailwindCSS custom color concept.
+            All TallStackUI components are based on three custom colors: primary, secondary, and dark.
+            Speaking mainly of the primary color, it is the color that defines and guides the color style
+            of your application. Apart from that, all other colors are the original <a class="underline" href="https://tailwindcss.com/docs/customizing-colors" target="_blank">TailwindCSS colors.</a>
+            You can customize the primary, secondary, and dark colors as per your preference following
+            the TailwindCSS custom color concept.
         </p>
     </x-section>
-    <x-warning class="mb-4">
-        If you are looking for how to create custom colors, <a href="{{ route('documentation.v2.personalization.deep').'#create-custom-colors' }}" wire:navigate class="underline">use this guide.</a>
-    </x-warning>
-    <x-section title="Personalizing Colors" disable-copy>
-        <p class="mb-4">1. Open the TailwindCSS configuration file and enter the following content:</p>
+    <x-section title="Change Colors Definitions" disable-copy>
+        <p class="mb-4">
+            If you want to customize custom colors like primary, secondary and dark, just follow the normal TailwindCSS color customization concept:
+        </p>
         <x-code language="js" :contents="$content" disable-copy/>
-        <x-warning text="Replace the hexadecimal values above with your desired colors." />
-        <p class="mt-2">2. Rebuild your assets:</p>
+        <p class="mt-2">Remember to rebuild your assets after making any adjustments to TailwindCSS colors:</p>
         <x-code language="shell" :contents="$build"/>
+    </x-section>
+    <x-section title="Create or Manipulate Colors" disable-copy>
+        <div class="space-y-4">
+            <p>
+                Although the components use the standard TailwindCSS colors, if you wonder if it is possible to manipulate
+                the colors or even create completely custom colors, in addition to those offered by default and mentioned
+                above: primary, secondary and dark, the answer is yes. The process of manipulating colors is extremely easy
+                through the definition of object classes used to map the color manipulation of TallStackUI components.
+            </p>
+            <p>
+                To create or manipulate the colors, you need to execute the following command to select the component:
+            </p>
+            <x-code language="shell" :contents="$command"/>
+            <p>
+                After selecting the component from the list of available options, a PHP object class will be created in
+                the <x-block>App\View\Components\TallStackUi\Colors</x-block> namespace. At first, don't worry about this namespace, you
+                are free to change this namespace to any other namespace you want.
+            </p>
+            <p>
+                Let's assume that you have selected the <x-block>Alert</x-block> component, then the object class will be like this:
+            </p>
+            <x-code :contents="$colorClass"/>
+        </div>
+    </x-section>
+    <x-section title="Caveats of Color Manipulation" disable-copy>
+        <ul class="space-y-4 list-decimal list-inside">
+            <li>
+                There is two methods inside the class used in this example: <x-block>backgroundColors</x-block> and <x-block>textColors</x-block>,
+                which means that these methods are responsible for defining the background and text colors of the component, respectively.
+                Each component has its own color methods, so you can manipulate the colors of each component individually.
+            </li>
+            <li>
+                You may have noticed that there is a <x-block>\Illuminate\View\Component $component</x-block> property added as a parameter to each method. This property
+                is actually the component instance so you can interact with it if you need to.
+            </li>
+            <li>
+                Notice that all colors have their values as null, which means that the default value - internal, will
+                be applied when the value is null, blank or the color index does not exist in the array. So only if the color index
+                exists and has a valid value will it be applied.
+            </li>
+            <li>
+                Also important to mention that if one of the methods is removed, the internal definitions will be applied, the same happens
+                if you change - accidentally or not, the visibility of the method, if it exists, it will be used, regardless of whether it
+                is public, private or protected.
+            </li>
+        </ul>
+    </x-section>
+    <x-section title="Change the Default Namespace" disable-copy>
+        <p>
+            <a href="{{ route('documentation.v2.configuration') }}" class="underline">When you publish the configuration file</a>, you can change the default namespace for the color classes.
+            If you prefer, you can control this through an environment variable:
+        </p>
+        <x-code :contents="$namespaceEnvVariable" />
+    </x-section>
+    <x-section title="Create Custom Color" disable-copy>
+        <div class="space-y-4">
+            <p>
+                Given all the above explanations, creating a new and totally personal color is extremely easy:
+            </p>
+            <x-code :contents="$createCustomColor" />
+            <p>
+                Now all you need to do is use the new color in the component class:
+            </p>
+            <x-code language="blade" :contents="$useCustomColor" />
+        </div>
     </x-section>
 </x-layout>
