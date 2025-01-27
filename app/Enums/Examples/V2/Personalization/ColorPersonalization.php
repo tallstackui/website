@@ -62,7 +62,7 @@ class ColorPersonalization
     HTML;
 
     public const COMMAND = <<<'HTML'
-    php artisan tallstackui:colors
+    php artisan tallstackui:setup-colors
     HTML;
 
     public const COLOR_CLASS = <<<'HTML'
@@ -282,6 +282,9 @@ class ColorPersonalization
             return [
                 'solid' => [
                     'foo-bar' => 'bg-red-900 border-red-300', // [tl! add]
+                    // 'primary' => null,
+                    // 'secondary' => null,
+                    // 'slate' => null,
                 ],
                 // 'outline' => [/* ... */],
                 // 'light' => [/* ... */],
@@ -296,6 +299,9 @@ class ColorPersonalization
             return [
                 'solid' => [
                     'foo-bar' => 'text-red-900', // [tl! add]
+                    // 'primary' => null,
+                    // 'secondary' => null,
+                    // 'slate' => null,
                 ],
                 // 'outline' => [/* ... */],
                 // 'light' => [/* ... */],

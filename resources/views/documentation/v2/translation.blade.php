@@ -10,16 +10,18 @@
         TallStackUI translations.
     </x-slot:description>
     <x-section title="Concept" disable-copy>
-        <p>
-            You have the freedom to customize various texts that are used internally in TallStackUI components.
-            While some texts can also be customized as placeholders in their respective components - such as:
-            <x-block>table</x-block> and <x-block>select.styled</x-block> components, the general defaults are tied to translation files.
-            Run the following command to publish the translation files:
-        </p>
-        <x-code language="shell" :contents="$command"/>
-        <p>
-            The translation files will be published to <x-block>lang/vendor/tallstack-ui</x-block>.
-        </p>
+        <div class="space-y-4">
+            <p>
+                You have the freedom to customize various texts that are used internally in TallStackUI components.
+                While some texts can also be customized as placeholders in their respective components - such as:
+                <x-block>table</x-block> and <x-block>select.styled</x-block> components, the general defaults are tied to translation files.
+                Run the following command to publish the translation files:
+            </p>
+            <x-code language="shell" :contents="$command"/>
+            <p>
+                The translation files will be published to <x-block>lang/vendor/tallstack-ui</x-block>.
+            </p>
+        </div>
     </x-section>
     <x-section title="Missing Content" disable-copy>
         <p>

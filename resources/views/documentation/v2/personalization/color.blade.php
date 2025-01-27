@@ -19,12 +19,14 @@
         </p>
     </x-section>
     <x-section title="Change Colors Definitions" disable-copy>
-        <p class="mb-4">
-            If you want to customize custom colors like primary, secondary and dark, just follow the normal TailwindCSS color customization concept:
-        </p>
-        <x-code language="js" :contents="$content" disable-copy/>
-        <p class="mt-2">Remember to rebuild your assets after making any adjustments to TailwindCSS colors:</p>
-        <x-code language="shell" :contents="$build"/>
+        <div class="space-y-4">
+            <p>
+                If you want to customize custom colors like primary, secondary and dark, just follow the normal TailwindCSS color customization concept:
+            </p>
+            <x-code language="js" :contents="$content" disable-copy/>
+            <p>Remember to rebuild your assets after making any adjustments to TailwindCSS colors:</p>
+            <x-code language="shell" :contents="$build"/>
+        </div>
     </x-section>
     <x-section title="Create or Manipulate Colors" disable-copy>
         <div class="space-y-4">
@@ -47,30 +49,29 @@
                 Let's assume that you have selected the <x-block>Alert</x-block> component, then the object class will be like this:
             </p>
             <x-code :contents="$colorClass"/>
+            <p>Here is some important caveats:</p>
+            <ul class="space-y-4 list-decimal list-inside">
+                <li>
+                    There is two methods inside the class used in this example, <x-block>backgroundColors</x-block> and <x-block>textColors</x-block>,
+                    which means that these methods are responsible for defining the background and text colors of the component, respectively.
+                    Each component has its own color methods, so you can manipulate the colors of each component individually.
+                </li>
+                <li>
+                    You may have noticed that there is a <x-block>\Illuminate\View\Component $component</x-block> property added as a parameter to each method. This property
+                    is actually the component instance so you can interact with it if you need to.
+                </li>
+                <li>
+                    Notice that all colors have their values as <x-block>null</x-block>, which means that the default value - internal, will
+                    be applied when the value is null, blank or the color index does not exist in the array. So only if the color index
+                    exists and has a valid value will it be applied.
+                </li>
+                <li>
+                    It's important to mention that if one of the methods is removed, the internal definitions will be applied, the same happens
+                    if you change - accidentally or not, the visibility of the method, if it exists, it will be used, regardless of whether it
+                    is public, private or protected.
+                </li>
+            </ul>
         </div>
-    </x-section>
-    <x-section title="Caveats of Color Manipulation" disable-copy>
-        <ul class="space-y-4 list-decimal list-inside">
-            <li>
-                There is two methods inside the class used in this example: <x-block>backgroundColors</x-block> and <x-block>textColors</x-block>,
-                which means that these methods are responsible for defining the background and text colors of the component, respectively.
-                Each component has its own color methods, so you can manipulate the colors of each component individually.
-            </li>
-            <li>
-                You may have noticed that there is a <x-block>\Illuminate\View\Component $component</x-block> property added as a parameter to each method. This property
-                is actually the component instance so you can interact with it if you need to.
-            </li>
-            <li>
-                Notice that all colors have their values as null, which means that the default value - internal, will
-                be applied when the value is null, blank or the color index does not exist in the array. So only if the color index
-                exists and has a valid value will it be applied.
-            </li>
-            <li>
-                Also important to mention that if one of the methods is removed, the internal definitions will be applied, the same happens
-                if you change - accidentally or not, the visibility of the method, if it exists, it will be used, regardless of whether it
-                is public, private or protected.
-            </li>
-        </ul>
     </x-section>
     <x-section title="Change the Default Namespace" disable-copy>
         <p>
@@ -89,6 +90,9 @@
                 Now all you need to do is use the new color in the component class:
             </p>
             <x-code language="blade" :contents="$useCustomColor" />
+            <p>
+                Although this example used <x-block>red</x-block>, you can use completely custom colors as you build in TailwindCSS.
+            </p>
         </div>
     </x-section>
 </x-layout>

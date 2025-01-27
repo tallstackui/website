@@ -10,41 +10,42 @@
         TallStackUI Form Components Without Livewire.
     </x-slot:description>
     <x-section title="Concept" disable-copy>
-        TallStackUI is a component library that was designed for Livewire 3, but after various
-        requests from the entire user community, <b>you can use form
-        components out of Livewire components.</b> Check below the list of all components that
-        can be used out of Livewire components, and also those that cannot.
-        <div class="mt-2 space-y-2">
-            <p class="text-lg font-medium">Can be used out of Livewire component ✅</p>
-            <ul class="ml-2 list-inside list-decimal marker:font-bold">
-                <li>Checkbox</li>
-                <li>Color</li>
-                <li>Date</li>
-                <li>Input</li>
-                <li>Number</li>
-                <li>Password</li>
-                <li>Pin</li>
-                <li>Radio</li>
-                <li>Range</li>
-                <li>Tag</li>
-                <li>Time</li>
-                <li>Textarea</li>
-                <li>Toggle</li>
-                <li>Select</li>
-            </ul>
-            <p class="text-lg font-medium">Can't be used out of Livewire component ❌</p>
-            <ul class="ml-2 list-inside list-decimal marker:font-bold">
-                <li>Loading</li>
-                <li>Upload</li>
-                <li>Reactions</li>
-                <li>Signature</li>
-                <li>Table</li>
-            </ul>
-            <x-warning>
-                Many other components can be used out of Livewire components, such as alert,
-                modal, dropdown, etc. <b>These are components that do not contain any logic that
-                depends on Livewire.</b>
-            </x-warning>
+        <div class="space-y-4">
+            <p>
+                TallStackUI is a component library that was designed for Livewire 3, but after various requests
+                from the entire user community, <b>you can use form components out of Livewire components.</b>
+                Check below the list of all components that can be used out of Livewire components, and also those that cannot.
+            </p>
+            <div class="mt-2 space-y-4">
+                <p class="text-lg font-medium">Components that CAN be used out of Livewire component ✅</p>
+                <ul class="ml-2 list-inside list-decimal marker:font-bold">
+                    <li>Checkbox</li>
+                    <li>Color</li>
+                    <li>Date</li>
+                    <li>Input</li>
+                    <li>Number</li>
+                    <li>Password</li>
+                    <li>Pin</li>
+                    <li>Radio</li>
+                    <li>Range</li>
+                    <li>Tag</li>
+                    <li>Time</li>
+                    <li>Textarea</li>
+                    <li>Toggle</li>
+                    <li>Select</li>
+                </ul>
+                <p class="text-lg font-medium">Components that CAN'T be used out of Livewire component ❌</p>
+                <ul class="ml-2 list-inside list-decimal marker:font-bold">
+                    <li>Loading</li>
+                    <li>Upload</li>
+                    <li>Reactions</li>
+                    <li>Signature</li>
+                    <li>Table</li>
+                </ul>
+                <p>
+                    Many other components can be used out of Livewire components, such as alert, modal, dropdown, etc. These are components that do not contain any logic that depends on Livewire.
+                </p>
+            </div>
         </div>
     </x-section>
     <x-section title="Example" disable-copy>
