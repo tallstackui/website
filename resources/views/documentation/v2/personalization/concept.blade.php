@@ -1,7 +1,3 @@
-@php
-    foreach (apply_prefix($__data) as $key => $value) $$key = $value;
-@endphp
-
 <x-layout :torchlight="false">
     <x-slot:title>
         Personalization Concepts

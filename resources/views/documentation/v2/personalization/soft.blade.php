@@ -11,80 +11,79 @@
     </x-slot:description>
     <x-section title="Concept" disable-copy>
         <p class="mb-4">
-            <u>Soft personalization consists of personalize components at run time</u>, through a service provider, such as <x-block>AppServiceProvider</x-block>.
-            The idea behind soft personalization is to tap into personalizable blocks of each component. Even if you are just starting
-            to work with Laravel and Livewire, with a little attention to the documents below you will be able to customize the components
-            using this concept.
+            The soft personalization involves personalizing components at runtime, either through a service provider like
+            AppServiceProvider or object classes. The idea behind soft personalization is to explore the building blocks
+            of personalization for each component. Even if you are starting with Laravel, with a little attention to the docs
+            below, you will be able to fully personalize the components using this concept.
         </p>
     </x-section>
-    <x-section title="Example of Component Structure" disable-copy>
-        <div class="mb-4 inline-flex items-center gap-1">
-            <p>
-                Example of the <a href="{{ route('documentation.v2.ui.avatar') }}" wire:navigate class="underline">Avatar</a> component classes
-                <x-outdated-contente-tooltip />
-            </p>
-        </div>
-        <x-code language="php" :contents="$avatar" disable-copy/>
-        <p class="mt-2">
-            All component classes are divided into class blocks applicable to their appropriate required locations in the
-            Blade file associated with the component. TallStackUI was designed with soft personalization in mind: an easy way
-            to personalize components, so even if the developer is a beginner, he doesn't need to have difficulty personalizing the components.
+    <x-section title="Tracing TailwindCSS Classes" disable-copy>
+        <p class="mb-4">
+            Since the idea of soft personalization is to apply personalization through PHP object classes, the first thing you
+            need to do is make sure that TailwindCSS tracks the classes that will be defined from your application's <x-block>*.php</x-block> files.
+            To do this, you need to edit your <x-block>tailwind.config.js</x-block> file by inserting this content:
         </p>
+        <x-code language="js" :contents="$tailwindcss" disable-copy/>
     </x-section>
     <x-section title="Start the Personalization" disable-copy>
         <p class="mb-4">
-            Let's take a look at an example:
+            Now that you havve prepared TailwindCSS to track your custom classes, let's start
+            customizing your components. Let's take a look at an example:
         </p>
         <x-code language="php" :contents="$example" disable-copy/>
         <p class="mt-2">
-            In this example we are <u>touching and replacing all the classes</u> in the <x-block>input.class.base</x-block>
+            In this example we are <u>touching and replacing all the classes</u> in the <x-block>input.base</x-block>
             block of the <x-block>input</x-block> component with the content: <x-block>w-full rounded-full</x-block>.
-            This means that every input component displayed on the application pages will have these classes, instead of the
-            original component classes.
+            <b>This means that every input component displayed on the application pages will have these classes, instead of the
+            original component classes.</b>
+        </p>
+    </x-section>
+    <x-section title="Personalization Blocks" disable-copy>
+        <p class="mb-4">
+            At this point you may be wondering how to "discover" the blocks of each component. To do this, when
+            browsing the documentation of each component individually you will notice a button called
+            <x-block>Personalize: Component Name</x-block> which, when clicked, will display a modal containing
+            all the blocks - and their names, as well as the original classes that are defined by each block.
         </p>
     </x-section>
     <x-section title="Fluent Personalization" disable-copy>
         <p class="mb-4">
-            Just like <a href="https://pestphp.com" target="_blank" class="underline">Pest</a>, TallStackUI offers a concept of
-            fluency when using the <x-block>and</x-block> like a property or method:
-        </p>
-        <x-code language="php" :contents="$fluent" disable-copy/>
-        <p class="">
+            Since soft personalization was created to be easy to use, just like <a href="https://pestphp.com" target="_blank" class="underline">Pest</a>,
+            the soft personalization offers a concept of fluency when using the <x-block>and</x-block> like a property or method.
             The idea behind this approach is to personalize more than one component at the same time.
         </p>
+        <x-code language="php" :contents="$fluent" disable-copy/>
     </x-section>
     <x-section title="Multiple Personalization Ways" disable-copy>
         <p class="mb-4">
-            You can personalize one block at a time or all at once:
+            Since a component has several blocks that organize the classes applied to the component,
+            you can personalize one block at a time or all of them at once:
         </p>
         <x-code language="php" :contents="$usages" disable-copy/>
     </x-section>
     <x-section title="Invokable Class" disable-copy>
         <p class="mb-4">
             You may have noticed that in the example above we used the <x-block>InputPersonalization</x-block> class.
-            This is a simple invokable class, because TallStackUI also allows you to make your personalization into classes.
-            This approach is ideal if you are someone who prioritizes organization above all else. Let's take a look at an example:
+            This is a simple invokable object class, because soft personalization also allows you to make your personalization into object invokable
+            classes. This approach is ideal if you are someone who prioritizes organization above all else. Let's take a look at an example:
         </p>
-        <p class="mt-4">1. Preparing:</p>
+        <p class="mt-4">Preparing:</p>
         <x-code language="php" :contents="$invokableExample" disable-copy/>
-        <p class="mt-2">2. Personalizing:</p>
+        <p class="mt-2">Personalizing:</p>
         <x-code language="php" :contents="$invokableClass" disable-copy/>
     </x-section>
     <x-section title="Component Data Parameters" disable-copy>
         <p class="mb-4">
             You may have noticed that the example above there is a variable called <x-block>$data</x-block>. This variable is an array
-            containing all the component's properties, <u>including the values passed when you used the component somewhere in your application.</u>
+            containing all the component's properties, including the values passed when you used the component somewhere in your application.
         </p>
         <p class="mt-4">Using the <x-block>input</x-block> like this:</p>
         <x-code language="blade" :contents="$usingComponent"/>
         <p class="mt-2">The <x-block>$data</x-block> will be something like:</p>
         <x-code language="php" :contents="$data" disable-copy/>
-        <p class="">
-            You can use this to interact with your personalization.
-        </p>
     </x-section>
     <x-section title="Interacting with Default Classes" disable-copy>
-        <p class="mb-4">
+        <div class="mb-4">
             Although all the examples above are valid, they overwrite the original block classes by defining the second parameter
             of the <x-block>block</x-block> method, this is a way of doing a <u>complete replacement of the original component classes
             by the blocks</u>, an expected behavior when the soft personalization was created. Luckily we have an easy way to interact
@@ -92,7 +91,7 @@
             <x-code :contents="$replace" disable-copy/>
             <p class="mt-2">
                 Note that in the example above <u>we omitted the second parameter of the <x-block>block</x-block> method</u>,
-                this way we can access four useful methods that allow us to touch the component's original
+                this way we can access <b>four useful methods</b> that allow us to touch the component's original
                 classes in an easy way in order to make modifications while maintaining the rest of the original content.
             </p>
             <p class="mt-4">All the four methods:</p>
@@ -103,77 +102,40 @@
                 application, so all the work (🥵) you need to do is:
             </p>
             <x-code :contents="$realExample" disable-copy/>
-            <p class="mt-4">
-                Without spending a lot of time, without a lot of effort, without a lot of technical
-                knowledge you have just achieved your goal in an extremely quick, expressive and direct way.
-                Isn't that amazing? 😎
-            </p>
-        </p>
+        </div>
     </x-section>
-    <x-section title="Scoped Personalization" disable-copy>
+    <x-section title="Scoped Soft Personalization" disable-copy>
         <p>
-            Although soft personalization is powerful and easy to use, there is one problem: all soft
-            personalization is applied to all components, and it is not possible to assign specific
-            personalization to a component only once. Therefore, <u>starting from version 1.9.0 you can
-            set the scoped personalization.</u> Just as in VueJS where we have CSS scoped, CSS applied only
-            to the component to be defined, TallStackUI offers the <x-block>personalize</x-block> attribute in all components
-            allowing interaction with the classes so that the personalization is applied only to the
-            component that defines the personalization. Let's take a look at an example:
+            While soft personalization is powerful and easy to use, there is a catch: <u>all soft personalization are applied to all components</u>,
+            and you cannot assign specific personalization to a component only once. However, just like in VueJS, where we have scoped CSS -
+            CSS applied only to the component that defined the scope, TallStackUI offers the same concept of scoped personalization.
+            Let's take a look at an example:
         </p>
-        <x-code language="blade" :contents="$scopedPersonalization" disable-copy/>
-        <p class="mb-2">Considering this code above, then this will be the result:</p>
-        <div class="space-y-4">
+        <div class="my-4 space-y-4">
             <x-alert>This is a normal Alert component</x-alert>
 
-            <x-alert :personalize="[
-                'wrapper' => [
-                    'replace' => [
-                        'rounded-lg' => 'rounded-full',
-                    ],
-                ]
-            ]">
+            <x-alert scope="circle">
                 This is a fully round Alert component
             </x-alert>
         </div>
-        <p class="mt-2">
-            Just like soft personalization, scoped personalization needs to target a
-            specific block that will receive the personalization. Let's take a look at other
-            examples and possibilities:
-        </p>
-        <x-code language="blade" :contents="$scopedPersonalizationExamples" disable-copy/>
-        <x-warning class="mt-4">
-            Unlike soft personalization, scoped personalization will not throw an exception
-            when the block to be personalized does not exist. Therefore, if there is an error
-            in the block name or wrong block name, the application will not generate a visual
-            error for the end user, the personalization will just not be applied.
-        </x-warning>
-        <p class="mt-2">
-            <u>Starting from version 1.30.0</u> you can pass a class name that contains a <x-block>__invoke</x-block> public method
-            to the <x-block>personalize</x-block> attribute to make the personalization more organized and reusable.
-            Let's take a look at an example:
-        </p>
-        <p class="mt-2">Blade:</p>
-        <x-code language="blade" :contents="$scopedPersonalizationWithClassBladeExample" disable-copy/>
-        <p>PHP:</p>
-        <x-code :contents="$scopedPersonalizationWithClassPhpExample" disable-copy/>
         <p>
-            You may have noticed that in the example above we have an array called <x-block>$classes</x-block> as
-            the parameter of the <x-block>__invoke</x-block> method, this array is an array with all classes that
-            came from the original personalization defined to the component.
+            Notice how one alert is normal while the other is fully rounded? This was
+            only possible thanks to scoped soft personalization, which instead of turning all alerts into
+            rounded alerts, turned only the one that was defined with the circle scope. Now let's see how
+            to achieve the same result as in the example above:
         </p>
-    </x-section>
-    <x-section title="Tracing TailwindCSS Classes" disable-copy>
-        <p class="mb-4">
-            If you are personalizing your components, there is something you should know. As classes are TailwindCSS
-            classes you need to ensure that TailwindCSS watches the files from which the classes you defined come,
-            so personalization will take effect. To do this, you must edit your <x-block>tailwind.config.js</x-block>
-            file inserting this content:
+        <p class="mt-4">
+            First, let's do the same soft personalization via service provider:
         </p>
-        <x-code language="js" :contents="$tailwindcss" disable-copy/>
-    </x-section>
-    <x-section title="Personalizable Blocks" disable-copy>
-        <p class="mb-4">
-            All component documentation mentions their respective blocks in a button at the top of each page.
+        <x-code :contents="$scopedPersonalizationDefinition" disable-copy/>
+        <p>
+            The difference is that we must instruct that personalization to be applied to a scope - <b>defined by a unique name</b>,
+            and as you can see above, there are two ways to define the scope name. Just choose one of them and use it as you wish.
         </p>
+        <p class="mt-4">
+            <b>Lastly and most importantly</b>, we must apply the use of the scope to the components that are <x-block>alert</x-block>
+            and that we want to receive the effects of the defined personalization:
+        </p>
+        <x-code language="blade" :contents="$scopedPersonalizationUsage" disable-copy/>
     </x-section>
 </x-layout>

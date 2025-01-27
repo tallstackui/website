@@ -520,16 +520,15 @@
     },
     "docs.personalization.soft": {
         "0": "Concept",
-        "1": "Example of Component Structure",
+        "1": "Tracing TailwindCSS Classes",
         "2": "Start the Personalization",
-        "3": "Fluent Personalization",
-        "4": "Multiple Personalization Ways",
-        "5": "Invokable Class",
-        "6": "Component Data Parameters",
-        "7": "Interacting with Default Classes",
-        "8": "Scoped Personalization",
-        "9": "Tracing TailwindCSS Classes",
-        "10": "Personalizable Blocks"
+        "3": "Personalization Blocks",
+        "4": "Fluent Personalization",
+        "5": "Multiple Personalization Ways",
+        "6": "Invokable Class",
+        "7": "Component Data Parameters",
+        "8": "Interacting with Default Classes",
+        "9": "Scoped Soft Personalization"
     },
     "docs.personalization.deep": {
         "0": "Concept",

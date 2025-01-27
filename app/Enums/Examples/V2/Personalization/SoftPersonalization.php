@@ -4,6 +4,17 @@ namespace App\Enums\Examples\V2\Personalization;
 
 class SoftPersonalization
 {
+    public const TAILWINDCSS = <<<'HTML'
+    content: [
+        // If you are personalizing into service providers...
+        './app/Providers/*.php', // [tl! highlight]
+
+        // If you are using object invokable classes... 
+        // Don't worry! You'll understand it below!
+        './app/NameSpaceGoesHere/**/*.php', // [tl! highlight]
+    ],
+    HTML;
+
     public const EXAMPLE = <<<'HTML'
     use TallStackUi\Facades\TallStackUi;
 
@@ -15,46 +26,13 @@ class SoftPersonalization
 
            TallStackUi::personalize()
                ->form('input')
-               ->block('input.class.base', 'w-full rounded-full');
+               ->block('input.base', 'w-full rounded-full');
 
             // or...
 
            TallStackUi::personalize('form.input')
-               ->block('input.class.base', 'w-full rounded-full');
+               ->block('input.base', 'w-full rounded-full');
         }
-    }
-    HTML;
-
-    public const AVATAR = <<<'HTML'
-    public function personalization(): array
-    {
-        return Arr::dot([
-            'wrapper' => [
-                'class' => 'inline-flex shrink-0 items-center justify-center overflow-hidden',
-                'sizes' => [
-                    'sm' => 'w-8 h-8 text-xs',
-                    'md' => 'w-12 h-12 text-lg',
-                    'lg' => 'w-14 h-14 text-2xl',
-                ],
-            ],
-            'content' => [
-                'image' => [
-                    'class' => 'shrink-0 object-cover object-center text-xl',
-                    'sizes' => [
-                        'sm' => 'w-8 h-8 text-sm',
-                        'md' => 'w-12 h-12 text-lg',
-                        'lg' => 'w-14 h-14 text-2xl',
-                    ],
-                ],
-                'text' => [
-                    'class' => 'font-semibold',
-                    'colors' => [
-                        'colorful' => 'text-white',
-                        'white' => 'text-neutral-700',
-                    ],
-                ],
-            ],
-        ]);
     }
     HTML;
 
@@ -69,16 +47,16 @@ class SoftPersonalization
 
            TallStackUi::personalize()
                ->form('input')
-               ->block('input.class.base', 'w-full rounded-full')
+               ->block('input.base', 'w-full rounded-full')
                ->and // [tl! highlight]
                ->avatar()
                ->block('wrapper.sizes.sm', 'w-8 h-8 text-xs')
 
-           // 2. Method
+           // Or, 2. Method
 
            TallStackUi::personalize()
                ->form('input')
-               ->block('input.class.base', 'w-full rounded-full')
+               ->block('input.base', 'w-full rounded-full')
                ->and() // [tl! highlight]
                ->avatar()
                ->block('wrapper.sizes.sm', 'w-8 h-8 text-xs')
@@ -96,11 +74,11 @@ class SoftPersonalization
         {
            TallStackUi::personalize()
                ->form('input')
-               ->block('input.class.base', new InputPersonalization())
+               ->block('input.base', new InputPersonalization())
                ->block('icon.wrapper', fn (array $data) => 'px-4 py-2')
                ->block('icon.paddings.left', 'pl-10');
 
-           // or ...
+           // Or ...
 
             TallStackUi::personalize()
                ->form('input')
@@ -123,19 +101,18 @@ class SoftPersonalization
         {
            TallStackUi::personalize()
                ->form('input')
-               ->block('input.class.base', new InputPersonalization()); // [tl! focus]
+               ->block('input.base', new InputPersonalization()); // [tl! focus]
         }
     }
     HTML;
 
     public const INVOKABLE_CLASS = <<<'HTML'
+    // You must track this namespace in the TailwindCSS config file!
     namespace App\TallStackUi;
 
-    use TallStackUi\Contracts\Personalizable; // [tl! highlight]
-
-    class InputPersonalization implements Personalizable // [tl! highlight]
+    class InputPersonalization
     {
-        public function __invoke(array $data): string
+        public function __invoke(array $data): string // [tl! highlight]
         {
             return 'w-full rounded-full';
         }
@@ -144,6 +121,31 @@ class SoftPersonalization
 
     public const USING_COMPONENT = <<<'HTML'
     <x-input label="Name" hint="Your full name" />
+    HTML;
+
+    public const DATA = <<<'HTML'
+    [
+        "label" => "Name"
+        "hint" => "Your full name"
+        "icon" => null
+        "clearable" => null
+        "invalidate" => null
+        "position" => "left"
+        "prefix" => null
+        "suffix" => null
+        "componentName" => "input"
+        "attributes" => Illuminate\View\ComponentAttributeBag {...}
+        "blade" => Illuminate\View\InvokableComponentVariable {...}
+        "personalization" => Illuminate\View\InvokableComponentVariable {...}
+        "ignoredParameterNames" => Illuminate\View\InvokableComponentVariable {...}
+        "classes" => TallStackUi\View\Components\Form\Input::classes(?Closure $callback = null): [...]
+        "slot" => Illuminate\View\ComponentSlot {...}
+        "__laravel_slots" => [...]
+        "livewire" => true
+        "property" => null
+        "error" => false
+        "id" => null
+    ]
     HTML;
 
     public const REPLACE = <<<'HTML'
@@ -155,14 +157,14 @@ class SoftPersonalization
         {
            TallStackUi::personalize()
                ->form('input')
-               ->block('input.class.base')
+               ->block('input.base')
                ->replace('rounded-md', 'rounded-full'); // [tl! focus]
 
-           // or...
+           // Or...
 
           TallStackUi::personalize()
               ->form('input')
-              ->block('input.class.base')
+              ->block('input.base')
               ->replace([ // [tl! focus:3]
                   'rounded-md' => 'rounded-full',
                   'border-0' => 'border-1',
@@ -180,14 +182,15 @@ class SoftPersonalization
         {
            TallStackUi::personalize()
                ->form('input')
-               ->block('input.class.base')
-               // string or array [tl! highlight:7]
+               ->block('input.base')
+               // Replace: replace parts of the original content. [tl! highlight:8]
+               // Accepts: single replace or an array for multiples replaces
                ->replace('rounded-md', 'rounded-full')
-               // string or array
+               // Remove: single removal or an array for multiple removals
                ->remove('w-full')
-               // string
+               // Append: appends classes as string
                ->append('px-4')
-               // string
+               // Prepend: prepend classes as string
                ->prepend('py-4');
         }
     }
@@ -202,105 +205,34 @@ class SoftPersonalization
         {
            TallStackUi::personalize()
                ->form('input')
-               ->block('input.class.base')
+               ->block('input.base')
                ->replace('rounded-md', 'rounded-full'); // [tl! highlight]
         }
     }
     HTML;
 
-    public const SCOPED_PERSONALIZATION = <<<'HTML'
-    <!-- Displaying a normal Alert component -->
-    <x-alert>This is a normal Alert component</x-alert>
+    public const SCOPED_PERSONALIZATION_DEFINITION = <<<'HTML'
+    use TallStackUi\Facades\TallStackUi;
 
-    <!-- Displaying a fully round alert component -->
-    <x-alert :personalize="[
-        'wrapper' => [
-            'replace' => [
-                'rounded-lg' => 'rounded-full',
-            ],
-        ]
-    ]">
-        This is a fully round Alert component
-    </x-alert>
-    HTML;
-
-    public const SCOPED_PERSONALIZATION_EXAMPLES = <<<'HTML'
-    <x-alert :personalize="[
-        {{-- Override all content [tl! highlight]--}}
-        'content.wrapper' => 'flex items-start',
-        'wrapper' => [
-            {{-- Replacing [tl! highlight]--}}
-            'replace' => [
-                'rounded-lg' => 'rounded-full',
-            ],
-        ],
-        'text.title' => [
-            {{-- Removing [tl! highlight]--}}
-            'remove' => 'text-lg',
-        ],
-        'text.description' => [
-            {{-- Appending [tl! highlight]--}}
-            'append' => 'p-4',
-        ],
-        'icon.size' => [
-            {{-- Prepending [tl! highlight]--}}
-            'prepend' => 'mr-4',
-        ]
-    ]">
-        This is a fully personalized Alert component
-    </x-alert>
-    HTML;
-
-    public const SCOPED_PERSONALIZATION_WITH_CLASS_BLADE_EXAMPLE = <<<'HTML'
-    <x-alert :personalize="\App\ScopedPersonalization\Alert::class" />
-    HTML;
-
-    public const SCOPED_PERSONALIZATION_WITH_CLASS_PHP_EXAMPLE = <<<'HTML'
-    namespace App\ScopedPersonalization;
-    
-    class Alert
+    class AppServiceProvider extends ServiceProvider
     {
-        public function __invoke(array $classes): array
+        public function boot(): void
         {
-            return [
-                'wrapper' => [
-                    'replace' => [
-                        'rounded-lg' => 'rounded-full',
-                    ],
-                ],
-            ];
-        }    
+            TallStackUi::personalize('alert')
+                ->scope('circle') // [tl! highlight]
+                ->block('wrapper')
+                ->replace('rounded-lg', 'rounded-full');
+                
+            // Or ...
+            
+            TallStackUi::personalize('alert', scope: 'circle') // [tl! highlight]
+                ->block('wrapper')
+                ->replace('rounded-lg', 'rounded-full');
+        }
     }
     HTML;
 
-    public const DATA = <<<'HTML'
-    [
-      "id" => null
-      "label" => "Name"
-      "hint" => "Your full name"
-      "icon" => null
-      "position" => "left"
-      "validate" => true
-      "componentName" => "input"
-      "attributes" => \Illuminate\View\ComponentAttributeBag [...]
-      "personalization" => \Illuminate\View\InvokableComponentVariable [...]
-      "colors" => \Illuminate\View\InvokableComponentVariable [...]
-      "configurations" => [...]
-      "slot" => \Illuminate\View\ComponentSlot [...]
-      "__laravel_slots" => [...]
-    ]
-    HTML;
-
-    public const TAILWINDCSS = <<<'HTML'
-    content: [
-        // If you are personalizing into AppServiceProvider or other
-
-        './app/Providers/MyCustomServiceProvider.php', // [tl! highlight:1]
-        './app/Providers/AppServiceProvider.php',
-
-        // If you are using invokable classes...
-
-        './app/TallStackUi/**/*.php', // [tl! highlight]
-    ],
+    public const SCOPED_PERSONALIZATION_USAGE = <<<'HTML'
+    <x-alert text="This is a fully round Alert component" scope="circle" />
     HTML;
 }

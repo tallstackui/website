@@ -16,5 +16,8 @@
             the configuration file:
         </p>
         <x-code language="shell" :contents="$command"/>
+        <p>
+            The configuration file will be published to <x-block>config/tallstackui.php</x-block>.
+        </p>
     </x-section>
 </x-layout>
