@@ -114,10 +114,11 @@ describe('V2', function () {
         $this->get($route)->assertOk();
     })->with([
         fn () => route('documentation.v2.installation'),
+        fn () => route('documentation.v2.documentation'),
+        fn () => route('documentation.v2.component-prefix'),
+        fn () => route('documentation.v2.alpinejs'),
         fn () => route('documentation.v2.troubleshooting'),
-        fn () => route('documentation.v2.updates'),
-        fn () => route('documentation.v2.faq'),
-        fn () => route('documentation.v2.summer-release'),
+        fn () => route('documentation.v2.upgrade-guide'),
         //
         fn () => route('documentation.v2.form.input'),
         fn () => route('documentation.v2.form.password'),

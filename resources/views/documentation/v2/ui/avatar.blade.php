@@ -143,15 +143,15 @@
     <x-separator text="Image" />
     <x-section title="Image" description="An option to use an image as avatar." new>
         <x-preview language="blade" :contents="$image">
-            <x-avatar image="https://aj.dev.br/assets/images/aj.jpg" xs />
-            <x-avatar image="https://aj.dev.br/assets/images/aj.jpg" sm />
-            <x-avatar image="https://aj.dev.br/assets/images/aj.jpg" md />
-            <x-avatar image="https://aj.dev.br/assets/images/aj.jpg" lg />
+            <x-avatar image="https://media.licdn.com/dms/image/v2/D4D03AQFQSu1SmabfuA/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1670030528182?e=1744243200&v=beta&t=ItguA34HBTnW7P3U6BObdUICSHf7D5hdJfbLlHmqA2w" xs />
+            <x-avatar image="https://media.licdn.com/dms/image/v2/D4D03AQFQSu1SmabfuA/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1670030528182?e=1744243200&v=beta&t=ItguA34HBTnW7P3U6BObdUICSHf7D5hdJfbLlHmqA2w" sm />
+            <x-avatar image="https://media.licdn.com/dms/image/v2/D4D03AQFQSu1SmabfuA/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1670030528182?e=1744243200&v=beta&t=ItguA34HBTnW7P3U6BObdUICSHf7D5hdJfbLlHmqA2w" md />
+            <x-avatar image="https://media.licdn.com/dms/image/v2/D4D03AQFQSu1SmabfuA/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1670030528182?e=1744243200&v=beta&t=ItguA34HBTnW7P3U6BObdUICSHf7D5hdJfbLlHmqA2w" lg />
         </x-preview>
     </x-section>
     <x-section title="Default Alt Text" new>
         <x-preview language="blade" :contents="$imageAlt">
-            <x-avatar image="https://aj.dev.br/assets/images/aj.jpg"
+            <x-avatar image="https://media.licdn.com/dms/image/v2/D4D03AQFQSu1SmabfuA/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1670030528182?e=1744243200&v=beta&t=ItguA34HBTnW7P3U6BObdUICSHf7D5hdJfbLlHmqA2w"
                       text="Taylor Otwell, Creator of Laravel" />
         </x-preview>
     </x-section>
