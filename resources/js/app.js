@@ -7,32 +7,6 @@ document.addEventListener('alpine:init', () => {
     window.Alpine.data('clipboard', clipboard)
 });
 
-/* smooth navigation */
-// disabled when wire:navigate was enabled
-// document.addEventListener('livewire:init', () => {
-//     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-//         anchor.addEventListener('click', function (e) {
-//             e.preventDefault()
-//
-//             const hash = this.getAttribute('href')
-//
-//             document.querySelector(hash)?.scrollIntoView({
-//                 behavior: 'smooth'
-//             })
-//
-//             history.pushState(null, null, hash)
-//         })
-//     })
-//
-//     const hash = window.location.hash
-//
-//     if (hash) {
-//         document.querySelector(hash)?.scrollIntoView({
-//             behavior: 'smooth'
-//         })
-//     }
-// })
-
 /* algolia */
 docsearch({
     appId: 'I2TEBW9Z1H',
@@ -40,5 +14,8 @@ docsearch({
     indexName: 'tallstackui',
     container: '#docsearch',
     insights: true,
-    debug: false
+    debug: false,
+    searchParameters: {
+        facetFilters: ['version:' + window.version],
+    },
 });

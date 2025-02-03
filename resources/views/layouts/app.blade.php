@@ -91,6 +91,9 @@
         </div>
     </div>
     <x-back-to-top />
+    <script>
+        var version = @js($current());
+    </script>
     @livewireScripts
 </body>
 </html>
