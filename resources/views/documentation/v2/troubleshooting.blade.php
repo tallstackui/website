@@ -21,15 +21,12 @@
     <x-section title="Losing Component Attributes" disable-copy>
         <div class="space-y-4">
             <p>
-                If you are using TallStackUI <u>on a version lower than Laravel 10.35</u> you will face
-                an issue related to component attributes. <b>This happens due to a bug in Laravel
-                below version 10.35</b> that means that when passing attributes to a component that contains child
-                components, such as input, buttons, badge, and others, they are not applied:
+                If you are using TallStackUI on a version prior to Laravel 10.35, you will face an issue related to component attributes.
+                This is due to an issue in Laravel below version 10.35 which means that when passing attributes to a component that has
+                child components like input, buttons, badge, etc., the attributes are lost between the parent component and the child
+                component. To fix this issue, ensure that your Laravel version is above 10.35.
             </p>
             <x-code language="blade" :contents="$laravel1035Bug" disable-copy />
-            <p class="underline decoration-red-500 decoration-4 underline-offset-4">
-                To fix this issue, ensure your Laravel is updated to a version higher than 10.35.
-            </p>
         </div>
     </x-section>
 </x-layout>

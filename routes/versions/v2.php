@@ -9,7 +9,7 @@ Route::view('/documentation', 'documentation.v2.documentation')->name('documenta
 Route::view('/component-prefix', 'documentation.v2.component-prefix', Example::ComponentPrefix->variables())->name('component-prefix');
 Route::view('/alpinejs', 'documentation.v2.alpinejs', Example::Alpine->variables())->name('alpinejs');
 Route::view('/troubleshooting', 'documentation.v2.troubleshooting', Example::Troubleshooting->variables())->name('troubleshooting');
-Route::view('/upgrade-guide', 'documentation.v2.upgrade-guide')->name('upgrade-guide');
+Route::view('/upgrade-guide', 'documentation.v2.upgrade-guide', Example::UpgradeGuide->variables())->name('upgrade-guide');
 
 Route::prefix('/form')
     ->name('form.')

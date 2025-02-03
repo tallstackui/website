@@ -66,6 +66,7 @@ enum Example: string
     case Troubleshooting = 'Others\\Troubleshooting';
     case Updates = 'Others\\Updates';
     case Upload = 'Form\\Upload';
+    case UpgradeGuide = 'Others\\UpgradeGuide';
     case Welcome = 'Others\\Welcome';
     case WithoutLivewire = 'Form\\WithoutLivewire';
 

@@ -8,132 +8,135 @@
             This page transcribes a conversation between the creator of the TallStackUI - <a href="https://github.com/devajmeireles" target="_blank" class="underline">AJ</a>, and you.
         </p>
     </blockquote>
-    <x-section class="space-y-4" title="Before Start" disable-copy>
+    <x-section title="Before Start" disable-copy>
         <div class="space-y-4">
             <p>
-                Antes de começar a atualizar a sua aplicação para a versão 2.x da TallStackUI, eu, <a href="https://github.com/devajmeireles" target="_blank" class="underline">AJ</a>,
-                gostaria de te agradecer por utilizar a TallStackUI. Eu me sinto muito feliz por entender que ao resolver um problema meu, eu pude ajudar você também, porque a
-                TallStackUI foi conceituada para resolver um problema meu em relação a não confiar em outras bibliotecas de componentes que são abandonadas ao passar do tempo.
+                Before you start updating your application to TallStackUI 2.x, I, <a href="https://github.com/devajmeireles" target="_blank" class="underline">AJ</a>,
+                would like to thank you for using TallStackUI. I am very happy to know that by solving my problem, I was able to help you too, because TallStackUI
+                was designed to solve my problem of not relying on other component libraries that are abandoned over time.
             </p>
             <p>
-                Além disso, gostaria de te pedir desculpas pelo atraso! Sim, eu considero que foi um pequeno atraso. Meu objetivo era lançar a versão 2.x na mesma data
-                de lançamento da versão 1.x, em 28 de Novembro. Infelizmente não pude cumprir esse prazo por diversos problemas que tive em meu escritório.
+                Also, I would like to apologize for the delay! Yes, I consider it a big delay. My goal was to release version 2.x on the same date as version 1.x,
+                on November 28th. Unfortunately, I was unable to meet this deadline due to several issues I had in my office.
             </p>
         </div>
     </x-section>
-    <x-section class="space-y-4" title="Whats News" disable-copy>
+    <x-section title="Whats News" disable-copy>
         <div class="space-y-4">
             <p>
-                A versão 2.x da TallStackUI traz diversas coisas que eu considero que são importantes. Você pode pensar em: componentes, componentes, e componentes, mas não
-                é apenas de novos componentes que se mantém uma biblioteca como a TallStackUI. A versão 2.x traz novos componentes, melhorias dos componentes atuais e centenas
-                pequenas correções de bugs.
+                TallStackUI 2.x brings a number of things that I consider important. You can think of components, components, and components, but a library like TallStackUI
+                isn't just about new components. Version 2.x brings new components, improvements to current components, and hundreds of small bug fixes.
             </p>
             <p>
-                Aqui está uma lista resumida do que você pode esperar da versão 2.x 👇
+                Here's a quick list of what you can expect from version 2.x 👇
             </p>
             <div class="pl-4 space-y-4">
                 <div>
-                    <h2 class="text-lg tracking-tight text-pink-600 font-medium">👀 Internamente:</h2>
+                    <h2 class="text-lg tracking-tight text-pink-600 font-medium">👀 Internal:</h2>
                     <ul>
-                        <li>- Estrutura interna redesenhada para melhor manutenção a longo prazo.</li>
-                        <li>- Documentações internas em trechos de lógicas importantes.</li>
-                        <li>- Novos conceitos internos para melhorar a estrutura de arquivos Blade.</li>
-                        <li class="font-bold">- Aumento de performance para renderização de diversos componentes em até 10%</li>
+                        <li>- Redesigned internal structure for better long-term maintenance.</li>
+                        <li>- Internal documentation in important logic sections.</li>
+                        <li>- New internal concepts to improve Blade file structure.</li>
+                        <li class="font-bold">- Increased performance for rendering multiple components by up to 10%</li>
                     </ul>
                 </div>
                 <div>
-                    <h2 class="text-lg tracking-tight text-pink-600 font-medium">🥳 Novos Componentes e Helpers:</h2>
+                    <h2 class="text-lg tracking-tight text-pink-600 font-medium">🥳 New Components and Helper:</h2>
                     <ul>
                         <li>- Carousel</li>
                         <li>- Environment</li>
                         <li>- Layout</li>
                         <li>- Signature</li>
-                        <li class="font-bold">- Novo Helper: EnvBar</li>
+                        <li class="font-bold">- New Helper: EnvBar</li>
                     </ul>
                 </div>
                 <div>
-                    <h2 class="text-lg tracking-tight text-pink-600 font-medium">🌐 Outros:</h2>
+                    <h2 class="text-lg tracking-tight text-pink-600 font-medium">🌐 Others:</h2>
                     <ul>
-                        <li>- Novo conceito de Soft Personalization Scoped.</li>
-                        <li>- Novo conceito para personalização de cores.</li>
-                        <li>- Novo conceito de itens customizados.</li>
-                        <li>- Componente <x-block>Card</x-block>: adição de cores, suporte a imagem e suporte a ser minimizável.</li>
-                        <li>- Componente <x-block>Dropdown</x-block>: adição de suporte a sub-dropdown.</li>
-                        <li>- Componente <x-block>Floating</x-block>: possibilidade de personalizar a classe do Floating pelo componente que o implementa.</li>
-                        <li>- Componente <x-block>Form Color</x-block>: adição de opção clearable.</li>
-                        <li>- Componente <x-block>Form Input</x-block>: adição de opção clearable.</li>
-                        <li>- Componente <x-block>Form Input</x-block>: possibilidade de definição de <x-block>invalidate</x-block> globalmente.</li>
-                        <li>- Componente <x-block>Form Select Styled</x-block>: adição de lazy loading.</li>
-                        <li>- Componente <x-block>Form Select Styled</x-block>: adição de agrupação de resultados.</li>
-                        <li>- Componente <x-block>Form Select Styled</x-block>: não requer mais o uso <x-block>select</x-block>.</li>
-                        <li>- Componente <x-block>Form Password</x-block>: possibilidade de alterar o algoritmo de geração de senha.</li>
-                        <li>- Componente <x-block>Form Number</x-block>: possibilidade de aumentar/diminuir por atributo <x-block>step</x-block>.</li>
-                        <li>- Componente <x-block>Form Upload</x-block>: possibilidade de validação ANTES do upload.</li>
-                        <li>- Componente <x-block>Form Upload</x-block>: adição de possibilidade de controlar o fechamento do Floating após o upload.</li>
-                        <li>- Componente <x-block>Rating</x-block>: possibilidade de usar qualquer ícone.</li>
-                        <li>- Componente <x-block>Slide</x-block>: possibilidade de abertura via novas posições: top e bottom.</li>
-                        <li>- Componente <x-block>Stats</x-block>: adição de suporte a wire:click.</li>
-                        <li>- Helper <x-block>darkTheme</x-block>: melhorias diversas - atributos como objeto.</li>
-                        <li>- Helper <x-block>Debug Mode</x-block>: necessidade de ignorar componentes pelo nome da classe ao invés de string.</li>
-                        <li>- Novo namespace para Toast, Dialog e Banner: <x-block>TallStackUi\Foundation\Interactions</x-block>.</li>
+                        <li>- New Scoped Soft Personalization concept.</li>
+                        <li>- New colors personalization concept.</li>
+                        <li>- New icons concept.</li>
+                        <li>- <x-block>Card</x-block> Component: support of colors, image and minimize effect.</li>
+                        <li>- <x-block>Dropdown</x-block> Component: support to child dropdown.</li>
+                        <li>- <x-block>Floating</x-block> Component: ability to personalize floating class per component.</li>
+                        <li>- <x-block>Form Color</x-block> Component: support of clearable option.</li>
+                        <li>- <x-block>Form Input</x-block> Component: support of clearable option.</li>
+                        <li>- <x-block>Form Input</x-block> Component: ability to globally <x-block>invalidate</x-block> form validation errors.</li>
+                        <li>- <x-block>Form Select Styled</x-block> Component: support of a basic lazy loading.</li>
+                        <li>- <x-block>Form Select Styled</x-block> Component: support of group options.</li>
+                        <li>- <x-block>Form Select Styled</x-block> Component: support of set <x-block>select</x-block> with default values.</li>
+                        <li>- <x-block>Form Password</x-block> Component: ability to change password generator algorithm.</li>
+                        <li>- <x-block>Form Number</x-block> Component: ability to increase/decrease by using <x-block>step</x-block> attribute.</li>
+                        <li>- <x-block>Form Upload</x-block> Component: ability to validate BEFORE the upload.</li>
+                        <li>- <x-block>Form Upload</x-block>Component: ability to control the floating closing effect after upload.</li>
+                        <li>- <x-block>Rating</x-block> Component: ability to use any icon.</li>
+                        <li>- <x-block>Slide</x-block> Component: ability of opening via new positions: top and bottom.</li>
+                        <li>- <x-block>Stats</x-block> Component: support to <x-block>wire:click</x-block>.</li>
+                        <li>- Helper <x-block>darkTheme</x-block>: several enhancements.</li>
+                        <li>- Helper <x-block>Debug Mode</x-block>: now the ignore works with component class name instead of pure string.</li>
                     </ul>
                 </div>
             </div>
-            <x-warning>
-                Com excessão da seção "Internamente", todos os detalhes estão descritos nas respectivas páginas de cada componente.
-            </x-warning>
+            <p>
+                With the exception of the "Internal" section, all details are described on the respective pages for each component.
+            </p>
         </div>
     </x-section>
     <x-section class="space-y-4" title="How to Upgrade" disable-copy>
         <p>
-            Agora que eu listei tudo o que fiz nessa nova versão até agora. <b>Vamos falar sobre como atualizar a sua aplicação da versão 1.x a nova versão, 2.x</b>
-            Em primeiro lugar, é importante mencionar que o <b>quão trabalhoso será atualizar para a versão 2.x dependerá de como está a sua aplicação.</b>
-            Eu atualizei dois meus SaaS apenas trocando a referência de versão no <x-block>composer.json</x-block>
+            Now that I've listed everything I've done in this new version so far, let's talk about how to upgrade your application
+            from version 1.x to the new version, 2.x. First of all, it's important to mention that how much work it will be to upgrade
+            to version 2.x will depend on how your application is doing. I've upgraded two of my SaaS applications by simply changing
+            the version reference in <x-block>composer.json</x-block>
         </p>
-        <div class="pl-4 space-y-2">
+        <div class="pl-4 space-y-4">
             <div>
-                <h2 class="text-lg tracking-tight text-pink-600 font-medium">1. Verifique as Chaves da Soft Personalization:</h2>
+                <h2 class="text-lg tracking-tight text-pink-600 font-medium">1. Check Soft Personalization Keys:</h2>
                 <p>
-                    Antes de iniciar o processo de atualização verifique se o nome das chaves de Soft Personalization continuam as mesmas. Posso ter renomeado alguma
-                    delas para uma melhor organização interna em relação a lógica dos nomes. <b>Se você não fez/faz Soft Personalization, então basta pular essa etapa!</b>
+                    Before starting the update process, check if the names of the Soft Personalization keys remain the same. I've renamed some of them
+                    for better internal organization regarding the naming logic. <b>If you do not use Soft Personalization, then just skip this step!</b>
                 </p>
             </div>
             <div>
-                <h2 class="text-lg tracking-tight text-pink-600 font-medium">2. Refaça a Deep Personalization:</h2>
+                <h2 class="text-lg tracking-tight text-pink-600 font-medium">2. Redo Deep Personalization:</h2>
                 <p>
-                    Embora eu saiba que isso é trabalhoso, se você publicou os arquivos Blade da TallStackUI ou extendeu as classes de componentes para alterar comportamentos específicos
-                    - <u>como o esquema personalização de cores da versão 1.x</u>, <b>recomendamos que realize um backup dos seus arquivos</b>, republique os novos e ajuste os novos arquivos com os seus ajustes.
-                    Isso é necessário porque como estamos falando de uma nova versão diversas mudanças internas foram feitas, então seus arquivos atuais estarão desatualizados.
-                    <b>Se você não fez/faz Deep Personalization, então basta pular essa etapa!</b>
+                    While I know this is a lot of work, if you have published TallStackUI Blade files or extended component classes to change specific behaviors -
+                    such as the 1.x color scheme customization, we recommend that you back up your files, republish the new ones, and adjust the new files with your
+                    adjustments. This is necessary because since we are talking about a new version, several internal changes have been made, so your current files
+                    will be out of date. <b>If you do not use Soft Personalization, then just skip this step!</b>
                 </p>
             </div>
             <div>
-                <h2 class="text-lg tracking-tight text-pink-600 font-medium">3. Salve Qualquer Soft Personalization Scoped:</h2>
+                <h2 class="text-lg tracking-tight text-pink-600 font-medium">3. Save Any Soft Personalization Scoped:</h2>
                 <p>
-                    <b>O conceito de Soft Personalization Scoped mudou na versão 2.x</b>, e a mudança foi para melhor! Então salve todas as suas personalizações para aplicá-las
-                    usando o novo conceito. Te explico tudo sobre isso na página da Soft Personalization. <b>Se você não fez Soft Personalization, então basta pular essa etapa!</b>
+                    The concept of Scoped Soft Personalization has changed in version 2.x, and the change is for the better! So save all your customizations to
+                    apply them using the new concept. I explain everything about this on the Soft Personalization page. <b>If you do not use Soft Personalization, then just skip this step!</b>
                 </p>
             </div>
             <div>
-                <h2 class="text-lg tracking-tight text-pink-600 font-medium">4. Componentes e Atributos Iguais:</h2>
+                <h2 class="text-lg tracking-tight text-pink-600 font-medium">4. Component and Their Attributes:</h2>
                 <p>
-                    Já os componentes e seus atributos, não há mudança, são os mesmos. Neste aspectos, espero que você não tenha nenhum problema.
-                    É por isso que se você utiliza a TallStackUI "de forma básica", então o processo de upgrade se torna extremamente fácil,
-                    como em meus projetos pessoais.
+                    As for the components and their attributes, there is no change, they are the same. In this regard, I hope you will not have any problems.
+                    That is why if you use TallStackUI "in a basic way", then the upgrade process becomes extremely easy, as in my personal projects.
                 </p>
             </div>
             <div>
-                <h2 class="text-lg tracking-tight text-pink-600 font-medium">5. Atualize o Composer:</h2>
+                <h2 class="text-lg tracking-tight text-pink-600 font-medium">5. Update the Composer:</h2>
                 <p>
-                    Ok! Se tudo estiver pronto. Então essa é a hora de atualizar sua aplicação para o beta da versão 2.x. Edite o seu arquivo <x-block>composer.json</x-block> e atualize a
-                    versão da TallStackUI para <x-block>^2.0@beta</x-block>. Após isso, execute o comando: <x-block>rm -fr vendor/ && composer install</x-block>.
-                    <b>Isso irá apagar a sua pasta vendor - por garantia de uma atualização correta - e instalará a nova versão da TallStackUI.</b>
+                    Finally, it's time to update your application to the beta version 2.x. Edit your <x-block>composer.json</x-block> file:
+                </p>
+                <x-code language="json" :contents="$composer" disable-copy />
+                <p>
+                    After that, run this command:
+                </p>
+                <x-code language="shell" :contents="$command" />
+                <p>
+                    This will delete your vendor folder - to ensure a correct update, and install the beta version of TallStackUI.
                 </p>
             </div>
         </div>
         <x-warning>
-            Se você perceber qualquer incoerência com esse guia, <a class="underline" href="{{ route('issue') }}" target="_blank">por gentileza reporte como uma issue no repositório da TallStackUI.</a><br>
-            Se você perceber qualquer má comportamento durante o beta, <a class="underline" href="{{ route('issue') }}" target="_blank">por gentileza reporte como uma issue no repositório da TallStackUI.</a>
+            If you notice any inconsistencies with this guide or any unexpected behavior during the beta phase, <a class="underline" href="{{ route('issue') }}" target="_blank">please help us by reporting as an issue.</a>
         </x-warning>
     </x-section>
 </x-layout>
