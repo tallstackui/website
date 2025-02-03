@@ -4,23 +4,27 @@ namespace App\Enums\Examples\V2\Others;
 
 class Contribution
 {
-    public const LINK = <<<'HTML'
-    ln -s /Users/your-user/your-forked-project-path .
-    HTML;
-
     public const COMPOSER = <<<'HTML'
+    "require": {
+        "tallstackui/tallstackui": "v2.x-dev", // [tl! highlight]
+        
+        // ...
+    },
+    
     // ...
 
-    "repositories": [
+    "repositories": [ // [tl! highlight:5]
         {
             "type": "path",
-            "url": "./packages/tallstackui/tallstackui"
+            "url": "./Users/foobar/tallstackui/tallstackui"
         }
     ],
+    
+    // ...
     HTML;
 
-    public const COMMAND = <<<'HTML'
-    composer require tallstackui/tallstackui:1.x-dev
+    public const COMPOSER_INSTALL_COMMAND = <<<'HTML'
+    composer install
     HTML;
 
     public const DUSK = <<<'HTML'

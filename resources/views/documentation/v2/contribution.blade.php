@@ -11,79 +11,84 @@
     </x-slot:description>
     <x-section title="Possibilities" disable-copy>
         <p>
-            There are several ways to contribute to a library like TallStackUI, <b class="underline">don't think it's just with code.</b>
-            Even if you're not an experienced developer, don't worry, there are other ways to help. Do you know
-            how to write? Well, you can review the texts on both TallStackUI and our website and point out possible
-            flaws. This is a way to contribute. Did you find something wrong with the website, documentation or any component of TallStackUI?
-            Create an issue and report the problem. This is a way to contribute. Do you use and like TallStackUI? Why not share it with your friends?
-            This is a way to contribute. Are you an experienced developer and want to join the team? Feel free to write
-            components, test, bug fix, or other things. This is a way to contribute. Going further, do you like TallStackUI
-            so much that you want to sponsor the project? Well, you can contribute with some financial donation. You
-            have many ways to contribute. Choose one and go for it!
+            There are several ways to contribute to a library like TallStackUi — <b class="underline">it’s not just about code!</b>
+            Even if you’re not an experienced developer, don’t worry — there are other ways to help. Do you enjoy writing? You can
+            review the texts on both TallStackUi and our website, identifying and pointing out possible mistakes. Did you find
+            an issue on the website, documentation, or any TallStackUi component? Create an issue and report the problem. Are
+            you a fan of TallStackUi? Share it with your friends and community! Spreading the word is also a valuable contribution.
+            If you’re an experienced developer and want to join the team, feel free to contribute by writing components, testing,
+            fixing bugs, or improving the project in other ways. Want to go even further? If you love TallStackUi and wish to support it,
+            consider making a financial donation. There are many ways to contribute, choose one and make a difference!
         </p>
     </x-section>
-    <x-section title="Patterns" disable-copy>
-        <p>
-            Before we really get into the guide on how to contribute with code, we want you to know a few things:
-        </p>
-        <ul class="mt-4 ml-4 list-inside list-decimal">
-            <li>All codes need to follow the <a href="https://www.php-fig.org/psr/psr-12/" class="underline" target="_blank">PSR12</a></li>
-            <li>All codes need to pass in Laravel Pint & PhpStan validations</li>
-            <li>All codes need to pass in <a href="https://pestphp.com/docs/type-coverage" target="_blank" class="underline">Pest Type Coverage</a></li>
-            <li>All codes need to be tested with <a href="https://pestphp.com" target="_blank" class="underline">Pest</a></li>
-        </ul>
+    <x-section title="TallStackUi Way" disable-copy>
+        <div class="space-y-4">
+            <p>
+                Before we really get into the guide on how to contribute with code, we want you to know a few things:
+            </p>
+            <ul class="list-inside list-decimal">
+                <li>All codes must follow the <a href="https://www.php-fig.org/psr/psr-12/" class="underline" target="_blank">PSR12</a></li>
+                <li>All codes must pass in Laravel Pint & PhpStan validations</li>
+                <li>All codes must pass in <a href="https://pestphp.com/docs/type-coverage" target="_blank" class="underline">Pest Type Coverage</a></li>
+                <li>All codes must be tested with <a href="https://pestphp.com" target="_blank" class="underline">Pest</a></li>
+            </ul>
+        </div>
     </x-section>
     <x-section title="Prepare Environment" disable-copy>
-        <p>Let's prepare your environment for your first contribution:</p>
-        <p class="mt-2">1. Fork the <a href="https://github.com/tallstackui/tallstackui" class="underline" target="_blank">repository</a></p>
-        <p>2. Clone the repository forked for your computer.</p>
-        <p>3. Create a basic Laravel project using <a href="https://laravel.com/docs/10.x/starter-kits#laravel-breeze" class="underline" target="_blank">Laravel Breeze</a> with <b>Livewire (V3)</b> stack.</p>
-        <p>4. Prepare any authentication way to access the <x-block>/dashboard</x-block></p>
-        <p>5. Create a folder in the root of the Laravel project called <x-block>packages</x-block></p>
-        <p>6. Inside the <x-block>packages</x-block> folder create another folder called <x-block>tallstackui</x-block></p>
-        <p>7. Inside the <x-block>tallstackui</x-block> folder create a symbolic link to the repository forked at your computer:</p>
-        <x-code language="shell" :contents="$link" />
-        <p>9. The expected folder structure should be: <x-block>packages/tallstackui/tallstackui</x-block></p>
-        <p>10. Open the <x-block>composer.json</x-block> of the Laravel project and insert the following content:</p>
-        <x-code language="json" :contents="$composer" disable-copy />
-        <p>11. In the same <x-block>composer.json</x-block> file, change the <x-block>minimum-stability</x-block> to <x-block>dev</x-block></p>
-        <p>12. After that, run the following command in the terminal:</p>
-        <x-code language="shell" :contents="$command" />
-        <p>13. <a href="{{ route('documentation.v2.installation') }}" wire:navigate class="underline">Install the TallStackUI</a> in the Laravel project following the guide <i class="font-bold">(skip the step 1 of the tutorial)</i></p>
-        <p>14. You are ready to start the work!</p>
+        <div class="space-y-4">
+            <ul class="list-inside list-decimal">
+                <li>Fork the <x-block>2.x</x-block> branch of the <a href="https://github.com/tallstackui/tallstackui" class="underline" target="_blank">TallStackUi repository</a></li>
+                <li>Clone the repository forked for your computer.</li>
+                <li>Create a basic Laravel project using <a href="https://laravel.com/docs/10.x/starter-kits#laravel-breeze" class="underline" target="_blank">Laravel Breeze</a> with <b>Livewire (V3)</b> stack.</li>
+                <li>Prepare any authentication way to access the <x-block>/dashboard</x-block></li>
+                <li>
+                    Update the <x-block>composer.json</x-block> of the Laravel project with the following code:
+                    <x-code language="json" :contents="$composer" disable-copy />
+                </li>
+                <li>
+                    Run the following command:
+                    <x-code language="shell" :contents="$composerInstallCommand" />
+                </li>
+                <li class="font-bold">You are ready to start the contribution 🎉 Create a new branch and start to code!</li>
+            </ul>
+        </div>
     </x-section>
     <x-section title="Dusk Tests" disable-copy>
-        <p>
-            Some of the TallStackUI tests are written using <a href="https://laravel.com/docs/10.x/dusk" class="underline" target="_blank">Laravel Dusk</a>
-            through the <a href="https://github.com/orchestral/testbench-dusk" class="underline" target="_blank">Orchestral Testbench Dusk.</a>
-            Although sometimes difficult, you can run the browser tests on your computer. To do this, it is essential
-            to have Chrome installed. Use the commands below to prepare your environment.</p>
-        <p class="mt-2">Installing the appropriate Chrome driver according to your Chrome version:</p>
-        <x-code language="shell" :contents="$dusk" />
-        <p class="mt-2">Alternatively, you can use:</p>
-        <x-code language="shell" :contents="$alternative" />
+        <div class="space-y-4">
+            <p>
+                Some of the TallStackUi tests are written using Laravel Dusk via Orchestral Testbench Dusk.
+                While it can be tricky to set up an environment to run this type of test - including having
+                Google Chrome installed - you can run browser tests on your computer. Use the commands below
+                to set up your environment.
+            </p>
+            <p>Installing the appropriate Chrome driver according to your Chrome version:</p>
+            <x-code language="shell" :contents="$dusk" />
+            <p>Alternatively, you can use:</p>
+            <x-code language="shell" :contents="$alternative" />
+        </div>
     </x-section>
     <x-section title="Run Tests" disable-copy>
-        <p>1. Run all tests:</p>
-        <x-code language="shell" :contents="$allTests" />
-        <p>2. Run only the Feature tests:</p>
-        <x-code language="shell" :contents="$feature" />
-        <p>3. Run only the Browser tests:</p>
-        <x-code language="shell" :contents="$browser" />
-        <p>4. Fixing Code Style:</p>
-        <x-code language="shell" :contents="$pint" />
-        <p>5. Validate Type Coverage & PhpStan:</p>
-        <x-code language="shell" :contents="$analyse" />
+        <div class="space-y-4">
+            <p>1. Run all tests:</p>
+            <x-code language="shell" :contents="$allTests" />
+            <p>2. Run only the Feature tests:</p>
+            <x-code language="shell" :contents="$feature" />
+            <p>3. Run only the Browser tests:</p>
+            <x-code language="shell" :contents="$browser" />
+            <p>4. Fixing Code Style:</p>
+            <x-code language="shell" :contents="$pint" />
+            <p>5. Validate Type Coverage & PhpStan:</p>
+            <x-code language="shell" :contents="$analyse" />
+        </div>
     </x-section>
     <x-section title="Synchronize Changes" disable-copy>
-        <p>
-            Sometimes you can make changes to components, but the change is not noticed, it is
-            like a cache state in the Laravel project. If this is the case,
-            use the instruction below to synchronize the changes:
-        </p>
-        <x-code language="shell" :contents="$synchronize" />
-        <x-warning>
-            We suggest you to create an alias to facilitate the execution of this command.
-        </x-warning>
+        <div class="space-y-4">
+            <p>
+                Sometimes you can make changes to components, but the change is not noticed, it is
+                like a cache state in the Laravel project. If this is the case,
+                use the instruction below to synchronize the changes:
+            </p>
+            <x-code language="shell" :contents="$synchronize" />
+        </div>
     </x-section>
 </x-layout>

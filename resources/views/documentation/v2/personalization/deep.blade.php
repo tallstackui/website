@@ -14,7 +14,7 @@
             Deep customization is a way to customize components more deeply by overriding the original component
             class. This form of customization requires more work and technical knowledge, and can create potential
             upgrade roadblocks since you will have to overwrite component classes and publish TallStackUI Blades files.
-            <b>We strongly recommend that you opt for soft customization, which does not require as much technical knowledge from you.</b>
+            <u>We strongly recommend that you opt for soft customization, which does not require as much technical knowledge from you.</u>
         </p>
     </x-section>
     <x-section title="Publishing Configuration File" disable-copy>
