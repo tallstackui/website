@@ -15,17 +15,17 @@
     </x-slot:personalization>
     <x-section title="Basic Usage">
         <x-preview language="blade" :contents="$basic">
-            <x-password value="TallStackUi" />
+            <x-password value="TallStackUI" />
         </x-preview>
     </x-section>
     <x-section title="Label & Hint">
         <x-preview language="blade" :contents="$labelHint">
-            <x-password label="Password" hint="Insert your best password" value="TallStackUi" />
+            <x-password label="Password" hint="Insert your best password" value="TallStackUI" />
         </x-preview>
     </x-section>
     <x-section title="Required Label Indicator" description="An option to display an asterisk indicating that the field is required.">
         <x-preview language="blade" :contents="$asterisk">
-            <x-password label="Password *" hint="Insert your password" value="TallStackUi" />
+            <x-password label="Password *" hint="Insert your password" value="TallStackUI" />
         </x-preview>
     </x-section>
     <x-section title="Caps Lock Indicator" description="An option to control the caps lock indicator.">
@@ -69,7 +69,7 @@
     </x-section>
     <x-section title="Invalidate" description="An option to not show validation error message">
         <x-preview language="blade" :contents="$invalidate">
-            <x-password label="Password" hint="Insert your best password" value="TallStackUi"  invalidate />
+            <x-password label="Password" hint="Insert your best password" value="TallStackUI"  invalidate />
         </x-preview>
     </x-section>
 </x-layout>

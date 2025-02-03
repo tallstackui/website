@@ -50,7 +50,7 @@
             <x-slide id="footer-slide">
                 TallStackUI
                 <x-slot:footer start>
-                    TallStackUi
+                    TallStackUI
                 </x-slot:footer>
             </x-slide>
             <x-button x-on:click="$slideOpen('footer-slide')">
@@ -89,34 +89,34 @@
     <x-section title="Size Variations">
         <x-preview language="blade" :contents="$sizes">
             <div class="flex flex-col items-start space-y-2">
-                <x-slide id="default-size-slide" title="TallStackUi">
+                <x-slide id="default-size-slide" title="TallStackUI">
                     Default (lg)
                 </x-slide>
-                <x-slide id="sm-size-slide" title="TallStackUi" size="sm">
+                <x-slide id="sm-size-slide" title="TallStackUI" size="sm">
                     sm
                 </x-slide>
-                <x-slide id="md-size-slide" title="TallStackUi" size="md">
+                <x-slide id="md-size-slide" title="TallStackUI" size="md">
                     md
                 </x-slide>
-                <x-slide id="xl-size-slide" title="TallStackUi" size="xl">
+                <x-slide id="xl-size-slide" title="TallStackUI" size="xl">
                     xl
                 </x-slide>
-                <x-slide id="3xl-size-slide" title="TallStackUi" size="3xl">
+                <x-slide id="3xl-size-slide" title="TallStackUI" size="3xl">
                     3xl
                 </x-slide>
-                <x-slide id="4xl-size-slide" title="TallStackUi" size="4xl">
+                <x-slide id="4xl-size-slide" title="TallStackUI" size="4xl">
                     4xl
                 </x-slide>
-                <x-slide id="5xl-size-slide" title="TallStackUi" size="5xl">
+                <x-slide id="5xl-size-slide" title="TallStackUI" size="5xl">
                     5xl
                 </x-slide>
-                <x-slide id="6xl-size-slide" title="TallStackUi" size="6xl">
+                <x-slide id="6xl-size-slide" title="TallStackUI" size="6xl">
                     6xl
                 </x-slide>
-                <x-slide id="7xl-size-slide" title="TallStackUi" size="7xl">
+                <x-slide id="7xl-size-slide" title="TallStackUI" size="7xl">
                     7xl
                 </x-slide>
-                <x-slide id="full-size-slide" title="TallStackUi" size="full">
+                <x-slide id="full-size-slide" title="TallStackUI" size="full">
                     Full
                 </x-slide>
                 <x-button x-on:click="$slideOpen('default-size-slide')">
@@ -157,8 +157,8 @@
     </x-section>
     <x-section title="Z Index">
         <x-preview language="blade" :contents="$zIndex">
-            <x-slide id="z-slide" title="TallStackUi" z-index="z-10">
-                TallStackUi
+            <x-slide id="z-slide" title="TallStackUI" z-index="z-10">
+                TallStackUI
             </x-slide>
             <x-button x-on:click="$slideOpen('z-slide')">
                 Open
@@ -167,8 +167,8 @@
     </x-section>
     <x-section title="Persistent" description="An option to prevent the user from closing the slide when click outside.">
         <x-preview language="blade" :contents="$persistent">
-            <x-slide id="persistent-slide" title="TallStackUi" persistent>
-                TallStackUi
+            <x-slide id="persistent-slide" title="TallStackUI" persistent>
+                TallStackUI
                 <x-slot:footer end>
                     <x-button color="red" x-on:click="$slideClose('persistent-slide')">Close</x-button>
                 </x-slot:footer>
@@ -194,11 +194,11 @@
     </x-section>
     <x-section title="Events" description="An option to listen event when the slide is opening or closing.">
         <x-preview language="blade" :contents="$events">
-            <x-slide id="event-open" title="TallStackUi" x-on:open="alert('Opened!')">
-                TallStackUi
+            <x-slide id="event-open" title="TallStackUI" x-on:open="alert('Opened!')">
+                TallStackUI
             </x-slide>
-            <x-slide id="event-close" title="TallStackUi" x-on:close="alert('Closed!')">
-                TallStackUi
+            <x-slide id="event-close" title="TallStackUI" x-on:close="alert('Closed!')">
+                TallStackUI
             </x-slide>
             <x-button x-on:click="$slideOpen('event-open')">
                 Open Event

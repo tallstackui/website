@@ -40,7 +40,7 @@
             <x-modal id="footer-modal" title="TallStackUI">
                 TallStackUI
                 <x-slot:footer>
-                    TallStackUi
+                    TallStackUI
                 </x-slot:footer>
             </x-modal>
             <x-button x-on:click="$modalOpen('footer-modal')">
@@ -106,7 +106,7 @@
                 <x-modal id="6xl-size-modal" title="TallStackUI" size="6xl">
                     6xl
                 </x-modal>
-                <x-modal id="7xl-size-modal" title="TallStackUi" size="7xl">
+                <x-modal id="7xl-size-modal" title="TallStackUI" size="7xl">
                     7xl
                 </x-modal>
                 <x-button x-on:click="$modalOpen('default-size-modal')">
@@ -147,8 +147,8 @@
     </x-section>
     <x-section title="Centered">
         <x-preview language="blade" :contents="$center">
-            <x-modal id="center" title="TallStackUi" center>
-                TallStackUi
+            <x-modal id="center" title="TallStackUI" center>
+                TallStackUI
             </x-modal>
             <x-button x-on:click="$modalOpen('center')">
                 Open
@@ -160,8 +160,8 @@
     </x-section>
     <x-section title="Z Index">
         <x-preview language="blade" :contents="$zIndex">
-            <x-modal id="z-modal" title="TallStackUi" z-index="z-10">
-                TallStackUi
+            <x-modal id="z-modal" title="TallStackUI" z-index="z-10">
+                TallStackUI
             </x-modal>
             <x-button x-on:click="$modalOpen('z-modal')">
                 Open
@@ -170,8 +170,8 @@
     </x-section>
     <x-section title="Persistent" description="An option to prevent the closing when click outside.">
         <x-preview language="blade" :contents="$persistent">
-            <x-modal id="persistent-modal" title="TallStackUi" persistent>
-                TallStackUi
+            <x-modal id="persistent-modal" title="TallStackUI" persistent>
+                TallStackUI
                 <x-slot:footer>
                     <x-button color="red" x-on:click="$modalClose('persistent-modal')">Close</x-button>
                 </x-slot:footer>
@@ -197,11 +197,11 @@
     </x-section>
     <x-section title="Events" description="An option to listen event when the modal is opening or closing.">
         <x-preview language="blade" :contents="$events">
-            <x-modal id="event-open" title="TallStackUi" x-on:open="alert('Opened!')">
-                TallStackUi
+            <x-modal id="event-open" title="TallStackUI" x-on:open="alert('Opened!')">
+                TallStackUI
             </x-modal>
-            <x-modal id="event-close" title="TallStackUi" x-on:close="alert('Closed!')">
-                TallStackUi
+            <x-modal id="event-close" title="TallStackUI" x-on:close="alert('Closed!')">
+                TallStackUI
             </x-modal>
             <x-button x-on:click="$modalOpen('event-open')">
                 Open Event

@@ -20,18 +20,18 @@
     </x-section>
     <x-section title="Button as Link" anchor="normal-button-as-link">
         <x-preview language="blade" :contents="$a">
-            <x-button href="https://google.com.br" target="_blank">TallStackUi</x-button>
+            <x-button href="https://google.com.br" target="_blank">TallStackUI</x-button>
         </x-preview>
     </x-section>
     <x-section title="Square Variation"
                anchor="normal-square-variation">
         <x-preview language="blade" :contents="$square">
-            <x-button square>TallStackUi</x-button>
+            <x-button square>TallStackUI</x-button>
         </x-preview>
     </x-section>
     <x-section title="Round Variation" anchor="normal-round-variation">
         <x-preview language="blade" :contents="$round">
-            <x-button round>TallStackUi</x-button>
+            <x-button round>TallStackUI</x-button>
         </x-preview>
     </x-section>
     <x-section title="Left & Right Slots" anchor="normal-left-right-slots">
@@ -41,13 +41,13 @@
                     <x-slot:left>
                         <x-badge color="yellow" text="+99" round light />
                     </x-slot:left>
-                    TallStackUi
+                    TallStackUI
                 </x-button>
                 <x-button>
                     <x-slot:right>
                         <x-badge color="yellow" text="+99" round light />
                     </x-slot:right>
-                    TallStackUi
+                    TallStackUI
                 </x-button>
             </div>
         </x-preview>
@@ -55,8 +55,8 @@
     <x-section title="Icon Slot" anchor="normal-icon-slot" description="An option to use any Heroicon.">
         <x-preview language="blade" :contents="$icon">
             <div class="inline-flex space-x-2">
-                <x-button icon="cog" position="left">TallStackUi</x-button>
-                <x-button icon="users" position="right">TallStackUi</x-button>
+                <x-button icon="cog" position="left">TallStackUI</x-button>
+                <x-button icon="users" position="right">TallStackUI</x-button>
             </div>
         </x-preview>
     </x-section>
@@ -64,16 +64,16 @@
         <x-preview language="blade" :contents="$size">
             <div class="flex flex-col items-center justify-center space-y-2 sm:space-x-2 sm:space-y-0 sm:flex-row sm:justify-start">
                 <div>
-                    <x-button xs>TallStackUi</x-button>
+                    <x-button xs>TallStackUI</x-button>
                 </div>
                 <div>
-                    <x-button sm>TallStackUi</x-button>
+                    <x-button sm>TallStackUI</x-button>
                 </div>
                 <div>
-                    <x-button md>TallStackUi</x-button>
+                    <x-button md>TallStackUI</x-button>
                 </div>
                 <div>
-                    <x-button lg>TallStackUi</x-button>
+                    <x-button lg>TallStackUI</x-button>
                 </div>
             </div>
         </x-preview>

@@ -18,42 +18,42 @@
     <x-section title="Basic Usage">
         <x-preview language="blade" :contents="$basic">
             <x-clipboard>
-                TallStackUi
+                TallStackUI
             </x-clipboard>
         </x-preview>
     </x-section>
     <x-section title="Button at Left">
         <x-preview language="blade" :contents="$left">
             <x-clipboard left>
-                TallStackUi
+                TallStackUI
             </x-clipboard>
         </x-preview>
     </x-section>
     <x-section title="Label & Hint">
         <x-preview language="blade" :contents="$labelHint">
             <x-clipboard label="Library" hint="Copy the name of the library">
-                TallStackUi
+                TallStackUI
             </x-clipboard>
         </x-preview>
     </x-section>
     <x-section title="Secret Content" description="An option to transform the input in a password type.">
         <x-preview language="blade" :contents="$secret">
             <x-clipboard label="Library" hint="Copy the name of the library" secret>
-                TallStackUi
+                TallStackUI
             </x-clipboard>
         </x-preview>
     </x-section>
     <x-section title="Events">
         <x-preview language="blade" :contents="$events">
             <x-clipboard x-on:copy="alert(`Copied: ${$event.detail.text}`)">
-                TallStackUi
+                TallStackUI
             </x-clipboard>
         </x-preview>
     </x-section>
     <x-section title="Icon Style">
         <x-preview language="blade" :contents="$icon">
             <x-clipboard icon>
-                TallStackUi
+                TallStackUI
             </x-clipboard>
         </x-preview>
         <x-warning class="mt-4">
@@ -63,7 +63,7 @@
     <x-section title="Using Different Icons">
         <x-preview language="blade" :contents="$differentIcons">
             <x-clipboard icon :icons="['copy' => 'pencil', 'copied' => 'check']">
-                TallStackUi
+                TallStackUI
             </x-clipboard>
         </x-preview>
     </x-section>

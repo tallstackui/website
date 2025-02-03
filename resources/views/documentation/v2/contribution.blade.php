@@ -11,17 +11,17 @@
     </x-slot:description>
     <x-section title="Possibilities" disable-copy>
         <p>
-            There are several ways to contribute to a library like TallStackUi — <b class="underline">it’s not just about code!</b>
+            There are several ways to contribute to a library like TallStackUI — <b class="underline">it’s not just about code!</b>
             Even if you’re not an experienced developer, don’t worry — there are other ways to help. Do you enjoy writing? You can
-            review the texts on both TallStackUi and our website, identifying and pointing out possible mistakes. Did you find
-            an issue on the website, documentation, or any TallStackUi component? Create an issue and report the problem. Are
-            you a fan of TallStackUi? Share it with your friends and community! Spreading the word is also a valuable contribution.
+            review the texts on both TallStackUI and our website, identifying and pointing out possible mistakes. Did you find
+            an issue on the website, documentation, or any TallStackUI component? Create an issue and report the problem. Are
+            you a fan of TallStackUI? Share it with your friends and community! Spreading the word is also a valuable contribution.
             If you’re an experienced developer and want to join the team, feel free to contribute by writing components, testing,
-            fixing bugs, or improving the project in other ways. Want to go even further? If you love TallStackUi and wish to support it,
+            fixing bugs, or improving the project in other ways. Want to go even further? If you love TallStackUI and wish to support it,
             consider making a financial donation. There are many ways to contribute, choose one and make a difference!
         </p>
     </x-section>
-    <x-section title="TallStackUi Way" disable-copy>
+    <x-section title="TallStackUI Way" disable-copy>
         <div class="space-y-4">
             <p>
                 Before we really get into the guide on how to contribute with code, we want you to know a few things:
@@ -37,7 +37,7 @@
     <x-section title="Prepare Environment" disable-copy>
         <div class="space-y-4">
             <ul class="list-inside list-decimal">
-                <li>Fork the <x-block>2.x</x-block> branch of the <a href="https://github.com/tallstackui/tallstackui" class="underline" target="_blank">TallStackUi repository</a></li>
+                <li>Fork the <x-block>2.x</x-block> branch of the <a href="https://github.com/tallstackui/tallstackui" class="underline" target="_blank">TallStackUI repository</a></li>
                 <li>Clone the repository forked for your computer.</li>
                 <li>Create a basic Laravel project using <a href="https://laravel.com/docs/10.x/starter-kits#laravel-breeze" class="underline" target="_blank">Laravel Breeze</a> with <b>Livewire (V3)</b> stack.</li>
                 <li>Prepare any authentication way to access the <x-block>/dashboard</x-block></li>
@@ -56,7 +56,7 @@
     <x-section title="Dusk Tests" disable-copy>
         <div class="space-y-4">
             <p>
-                Some of the TallStackUi tests are written using Laravel Dusk via Orchestral Testbench Dusk.
+                Some of the TallStackUI tests are written using Laravel Dusk via Orchestral Testbench Dusk.
                 While it can be tricky to set up an environment to run this type of test - including having
                 Google Chrome installed - you can run browser tests on your computer. Use the commands below
                 to set up your environment.

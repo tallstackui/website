@@ -248,7 +248,7 @@
                             <dl class="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-1">
                                 <div class="flex flex-col">
                                     <dd class="mt-4 flex flex-col text-base leading-7 text-gray-300 space-y-2 sm:space-x-2 sm:flex-row">
-                                        <x-modal title="TallStackUi" id="modal-example">
+                                        <x-modal title="TallStackUI" id="modal-example">
                                             Your form content goes here...
                                             <x-slot:footer>
                                                 <x-button color="red" x-on:click="$modalClose('modal-example')">
@@ -256,7 +256,7 @@
                                                 </x-button>
                                             </x-slot:footer>
                                         </x-modal>
-                                        <x-modal title="TallStackUi" blur id="modal-blur-example">
+                                        <x-modal title="TallStackUI" blur id="modal-blur-example">
                                             Your form content goes here...
                                             <x-slot:footer>
                                                 <x-button color="red" x-on:click="$modalClose('modal-blur-example')">
@@ -264,10 +264,10 @@
                                                 </x-button>
                                             </x-slot:footer>
                                         </x-modal>
-                                        <x-slide title="TallStackUi" id="slide-example">
+                                        <x-slide title="TallStackUI" id="slide-example">
                                             ... Can you imagine a complete form content here?
                                         </x-slide>
-                                        <x-slide title="TallStackUi" blur id="slide-full-example" size="full">
+                                        <x-slide title="TallStackUI" blur id="slide-full-example" size="full">
                                             ... Can you imagine a big content here?
                                             <x-slot:footer end>
                                                 <x-button color="red" x-on:click="$slideClose('slide-full-example')">

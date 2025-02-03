@@ -14,20 +14,20 @@
     </x-slot:personalization>
     <x-section title="Basic Usage">
         <x-preview language="blade" :contents="$basic">
-            <x-badge text="TallStackUi"/>
+            <x-badge text="TallStackUI"/>
         </x-preview>
     </x-section>
     <x-section title="Square Variation">
         <x-preview language="blade" :contents="$square">
             <div class="flex items-center gap-2">
-                <x-badge text="TallStackUi" square/>
+                <x-badge text="TallStackUI" square/>
             </div>
         </x-preview>
     </x-section>
     <x-section title="Round Variation">
         <x-preview language="blade" :contents="$round">
             <div class="flex items-center gap-2">
-                <x-badge text="TallStackUi" round/>
+                <x-badge text="TallStackUI" round/>
             </div>
         </x-preview>
     </x-section>
@@ -52,8 +52,8 @@
     <x-section title="Icon Slot">
         <x-preview language="blade" :contents="$icons">
             <div class="flex items-center gap-2">
-                <x-badge text="TallStackUi" icon="users" position="left"/>
-                <x-badge text="TallStackUi" icon="cog" position="right"/>
+                <x-badge text="TallStackUI" icon="users" position="left"/>
+                <x-badge text="TallStackUI" icon="cog" position="right"/>
             </div>
         </x-preview>
     </x-section>

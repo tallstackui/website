@@ -15,7 +15,7 @@
     <x-section title="Basic Usage">
         <x-preview language="blade" :background="false" :contents="$basic">
             <x-card>
-                TallStackUi
+                TallStackUI
             </x-card>
         </x-preview>
     </x-section>
@@ -23,18 +23,18 @@
         <x-preview language="blade" :background="false" :contents="$header">
             <x-card>
                 <x-slot:header>
-                    TallStackUi
+                    TallStackUI
                 </x-slot:header>
-                TallStackUi
+                TallStackUI
             </x-card>
         </x-preview>
     </x-section>
     <x-section title="Footer Slot">
         <x-preview language="blade" :background="false" :contents="$footer">
             <x-card>
-                TallStackUi
+                TallStackUI
                 <x-slot:footer>
-                    TallStackUi
+                    TallStackUI
                 </x-slot:footer>
             </x-card>
         </x-preview>
