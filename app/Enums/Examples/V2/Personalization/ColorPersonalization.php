@@ -62,7 +62,7 @@ class ColorPersonalization
     HTML;
 
     public const COMMAND = <<<'HTML'
-    php artisan tallstackui:setup-colors
+    php artisan tallstackui:setup-color
     HTML;
 
     public const COLOR_CLASS = <<<'HTML'

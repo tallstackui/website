@@ -28,9 +28,9 @@ class DarkTheme
     </html>
     HTML;
 
-    public const INITIALIZE_AS_TRUE = <<<'HTML'
+    public const DARK = <<<'HTML'
     <html ...
-          x-data="tallstackui_darkTheme({ default: 'dark' })" {{-- [tl! focus] --}}
+          x-data="tallstackui_darkTheme({ dark: true })" {{-- [tl! focus] --}}
           ...>
         <!-- ... -->
     </html>

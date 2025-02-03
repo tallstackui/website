@@ -7,29 +7,12 @@
     </x-slot:description>
     <x-section title="Introduction" disable-copy>
         <p>
-            TallStackUI offers several useful commands to help during the development
-            process of your projects that use TallStackUI. On this page we will list
-            all the commands and their references for explanations or details.
+            TallStackUI provides some useful commands to help you during the development process
+            of your projects that use TallStackUI. On this page, we will list all the commands
+            and their references with details of the purpose of each command.
         </p>
     </x-section>
-    <x-section title="Setup Icons" disable-copy>
-        <p>
-            Command to setup icons. <a class="underline" href="{{ route('documentation.v2.ui.icon') }}" wire:navigate>
-                See the details of the command and how to use it by clicking here.
-            </a>
-        </p>
-    </x-section>
-    <x-section title="Setup Prefix" disable-copy>
-        <p>
-            Command to setup prefix. <a class="underline" href="{{ route('documentation.v2.installation').'#component-prefix' }}" wire:navigate>
-                See the details of the command and how to use it by clicking here.
-            </a>
-        </p>
-    </x-section>
-    <x-section title="Find Component" disable-copy new>
-        <p>
-            Command used to find component usages in all Blade files.
-        </p>
+    <x-section title="Find Component" description="Command used to find component usages in all Blade files." disable-copy>
         <x-code language="shell" :contents="$findComponent"/>
         <p>
             After running the command, you will need to select the component
@@ -42,5 +25,17 @@
             <img src="{{ asset('assets/images/find-component-output.png') }}"
                  alt="Find Component Command Output">
         </div>
+    </x-section>
+    <x-section title="Setup Prefix" description="Command used to set up component prefix." disable-copy>
+        <x-code language="shell" :contents="$setupPrefix"/>
+        <p>
+            This command is used to set up the component prefix. <a href="{{ route('documentation.v2.component-prefix').'#command' }}" class="underline">You can read more about it by clicking here.</a>
+        </p>
+    </x-section>
+    <x-section title="Setup Prefix" description="Command used to set up component prefix." disable-copy>
+        <x-code language="shell" :contents="$setupColor"/>
+        <p>
+            This command is used to set up or manipulate component colors. <a href="{{ route('documentation.v2.personalization.color').'#create-or-manipulate-colors' }}" class="underline">You can read more about it by clicking here.</a>
+        </p>
     </x-section>
 </x-layout>

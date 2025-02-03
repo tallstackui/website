@@ -24,7 +24,7 @@
             <p>You can customize the name of the state stored in local storage of the browser, default name is <x-block>dark-theme</x-block></p>
             <x-code language="blade" :contents="$customized" disable-copy/>
             <p>You can also force the <x-block>darkTheme</x-block> variable to be initialized to true:</p>
-            <x-code language="blade" :contents="$initializeAsTrue" disable-copy/>
+            <x-code language="blade" :contents="$dark" disable-copy/>
             <p>This is useful if your theme is dark theme by default.</p>
             <p>Create a button to control the dark theme:</p>
             <x-code language="blade" :contents="$button" disable-copy />

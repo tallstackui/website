@@ -69,7 +69,14 @@
             <p>
                 While this means you have the freedom to edit whatever you want - adding or removing divs, p tags, h1 tags, etc.,
                 you need to keep in mind that any updates you make that make changes to the HTML of the components will require
-                you to republish the Blade files and add your own personalizations.
+                you to republish the Blade files and add your own personalization.
+            </p>
+            <p>
+                Also, when publishing Blade files you may notice some peculiar things, such as: 99% of the files only have one php block at the top of the file,
+                or certain variables that may not seem defined anywhere, such as <x-block>$colors</x-block> and <x-block>$configurations</x-block> . This is a result of
+                a new internal concept created in version 2.x to ensure that you can change anything in the Blade files without
+                necessarily having to worry about maintaining possible logic coming from <x-block>php/endphp</x-block> blocks. <b>All you have to do
+                is preserve the use of any existing variables - mentioned here, in their specific current locations.</b>
             </p>
         </div>
     </x-section>
