@@ -108,14 +108,14 @@ class Avatar
     HTML;
 
     public const IMAGE = <<<'HTML'
-    <x-avatar image="https://aj.dev.br/assets/images/aj.jpg" xs />
-    <x-avatar image="https://aj.dev.br/assets/images/aj.jpg" sm />
-    <x-avatar image="https://aj.dev.br/assets/images/aj.jpg" md />
-    <x-avatar image="https://aj.dev.br/assets/images/aj.jpg" lg />
+    <x-avatar image="https://i.pravatar.cc/300" xs />
+    <x-avatar image="https://i.pravatar.cc/300" sm />
+    <x-avatar image="https://i.pravatar.cc/300" md />
+    <x-avatar image="https://i.pravatar.cc/300" lg />
     HTML;
 
     public const IMAGE_ALT = <<<'HTML'
-    <x-avatar image="https://aj.dev.br/assets/images/aj.jpg" text="alt-text-goes-here" />
+    <x-avatar image="https://i.pravatar.cc/300" text="alt-text-goes-here" />
     HTML;
 
     public const PERSONALIZATION = <<<'HTML'

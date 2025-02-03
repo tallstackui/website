@@ -57,7 +57,7 @@
             </div>
         </x-preview>
     </x-section>
-    <x-section title="Events" new>
+    <x-section title="Events">
         <x-preview language="blade" :contents="$events">
             <div class="space-y-2">
                 <x-pin length="5" label="Filled Event" x-on:filled="alert(`Filled: ${$event.detail.model}`)" />

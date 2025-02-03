@@ -80,12 +80,12 @@
             <livewire:documentation.v1.ui.table :mode="8" />
         </x-preview>
     </x-section>
-    <x-section title="Selection" new>
+    <x-section title="Selection">
         <x-preview language="blade" :contents="$selectable" :background="false">
             <livewire:documentation.v1.ui.table :mode="9" />
         </x-preview>
     </x-section>
-    <x-section title="Clickable" new>
+    <x-section title="Clickable">
         <x-preview language="blade" :contents="$clickable" :background="false">
             <livewire:documentation.v1.ui.table :mode="10" />
         </x-preview>

@@ -45,7 +45,7 @@
             We recommend that you use listeners in one place, whether in the base layout or once per component.
         </x-warning>
     </x-section>
-    <x-section title="Hooks" new>
+    <x-section title="Hooks">
         <p>
             <u>Starting from version 1.35.0</u> you can now use hooks to perform actions:
         </p>
@@ -82,7 +82,7 @@
             request, but yes stored temporarily in the session and displayed in the next request.
         </p>
     </x-section>
-    <x-section title="Dispatching via Controllers" new>
+    <x-section title="Dispatching via Controllers">
         <p>
             <u>Starting from version 1.35.0</u> you can trigger a dialog via controllers.
         </p>

@@ -76,7 +76,7 @@
             request, but yes stored temporarily in the session and displayed in the next request.
         </p>
     </x-section>
-    <x-section title="Dispatching via Controllers" new>
+    <x-section title="Dispatching via Controllers">
         <p>
             <u>Starting from version 1.35.0</u> you can trigger a dialog via controllers.
         </p>

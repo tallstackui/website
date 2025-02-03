@@ -26,7 +26,7 @@
             </a>
         </p>
     </x-section>
-    <x-section title="Find Component" disable-copy new>
+    <x-section title="Find Component" disable-copy>
         <p>
             Command used to find component usages in all Blade files.
         </p>

@@ -108,7 +108,7 @@
             </div>
         </x-preview>
     </x-section>
-    <x-section title="Livewire SPA Navigation" description="An option to easily add Livewire 3 navigation effects in SPA mode." new>
+    <x-section title="Livewire SPA Navigation" description="An option to easily add Livewire 3 navigation effects in SPA mode.">
         <x-preview language="blade" :contents="$navigate">
             <div class="flex flex-col gap-x-2">
                 <x-link :href="route('documentation.v1.ui.link')" text="Navigate" navigate />

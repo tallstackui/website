@@ -94,7 +94,7 @@
             </div>
         </x-preview>
     </x-section>
-    <x-section title="Borderless" description="An option to remove the default border." new>
+    <x-section title="Borderless" description="An option to remove the default border.">
         <x-preview language="blade" :contents="$borderless">
             <x-avatar color="primary" borderless />
         </x-preview>
@@ -141,17 +141,17 @@
         </x-preview>
     </x-section>
     <x-separator text="Image" />
-    <x-section title="Image" description="An option to use an image as avatar." new>
+    <x-section title="Image" description="An option to use an image as avatar.">
         <x-preview language="blade" :contents="$image">
-            <x-avatar image="https://media.licdn.com/dms/image/v2/D4D03AQFQSu1SmabfuA/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1670030528182?e=1744243200&v=beta&t=ItguA34HBTnW7P3U6BObdUICSHf7D5hdJfbLlHmqA2w" xs />
-            <x-avatar image="https://media.licdn.com/dms/image/v2/D4D03AQFQSu1SmabfuA/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1670030528182?e=1744243200&v=beta&t=ItguA34HBTnW7P3U6BObdUICSHf7D5hdJfbLlHmqA2w" sm />
-            <x-avatar image="https://media.licdn.com/dms/image/v2/D4D03AQFQSu1SmabfuA/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1670030528182?e=1744243200&v=beta&t=ItguA34HBTnW7P3U6BObdUICSHf7D5hdJfbLlHmqA2w" md />
-            <x-avatar image="https://media.licdn.com/dms/image/v2/D4D03AQFQSu1SmabfuA/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1670030528182?e=1744243200&v=beta&t=ItguA34HBTnW7P3U6BObdUICSHf7D5hdJfbLlHmqA2w" lg />
+            <x-avatar image="https://i.pravatar.cc/300" xs />
+            <x-avatar image="https://i.pravatar.cc/300" sm />
+            <x-avatar image="https://i.pravatar.cc/300" md />
+            <x-avatar image="https://i.pravatar.cc/300" lg />
         </x-preview>
     </x-section>
-    <x-section title="Default Alt Text" new>
+    <x-section title="Default Alt Text">
         <x-preview language="blade" :contents="$imageAlt">
-            <x-avatar image="https://media.licdn.com/dms/image/v2/D4D03AQFQSu1SmabfuA/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1670030528182?e=1744243200&v=beta&t=ItguA34HBTnW7P3U6BObdUICSHf7D5hdJfbLlHmqA2w"
+            <x-avatar image="https://i.pravatar.cc/300"
                       text="Taylor Otwell, Creator of Laravel" />
         </x-preview>
     </x-section>

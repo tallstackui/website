@@ -194,7 +194,7 @@
             </div>
         </x-preview>
     </x-section>
-    <x-section title="Flat Variations" anchor="normal-flat-variations" new>
+    <x-section title="Flat Variations" anchor="normal-flat-variations">
         <x-preview language="blade" :contents="$flat">
             <div class="gap-2 space-y-2">
                 <x-button text="Primary" flat />
@@ -357,7 +357,7 @@
             </div>
         </x-preview>
     </x-section>
-    <x-section title="Flat Variations" anchor="circle-flat-variations" new>
+    <x-section title="Flat Variations" anchor="circle-flat-variations">
         <x-preview language="blade" :contents="$circleFlat">
             <div class="gap-2 space-y-2">
                 <x-button.circle icon="bookmark" flat />

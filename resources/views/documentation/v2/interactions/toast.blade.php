@@ -58,7 +58,7 @@
             We recommend that you use listeners in one place, whether in the base layout or once per component.
         </x-warning>
     </x-section>
-    <x-section title="Hooks" new>
+    <x-section title="Hooks">
         <x-code :contents="$hooks" disable-copy />
         <p>Optionally, you can also set <x-block>params</x-block> as closure:</p>
         <x-code :contents="$hooksCallable" disable-copy />
@@ -92,7 +92,7 @@
             request, but yes stored temporarily in the session and displayed in the next request.
         </p>
     </x-section>
-    <x-section title="Dispatching via Controllers" new>
+    <x-section title="Dispatching via Controllers">
         <p>
             <u>Starting from version 1.35.0</u> you can trigger a toast via controllers.
         </p>
