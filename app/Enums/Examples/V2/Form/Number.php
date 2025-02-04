@@ -32,6 +32,10 @@ class Number
     <x-number chevron />
     HTML;
 
+    public const STEP = <<<'HTML'
+    <x-number step="5" />
+    HTML;
+
     public const PERSONALIZATION = <<<'HTML'
     TallStackUi::personalize()
         ->form('number')

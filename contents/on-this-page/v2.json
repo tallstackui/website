@@ -51,7 +51,9 @@
         "3": "Centralized",
         "4": "Selectable",
         "5": "Delay Control",
-        "7": "Livewire Bind Concern"
+        "6": "Chevron Icons",
+        "7": "Step",
+        "8": "Livewire Bind Concern"
     },
     "docs.form.textarea": {
         "0": "Basic Usage",

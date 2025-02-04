@@ -50,6 +50,11 @@
             <x-number chevron />
         </x-preview>
     </x-section>
+    <x-section title="Step" description="An option to increase/decrease for specific quantities.">
+        <x-preview language="blade" :contents="$step">
+            <x-number step="5" />
+        </x-preview>
+    </x-section>
     <x-section title="Livewire Bind Concern">
         <p>
             Although the number component can be used with <x-block>wire:model.live</x-block> and <x-block>wire:model.blur</x-block>, due to the way Livewire works,
