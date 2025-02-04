@@ -256,6 +256,19 @@
         "4": "Image",
         "5": "Color Variations"
     },
+    "docs.ui.carousel": {
+        "0": "Basic Usage",
+        "1": "Round",
+        "2": "Different Cover Image",
+        "3": "Autoplay",
+        "4": "Autoplay, Stop on hover",
+        "5": "Autoplay, Without Loop",
+        "6": "Without Indicators",
+        "7": "Image Title & Description",
+        "8": "Fixed Aspect Radio",
+        "9": "Slots",
+        "10": "Events"
+    },
     "docs.ui.clipboard": {
         "0": "Basic Usage",
         "1": "Button at Left",
