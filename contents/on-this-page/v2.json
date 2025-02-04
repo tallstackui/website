@@ -21,7 +21,9 @@
         "1": "Label & Hint",
         "2": "Required Label Indicator",
         "3": "Icon Slot",
-        "4": "Prefix & Suffix"
+        "4": "Prefix & Suffix",
+        "5": "Clearable",
+        "6": "Invalidate"
     },
     "docs.form.password": {
         "0": "Basic Usage",

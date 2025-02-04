@@ -40,7 +40,7 @@
             <x-color :colors="['#83493D', '#3D8357', '#693D83', '#3AB3D1', '#5DD116']" />
         </x-preview>
     </x-section>
-    <x-section title="Clearable" description="An option to display an icon that allows quick clearing of the selected color.">
+    <x-section title="Clearable">
         <x-preview language="blade" :contents="$clearable">
             <x-color selectable picker clearable />
         </x-preview>

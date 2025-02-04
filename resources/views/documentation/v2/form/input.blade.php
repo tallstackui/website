@@ -49,6 +49,13 @@
             Using a prefix or suffix will disable browser autocomplete as long as this is not explicitly defined.
         </x-warning>
     </x-section>
+    <x-section title="Clearable">
+        <x-preview language="blade" :contents="$clearable">
+            <div class="space-y-2">
+                <x-input value="TallStackUI" clearable />
+            </div>
+        </x-preview>
+    </x-section>
     <x-section title="Invalidate" description="An option to not show validation error message.">
         <x-preview language="blade" :contents="$invalidate">
             <x-input label="Name" invalidate />

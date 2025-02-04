@@ -37,6 +37,10 @@ class Input
     </x-input>
     HTML;
 
+    public const CLEARABLE = <<<'HTML'
+    <x-input value="TallStackUI" clearable />
+    HTML;
+
     public const INVALIDATE = <<<'HTML'
     <x-input label="Name" invalidate />
     HTML;
