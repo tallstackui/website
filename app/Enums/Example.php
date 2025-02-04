@@ -33,6 +33,7 @@ enum Example: string
     case Dialog = 'Ui\\Dialog';
     case Dropdown = 'Ui\\Dropdown';
     case Error = 'Ui\\Error';
+    case Environment = 'Ui\\Environment';
     case Icon = 'Ui\\Icon';
     case Input = 'Form\\Input';
     case Installation = 'Others\\Installation';

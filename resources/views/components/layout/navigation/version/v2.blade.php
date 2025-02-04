@@ -112,7 +112,7 @@
                         <x-layout.navigation.link :href="route('documentation.v2.ui.error')" text="Error" />
                     </li>
                     <li class="relative ml-4">
-                        <x-layout.navigation.link :href="route('documentation.v2.ui.card')" text="Environment" new />
+                        <x-layout.navigation.link :href="route('documentation.v2.ui.environment')" text="Environment" new />
                     </li>
                     <li class="relative ml-4">
                         <x-layout.navigation.link :href="route('documentation.v2.ui.icon')" text="Icon" />

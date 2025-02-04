@@ -50,6 +50,7 @@ Route::prefix('/ui')
         Route::view('/clipboard', 'documentation.v2.ui.clipboard', Example::Clipboard->variables())->name('clipboard');
         Route::view('/dropdown', 'documentation.v2.ui.dropdown', Example::Dropdown->variables())->name('dropdown');
         Route::view('/error', 'documentation.v2.ui.error', Example::Error->variables())->name('error');
+        Route::view('/environment', 'documentation.v2.ui.environment', Example::Environment->variables())->name('environment');
         Route::view('/icon', 'documentation.v2.ui.icon', Example::Icon->variables())->name('icon');
         Route::view('/modal', 'documentation.v2.ui.modal', Example::Modal->variables())->name('modal');
         Route::view('/link', 'documentation.v2.ui.link', Example::Link->variables())->name('link');

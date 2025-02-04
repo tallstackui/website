@@ -1,0 +1,101 @@
+@php
+    foreach (apply_prefix($__data) as $key => $value) $$key = $value;
+@endphp
+
+<x-layout>
+    <x-slot:title>
+        Environment
+    </x-slot:title>
+    <x-slot:description>
+        Environment component.
+    </x-slot:description>
+    <x-slot:personalization>
+        <livewire:documentation.v1.personalization :$personalization component="environment" />
+    </x-slot:personalization>
+    <x-section title="Concept">
+        <p>
+            Many modern applications need to have different environments for different purposes, such as: local -
+            for local development environment, staging - for general testing environment and production - for the
+            actual application. The <x-block>environment</x-block> component consists of the current environment
+            of the application in a summarized form to serve as a warning.
+        </p>
+    </x-section>
+    <x-section title="Basic Usage">
+        <x-preview language="blade" :contents="$basic">
+            <x-environment />
+        </x-preview>
+    </x-section>
+    <x-section title="Beyond Basic, EnvBar">
+        {{--TODO EnvBar link--}}
+        <div class="space-y-4">
+            <p>
+                With the example above you should realize that the environment is a basic component. <b>With the release
+                    of version 2.x of TallStackUI a new helper was introduced: <a href="#" class="underline">EnvBar</a>.</b> Unlike the environment component,
+                the EnvBar is a fixed bar at the top of the screen that serves to display several other information
+                about the current environment - not just the environment name and branch. If you want to go further
+                and <a href="#" class="underline">use the EnvBar click here.</a>
+            </p>
+            <img src="https://github.com/tallstackui/envbar/blob/1.x/arts/envbar.png?raw=true" />
+        </div>
+    </x-section>
+    <x-section title="Round Variation">
+        <x-preview language="blade" :contents="$basic">
+            <x-environment round />
+        </x-preview>
+    </x-section>
+    <x-section title="Square Variation">
+        <x-preview language="blade" :contents="$basic">
+            <x-environment square />
+        </x-preview>
+    </x-section>
+    <x-section title="Size Variations">
+        <x-preview language="blade" :contents="$basic">
+            <div class="flex flex-col items-start space-y-2">
+                <x-environment xs />
+                <x-environment sm />
+                <x-environment md />
+                <x-environment lg />
+            </div>
+        </x-preview>
+    </x-section>
+    <x-section title="Without Branch">
+        <x-preview language="blade" :contents="$basic">
+            <x-environment without-branch />
+        </x-preview>
+    </x-section>
+    <x-section title="Branch Detection Algorithm">
+        <div class="space-y-4">
+            <p>
+                Internally TallStackUI uses a simple algorithm to get the current branch name based
+                on the <x-block>.git</x-block> folder and its content. However, you can create your
+                own algorithm to be used for branch detection.
+            </p>
+            <p>
+                This is the current original algorithm:
+            </p>
+            <x-code :contents="$branchAlgorithm" />
+            <p>
+                If you want to create your own algorithm, just define it through a service provider:
+            </p>
+            <x-code :contents="$customAlgorithm" />
+        </div>
+    </x-section>
+    <x-section title="Color Scheme">
+        <div class="space-y-4">
+            <p>
+                You may have noticed that there is no way to define component colors. Internally TallStackUI defines default
+                colors by environment name, however you can customize all colors, as well as create new ones by environment name.
+            </p>
+            <ul class="space-y-2">
+                <li><x-block>local</x-block> - shades of <b class="text-green-700">green</b> colors</li>
+                <li><x-block>stating</x-block> - shades of <b class="text-yellow-700">yellow</b> colors</li>
+                <li><x-block>sandbox</x-block> - shades of <b class="text-blue-700">blue</b> colors</li>
+                <li><x-block>production</x-block> - shades of <b class="text-red-700">red</b> colors</li>
+                <li>Others - shades of <b class="text-primary-700">primary</b> colors</li>
+            </ul>
+            <p>
+                You can personalize or create new colors per room by following <a href="{{ route('documentation.v2.personalization.color') }}" class="underline">TallStackUI color personalization.</a>
+            </p>
+        </div>
+    </x-section>
+</x-layout>

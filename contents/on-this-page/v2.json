@@ -297,6 +297,16 @@
         "5": "Color Variations",
         "6": "Events"
     },
+    "docs.ui.environment": {
+        "0": "Basic Usage",
+        "1": "Beyond Basic, EnvBar",
+        "2": "Round Variation",
+        "3": "Square Variation",
+        "4": "Size Variations",
+        "5": "Without Branch",
+        "6": "Branch Detection Algorithm",
+        "7": "Color Scheme"
+    },
     "docs.ui.icon": {
         "0": "Concept",
         "1": "Supported Icon Libraries",
