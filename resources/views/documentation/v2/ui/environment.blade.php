@@ -39,17 +39,17 @@
         </div>
     </x-section>
     <x-section title="Round Variation">
-        <x-preview language="blade" :contents="$basic">
+        <x-preview language="blade" :contents="$round">
             <x-environment round />
         </x-preview>
     </x-section>
     <x-section title="Square Variation">
-        <x-preview language="blade" :contents="$basic">
+        <x-preview language="blade" :contents="$square">
             <x-environment square />
         </x-preview>
     </x-section>
     <x-section title="Size Variations">
-        <x-preview language="blade" :contents="$basic">
+        <x-preview language="blade" :contents="$sizes">
             <div class="flex flex-col items-start space-y-2">
                 <x-environment xs />
                 <x-environment sm />
@@ -59,7 +59,7 @@
         </x-preview>
     </x-section>
     <x-section title="Without Branch">
-        <x-preview language="blade" :contents="$basic">
+        <x-preview language="blade" :contents="$withoutBranch">
             <x-environment without-branch />
         </x-preview>
     </x-section>
@@ -73,11 +73,11 @@
             <p>
                 This is the current original algorithm:
             </p>
-            <x-code :contents="$branchAlgorithm" />
+            <x-code :contents="$branchAlgorithm" disable-copy />
             <p>
                 If you want to create your own algorithm, just define it through a service provider:
             </p>
-            <x-code :contents="$customAlgorithm" />
+            <x-code :contents="$customAlgorithm" disable-copy />
         </div>
     </x-section>
     <x-section title="Color Scheme">

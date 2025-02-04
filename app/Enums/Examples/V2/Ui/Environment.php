@@ -8,6 +8,25 @@ class Environment
     <x-environment />
     HTML;
 
+    public const ROUND = <<<'HTML'
+    <x-environment round />
+    HTML;
+
+    public const SQUARE = <<<'HTML'
+    <x-environment square />
+    HTML;
+
+    public const SIZES = <<<'HTML'
+    <x-environment xs /> <!-- Default -->
+    <x-environment sm />
+    <x-environment md />
+    <x-environment lg />
+    HTML;
+
+    public const WITHOUT_BRANCH = <<<'HTML'
+    <x-environment without-branch />
+    HTML;
+
     public const BRANCH_ALGORITHM = <<<'HTML'
     use Illuminate\Support\Facades\File;
     
