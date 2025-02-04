@@ -64,10 +64,10 @@
     <x-section title="Image">
         <x-preview language="blade" :background="false" :contents="$image">
             <div class="space-y-4">
-                <x-card image="https://picsum.photos/750/300">
+                <x-card image="{{ url('assets/images/wallpapers/1.jpg') }}">
                     Image at top
                 </x-card>
-                <x-card position="bottom" image="https://picsum.photos/750/300">
+                <x-card position="bottom" image="{{ url('assets/images/wallpapers/2.jpg') }}">
                     Image at bottom
                 </x-card>
             </div>

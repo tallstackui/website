@@ -18,6 +18,7 @@ enum Example: string
     case Boolean = 'Ui\\Boolean';
     case Button = 'Ui\\Button';
     case Card = 'Ui\\Card';
+    case Carousel = 'Ui\\Carousel';
     case Checkbox = 'Form\\Checkbox';
     case Clipboard = 'Ui\\Clipboard';
     case Color = 'Form\\Color';

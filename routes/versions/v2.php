@@ -46,6 +46,7 @@ Route::prefix('/ui')
         Route::view('/boolean', 'documentation.v2.ui.boolean', Example::Boolean->variables())->name('boolean');
         Route::view('/button', 'documentation.v2.ui.button', Example::Button->variables())->name('button');
         Route::view('/card', 'documentation.v2.ui.card', Example::Card->variables())->name('card');
+        Route::view('/carousel', 'documentation.v2.ui.carousel', Example::Carousel->variables())->name('carousel');
         Route::view('/clipboard', 'documentation.v2.ui.clipboard', Example::Clipboard->variables())->name('clipboard');
         Route::view('/dropdown', 'documentation.v2.ui.dropdown', Example::Dropdown->variables())->name('dropdown');
         Route::view('/error', 'documentation.v2.ui.error', Example::Error->variables())->name('error');

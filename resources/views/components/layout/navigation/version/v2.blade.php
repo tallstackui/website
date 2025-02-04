@@ -100,7 +100,7 @@
                         <x-layout.navigation.link :href="route('documentation.v2.ui.card')" text="Card" />
                     </li>
                     <li class="relative ml-4">
-                        <x-layout.navigation.link :href="route('documentation.v2.ui.card')" text="Carousel" new />
+                        <x-layout.navigation.link :href="route('documentation.v2.ui.carousel')" text="Carousel" new />
                     </li>
                     <li class="relative ml-4">
                         <x-layout.navigation.link :href="route('documentation.v2.ui.clipboard')" text="Clipboard" />
