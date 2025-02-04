@@ -10,9 +10,18 @@ class Slide
     </x-slide>
     HTML;
 
-    public const LEFT = <<<'HTML'
+    public const POSITIONS = <<<'HTML'
+    <x-slide>
+        Right
+    </x-slide>
     <x-slide left>
-        TallStackUi
+        Left
+    </x-slide>
+    <x-slide top>
+        Top
+    </x-slide>
+    <x-slide bottom>
+        Bottom
     </x-slide>
     HTML;
 

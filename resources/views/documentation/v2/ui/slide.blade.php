@@ -22,13 +22,31 @@
             </x-button>
         </x-preview>
     </x-section>
-    <x-section title="Left Side">
-        <x-preview language="blade" :contents="$left">
-            <x-slide id="left-slide" left>
-                TallStackUI
+    <x-section title="Positions">
+        <x-preview language="blade" :contents="$positions">
+            <x-slide id="right-slide">
+                Right
             </x-slide>
+            <x-slide id="left-slide" left>
+                Left
+            </x-slide>
+            <x-slide id="top-slide" top>
+                Top
+            </x-slide>
+            <x-slide id="bottom-slide" bottom>
+                Bottom
+            </x-slide>
+            <x-button x-on:click="$slideOpen('right-slide')">
+                Open Right
+            </x-button>
             <x-button x-on:click="$slideOpen('left-slide')">
-                Open Slide
+                Open Left
+            </x-button>
+            <x-button x-on:click="$slideOpen('top-slide')">
+                Open Top
+            </x-button>
+            <x-button x-on:click="$slideOpen('bottom-slide')">
+                Open Bottom
             </x-button>
         </x-preview>
     </x-section>
