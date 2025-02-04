@@ -259,7 +259,10 @@
     "docs.ui.card": {
         "0": "Basic Usage",
         "1": "Header Slot",
-        "2": "Footer Slot"
+        "2": "Footer Slot",
+        "3": "Minimizable",
+        "4": "Image",
+        "5": "Color Variations"
     },
     "docs.ui.clipboard": {
         "0": "Basic Usage",

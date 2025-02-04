@@ -6,37 +6,89 @@ class Card
 {
     public const BASIC = <<<'HTML'
     <x-card>
-        TallStackUi
+        TallStackUI
     </x-card>
     HTML;
 
     public const HEADER = <<<'HTML'
     <x-card>
         <x-slot:header>
-            TallStackUi
+            TallStackUI
         </x-slot:header>
-        TallStackUi
+        TallStackUI
     </x-card>
 
     <!-- or -->
 
-    <x-card header="TallStackUi">
-        TallStackUi
+    <x-card header="TallStackUI">
+        TallStackUI
     </x-card>
     HTML;
 
     public const FOOTER = <<<'HTML'
     <x-card>
-        TallStackUi
+        TallStackUI
         <x-slot:footer>
-            TallStackUi
+            TallStackUI
         </x-slot:footer>
     </x-card>
 
     <!-- or -->
 
-    <x-card footer="TallStackUi">
-        TallStackUi
+    <x-card footer="TallStackUI">
+        TallStackUI
+    </x-card>
+    HTML;
+
+    public const MINIMIZE = <<<'HTML'
+    <x-card header="TallStackUI" minimize>
+        TallStackUI
+    </x-card>
+
+    <!-- or -->
+
+    <x-card minimize>
+        <x-slot:header>
+            TallStackUI
+        </x-slot:header>
+        TallStackUI
+    </x-card>
+    HTML;
+
+    public const MINIMIZE_FROM_MOUNT = <<<'HTML'
+    <x-card header="TallStackUI" minimize="mount">
+        TallStackUI
+    </x-card>
+    HTML;
+
+    public const IMAGE = <<<'HTML'
+    <!-- Top position -->
+    <x-card image="https://picsum.photos/750/300">
+        TallStackUI
+    </x-card>
+
+    <!-- Bottom position -->
+    <x-card position="bottom" image="https://picsum.photos/750/300">
+        TallStackUI
+    </x-card>
+    HTML;
+
+    public const COLOR = <<<'HTML'
+    <!-- Accepted colors: primary, secondary, and ANY other TailwindCSS color. -->
+    
+    <!-- Normal -->
+    <x-card header="TallStackUI" color="primary">
+        TallStackUI
+    </x-card>
+    
+    <!-- Light Variation -->
+    <x-card header="TallStackUI" color="primary">
+        TallStackUI
+    </x-card>
+    
+    <!-- Border Only -->
+    <x-card header="TallStackUI" color="primary" bordered>
+        TallStackUI
     </x-card>
     HTML;
 
