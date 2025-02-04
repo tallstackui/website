@@ -12,7 +12,7 @@
     <x-slot:personalization>
         <livewire:documentation.v1.personalization :$personalization component="environment" />
     </x-slot:personalization>
-    <x-section title="Concept">
+    <x-section title="Concept" disable-copy>
         <p>
             Many modern applications need to have different environments for different purposes, such as: local -
             for local development environment, staging - for general testing environment and production - for the

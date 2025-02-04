@@ -395,6 +395,18 @@
         "7": "Color Variations",
         "8": "Events"
     },
+    "docs.ui.signature": {
+        "0": "Concept",
+        "1": "Basic Usage",
+        "3": "Label & Hint",
+        "4": "Pen Color",
+        "5": "Background Color",
+        "6": "Line Weight",
+        "7": "Height",
+        "8": "Clearable",
+        "9": "Exportable",
+        "10": "Events"
+    },
     "docs.form.select": {
         "Native": {
             "prefix": true,

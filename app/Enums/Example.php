@@ -49,6 +49,7 @@ enum Example: string
     case Progress = 'Ui\\Progress';
     case Reaction = 'Ui\\Reaction';
     case Rating = 'Ui\\Rating';
+    case Signature = 'Ui\\Signature';
     case Select = 'Form\\Select';
     case Slide = 'Ui\\Slide';
     case Stats = 'Ui\\Stats';

@@ -139,7 +139,7 @@
                         <x-layout.navigation.link :href="route('documentation.v2.ui.rating')" text="Rating" />
                     </li>
                     <li class="relative ml-4">
-                        <x-layout.navigation.link :href="route('documentation.v2.ui.card')" text="Signature" new />
+                        <x-layout.navigation.link :href="route('documentation.v2.ui.signature')" text="Signature" new />
                     </li>
                     <li class="relative ml-4">
                         <x-layout.navigation.link :href="route('documentation.v2.ui.slide')" text="Slide" />

@@ -58,6 +58,7 @@ Route::prefix('/ui')
         Route::view('/progress', 'documentation.v2.ui.progress', Example::Progress->variables())->name('progress');
         Route::view('/reaction', 'documentation.v2.ui.reaction', Example::Reaction->variables())->name('reaction');
         Route::view('/rating', 'documentation.v2.ui.rating', Example::Rating->variables())->name('rating');
+        Route::view('/signature', 'documentation.v2.ui.signature', Example::Signature->variables())->name('signature');
         Route::view('/slide', 'documentation.v2.ui.slide', Example::Slide->variables())->name('slide');
         Route::view('/stats', 'documentation.v2.ui.stats', Example::Stats->variables())->name('stats');
         Route::view('/step', 'documentation.v2.ui.step', Example::Step->variables())->name('step');
