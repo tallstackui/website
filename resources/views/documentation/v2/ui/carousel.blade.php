@@ -84,7 +84,7 @@
             ]" without-indicators />
         </x-preview>
     </x-section>
-    <x-section title="Fixed Aspect Radio">
+    <x-section title="Fixed Aspect Radio" description="An option to allow you control the aspect radio. Ideal for mobile devices.">
         <x-preview language="blade" :background="false" :contents="$basic">
             <x-carousel :images="[
                 ['src' => url('assets/images/wallpapers/1.jpg'), 'alt' => 'Wallpaper 1'],
