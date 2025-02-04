@@ -87,10 +87,10 @@
     <x-section title="Fixed Aspect Radio">
         <x-preview language="blade" :background="false" :contents="$basic">
             <x-carousel :images="[
-                ['src' => url('assets/images/wallpapers/1.jpg'), 'alt' => 'Wallpaper 1', 'title' => 'Image 1', 'description' => 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'],
-                ['src' => url('assets/images/wallpapers/2.jpg'), 'alt' => 'Wallpaper 2', 'title' => 'Image 2', 'description' => 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'],
-                ['src' => url('assets/images/wallpapers/3.jpg'), 'alt' => 'Wallpaper 3', 'title' => 'Image 3', 'description' => 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'],
-            ]" wrapper="aspect-3/1" />
+                ['src' => url('assets/images/wallpapers/1.jpg'), 'alt' => 'Wallpaper 1'],
+                ['src' => url('assets/images/wallpapers/2.jpg'), 'alt' => 'Wallpaper 2'],
+                ['src' => url('assets/images/wallpapers/3.jpg'), 'alt' => 'Wallpaper 3'],
+            ]" wrapper="aspect-[3/1]" />
         </x-preview>
     </x-section>
 </x-layout>
