@@ -24,6 +24,10 @@ class Color
     <x-color :colors="['#83493D', '#3D8357', '#693D83', '#3AB3D1', '#5DD116']" />
     HTML;
 
+    public const CLEARABLE = <<<'HTML'
+    <x-color clearable />
+    HTML;
+
     public const EVENTS = <<<'HTML'
     <x-color x-on:set="alert(`Selected Color: ${$event.detail.color}`)" />
     HTML;

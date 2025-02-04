@@ -83,6 +83,24 @@
             </div>
         </x-preview>
     </x-section>
+    <x-section title="Sub Dropdown" description="An option to allow the usage of multiples dropdowns like levels.">
+        <x-preview language="blade" :contents="$sub">
+            <div class="flex justify-end md:justify-center">
+                <x-dropdown text="Menu">
+                    <x-dropdown.items text="PHP" />
+                    <x-dropdown.items text="Python" />
+                    <x-dropdown.submenu text="Second Level">
+                        <x-dropdown.items text="JavaScript" />
+                        <x-dropdown.items text="Java" />
+                        <x-dropdown.submenu text="Third Level">
+                            <x-dropdown.items text="C++" />
+                            <x-dropdown.items text="Golang" />
+                        </x-dropdown.submenu>
+                    </x-dropdown.submenu>
+                </x-dropdown>
+            </div>
+        </x-preview>
+    </x-section>
     <x-section title="Action Slot">
         <x-preview language="blade" :contents="$actionSlots">
             <div class="flex justify-end md:justify-center">

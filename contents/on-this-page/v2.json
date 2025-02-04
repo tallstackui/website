@@ -21,8 +21,7 @@
         "1": "Label & Hint",
         "2": "Required Label Indicator",
         "3": "Icon Slot",
-        "4": "Prefix & Suffix",
-        "5": "Invalidate"
+        "4": "Prefix & Suffix"
     },
     "docs.form.password": {
         "0": "Basic Usage",
@@ -31,8 +30,7 @@
         "3": "Caps Lock Indicator",
         "4": "Format Validator",
         "5": "Password Generator",
-        "6": "Events",
-        "7": "Invalidate"
+        "6": "Events"
     },
     "docs.form.color": {
         "0": "Basic Usage",
@@ -40,8 +38,8 @@
         "2": "Picker Mode",
         "3": "Selectable",
         "4": "Custom Colors",
-        "5": "Events",
-        "6": "Invalidate",
+        "5": "Clearable",
+        "6": "Events",
         "7": "Configurations"
     },
     "docs.form.number": {
@@ -51,7 +49,6 @@
         "3": "Centralized",
         "4": "Selectable",
         "5": "Delay Control",
-        "6": "Invalidate",
         "7": "Livewire Bind Concern"
     },
     "docs.form.textarea": {
@@ -60,8 +57,7 @@
         "2": "Required Label Indicator",
         "3": "Resize",
         "4": "Resize Auto",
-        "5": "Character Count",
-        "6": "Invalidate"
+        "5": "Character Count"
     },
     "docs.form.checkbox": {
         "0": "Basic Usage",
@@ -69,8 +65,7 @@
         "2": "Label Slot",
         "3": "Label Alignment",
         "4": "Size Variations",
-        "5": "Color Variations",
-        "6": "Invalidate"
+        "5": "Color Variations"
     },
     "docs.form.radio": {
         "0": "Basic Usage",
@@ -78,16 +73,14 @@
         "2": "Label Slot",
         "3": "Label Alignment",
         "4": "Size Variations",
-        "5": "Color Variations",
-        "6": "Invalidate"
+        "5": "Color Variations"
     },
     "docs.form.tag": {
         "0": "Basic Usage",
         "1": "Label & Hint",
         "2": "Limit Options",
         "3": "Prefix",
-        "4": "Events",
-        "5": "Invalidate"
+        "4": "Events"
     },
     "docs.form.toggle": {
         "0": "Basic Usage",
@@ -95,15 +88,13 @@
         "2": "Label Slot",
         "3": "Label Alignment",
         "4": "Size Variations",
-        "5": "Color Variations",
-        "6": "Invalidate"
+        "5": "Color Variations"
     },
     "docs.form.range": {
         "0": "Basic Usage",
         "1": "Label",
         "2": "Size Variations",
-        "3": "Color Variations",
-        "4": "Invalidate"
+        "3": "Color Variations"
     },
     "docs.form.pin": {
         "0": "Concept",
@@ -112,8 +103,7 @@
         "3": "Prefix",
         "4": "Clear",
         "5": "Masks",
-        "6": "Events",
-        "7": "Invalidate"
+        "6": "Events"
     },
     "docs.form.upload": {
         "Upload": {
@@ -148,8 +138,7 @@
         "8": "Range Mode",
         "9": "Multiple Mode",
         "10": "Month Year Only",
-        "11": "Events",
-        "12": "Invalidate"
+        "11": "Events"
     },
     "docs.form.time": {
         "1": "Basic Usage",
@@ -160,8 +149,7 @@
         "6": "Helper",
         "7": "Step Hour & Minute",
         "8": "Footer Slot",
-        "9": "Events",
-        "10": "Invalidate"
+        "9": "Events"
     },
     "docs.ui.alert": {
         "0": "Basic Usage",
@@ -280,7 +268,8 @@
         "3": "Icon",
         "4": "Static Icon",
         "5": "Header Slot",
-        "6": "Action Slot"
+        "6": "Sub Dropdown",
+        "7": "Action Slot"
     },
     "docs.ui.error": {
         "0": "Basic Usage",
@@ -385,8 +374,7 @@
             "contents": {
                 "0": "Basic Usage",
                 "1": "Label & Hint",
-                "2": "Multi-dimensional Array",
-                "3": "Invalidate"
+                "2": "Multi-dimensional Array"
             }
         },
         "Styled": {

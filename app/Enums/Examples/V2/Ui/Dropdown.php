@@ -68,6 +68,21 @@ class Dropdown
     </x-dropdown>
     HTML;
 
+    public const SUB = <<<'HTML'
+    <x-dropdown text="Menu" position="bottom-end">
+        <x-dropdown.items text="PHP" />
+        <x-dropdown.items text="Python" />
+        <x-dropdown.submenu text="Second Level">
+            <x-dropdown.items text="JavaScript" />
+            <x-dropdown.items text="Java" />
+            <x-dropdown.submenu text="Third Level">
+                <x-dropdown.items text="C++" />
+                <x-dropdown.items text="Golang" />
+            </x-dropdown.submenu>
+        </x-dropdown.submenu>
+    </x-dropdown>
+    HTML;
+
     public const ACTION_SLOTS = <<<'HTML'
     <x-dropdown>
         <x-slot:action>
