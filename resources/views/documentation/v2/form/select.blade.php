@@ -24,12 +24,43 @@
         </x-preview>
     </x-section>
     <x-section title="Multi-dimensional Array" anchor="native-multi-dimensional-array" description="An option to use multi-dimensional array.">
-        <x-preview language="blade" :contents="$nativeAdvanced">
-            <x-select.native :options="[
+        <div class="space-y-2">
+            <x-preview language="blade" :contents="$nativeAdvanced">
+                <x-select.native :options="[
                 ['label' => 'TALL', 'value' => 1],
                 ['label' => 'LIVT', 'value' => 2],
-            ]" select="label:label|value:value"/>
-        </x-preview>
+            ]" />
+            </x-preview>
+            <p>
+                When the value and label do not come from the <x-block>label</x-block> and <x-block>value</x-block>
+                positions respectively, you must specify this manually using the <x-block>select</x-block> attribute:
+            </p>
+            <x-code language="blade" :contents="$nativeAdvancedDifferentIndexes" disable-copy />
+        </div>
+    </x-section>
+    <x-section title="Grouped" anchor="native-grouped">
+        <div class="space-y-2">
+            <x-preview language="blade" :contents="$nativeGrouped">
+                <x-select.native group :options="[
+                     [
+                         'label' => 'Brazil',
+                         'value' => [
+                             ['label' => 'São Paulo', 'value' => 4],
+                             ['label' => 'Rio de Janeiro', 'value' => 5],
+                             ['label' => 'Brasília', 'value' => 6]
+                         ]
+                     ],
+                     [
+                         'label' => 'United States',
+                         'value' => [
+                             ['label' => 'New York', 'value' => 7],
+                             ['label' => 'Los Angeles', 'value' => 8],
+                             ['label' => 'Chicago', 'value' => 9]
+                         ]
+                     ],
+                ]" />
+            </x-preview>
+        </div>
     </x-section>
     <x-warning>
         This option is also available for the other select components below.
@@ -70,19 +101,26 @@
         </x-preview>
     </x-section>
     <x-section title="Multi-dimensional Array" anchor="styled-multi-dimensional-array" description="An option to use multi-dimensional array.">
-        <x-preview language="blade" :contents="$styledMultidimensional">
-            <x-select.styled :options="[
+        <div class="space-y-2">
+            <x-preview language="blade" :contents="$styledMultidimensional">
+                <x-select.styled :options="[
                 ['label' => 'TALL', 'value' => 1],
                 ['label' => 'LIVT', 'value' => 2],
-            ]" select="label:label|value:value" />
-        </x-preview>
+            ]"  />
+            </x-preview>
+            <p>
+                When the value and label do not come from the <x-block>label</x-block> and <x-block>value</x-block>
+                positions respectively, you must specify this manually using the <x-block>select</x-block> attribute:
+            </p>
+            <x-code language="blade" :contents="$styledMultidimensionalDifferentIndexes" disable-copy />
+        </div>
     </x-section>
     <x-section title="Disable Options" description="An option to disable specific options." anchor="styled-disable-options">
         <x-preview language="blade" :contents="$styledDisabled">
             <x-select.styled :options="[
                 ['label' => 'TALL', 'value' => 1, 'disabled' => true],
                 ['label' => 'LIVT', 'value' => 2],
-            ]" select="label:label|value:value" />
+            ]"  />
         </x-preview>
     </x-section>
     <x-section title="Limit Selection" description="An option to limit the number of selections." anchor="styled-limit-selection">
@@ -92,7 +130,7 @@
                 ['label' => 'LIVT', 'value' => 2],
                 ['label' => 'Blade', 'value' => 3],
                 ['label' => 'API', 'value' => 4],
-            ]" select="label:label|value:value" multiple />
+            ]"  multiple />
         </x-preview>
     </x-section>
     <x-section title="Image Preview" anchor="styled-image-preview">
@@ -101,7 +139,7 @@
                 ['label' => 'Taylor Otwell', 'value' => 1, 'image' => 'https://unavatar.io/github/taylorotwell'],
                 ['label' => 'Nuno Maduro', 'value' => 2, 'image' => 'https://unavatar.io/github/nunomaduro'],
                 ['label' => 'Jess Archer', 'value' => 3, 'image' => 'https://unavatar.io/github/jessarcher'],
-            ]" select="label:label|value:value" />
+            ]"  />
         </x-preview>
     </x-section>
     <x-section title="Description" anchor="styled-description">
@@ -110,7 +148,7 @@
                 ['label' => 'Taylor Otwell', 'value' => 1, 'description' => 'Taylor Otwell is the creator of Laravel'],
                 ['label' => 'Nuno Maduro', 'value' => 2, 'description' => 'Nuno Maduro is the creator of PestPHP'],
                 ['label' => 'Jess Archer', 'value' => 3, 'description' => 'Jess Archer is the creator of Laravel Prompts'],
-            ]" select="label:label|value:value" />
+            ]"  />
         </x-preview>
     </x-section>
     <x-section title="Searchable" anchor="styled-searchable">
@@ -118,7 +156,33 @@
             <x-select.styled :options="[
                 ['label' => 'TALL', 'value' => 1],
                 ['label' => 'LIVT', 'value' => 2],
-            ]" select="label:label|value:value" searchable />
+            ]"  searchable />
+        </x-preview>
+    </x-section>
+    <x-section title="Grouped" anchor="styled-grouped">
+        <x-preview language="blade" :contents="$styledGrouped">
+            <x-select.styled group :options="[
+                [
+                    'label' => 'Brazil',
+                    'image' => 'https://placehold.co/15x15/cyan/white',
+                    'description' => 'Brazil is a country known for being the land of samba.',
+                    'value' => [
+                         ['label' => 'São Paulo', 'value' => 4, 'image' => 'https://placehold.co/15x15/orange/white'],
+                         ['label' => 'Rio de Janeiro', 'value' => 5, 'image' => 'https://placehold.co/15x15/orange/white'],
+                         ['label' => 'Brasília', 'value' => 6, 'image' => 'https://placehold.co/15x15/orange/white']
+                    ]
+                ],
+                [
+                    'label' => 'United States',
+                    'image' => 'https://placehold.co/15x15/purple/white',
+                    'description' => 'The United States is a country known for being the land of opportunity.',
+                    'value' => [
+                        ['label' => 'New York', 'value' => 7, 'image' => 'https://placehold.co/15x15/blue/white'],
+                        ['label' => 'Los Angeles', 'value' => 8, 'image' => 'https://placehold.co/15x15/blue/white'],
+                        ['label' => 'Chicago', 'value' => 9, 'image' => 'https://placehold.co/15x15/blue/white']
+                    ]
+                ],
+            ]" />
         </x-preview>
     </x-section>
     <x-section title="Slot After" anchor="styled-slot-after" description="An option to interact with the search term when nothing is found.">
@@ -139,7 +203,7 @@
             <x-select.styled :options="[
                 ['label' => 'TALL', 'value' => 1],
                 ['label' => 'LIVT', 'value' => 2],
-            ]" select="label:label|value:value"
+            ]"
                x-on:select="alert(`Select: ${JSON.stringify($event.detail.select)}`)"
                x-on:remove="alert(`Remove: ${JSON.stringify($event.detail.select)}`)"
                multiple />

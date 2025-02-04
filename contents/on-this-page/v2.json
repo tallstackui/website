@@ -378,7 +378,8 @@
             "contents": {
                 "0": "Basic Usage",
                 "1": "Label & Hint",
-                "2": "Multi-dimensional Array"
+                "2": "Multi-dimensional Array",
+                "3": "Grouped"
             }
         },
         "Styled": {
@@ -395,8 +396,9 @@
                 "8": "Image Preview",
                 "9": "Description",
                 "10": "Searchable",
-                "11": "Slot After",
-                "12": "Events"
+                "11": "Grouped",
+                "12": "Slot After",
+                "13": "Events"
             }
         },
         "Styled API": {

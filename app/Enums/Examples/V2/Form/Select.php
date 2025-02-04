@@ -18,7 +18,35 @@ class Select
     <x-select.native :options="[
         ['label' => 'TALL', 'value' => 1],
         ['label' => 'LIVT', 'value' => 2],
-    ]" select="label:label|value:value" />
+    ]" />
+    HTML;
+
+    public const NATIVE_ADVANCED_DIFFERENT_INDEXES = <<<'HTML'
+    <x-select.native :options="[
+        ['name' => 'TALL', 'id' => 1],
+        ['name' => 'LIVT', 'id' => 2],
+    ]" select="label:name|value:id" />
+    HTML;
+
+    public const NATIVE_GROUPED = <<<'HTML'
+    <x-select.native group :options="[
+         [
+             'label' => 'Brazil',
+             'value' => [
+                 ['label' => 'São Paulo', 'value' => 4],
+                 ['label' => 'Rio de Janeiro', 'value' => 5],
+                 ['label' => 'Brasília', 'value' => 6]
+             ]
+         ],
+         [
+             'label' => 'United States',
+             'value' => [
+                 ['label' => 'New York', 'value' => 7],
+                 ['label' => 'Los Angeles', 'value' => 8],
+                 ['label' => 'Chicago', 'value' => 9]
+             ]
+         ],
+     ]" />
     HTML;
 
     /* Styled Common */
@@ -54,14 +82,21 @@ class Select
     <x-select.styled  :options="[
         ['label' => 'TALL', 'value' => 1],
         ['label' => 'LIVT', 'value' => 2],
-    ]" select="label:label|value:value" />
+    ]" />
+    HTML;
+
+    public const STYLED_MULTIDIMENSIONAL_DIFFERENT_INDEXES = <<<'HTML'
+    <x-select.styled  :options="[
+        ['name' => 'TALL', 'id' => 1],
+        ['name' => 'LIVT', 'id' => 2],
+    ]" select="label:name|value:id" />
     HTML;
 
     public const STYLED_DISABLED = <<<'HTML'
     <x-select.styled :options="[
         ['label' => 'TALL', 'value' => 1, 'disabled' => true],
         ['label' => 'LIVT', 'value' => 2],
-    ]" select="label:label|value:value" />
+    ]" />
     HTML;
 
     public const STYLED_LIMIT = <<<'HTML'
@@ -72,7 +107,7 @@ class Select
         ['label' => 'LIVT', 'value' => 2],
         ['label' => 'Blade', 'value' => 3],
         ['label' => 'API', 'value' => 4],
-    ]" select="label:label|value:value" multiple />
+    ]" multiple />
     HTML;
 
     public const STYLED_IMAGE = <<<'HTML'
@@ -82,7 +117,7 @@ class Select
         ['label' => 'Taylor Otwell', 'value' => 1, 'image' => 'https://unavatar.io/github/taylorotwell'],
         ['label' => 'Nuno Maduro', 'value' => 2, 'image' => 'https://unavatar.io/github/nunomaduro'],
         ['label' => 'Jess Archer', 'value' => 3, 'image' => 'https://unavatar.io/github/jessarcher'],
-    ]" select="label:label|value:value" />
+    ]" />
     HTML;
 
     public const STYLED_DESCRIPTION = <<<'HTML'
@@ -92,7 +127,7 @@ class Select
         ['label' => 'Taylor Otwell', 'value' => 1, 'description' => 'Taylor Otwell is the creator of Laravel'],
         ['label' => 'Nuno Maduro', 'value' => 2, 'description' => 'Nuno Maduro is the creator of PestPHP'],
         ['label' => 'Jess Archer', 'value' => 3, 'description' => 'Jess Archer is the creator of Laravel Prompts'],
-    ]" select="label:label|value:value" />
+    ]" />
     HTML;
 
     public const STYLED_MULTIPLE = <<<'HTML'
@@ -103,7 +138,32 @@ class Select
     <x-select.styled :options="[
         ['label' => 'TALL', 'value' => 1],
         ['label' => 'LIVT', 'value' => 2],
-    ]" select="label:label|value:value" searchable />
+    ]" searchable />
+    HTML;
+
+    public const STYLED_GROUPED = <<<'HTML'
+    <x-select.styled group :options="[
+        [
+            'label' => 'Brazil',
+            'image' => 'https://placehold.co/15x15/cyan/white',
+            'description' => 'Brazil is a country known for being the land of samba.',
+            'value' => [
+                 ['label' => 'São Paulo', 'value' => 4, 'image' => 'https://placehold.co/15x15/orange/white'],
+                 ['label' => 'Rio de Janeiro', 'value' => 5, 'image' => 'https://placehold.co/15x15/orange/white'],
+                 ['label' => 'Brasília', 'value' => 6, 'image' => 'https://placehold.co/15x15/orange/white']
+            ]
+        ],
+        [
+            'label' => 'United States',
+            'image' => 'https://placehold.co/15x15/purple/white',
+            'description' => 'The United States is a country known for being the land of opportunity.',
+            'value' => [
+                ['label' => 'New York', 'value' => 7, 'image' => 'https://placehold.co/15x15/blue/white'],
+                ['label' => 'Los Angeles', 'value' => 8, 'image' => 'https://placehold.co/15x15/blue/white'],
+                ['label' => 'Chicago', 'value' => 9, 'image' => 'https://placehold.co/15x15/blue/white']
+            ]
+        ],
+    ]" />
     HTML;
 
     public const STYLED_SLOT = <<<'HTML'
@@ -122,8 +182,7 @@ class Select
     <x-select.styled :options="[
         ['label' => 'TALL', 'value' => 1],
         ['label' => 'LIVT', 'value' => 2],
-    ]" select="label:label|value:value"
-       x-on:select="alert(`Select: ${JSON.stringify($event.detail.select)}`)"
+    ]" x-on:select="alert(`Select: ${JSON.stringify($event.detail.select)}`)"
        x-on:remove="alert(`Remove: ${JSON.stringify($event.detail.select)}`)"
        multiple />
     HTML;
