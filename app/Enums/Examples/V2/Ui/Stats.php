@@ -22,14 +22,15 @@ class Stats
 
     public const LINK = <<<'HTML'
     <x-stats href="https://tallstackui.com" target="_blank" :number="100" />
+
+    <!-- Also accepts wire:click to call a Livewire method. -->
+    <x-stats wire:click="updateQuantity" :number="$quantity" />
     HTML;
 
     public const NAVIGATE = <<<'HTML'
-    <!-- <a href="https://tallstackui.com" wire:navigate ...> -->
-    <x-stats href="https://tallstackui.com" target="_blank" :number="100" navigate />
+    <x-stats ... navigate />
     
-    <!-- <a href="https://tallstackui.com" wire:navigate.hover ...> -->
-    <x-stats href="https://tallstackui.com" target="_blank" :number="100" navigate-nover />
+    <x-stats ... navigate-hover />
     HTML;
 
     public const ICONS = <<<'HTML'

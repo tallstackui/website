@@ -43,7 +43,10 @@
                          :number="10.000" />
             </div>
         </x-preview>
-        <x-code language="blade" :contents="$navigate" />
+        <p>
+            You can also set <x-block>wire:navigate</x-block> or <x-block>wire:navigate.hover</x-block>:
+        </p>
+        <x-code language="blade" :contents="$navigate" disable-copy />
     </x-section>
     <x-section title="Icons">
         <x-preview language="blade" :contents="$icons" :background="false">
