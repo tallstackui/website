@@ -10,7 +10,7 @@
         Environment component.
     </x-slot:description>
     <x-slot:personalization>
-        <livewire:documentation.v1.personalization :$personalization component="environment" />
+        <livewire:personalization :$personalization component="Environment" />
     </x-slot:personalization>
     <x-section title="Concept" disable-copy>
         <p>

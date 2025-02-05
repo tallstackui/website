@@ -10,7 +10,7 @@
         Signature component.
     </x-slot:description>
     <x-slot:personalization>
-        <livewire:documentation.v1.personalization :$personalization component="signature" />
+        <livewire:personalization :$personalization component="Signature" />
     </x-slot:personalization>
     <x-section title="Concept" disable-copy>
         <div class="space-y-4">

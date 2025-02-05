@@ -6,7 +6,7 @@
         The generic hint component used in form components.
     </x-slot:description>
     <x-slot:personalization>
-        <livewire:documentation.v1.personalization :$personalization component="hint" />
+        <livewire:personalization :$personalization component="Hint" />
     </x-slot:personalization>
     <x-internals-warning />
 </x-layout>

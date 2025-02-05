@@ -1,13 +1,14 @@
 <?php
 
-use Livewire\Volt\Component;
+use Livewire\Volt\Component as VoltComponent;
+use Illuminate\View\Component as ViewComponent;
 
-new class extends Component {
+new class extends VoltComponent {
     public string $component;
 
     public string $id = '';
 
-    public string $title = '';
+    public ?string $title = null;
 
     public bool $modal = false;
 
@@ -21,12 +22,13 @@ new class extends Component {
     {
         $str = str($this->component);
 
-        $this->title = $str->replace('.', ' ')
+        $this->title ??= $str->replace('\\', ' ')
             ->title()
             ->value();
 
-        $this->id = $str->replace('.', '')
-            ->trim()
+        $this->id = $str->lower()
+            ->remove('\\')
+            ->squish()
             ->value();
 
         $this->id .= '-'.uniqid();
@@ -36,8 +38,7 @@ new class extends Component {
     {
         $this->original = null;
 
-        $components = config()->get('tallstackui.components');
-        $this->blocks = app($components[$this->component], ['ignoreValidations' => true])->personalization();
+        $this->blocks = app("TallStackUi\\View\\Components\\".$this->component)->personalization();
     }
 
     public function content(string $block, string $class): void
@@ -49,25 +50,16 @@ new class extends Component {
 
 <div>
     <x-modal id="{{ $id }}">
-        <x-warning class="mb-4">
-            This content is part of <a href="{{ route('documentation.v1.personalization.concept') }}" wire:navigate class="underline">TallStackUI personalization.</a>
-        </x-warning>
         <x-slot:title>
-            <div class="flex items-center justify-start gap-2">
+            <p class="flex items-center justify-start gap-2">
                 {{ $title }}, Personalization Blocks
-                <x-tooltip text="Click on the block to check the original class."
-                           position="bottom"
-                           color="pink"
-                           outline
-                />
-            </div>
+            </p>
         </x-slot:title>
         @if ($personalization)
             <div wire:ignore>
                 <p class="text-base font-medium">Example:</p>
                 <x-code :contents="$personalization" personalization unpadding/>
             </div>
-            <p class="pb-4 text-sm underline">The soft personalization should be done in <x-block>boot</x-block> method of service providers.</p>
         @endif
         @if ($blocks)
             <div class="px-2 sm:px-0">

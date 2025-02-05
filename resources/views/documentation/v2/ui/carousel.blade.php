@@ -10,7 +10,7 @@
         Carousel component.
     </x-slot:description>
     <x-slot:personalization>
-        <livewire:documentation.v1.personalization :$personalization component="carousel" />
+        <livewire:personalization :$personalization component="Carousel" />
     </x-slot:personalization>
     <x-section title="Basic Usage">
         <x-preview language="blade" :background="false" :contents="$basic">

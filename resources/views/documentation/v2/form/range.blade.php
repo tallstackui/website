@@ -10,7 +10,7 @@
         Form range component.
     </x-slot:description>
     <x-slot:personalization>
-        <livewire:documentation.v1.personalization :$personalization component="range" />
+        <livewire:personalization :$personalization component="Form\Range" />
     </x-slot:personalization>
     <x-section title="Basic Usage">
         <x-preview language="blade" :contents="$basic">

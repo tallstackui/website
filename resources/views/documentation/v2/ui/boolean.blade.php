@@ -10,7 +10,7 @@
         Boolean component.
     </x-slot:description>
     <x-slot:personalization>
-        <livewire:documentation.v1.personalization :$personalization component="boolean" />
+        <livewire:personalization :$personalization component="Boolean" />
     </x-slot:personalization>
     <x-section title="Concept" disable-copy>
         <p>

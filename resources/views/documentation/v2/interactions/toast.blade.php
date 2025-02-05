@@ -10,7 +10,7 @@
         Toast component.
     </x-slot:description>
     <x-slot:personalization>
-        <livewire:documentation.v1.personalization :$personalization component="toast" />
+        <livewire:personalization :$personalization component="Interaction\Dialog" />
     </x-slot:personalization>
     <x-section title="Configuration" disable-copy>
         1. Insert the Toast component on your main layout.

@@ -10,7 +10,7 @@
         Theme switch component.
     </x-slot:description>
     <x-slot:personalization>
-        <livewire:documentation.v1.personalization :$personalization component="theme-switch" />
+        <livewire:personalization :$personalization component="ThemeSwitch" />
     </x-slot:personalization>
     <x-warning class="mt-2">
         You should only use this component if are using the <a href="{{ route('documentation.v2.dark-theme') }}" wire:navigate class="underline">dark theme helper.</a>

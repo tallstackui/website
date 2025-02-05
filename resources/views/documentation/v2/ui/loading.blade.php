@@ -10,7 +10,7 @@
         Loading component.
     </x-slot:description>
     <x-slot:personalization>
-        <livewire:documentation.v1.personalization :$personalization component="loading" />
+        <livewire:personalization :$personalization component="Loading" />
     </x-slot:personalization>
     <x-section title="Concept" disable-copy>
         <p>
