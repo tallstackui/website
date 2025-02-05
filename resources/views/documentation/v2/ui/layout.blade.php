@@ -18,50 +18,26 @@
 {{--    </x-slot:personalization>--}}
     <x-section title="Concept" disable-copy>
         <p>
-            The version 2.x of the TallStackUI introduces a new dashboard layout component. Due to the format of
-            the TallStackUI documentation, there will be no code examples of the layout to be displayed,
-            but at the end of the documentation on this page there are some attached photos of the layout
-            assembled following the guidelines on that page.
+            A versão 2.x do TallStackUI introduz um novo componente de layout de painel. Devido ao formato da documentação do TallStackUI, não haverá exemplos de código do layout a ser exibido, mas no final da documentação nesta página há algumas fotos anexadas do layout montado seguindo as diretrizes naquela página.
         </p>
-    </x-section>
-    <x-section title="Prepare Base Layout" disable-copy>
-        <div class="space-y-4">
-            <p>
-                The first thing to do to use the layout component is to prepare the base layout of your application
-                to receive the layout. Usually the base layout file of the application when authenticated is the
-                file <x-block>resources/views/layouts/app.blade.php</x-block>. Edit the file with the following changes:
-            </p>
-            <ul class="list-inside list-decimal space-y-2">
-                <li>
-                    Update the css classes of the <x-block>html</x-block> root adding:
-                    <x-code language="blade" :contents="$html" />
-                </li>
-                <li>
-                    Update the css classes of the <x-block>body</x-block> root adding:
-                    <x-code language="blade" :contents="$body" />
-                </li>
-            </ul>
-        </div>
     </x-section>
     <x-section title="Layout Example" disable-copy>
         <div class="space-y-4">
             <p>
-                Instead of displaying several different options - as we do with other pages in the documentation,
-                for the layout component we will provide a complete useful example, after which you will be introduced
-                to some of the available options. You should insert the example below inside the <x-block>body</x-block> tag of your layout file.
+                Aqui está um exemplo completo do componente de layout. Em seguida iremos explicar diversas coisas sobre o layout.
             </p>
             <x-code language="blade" :contents="$layout" disable-copy />
             <p>
-                Before continuing, you may have noticed the following:
+                Antes de continuar, você deve ter notado o seguinte:
             </p>
             <ul class="list-inside list-decimal">
-                <li>The layout component has several different slots, each targeting a specific position in the layout.</li>
-                <li>The layout component has other components, such as <x-block>layout.header</x-block></li>
-                <li>In this example we are using some other components, such as <x-block>dropdown</x-block></li>
+                <li>O componente de layout tem diversos slots, cada um deles é objetivado a posicionar coisas em partes específicas do layout</li>
+                <li>O componente de layout tem outros componentes, como o <x-block>layout.header</x-block></li>
+                <li>Neste exemplo, estamos usando outros componentes da TallStackUI, como o <x-block>dropdown</x-block></li>
             </ul>
         </div>
     </x-section>
-    <x-separator text="Slots" />
+    <x-separator text="Layout Slots" />
     <x-section title="Slot: Header" disable-copy>
         <div class="space-y-4">
             <p>
@@ -73,7 +49,7 @@
     <x-section title="Slot: Menu" disable-copy>
         <div class="space-y-4">
             <p>
-                Esse slot serve para posicionar o componente <x-block>side-bar</x-block> que deve ser utilizado para compor o menu de opções.
+                Esse slot serve para posicionar o componente <x-block>side-bar</x-block>:
             </p>
             <x-code language="blade" :contents="$menu" disable-copy />
         </div>
@@ -81,7 +57,7 @@
     <x-section title="Slot: Top" disable-copy>
         <div class="space-y-4">
             <p>
-                Embora não tenha sido utilizado no exemplo oferecido acima, esse slot está posicionado acima da aplicação do slot <x-block>menu</x-block> e
+                Embora não tenha sido utilizado no exemplo acima, esse slot está posicionado acima do slot <x-block>menu</x-block> e
                 foi criado para receber qualquer conteúdo adicionar nesta posição. Internamente ele está aplicado desta forma:
             </p>
             <x-code language="blade" :contents="$top" disable-copy />
@@ -90,12 +66,12 @@
     <x-section title="Slot: Footer" disable-copy>
         <div class="space-y-4">
             <p>
-                De igual modo ao <x-block>top</x-block> porém posicionado na extremidade do layout:
+                Simiar ao <x-block>top</x-block>, porém posicionado na extremidade inferior do layout:
             </p>
             <x-code language="blade" :contents="$footer" disable-copy />
         </div>
     </x-section>
-    <x-separator text="Components" />
+    <x-separator text="Children Components" />
     <x-section title="Layout Header" disable-copy>
         <div class="space-y-4">
             <p>
@@ -103,58 +79,86 @@
             </p>
             <x-code language="blade" :contents="$headerSlots" disable-copy />
             <ul class="list-inside list-decimal">
-                <li><x-block>left</x-block>: adiciona conteúdos a esquerda da barra horizontal.</li>
-                <li><x-block>middle</x-block>: adiciona conteúdos ao meio da barra horizontal.</li>
-                <li><x-block>right</x-block>: adiciona conteúdos a direita da barra horizontal.</li>
+                <li><x-block>left</x-block>: adiciona conteúdos a esquerda da barra horizontal</li>
+                <li><x-block>middle</x-block>: adiciona conteúdos ao meio da barra horizontal</li>
+                <li><x-block>right</x-block>: adiciona conteúdos a direita da barra horizontal</li>
             </ul>
             <p>
-                Além disso, você pode controlar a exibição do botão que serve para abrir o menu quando em dispositivos móveis - explicamos sobre isso nas seções abaixo,
-                através do componente <x-block>layout.header</x-block>
+                Além disso, você pode controlar a exibição de um botão que serve para abrir o <x-block>side-bar</x-block>
+                quando em dispositivos móveis. Você entenderá isso ao continuar lendo a documentação abaixo.
             </p>
-            <x-code language="blade" :contents="$headerWithoutMobileButton" disable-copy />
         </div>
     </x-section>
     <x-section title="Side Bar" disable-copy>
         <div class="space-y-4">
             <p>
-                O <x-block>side-bar</x-block> é o conjunto de três componentes: <x-block>side-bar</x-block>, <x-block>side-bar.item</x-block> e <x-block>side-bar.separator</x-block>.
-                Embora possam ser utilizados de forma combinada, cada um deles serve para um próposito:
+                O <x-block>side-bar</x-block> é o componente que cria a estrutura para receber o menu de opções.
+                Ela é única entre as versões desktop e mobile, o que quer dizer que o mesmo menu de opções que
+                você vê no desktop será o mesmo que você verá em versão mobile.
+            </p>
+            <x-code language="blade" :contents="$sidebar" disable-copy />
+            <p>
+                Como o <x-block>side-bar</x-block> é aplicado tanto para desktop como para mobile, se você desejar por alguma razão,
+                não utilizar menu para dispositivos móveis, você pode ocultar um botão que é exibido no <x-block>layout.header</x-block>
+                para que quando clicado ele acione o <x-block>side-bar</x-block> em mobile:
+            </p>
+            <x-code language="blade" :contents="$headerWithoutButton" disable-copy />
+            <p>
+                Se você ocultou o botão padrão de abertura do <x-block>side-bar</x-block> em mobile, mas quer utilizar um outro botão
+                para controlar a abertura do <x-block>side-bar</x-block> em mobile basta disparar eventos do AlpineJS:
+            </p>
+            <x-code language="blade" :contents="$javascript" disable-copy />
+            <p>
+                O <x-block>side-bar</x-block> possui poucas configurações disponíveis, mas todas são úteis para um propósito:
             </p>
             <ul class="list-inside list-decimal">
-                <li><x-block>side-bar</x-block>: é a estrutura que compõe o menu de opções distribuido entre as versões desktop e mobile.</li>
-                <li><x-block>side-bar.item</x-block>: é o componente utilizado para adicionar itens no menu.</li>
-                <li><x-block>side-bar.separator</x-block>: é um elemento de separação de itens.</li>
+                <li>Slot <x-block>brand</x-block>: um slot especial para adição de uma imagem/texto acima do menu de opções</li>
+                <li>Atributo <x-block>smart</x-block>: ativa o comportamento de detecção de rotas para ativar o efeito de rotas "ativas"</li>
+                <li>Atributo <x-block>navigate</x-block>: ativa <x-block>wire:navigate</x-block> nas rotas</li>
+                <li>Atributo <x-block>navigate-hover</x-block>: ativa <x-block>wire:navigate.hover</x-block> nas rotas</li>
             </ul>
             <p>
-                Como explicado acima, o componente <x-block>layout.header</x-block> pode controlar a exibição do botão que serve para abrir o menu
-                quando em mobile. Isso quer dizer que quando você optar por não exibir o botão do menu em dispositivo mobile, não haverá menu exibido
-                quando em dispositivo mobile.
+                Um exemplo completo seria assim:
             </p>
+            <x-code language="blade" :contents="$sidebarOptions" disable-copy />
+        </div>
+    </x-section>
+    <x-section title="Side Bar Item" disable-copy>
+        <div class="space-y-4">
             <p>
-                O <x-block>side-bar</x-block> possui ao todo três atributos e um slot disponível para serem utilizados:
+                O <x-block>side-bar.item</x-block> é o componente utilizado para adicionar opções clicáveis no <x-block>side-bar</x-block>. Ele
+                pode ser utilizado para adicionar um item indivual ou criar um grupo de itens, como um sub-nível, de forma extremamente fácil.
             </p>
-            <ul class="list-inside list-decimal">
-                <li>
-                    Slot <x-block>brand</x-block>: serve para exibir um texto, imagem ou qualquer coisa posicionado logo acima do menu:
-                    <x-code language="blade" :contents="$brand" disable-copy />
-                </li>
-                <li>
-                    <x-block>side-bar.item</x-block>: é o componente utilizado para adicionar itens no menu:
-                    <x-code language="blade" :contents="$item" disable-copy />
-                    É possível agrupar itens de uma forma muito fácil:
-                    <x-code language="blade" :contents="$grouped" disable-copy />
-                </li>
-                <li>
-                    <x-block>side-bar.separator</x-block>: é um elemento de separação de itens.
-                    <x-code language="blade" :contents="$separator" disable-copy />
-                    Existem três estilos diferentes:
-                    <x-code language="blade" :contents="$separatorStyles" disable-copy />
-                </li>
-            </ul>
+            <x-code language="blade" :contents="$item" disable-copy />
             <p>
-                Se você utilizou o exemplo oferecido acima, você deve ter notado que ao navegar entre as páginas não há estado "ativo" para a página
-                que você está. O componente <x-block>side-bar</x-block> possui um atributo que quando utilizado irá ativar o estado ativo automaticamente
-                baseado na rota atual em que você está:
+                Se por acaso você não desejar utilizar o <x-block>smart</x-block> do componente <x-block>side-bar</x-block> para ativar a detectação automática de rotas,
+                você pode controlar o comportamento de detectação de rotas manualmente, através dos atributos booleanos: <x-block>opened</x-block> - para o grupo de itens,
+                e <x-block>current</x-block> para o item em si:
+            </p>
+            <x-code language="blade" :contents="$attributes" disable-copy />
+            <p>
+                Estes atributos são booleanos, o que quer dizer que você pode passar condições para eles:
+            </p>
+            <x-code language="blade" :contents="$match" disable-copy />
+        </div>
+    </x-section>
+    <x-section title="Side Bar Separator" disable-copy>
+        <div class="space-y-4">
+            <p>
+                O <x-block>side-bar.separator</x-block> é um componente utilizado para criar separações decorada entre os itens:
+            </p>
+            <x-code language="blade" :contents="$separator" disable-copy />
+            <p>
+                Existem três opções disponíveis, cada uma com um estílo específico:
+            </p>
+            <x-code language="blade" :contents="$styles" disable-copy />
+        </div>
+    </x-section>
+    <x-section title="Personalization" disable-copy>
+        <div class="space-y-4">
+            <p>
+                Por último, é importante ter que mente que todos os componentes acima mencionados
+                estão disponíveis para serem totalmente personalizados através da personalização soft ou personalização deep.
             </p>
         </div>
     </x-section>

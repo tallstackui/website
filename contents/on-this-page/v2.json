@@ -330,6 +330,19 @@
         "11": "Events",
         "12": "Configurations"
     },
+    "docs.ui.layout": {
+        "0": "Concept",
+        "1": "Layout Example",
+        "2": "Slot: Header",
+        "3": "Slot: Menu",
+        "4": "Slot: Top",
+        "5": "Slot: Footer",
+        "6": "Layout Header",
+        "7": "Side Bar",
+        "8": "Side Bar Item",
+        "9": "Side Bar Separator",
+        "10": "Personalization"
+    },
     "docs.ui.link": {
         "0": "Basic Usage",
         "1": "Size Variations",
