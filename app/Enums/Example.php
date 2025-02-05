@@ -32,6 +32,7 @@ enum Example: string
     case DeepPersonalization = 'Personalization\\DeepPersonalization';
     case Dialog = 'Ui\\Dialog';
     case Dropdown = 'Ui\\Dropdown';
+    case EnvBar = 'Others\\EnvBar';
     case Error = 'Ui\\Error';
     case Environment = 'Ui\\Environment';
     case Icon = 'Ui\\Icon';

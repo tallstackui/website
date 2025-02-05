@@ -86,6 +86,7 @@ Route::controller(Internal::class)
         Route::get('/floating', 'floating')->name('floating');
     });
 
+Route::view('/envbar', 'documentation.v2.helpers.envbar', Example::EnvBar->variables())->name('envbar');
 Route::view('/dark-theme', 'documentation.v2.helpers.dark-theme', Example::DarkTheme->variables())->name('dark-theme');
 Route::view('/configuration', 'documentation.v2.configuration', Example::Configuration->variables())->name('configuration');
 Route::view('/command', 'documentation.v2.command', Example::Command->variables())->name('command');

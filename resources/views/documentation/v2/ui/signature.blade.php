@@ -13,12 +13,16 @@
         <livewire:documentation.v1.personalization :$personalization component="signature" />
     </x-slot:personalization>
     <x-section title="Concept" disable-copy>
-        <p>
-            Many modern applications need to capture a user's signature, and the signature
-            component is ideal for this. The signature component capturing and exporting
-            signatures. <b>You should use it inside Livewire components with <x-block>wire:model</x-block> to some property as a string.</b>
-            The signature will be a base64 that you can display as an image or store in your database.
-        </p>
+        <div class="space-y-4">
+            <p>
+                Many modern applications need to capture a user's signature, and the signature
+                component is ideal for this. The signature component capturing and exporting
+                signatures. The signature will be a base64 that you can display as an image or store in your database.
+            </p>
+            <x-warning>
+                You should use it inside Livewire components with <x-block pink>wire:model</x-block> to some property as a string.
+            </x-warning>
+        </div>
     </x-section>
     <x-section title="Basic Usage">
         <x-preview language="blade" :contents="$basic">
