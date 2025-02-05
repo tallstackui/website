@@ -53,6 +53,7 @@ Route::prefix('/ui')
         Route::view('/environment', 'documentation.v2.ui.environment', Example::Environment->variables())->name('environment');
         Route::view('/icon', 'documentation.v2.ui.icon', Example::Icon->variables())->name('icon');
         Route::view('/modal', 'documentation.v2.ui.modal', Example::Modal->variables())->name('modal');
+        Route::view('/layout', 'documentation.v2.ui.layout', Example::Layout->variables())->name('layout');
         Route::view('/link', 'documentation.v2.ui.link', Example::Link->variables())->name('link');
         Route::view('/loading', 'documentation.v2.ui.loading', Example::Loading->variables())->name('loading');
         Route::view('/progress', 'documentation.v2.ui.progress', Example::Progress->variables())->name('progress');
