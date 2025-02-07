@@ -180,12 +180,12 @@
     </x-section>
     <x-section title="Wireable">
         <x-preview language="blade" :contents="$wireable">
-            <livewire:documentation.v1.ui.step />
+            <livewire:documentation.ui.step />
         </x-preview>
     </x-section>
     <x-section title="Live Wireable">
         <x-preview language="blade" :contents="$liveWireable">
-            <livewire:documentation.v1.ui.step live />
+            <livewire:documentation.ui.step live />
         </x-preview>
     </x-section>
     <x-section title="Events">

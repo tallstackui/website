@@ -41,17 +41,17 @@
     </x-section>
     <x-section title="Basic Usage">
         <x-preview language="blade" :contents="$basic">
-            <livewire:documentation.v1.ui.loading />
+            <livewire:documentation.ui.loading />
         </x-preview>
     </x-section>
     <x-section title="Text Slot">
         <x-preview language="blade" :contents="$text">
-            <livewire:documentation.v1.ui.loading :model="1" />
+            <livewire:documentation.ui.loading :model="1" />
         </x-preview>
     </x-section>
     <x-section title="Target & Delay Options">
         <x-preview language="blade" :contents="$targetDelay">
-            <livewire:documentation.v1.ui.loading :model="2" />
+            <livewire:documentation.ui.loading :model="2" />
         </x-preview>
     </x-section>
     <x-available-configuration />

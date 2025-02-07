@@ -10,7 +10,7 @@
         Slide component.
     </x-slot:description>
     <x-slot:personalization>
-        <livewire:documentation.v1.personalization :$personalization component="slide" />
+        <livewire:personalization :$personalization component="slide" />
     </x-slot:personalization>
     <x-section title="Basic Usage">
         <x-preview language="blade" :contents="$basic">
@@ -181,12 +181,12 @@
     <x-warning text="Make sure to provide some way to close the slide when using this option, such as a button within the slide." />
     <x-section class="mt-4" title="Wireable" description="An option to control the slide via Livewire.">
         <x-preview language="blade" :contents="$wireable">
-            <livewire:documentation.v1.slide.entangle/>
+            <livewire:documentation.slide.entangle/>
         </x-preview>
     </x-section>
     <x-section title="Wireable Personalized" description="Customize which property to use to control the slide via Livewire.">
         <x-preview language="blade" :contents="$wireableCustomized">
-            <livewire:documentation.v1.slide.customentangle/>
+            <livewire:documentation.slide.customentangle/>
         </x-preview>
     </x-section>
     <x-section title="AlpineJS Helper" description="Helpers to open and close the slide using AlpineJS.">

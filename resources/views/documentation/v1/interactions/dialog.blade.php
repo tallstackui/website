@@ -10,7 +10,7 @@
         Dialog component.
     </x-slot:description>
     <x-slot:personalization>
-        <livewire:documentation.v1.personalization :$personalization component="dialog" />
+        <livewire:personalization :$personalization component="dialog" />
     </x-slot:personalization>
     <x-section title="Configuration" disable-copy>
         1. Insert the Dialog component on your main layout.
@@ -23,12 +23,12 @@
     </x-section>
     <x-section title="Basic Usage">
         <x-preview :contents="$basic">
-            <livewire:documentation.v1.interactions.dialog.examples/>
+            <livewire:documentation.interactions.dialog.examples/>
         </x-preview>
     </x-section>
     <x-section title="Confirmations" description="Interacting with actions.">
         <x-preview :contents="$confirmation">
-            <livewire:documentation.v1.interactions.dialog.confirmation/>
+            <livewire:documentation.interactions.dialog.confirmation/>
         </x-preview>
         <div class="mt-4 space-y-4">
             <p>
@@ -39,7 +39,7 @@
     </x-section>
     <x-section title="Events" description="An option to listen to events.">
         <x-preview language="blade" :contents="$events">
-            <livewire:documentation.v1.interactions.dialog.events/>
+            <livewire:documentation.interactions.dialog.events/>
         </x-preview>
         <x-warning class="mt-4">
             We recommend that you use listeners in one place, whether in the base layout or once per component.

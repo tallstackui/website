@@ -10,7 +10,7 @@
         Toast component.
     </x-slot:description>
     <x-slot:personalization>
-        <livewire:documentation.v1.personalization :$personalization component="toast" />
+        <livewire:personalization :$personalization component="toast" />
     </x-slot:personalization>
     <x-section title="Configuration" disable-copy>
         1. Insert the Toast component on your main layout.
@@ -23,12 +23,12 @@
     </x-section>
     <x-section title="Basic Usage">
         <x-preview :contents="$basic">
-            <livewire:documentation.v1.interactions.toast.examples/>
+            <livewire:documentation.interactions.toast.examples/>
         </x-preview>
     </x-section>
     <x-section title="Confirmations" description="Interacting with actions.">
         <x-preview :contents="$confirmation">
-            <livewire:documentation.v1.interactions.toast.confirmation/>
+            <livewire:documentation.interactions.toast.confirmation/>
         </x-preview>
         <div class="mt-4 space-y-4">
             <p>
@@ -39,7 +39,7 @@
     </x-section>
     <x-section title="Time Control" description="Increase the time to show the toast.">
         <x-preview :contents="$time">
-            <livewire:documentation.v1.interactions.toast.timeout/>
+            <livewire:documentation.interactions.toast.timeout/>
         </x-preview>
         <p class="mt-2">
             <u>Starting from version 1.14.2</u>, you can set a default timeout through <a href="{{ route('documentation.v1.configuration') }}" wire:navigate class="underline">configuration file:</a>
@@ -48,7 +48,7 @@
     </x-section>
     <x-section title="Expandable" description="An option to show minimized description texts.">
         <x-preview :contents="$expandable">
-            <livewire:documentation.v1.interactions.toast.expandable/>
+            <livewire:documentation.interactions.toast.expandable/>
         </x-preview>
         <p class="mt-2">
             You can configure Toast to be extensible by default in <a href="{{ route('documentation.v1.configuration') }}" wire:navigate class="underline">the configuration file.</a> When you
@@ -58,7 +58,7 @@
     </x-section>
     <x-section title="Events" description="An option to listen to events.">
         <x-preview language="blade" :contents="$events">
-            <livewire:documentation.v1.interactions.toast.events/>
+            <livewire:documentation.interactions.toast.events/>
         </x-preview>
         <x-warning class="mt-4">
             We recommend that you use listeners in one place, whether in the base layout or once per component.

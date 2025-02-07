@@ -79,7 +79,7 @@
     </x-section>
     <x-section title="Example" anchor="livewire-integration-example">
         <x-preview :contents="$example">
-            <livewire:documentation.v1.interactions.banner.examples />
+            <livewire:documentation.interactions.banner.examples />
         </x-preview>
     </x-section>
     <x-section title="Display After Redirects" anchor="livewire-integration-display-after-redirects">

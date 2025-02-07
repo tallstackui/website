@@ -68,7 +68,7 @@
     </x-section>
     <x-section title="Livewire Click Actions" description="An option to use a Livewire click action in the icons.">
         <x-preview language="blade" :contents="$click">
-            <livewire:documentation.v1.ui.boolean />
+            <livewire:documentation.ui.boolean />
         </x-preview>
     </x-section>
 </x-layout>

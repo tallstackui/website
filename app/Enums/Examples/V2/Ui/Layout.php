@@ -168,9 +168,33 @@ class Layout
     <x-side-bar.separator text="Configurations" line-right />
     HTML;
 
-    public const PERSONALIZATION = <<<'HTML'
+    public const PERSONALIZATION_LAYOUT = <<<'HTML'
     TallStackUi::personalize()
         ->layout()
+        ->block('block', 'classes');
+    HTML;
+
+    public const PERSONALIZATION_LAYOUT_HEADER = <<<'HTML'
+    TallStackUi::personalize()
+        ->layout('header')
+        ->block('block', 'classes');
+    HTML;
+
+    public const PERSONALIZATION_SIDEBAR = <<<'HTML'
+    TallStackUi::personalize()
+        ->sideBar()
+        ->block('block', 'classes');
+    HTML;
+
+    public const PERSONALIZATION_SIDEBAR_ITEM = <<<'HTML'
+    TallStackUi::personalize()
+        ->sideBar('item')
+        ->block('block', 'classes');
+    HTML;
+
+    public const PERSONALIZATION_SIDEBAR_SEPARATOR = <<<'HTML'
+    TallStackUi::personalize()
+        ->sideBar('separator')
         ->block('block', 'classes');
     HTML;
 }

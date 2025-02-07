@@ -38,7 +38,7 @@
     </x-section>
     <x-section title="Clear" description="An option to append a clear button.">
         <x-preview language="blade" :contents="$clear">
-            <livewire:documentation.v1.form.pin />
+            <livewire:documentation.form.pin />
         </x-preview>
         <x-warning class="mt-4">
             The clear button will only be displayed when the input is not empty.

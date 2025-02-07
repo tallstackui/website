@@ -10,7 +10,7 @@
         Tabs component.
     </x-slot:description>
     <x-slot:personalization>
-        <livewire:documentation.v1.personalization :$personalization component="tab" />
+        <livewire:personalization :$personalization component="tab" />
     </x-slot:personalization>
     <x-section title="Basic Usage">
         <x-preview language="blade" :background="false" :contents="$basic">
@@ -71,12 +71,12 @@
     </x-section>
     <x-section title="Wireable" description="An option to control the tab via Livewire.">
         <x-preview language="blade" :background="false" :contents="$wireable">
-            <livewire:documentation.v1.ui.tabs />
+            <livewire:documentation.ui.tabs />
         </x-preview>
     </x-section>
     <x-section title="Live Wireable" description="An option to control the tab via Livewire with live updates.">
         <x-preview language="blade" :background="false" :contents="$wireableLive">
-            <livewire:documentation.v1.ui.tabs live />
+            <livewire:documentation.ui.tabs live />
         </x-preview>
     </x-section>
 </x-layout>

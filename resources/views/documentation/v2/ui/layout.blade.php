@@ -9,13 +9,13 @@
     <x-slot:description>
         Layout component.
     </x-slot:description>
-{{--    <x-slot:personalization>--}}
-{{--        <livewire:documentation.v1.personalization :$personalization component="layout" />--}}
-{{--        <livewire:documentation.v1.personalization :$personalization component="layout.header" />--}}
-{{--        <livewire:documentation.v1.personalization :$personalization component="side-bar" />--}}
-{{--        <livewire:documentation.v1.personalization :$personalization component="side-bar.item" />--}}
-{{--        <livewire:documentation.v1.personalization :$personalization component="side-bar.separator" />--}}
-{{--    </x-slot:personalization>--}}
+    <x-slot:personalization>
+        <livewire:personalization :personalization="$personalizationLayout" component="Layout\Layout" title="Layout" />
+        <livewire:personalization :personalization="$personalizationLayoutHeader" component="Layout\Header" />
+        <livewire:personalization :personalization="$personalizationSidebar" component="Layout\SideBar\SideBar" title="Sidebar" />
+        <livewire:personalization :personalization="$personalizationSidebarItem" component="Layout\SideBar\Item" title="Sidebar Item" />
+        <livewire:personalization :personalization="$personalizationSidebarSeparator" component="Layout\SideBar\Separator" title="Sidebar Separator" />
+    </x-slot:personalization>
     <x-section title="Concept" disable-copy>
         <p>
             The version 2.x of the TallStackUI introduces a new layout component for dashboard creation.

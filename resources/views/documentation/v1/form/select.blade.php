@@ -10,8 +10,8 @@
         Select components.
     </x-slot:description>
     <x-slot:personalization>
-        <livewire:documentation.v1.personalization :personalization="$personalizationNative" component="select.native" />
-        <livewire:documentation.v1.personalization :personalization="$personalizationStyled" component="select.styled" />
+        <livewire:personalization :personalization="$personalizationNative" component="select.native" />
+        <livewire:personalization :personalization="$personalizationStyled" component="select.styled" />
     </x-slot:personalization>
     <x-section title="Basic Usage" anchor="native-basic-usage">
         <x-preview language="blade" :contents="$nativeBasic">

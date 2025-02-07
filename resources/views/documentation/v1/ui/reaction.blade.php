@@ -13,7 +13,7 @@
         Reaction component.
     </x-slot:description>
     <x-slot:personalization>
-        <livewire:documentation.v1.personalization :$personalization component="reaction" />
+        <livewire:personalization :$personalization component="reaction" />
     </x-slot:personalization>
     <x-section title="Concept" disable-copy>
         <p>
@@ -40,22 +40,22 @@
     </x-section>
     <x-section title="Basic Usage">
         <x-preview language="blade" :contents="$basic">
-            <livewire:documentation.v1.ui.reaction :model="1" />
+            <livewire:documentation.ui.reaction :model="1" />
         </x-preview>
     </x-section>
     <x-section title="Animated Style" description="An option to use GIF format instead of PNG.">
         <x-preview language="blade" :contents="$animated">
-            <livewire:documentation.v1.ui.reaction :model="2" />
+            <livewire:documentation.ui.reaction :model="2" />
         </x-preview>
     </x-section>
     <x-section title="Tooltip Position">
         <x-preview language="blade" :contents="$position">
-            <livewire:documentation.v1.ui.reaction :model="3" />
+            <livewire:documentation.ui.reaction :model="3" />
         </x-preview>
     </x-section>
     <x-section title="Quantity Slot" description="An option for show the currently quantity of reactions.">
         <x-preview language="blade" :contents="$quantity">
-            <livewire:documentation.v1.ui.reaction :model="4" />
+            <livewire:documentation.ui.reaction :model="4" />
         </x-preview>
         <div class="mt-4">
             <p>You can bind a property for real-time updates:</p>
@@ -64,17 +64,17 @@
     </x-section>
     <x-section title="Using Less Icons">
         <x-preview language="blade" :contents="$only">
-            <livewire:documentation.v1.ui.reaction :model="5" />
+            <livewire:documentation.ui.reaction :model="5" />
         </x-preview>
     </x-section>
     <x-section title="Slot">
         <x-preview language="blade" :contents="$slot">
-            <livewire:documentation.v1.ui.reaction :model="6" />
+            <livewire:documentation.ui.reaction :model="6" />
         </x-preview>
     </x-section>
     <x-section title="Events">
         <x-preview language="blade" :contents="$events">
-            <livewire:documentation.v1.ui.reaction :model="7" />
+            <livewire:documentation.ui.reaction :model="7" />
         </x-preview>
     </x-section>
 </x-layout>

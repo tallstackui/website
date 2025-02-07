@@ -30,6 +30,6 @@
         <x-code language="shell" :contents="$updatingTallstackui" />
     </x-section>
     <x-section title="Releases" disable-copy>
-        <livewire:documentation.v1.releases />
+        <livewire:documentation.releases />
     </x-section>
 </x-layout>

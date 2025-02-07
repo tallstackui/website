@@ -10,7 +10,7 @@
         Form input component.
     </x-slot:description>
     <x-slot:personalization>
-        <livewire:documentation.v1.personalization :$personalization component="input" />
+        <livewire:personalization :$personalization component="input" />
     </x-slot:personalization>
     <x-section title="Basic Usage">
         <x-preview language="blade" :contents="$basic">

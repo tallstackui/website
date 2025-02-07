@@ -82,13 +82,13 @@
         <x-preview language="blade" :contents="$loading">
             <div class="flex flex-col items-center justify-center space-y-2 sm:space-x-2 sm:space-y-0 sm:flex-row sm:justify-start">
                 <div>
-                    <livewire:documentation.v1.ui.button :model="1" />
+                    <livewire:documentation.ui.button :model="1" />
                 </div>
                 <div>
-                    <livewire:documentation.v1.ui.button :model="1" :type="2" />
+                    <livewire:documentation.ui.button :model="1" :type="2" />
                 </div>
                 <div>
-                    <livewire:documentation.v1.ui.button :model="1" :type="3" />
+                    <livewire:documentation.ui.button :model="1" :type="3" />
                 </div>
             </div>
         </x-preview>
@@ -255,9 +255,9 @@
     <x-section title="Loading Effect" anchor="circle-loading-effect">
         <x-preview language="blade" :contents="$circleLoading">
             <div class="inline-flex items-center space-x-2">
-                <livewire:documentation.v1.ui.button :model="2" />
-                <livewire:documentation.v1.ui.button :model="2" :type="2" />
-                <livewire:documentation.v1.ui.button :model="2" :type="3" />
+                <livewire:documentation.ui.button :model="2" />
+                <livewire:documentation.ui.button :model="2" :type="2" />
+                <livewire:documentation.ui.button :model="2" :type="3" />
             </div>
         </x-preview>
     </x-section>

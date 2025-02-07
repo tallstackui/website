@@ -11,7 +11,7 @@
         Form password component. Show or hide password value.
     </x-slot:description>
     <x-slot:personalization>
-        <livewire:documentation.v1.personalization :$personalization component="password" />
+        <livewire:personalization :$personalization component="password" />
     </x-slot:personalization>
     <x-section title="Basic Usage">
         <x-preview language="blade" :contents="$basic">

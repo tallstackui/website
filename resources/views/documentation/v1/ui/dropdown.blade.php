@@ -10,8 +10,8 @@
         Dropdown component.
     </x-slot:description>
     <x-slot:personalization>
-        <livewire:documentation.v1.personalization :$personalization component="dropdown" />
-        <livewire:documentation.v1.personalization :personalization="$personalizationItems" component="dropdown.items" />
+        <livewire:personalization :$personalization component="dropdown" />
+        <livewire:personalization :personalization="$personalizationItems" component="dropdown.items" />
     </x-slot:personalization>
     <x-section title="Basic Usage">
         <x-preview language="blade" :contents="$left">

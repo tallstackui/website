@@ -10,7 +10,7 @@
         Tooltip component.
     </x-slot:description>
     <x-slot:personalization>
-        <livewire:documentation.v1.personalization :$personalization component="tooltip" />
+        <livewire:personalization :$personalization component="tooltip" />
     </x-slot:personalization>
     <x-section title="Basic Usage">
         <x-preview language="blade" :contents="$basic">

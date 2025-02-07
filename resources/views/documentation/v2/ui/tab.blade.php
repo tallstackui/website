@@ -71,12 +71,12 @@
     </x-section>
     <x-section title="Wireable" description="An option to control the tab via Livewire.">
         <x-preview language="blade" :background="false" :contents="$wireable">
-            <livewire:documentation.v1.ui.tabs />
+            <livewire:documentation.ui.tabs />
         </x-preview>
     </x-section>
     <x-section title="Live Wireable" description="An option to control the tab via Livewire with live updates.">
         <x-preview language="blade" :background="false" :contents="$wireableLive">
-            <livewire:documentation.v1.ui.tabs live />
+            <livewire:documentation.ui.tabs live />
         </x-preview>
     </x-section>
 </x-layout>

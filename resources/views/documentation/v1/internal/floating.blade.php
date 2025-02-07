@@ -7,7 +7,7 @@
         password, form upload, form color, dropdown, and select styled.
     </x-slot:description>
     <x-slot:personalization>
-        <livewire:documentation.v1.personalization :$personalization component="floating" />
+        <livewire:personalization :$personalization component="floating" />
     </x-slot:personalization>
     <x-internals-warning />
     <x-section class="mt-4">

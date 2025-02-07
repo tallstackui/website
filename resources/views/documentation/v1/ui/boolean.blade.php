@@ -13,7 +13,7 @@
         Boolean component.
     </x-slot:description>
     <x-slot:personalization>
-        <livewire:documentation.v1.personalization :$personalization component="boolean" />
+        <livewire:personalization :$personalization component="boolean" />
     </x-slot:personalization>
     <x-section title="Concept" disable-copy>
         <p>
@@ -73,7 +73,7 @@
     </x-section>
     <x-section title="Livewire Click Actions" description="An option to use a Livewire click action in the icons.">
         <x-preview language="blade" :contents="$click">
-            <livewire:documentation.v1.ui.boolean />
+            <livewire:documentation.ui.boolean />
         </x-preview>
     </x-section>
 </x-layout>

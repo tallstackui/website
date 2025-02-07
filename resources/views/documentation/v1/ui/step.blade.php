@@ -13,7 +13,7 @@
         Step components.
     </x-slot:description>
     <x-slot:personalization>
-        <livewire:documentation.v1.personalization :$personalization component="step" />
+        <livewire:personalization :$personalization component="step" />
     </x-slot:personalization>
     <x-section title="Basic Usage">
         <x-preview language="blade" :contents="$basic">
@@ -183,12 +183,12 @@
     </x-section>
     <x-section title="Wireable">
         <x-preview language="blade" :contents="$wireable">
-            <livewire:documentation.v1.ui.step />
+            <livewire:documentation.ui.step />
         </x-preview>
     </x-section>
     <x-section title="Live Wireable">
         <x-preview language="blade" :contents="$liveWireable">
-            <livewire:documentation.v1.ui.step live />
+            <livewire:documentation.ui.step live />
         </x-preview>
     </x-section>
     <x-section title="Events">

@@ -13,7 +13,7 @@
         Rating component.
     </x-slot:description>
     <x-slot:personalization>
-        <livewire:documentation.v1.personalization :$personalization component="rating" />
+        <livewire:personalization :$personalization component="rating" />
     </x-slot:personalization>
     <x-section title="Concept" disable-copy>
         <p>
@@ -53,32 +53,32 @@
     </x-section>
     <x-section title="Basic Usage">
         <x-preview language="blade" :contents="$basic">
-            <livewire:documentation.v1.ui.rating />
+            <livewire:documentation.ui.rating />
         </x-preview>
     </x-section>
     <x-section title="Rating Quantity">
         <x-preview language="blade" :contents="$quantity">
-            <livewire:documentation.v1.ui.rating :model="2" />
+            <livewire:documentation.ui.rating :model="2" />
         </x-preview>
     </x-section>
     <x-section title="Text">
         <x-preview language="blade" :contents="$label">
-            <livewire:documentation.v1.ui.rating :model="3" />
+            <livewire:documentation.ui.rating :model="3" />
         </x-preview>
     </x-section>
     <x-section title="Size Variations">
         <x-preview language="blade" :contents="$size">
-            <livewire:documentation.v1.ui.rating :model="4" />
+            <livewire:documentation.ui.rating :model="4" />
         </x-preview>
     </x-section>
     <x-section title="Color Variations">
         <x-preview language="blade" :contents="$color">
-            <livewire:documentation.v1.ui.rating :model="5" />
+            <livewire:documentation.ui.rating :model="5" />
         </x-preview>
     </x-section>
     <x-section title="Events">
         <x-preview language="blade" :contents="$events">
-            <livewire:documentation.v1.ui.rating :model="6" />
+            <livewire:documentation.ui.rating :model="6" />
         </x-preview>
     </x-section>
 </x-layout>

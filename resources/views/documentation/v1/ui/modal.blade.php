@@ -10,7 +10,7 @@
         Modal component.
     </x-slot:description>
     <x-slot:personalization>
-        <livewire:documentation.v1.personalization :$personalization component="modal" />
+        <livewire:personalization :$personalization component="modal" />
     </x-slot:personalization>
     <x-section title="Basic Usage">
         <x-preview language="blade" :contents="$basic">
@@ -184,12 +184,12 @@
     <x-warning text="Make sure to provide some way to close the modal when using this option, such as a button within the modal." />
     <x-section class="mt-4" title="Wireable" description="An option to control the modal via Livewire.">
         <x-preview language="blade" :contents="$wireable">
-            <livewire:documentation.v1.modal.entangle/>
+            <livewire:documentation.modal.entangle/>
         </x-preview>
     </x-section>
     <x-section title="Wireable Personalized" description="Customize which property to use to control the modal via Livewire.">
         <x-preview language="blade" :contents="$wireableCustomized">
-            <livewire:documentation.v1.modal.customentangle/>
+            <livewire:documentation.modal.customentangle/>
         </x-preview>
     </x-section>
     <x-section title="AlpineJS Helper" description="Helpers to open and close the modal using AlpineJS.">

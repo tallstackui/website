@@ -13,7 +13,7 @@
         Table component.
     </x-slot:description>
     <x-slot:personalization>
-        <livewire:documentation.v1.personalization :$personalization component="table" />
+        <livewire:personalization :$personalization component="table" />
     </x-slot:personalization>
     <x-warning class="mb-4">
         All examples in this page use Livewire through Laravel Volt because the TallStackUI
@@ -42,22 +42,22 @@
     </x-section>
     <x-section title="Basic Usage">
         <x-preview language="blade" :contents="$basic" :background="false">
-            <livewire:documentation.v1.ui.table :mode="1" />
+            <livewire:documentation.ui.table :mode="1" />
         </x-preview>
     </x-section>
     <x-section title="Without Header">
         <x-preview language="blade" :contents="$withoutHeader" :background="false">
-            <livewire:documentation.v1.ui.table :mode="2" />
+            <livewire:documentation.ui.table :mode="2" />
         </x-preview>
     </x-section>
     <x-section title="Striped Style">
         <x-preview language="blade" :contents="$striped" :background="false">
-            <livewire:documentation.v1.ui.table :mode="3" />
+            <livewire:documentation.ui.table :mode="3" />
         </x-preview>
     </x-section>
     <x-section title="Filters">
         <x-preview language="blade" :contents="$filters" :background="false">
-            <livewire:documentation.v1.ui.table :mode="4" />
+            <livewire:documentation.ui.table :mode="4" />
         </x-preview>
         <x-warning class="mb-4">
             The search input bind the property using wire:model.live with debounce of 500ms.
@@ -65,32 +65,32 @@
     </x-section>
     <x-section title="Loading Effect" description="An option to display a loading effect when interacts with the table elements.">
         <x-preview language="blade" :contents="$loading" :background="false">
-            <livewire:documentation.v1.ui.table :mode="5" />
+            <livewire:documentation.ui.table :mode="5" />
         </x-preview>
     </x-section>
     <x-section title="Sorting" description="Sorting when clicking on the header names of the table.">
         <x-preview language="blade" :contents="$sort" :background="false">
-            <livewire:documentation.v1.ui.table :mode="6" />
+            <livewire:documentation.ui.table :mode="6" />
         </x-preview>
     </x-section>
     <x-section title="Pagination">
         <x-preview language="blade" :contents="$paginate" :background="false">
-            <livewire:documentation.v1.ui.table :mode="7" />
+            <livewire:documentation.ui.table :mode="7" />
         </x-preview>
     </x-section>
     <x-section title="Slots">
         <x-preview language="blade" :contents="$slots" :background="false">
-            <livewire:documentation.v1.ui.table :mode="8" />
+            <livewire:documentation.ui.table :mode="8" />
         </x-preview>
     </x-section>
     <x-section title="Selection">
         <x-preview language="blade" :contents="$selectable" :background="false">
-            <livewire:documentation.v1.ui.table :mode="9" />
+            <livewire:documentation.ui.table :mode="9" />
         </x-preview>
     </x-section>
     <x-section title="Clickable">
         <x-preview language="blade" :contents="$clickable" :background="false">
-            <livewire:documentation.v1.ui.table :mode="10" />
+            <livewire:documentation.ui.table :mode="10" />
         </x-preview>
     </x-section>
     <x-section title="Interacting With Data" disable-copy>

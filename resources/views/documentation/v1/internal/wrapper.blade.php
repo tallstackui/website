@@ -6,8 +6,8 @@
         The generic wrapper component used to wrapper form components.
     </x-slot:description>
     <x-slot:personalization>
-        <livewire:documentation.v1.personalization :personalization="$personalization['input']" component="wrapper.input" />
-        <livewire:documentation.v1.personalization :personalization="$personalization['radio']" component="wrapper.radio" />
+        <livewire:personalization :personalization="$personalization['input']" component="wrapper.input" />
+        <livewire:personalization :personalization="$personalization['radio']" component="wrapper.radio" />
     </x-slot:personalization>
     <x-internals-warning />
 </x-layout>

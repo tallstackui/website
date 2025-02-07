@@ -23,17 +23,17 @@
     </x-warning>
     <x-section title="Basic Usage" anchor="upload-basic-usage">
         <x-preview language="blade" :contents="$basic">
-            <livewire:documentation.v1.form.upload.upload :model="1" />
+            <livewire:documentation.form.upload.upload :model="1" />
         </x-preview>
     </x-section>
     <x-section title="Label & Hint & Tip" anchor="upload-label-hint-tip">
         <x-preview language="blade" :contents="$labelHintTip">
-            <livewire:documentation.v1.form.upload.upload :model="2" />
+            <livewire:documentation.form.upload.upload :model="2" />
         </x-preview>
     </x-section>
     <x-section title="Delete" anchor="upload-delete">
         <x-preview language="blade" :contents="$delete">
-            <livewire:documentation.v1.form.upload.upload :model="3" />
+            <livewire:documentation.form.upload.upload :model="3" />
         </x-preview>
         <p class="mt-4">
             You can use this algorithm to be the base of the method of deleting temporary files.
@@ -44,7 +44,7 @@
     </x-section>
     <x-section title="Multiple" anchor="upload-multiple">
         <x-preview language="blade" :contents="$multiple">
-            <livewire:documentation.v1.form.upload.upload :model="4" />
+            <livewire:documentation.form.upload.upload :model="4" />
         </x-preview>
         <p class="mt-4">
             If you have ever uploaded multiple files, you may have already encountered this issue: after selecting some files, if new files are selected they replace the selected ones with the new selected files, instead of merging them. To solve this problem and allow your user to select multiple files, in batches, you can use an algorithm like this:
@@ -66,12 +66,12 @@
     </x-section>
     <x-section title="Restricting File Types" anchor="upload-restricting-file-types">
         <x-preview language="blade" :contents="$accept">
-            <livewire:documentation.v1.form.upload.upload :model="5" />
+            <livewire:documentation.form.upload.upload :model="5" />
         </x-preview>
     </x-section>
     <x-section title="Footer Slot" anchor="upload-footer-slot">
         <x-preview language="blade" :contents="$footerSlot">
-            <livewire:documentation.v1.form.upload.upload :model="6" />
+            <livewire:documentation.form.upload.upload :model="6" />
         </x-preview>
         <p class="mt-4">
             You can use the <x-block>when-uploaded</x-block> parameter directly in the slot
@@ -83,7 +83,7 @@
     </x-section>
     <x-section title="Events" anchor="upload-events">
         <x-preview language="blade" :contents="$events">
-            <livewire:documentation.v1.form.upload.upload :model="7" />
+            <livewire:documentation.form.upload.upload :model="7" />
         </x-preview>
     </x-section>
     <x-separator text="Static Mode" />
@@ -109,7 +109,7 @@
     </x-section>
     <x-section title="Demonstration" anchor="static-demonstration" disable-copy>
         <x-preview>
-            <livewire:documentation.v1.form.upload.static />
+            <livewire:documentation.form.upload.static />
         </x-preview>
     </x-section>
 </x-layout>
