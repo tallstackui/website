@@ -10,7 +10,7 @@
         Dialog component.
     </x-slot:description>
     <x-slot:personalization>
-        <livewire:personalization :$personalization component="Interaction\Dialog" />
+        <livewire:personalization :$personalization component="Interaction\Dialog" title="Dialog" />
     </x-slot:personalization>
     <x-section title="Configuration" disable-copy>
         1. Insert the Dialog component on your main layout.
