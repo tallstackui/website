@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Enums\Examples\V1\Form;
+namespace App\Enums\Examples\V2;
 
 class WithoutLivewire
 {

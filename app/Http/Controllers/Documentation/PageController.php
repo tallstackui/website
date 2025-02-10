@@ -15,11 +15,11 @@ class PageController
         $view = 'documentation.'.$version;
 
         if ($main) {
-            $view .= '.' . $main;
+            $view .= '.'.$main;
         }
 
         if ($children) {
-            $view .= '.' . $children;
+            $view .= '.'.$children;
         }
 
         if (! View::exists($view)) {

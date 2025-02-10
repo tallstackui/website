@@ -10,7 +10,56 @@ enum Example: string
 {
     use VersionDiscovery;
 
-    case Alpine = 'Others\\Alpine';
+    // region Form
+    case Checkbox = 'Form\\Checkbox';
+    case Color = 'Form\\Color';
+    case Date = 'Form\\Date';
+    case Input = 'Form\\Input';
+    case Number = 'Form\\Number';
+    case Password = 'Form\\Password';
+    case Pin = 'Form\\Pin';
+    case Radio = 'Form\\Radio';
+    case Range = 'Form\\Range';
+    case Select = 'Form\\Select';
+    case Tag = 'Form\\Tag';
+    case Textarea = 'Form\\Textarea';
+    case Time = 'Form\\Time';
+    case Toggle = 'Form\\Toggle';
+    case Upload = 'Form\\Upload';
+    // endregion
+
+    // region Helpers
+    case DarkTheme = 'Helpers\\DarkTheme';
+    case DebugMode = 'Helpers\\DebugMode';
+    case EnvBar = 'Helpers\\EnvBar';
+    // endregion
+
+    // region Integrations
+    case Alpine = 'Integrations\\Alpine';
+    // endregion
+
+    // region Miscellaneous
+    case Configuration = 'Configuration';
+    case Contribution = 'Contribution';
+    case Command = 'Command';
+    case Installation = 'Installation';
+    case ComponentPrefix = 'ComponentPrefix';
+    case SummerRelease = 'SummerRelease';
+    case Translation = 'Translation';
+    case Troubleshooting = 'Troubleshooting';
+    case Updates = 'Updates';
+    case UpgradeGuide = 'UpgradeGuide';
+    case Welcome = 'Welcome';
+    case WithoutLivewire = 'WithoutLivewire';
+    // endregion
+
+    // region Personalization
+    case ColorPersonalization = 'Personalization\\ColorPersonalization';
+    case DeepPersonalization = 'Personalization\\DeepPersonalization';
+    case SoftPersonalization = 'Personalization\\SoftPersonalization';
+    // endregion
+
+    // region UI
     case Alert = 'Ui\\Alert';
     case Avatar = 'Ui\\Avatar';
     case Badge = 'Ui\\Badge';
@@ -19,61 +68,29 @@ enum Example: string
     case Button = 'Ui\\Button';
     case Card = 'Ui\\Card';
     case Carousel = 'Ui\\Carousel';
-    case Checkbox = 'Form\\Checkbox';
     case Clipboard = 'Ui\\Clipboard';
-    case Color = 'Form\\Color';
-    case ColorPersonalization = 'Personalization\\ColorPersonalization';
-    case Configuration = 'Others\\Configuration';
-    case Contribution = 'Others\\Contribution';
-    case Command = 'Others\\Command';
-    case Date = 'Form\\Date';
-    case DarkTheme = 'Others\\DarkTheme';
-    case DebugMode = 'Others\\DebugMode';
-    case DeepPersonalization = 'Personalization\\DeepPersonalization';
     case Dialog = 'Ui\\Dialog';
     case Dropdown = 'Ui\\Dropdown';
-    case EnvBar = 'Others\\EnvBar';
     case Error = 'Ui\\Error';
     case Environment = 'Ui\\Environment';
     case Icon = 'Ui\\Icon';
-    case Input = 'Form\\Input';
-    case Installation = 'Others\\Installation';
-    case ComponentPrefix = 'Others\\ComponentPrefix';
     case Layout = 'Ui\\Layout';
     case Link = 'Ui\\Link';
     case Loading = 'Ui\\Loading';
     case Modal = 'Ui\\Modal';
-    case Number = 'Form\\Number';
-    case Password = 'Form\\Password';
-    case Pin = 'Form\\Pin';
-    case Radio = 'Form\\Radio';
-    case Range = 'Form\\Range';
     case Progress = 'Ui\\Progress';
     case Reaction = 'Ui\\Reaction';
     case Rating = 'Ui\\Rating';
     case Signature = 'Ui\\Signature';
-    case Select = 'Form\\Select';
     case Slide = 'Ui\\Slide';
     case Stats = 'Ui\\Stats';
     case Step = 'Ui\\Step';
-    case SoftPersonalization = 'Personalization\\SoftPersonalization';
-    case SummerRelease = 'Others\\SummerRelease';
     case Tab = 'Ui\\Tab';
     case Table = 'Ui\\Table';
-    case Tag = 'Form\\Tag';
-    case Textarea = 'Form\\Textarea';
     case ThemeSwitch = 'Ui\\ThemeSwitch';
-    case Time = 'Form\\Time';
     case Toast = 'Ui\\Toast';
-    case Toggle = 'Form\\Toggle';
     case Tooltip = 'Ui\\Tooltip';
-    case Translation = 'Others\\Translation';
-    case Troubleshooting = 'Others\\Troubleshooting';
-    case Updates = 'Others\\Updates';
-    case Upload = 'Form\\Upload';
-    case UpgradeGuide = 'Others\\UpgradeGuide';
-    case Welcome = 'Others\\Welcome';
-    case WithoutLivewire = 'Form\\WithoutLivewire';
+    // endregion
 
     public function variables(): array
     {

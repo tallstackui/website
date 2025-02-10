@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Enums\Examples\V1\Others;
+namespace App\Enums\Examples\V2;
 
 class Translation
 {
