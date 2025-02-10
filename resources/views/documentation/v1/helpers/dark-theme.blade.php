@@ -4,7 +4,7 @@
 
 <x-layout :$content>
     <x-slot:title>
-        Dark Theme helper
+        Dark Theme
     </x-slot:title>
     <x-slot:description>
         Helper to easily manage dark theme.

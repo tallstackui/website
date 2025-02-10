@@ -46,7 +46,8 @@ class PageController
         }
 
         $yaml = Yaml::parseFile(base_path("contents/$version.yaml"));
-        $content = $yaml[$main][$children] ?? $yaml[$main] ?? [];
+
+        $content = $children ? $yaml[$main][$children] ?? [] : ($main ? $yaml[$main] ?? [] : []);
 
         return view($view, ['content' => $content, ...Example::tryFrom($example)?->variables() ?? []]);
     }

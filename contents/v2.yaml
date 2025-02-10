@@ -305,9 +305,9 @@ contribution:
   - Dusk Tests
   - Run Tests
   - Synchronize Changes
-debug-mode:
-  - Concept
-  - Example
-  - Activate Debug Mode
-  - Available Configurations
-  - Cautions
+helpers:
+  debug-mode:
+    - Concept
+    - Example
+    - Activate Debug Mode
+    - Available Configurations

@@ -4,6 +4,8 @@
     $slug = fn ($item) => str($item)->lower()->slug()->value();
 @endphp
 
+@ray($content)
+
 @if (!empty($content))
     <div @class([
             'xl:top-[4.75rem] xl:-mr-6 xl:block xl:h-[calc(100vh-4.75rem)] xl:flex-none soft-scrollbar overflow-y-auto xl:py-16 xl:pr-6',
@@ -20,7 +22,6 @@
                         <h3><a class="font-semibold text-pink-500">{{ $parent }}</a></h3>
                         <ol role="list" class="mt-2 pl-5 text-gray-500 space-y-3 dark:text-gray-400">
                             @foreach ($children['contents'] as $child)
-                                @ray($child)
                                 <li>
                                     <a class="hover:text-pink-600 dark:hover:text-gray-300" href="#{{ ($children['prefix'] ? $slug($parent).'-'.$slug($child) : '') }}">{{ $child }}</a>
                                 </li>
