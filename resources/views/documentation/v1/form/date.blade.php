@@ -4,7 +4,7 @@
     foreach (apply_prefix($__data) as $key => $value) $$key = $value;
 @endphp
 
-<x-layout>
+<x-layout :$content>
     <x-slot:title>
         Form Date
         <x-slot:version>

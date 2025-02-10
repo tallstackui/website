@@ -6,10 +6,9 @@ use Symfony\Component\Finder\Finder;
 
 Schedule::command(DeleteLivewireTemporaryUpload::class)->everySecond();
 
-
 \Illuminate\Support\Facades\Artisan::command('replace', function () {
     $directory = base_path('resources/views');
-    $finder = new Finder();
+    $finder = new Finder;
     $finder->files()->in($directory)->name('*.blade.php');
 
     foreach ($finder as $file) {
@@ -20,7 +19,7 @@ Schedule::command(DeleteLivewireTemporaryUpload::class)->everySecond();
 
         if ($updatedContent !== $content) {
             file_put_contents($file->getRealPath(), $updatedContent);
-            echo 'Updated: ' . $file->getRelativePathname() . PHP_EOL;
+            echo 'Updated: '.$file->getRelativePathname().PHP_EOL;
         }
     }
 

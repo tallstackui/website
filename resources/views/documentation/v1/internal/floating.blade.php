@@ -6,7 +6,7 @@
     HTML;
 @endphp
 
-<x-layout :torchlight="false">
+<x-layout :$content :torchlight="false">
     <x-slot:title>
         Floating Component
     </x-slot:title>

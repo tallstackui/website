@@ -3,7 +3,7 @@
     $defaults = config('tallstackui.settings.form.password.rules');
 @endphp
 
-<x-layout>
+<x-layout :$content>
     <x-slot:title>
         Form Password
     </x-slot:title>

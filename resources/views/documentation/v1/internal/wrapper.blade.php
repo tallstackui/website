@@ -12,7 +12,7 @@
     HTML;
 @endphp
 
-<x-layout :torchlight="false">
+<x-layout :$content :torchlight="false">
     <x-slot:title>
         Wrapper Component
     </x-slot:title>

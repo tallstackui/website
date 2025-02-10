@@ -1,4 +1,4 @@
-<x-layout :torchlight="false">
+<x-layout :$content :torchlight="false">
     <x-slot:title>
         Documentation
     </x-slot:title>

@@ -1,4 +1,4 @@
-<x-layout torchlight>
+<x-layout torchlight :$content>
     <x-slot:title>
         AlpineJS
     </x-slot:title>

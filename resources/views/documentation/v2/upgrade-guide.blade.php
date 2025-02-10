@@ -1,4 +1,4 @@
-<x-layout>
+<x-layout :$content>
     <x-slot:title>
         Upgrade Guide
     </x-slot:title>

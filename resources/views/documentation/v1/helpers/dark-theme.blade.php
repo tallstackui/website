@@ -2,7 +2,7 @@
     foreach (apply_prefix($__data) as $key => $value) $$key = $value;
 @endphp
 
-<x-layout>
+<x-layout :$content>
     <x-slot:title>
         Dark Theme helper
     </x-slot:title>

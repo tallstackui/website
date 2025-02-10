@@ -2,7 +2,7 @@
     foreach (apply_prefix($__data) as $key => $value) $$key = $value;
 @endphp
 
-<x-layout :torchlight="false">
+<x-layout :$content :torchlight="false">
     <x-slot:title>
         Personalization Concepts
     </x-slot:title>

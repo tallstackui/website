@@ -45,7 +45,8 @@ class PageController
             $example = self::BYPASS[$example];
         }
 
-        $content = rescue(fn () => data_get(Yaml::parseFile(base_path("contents/$version.yaml")), $main.'.'.$children, $main) ?? [], []);
+        $yaml = Yaml::parseFile(base_path("contents/$version.yaml"));
+        $content = $yaml[$main][$children] ?? $yaml[$main] ?? [];
 
         return view($view, ['content' => $content, ...Example::tryFrom($example)?->variables() ?? []]);
     }
