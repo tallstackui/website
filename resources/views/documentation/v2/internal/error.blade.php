@@ -1,3 +1,11 @@
+@php
+    $personalization = <<<'HTML'
+    TallStackUi::personalize()
+        ->form('error')
+        ->block('block', 'classes');
+    HTML;
+@endphp
+
 <x-layout :torchlight="false">
     <x-slot:title>
         Error Component
@@ -6,7 +14,7 @@
         The generic error component used in form components.
     </x-slot:description>
     <x-slot:personalization>
-        <livewire:personalization :$personalization component="Error" />
+        <livewire:personalization :$personalization component="Form\Error" />
     </x-slot:personalization>
     <x-internals-warning />
 </x-layout>

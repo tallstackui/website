@@ -104,7 +104,7 @@ describe('V1', function () {
         fn () => route('documentation', ['v1', 'personalization', 'color']),
         //
         fn () => route('documentation', ['v1', 'helpers', 'dark-theme']),
-        fn () => route('documentation', ['v1', 'helpers', 'debug']),
+        fn () => route('documentation', ['v1', 'helpers', 'debug-mode']),
         fn () => route('documentation', ['v1', 'integrations', 'alpine']),
         //
         fn () => route('documentation', ['v1', 'contribution']),
@@ -186,10 +186,11 @@ describe('V2', function () {
         fn () => route('documentation', ['v2', 'personalization', 'deep']),
         fn () => route('documentation', ['v2', 'personalization', 'color']),
         //
-        fn () => route('documentation', ['v2', 'envbar']),
-        fn () => route('documentation', ['v2', 'dark-theme']),
-        fn () => route('documentation', ['v2', 'debug']),
         fn () => route('documentation', ['v2', 'integrations', 'alpine']),
+        //
+        fn () => route('documentation', ['v2', 'helpers', 'env-bar']),
+        fn () => route('documentation', ['v2', 'helpers', 'dark-theme']),
+        fn () => route('documentation', ['v2', 'helpers', 'debug-mode']),
         //
         fn () => route('documentation', ['v2', 'contribution']),
     ]);

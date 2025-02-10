@@ -1,3 +1,17 @@
+@php
+    $personalization['input'] = <<<'HTML'
+    TallStackUi::personalize()
+        ->wrapper('input')
+        ->block('block', 'classes');
+    HTML;
+
+    $personalization['radio'] = <<<'HTML'
+    TallStackUi::personalize()
+        ->wrapper('radio')
+        ->block('block', 'classes');
+    HTML;
+@endphp
+
 <x-layout :torchlight="false">
     <x-slot:title>
         Wrapper Component

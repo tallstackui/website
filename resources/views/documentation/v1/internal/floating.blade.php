@@ -1,3 +1,11 @@
+@php
+    $personalization = <<<'HTML'
+    TallStackUi::personalize()
+        ->floating()
+        ->block('block', 'classes');
+    HTML;
+@endphp
+
 <x-layout :torchlight="false">
     <x-slot:title>
         Floating Component
@@ -7,7 +15,7 @@
         password, form upload, form color, dropdown, and select styled.
     </x-slot:description>
     <x-slot:personalization>
-        <livewire:personalization :$personalization component="floating" />
+        <livewire:personalization :$personalization component="Floating" />
     </x-slot:personalization>
     <x-internals-warning />
     <x-section class="mt-4">
