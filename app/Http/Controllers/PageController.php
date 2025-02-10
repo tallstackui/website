@@ -49,6 +49,10 @@ class PageController
 
         $content = $children ? $yaml[$main][$children] ?? [] : ($main ? $yaml[$main] ?? [] : []);
 
+        if ($view === 'documentation.v2.ui.avatar') {
+            auth()->loginUsingId(1);
+        }
+
         return view($view, ['content' => $content, ...Example::tryFrom($example)?->variables() ?? []]);
     }
 }
