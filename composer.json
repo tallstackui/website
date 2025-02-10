@@ -11,6 +11,7 @@
         "laravel/tinker": "^2.8",
         "livewire/livewire": "^3.0",
         "livewire/volt": "^1.0",
+        "symfony/yaml": "^7.2",
         "tallstackui/tallstackui": "v2.x-dev",
         "torchlight/torchlight-laravel": "^0.6"
     },

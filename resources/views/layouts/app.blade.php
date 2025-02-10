@@ -86,7 +86,7 @@
                 @endif
             </div>
             @if ($right)
-                <x-on-this-page />
+                <x-on-this-page :$content />
             @endif
         </div>
     </div>

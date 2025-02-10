@@ -6,6 +6,7 @@ use App\Enums\Example;
 use App\Traits\VersionDiscovery;
 use Illuminate\Contracts\View\View as ViewContract;
 use Illuminate\Support\Facades\View as ViewFacade;
+use Symfony\Component\Yaml\Yaml;
 
 class PageController
 {
@@ -34,11 +35,8 @@ class PageController
         $example = str($view)->remove(["documentation.$version.", ...$this->versions()])
             ->explode('.')
             ->map(fn ($item) => str($item)
-                // component-prefix => component prefix
                 ->replace('-', ' ')
-                // component prefix => Component Prefix
                 ->title()
-                // Component Prefix => ComponentPrefix
                 ->replace(' ', '')
                 ->value())
             ->join('\\');
@@ -47,6 +45,8 @@ class PageController
             $example = self::BYPASS[$example];
         }
 
-        return view($view, Example::tryFrom($example)?->variables() ?? []);
+        $content = rescue(fn () => data_get(Yaml::parseFile(base_path("contents/$version.yaml")), $main.'.'.$children, $main) ?? [], []);
+
+        return view($view, ['content' => $content, ...Example::tryFrom($example)?->variables() ?? []]);
     }
 }
