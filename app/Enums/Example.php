@@ -35,7 +35,7 @@ enum Example: string
     // endregion
 
     // region Integrations
-    case Alpine = 'Integrations\\Alpine';
+    case Alpine = 'Alpine';
     // endregion
 
     // region Interactions

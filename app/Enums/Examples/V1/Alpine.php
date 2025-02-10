@@ -1,26 +1,9 @@
 <?php
 
-namespace App\Enums\Examples\V2\Integrations;
+namespace App\Enums\Examples\V1;
 
 class Alpine
 {
-    public const INSTALLATION = <<<'HTML'
-    <html>
-        <head>
-            <!-- ... -->
-
-            <tallstackui:script />
-            @livewireStyles
-            @vite(['resources/css/app.css', 'resources/js/app.js'])
-        </head>
-        <body>
-            <!-- ... -->
-
-            @livewireScripts {{-- [tl! focus, highlight] --}}
-        </body>
-    </html>
-    HTML;
-
     public const INPUT = <<<'HTML'
     <x-input label="Birthday"
              hint="Insert your birthday"
@@ -31,8 +14,6 @@ class Alpine
              hint="Insert your desired salary"
              x-mask:dynamic="$money($input, ',')" {{-- [tl! highlight] --}}
              value="200.000" />
-             
-    <!-- Custom Dynamic Mask -->
 
     <x-input label="Credit Card"
              hint="Insert your credit card number"
@@ -40,7 +21,7 @@ class Alpine
              value="200.000" />
 
     <script>
-    function creditCardMask(input) {
+    function creditCardMask(input) { // [tl! highlight]
         return input.startsWith('34') || input.startsWith('37')
             ? '9999 999999 99999'
             : '9999 9999 9999 9999'

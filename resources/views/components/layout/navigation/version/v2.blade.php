@@ -12,7 +12,7 @@
                 <x-layout.navigation.link :href="route('documentation', ['v2', 'component-prefix'])" text="Component Prefix" />
             </li>
             <li class="relative ml-4">
-                <x-layout.navigation.link :href="route('documentation', ['v2', 'alpinejs'])" text="AlpineJS Requirement" />
+                <x-layout.navigation.link :href="route('documentation', ['v2', 'alpine'])" text="AlpineJS Requirement" />
             </li>
             <li class="relative ml-4">
                 <x-layout.navigation.link :href="route('documentation', ['v2', 'troubleshooting'])" text="Troubleshooting" />
@@ -235,13 +235,13 @@
                 <h2 class="font-medium text-pink-900 font-display dark:text-pink-500">Helpers</h2>
                 <ul role="list" class="mt-4 space-y-2 dark:border-slate-800 lg:space-y-4 lg:mt-4 lg:border-slate-200">
                     <li class="relative ml-4">
-                        <x-layout.navigation.link :href="route('documentation', ['v2', 'envbar'])" text="EnvBar" new />
+                        <x-layout.navigation.link :href="route('documentation', ['v2', 'helpers', 'env-bar'])" text="EnvBar" new />
                     </li>
                     <li class="relative ml-4">
-                        <x-layout.navigation.link :href="route('documentation', ['v2', 'dark-theme'])" text="Dark Theme" />
+                        <x-layout.navigation.link :href="route('documentation', ['v2', 'helpers', 'dark-theme'])" text="Dark Theme" />
                     </li>
                     <li class="relative ml-4">
-                        <x-layout.navigation.link :href="route('documentation', ['v2', 'debug'])" text="Debug Mode" />
+                        <x-layout.navigation.link :href="route('documentation', ['v2', 'helpers', 'debug-mode'])" text="Debug Mode" />
                     </li>
                 </ul>
             </li>

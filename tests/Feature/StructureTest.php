@@ -32,8 +32,6 @@ test('cannot not use dangerous functions in Blade files', function () {
 
 describe('V1', function () {
     test('can access all routes', function (string $route) {
-        dump($route);
-
         $this->get($route)->assertOk();
     })->with([
         fn () => route('documentation', ['v1', 'getting-started']),
@@ -118,7 +116,7 @@ describe('V2', function () {
         fn () => route('documentation', ['v2', 'installation']),
         fn () => route('documentation', ['v2', 'documentation']),
         fn () => route('documentation', ['v2', 'component-prefix']),
-        fn () => route('documentation', ['v2', 'alpinejs']),
+        fn () => route('documentation', ['v2', 'alpine']),
         fn () => route('documentation', ['v2', 'troubleshooting']),
         fn () => route('documentation', ['v2', 'upgrade-guide']),
         //
@@ -167,8 +165,8 @@ describe('V2', function () {
         fn () => route('documentation', ['v2', 'ui', 'theme-switch']),
         fn () => route('documentation', ['v2', 'ui', 'tooltip']),
         //
-        fn () => route('documentation', ['v2', 'interaction', 'dialog']),
-        fn () => route('documentation', ['v2', 'interaction', 'toast']),
+        fn () => route('documentation', ['v2', 'interactions', 'dialog']),
+        fn () => route('documentation', ['v2', 'interactions', 'toast']),
         //
         fn () => route('documentation', ['v2', 'internal', 'error']),
         fn () => route('documentation', ['v2', 'internal', 'hint']),
