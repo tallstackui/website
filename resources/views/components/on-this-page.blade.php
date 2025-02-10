@@ -23,7 +23,7 @@
                         <ol role="list" class="mt-2 pl-5 text-gray-500 space-y-3 dark:text-gray-400">
                             @foreach ($children['contents'] as $child)
                                 <li>
-                                    <a class="hover:text-pink-600 dark:hover:text-gray-300" href="#{{ ($children['prefix'] ? $slug($parent).'-'.$slug($child) : '') }}">{{ $child }}</a>
+                                    <a class="hover:text-pink-600 dark:hover:text-gray-300" href="#{{ $slug($parent).'-'.$slug($child) }}">{{ $child }}</a>
                                 </li>
                             @endforeach
                         </ol>

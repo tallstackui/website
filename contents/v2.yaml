@@ -8,10 +8,17 @@ component-prefix:
   - Environment Variable
   - Command
   - Using Prefix
-updates:
+without-livewire:
   - Concept
-  - Updating
-  - Releases
+  - Example
+  - Parse Request Value
+contribution:
+  - Possibilities
+  - TallStackUI Way
+  - Prepare Environment
+  - Dusk Tests
+  - Run Tests
+  - Synchronize Changes
 form:
   input:
     - Basic Usage
@@ -97,7 +104,6 @@ form:
     - Events
   upload:
     Upload:
-      prefix: true
       contents:
         - Basic Usage
         - Label & Hint & Tip
@@ -107,7 +113,6 @@ form:
         - Footer Slot
         - Events
     Static:
-      prefix: true
       contents:
         - Concept
         - Prepare the Usage
@@ -136,14 +141,12 @@ form:
     - Events
   select:
     Native:
-      prefix: true
       contents:
         - Basic Usage
         - Label & Hint
         - Multi-dimensional Array
         - Grouped
     Styled:
-      prefix: true
       contents:
         - Basic Usage
         - Label & Hint
@@ -160,7 +163,6 @@ form:
         - Slot After
         - Events
     Styled API:
-      prefix: true
       contents:
         - Concept
         - Basic Usage
@@ -194,9 +196,28 @@ ui:
     - Color Variations
     - Light Variations
     - Outline Variations
+  banner:
+    Static:
+      contents:
+        - Concept
+        - Usage
+        - Messages
+        - Left Slot
+        - Close Option
+        - Animations
+        - Date Limit
+        - Size Variations
+        - Color Variations & Light Option
+        - Dispatching via Controllers
+    Livewire Integration:
+      contents:
+        - Concept
+        - Usage
+        - Available Options
+        - Example
+        - Display After Redirects
   button:
     Normal:
-      prefix: true
       contents:
         - Basic Usage
         - Button as Link
@@ -211,7 +232,6 @@ ui:
         - Outline Variations
         - Flat Variations
     Circle:
-      prefix: true
       contents:
         - Basic Usage
         - Button as Link
@@ -231,6 +251,59 @@ ui:
     - Minimizable
     - Image
     - Color Variations
+  carousel:
+    - Basic Usage
+    - Round
+    - Different Cover Image
+    - Autoplay
+    - Autoplay, Stop on hover
+    - Autoplay, Without Loop
+    - Without Indicators
+    - Image Title & Description
+    - Fixed Aspect Radio
+    - Slots
+    - Events
+  clipboard:
+    - Basic Usage
+    - Button at Left
+    - Label & Hint
+    - Secret Content
+    - Events
+    - Icon Style
+    - Using Different Icons
+  dropdown:
+    - Basic Usage
+    - Available Positions
+    - Links
+    - Icon
+    - Static Icon
+    - Header Slot
+    - Sub Dropdown
+    - Action Slot
+  error:
+    - Basic Usage
+    - Filtering Properties
+    - Title Customization
+    - Close Option
+    - Footer Slot
+    - Color Variations
+    - Events
+  environment:
+    - Basic Usage
+    - Beyond Basic, EnvBar
+    - Round Variation
+    - Square Variation
+    - Size Variations
+    - Without Branch
+    - Branch Detection Algorithm
+    - Color Scheme
+  icon:
+    - Concept
+    - Supported Icon Libraries
+    - Setup Icons
+    - Basic Usage
+    - Variations
+    - Left & Right Slots
   modal:
     - Basic Usage
     - Title Slot
@@ -245,7 +318,92 @@ ui:
     - AlpineJS Helper
     - Events
     - Configurations
-interaction:
+  layout:
+    - Concept
+    - Layout Example
+    - "Slot: Header"
+    - "Slot: Menu"
+    - "Slot: Top"
+    - "Slot: Footer"
+    - Layout Header
+    - Side Bar
+    - Side Bar Item
+    - Side Bar Separator
+    - Personalization
+  link:
+    - Basic Usage
+    - Size Variations
+    - Icon Slot
+    - Target Blank & Style Options
+    - Query String & Fragment Options
+    - Color Variations
+    - Without Color
+    - Livewire SPA Navigation
+  loading:
+    - Concept
+    - Attributes
+    - Usage
+    - Basic Usage
+    - Text Slot
+    - Target & Delay Options
+    - Configurations
+  progress:
+    Normal:
+      contents:
+        - Basic Usage
+        - Styles
+        - Without Text
+        - Size Variations
+        - Color Variations
+        - Light Variations
+        - Footer Slot
+    Circle:
+      contents:
+        - Basic Usage
+        - Strokes
+        - Size Variations
+        - Color Variations
+        - Light Variations
+        - Footer Slot
+  reaction:
+    - Concept
+    - Persist Reaction
+    - Basic Usage
+    - Animated Style
+    - Tooltip Position
+    - Quantity Slot
+    - Using Less Icons
+    - Slot
+    - Events
+  rating:
+    - Concept
+    - Persist Rating
+    - Basic Usage
+    - Rating Quantity
+    - Text
+    - Size Variations
+    - Color Variations
+    - Events
+  signature:
+    - Concept
+    - Basic Usage
+    - Label & Hint
+    - Pen Color
+    - Background Color
+    - Line Weight
+    - Height
+    - Clearable
+    - Exportable
+    - Events
+  slide:
+    - Basic Usage
+    - Positions
+    - Title Slot
+    - Footer Slot
+    - Background Blur
+    - Size Variations
+    - Z Index
+interactions:
   dialog:
     - Configuration
     - Basic Usage
@@ -270,10 +428,6 @@ interaction:
     - Display After Redirects
     - Dispatching via Controllers
     - Configurations
-without-livewire:
-  - Concept
-  - Example
-  - Parse Request Value
 personalization:
   soft:
     - Concept
@@ -298,13 +452,6 @@ personalization:
     - Create or Manipulate Colors
     - Change the Default Namespace
     - Create Custom Color
-contribution:
-  - Possibilities
-  - TallStackUi Way
-  - Prepare Environment
-  - Dusk Tests
-  - Run Tests
-  - Synchronize Changes
 helpers:
   debug-mode:
     - Concept
