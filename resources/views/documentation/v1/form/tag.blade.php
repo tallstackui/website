@@ -13,7 +13,7 @@
         Form tag component.
     </x-slot:description>
     <x-slot:personalization>
-        <livewire:personalization :$personalization component="tag" />
+        <livewire:personalization :$personalization component="Form\Tag" />
     </x-slot:personalization>
     <x-warning class="mb-4">
         In desktop devices the tags can be inserted by pressing the <b>enter</b> or <b>comma</b> keys,

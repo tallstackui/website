@@ -13,7 +13,7 @@
         Step components.
     </x-slot:description>
     <x-slot:personalization>
-        <livewire:personalization :$personalization component="step" />
+        <livewire:personalization :$personalization component="Step" />
     </x-slot:personalization>
     <x-section title="Basic Usage">
         <x-preview language="blade" :contents="$basic">

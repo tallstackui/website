@@ -13,8 +13,8 @@
         Progress component.
     </x-slot:description>
     <x-slot:personalization>
-        <livewire:personalization :$personalization component="progress" />
-        <livewire:personalization :$personalization component="progress.circle" />
+        <livewire:personalization :$personalization component="Progress\Progress" title="Progress" />
+        <livewire:personalization :$personalization component="Progress\Circle" />
     </x-slot:personalization>
     <x-section title="Basic Usage" anchor="normal-basic-usage">
         <x-preview language="blade" :contents="$basic">

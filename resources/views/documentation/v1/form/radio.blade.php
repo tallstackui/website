@@ -10,7 +10,7 @@
         Form radio component.
     </x-slot:description>
     <x-slot:personalization>
-        <livewire:personalization :$personalization component="radio" />
+        <livewire:personalization :$personalization component="Form\Radio" />
     </x-slot:personalization>
     <x-section title="Basic Usage">
         <x-preview language="blade" :contents="$basic">

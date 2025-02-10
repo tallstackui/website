@@ -10,7 +10,7 @@
         Avatar component.
     </x-slot:description>
     <x-slot:personalization>
-        <livewire:personalization :$personalization component="avatar" />
+        <livewire:personalization :$personalization component="Avatar" />
     </x-slot:personalization>
     <x-section title="Basic Usage">
         <x-preview language="blade" :contents="$basic">

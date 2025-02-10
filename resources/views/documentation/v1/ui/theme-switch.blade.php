@@ -13,7 +13,7 @@
         Theme switch components.
     </x-slot:description>
     <x-slot:personalization>
-        <livewire:personalization :$personalization component="theme-switch" />
+        <livewire:personalization :$personalization component="ThemeSwitch" />
     </x-slot:personalization>
     <x-section title="Concept" anchor="static-concept" disable-copy>
         <p>

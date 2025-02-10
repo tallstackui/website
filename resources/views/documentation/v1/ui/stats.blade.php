@@ -13,7 +13,7 @@
         Stats components.
     </x-slot:description>
     <x-slot:personalization>
-        <livewire:personalization :$personalization component="stats" />
+        <livewire:personalization :$personalization component="Stats" />
     </x-slot:personalization>
     <x-section title="Basic Usage">
         <x-preview language="blade" :contents="$basic" :background="false">

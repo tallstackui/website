@@ -10,7 +10,7 @@
         Tabs component.
     </x-slot:description>
     <x-slot:personalization>
-        <livewire:personalization :$personalization component="tab" />
+        <livewire:personalization :$personalization component="Tab" />
     </x-slot:personalization>
     <x-section title="Basic Usage">
         <x-preview language="blade" :background="false" :contents="$basic">

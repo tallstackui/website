@@ -13,7 +13,7 @@
         Table component.
     </x-slot:description>
     <x-slot:personalization>
-        <livewire:personalization :$personalization component="table" />
+        <livewire:personalization :$personalization component="Table" />
     </x-slot:personalization>
     <x-warning class="mb-4">
         All examples in this page use Livewire through Laravel Volt because the TallStackUI

@@ -13,7 +13,7 @@
         Banner component.
     </x-slot:description>
     <x-slot:personalization>
-        <livewire:personalization :$personalization component="banner" />
+        <livewire:personalization :$personalization component="Banner" />
     </x-slot:personalization>
     <x-section title="Concept" anchor="static-concept" disable-copy>
         <p>

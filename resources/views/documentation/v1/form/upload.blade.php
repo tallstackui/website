@@ -13,7 +13,7 @@
         Form upload component.
     </x-slot:description>
     <x-slot:personalization>
-        <livewire:personalization :$personalization component="upload" />
+        <livewire:personalization :$personalization component="Form\Upload" />
     </x-slot:personalization>
     <x-warning class="mb-4">
         Files can be uploaded through selection or drag-and-drop. Also, when

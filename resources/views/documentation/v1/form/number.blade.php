@@ -13,7 +13,7 @@
         Form number component.
     </x-slot:description>
     <x-slot:personalization>
-        <livewire:personalization :$personalization component="number" />
+        <livewire:personalization :$personalization component="Form\Number" />
     </x-slot:personalization>
     <x-section title="Basic Usage">
         <x-preview language="blade" :contents="$basic">

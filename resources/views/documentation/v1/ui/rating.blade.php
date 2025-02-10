@@ -13,7 +13,7 @@
         Rating component.
     </x-slot:description>
     <x-slot:personalization>
-        <livewire:personalization :$personalization component="rating" />
+        <livewire:personalization :$personalization component="Rating" />
     </x-slot:personalization>
     <x-section title="Concept" disable-copy>
         <p>

@@ -13,7 +13,7 @@
         Form pin component.
     </x-slot:description>
     <x-slot:personalization>
-        <livewire:personalization :$personalization component="pin" />
+        <livewire:personalization :$personalization component="Form\Pin" />
     </x-slot:personalization>
     <x-section title="Concept">
         Many modern applications need to validate and authorize things such

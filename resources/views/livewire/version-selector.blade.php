@@ -14,8 +14,6 @@ $change = function (): void {
     } else {
         redirect()->away(route('documentation', ['v1', 'getting-started']));
     }
-
-    Cookie::queue(Cookie::forever('version', $this->version));
 };
 ?>
 
