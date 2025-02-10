@@ -8,7 +8,9 @@
 @php
     use Illuminate\Support\Facades\Route;
 
-    $activated ??= (str($href)->remove(config('app.url'))->value() === Route::current()->compiled->getStaticPrefix());
+    $sanitized = fn (string $text) => str($text)->remove(config('app.url'));
+
+    $activated ??= $sanitized($href)->exactly($sanitized(request()->fullUrl()));
 @endphp
 
 <a href="{{ $href }}" {{ $attributes->class([
