@@ -522,3 +522,13 @@ helpers:
     - Example
     - Activate Debug Mode
     - Available Configurations
+  env-bar:
+    - Concept
+    - Demonstration
+    - Installation
+    - Available Configuration
+    - Production Environment
+    - Configure Color Scheme
+    - Ignores
+    - Special Commands
+    - Dedicated Repository

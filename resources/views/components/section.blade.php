@@ -40,5 +40,9 @@
     @if ($description)
         <p class="text-sm text-slate-500 dark:text-slate-400 mb-4">{{ $description }}</p>
     @endif
-    {!! $slot !!}
+    @if (! str($slot)->contains(['code', 'div', 'h1', 'h2', 'img', 'pre', 'ul', 'ol', 'x-code']))
+        <p>{!! $slot !!}</p>
+    @else
+        {!! $slot !!}
+    @endif
 </section>
