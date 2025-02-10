@@ -3,6 +3,10 @@ installation:
   - History & Motivation
   - Requirements
   - Installation
+documentation:
+  - Searches
+  - Prefixing Example
+  - Examples Without Binding
 component-prefix:
   - Configuration File
   - Environment Variable
@@ -244,6 +248,12 @@ ui:
         - Light Variations
         - Outline Variations
         - Flat Variations
+  boolean:
+    - Concept
+    - Basic Usage
+    - Icon Variation
+    - Color Variations
+    - Livewire Click Actions
   card:
     - Basic Usage
     - Header Slot
@@ -403,6 +413,60 @@ ui:
     - Background Blur
     - Size Variations
     - Z Index
+  stats:
+    - Basic Usage
+    - Title
+    - Link
+    - Icons
+    - Color Variations
+    - Indicators
+    - Animated Effect
+    - Number Format
+    - Slots
+  step:
+    - Basic Usage
+    - Title & Description
+    - Final Step
+    - Helpers
+    - Allow Navigation Previous
+    - Alternative Styles
+    - Finish Slot
+    - Wireable
+    - Live Wireable
+    - Event
+  tab:
+    - Basic Usage
+    - Slots
+    - Events
+    - Wireable
+    - Live Wireable
+  table:
+    - Concept
+    - Data for Table
+    - Basic Usage
+    - Without Header
+    - Striped Style
+    - Filters
+    - Loading Effect
+    - Sorting
+    - Pagination
+    - Slots
+    - Selection
+    - Clickable
+    - Interacting With Data
+  theme-switch:
+    - Concept
+    - Basic Usage
+    - Sizes
+    - Only Icon
+  tooltip:
+    - Basic Usage
+    - Available Positions
+    - Customized Icon
+    - Size Variations
+    - HTML Content
+    - Color Variations
+    - Variations
 interactions:
   dialog:
     - Configuration

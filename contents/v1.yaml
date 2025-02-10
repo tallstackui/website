@@ -8,10 +8,21 @@ component-prefix:
   - Environment Variable
   - Command
   - Using Prefix
+without-livewire:
+  - Concept
+  - Example
+  - Parse Request Value
 updates:
   - Concept
   - Updating
   - Releases
+contribution:
+  - Possibilities
+  - Patterns
+  - Prepare Environment
+  - Dusk Tests
+  - Run Tests
+  - Synchronize Changes
 form:
   input:
     - Basic Usage
@@ -29,6 +40,7 @@ form:
     - Format Validator
     - Password Generator
     - Events
+    - Invalidate
   color:
     - Basic Usage
     - Label & Hint
@@ -38,6 +50,7 @@ form:
     - Clearable
     - Events
     - Configurations
+    - Invalidate
   number:
     - Basic Usage
     - Label & Hint
@@ -48,6 +61,7 @@ form:
     - Chevron Icons
     - Step
     - Livewire Bind Concern
+    - Invalidate
   textarea:
     - Basic Usage
     - Label & Hint
@@ -55,6 +69,7 @@ form:
     - Resize
     - Resize Auto
     - Character Count
+    - Invalidate
   checkbox:
     - Basic Usage
     - Label
@@ -62,6 +77,7 @@ form:
     - Label Alignment
     - Size Variations
     - Color Variations
+    - Invalidate
   radio:
     - Basic Usage
     - Label
@@ -69,12 +85,14 @@ form:
     - Label Alignment
     - Size Variations
     - Color Variations
+    - Invalidate
   tag:
     - Basic Usage
     - Label & Hint
     - Limit Options
     - Prefix
     - Events
+    - Invalidate
   toggle:
     - Basic Usage
     - Label
@@ -82,11 +100,13 @@ form:
     - Label Alignment
     - Size Variations
     - Color Variations
+    - Invalidate
   range:
     - Basic Usage
     - Label
     - Size Variations
     - Color Variations
+    - Invalidate
   pin:
     - Concept
     - Basic Usage
@@ -95,9 +115,9 @@ form:
     - Clear
     - Masks
     - Events
+    - Invalidate
   upload:
     Upload:
-      prefix: true
       contents:
         - Basic Usage
         - Label & Hint & Tip
@@ -107,7 +127,6 @@ form:
         - Footer Slot
         - Events
     Static:
-      prefix: true
       contents:
         - Concept
         - Prepare the Usage
@@ -134,16 +153,15 @@ form:
     - Step Hour & Minute
     - Footer Slot
     - Events
+    - Invalidate
   select:
     Native:
-      prefix: true
       contents:
         - Basic Usage
         - Label & Hint
         - Multi-dimensional Array
-        - Grouped
+        - Invalidate
     Styled:
-      prefix: true
       contents:
         - Basic Usage
         - Label & Hint
@@ -156,11 +174,9 @@ form:
         - Image Preview
         - Description
         - Searchable
-        - Grouped
         - Slot After
         - Events
     Styled API:
-      prefix: true
       contents:
         - Concept
         - Basic Usage
@@ -196,7 +212,6 @@ ui:
     - Outline Variations
   button:
     Normal:
-      prefix: true
       contents:
         - Basic Usage
         - Button as Link
@@ -211,7 +226,6 @@ ui:
         - Outline Variations
         - Flat Variations
     Circle:
-      prefix: true
       contents:
         - Basic Usage
         - Button as Link
@@ -224,6 +238,12 @@ ui:
         - Light Variations
         - Outline Variations
         - Flat Variations
+  boolean:
+    - Concept
+    - Basic Usage
+    - Icon Variation
+    - Color Variations
+    - Livewire Click Actions
   card:
     - Basic Usage
     - Header Slot
@@ -245,7 +265,134 @@ ui:
     - AlpineJS Helper
     - Events
     - Configurations
-interaction:
+  link:
+    - Basic Usage
+    - Size Variations
+    - Icon Slot
+    - Target Blank & Style Options
+    - Query String & Fragment Options
+    - Color Variations
+    - Without Color
+    - Livewire SPA Navigation
+  loading:
+    - Concept
+    - Attributes
+    - Usage
+    - Basic Usage
+    - Text Slot
+    - Target & Delay Options
+    - Configurations
+  progress:
+    Normal:
+      contents:
+        - Basic Usage
+        - Styles
+        - Without Text
+        - Size Variations
+        - Color Variations
+        - Light Variations
+        - Footer Slot
+    Circle:
+      contents:
+        - Basic Usage
+        - Strokes
+        - Size Variations
+        - Color Variations
+        - Light Variations
+        - Footer Slot
+  reaction:
+    - Concept
+    - Persist Reaction
+    - Basic Usage
+    - Animated Style
+    - Tooltip Position
+    - Quantity Slot
+    - Using Less Icons
+    - Slot
+    - Events
+  rating:
+    - Concept
+    - Persist Rating
+    - Basic Usage
+    - Rating Quantity
+    - Text
+    - Size Variations
+    - Color Variations
+    - Events
+  signature:
+    - Concept
+    - Basic Usage
+    - Label & Hint
+    - Pen Color
+    - Background Color
+    - Line Weight
+    - Height
+    - Clearable
+    - Exportable
+    - Events
+  slide:
+    - Basic Usage
+    - Positions
+    - Title Slot
+    - Footer Slot
+    - Background Blur
+    - Size Variations
+    - Z Index
+  stats:
+    - Basic Usage
+    - Title
+    - Link
+    - Icons
+    - Color Variations
+    - Indicators
+    - Animated Effect
+    - Number Format
+    - Slots
+  step:
+    - Basic Usage
+    - Title & Description
+    - Final Step
+    - Helpers
+    - Allow Navigation Previous
+    - Alternative Styles
+    - Finish Slot
+    - Wireable
+    - Live Wireable
+    - Event
+  tab:
+    - Basic Usage
+    - Slots
+    - Events
+    - Wireable
+    - Live Wireable
+  table:
+    - Concept
+    - Data for Table
+    - Basic Usage
+    - Without Header
+    - Striped Style
+    - Filters
+    - Loading Effect
+    - Sorting
+    - Pagination
+    - Slots
+    - Selection
+    - Clickable
+    - Interacting With Data
+  theme-switch:
+    - Concept
+    - Basic Usage
+    - Sizes
+    - Only Icon
+  tooltip:
+    - Basic Usage
+    - Available Positions
+    - Customized Icon
+    - Size Variations
+    - HTML Content
+    - Color Variations
+    - Variations
+interactions:
   dialog:
     - Configuration
     - Basic Usage
@@ -270,10 +417,6 @@ interaction:
     - Display After Redirects
     - Dispatching via Controllers
     - Configurations
-without-livewire:
-  - Concept
-  - Example
-  - Parse Request Value
 personalization:
   soft:
     - Concept
@@ -298,13 +441,6 @@ personalization:
     - Create or Manipulate Colors
     - Change the Default Namespace
     - Create Custom Color
-contribution:
-  - Possibilities
-  - TallStackUi Way
-  - Prepare Environment
-  - Dusk Tests
-  - Run Tests
-  - Synchronize Changes
 helpers:
   debug-mode:
     - Concept
