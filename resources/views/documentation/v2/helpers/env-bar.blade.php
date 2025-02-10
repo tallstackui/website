@@ -35,15 +35,15 @@
     <x-section title="Installation">
         <div class="space-y-4">
             <x-code language="shell" :contents="$installation" />
-            <p>
-                After installing EnvBar, it will be automatically injected into your application.
+            <p class="underline">
+                The EnvBar, it will be automatically injected into your application.
             </p>
         </div>
     </x-section>
     <x-section title="Available Configurations">
         <div class="space-y-4">
             <x-code language="shell" :contents="$configuration" />
-            There are several useful settings available through the <x-block>config/env-bar</x-block>
+            There are several useful settings available through the <x-block>config/envbar.php</x-block>
             configuration file, however most of them can be set through environment variables. Here is
             the list of all available environment variables:
             <ul class="space-y-2 list-decimal list-inside">
@@ -86,7 +86,7 @@
             <p>
                 As mentioned above, you can create a Laravel Gate to control which users will see the EnvBar in production.
                 <a href="https://laravel.com/docs/11.x/horizon#dashboard-authorization" class="underline" target="_blank">The process is similar to what is done for Horizon</a>,
-                however the gate name should be <x-block>env-bar::view</x-block>:
+                however the gate name should be <x-block>envbar::view</x-block>:
             </p>
             <x-code :contents="$gate" disable-copy />
         </div>

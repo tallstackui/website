@@ -19,9 +19,11 @@ class EnvBar
     
     class AppServiceProvider extends ServiceProvider
     {
+        // ...
+
         public function boot(): void
         {
-            Gate::define('env-bar::view', function (User $user) { // [tl! focus:5]
+            Gate::define('envbar::view', function (User $user) { // [tl! focus:5]
                 return in_array($user->email, [
                     'admin@my-app.com',
                     'jhon.doe@my-app.com'

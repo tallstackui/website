@@ -57,7 +57,9 @@ class Environment
         {
             // ...
     
-            $this->app->bind('tallstackui::environment::branch', fn () => 'logic goes here');
+            $this->app->bind('tallstackui::environment::branch', function () {
+                return 'logic goes here';
+            });
         }
     }
     HTML;

@@ -70,16 +70,6 @@
             The toast hooks are unavailable in the JavaScript API.
         </x-warning>
     </x-section>
-    <x-section title="Color Personalization">
-        <p>
-            <x-link :href="route('documentation', ['v2', 'personalization', 'deep'])"
-                    fragment="override-component-colors"
-                    :color="null"
-                    underline>
-                Starting from version 1.5.3 you can customize Toast colors through deep personalization.
-            </x-link>
-        </p>
-    </x-section>
     <x-section title="Display After Redirects">
         <p>
             <u>Starting from version 1.23.0</u> you can trigger a toast that will actually
