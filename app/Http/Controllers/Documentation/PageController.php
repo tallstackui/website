@@ -28,11 +28,13 @@ class PageController
 
         $example = str($view)->remove(["documentation.$version.", ...$this->versions()])
             ->explode('.')
-            ->map(fn ($item) => str($item)->remove('-')->title()->value())
+            ->map(fn ($item) => str($item)
+                ->replace('-', ' ')
+                ->title()
+                ->replace(' ', '')
+                ->value())
             ->join('\\');
 
-        dd($example, Example::tryFrom($example));
-
-        return view($view, Example::tryFrom($example)?->variables());
+        return view($view, Example::tryFrom($example)?->variables() ?? []);
     }
 }

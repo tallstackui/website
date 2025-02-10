@@ -33,7 +33,7 @@
     </x-section>
     <x-section title="Can I use TallStackUI at the same time as using other UI libraries?" disable-copy>
         <p>
-            Yes, totally! TallStackUI components support a <a href="{{ route('documentation.v1.installation').'#component-prefix' }}" wire:navigate class="underline">prefix key</a>,
+            Yes, totally! TallStackUI components support a <a href="{{ route('documentation', ['v1', 'installation']).'#component-prefix' }}" wire:navigate class="underline">prefix key</a>,
             which consists of prefixing TallStackUI components avoiding conflicts in component names of other libraries.
         </p>
     </x-section>
@@ -47,7 +47,7 @@
             <li>
                 <span class="font-semibold">Soft Personalization:</span>
                 <p class="mt-2">
-                    <a href="{{ route('documentation.v1.personalization.soft') }}" wire:navigate class="underline">Soft Personalization is an innovative and unique method, created exclusively by TallStackUI,</a>
+                    <a href="{{ route('documentation', ['v1', 'personalization', 'soft']) }}" wire:navigate class="underline">Soft Personalization is an innovative and unique method, created exclusively by TallStackUI,</a>
                     which allows components to be personalized at runtime, through a service provider.
                     <span class="font-semibold">The idea behind soft personalization is to tap into personalizable blocks of each
                     component and change your content.</span> Although it may seem limited, soft personalization
@@ -60,11 +60,11 @@
                 <span class="font-semibold">Deep Personalization:</span>
                 <p class="mt-2">
                     While soft personalization is, let's say, superficial, but still powerful for tasks of changing
-                    the original content, <a href="{{ route('documentation.v1.personalization.deep') }}" wire:navigate class="underline">
+                    the original content, <a href="{{ route('documentation', ['v1', 'personalization', 'deep']) }}" wire:navigate class="underline">
                     deep personalization consists of extending the original PHP component classes
                     and changing their content as you want, as well as directly changing the related Blade files to the
                     component.</a> This method of personalization will undoubtedly require more technical knowledge, which is
-                    why <a href="{{ route('documentation.v1.personalization.soft') }}" wire:navigate class="underline">Soft Personalization</a>
+                    why <a href="{{ route('documentation', ['v1', 'personalization', 'soft']) }}" wire:navigate class="underline">Soft Personalization</a>
                     was created so that even if the developer is a beginner, he can personalize the components with ease.
                 </p>
             </li>
@@ -107,7 +107,7 @@
         <p>
             There are several ways to contribute to TallStackUI, from the sponsorship program, as mentioned above,
             to share the library or offering help with code by sending pull requests.
-            <a href="{{ route('documentation.v1.contribution') }}" wire:navigate class="underline">Read the guide on how to prepare a development environment to submit a pull request to TallStackUI.</a>
+            <a href="{{ route('documentation', ['v1', 'contribution']) }}" wire:navigate class="underline">Read the guide on how to prepare a development environment to submit a pull request to TallStackUI.</a>
         </p>
     </x-section>
     <x-section title="How to follow news from TallStackUI?" disable-copy>

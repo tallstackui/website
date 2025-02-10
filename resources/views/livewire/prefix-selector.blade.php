@@ -35,7 +35,7 @@ $save = function () {
              center
              blur>
         <p class="mb-4">
-            The documentation code examples are displayed without the <a href="{{ route('documentation.v1.installation').'#' }}" wire:navigate class="underline">component prefix.</a>
+            The documentation code examples are displayed without the <a href="{{ route('documentation', [$version, 'installation']).'#' }}" wire:navigate class="underline">component prefix.</a>
             In this form, you can set the prefix you use in your projects. All code examples
             will be displayed using the prefix, which makes it easier for you to copy and paste
             the code examples.

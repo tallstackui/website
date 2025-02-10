@@ -23,7 +23,7 @@ trait VersionDiscovery
      */
     public function current(): string
     {
-        $version = str(Route::getCurrentRoute()?->uri())->after('docs/')
+        $version = str(Route::getCurrentRoute()?->parameter('version'))->after('docs/')
             ->before('/')
             ->value();
 

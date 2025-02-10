@@ -10,9 +10,9 @@ state(['version' => fn() => $this->current()]);
 
 $change = function (): void {
     if ($this->version === 'v2') {
-        redirect()->away(route('documentation.v2.installation'));
+        redirect()->away(route('documentation', ['v2', 'installation']));
     } else {
-        redirect()->away(route('documentation.v1.getting-started'));
+        redirect()->away(route('documentation', ['v1', 'getting-started']));
     }
 
     Cookie::queue(Cookie::forever('version', $this->version));
