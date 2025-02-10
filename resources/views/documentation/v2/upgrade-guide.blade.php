@@ -47,7 +47,7 @@
                         <li>- Environment</li>
                         <li>- Layout</li>
                         <li>- Signature</li>
-                        <li class="font-bold">- New Helper: EnvBar</li>
+                        <li class="font-bold">- New Helper: <a href="{{ route('documentation', ['v2', 'helpers', 'env-bar']) }}" class="underline">EnvBar</a></li>
                     </ul>
                 </div>
                 <div>

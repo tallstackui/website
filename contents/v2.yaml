@@ -528,5 +528,6 @@ helpers:
     - Production Environment
     - Configure Color Scheme
     - Ignores
-    - Special Commands
+    - Commands
+    - Helper Links
     - Dedicated Repository

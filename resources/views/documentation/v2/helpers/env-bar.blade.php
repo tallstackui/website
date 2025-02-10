@@ -113,7 +113,7 @@
             </p>
         </div>
     </x-section>
-    <x-section title="Special Commands">
+    <x-section title="Commands">
         <div class="space-y-4">
             <p>
                 To avoid multiple requests to the git provider, the latest release is cached for <x-block>ENVBAR_*_CACHED_FOR</x-block> day(s).
@@ -126,6 +126,20 @@
                 command below to show the EnvBar again without waiting for the final minutes timeout to run out:
             </p>
             <x-code language="shell" :contents="$show" />
+        </div>
+    </x-section>
+    <x-section title="Helper Links">
+        <div class="space-y-4">
+            <p>
+                The EnvBar has the ability to display links in a dropdown to serve as a collection of documents or development
+                materials. You have two ways to define these links, either through the <x-block>ENVBAR_LINKS</x-block> environment variable or
+                through the configuration file. In addition, links can have a label associated with a link or just links,
+                where the label will be the link itself.
+            </p>
+            <p>Only links:</p>
+            <x-code language="env" :contents="$links" />
+            <p>Label and link:</p>
+            <x-code language="env" :contents="$labels" />
         </div>
     </x-section>
     <x-section title="Dedicated Repository">
