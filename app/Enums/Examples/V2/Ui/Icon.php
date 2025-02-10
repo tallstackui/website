@@ -4,31 +4,37 @@ namespace App\Enums\Examples\V2\Ui;
 
 class Icon
 {
+    public const INSTALLATION = <<<'HTML'
+    composer require owenvoke/blade-fontawesome
+    HTML;
+
+    public const ENV = <<<'HTML'
+    TALLSTACKUI_ICON_TYPE="owenvoke/blade-fontawesome"
+    HTML;
+
+    public const CLEAN = <<<'HTML'
+    php artisan optimize:clear
+    HTML;
+
+    public const OWENVOKE = <<<'HTML'
+    <x-icon name="fas-cloud" class="w-6 h-6 text-gray-500"/>
+
+    <!-- Obviously this way would also work: -->
+    <x-fas-cloud class="w-6 h-6 text-gray-500"/>
+    HTML;
+
     public const BASIC = <<<'HTML'
     <x-icon name="users" class="h-5 w-5"/>
     <x-icon name="clipboard" class="h-5 w-5"/>
     HTML;
 
     public const VARIATIONS = <<<'HTML'
-    <!-- HeroIcons -->
+    <!-- Default, Heroicons -->
     <x-icon name="users" outline />
 
-    <!-- PhosphorIcons -->
-    <x-icon name="users" thin />
-    <x-icon name="users" light />
-    <x-icon name="users" regular />
-    <x-icon name="users" bold />
-    <x-icon name="users" duotone />
-
-    <!-- Google --> 
-    <!-- Normal, tt: duotone, s: sharp, r: rounded -->
-    <x-icon name="group" />
-    <x-icon name="group-tt" />
-    <x-icon name="group-s" />
-    <x-icon name="group-r" />
-
-    <!-- TablerIcons, only support outline -->
-    <x-icon name="users" />
+    <!-- FontAwesome, via owenvoke/blade-fontawesome -->
+    <x-icon name="far-user" /> <!-- far -->
+    <x-icon name="fas-user" /> <!-- fas -->
     HTML;
 
     public const LEFT_RIGHT = <<<'HTML'
@@ -44,106 +50,31 @@ class Icon
     </x-icon>
     HTML;
 
-    public const OLD_CONFIGURATION = <<<'HTML'
-    /*
-    |--------------------------------------------------------------------------
-    | Icon Style
-    |--------------------------------------------------------------------------
-    |
-    | Control the default icon style (Allowed: solid, outline)
-    */
-    'icon' => 'solid',
-    HTML;
-
-    public const NEW_CONFIGURATION = <<<'HTML'
-    /*
-    |--------------------------------------------------------------------------
-    | Icon Style
-    |--------------------------------------------------------------------------
-    |
-    | MAKE SURE TO READ THE DOCS BEFORE CHANGE THIS CONFIGURATION HERE.
-    */
-    'icons' => [
+    public const GUIDE = <<<'HTML'
+    // ...
+    
+    'custom' => [
         /*
         |----------------------------------
-        | Default and in-use icon type.
-        |----------------------------------
-        | Allowed: heroicons, phosphoricons, google, tablericons.
-        */
-        'type' => env('TALLSTACKUI_ICON_TYPE', 'heroicons'),
-
-        /*
-        |----------------------------------
-        | Default and in-use icon style.
-        |----------------------------------
-        | Allowed:
-        |
-        | Heroicons: solid, outline
-        | Phosphoricons: thin, light, regular, bold, duotone
-        | Google: default
-        | Tablericons: default
-        */
-        'style' => env('TALLSTACKUI_ICON_STYLE', 'solid'),
-
-        /*
-        |----------------------------------
-        | Flush unused icons pack.
+        | Custom icons guide.
         |----------------------------------
         |
-        | To avoid the accumulation of unused files, the icon packs that are
-        | not in use can be deleted automatically when new icons are set.
+        | These icons are used internally in the components. When using custom
+        | icons via BladeUi you can optionally change the internal icons to custom
+        | icons, causing this to reflect new icon looks for the internal components.
         */
-        'flush' => true,
-    ],
-    HTML;
+        'guide' => [
+            // ...
 
-    public const START_SETUP_ICON_LIBRARY = <<<'HTML'
-    /*
-    |--------------------------------------------------------------------------
-    | Icon Style
-    |--------------------------------------------------------------------------
-    |
-    | MAKE SURE TO READ THE DOCS BEFORE CHANGE THIS CONFIGURATION HERE.
-    */
-    'icons' => [
-        /*
-        |----------------------------------
-        | Default and in-use icon type.
-        |----------------------------------
-        | Allowed: heroicons, phosphoricons, google, tablericons. [tl! highlight]
-        */
-        'type' => env('TALLSTACKUI_ICON_TYPE', 'heroicons'), // [tl! remove]
-        'type' => env('TALLSTACKUI_ICON_TYPE', 'phosphoricons'), // [tl! add]
-
-        /*
-        |----------------------------------
-        | Default and in-use icon style.
-        |----------------------------------
-        | Allowed:
-        |
-        | Heroicons: solid, outline
-        | Phosphoricons: thin, light, regular, bold, duotone [tl! highlight]
-        | Google: default
-        | Tablericons: default
-        */
-        'style' => env('TALLSTACKUI_ICON_STYLE', 'solid'), // [tl! remove]
-        'style' => env('TALLSTACKUI_ICON_STYLE', 'regular'), // [tl! add]
-
-        // ...
-    ],
-    HTML;
-
-    public const COMMAND_SETUP_ICON = <<<'HTML'
-    php artisan tallstackui:setup-icon
-    HTML;
-
-    public const COMPOSER_HOOK = <<<'HTML'
-    "scripts": {
-        "post-autoload-dump": [
-            "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
-            "@php artisan package:discover --ansi",
-            "@php artisan tallstackui:setup-icon --force --ansi" // [tl! add]
+            'arrow-trending-down' => null,
+            'arrow-up-tray' => null,
+            'bars-4' => null, // [tl! remove, focus:1]
+            'bars-4' => 'far-chart-bar', // [tl! add]
+            
+            // ...
         ],
-    }
+    ],
+
+    // ...
     HTML;
 }

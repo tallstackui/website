@@ -1,68 +1,42 @@
 @php
     foreach (apply_prefix($__data) as $key => $value) $$key = $value;
 @endphp
-{{--TODO 123--}}
+
 <x-layout :$content>
     <x-slot:title>
         Icon
     </x-slot:title>
-    <x-slot:description>
-        Icon support for Heroicons, PhosphorIcons, and Google Material Design Icons.
-    </x-slot:description>
     <x-section title="Concept" disable-copy>
-        <p>
-            <u>Before version 1.20, TallStackUI only supported one icon library, Heroicons.</u> Heroicons
-            is a beautiful library, but there is a problem: the low number of icons, there are
-            only around 300 icons. Due to many requests, <u>starting from version 1.20, TallStackUI now supports three
-            icon libraries,</u> offering more than 10K icons. A small change needs to be
-            made so that you can use the new supported icon libraries, this change must be made in the
-            <a href="{{ route('documentation', ['v2', 'configuration']) }}" wire:navigate class="underline">configuration file.</a>
-        </p>
-        <div class="mt-4">
-            <p>This is the <b class="underline">old icon configuration</b> in the configuration file <b>before v1.20:</b></p>
-            <x-code :contents="$oldConfiguration" disable-copy />
-            <p>This is the <b class="underline">new icon configuration</b> for the configuration file <b>after v1.20:</b></p>
-            <x-code :contents="$newConfiguration" />
-            <x-warning class="mt-2">
-                <b class="underline">If you have been using TallStackUI since before version 1.20</b>, you must update
-                your configuration file to adapt it to the new icon configuration, otherwise,
-                you will not be able to use the new icon libraries and also can get some exceptions.
-            </x-warning>
-        </div>
-    </x-section>
-    <x-section title="Supported Icon Libraries" disable-copy>
-        <p>
-            This is the current list of supported icon libraries:
-        </p>
-        <ul class="mt-2 list-decimal list-inside ml-2">
-            <li><a href="https://heroicons.com/" target="_blank">Heroicons</a></li>
-            <li><a href="https://phosphoricons.com/" target="_blank">PhosphorIcons</a></li>
-            <li><a href="https://fonts.google.com/icons" target="_blank">Google Material Design Icons</a></li>
-            <li><a href="https://tabler.io/icons" target="_blank">TablerIcons</a></li>
-        </ul>
+        In the beginning, TallStackUI only supported Heroicons. Although they are good icons, they have one main problem: there are few, less than 350.
+        As a result, TallStackUI was adopted - still in version 1.x, to support other libraries, and it worked. However, this created a somewhat
+        innocent problem: maintaining more repositories and updating the icons periodically. <b>So from version 2.x onwards we dropped support for
+        custom icons maintained by TallStackUI in favor of using custom icons through the community repositories of the <a href="https://blade-ui-kit.com/" class="underline" target="_blank">Blade UI Kit project</a></b>,
+        which supports more than 100K icons in total, divided between repositories.
     </x-section>
     <x-section title="Setup Icons" disable-copy>
-        <p>
-            If you want to change the icon library to one of the supported ones follow these steps.
-        </p>
-        <div class="mt-4">
-            <p>1) Edit the configuration file according you want:</p>
-            <x-code :contents="$startSetupIconLibrary" disable-copy />
-            <p class="mt-2">2) Save the file and run the following command in your terminal:</p>
-            <x-code language="shell" :contents="$commandSetupIcon" />
+        <div class="space-y-4">
             <p>
-                This command is responsible for downloading and set up the new icon library
-                within your project. Due to the way the icons are downloaded and stored, when
-                deploying your project to production you will have to run the same command in
-                the production environment. To avoid this manual work, you can add this
-                instruction to a Composer hook:
+                By default, TallStackUI natively supports <x-block>heroicons</x-block>. This way, you can use any heroicons without having to
+                install any dependencies. However, if you want to use a different icon kit - through the Blade UI KIt, you can follow these steps:
             </p>
-            <x-code language="json" :contents="$composerHook" disable-copy />
+            <ul class="list-decimal list-inside">
+                <li>
+                    Install the icon package you want to use, for example:
+                    <x-code language="shell" :contents="$installation" />
+                </li>
+                <li>
+                    Set the icon library in the environment variable:
+                    <x-code :contents="$env" />
+                </li>
+                <li>
+                    Perform a general cleanup in Laravel:
+                    <x-code language="shell" :contents="$clean" />
+                </li>
+            </ul>
             <p>
-                Using this approach, every time you run the <x-block>composer install</x-block>
-                or <x-block>composer update</x-block> commands, the icon library will be downloaded
-                and prepared automatically, avoiding need to run the command manually.
+                After that, you can use any icon from the chosen pack:
             </p>
+            <x-code language="blade" :contents="$owenvoke" />
         </div>
     </x-section>
     <x-section title="Basic Usage">
@@ -72,14 +46,6 @@
                 <x-icon name="clipboard" class="h-5 w-5"/>
             </div>
         </x-preview>
-    </x-section>
-    <x-section title="Variations">
-        <p>
-            The variations will be available depending on the type of icon library. For example, for Heroicons
-            you can use <x-block>outline</x-block>, as it is an available style, but this same style will not be applied to
-            Phosphoricons. As for Google icons, the variations are linked to the icon name.
-        </p>
-        <x-code language="blade" :contents="$variations" disable-copy />
     </x-section>
     <x-section title="Left & Right Slots">
         <x-preview language="blade" :contents="$leftRight">
@@ -96,5 +62,31 @@
                 </x-icon>
             </div>
         </x-preview>
+    </x-section>
+    <x-section title="Variations">
+        <div class="space-y-4">
+            <p>
+                Icon variations are applied depending on the format you use the icons in. For example,
+                for <x-block>heroicons</x-block> the only variation available is outline, while for FontAwesome
+                - via the <x-block>owenvoke/blade-fontawesome</x-block> package there will be other variations:
+            </p>
+            <x-code language="blade" :contents="$variations" disable-copy />
+        </div>
+    </x-section>
+    <x-section title="Interal Icon Guide">
+        <div class="space-y-4">
+            <p>
+                Since internally several icons are used in many components, you are free to customize these internal
+                icons through an icon guide in the <a href="{{ route('documentation', ['v2', 'configuration']) }}" class="underline">TallStackUI configuration file.</a>
+                All you have to do is define the name of the icons to be used. This way, the custom icon will be used instead of the Heroicon.
+            </p>
+            <p>
+                Inside the icons configuration - in the <x-block>config/tallstackui.php</x-block> file, you
+                will find the <x-block>icons</x-block> key and inside it the <x-block>custom</x-block> key.
+                All you have to do is define the name of the icon to be used, to replace the internal icon.
+                You can refer to the list of <a href="https://heroicons.com/" class="underline" target="_blank">available icons from Heroicons</a> for visual reference.
+            </p>
+            <x-code :contents="$guide" disable-copy />
+        </div>
     </x-section>
 </x-layout>
