@@ -8,7 +8,7 @@ class Configuration
     php artisan vendor:publish --tag=tallstackui.config
     HTML;
 
-    public const CONTENT = <<<'HTML'
+    public const CONFIGURATION = <<<'HTML'
     // ...
 
     /*

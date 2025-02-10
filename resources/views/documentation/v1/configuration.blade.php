@@ -25,6 +25,6 @@
                 <x-outdated-contente-tooltip />
             </p>
         </div>
-        <x-code :contents="$content" disable-copy/>
+        <x-code :contents="$configuration" disable-copy/>
     </x-section>
 </x-layout>

@@ -23,7 +23,7 @@
             <p>
                 If you want to customize custom colors like primary, secondary and dark, just follow the normal TailwindCSS color customization concept:
             </p>
-            <x-code language="js" :contents="$content" disable-copy/>
+            <x-code language="js" :contents="$file" disable-copy/>
             <p>Remember to rebuild your assets after making any adjustments to TailwindCSS colors:</p>
             <x-code language="shell" :contents="$build"/>
         </div>

@@ -4,7 +4,7 @@ namespace App\Enums\Examples\V1\Personalization;
 
 class Color
 {
-    public const CONTENT = <<<'HTML'
+    public const FILE = <<<'HTML'
     theme: {
         extend: {
             // ...

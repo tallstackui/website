@@ -21,7 +21,7 @@
     </x-warning>
     <x-section title="Personalizing Colors" disable-copy>
         <p class="mb-4">1. Open the TailwindCSS configuration file and enter the following content:</p>
-        <x-code language="js" :contents="$content" disable-copy/>
+        <x-code language="js" :contents="$file" disable-copy/>
         <x-warning text="Replace the hexadecimal values above with your desired colors." />
         <p class="mt-2">2. Rebuild your assets:</p>
         <x-code language="shell" :contents="$build"/>
