@@ -38,6 +38,11 @@ enum Example: string
     case Alpine = 'Integrations\\Alpine';
     // endregion
 
+    // region Interactions
+    case Dialog = 'Interactions\\Dialog';
+    case Toast = 'Interactions\\Toast';
+    // endregion
+
     // region Miscellaneous
     case Configuration = 'Configuration';
     case Contribution = 'Contribution';
@@ -54,9 +59,9 @@ enum Example: string
     // endregion
 
     // region Personalization
-    case ColorPersonalization = 'Personalization\\ColorPersonalization';
-    case DeepPersonalization = 'Personalization\\DeepPersonalization';
-    case SoftPersonalization = 'Personalization\\SoftPersonalization';
+    case ColorPersonalization = 'Personalization\\Color';
+    case DeepPersonalization = 'Personalization\\Deep';
+    case SoftPersonalization = 'Personalization\\Soft';
     // endregion
 
     // region UI
@@ -69,7 +74,6 @@ enum Example: string
     case Card = 'Ui\\Card';
     case Carousel = 'Ui\\Carousel';
     case Clipboard = 'Ui\\Clipboard';
-    case Dialog = 'Ui\\Dialog';
     case Dropdown = 'Ui\\Dropdown';
     case Error = 'Ui\\Error';
     case Environment = 'Ui\\Environment';
@@ -88,7 +92,6 @@ enum Example: string
     case Tab = 'Ui\\Tab';
     case Table = 'Ui\\Table';
     case ThemeSwitch = 'Ui\\ThemeSwitch';
-    case Toast = 'Ui\\Toast';
     case Tooltip = 'Ui\\Tooltip';
     // endregion
 

@@ -16,7 +16,7 @@
             only around 300 icons. Due to many requests, <u>starting from version 1.20, TallStackUI now supports three
             icon libraries,</u> offering more than 10K icons. A small change needs to be
             made so that you can use the new supported icon libraries, this change must be made in the
-            <a href="{{ route('documentation.v1.configuration') }}" wire:navigate class="underline">configuration file.</a>
+            <a href="{{ route('documentation', ['v1', 'configuration']) }}" wire:navigate class="underline">configuration file.</a>
         </p>
         <div class="mt-4">
             <p>This is the <b class="underline">old icon configuration</b> in the configuration file <b>before v1.20:</b></p>

@@ -30,7 +30,7 @@
             <x-code language="blade" :contents="$button" disable-copy />
             <p>
                 This button must be covered by the layout that received the <b>tallstackui_darkTheme</b> helper.
-                If you prefer, <a href="{{ route('documentation.v2.ui.theme-switch') }}" wire:navigate class="underline">TallStackUI offer the Theme Switch component</a> to easily manage the dark theme.
+                If you prefer, <a href="{{ route('documentation', ['v2', 'ui', 'theme-switch']) }}" wire:navigate class="underline">TallStackUI offer the Theme Switch component</a> to easily manage the dark theme.
             </p>
             <p>Rebuild your assets using this command:</p>
             <x-code language="shell" :contents="$assets" />

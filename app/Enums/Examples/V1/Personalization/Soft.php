@@ -2,7 +2,7 @@
 
 namespace App\Enums\Examples\V1\Personalization;
 
-class SoftPersonalization
+class Soft
 {
     public const EXAMPLE = <<<'HTML'
     use TallStackUi\Facades\TallStackUi;

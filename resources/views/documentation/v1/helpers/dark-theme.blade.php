@@ -36,7 +36,7 @@
         <x-warning>
             <ul class="list-decimal list-inside text-sm marker:font-bold">
                 <li>This button must be covered by the layout that received the <b>tallstackui_darkTheme</b> helper.</li>
-                <li>If you prefer, <a href="{{ route('documentation.v1.ui.theme-switch') }}" wire:navigate class="underline">TallStackUI offer the Theme Switch component</a> to easily manage the dark theme.</li>
+                <li>If you prefer, <a href="{{ route('documentation', ['v1', 'ui', 'theme-switch']) }}" wire:navigate class="underline">TallStackUI offer the Theme Switch component</a> to easily manage the dark theme.</li>
             </ul>
         </x-warning>
         <p class="mt-2">4. Rebuild your assets:</p>

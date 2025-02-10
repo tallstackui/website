@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Enums\Examples\V2\Ui;
+namespace App\Enums\Examples\V2\Interactions;
 
 class Dialog
 {

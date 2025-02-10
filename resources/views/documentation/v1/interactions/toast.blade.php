@@ -42,7 +42,7 @@
             <livewire:documentation.interactions.toast.timeout/>
         </x-preview>
         <p class="mt-2">
-            <u>Starting from version 1.14.2</u>, you can set a default timeout through <a href="{{ route('documentation.v1.configuration') }}" wire:navigate class="underline">configuration file:</a>
+            <u>Starting from version 1.14.2</u>, you can set a default timeout through <a href="{{ route('documentation', ['v1', 'configuration']) }}" wire:navigate class="underline">configuration file:</a>
         </p>
         <x-code :contents="$defaultTime" disable-copy />
     </x-section>
@@ -51,7 +51,7 @@
             <livewire:documentation.interactions.toast.expandable/>
         </x-preview>
         <p class="mt-2">
-            You can configure Toast to be extensible by default in <a href="{{ route('documentation.v1.configuration') }}" wire:navigate class="underline">the configuration file.</a> When you
+            You can configure Toast to be extensible by default in <a href="{{ route('documentation', ['v1', 'configuration']) }}" wire:navigate class="underline">the configuration file.</a> When you
             do that, you can optionally ignore the expandable for specific Toast:
         </p>
         <x-code :contents="$ignoringExpandable" disable-copy />
@@ -81,7 +81,7 @@
     </x-section>
     <x-section title="Color Personalization">
         <p>
-            <x-link :href="route('documentation.v1.personalization.deep')"
+            <x-link :href="route('documentation', ['v1', 'personalization', 'deep'])"
                     fragment="override-component-colors"
                     :color="null"
                     underline>

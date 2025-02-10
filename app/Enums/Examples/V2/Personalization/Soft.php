@@ -2,7 +2,7 @@
 
 namespace App\Enums\Examples\V2\Personalization;
 
-class SoftPersonalization
+class Soft
 {
     public const TAILWINDCSS = <<<'HTML'
     content: [

@@ -28,7 +28,7 @@
                 The "floating box" that is displayed in components such as Select Styled and Form
                 Upload is now a single object shared between several components, so if
                 you need to personalize this box, be sure to check the
-                <a href="{{ route('documentation.v1.internal.floating') }}" wire:navigate class="underline">Internal Components > Floating.</a>
+                <a href="{{ route('documentation', ['v1', 'internal', 'floating']) }}" wire:navigate class="underline">Internal Components > Floating.</a>
             </li>
             <li class="marker:font-bold">
                 Tab component items have lost their individual personalization in exchange
@@ -69,7 +69,7 @@
     </x-section>
     <x-section title="Setup Prefix Command" class="mt-4" disable-copy>
         <x-preview language="blade">
-            <p class="mb-4"><u>Starting from version 1.20,</u> TallStackUI introduce a command to easily setup <a href="{{ route('documentation.v1.installation').'#component-prefix' }}" wire:navigate class="underline">prefix for the components:</a></p>
+            <p class="mb-4"><u>Starting from version 1.20,</u> TallStackUI introduce a command to easily setup <a href="{{ route('documentation', ['v1', 'installation']).'#component-prefix' }}" wire:navigate class="underline">prefix for the components:</a></p>
             <x-code language="shell" :contents="$setupPrefix" />
         </x-preview>
     </x-section>
@@ -84,7 +84,7 @@
                 </ul>
             </div>
             <p class="mt-2">
-                <x-link sm color="pink" :href="route('documentation.v1.ui.icon')" wire:navigate icon="arrow-up-right" position="right">
+                <x-link sm color="pink" :href="route('documentation', ['v1', 'ui', 'icon'])" wire:navigate icon="arrow-up-right" position="right">
                     Review the component documentation
                 </x-link>
             </p>
@@ -98,7 +98,7 @@
                 <x-date label="Date" hint="Multiple selection" multiple :value="[now()->format('Y-m-d'), now()->addDay()->format('Y-m-d')]" format="DD MMMM YYYY" />
             </div>
             <p class="mt-2">
-                <x-link sm color="pink" :href="route('documentation.v1.form.date')" wire:navigate icon="arrow-up-right" position="right">
+                <x-link sm color="pink" :href="route('documentation', ['v1', 'form', 'date'])" wire:navigate icon="arrow-up-right" position="right">
                     Review the component documentation
                 </x-link>
             </p>
@@ -111,7 +111,7 @@
                 <x-time label="Time" hint="Format 24 hours" helper name="time" value="21:36" format="24" />
             </div>
             <p class="mt-2">
-                <x-link sm color="pink" :href="route('documentation.v1.form.time')" wire:navigate icon="arrow-up-right" position="right">
+                <x-link sm color="pink" :href="route('documentation', ['v1', 'form', 'time'])" wire:navigate icon="arrow-up-right" position="right">
                     Review the component documentation
                 </x-link>
             </p>
@@ -138,7 +138,7 @@
                 </x-step.items>
             </x-step>
             <p class="mt-2">
-                <x-link sm color="pink" :href="route('documentation.v1.ui.step')" icon="arrow-up-right" position="right">
+                <x-link sm color="pink" :href="route('documentation', ['v1', 'ui', 'step'])" icon="arrow-up-right" position="right">
                     Review the component documentation
                 </x-link>
             </p>
@@ -176,7 +176,7 @@
                 </div>
             </div>
             <p class="mt-2">
-                <x-link sm color="pink" :href="route('documentation.v1.ui.stats')" icon="arrow-up-right" position="right">
+                <x-link sm color="pink" :href="route('documentation', ['v1', 'ui', 'stats'])" icon="arrow-up-right" position="right">
                     Review the component documentation
                 </x-link>
             </p>
@@ -186,7 +186,7 @@
         <x-preview language="blade">
             <x-theme-switch xl />
             <p class="mt-2">
-                <x-link sm color="pink" :href="route('documentation.v1.ui.theme-switch')" icon="arrow-up-right" position="right">
+                <x-link sm color="pink" :href="route('documentation', ['v1', 'ui', 'theme-switch'])" icon="arrow-up-right" position="right">
                     Review the component documentation
                 </x-link>
             </p>

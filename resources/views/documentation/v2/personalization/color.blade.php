@@ -75,7 +75,7 @@
     </x-section>
     <x-section title="Change the Default Namespace" disable-copy>
         <p>
-            <a href="{{ route('documentation.v2.configuration') }}" class="underline">When you publish the configuration file</a>, you can change the default namespace for the color classes.
+            <a href="{{ route('documentation', ['v2', 'configuration']) }}" class="underline">When you publish the configuration file</a>, you can change the default namespace for the color classes.
             If you prefer, you can control this through an environment variable:
         </p>
         <x-code :contents="$namespaceEnvVariable" />

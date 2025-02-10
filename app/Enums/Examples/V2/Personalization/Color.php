@@ -2,7 +2,7 @@
 
 namespace App\Enums\Examples\V2\Personalization;
 
-class ColorPersonalization
+class Color
 {
     public const CONTENT = <<<'HTML'
     theme: {

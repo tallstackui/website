@@ -29,10 +29,10 @@
         <div class="space-y-4">
             <p>
                 With the example above you should realize that the environment is a basic component. <b>With the release
-                    of version 2.x of TallStackUI a new helper was introduced: <a href="{{ route('documentation.v2.envbar') }}" class="underline">EnvBar</a>.</b> Unlike the environment component,
+                    of version 2.x of TallStackUI a new helper was introduced: <a href="{{ route('documentation', ['v2', 'envbar']) }}" class="underline">EnvBar</a>.</b> Unlike the environment component,
                 the EnvBar is a fixed bar at the top of the screen that serves to display several other information
                 about the current environment - not just the environment name and branch. If you want to go further
-                and <a href="{{ route('documentation.v2.envbar') }}" class="underline">use the EnvBar click here.</a>
+                and <a href="{{ route('documentation', ['v2', 'envbar']) }}" class="underline">use the EnvBar click here.</a>
             </p>
             <img src="{{ url('assets/images/envbar.png') }}" />
         </div>
@@ -93,7 +93,7 @@
                 <li>Others - shades of <b class="text-primary-700">primary</b> colors</li>
             </ul>
             <p>
-                You can personalize or create new colors per room by following <a href="{{ route('documentation.v2.personalization.color') }}" class="underline">TallStackUI color personalization.</a>
+                You can personalize or create new colors per room by following <a href="{{ route('documentation', ['v2', 'personalization', 'color']) }}" class="underline">TallStackUI color personalization.</a>
             </p>
         </div>
     </x-section>

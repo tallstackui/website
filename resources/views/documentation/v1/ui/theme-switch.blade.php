@@ -17,13 +17,13 @@
     </x-slot:personalization>
     <x-section title="Concept" anchor="static-concept" disable-copy>
         <p>
-            As TallStackUI offers <a href="{{ route('documentation.v1.dark-theme') }}" wire:navigate class="underline">a helper
+            As TallStackUI offers <a href="{{ route('documentation', ['v1', 'dark-theme']) }}" wire:navigate class="underline">a helper
             to manipulate the dark theme</a>, <u>starting from version 1.20</u>, a simple
             toggle component was introduced with support for manipulating the dark theme state, activating
             or deactivating it with the respective sun and moon icons.
         </p>
         <x-warning class="mt-2">
-            You should only use this component if are using the <a href="{{ route('documentation.v1.dark-theme') }}" wire:navigate class="underline">dark theme helper.</a>
+            You should only use this component if are using the <a href="{{ route('documentation', ['v1', 'dark-theme']) }}" wire:navigate class="underline">dark theme helper.</a>
         </x-warning>
     </x-section>
     <x-section title="Basic Usage">

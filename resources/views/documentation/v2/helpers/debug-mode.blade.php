@@ -58,7 +58,7 @@
             <p>
                 Debug mode has a settings section in the TallStackUI configuration file.
                 Through this configuration, you can configure several things, such as ignore debug
-                mode for specific components. <a href="{{ route('documentation.v2.configuration') }}" wire:navigate class="underline" target="_blank">
+                mode for specific components. <a href="{{ route('documentation', ['v2', 'configuration']) }}" wire:navigate class="underline" target="_blank">
                     Click here to know how to publish the configuration file.</a>
             </p>
             <x-code :contents="$configuration" disable-copy />

@@ -56,7 +56,7 @@
     </x-section>
     <x-section title="Color Personalization">
         <p>
-            <x-link :href="route('documentation.v2.personalization.deep')"
+            <x-link :href="route('documentation', ['v2', 'personalization', 'deep'])"
                     fragment="override-component-colors"
                     :color="null"
                     underline>

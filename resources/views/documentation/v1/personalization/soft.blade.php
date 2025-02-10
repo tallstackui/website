@@ -20,7 +20,7 @@
     <x-section title="Example of Component Structure" disable-copy>
         <div class="mb-4 inline-flex items-center gap-1">
             <p>
-                Example of the <a href="{{ route('documentation.v1.ui.avatar') }}" wire:navigate class="underline">Avatar</a> component classes
+                Example of the <a href="{{ route('documentation', ['v1', 'ui', 'avatar']) }}" wire:navigate class="underline">Avatar</a> component classes
                 <x-outdated-contente-tooltip />
             </p>
         </div>

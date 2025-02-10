@@ -160,7 +160,7 @@
         <div class="space-y-4">
             <p>
                 All the components mentioned above are available to be fully customized through one
-                of the TallStackUI personalization methods: <a href="{{ route('documentation.v2.personalization.concept') }}" class="underline">soft personalization or deep personalization.</a>
+                of the TallStackUI personalization methods: <a href="{{ route('documentation', ['v2', 'personalization', 'concept']) }}" class="underline">soft personalization or deep personalization.</a>
             </p>
         </div>
     </x-section>

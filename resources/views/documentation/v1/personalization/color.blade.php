@@ -17,7 +17,7 @@
         </p>
     </x-section>
     <x-warning class="mb-4">
-        If you are looking for how to create custom colors, <a href="{{ route('documentation.v1.personalization.deep').'#create-custom-colors' }}" wire:navigate class="underline">use this guide.</a>
+        If you are looking for how to create custom colors, <a href="{{ route('documentation', ['v1', 'personalization', 'deep']).'#create-custom-colors' }}" wire:navigate class="underline">use this guide.</a>
     </x-warning>
     <x-section title="Personalizing Colors" disable-copy>
         <p class="mb-4">1. Open the TailwindCSS configuration file and enter the following content:</p>

@@ -1,13 +1,13 @@
 <?php
 
-namespace App\Enums\Examples\V2\Ui;
+namespace App\Enums\Examples\V1\Interactions;
 
-class Toast
+class Dialog
 {
     public const TAG = <<<'HTML'
     <html>
         <body>
-            <x-toast /> <!-- [tl! highlight] -->
+            <x-dialog /> <!-- [tl! highlight] -->
 
             <!--... -->
         </body>
@@ -28,24 +28,24 @@ class Toast
     public const DISPATCH = <<<'HTML'
     public function save(): void
     {
-        $this->toast()->success('...')->send();
-        $this->toast()->error('...')->send();
-        $this->toast()->warning('...')->send();
-        $this->toast()->info('...')->send();
+        $this->dialog()->success('...')->send();
+        $this->dialog()->error('...')->send();
+        $this->dialog()->warning('...')->send();
+        $this->dialog()->info('...')->send();
     }
     HTML;
 
     public const BASIC = <<<'HTML'
-    $this->toast()->success('Success', 'This is a success message.')->send();
-    $this->toast()->error('Error', 'This is an error message.')->send();
-    $this->toast()->warning('Warning', 'This is a warning message.')->send();
-    $this->toast()->info('Info', 'This is an info message.')->send();
+    $this->dialog()->success('Success', 'This is a success message.')->send();
+    $this->dialog()->error('Error', 'This is an error message.')->send();
+    $this->dialog()->warning('Warning', 'This is a warning message.')->send();
+    $this->dialog()->info('Info', 'This is an info message.')->send();
     HTML;
 
     public const CONFIRMATION = <<<'HTML'
     public function save(): void
     {
-        $this->toast()
+        $this->dialog()
             ->question('Warning!', 'Are you sure?')
             ->confirm('Confirm', 'confirmed', 'Confirmed Successfully')
             ->cancel('Cancel', 'cancelled', 'Cancelled Successfully')
@@ -54,12 +54,12 @@ class Toast
 
     public function confirmed(string $message): void
     {
-        $this->toast()->success('Success', $message)->send();
+        $this->dialog()->success('Success', $message)->send();
     }
 
     public function cancelled(string $message): void
     {
-        $this->toast()->error('Cancelled', $message)->send();
+        $this->dialog()->error('Cancelled', $message)->send();
     }
     HTML;
 
@@ -67,20 +67,20 @@ class Toast
     public function save(): void
     {
         // 1. The methods `confirm()` and `cancel()` are optional.
-        $this->toast()
+        $this->dialog()
             ->question('Warning!', 'Are you sure?')
             ->send();
 
         // 2. You can set only `confirm()` or `cancel()`.
-        // Different than Dialog, only the defined button will be shown.
-        $this->toast()
+        // If you set only one, the other will be set as default.
+        $this->dialog()
             ->question('Warning!', 'Are you sure?')
             ->confirm('Confirm', 'confirmed', 'Confirmed Successfully')
             ->send();
 
         // 3. You can make `confirm()` and `cancel()`
         // as static buttons just by defining the text.
-        $this->toast()
+        $this->dialog()
             ->question('Warning!', 'Are you sure?')
             ->confirm('Confirm')
             ->cancel('Cancel')
@@ -88,14 +88,14 @@ class Toast
 
         // 4. You can set only the method and parameters
         // to use the original text in the buttons.
-        $this->toast()
+        $this->dialog()
             ->question('Warning!', 'Are you sure?')
             ->confirm(method: 'confirmed', params: 'Confirmed Successfully')
             ->cancel(method: 'cancelled', params: 'Cancelled Successfully')
             ->send();
 
-        // 5. You can ask for a confirmation with other Toast types
-        $this->toast()
+        // 5. You can ask for a confirmation with other Dialog types
+        $this->dialog()
             ->success('Success!', 'Process completed successfully.')
             ->confirm('Undo', 'undo')
             ->cancel('Ok')
@@ -103,47 +103,10 @@ class Toast
     }
     HTML;
 
-    public const TIME = <<<'HTML'
-    $this->toast()
-        ->timeout(seconds: 10)
-        ->success('Success', 'This is a success message.')
-        ->send();
-    HTML;
-
-    public const DEFAULT_TIME = <<<'HTML'
-    // In config/tallstackui.php file
-    'toast' => [
-        // ...
-        'timeout' => 10, // [tl! highlight]
-    ],
-    
-    // Then use the timeout() method without parameters
-    $this->toast()
-        ->timeout() // [tl! highlight]
-        ->success('Success', 'This is a success message.')
-        ->send();
-    HTML;
-
-    public const EXPANDABLE = <<<'HTML'
-    $this->toast()
-        ->expandable()
-        ->success('Success', 'When the description has more than 30 characters, the toast can be optionally expandable.')
-        ->send();
-    HTML;
-
-    public const IGNORING_EXPANDABLE = <<<'HTML'
-    // ...
-
-    $this->toast()
-        ->expandable(false) // [tl! highlight]
-        ->success('Success', 'This Toast will not be expandable.')
-        ->send();
-    HTML;
-
     public const EVENTS = <<<'HTML'
-    <div x-on:toast:accepted.window="alert($event.detail.description)"
-         x-on:toast:rejected.window="alert($event.detail.description)"
-         x-on:toast:timeout.window="alert($event.detail.description)">
+    <div x-on:dialog:accepted.window="alert($event.detail.description)"
+         x-on:dialog:rejected.window="alert($event.detail.description)"
+         x-on:dialog:dismissed.window="show($event.detail.description)">
         ...
     </div>
     HTML;
@@ -151,17 +114,22 @@ class Toast
     public const HOOKS = <<<'HTML'
     public function save(): void
     {
-        $this->toast()
+        $this->dialog()
             ->success('...')
             ->hooks([
-                // When close the toast by clicking on the "x" button.
-                'close' => [
+                // When using `success()`, `error()`, `warning()`, `info()` and pressing the OK button.
+                'ok' => [
                     'method' => 'method',
                     // The parameters can be anything you want: arrays, strings, int.
                     'params' => ['param1', 'param2']
                 ],
-                // When the toast is automatically closed by the timeout.
-                'timeout' => [
+                // When close the dialog by clicking on the "x" button.
+                'close' => [
+                    'method' => 'method',
+                    'params' => ['param1', 'param2']
+                ],
+                // When close the dialog by dismiss (clicking out of the dialog).
+                'dismiss' => [
                     'method' => 'method',
                     'params' => ['param1', 'param2']
                 ],
@@ -173,14 +141,14 @@ class Toast
     public const HOOKS_CALLABLE = <<<'HTML'
     public function save(): void
     {
-        $this->toast()
+        $this->dialog()
             ->success('...')
             ->hooks([
-                'close' => [
+                'ok' => [
                     'method' => 'method',
                     'params' => fn () => ['param1', 'param2'] // [tl! highlight]
                 ],
-                'timeout' => [
+                'dismiss' => [
                     'method' => 'method',
                     'params' => function () { // [tl! highlight:2]
                         return ['param1', 'param2'];
@@ -200,19 +168,19 @@ class Toast
         <x-button color="secondary" onclick="confirm()">Confirmation</x-button>
 
         <script>
-            show = () => $interaction('toast')
+            show = () => $interaction('dialog')
                 .success('Success', 'This is a success message.')
                 .send();
 
-            error = () => $interaction('toast')
+            error = () => $interaction('dialog')
                 .error('Success', 'This is a error message.')
                 .send();
 
-            warning = () => $interaction('toast')
+            warning = () => $interaction('dialog')
                 .warning('Success', 'This is a warning message.')
                 .send();
 
-            info = () => $interaction('toast')
+            info = () => $interaction('dialog')
                 .info('Success', 'This is a info message.')
                 .send();
 
@@ -223,7 +191,7 @@ class Toast
 
             const component = Livewire.find('your-component-id-goes-here').id; // [tl! highlight]
 
-            confirm = () => $interaction('toast')
+            confirm = () => $interaction('dialog')
                 .wireable(component) // [tl! highlight]
                 .question('Warning', 'Are you sure?')
                 .confirm('Confirm', 'confirmed', 'Confirmed Successfully')
@@ -233,7 +201,7 @@ class Toast
             // Alternatively, you can pass the component id as an
             // empty string to use the FIRST LIVEWIRE COMPONENT OF THE PAGE.
 
-            confirm = () => $interaction('toast')
+            confirm = () => $interaction('dialog')
                 .wireable() // [tl! highlight]
                 .question('Warning', 'Are you sure?')
                 .confirm('Confirm', 'confirmed', 'Confirmed Successfully')
@@ -259,7 +227,7 @@ class Toast
     
         public function save()
         {
-            $this->toast()
+            $this->dialog()
                 ->success('Done!', 'Your money has been sent!')
                 ->flash() // [tl! highlight]
                 ->send();
@@ -288,7 +256,7 @@ class Toast
         {
             // ...
     
-            $this->toast() // [tl! highlight:2]
+            $this->dialog() // [tl! highlight:2]
                 ->success('...')
                 ->send();
         }
@@ -297,7 +265,7 @@ class Toast
 
     public const PERSONALIZATION = <<<'HTML'
     TallStackUi::personalize()
-        ->toast()
+        ->dialog()
         ->block('block', 'classes');
     HTML;
 }

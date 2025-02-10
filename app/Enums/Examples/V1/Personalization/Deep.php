@@ -2,7 +2,7 @@
 
 namespace App\Enums\Examples\V1\Personalization;
 
-class DeepPersonalization
+class Deep
 {
     public const COMMAND = <<<'HTML'
     php artisan make:component Input

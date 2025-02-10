@@ -29,13 +29,13 @@
     <x-section title="Setup Prefix" description="Command used to set up component prefix." disable-copy>
         <x-code language="shell" :contents="$setupPrefix"/>
         <p>
-            This command is used to set up the component prefix. <a href="{{ route('documentation.v2.component-prefix').'#command' }}" class="underline">You can read more about it by clicking here.</a>
+            This command is used to set up the component prefix. <a href="{{ route('documentation', ['v2', 'component-prefix']).'#command' }}" class="underline">You can read more about it by clicking here.</a>
         </p>
     </x-section>
     <x-section title="Setup Prefix" description="Command used to set up component prefix." disable-copy>
         <x-code language="shell" :contents="$setupColor"/>
         <p>
-            This command is used to set up or manipulate component colors. <a href="{{ route('documentation.v2.personalization.color').'#create-or-manipulate-colors' }}" class="underline">You can read more about it by clicking here.</a>
+            This command is used to set up or manipulate component colors. <a href="{{ route('documentation', ['v2', 'personalization', 'color']).'#create-or-manipulate-colors' }}" class="underline">You can read more about it by clicking here.</a>
         </p>
     </x-section>
 </x-layout>
