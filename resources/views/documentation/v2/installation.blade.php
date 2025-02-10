@@ -4,29 +4,27 @@
     </x-slot:title>
     <x-v2-beta-warning />
     <x-section class="mt-4" title="Meet TallStackUI" disable-copy>
-        <p>
-            TallStackUI is <b class="text-pink-600">a powerful suite of 30+ ready-to-use components for TALL Stack applications.</b>
-            TallStackUI is unlike anything you've ever seen, from its conception to construction and general
-            availability. Beforehand we want to tell you a little about our motivation.
-        </p>
+        TallStackUI is <b class="text-pink-600">a powerful suite of 30+ ready-to-use components for TALL Stack applications.</b>
+        TallStackUI is unlike anything you've ever seen, from its conception to construction and general
+        availability. Beforehand we want to tell you a little about our motivation.
     </x-section>
     <x-section class="space-y-4" title="History & Motivation" disable-copy>
-        <p>
-            TallStackUI was created by <a href="https://github.com/devajmeireles" class="underline" target="_blank">AJ</a>,
-            a <i>FullStack</i> PHP developer for 10 years, passionate about the Laravel and Livewire ecosystem, especially the TALL Stack,
-            a universe of possibilities with little time and effort. <a href="https://github.com/devajmeireles" class="underline" target="_blank">AJ</a> is an active developer in the community,
-            contributing to Laravel, Livewire, PestPHP and other open-source solutions.
-        </p>
+        TallStackUI was created by <a href="https://github.com/devajmeireles" class="underline" target="_blank">AJ</a>,
+        a <i>FullStack</i> PHP developer for 10 years, passionate about the Laravel and Livewire ecosystem, especially the TALL Stack,
+        a universe of possibilities with little time and effort. <a href="https://github.com/devajmeireles" class="underline" target="_blank">AJ</a> is an active developer in the community,
+        contributing to Laravel, Livewire, PestPHP and other open-source solutions.
     </x-section>
     <x-section title="Requirements" disable-copy>
-        <p>TallStackUI was created with a <b class="font-semibold text-pink-500 underline">focus on Livewire 3</b> so the usage requirements are:</p>
-        <ul class="mt-4 ml-4 list-inside list-decimal space-y-2">
-            <li>PHP 8.1 or above</li>
-            <li>Laravel 10 or Laravel 11</li>
-            <li>Livewire 3</li>
-            <li>AlpineJS 3</li>
-            <li>TailwindCSS 3</li>
-        </ul>
+        <div class="space-y-4">
+            <p>TallStackUI was created with a <b class="font-semibold text-pink-500 underline">focus on Livewire 3</b> so the usage requirements are:</p>
+            <ul class="mt-4 ml-4 list-inside list-decimal space-y-2">
+                <li>PHP 8.1 or above</li>
+                <li>Laravel 10 or Laravel 11</li>
+                <li>Livewire 3</li>
+                <li>AlpineJS 3</li>
+                <li>TailwindCSS 3</li>
+            </ul>
+        </div>
     </x-section>
     <x-section title="Installation" disable-copy>
         <div class="space-y-4">

@@ -10,16 +10,14 @@
         TallStackUI Contribuition Guide.
     </x-slot:description>
     <x-section title="Possibilities" disable-copy>
-        <p>
-            There are several ways to contribute to a library like TallStackUI — <b class="underline">it’s not just about code!</b>
-            Even if you’re not an experienced developer, don’t worry — there are other ways to help. Do you enjoy writing? You can
-            review the texts on both TallStackUI and our website, identifying and pointing out possible mistakes. Did you find
-            an issue on the website, documentation, or any TallStackUI component? Create an issue and report the problem. Are
-            you a fan of TallStackUI? Share it with your friends and community! Spreading the word is also a valuable contribution.
-            If you’re an experienced developer and want to join the team, feel free to contribute by writing components, testing,
-            fixing bugs, or improving the project in other ways. Want to go even further? If you love TallStackUI and wish to support it,
-            consider making a financial donation. There are many ways to contribute, choose one and make a difference!
-        </p>
+        There are several ways to contribute to a library like TallStackUI — <b class="underline">it’s not just about code!</b>
+        Even if you’re not an experienced developer, don’t worry — there are other ways to help. Do you enjoy writing? You can
+        review the texts on both TallStackUI and our website, identifying and pointing out possible mistakes. Did you find
+        an issue on the website, documentation, or any TallStackUI component? Create an issue and report the problem. Are
+        you a fan of TallStackUI? Share it with your friends and community! Spreading the word is also a valuable contribution.
+        If you’re an experienced developer and want to join the team, feel free to contribute by writing components, testing,
+        fixing bugs, or improving the project in other ways. Want to go even further? If you love TallStackUI and wish to support it,
+        consider making a financial donation. There are many ways to contribute, choose one and make a difference!
     </x-section>
     <x-section title="TallStackUI Way" disable-copy>
         <div class="space-y-4">
@@ -68,18 +66,28 @@
         </div>
     </x-section>
     <x-section title="Run Tests" disable-copy>
-        <div class="space-y-4">
-            <p>1. Run all tests:</p>
-            <x-code language="shell" :contents="$allTests" />
-            <p>2. Run only the Feature tests:</p>
-            <x-code language="shell" :contents="$feature" />
-            <p>3. Run only the Browser tests:</p>
-            <x-code language="shell" :contents="$browser" />
-            <p>4. Fixing Code Style:</p>
-            <x-code language="shell" :contents="$pint" />
-            <p>5. Validate Type Coverage & PhpStan:</p>
-            <x-code language="shell" :contents="$analyse" />
-        </div>
+        <ul class="list-inside list-decimal">
+            <li>
+                Run all tests:
+                <x-code language="shell" :contents="$allTests" />
+            </li>
+            <li>
+                Run only the Feature tests:
+                <x-code language="shell" :contents="$feature" />
+            </li>
+            <li>
+                Run only the Browser tests:
+                <x-code language="shell" :contents="$browser" />
+            </li>
+            <li>
+                Fixing Code Style:
+                <x-code language="shell" :contents="$pint" />
+            </li>
+            <li>
+                Validate Type Coverage & PhpStan:
+                <x-code language="shell" :contents="$analyse" />
+            </li>
+        </ul>
     </x-section>
     <x-section title="Synchronize Changes" disable-copy>
         <div class="space-y-4">

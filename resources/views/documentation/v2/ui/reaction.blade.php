@@ -14,7 +14,6 @@
     </x-slot:personalization>
     <x-section title="Concept" disable-copy>
         <p>
-            <u>Version 1.13.0</u> of TallStackUI introduces a new component: Reaction.
             In the modern world many applications have blogs, posts or articles. This
             way they need to capture the reaction of their readers to feel how welcome
             or hated that content was. The reaction component is the combination of

@@ -13,13 +13,20 @@
         <livewire:personalization :$personalization component="Interaction\Toast" title="Toast" />
     </x-slot:personalization>
     <x-section title="Configuration" disable-copy>
-        1. Insert the Toast component on your main layout.
-        <x-code language="html" :contents="$tag"/>
-        2. Use the Interactions trait in your Livewire component.
-        <x-code language="php" :contents="$trait"/>
-        3. Dispatch the Toast from a method.
-        <x-code language="php" :contents="$dispatch"/>
-        <x-warning text="This is an example. You can't dispatch all at the same time." />
+        <ul class="list-decimal list-inside space-y-2">
+            <li>
+                Insert the <x-block>toast</x-block> component on your main layout:
+                <x-code language="html" :contents="$tag"/>
+            </li>
+            <li>
+                Use the <x-block>Interactions</x-block> trait in your Livewire component:
+                <x-code language="php" :contents="$trait"/>
+            </li>
+            <li>
+                Dispatch the Toast from a Livewire method:
+                <x-code language="php" :contents="$dispatch"/>
+            </li>
+        </ul>
     </x-section>
     <x-section title="Basic Usage">
         <x-preview :contents="$basic">
@@ -27,71 +34,86 @@
         </x-preview>
     </x-section>
     <x-section title="Confirmations" description="Interacting with actions.">
-        <x-preview :contents="$confirmation">
-            <livewire:documentation.interactions.toast.confirmation/>
-        </x-preview>
-        <div class="mt-4 space-y-4">
-            <x-code :contents="$confirmationExplanation" disable-copy />
+        <div class="space-y-4">
+            <x-preview :contents="$confirmation">
+                <livewire:documentation.interactions.toast.confirmation/>
+            </x-preview>
+            <div class="mt-4 space-y-4">
+                <x-code :contents="$confirmationExplanation" disable-copy />
+            </div>
         </div>
     </x-section>
     <x-section title="Time Control" description="Increase the time to show the toast.">
-        <x-preview :contents="$time">
-            <livewire:documentation.interactions.toast.timeout/>
-        </x-preview>
-        <x-code :contents="$defaultTime" disable-copy />
+        <div class="space-y-4">
+            <x-preview :contents="$time">
+                <livewire:documentation.interactions.toast.timeout/>
+            </x-preview>
+            <x-code :contents="$defaultTime" disable-copy />
+        </div>
     </x-section>
     <x-section title="Expandable" description="An option to show minimized description texts.">
-        <x-preview :contents="$expandable">
-            <livewire:documentation.interactions.toast.expandable/>
-        </x-preview>
-        <p class="mt-2">
-            You can configure Toast to be extensible by default in <a href="{{ route('documentation', ['v2', 'configuration']) }}" wire:navigate class="underline">the configuration file.</a> When you
-            do that, you can optionally ignore the expandable for specific Toast:
-        </p>
-        <x-code :contents="$ignoringExpandable" disable-copy />
+        <div class="space-y-4">
+            <x-preview :contents="$expandable">
+                <livewire:documentation.interactions.toast.expandable/>
+            </x-preview>
+            <p class="mt-2">
+                You can configure Toast to be extensible by default in <a href="{{ route('documentation', ['v2', 'configuration']) }}" wire:navigate class="underline">the configuration file.</a> When you
+                do that, you can optionally ignore the expandable for specific Toast:
+            </p>
+            <x-code :contents="$ignoringExpandable" disable-copy />
+        </div>
     </x-section>
     <x-section title="Events" description="An option to listen to events.">
-        <x-preview language="blade" :contents="$events">
-            <livewire:documentation.interactions.toast.events/>
-        </x-preview>
-        <x-warning class="mt-4">
-            We recommend that you use listeners in one place, whether in the base layout or once per component.
-        </x-warning>
+        <div class="space-y-4">
+            <x-preview language="blade" :contents="$events">
+                <livewire:documentation.interactions.toast.events/>
+            </x-preview>
+            <x-warning class="mt-4">
+                We recommend that you use listeners in one place, whether in the base layout or once per component.
+            </x-warning>
+        </div>
     </x-section>
     <x-section title="Hooks">
-        <x-code :contents="$hooks" disable-copy />
-        <p>Optionally, you can also set <x-block>params</x-block> as closure:</p>
-        <x-code :contents="$hooksCallable" disable-copy />
-        <p><u>The closure will be resolved using Laravel container</u> and the result will be passed to the hook.</p>
+        <div class="space-y-4">
+            <x-code :contents="$hooks" disable-copy />
+            <p>Optionally, you can also set <x-block>params</x-block> as closure:</p>
+            <x-code :contents="$hooksCallable" disable-copy />
+            <p><u>The closure will be resolved using Laravel container</u> and the result will be passed to the hook.</p>
+        </div>
     </x-section>
     <x-section title="JavaScript API" description="JavaScript API to interact with Toast.">
-        <x-code language="blade" :contents="$javascript" disable-copy />
-        <x-warning>
-            The toast hooks are unavailable in the JavaScript API.
-        </x-warning>
+        <div class="space-y-4">
+            <x-code language="blade" :contents="$javascript" disable-copy />
+            <x-warning>
+                The toast hooks are unavailable in the JavaScript API.
+            </x-warning>
+        </div>
     </x-section>
     <x-section title="Display After Redirects">
-        <p>
-            <u>Starting from version 1.23.0</u> you can trigger a toast that will actually
-            be displayed after a redirect action. Regardless of whether the redirection is
-            to another Livewire component or to basic controllers, you can still display the toast.
-        </p>
-        <x-code :contents="$flash"/>
-        <p>
-            When using <x-block>flash()</x-block> method, the toast will not be displayed in the current
-            request, but yes stored temporarily in the session and displayed in the next request.
-        </p>
+        <div class="space-y-4">
+            <p>
+                You can trigger a toast that will actually be displayed after a redirect action. Regardless of whether
+                the redirection is to another Livewire component or to basic controllers, you can still display the toast.
+            </p>
+            <x-code :contents="$flash"/>
+            <p>
+                When using <x-block>flash()</x-block> method, the toast will not be displayed in the current
+                request, but yes stored temporarily in the session and displayed in the next request.
+            </p>
+        </div>
     </x-section>
     <x-section title="Dispatching via Controllers">
-        <p>
-            <u>Starting from version 1.35.0</u> you can trigger a toast via controllers.
-        </p>
-        <x-code :contents="$controllers" disable-copy />
-        <p>
-            <u>Because certain methods were created and designed to be used with Livewire components</u>,
-            methods like <x-block>confirm</x-block>, <x-block>cancel</x-block> and <x-block>hooks</x-block>
-            will be unavailable and will throw exceptions when you try to use them in controllers.
-        </p>
+        <div class="space-y-4">
+            <p>
+                You can trigger a toast via controllers.
+            </p>
+            <x-code :contents="$controllers" disable-copy />
+            <p>
+                <u>Because certain methods were created and designed to be used with Livewire components</u>,
+                methods like <x-block>confirm</x-block>, <x-block>cancel</x-block> and <x-block>hooks</x-block>
+                will be unavailable and will throw exceptions when you try to use them in controllers.
+            </p>
+        </div>
     </x-section>
     <x-available-configuration />
 </x-layout>

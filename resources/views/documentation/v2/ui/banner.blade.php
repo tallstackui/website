@@ -14,9 +14,8 @@
     </x-slot:personalization>
     <x-section title="Concept" anchor="static-concept" disable-copy>
         <p>
-            <u>Version 1.1.0</u> of TallStackUI introduces a new component: Banner. This component
-            has two approaches of use: static use for displaying fixed or random messages or Livewire
-            integration for displaying messages from the backend to frontend.
+            The banner component is a component intended to display text at the top of the page. It has two usage approaches: static usage
+            to display fixed or random messages or Livewire integration to display messages that comes from the backend to the frontend.
         </p>
     </x-section>
     <x-warning class="mb-4">

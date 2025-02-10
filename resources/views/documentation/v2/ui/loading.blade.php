@@ -14,8 +14,7 @@
     </x-slot:personalization>
     <x-section title="Concept" disable-copy>
         <p>
-            <u>Version 1.2.0</u> of TallStackUI introduces a new component: Loading.
-            This component aims to be used to display a full-page loading overlay for
+            The loading component aims to be used to display a full-page loading overlay for
             situations where you are waiting for a Livewire component to finish an operation.
         </p>
     </x-section>

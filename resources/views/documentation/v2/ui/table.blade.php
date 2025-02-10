@@ -19,9 +19,8 @@
     </x-warning>
     <x-section title="Concept" disable-copy>
         <p>
-            Although many packages can add table features to your project, <u>starting from
-            version 1.6.0</u> of TallStackUI you can take advantage of the simple table component,
-            but with all the basic features necessary for a table to work through Livewire components.
+            Although many packages can add table features to your project, TallStackUI offers you a simple table
+            component, but with all the basic features necessary for a table to work through Livewire components.
         </p>
     </x-section>
     <x-section title="Data for Table" disable-copy>

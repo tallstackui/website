@@ -14,7 +14,6 @@
     </x-slot:personalization>
     <x-section title="Concept" disable-copy>
         <p>
-            <u>Version 1.25.0</u> of TallStackUI introduces a new component: Rating.
             In the modern world, many applications need to collect their
             user's level of satisfaction related to specific parts of a process,
             such as the purchase process, which may require the evaluation of

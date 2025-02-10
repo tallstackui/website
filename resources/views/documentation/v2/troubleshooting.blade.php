@@ -7,16 +7,12 @@
         Troubleshooting
     </x-slot:title>
     <x-section>
-        <p>
-            This page is dedicated to guide you in solving some of the most known problems that can occur when using TallStackUI.
-        </p>
+        This page is dedicated to guide you in solving some of the most known problems that can occur when using TallStackUI.
     </x-section>
     <x-section title="Non-existent Component" disable-copy>
-        <p>
-            Whenever you update TallStackUI, check whether there have been changes to the <x-block>config/tallstackui.php</x-block>
-            file. As this file can be published for your application, if a new component is added in a new version of TallStackUI, this
-            file needs to be updated with the addition of the new component.
-        </p>
+        Whenever you update TallStackUI, check whether there have been changes to the <x-block>config/tallstackui.php</x-block>
+        file. As this file can be published for your application, if a new component is added in a new version of TallStackUI, this
+        file needs to be updated with the addition of the new component.
     </x-section>
     <x-section title="Losing Component Attributes" disable-copy>
         <div class="space-y-4">
