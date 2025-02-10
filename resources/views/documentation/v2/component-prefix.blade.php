@@ -1,4 +1,4 @@
-<x-layout torchlight :$content>
+<x-layout :$content>
     <x-slot:title>
         Component Prefix
     </x-slot:title>

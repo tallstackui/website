@@ -1,4 +1,4 @@
-<x-layout torchlight :$content>
+<x-layout :$content>
     <x-slot:title>
         Installation
     </x-slot:title>

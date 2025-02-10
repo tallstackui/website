@@ -1,4 +1,4 @@
-<x-layout :$content torchlight>
+<x-layout :$content>
     <x-slot:title>
         The Summer Release 🏖
     </x-slot:title>
