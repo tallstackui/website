@@ -11,7 +11,7 @@
         </button>
     </div>
     <div class="relative flex basis-0 items-center justify-end gap-4 md:flex-grow">
-        <div id="docsearch" class="hidden"></div>
+        <div id="docsearch" style="display: none !important;"></div>
         <x-icon x-on:click="document.querySelector('#docsearch').firstChild.click()" name="magnifying-glass" class="block h-6 w-6 cursor-pointer text-gray-500" />
         <x-icon x-on:click="darkTheme = false" name="sun" class="h-6 w-6 cursor-pointer text-yellow-500" x-show="darkTheme" />
         <x-icon x-on:click="darkTheme = true" name="moon" class="h-6 w-6 cursor-pointer text-blue-500" x-show="!darkTheme" />

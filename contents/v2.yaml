@@ -309,10 +309,11 @@ ui:
     - Color Scheme
   icon:
     - Concept
-    - Setup Icons
     - Basic Usage
-    - Variations
     - Left & Right Slots
+    - Setup Custom Icons
+    - Variations
+    - Internal Icon Guide
   modal:
     - Basic Usage
     - Title Slot

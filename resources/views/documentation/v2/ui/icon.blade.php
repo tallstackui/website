@@ -13,7 +13,31 @@
         custom icons maintained by TallStackUI in favor of using custom icons through the community repositories of the <a href="https://blade-ui-kit.com/" class="underline" target="_blank">Blade UI Kit project</a></b>,
         which supports more than 100K icons in total, divided between repositories.
     </x-section>
-    <x-section title="Setup Icons" disable-copy>
+    <x-section title="Basic Usage">
+        <x-preview language="blade" :contents="$basic">
+            <div class="inline-flex space-x-2">
+                <x-icon name="users" class="h-5 w-5"/>
+                <x-icon name="clipboard" class="h-5 w-5"/>
+            </div>
+        </x-preview>
+    </x-section>
+    <x-section title="Left & Right Slots">
+        <x-preview language="blade" :contents="$leftRight">
+            <div class="inline-flex space-x-2">
+                <x-icon name="users" class="h-5 w-5">
+                    <x-slot:left>
+                        Users
+                    </x-slot:left>
+                </x-icon>
+                <x-icon name="cog" class="h-5 w-5">
+                    <x-slot:right>
+                        Settings
+                    </x-slot:right>
+                </x-icon>
+            </div>
+        </x-preview>
+    </x-section>
+    <x-section title="Setup Custom Icons" disable-copy>
         <div class="space-y-4">
             <p>
                 By default, TallStackUI natively supports <x-block>heroicons</x-block>. This way, you can use any heroicons without having to
@@ -39,31 +63,7 @@
             <x-code language="blade" :contents="$owenvoke" />
         </div>
     </x-section>
-    <x-section title="Basic Usage">
-        <x-preview language="blade" :contents="$basic">
-            <div class="inline-flex space-x-2">
-                <x-icon name="users" class="h-5 w-5"/>
-                <x-icon name="clipboard" class="h-5 w-5"/>
-            </div>
-        </x-preview>
-    </x-section>
-    <x-section title="Left & Right Slots">
-        <x-preview language="blade" :contents="$leftRight">
-            <div class="inline-flex space-x-2">
-                <x-icon name="users" class="h-5 w-5">
-                    <x-slot:left>
-                        Users
-                    </x-slot:left>
-                </x-icon>
-                <x-icon name="cog" class="h-5 w-5">
-                    <x-slot:right>
-                        Settings
-                    </x-slot:right>
-                </x-icon>
-            </div>
-        </x-preview>
-    </x-section>
-    <x-section title="Variations">
+    <x-section title="Variations" disable-copy>
         <div class="space-y-4">
             <p>
                 Icon variations are applied depending on the format you use the icons in. For example,
@@ -73,7 +73,7 @@
             <x-code language="blade" :contents="$variations" disable-copy />
         </div>
     </x-section>
-    <x-section title="Interal Icon Guide">
+    <x-section title="Internal Icon Guide" disable-copy>
         <div class="space-y-4">
             <p>
                 Since internally several icons are used in many components, you are free to customize these internal
