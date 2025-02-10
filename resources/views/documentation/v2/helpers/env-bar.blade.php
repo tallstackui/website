@@ -46,7 +46,7 @@
             There are several useful settings available through the <x-block>config/envbar.php</x-block>
             configuration file, however most of them can be set through environment variables. Here is
             the list of all available environment variables:
-            <ul class="space-y-2 list-decimal list-inside">
+            <ul class="list-decimal list-inside">
                 <li><x-block>ENVBAR_ENABLED</x-block>: Enable/disable the EnvBar.</li>
                 <li><x-block>ENVBAR_DISABLE_ON_TESTS</x-block>: Enable/disable the EnvBar on tests.</li>
                 <li><x-block>ENVBAR_SIZE</x-block>: Set the size of the EnvBar: Allowed: xs, sm, md, lg, xl</li>
@@ -79,7 +79,7 @@
                 this documentation in its entirety before using it in production. Therefore, to activate EnvBar in production
                 you must:
             </p>
-            <ul class="space-y-2 list-decimal list-inside">
+            <ul class="list-decimal list-inside">
                 <li>Enable the <x-block>production</x-block> environment in the configuration file.</li>
                 <li class="font-bold">Optionally, create a Laravel Gate to control which users will see the EnvBar.</li>
             </ul>
