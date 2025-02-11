@@ -124,7 +124,7 @@
                 <h2 class="text-lg tracking-tight text-pink-600 font-medium">5. Republish the configuration file:</h2>
                 <p>
                     The TallStackUI configuration file - <x-block>config/tallstackui.php</x-block>, will contain changes and additions to content in this new version, 2.x.
-                    Be sure to compare your changes with the new file and synchronize accordingly so that your file has the necessary modifications and additions, such as the addition of new components.
+                    <b>Be sure to compare your changes with the new file and synchronize accordingly so that your file has the necessary modifications and additions</b>, such as the addition of new components.
                 </p>
             </div>
             <div>
