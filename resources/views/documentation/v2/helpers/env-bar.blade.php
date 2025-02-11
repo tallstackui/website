@@ -81,6 +81,8 @@
             </p>
             <ul class="list-decimal list-inside">
                 <li>Enable the <x-block>production</x-block> environment in the configuration file.</li>
+                <li>Set the <x-block>ENVBAR_FOR_AUTHENTICATED_USERS_ENABLED</x-block> environment variable as <x-block>true</x-block>.</li>
+                <li>Optionally, set <x-block>ENVBAR_FOR_AUTHENTICATED_USERS_GUARD</x-block> auth guard. Default is <x-block>web</x-block>.</li>
                 <li class="font-bold">Optionally, create a Laravel Gate to control which users will see the EnvBar.</li>
             </ul>
             <p>
@@ -98,7 +100,7 @@
             </p>
             <x-code :contents="$colors" disable-copy />
             <p>
-                All colors are based on the TailwindCSS color scheme. We strongly suggest to use <x-block>production</x-block> as <x-block>red</x-block> if you will activate it.
+                All colors are based on the TailwindCSS color scheme, and <b>we strongly suggest to use <x-block>production</x-block> as <x-block>red</x-block> if you will activate it.</b>
             </p>
         </div>
     </x-section>
@@ -136,14 +138,21 @@
                 through the configuration file. In addition, links can have a label associated with a link or just links,
                 where the label will be the link itself.
             </p>
-            <p>Only links:</p>
-            <x-code language="env" :contents="$links" />
-            <p>Label and link:</p>
-            <x-code language="env" :contents="$labels" />
+            <ul class="list-inside list-decimal">
+                <li>
+                    Only link:
+                    <x-code language="env" :contents="$links" />
+                </li>
+                <li>
+                    Label and link:
+                    <x-code language="env" :contents="$labels" />
+                </li>
+            </ul>
         </div>
     </x-section>
     <x-section title="Dedicated Repository">
-        <a href="https://github.com/tallstackui/envbar" class="underline" target="_blank">EnvBar has its own dedicated repository.</a> For this reason, issues, pull requests, and releases
-        should be submitted to this repository instead of the official TallStackUI repository.
+        <a href="https://github.com/tallstackui/envbar" class="underline" target="_blank">EnvBar has its own dedicated repository.</a> For this
+        reason, issues, pull requests should be submitted to this repository instead of the official TallStackUI repository. We don't have releases on there,
+        only tags.
     </x-section>
 </x-layout>

@@ -16,9 +16,9 @@
                 from the entire user community, <b>you can use form components out of Livewire components.</b>
                 Check below the list of all components that can be used out of Livewire components, and also those that cannot.
             </p>
-            <div class="mt-2 space-y-4">
+            <div class="mt-2 space-y-2">
                 <p class="text-md font-medium">List of components that CAN be used out of Livewire component ✅</p>
-                <ul class="ml-2 list-inside list-decimal marker:font-bold">
+                <ul class="list-inside list-decimal">
                     <li>Checkbox</li>
                     <li>Color</li>
                     <li>Date</li>
@@ -35,7 +35,7 @@
                     <li>Select</li>
                 </ul>
                 <p class="text-md font-medium">List of components that CAN NOT be used out of Livewire component ❌</p>
-                <ul class="ml-2 list-inside list-decimal marker:font-bold">
+                <ul class="list-inside list-decimal">
                     <li>Loading</li>
                     <li>Upload</li>
                     <li>Reactions</li>
