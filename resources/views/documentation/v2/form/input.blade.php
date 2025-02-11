@@ -57,14 +57,16 @@
         </x-preview>
     </x-section>
     <x-section title="Invalidate" description="An option to not show validation error message.">
-        <x-preview language="blade" :contents="$invalidate">
-            <x-input label="Name" invalidate />
-        </x-preview>
-        <x-warning class="mt-4">
-            This option is available for all components that can display form validation errors,
-            basically all form components. Additionally, you can enable the "invalidate" state
-            globally by setting it via the <a href="{{ route('documentation', ['v2', 'configuration']) }}" class="underline">configuration file.</a> This way, all components that can
-            display validation errors will no longer display them.
-        </x-warning>
+        <div class="space-y-4">
+            <x-preview language="blade" :contents="$invalidate">
+                <x-input label="Name" invalidate />
+            </x-preview>
+            <x-warning class="mt-4">
+                This option is available for all components that can display form validation errors,
+                basically all form components. Additionally, you can enable the "invalidate" state
+                globally by setting it via the <a href="{{ route('documentation', ['v2', 'configuration']) }}" class="underline">configuration file.</a> This way, all components that can
+                display validation errors will no longer display them.
+            </x-warning>
+        </div>
     </x-section>
 </x-layout>

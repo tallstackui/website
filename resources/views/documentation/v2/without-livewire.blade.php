@@ -17,7 +17,7 @@
                 Check below the list of all components that can be used out of Livewire components, and also those that cannot.
             </p>
             <div class="mt-2 space-y-4">
-                <p class="text-lg font-medium">Components that CAN be used out of Livewire component ✅</p>
+                <p class="text-md font-medium">List of components that CAN be used out of Livewire component ✅</p>
                 <ul class="ml-2 list-inside list-decimal marker:font-bold">
                     <li>Checkbox</li>
                     <li>Color</li>
@@ -34,7 +34,7 @@
                     <li>Toggle</li>
                     <li>Select</li>
                 </ul>
-                <p class="text-lg font-medium">Components that CAN'T be used out of Livewire component ❌</p>
+                <p class="text-md font-medium">List of components that CAN NOT be used out of Livewire component ❌</p>
                 <ul class="ml-2 list-inside list-decimal marker:font-bold">
                     <li>Loading</li>
                     <li>Upload</li>

@@ -8,8 +8,8 @@
     </x-slot:title>
     <x-section title="Concept" disable-copy>
         In the beginning, TallStackUI only supported Heroicons. Although they are good icons, they have one main problem: there are few, less than 350.
-        As a result, TallStackUI was adopted - still in version 1.x, to support other libraries, and it worked. However, this created a somewhat
-        innocent problem: maintaining more repositories and updating the icons periodically. <b>So from version 2.x onwards we dropped support for
+        As a result, TallStackUI was adopted - still in version 1.x, to support other libraries, and it worked. However, this created a problem:
+        maintaining more repositories and updating the icons periodically. <b>From version 2.x onwards we dropped support for
         custom icons maintained by TallStackUI in favor of using custom icons through the community repositories of the <a href="https://blade-ui-kit.com/" class="underline" target="_blank">Blade UI Kit project</a></b>,
         which supports more than 100K icons in total, divided between repositories.
     </x-section>
@@ -37,11 +37,11 @@
             </div>
         </x-preview>
     </x-section>
-    <x-section title="Setup Custom Icons" disable-copy>
+    <x-section title="Custom Icons" disable-copy>
         <div class="space-y-4">
             <p>
                 By default, TallStackUI natively supports <x-block>heroicons</x-block>. This way, you can use any heroicons without having to
-                install any dependencies. However, if you want to use a different icon kit - through the Blade UI KIt, you can follow these steps:
+                install any dependencies. However, if you want to use a different icon kit - through the Blade UI Kit, you can follow these steps:
             </p>
             <ul class="list-decimal list-inside">
                 <li>

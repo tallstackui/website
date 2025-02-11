@@ -25,34 +25,36 @@
         </x-preview>
     </x-section>
     <x-section title="Available Formats" description="Support for all Day.js formats">
-        <x-preview language="blade" :contents="$formats">
-            <div class="space-y-2">
-                <x-date format="YYYY-MM-DD" :value="$current" />
-                <x-date format="YYYY, MMMM, DD" :value="$current" />
-                <x-date format="MMMM, DD, YYYY" :value="$current" />
-            </div>
-        </x-preview>
-        <x-warning class="mt-4">
-            <ul class="ml-2 list-inside list-decimal text-sm">
-                <li>You can use <a href="https://day.js.org/docs/en/display/format" target="_blank" class="underline">all Day.js formats.</a></li>
-                <li><b>The formats are applicable only visually.</b> The default backend format will always be <b>YYYY-MM-DD</b></li>
-                <li>The default date format sent to the component should be <b>YYYY-MM-DD</b></li>
-            </ul>
-        </x-warning>
-        <p class="mt-2">
-            Regardless of the format of the date, to send the date to the component you
-            must follow the pattern <x-block>YYYY-MM-DD</x-block>. If the date are using a format different
-            than <x-block>YYYY-MM-DD</x-block>, the correct thing to do is to use Carbon's <x-block>createFromFormat</x-block>.
-            Let's take a look at an example considering the Brazilian date format:
-        </p>
-        <x-code :contents="$createFromFormat" />
-        <p>
-            If you are using the component inside Livewire components, you
-            can use the <x-block>mount</x-block> method to convert the date.
-            If you are using the component out of Livewire, you can to the
-            same logic in the controller methods before send the variable
-            to the Blade file.
-        </p>
+        <div class="space-y-4">
+            <x-preview language="blade" :contents="$formats">
+                <div class="space-y-2">
+                    <x-date format="YYYY-MM-DD" :value="$current" />
+                    <x-date format="YYYY, MMMM, DD" :value="$current" />
+                    <x-date format="MMMM, DD, YYYY" :value="$current" />
+                </div>
+            </x-preview>
+            <x-warning class="mt-4">
+                <ul class="ml-2 list-inside list-decimal text-sm">
+                    <li>You can use <a href="https://day.js.org/docs/en/display/format" target="_blank" class="underline">all Day.js formats.</a></li>
+                    <li><b>The formats are applicable only visually.</b> The default backend format will always be <b>YYYY-MM-DD</b></li>
+                    <li>The default date format sent to the component should be <b>YYYY-MM-DD</b></li>
+                </ul>
+            </x-warning>
+            <p class="mt-2">
+                Regardless of the format of the date, to send the date to the component you
+                must follow the pattern <x-block>YYYY-MM-DD</x-block>. If the date are using a format different
+                than <x-block>YYYY-MM-DD</x-block>, the correct thing to do is to use Carbon's <x-block>createFromFormat</x-block>.
+                Let's take a look at an example considering the Brazilian date format:
+            </p>
+            <x-code :contents="$createFromFormat" />
+            <p>
+                If you are using the component inside Livewire components, you
+                can use the <x-block>mount</x-block> method to convert the date.
+                If you are using the component out of Livewire, you can to the
+                same logic in the controller methods before send the variable
+                to the Blade file.
+            </p>
+        </div>
     </x-section>
     <x-section title="Helpers">
         <x-preview language="blade" :contents="$helpers">

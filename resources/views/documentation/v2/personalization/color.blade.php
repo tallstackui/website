@@ -23,7 +23,7 @@
             <p>
                 If you want to customize custom colors like primary, secondary and dark, just follow the normal TailwindCSS color customization concept:
             </p>
-            <x-code language="js" :contents="$file" disable-copy/>
+            <x-code language="js" :contents="$file" disable-copy />
             <p>Remember to rebuild your assets after making any adjustments to TailwindCSS colors:</p>
             <x-code language="shell" :contents="$build"/>
         </div>
@@ -39,7 +39,7 @@
             <p>
                 To create or manipulate the colors, you need to execute the following command to select the component:
             </p>
-            <x-code language="shell" :contents="$command"/>
+            <x-code language="shell" :contents="$command" />
             <p>
                 After selecting the component from the list of available options, a PHP object class will be created in
                 the <x-block>App\View\Components\TallStackUi\Colors</x-block> namespace. At first, don't worry about this namespace, you
@@ -48,9 +48,9 @@
             <p>
                 Let's assume that you have selected the <x-block>Alert</x-block> component, then the object class will be like this:
             </p>
-            <x-code :contents="$colorClass"/>
+            <x-code :contents="$colorClass" disable-copy />
             <p>Here is some important caveats:</p>
-            <ul class="space-y-4 list-decimal list-inside">
+            <ul class="space-y-2 list-decimal list-inside">
                 <li>
                     There is two methods inside the class used in this example, <x-block>backgroundColors</x-block> and <x-block>textColors</x-block>,
                     which means that these methods are responsible for defining the background and text colors of the component, respectively.
@@ -85,11 +85,11 @@
             <p>
                 Given all the above explanations, creating a new and totally personal color is extremely easy:
             </p>
-            <x-code :contents="$createCustomColor" />
+            <x-code :contents="$createCustomColor" disable-copy />
             <p>
                 Now all you need to do is use the new color in the component class:
             </p>
-            <x-code language="blade" :contents="$useCustomColor" />
+            <x-code language="blade" :contents="$useCustomColor" disable-copy />
             <p>
                 Although this example used <x-block>red</x-block>, you can use completely custom colors as you build in TailwindCSS.
             </p>

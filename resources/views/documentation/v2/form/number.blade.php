@@ -55,11 +55,9 @@
             <x-number step="5" />
         </x-preview>
     </x-section>
-    <x-section title="Livewire Bind Concern">
-        <p>
-            Although the number component can be used with <x-block>wire:model.live</x-block> and <x-block>wire:model.blur</x-block>, due to the way Livewire works,
-            we recommend that you use it with <x-block>wire:model</x-block> to avoid value
-            synchronization issues between the component and the Livewire updates.
-        </p>
+    <x-section title="Livewire Bind Concern" disable-copy>
+        Although the number component can be used with <x-block>wire:model.live</x-block> and <x-block>wire:model.blur</x-block>, due to the way Livewire works,
+        we recommend that you use it with <x-block>wire:model</x-block> to avoid value
+        synchronization issues between the component and the Livewire updates.
     </x-section>
 </x-layout>

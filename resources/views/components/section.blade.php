@@ -40,7 +40,7 @@
     @if ($description)
         <p class="text-sm text-slate-500 dark:text-slate-400 mb-4">{{ $description }}</p>
     @endif
-    @if (! str($slot)->contains(['<p', '<code', '<div', '<h1', '<h2', '<img', '<pre', '<ul', '<ol', '<x-code']))
+    @if (! str($slot)->startsWith(['<p', '<code', '<div', '<h1', '<h2', '<img', '<pre', '<ul', '<ol', '<x-code']))
         <p>{!! $slot !!}</p>
     @else
         {!! $slot !!}

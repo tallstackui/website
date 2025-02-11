@@ -211,7 +211,7 @@
     </x-section>
     {{-- Styled API Select --}}
     <x-separator text="Styled API Select" />
-    <x-section title="Concept" anchor="styled-api-concept">
+    <x-section title="Concept" anchor="styled-api-concept" disable-copy>
         The styled select component allows you to search for values through an API.
         In this mode, all the options available above remain available to be used,
         the difference is that instead of defining the options using the <x-block>options</x-block>
@@ -219,7 +219,6 @@
         with the <x-block>select</x-block> parameter, which is mandatory for this mode.
         <x-warning class="mt-4">
             For identification purposes, a header <b>X-Tallstack-Ui</b> is sent in the request.
-
         </x-warning>
     </x-section>
     <x-section title="Basic Usage" anchor="styled-api-basic-usage" description="Customized styled select component to interact with APIs.">
@@ -229,21 +228,23 @@
         </x-preview>
     </x-section>
     <x-section title="Advanced Usage" anchor="styled-api-advanced-usage">
-        <x-preview language="blade" :contents="$styledApiAdvanced">
-            <x-select.styled :request="[
-                           'url' => route('api.users'),
-                           'method' => 'get',
-                           'params' => [
-                               'library' => 'TallStackUI',
-                           ],
-                       ]" select="label:name|value:id" />
-        </x-preview>
-        <p class="mt-4">
-            The <x-block>params</x-block> are updated when you make changes. This means that if you are using this
-            component within the Livewire components and create a variable to be used in <x-block>params</x-block>, when
-            making any changes to this variable and Livewire hydrate the page, the next time the select
-            is opened to make a new request, <x-block>params</x-block> will be updated in the request. This is useful
-            to allow you to use the <x-block>params</x-block> to interact dynamically with the query of the request.
-        </p>
+        <div class="space-y-4">
+            <x-preview language="blade" :contents="$styledApiAdvanced">
+                <x-select.styled :request="[
+                               'url' => route('api.users'),
+                               'method' => 'get',
+                               'params' => [
+                                   'library' => 'TallStackUI',
+                               ],
+                           ]" select="label:name|value:id" />
+            </x-preview>
+            <p class="mt-4">
+                The <x-block>params</x-block> are updated when you make changes. This means that if you are using this
+                component within the Livewire components and create a variable to be used in <x-block>params</x-block>, when
+                making any changes to this variable and Livewire hydrate the page, the next time the select
+                is opened to make a new request, <x-block>params</x-block> will be updated in the request. This is useful
+                to allow you to use the <x-block>params</x-block> to interact dynamically with the query of the request.
+            </p>
+        </div>
     </x-section>
 </x-layout>

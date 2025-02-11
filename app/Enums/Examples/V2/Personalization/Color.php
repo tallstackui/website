@@ -281,7 +281,7 @@ class Color
             // You can omit all other colors if you don't want to change them. [tl! highlight]
             return [
                 'solid' => [
-                    'foo-bar' => 'bg-red-900 border-red-300', // [tl! add]
+                    'foo-bar' => 'bg-gradient-to-bl from-slate-700 via-violet-600 to-indigo-600', // [tl! add]
                     // 'primary' => null,
                     // 'secondary' => null,
                     // 'slate' => null,
@@ -298,7 +298,7 @@ class Color
         {
             return [
                 'solid' => [
-                    'foo-bar' => 'text-red-900', // [tl! add]
+                    'foo-bar' => 'text-slate-900', // [tl! add]
                     // 'primary' => null,
                     // 'secondary' => null,
                     // 'slate' => null,

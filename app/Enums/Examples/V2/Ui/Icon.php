@@ -19,7 +19,7 @@ class Icon
     public const OWENVOKE = <<<'HTML'
     <x-icon name="fas-cloud" class="w-6 h-6 text-gray-500"/>
 
-    <!-- Obviously this way would also work: -->
+    <!-- This way would also work: -->
     <x-fas-cloud class="w-6 h-6 text-gray-500"/>
     HTML;
 
@@ -29,7 +29,7 @@ class Icon
     HTML;
 
     public const VARIATIONS = <<<'HTML'
-    <!-- Default, Heroicons -->
+    <!-- Default, Heroicons: outline -->
     <x-icon name="users" outline />
 
     <!-- FontAwesome, via owenvoke/blade-fontawesome -->

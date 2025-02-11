@@ -24,9 +24,7 @@
         </div>
     </x-section>
     <x-section title="Missing Content" disable-copy>
-        <p>
-            Didn't find the translation file for your language?
-            <a href="https://github.com/tallstackui/tallstackui" class="underline" target="_blank">Collaborate sending us a pull request adding your language!</a>
-        </p>
+        Didn't find the translation file for your language?
+        <a href="https://github.com/tallstackui/tallstackui" class="underline" target="_blank">Collaborate sending us a pull request adding your language!</a>
     </x-section>
 </x-layout>

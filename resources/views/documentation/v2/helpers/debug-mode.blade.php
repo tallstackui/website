@@ -48,10 +48,12 @@
         </div>
     </x-section>
     <x-section title="Activate Debug Mode" disable-copy>
-        <p>
-            For a quick and easy activation, you can just create a new env variable in your <x-block>.env</x-block> file:
-        </p>
-        <x-code language="env" :contents="$env" disable-copy />
+        <div class="space-y-4">
+            <p>
+                For a quick and easy activation, you can just create a new env variable in your <x-block>.env</x-block> file:
+            </p>
+            <x-code language="env" :contents="$env" disable-copy />
+        </div>
     </x-section>
     <x-section title="Available Configurations" disable-copy>
         <div class="space-y-4">

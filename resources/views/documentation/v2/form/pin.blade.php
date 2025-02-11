@@ -12,7 +12,7 @@
     <x-slot:personalization>
         <livewire:personalization :$personalization component="Form\Pin" />
     </x-slot:personalization>
-    <x-section title="Concept">
+    <x-section title="Concept" disable-copy>
         Many modern applications need to validate and authorize things such
         as user registration or even login, through mechanisms such as 2FA.
         Pin input is an ideal component for situations where you need to
