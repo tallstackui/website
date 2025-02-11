@@ -4,8 +4,6 @@
     $slug = fn ($item) => str($item)->lower()->slug()->value();
 @endphp
 
-@ray($content)
-
 @if (!empty($content))
     <div @class([
             'xl:top-[4.75rem] xl:-mr-6 xl:block xl:h-[calc(100vh-4.75rem)] xl:flex-none soft-scrollbar overflow-y-auto xl:py-16 xl:pr-6',
