@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "48e30e9e8729fa6162420741fe4ba5eb",
+    "content-hash": "65a8a15249af1cfc9b30b8dcc3070d72",
     "packages": [
         {
             "name": "brick/math",
@@ -5749,11 +5749,17 @@
         },
         {
             "name": "tallstackui/tallstackui",
-            "version": "2.x-dev",
+            "version": "2.0@beta",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/tallstackui/tallstackui.git",
+                "reference": "67468a2b86fa946ba710415b7913c1bfb203cd95"
+            },
             "dist": {
-                "type": "path",
-                "url": "/Users/aj/Workspace/tallstackui/tallstackui",
-                "reference": "e2cdc9fc53e89cb139fcb585cd91e6d9d77387e1"
+                "type": "zip",
+                "url": "https://api.github.com/repos/tallstackui/tallstackui/zipball/67468a2b86fa946ba710415b7913c1bfb203cd95",
+                "reference": "67468a2b86fa946ba710415b7913c1bfb203cd95",
+                "shasum": ""
             },
             "require": {
                 "ext-zip": "*",
@@ -5779,77 +5785,23 @@
             "type": "library",
             "extra": {
                 "laravel": {
-                    "providers": [
-                        "TallStackUi\\TallStackUiServiceProvider"
-                    ],
                     "aliases": {
                         "TallStackUi": "TallStackUi\\Facades\\TallStackUi"
-                    }
+                    },
+                    "providers": [
+                        "TallStackUi\\TallStackUiServiceProvider"
+                    ]
                 }
             },
             "autoload": {
-                "psr-4": {
-                    "TallStackUi\\": "src/"
-                },
                 "files": [
                     "src/helpers.php"
-                ]
-            },
-            "autoload-dev": {
+                ],
                 "psr-4": {
-                    "App\\": "vendor/orchestra/testbench-core/laravel/app",
-                    "Tests\\": "tests/"
+                    "TallStackUi\\": "src/"
                 }
             },
-            "scripts": {
-                "test": [
-                    "./vendor/bin/pest"
-                ],
-                "test:ci": [
-                    "CI=true ./vendor/bin/pest"
-                ],
-                "test:feature": [
-                    "vendor/bin/testbench view:clear",
-                    "./vendor/bin/pest --filter=Feature --parallel"
-                ],
-                "test:browser": [
-                    "./vendor/bin/pest --filter=Browser"
-                ],
-                "test:browser:ci": [
-                    "CI=true ./vendor/bin/pest --filter=Browser"
-                ],
-                "bench": [
-                    "vendor/bin/testbench"
-                ],
-                "type": [
-                    "./vendor/bin/pest --type-coverage"
-                ],
-                "format": [
-                    "./vendor/bin/pint",
-                    "npm run lint:fix"
-                ],
-                "rector": [
-                    "php ./vendor/bin/rector process --dry-run --config=rector.php"
-                ],
-                "analyse": [
-                    "./vendor/bin/phpstan analyse --memory-limit=2G"
-                ],
-                "ci": [
-                    "Composer\\Config::disableProcessTimeout",
-                    "./vendor/bin/pint --test",
-                    "./vendor/bin/phpstan analyse --memory-limit=2G",
-                    "php ./vendor/bin/rector process --dry-run --config=rector.php",
-                    "./vendor/bin/testbench view:clear",
-                    "./vendor/bin/pest --filter=Feature --parallel --stop-on-failure",
-                    "./vendor/bin/testbench view:clear",
-                    "CI=true ./vendor/bin/pest --filter=Browser"
-                ],
-                "ci:analyse": [
-                    "./vendor/bin/pint --test",
-                    "./vendor/bin/phpstan analyse --memory-limit=2G",
-                    "php ./vendor/bin/rector process --dry-run --config=rector.php"
-                ]
-            },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -5860,9 +5812,17 @@
                 }
             ],
             "description": "TallStackUI is a powerful suite of Blade components that elevate your workflow of Livewire applications.",
-            "transport-options": {
-                "relative": false
-            }
+            "support": {
+                "issues": "https://github.com/tallstackui/tallstackui/issues",
+                "source": "https://github.com/tallstackui/tallstackui/tree/2.0@beta"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/devajmeireles",
+                    "type": "github"
+                }
+            ],
+            "time": "2025-02-11T01:29:52+00:00"
         },
         {
             "name": "tijsverkoyen/css-to-inline-styles",
@@ -10260,7 +10220,7 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "tallstackui/tallstackui": 20
+        "tallstackui/tallstackui": 10
     },
     "prefer-stable": true,
     "prefer-lowest": false,

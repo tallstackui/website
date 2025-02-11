@@ -12,7 +12,7 @@
         "livewire/livewire": "^3.0",
         "livewire/volt": "^1.0",
         "symfony/yaml": "^7.2",
-        "tallstackui/tallstackui": "v2.x-dev",
+        "tallstackui/tallstackui": "^2.0@beta",
         "torchlight/torchlight-laravel": "^0.6"
     },
     "require-dev": {
@@ -69,12 +69,6 @@
             "dont-discover": []
         }
     },
-    "repositories": [
-        {
-            "type": "path",
-            "url": "/Users/aj/Workspace/tallstackui/tallstackui"
-        }
-    ],
     "config": {
         "optimize-autoloader": true,
         "preferred-install": "dist",
