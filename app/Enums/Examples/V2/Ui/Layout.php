@@ -11,12 +11,12 @@ class Layout
             <x-slot:header>
                 <x-layout.header>
                     <x-slot:right>
-                        <x-ts-dropdown text="Hello, {{ auth()->user()->name }}!">
+                        <x-dropdown text="Hello, {{ auth()->user()->name }}!">
                             <form method="POST" action="{{ route('logout') }}">
                                 @csrf
-                                <x-ts-dropdown.items text="Logout" onclick="event.preventDefault(); this.closest('form').submit();" />
+                                <x-dropdown.items text="Logout" onclick="event.preventDefault(); this.closest('form').submit();" />
                             </form>
-                        </x-ts-dropdown>
+                        </x-dropdown>
                     </x-slot:right>
                 </x-layout.header>
             </x-slot:header>
