@@ -12,6 +12,10 @@ class Upload
     <x-upload label="Screenshot" hint="We need to analyze your screenshot" tip="Drag and drop your screenshot here" />
     HTML;
 
+    public const CLOSE_AFTER_UPLOAD = <<<'HTML'
+    <x-upload close-after-upload />
+    HTML;
+
     public const DELETE = <<<'HTML'
     <!-- The Livewire component should have the "deleteUpload" method -->
     
@@ -131,6 +135,16 @@ class Upload
             </x-button>
         </x-slot:footer>
     </x-upload>
+    HTML;
+
+    public const BEFORE = <<<'HTML'
+    <script>
+        window.TallStackUi = window.TallStackUi || {};
+    
+        window.TallStackUi.upload = function (files) {
+            return false;
+        };
+    </script>
     HTML;
 
     public const FOOTER_SLOT_WHEN_UPLOADED = <<<'HTML'

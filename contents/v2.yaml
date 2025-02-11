@@ -39,6 +39,7 @@ form:
     - Caps Lock Indicator
     - Format Validator
     - Password Generator
+    - Generator Algorithm
     - Events
   color:
     - Basic Usage
@@ -111,10 +112,12 @@ form:
       contents:
         - Basic Usage
         - Label & Hint & Tip
+        - Close After Upload
         - Delete
         - Multiple
         - Restricting File Types
         - Footer Slot
+        - Validate Before Upload
         - Events
     Static:
       contents:

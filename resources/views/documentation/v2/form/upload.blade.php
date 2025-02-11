@@ -31,36 +31,42 @@
             <livewire:documentation.form.upload.upload :model="2" />
         </x-preview>
     </x-section>
-    <x-section title="Delete" anchor="upload-delete">
-        <x-preview language="blade" :contents="$delete">
-            <livewire:documentation.form.upload.upload :model="3" />
+    <x-section title="Close After Upload" description="An option to optionally close the float after upload the file" anchor="upload-close-after-upload">
+        <x-preview language="blade" :contents="$closeAfterUpload">
+            <livewire:documentation.form.upload.upload :model="8" />
         </x-preview>
-        <p class="mt-4">
-            You can use this algorithm to be the base of the method of deleting temporary files.
-        </p>
-        <div class="mt-4">
+    </x-section>
+    <x-section title="Delete" anchor="upload-delete">
+        <div class="space-y-4">
+            <x-preview language="blade" :contents="$delete">
+                <livewire:documentation.form.upload.upload :model="3" />
+            </x-preview>
+            <p>
+                You can use this algorithm to be the base of the method of deleting temporary files.
+            </p>
             <x-code :contents="$deleteMethod" disable-copy />
         </div>
     </x-section>
     <x-section title="Multiple" anchor="upload-multiple">
-        <x-preview language="blade" :contents="$multiple">
-            <livewire:documentation.form.upload.upload :model="4" />
-        </x-preview>
-        <p class="mt-4">
-            If you have ever uploaded multiple files, you may have already encountered this issue: after selecting some files, if new files are selected they replace the selected ones with the new selected files, instead of merging them. To solve this problem and allow your user to select multiple files, in batches, you can use an algorithm like this:
-        </p>
-        <div class="mt-4">
+        <div class="space-y-4">
+            <x-preview language="blade" :contents="$multiple">
+                <livewire:documentation.form.upload.upload :model="4" />
+            </x-preview>
+            <p>
+                If you have ever uploaded multiple files, you may have already encountered this issue: after
+                selecting some files, if new files are selected they replace the selected ones with the new
+                selected files, instead of merging them. To solve this problem and allow your user to select
+                multiple files, in batches, you can use an algorithm like this:
+            </p>
             <x-code :contents="$multipleBatches" disable-copy />
-        </div>
-        <p class="mt-4">
-            The only thing to pay attention to with this approach is that <b>real-time validations
-            may not work correctly to display validation errors linked to the correct files</b>,
-            so if you want to use this strategy we suggest that you use a single validation
-            with properties bind with <x-block>wire:model</x-block>. Also, remember to update
-            the methods with the name of the property you are using to upload files,
-            <a href="https://livewire.laravel.com/docs/lifecycle-hooks" target="_blank" class="underline">following Livewire lifecycle hooks convention:</a>
-        </p>
-        <div class="mt-4">
+            <p>
+                The only thing to pay attention to with this approach is that <b>real-time validations
+                may not work correctly to display validation errors linked to the correct files</b>,
+                so if you want to use this strategy we suggest that you use a single validation
+                with properties bind with <x-block>wire:model</x-block>. Also, remember to update
+                the methods with the name of the property you are using to upload files,
+                <a href="https://livewire.laravel.com/docs/lifecycle-hooks" target="_blank" class="underline">following Livewire lifecycle hooks convention:</a>
+            </p>
             <x-code :contents="$multipleBatchesOtherProperties" disable-copy />
         </div>
     </x-section>
@@ -70,18 +76,29 @@
         </x-preview>
     </x-section>
     <x-section title="Footer Slot" anchor="upload-footer-slot">
-        <x-preview language="blade" :contents="$footerSlot">
-            <livewire:documentation.form.upload.upload :model="6" />
-        </x-preview>
-        <p class="mt-4">
-            You can use the <x-block>when-uploaded</x-block> parameter directly in the slot
-            to <b>only render the slot as a file has been uploaded:</b>
-        </p>
-        <div class="mt-4">
+        <div class="space-y-4">
+            <x-preview language="blade" :contents="$footerSlot">
+                <livewire:documentation.form.upload.upload :model="6" />
+            </x-preview>
+            <p>
+                You can use the <x-block>when-uploaded</x-block> parameter directly in the slot
+                to <b>only render the slot as a file has been uploaded:</b>
+            </p>
             <x-code language="blade" :contents="$footerSlotWhenUploaded" disable-copy />
         </div>
     </x-section>
-    <x-section title="Events" anchor="upload-events">
+    <x-section title="Validate Before Upload" anchor="upload-validate-before-upload">
+        <div class="space-y-4">
+            <p>
+                You can perform validations on selected files before they are actually uploaded to the server.
+            </p>
+            <x-code language="blade" :contents="$before" disable-copy />
+            <p>
+                In this case, <x-block>files</x-block> will be an array of the files. You should return <x-block>false</x-block> to prevent the upload.
+            </p>
+        </div>
+    </x-section>
+    <x-section title="Events">
         <x-preview language="blade" :contents="$events">
             <livewire:documentation.form.upload.upload :model="7" />
         </x-preview>
@@ -94,18 +111,24 @@
         allows people to view files, including preview images, and can choose to delete them.
     </x-section>
     <x-section title="Prepare the Usage" anchor="static-prepare-the-usage">
-        <p>
-            1. Use the Livewire component <x-block>mount</x-block> method to prepare and store
-            the files in a property that will be bind in the component Blade file:
-        </p>
-        <x-code :contents="$prepareStaticUsage" disable-copy />
-        <p>2. Prepare the Blade file of the component:</p>
-        <x-code language="blade" :contents="$bladeComponentForStaticUsage" disable-copy />
-        <p>
-            3. <u>If you intend to offer the option to delete files,</u> then the approach to deleting
-            files will be a little different from the used when file is uploading, for example:
-        </p>
-        <x-code :contents="$deletingFileInStaticUsage" />
+        <div class="space-y-4">
+            <ul class="list-inside list-decimal">
+                <li>
+                    Use the Livewire component <x-block>mount</x-block> method to prepare and store
+                    the files in a property that will be bind in the component Blade file:
+                    <x-code :contents="$prepareStaticUsage" disable-copy />
+                </li>
+                <li>
+                    Prepare the Blade file of the component:
+                    <x-code language="blade" :contents="$bladeComponentForStaticUsage" disable-copy />
+                </li>
+                <li>
+                    <u>If you intend to offer the option to delete files,</u> then the approach to deleting
+                    files will be a little different from the used when file is uploading, for example:
+                    <x-code :contents="$deletingFileInStaticUsage" />
+                </li>
+            </ul>
+        </div>
     </x-section>
     <x-section title="Demonstration" anchor="static-demonstration" disable-copy>
         <x-preview>

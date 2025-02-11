@@ -58,6 +58,24 @@
             </ul>
         </x-warning>
     </x-section>
+    <x-section title="Generator Algorithm" disable-copy>
+        <div class="space-y-4">
+            <p>
+                The password generation algorithm was created with advanced techniques for generating unique passwords.
+                The algorithm is good and functional, but if for some reason you want to change it, you can define
+                your own password generation algorithm:
+            </p>
+            <p>
+                You can copy this base code into your application layout and make any necessary changes:
+            </p>
+            <x-code language="blade" :contents="$algorithm" />
+            <p>
+                In the code above, the variables <x-block>mixed</x-block>, <x-block>numbers</x-block>, and <x-block>symbols</x-block>
+                are boolean variables that will have their true values when the user passes the rule to the component. The <x-block>min</x-block>
+                is the minimum length selected for the password.
+            </p>
+        </div>
+    </x-section>
     <x-section title="Events">
         <x-preview language="blade" :contents="$events">
             <x-password value="TallStackUI"

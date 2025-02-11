@@ -63,5 +63,7 @@ new class extends Component {
         </x-upload>
     @elseif ($model === 7)
         <x-upload wire:model="photo7" delete x-on:upload="alert('Uploaded!')" x-on:remove="alert('Removed')" />
+    @elseif ($model === 8)
+        <x-upload wire:model="photo7" close-after-upload />
     @endif
 </div>

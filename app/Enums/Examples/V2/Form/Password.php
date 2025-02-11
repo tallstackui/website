@@ -39,6 +39,16 @@ class Password
     <x-password generator :rules="['min:8', 'symbols', 'numbers', 'mixed']" />
     HTML;
 
+    public const ALGORITHM = <<<'HTML'
+    <script>
+        window.TallStackUi = window.TallStackUi || {};
+    
+        window.TallStackUi.passwordGenerator = function (min, mixed, numbers, symbols) {
+            return 'logic-goes-here';
+        };
+    </script> 
+    HTML;
+
     public const EVENTS = <<<'HTML'
     <x-password value="TallStackUI"
                 generator
