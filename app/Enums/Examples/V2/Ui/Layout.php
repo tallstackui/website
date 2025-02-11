@@ -122,7 +122,7 @@ class Layout
             </div>
         </x-slot:brand>
 
-        <!-- side bar items goes here... -->
+        <!-- side-bar items goes here... -->
     </x-side-bar>
     HTML;
 

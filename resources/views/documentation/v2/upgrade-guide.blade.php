@@ -91,14 +91,14 @@
         </p>
         <div class="pl-4 space-y-4">
             <div>
-                <h2 class="text-lg tracking-tight text-pink-600 font-medium">1. Check Soft Personalization Keys:</h2>
+                <h2 class="text-lg tracking-tight text-pink-600 font-medium">1. Check soft personalization keys:</h2>
                 <p>
                     Before starting the update process, check if the names of the Soft Personalization keys remain the same. I've renamed some of them
                     for better internal organization regarding the naming logic. <b>If you do not use Soft Personalization, then just skip this step!</b>
                 </p>
             </div>
             <div>
-                <h2 class="text-lg tracking-tight text-pink-600 font-medium">2. Redo Deep Personalization:</h2>
+                <h2 class="text-lg tracking-tight text-pink-600 font-medium">2. Redo deep personalization:</h2>
                 <p>
                     While I know this is a lot of work, if you have published TallStackUI Blade files or extended component classes to change specific behaviors -
                     such as the 1.x color scheme customization, we recommend that you back up your files, republish the new ones, and adjust the new files with your
@@ -107,21 +107,28 @@
                 </p>
             </div>
             <div>
-                <h2 class="text-lg tracking-tight text-pink-600 font-medium">3. Save Any Soft Personalization Scoped:</h2>
+                <h2 class="text-lg tracking-tight text-pink-600 font-medium">3. Save soft personalization scoped:</h2>
                 <p>
                     The concept of Scoped Soft Personalization has changed in version 2.x, and the change is for the better! So save all your customizations to
                     apply them using the new concept. I explain everything about this on the Soft Personalization page. <b>If you do not use Soft Personalization, then just skip this step!</b>
                 </p>
             </div>
             <div>
-                <h2 class="text-lg tracking-tight text-pink-600 font-medium">4. Component and Their Attributes:</h2>
+                <h2 class="text-lg tracking-tight text-pink-600 font-medium">4. Component attributes:</h2>
                 <p>
                     As for the components and their attributes, there is no change, they are the same. In this regard, I hope you will not have any problems.
                     That is why if you use TallStackUI "in a basic way", then the upgrade process becomes extremely easy, as in my personal projects.
                 </p>
             </div>
             <div>
-                <h2 class="text-lg tracking-tight text-pink-600 font-medium">5. Update the Composer:</h2>
+                <h2 class="text-lg tracking-tight text-pink-600 font-medium">5. Republish the configuration file:</h2>
+                <p>
+                    The TallStackUI configuration file - <x-block>config/tallstackui.php</x-block>, will contain changes and additions to content in this new version, 2.x.
+                    Be sure to compare your changes with the new file and synchronize accordingly so that your file has the necessary modifications and additions, such as the addition of new components.
+                </p>
+            </div>
+            <div>
+                <h2 class="text-lg tracking-tight text-pink-600 font-medium">6. Update the Composer:</h2>
                 <p>
                     Finally, it's time to update your application to the beta version 2.x. Edit your <x-block>composer.json</x-block> file:
                 </p>
