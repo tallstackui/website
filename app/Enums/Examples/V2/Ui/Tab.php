@@ -24,6 +24,35 @@ class Tab
     </x-tab>
     HTML;
 
+    public const MOBILE = <<<'HTML'
+    <x-tab selected="Tab 1" scroll-on-mobile>
+        <x-tab.items tab="Tab 1">
+            Tab 1
+        </x-tab.items>
+        <x-tab.items tab="Tab 2">
+            Tab 2
+        </x-tab.items>
+        <x-tab.items tab="Tab 3">
+            Tab 3
+        </x-tab.items>
+        <x-tab.items tab="Tab 4">
+            Tab 4
+        </x-tab.items>
+        <x-tab.items tab="Tab 5">
+            Tab 5
+        </x-tab.items>
+        <x-tab.items tab="Tab 6">
+            Tab 6
+        </x-tab.items>
+        <x-tab.items tab="Tab 7">
+            Tab 7
+        </x-tab.items>
+        <x-tab.items tab="Tab 8">
+            Tab 8
+        </x-tab.items>
+    </x-tab>
+    HTML;
+
     public const SLOTS = <<<'HTML'
     <x-tab selected="Invoices">
         <x-tab.items tab="Invoices">

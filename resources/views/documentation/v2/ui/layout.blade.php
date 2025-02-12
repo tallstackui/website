@@ -156,12 +156,13 @@
             <x-code language="blade" :contents="$styles" disable-copy />
         </div>
     </x-section>
+    <x-section title="Disable Layout Components" disable-copy>
+        If for some reason you do not want to use the layout components - the main component and its child components, you can
+        set the environment variable <x-block>TALLSTACKUI_AVOID_LAYOUT_REGISTRATION</x-block> to <x-block>true</x-block> to achieve this
+        behavior without having to publish the configuration file and comment out the components - which would also be a valid measure, but less practical.
+    </x-section>
     <x-section title="Personalization" disable-copy>
-        <div class="space-y-4">
-            <p>
-                All the components mentioned above are available to be fully customized through one
-                of the TallStackUI personalization methods: <a href="{{ route('documentation', ['v2', 'personalization', 'concept']) }}" class="underline">soft personalization or deep personalization.</a>
-            </p>
-        </div>
+        All the components mentioned above are available to be fully customized through one of the TallStackUI personalization methods:
+        <a href="{{ route('documentation', ['v2', 'personalization', 'concept']) }}" class="underline">soft personalization or deep personalization.</a>
     </x-section>
 </x-layout>

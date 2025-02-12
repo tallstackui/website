@@ -342,6 +342,7 @@ ui:
     - Side Bar
     - Side Bar Item
     - Side Bar Separator
+    - Disable Layout Components
     - Personalization
   link:
     - Basic Usage
@@ -439,6 +440,7 @@ ui:
     - Event
   tab:
     - Basic Usage
+    - Scroll on Mobile
     - Slots
     - Events
     - Wireable
