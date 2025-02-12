@@ -1,8 +1,9 @@
 installation:
-  - Meet TallStackUI
-  - History & Motivation
   - Requirements
   - Installation
+  - Component Prefix
+  - AlpineJS Requirement
+  - Livewire SPA Mode
 component-prefix:
   - Configuration File
   - Environment Variable
