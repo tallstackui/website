@@ -10,7 +10,7 @@ document.addEventListener('alpine:init', () => {
 /* algolia */
 docsearch({
     appId: 'I2TEBW9Z1H',
-    apiKey: '378dd543d0d51d43ef1f493c55eb5341',
+    apiKey: '7fa6fdbd890560e79484bd1f4f8e6f40',
     indexName: 'tallstackui',
     container: '#docsearch',
     insights: true,
