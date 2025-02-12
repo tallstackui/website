@@ -4,13 +4,13 @@
 
 <x-layout :$content>
     <x-slot:title>
-        Tabs
+        Tab
     </x-slot:title>
     <x-slot:description>
-        Tabs component.
+        Tab component.
     </x-slot:description>
     <x-slot:personalization>
-        <livewire:personalization :$personalization component="Tab" />
+        <livewire:personalization :$personalization component="Tab\Tab" title="Tab" />
     </x-slot:personalization>
     <x-section title="Basic Usage">
         <x-preview language="blade" :background="false" :contents="$basic">
