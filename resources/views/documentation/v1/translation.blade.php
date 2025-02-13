@@ -14,7 +14,7 @@
             You are free to customize various texts that are in use in TallStackUI components.
         </p>
         <p class="mt-4">1. Run the following command to publish the translations file:</p>
-        <x-code :contents="$command" shell />
+        <x-code language="shell" :contents="$command" />
         <p>This command will publish the TallStackUI translation files for the root path of your application.</p>
     </x-section>
     <x-section title="Missing Content" disable-copy>

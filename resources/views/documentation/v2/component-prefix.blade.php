@@ -53,7 +53,7 @@
             <p>
                 Even easier, run this command:
             </p>
-            <x-code :contents="$command" language="shell" />
+            <x-code language="shell" :contents="$command" />
             <p>
                 Behind the scenes, TallStackUI will create the environment variable <x-block>TALLSTACKUI_PREFIX</x-block> with the defined prefix for you.
                 Run the following command after setting the prefix: <x-block>php artisan optimize:clear</x-block>

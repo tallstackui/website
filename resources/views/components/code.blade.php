@@ -4,25 +4,11 @@
     'unpadding' => false,
     'disableCopy' => null,
     'personalization' => false,
-    'php' => null,
-    'js' => null,
-    'javascript' => null,
-    'blade' => null,
-    'shell' => null,
-    'json' => null,
 ])
 
 @php
     $contents ??= $slot->toHtml();
     $margin = $personalization ? 'mt-4' : null;
-
-    $language = match (true) {
-        $js,$javascript => 'javascript',
-        $blade => 'blade',
-        $shell => 'shell',
-        $json => 'json',
-        default => 'php',
-    };
 @endphp
 
 <div class="relative">
