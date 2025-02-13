@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}"
       class="h-full antialiased"
-      x-data="tallstackui_darkTheme()"
-      x-bind:class="{ 'dark bg-gray-700': darkTheme, 'bg-white': !darkTheme }" x-cloak>
+      x-data="tallstackui_darkTheme({ default: 'dark' })"
+      x-bind:class="{ 'dark bg-gray-700': darkTheme, 'bg-white': !darkTheme }">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
