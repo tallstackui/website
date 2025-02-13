@@ -1,7 +1,7 @@
 @props([
     'contents' => null,
     'language' => 'php',
-    'unpadding' => false,
+    'unpadding' => null,
     'disableCopy' => null,
     'personalization' => false,
 ])

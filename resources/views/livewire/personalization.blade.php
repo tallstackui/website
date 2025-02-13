@@ -58,7 +58,7 @@ new class extends VoltComponent {
         @if ($personalization)
             <div wire:ignore>
                 <p class="text-base font-medium">Example:</p>
-                <x-code :contents="$personalization" personalization unpadding/>
+                <x-code :contents="$personalization" personalization unpadding />
             </div>
         @endif
         @if ($blocks)
@@ -78,13 +78,11 @@ new class extends VoltComponent {
                 <div class="mt-4 space-y-2">
                     @if ($original)
                         <div>
-                            <x-clipboard :id="uniqid()"
-                                         label="Name"
-                                         :text="$original['block']" />
+                            <x-clipboard :id="uniqid()" label="Name" :text="$original['block']" />
                         </div>
-                        <p class="block text-sm font-semibold text-gray-600 dark:text-dark-400">Original Content:</p>
-                        <div class="text-[#C3E88D] overflow-auto custom-scrollbar rounded-lg bg-[#292D3E] p-4">
-                            {{ $original['class'] }}
+                        <div>
+                            <p class="block text-sm font-semibold text-gray-600 dark:text-dark-400">Original Content:</p>
+                            <x-code language="text" :contents="$original['class']" unpadding />
                         </div>
                     @endif
                 </div>
