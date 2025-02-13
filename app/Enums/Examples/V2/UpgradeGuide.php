@@ -7,7 +7,7 @@ class UpgradeGuide
     public const COMPOSER = <<<'HTML'
     "require": {
         "laravel/framework": "^11.0",
-        "tallstackui/tallstackui": "^2.0@beta", // [tl! focus, highlight]
+        "tallstackui/tallstackui": "^v2.0-beta", // [tl! focus, highlight]
         "livewire/livewire": "^3.0",
 
         // ...

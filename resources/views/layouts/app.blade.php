@@ -51,7 +51,7 @@
                 <main>
                     @if ($title || $section)
                         <div class="block xl:hidden">
-                            <x-on-this-page mobile />
+                            <x-on-this-page :$content mobile />
                         </div>
                         <header class="mb-6 space-y-1">
                             @if ($title)

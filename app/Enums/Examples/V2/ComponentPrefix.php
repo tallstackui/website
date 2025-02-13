@@ -21,9 +21,14 @@ class ComponentPrefix
         |
         | For example: prefixing as 'ts-', the `alert` usage will be: '<x-ts-alert />'
         */
-        'prefix' => 'ts-', // [tl! highlight]
+        'prefix' => env('TALLSTACKUI_PREFIX'), // [tl! remove]
+        'prefix' => 'ts-', // [tl! add]
 
-    // ...
+        // ...
+    HTML;
+
+    public const PUBLISH = <<<'HTML'
+    php artisan vendor:publish --tag=tallstackui.config
     HTML;
 
     public const ENVIRONMENT = <<<'HTML'
@@ -43,10 +48,12 @@ class ComponentPrefix
     <x-modal /> {{-- [tl! remove] --}}
     <x-ts-modal /> {{-- [tl! add] --}}
 
-    <x-slide /> {{-- [tl! remove] --}}
-    <x-ts-slide /> {{-- [tl! add] --}}
+    <!-- Prefixing: "foo" -->
 
-    <x-input /> {{-- [tl! remove] --}}
-    <x-ts-input /> {{-- [tl! add] --}}
+    <x-alert /> {{-- [tl! remove] --}}
+    <x-fooalert /> {{-- [tl! add] --}}
+
+    <x-modal /> {{-- [tl! remove] --}}
+    <x-foomodal /> {{-- [tl! add] --}}
     HTML;
 }

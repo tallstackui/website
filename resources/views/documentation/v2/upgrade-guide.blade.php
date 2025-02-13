@@ -37,7 +37,7 @@
                         <li>- Redesigned internal structure for better long-term maintenance.</li>
                         <li>- Internal documentation in important logic sections.</li>
                         <li>- New internal concepts to improve Blade file structure.</li>
-                        <li class="font-bold">- Increased performance for rendering multiple components by up to 10%</li>
+                        <li class="font-bold">- Increased performance for rendering various components by up to 10%</li>
                     </ul>
                 </div>
                 <div>
@@ -47,7 +47,7 @@
                         <li>- Environment</li>
                         <li>- Layout</li>
                         <li>- Signature</li>
-                        <li class="font-bold">- New Helper: <a href="{{ route('documentation', ['v2', 'helpers', 'env-bar']) }}" class="underline">EnvBar</a></li>
+                        <li>- New Helper: <a href="{{ route('documentation', ['v2', 'helpers', 'env-bar']) }}" class="font-bold underline">EnvBar</a></li>
                     </ul>
                 </div>
                 <div>

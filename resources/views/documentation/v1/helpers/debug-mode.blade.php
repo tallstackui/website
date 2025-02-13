@@ -13,53 +13,61 @@
         Native debug mode utility.
     </x-slot:description>
     <x-section title="Concept" disable-copy>
-        <p>
-            If you use TallStackUI you must suffer from a common problem among all developers,
-            even those who do not use TallStackUI: to know the attributes of a component we
-            need to go to our editor, look for the component, and thus see the attributes that
-            were configured. This is a problem because we waste considerable time having to
-            constantly switch between the browser and the code editor.
-        </p>
-        <p class="mt-4">
-            Looking at the button below...
-        </p>
-        <div class="mt-4 flex justify-center">
-            <x-button text="This is the TallStackUI" color="purple" icon="photo" position="right" using="custom" attributes="of laravel" />
+        <div class="space-y-4">
+            <p>
+                If you use TallStackUI you must suffer from a common problem among all developers,
+                even those who do not use TallStackUI: to know the attributes of a component we
+                need to go to our editor, look for the component, and thus see the attributes that
+                were configured. This is a problem because we waste considerable time having to
+                constantly switch between the browser and the code editor.
+            </p>
+            <p>
+                Looking at the button below...
+            </p>
+            <div class="mt-4 flex justify-center">
+                <x-button text="This is the TallStackUI" color="purple" icon="photo" position="right" using="custom" attributes="of laravel" />
+            </div>
+            <p>... Could you tell me exactly what attributes we are using on this?</p>
+            <p>
+                Debug mode solves this problem by providing a complete overview of the state of all
+                components on the page, regardless of where they are or whether they were called
+                directly or from within other components such as parent and child.
+            </p>
         </div>
-        <p class="mt-4">... Could you tell me exactly what attributes we are using on this?</p>
-        <p class="mt-4">
-            Debug mode solves this problem by providing a complete overview of the state of all
-            components on the page, regardless of where they are or whether they were called
-            directly or from within other components such as parent and child.
-        </p>
     </x-section>
     <x-section title="Example" disable-copy>
-        <p>
-            Now that you understand the concept, see debug mode in action:
-        </p>
-        <livewire:documentation.helpers.debug />
-        <p class="mt-4">
-            <u>Did you notice that there are some little icons next to the button and the
-            icon within the button? Put the mouse over them!</u> This is the debug of the
-            button component and also the component inside it, the icon. Note that all
-            properties, including custom attributes, those that are not component
-            properties, are displayed in a list for you.
-        </p>
+        <div class="space-y-4">
+            <p>
+                Now that you understand the concept, see debug mode in action:
+            </p>
+            <livewire:documentation.helpers.debug />
+            <p>
+                <u>Did you notice that there are some little icons next to the button and the
+                icon within the button? Put the mouse over them!</u> This is the debug of the
+                button component and also the component inside it, the icon. Note that all
+                properties, including custom attributes, those that are not component
+                properties, are displayed in a list for you.
+            </p>
+        </div>
     </x-section>
     <x-section title="Activate Debug Mode" disable-copy>
-        <p>
-            For a quick and easy activation, you can just create a new env variable in your <x-block>.env</x-block> file:
-        </p>
-        <x-code language="env" :contents="$env" disable-copy />
+        <div class="space-y-4">
+            <p>
+                For a quick and easy activation, you can just create a new env variable in your <x-block>.env</x-block> file:
+            </p>
+            <x-code language="env" :contents="$env" disable-copy />
+        </div>>
     </x-section>
     <x-section title="Available Configurations" disable-copy>
-        <p>
-            Debug mode has a settings section in the TallStackUI configuration file.
-            Through this configuration, you can configure several things, such as ignore debug
-            mode for specific components. <a href="{{ route('documentation', ['v1', 'configuration']) }}" wire:navigate class="underline" target="_blank">
-            Click here to know how to publish the configuration file.</a>
-        </p>
-        <x-code :contents="$configuration" disable-copy />
+        <div class="space-y-4">
+            <p>
+                Debug mode has a settings section in the TallStackUI configuration file.
+                Through this configuration, you can configure several things, such as ignore debug
+                mode for specific components. <a href="{{ route('documentation', ['v1', 'configuration']) }}" wire:navigate class="underline" target="_blank">
+                Click here to know how to publish the configuration file.</a>
+            </p>
+            <x-code :contents="$configuration" disable-copy />
+        </div>
     </x-section>
     <x-section title="Cautions" disable-copy>
         <ul class="list-decimal list-inside">

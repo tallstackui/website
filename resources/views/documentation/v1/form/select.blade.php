@@ -152,7 +152,7 @@
     </x-section>
     {{-- Styled API Select --}}
     <x-separator text="Styled API Select" />
-    <x-section title="Concept" anchor="styled-api-concept">
+    <x-section title="Concept" anchor="styled-api-concept" disable-copy>
         The styled select component allows you to search for values through an API.
         In this mode, all the options available above remain available to be used,
         the difference is that instead of defining the options using the <x-block>options</x-block>

@@ -87,7 +87,7 @@
             <x-code language="blade" :contents="$footerSlotWhenUploaded" disable-copy />
         </div>
     </x-section>
-    <x-section title="Validate Before Upload" anchor="upload-validate-before-upload">
+    <x-section title="Validate Before Upload" anchor="upload-validate-before-upload" disable-copy>
         <div class="space-y-4">
             <p>
                 You can perform validations on selected files before they are actually uploaded to the server.

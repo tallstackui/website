@@ -22,8 +22,14 @@
         <div class="space-y-4">
             <p>
                 As you can imagine, TallStackUI has a very complete configuration file, and there you can configure the prefix,
-                however keep in mind that you need to publish the configuration file to perform this process. Just run the command:
-                <x-block>php artisan vendor:publish --tag=tallstackui.config</x-block> and set the prefix in the file created in the <x-block>config/</x-block> folder.
+                however keep in mind that you need to publish the configuration file to perform this process.
+            </p>
+            <p>
+                Run this command to publish the configuration file:
+            </p>
+            <x-code language="shell" :contents="$publish" />
+            <p>
+                The file created in the <x-block>config/tallstackui.php</x-block>. Open the file and set the prefix:
             </p>
             <x-code :contents="$configuration" disable-copy />
             <p>
@@ -34,8 +40,7 @@
     <x-section title="Environment Variable" disable-copy>
         <div class="space-y-4">
             <p>
-                "I don't want to have to publish the configuration file for something so simple!", you might think, right? Well,
-                that's why we provide an environment variable that you can use to set the prefix:
+                To avoid the need to publish the configuration file described above, you can set the prefix via an environment variable, which makes this task extremely easy:
             </p>
             <x-code :contents="$environment" />
             <p>
@@ -58,7 +63,7 @@
     <x-section title="Using Prefix" disable-copy>
         <div class="space-y-4">
             <p>
-                When set a prefix, for example <x-block>ts-</x-block>, then all you need todo is set <x-block>ts-</x-block> <b>BEFORE the component name</b>, for example:
+                When setting a prefix, all you need to do is set your chosen prefix BEFORE the component name, in all TallStackUI components you want to use, for example:
             </p>
             <x-code language="blade" :contents="$examples" disable-copy />
         </div>

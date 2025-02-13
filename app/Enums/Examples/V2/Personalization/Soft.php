@@ -225,7 +225,7 @@ class Soft
                 
             // Or ...
             
-            TallStackUi::personalize('alert', scope: 'circle') // [tl! highlight]
+            TallStackUi::personalize(component: 'alert', scope: 'circle') // [tl! highlight]
                 ->block('wrapper')
                 ->replace('rounded-lg', 'rounded-full');
         }
