@@ -57,7 +57,7 @@
                         <li>- New colors personalization concept.</li>
                         <li>- New icons concept.</li>
                         <li>- <x-block>Card</x-block> Component: support of colors, image and minimize effect.</li>
-                        <li>- <x-block>Dropdown</x-block> Component: support to child dropdown.</li>
+                        <li>- <x-block>Dropdown</x-block> Component: support to nested dropdown.</li>
                         <li>- <x-block>Floating</x-block> Component: ability to personalize floating class per component.</li>
                         <li>- <x-block>Form Color</x-block> Component: support of clearable option.</li>
                         <li>- <x-block>Form Input</x-block> Component: support of clearable option.</li>

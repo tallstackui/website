@@ -83,7 +83,7 @@
             </div>
         </x-preview>
     </x-section>
-    <x-section title="Sub Dropdown" description="An option to allow the usage of multiples dropdowns like levels.">
+    <x-section title="Nested Dropdown" description="An option to allow the usage of multiples dropdowns nested.">
         <x-preview language="blade" :contents="$sub">
             <div class="flex justify-end md:justify-center">
                 <x-dropdown text="Menu">

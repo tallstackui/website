@@ -291,7 +291,7 @@ ui:
     - Icon
     - Static Icon
     - Header Slot
-    - Sub Dropdown
+    - Nested Dropdown
     - Action Slot
   error:
     - Basic Usage
