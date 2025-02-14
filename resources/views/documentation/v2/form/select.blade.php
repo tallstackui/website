@@ -286,7 +286,7 @@
                 <x-select.styled :request="route('api.users')" unfiltered />
             </x-preview>
             <x-warning>
-                This is available in the styled API select.
+                This is only available in the styled API select.
             </x-warning>
             <p>
                 In this example, the query was builded as follows:
