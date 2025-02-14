@@ -99,7 +99,7 @@
             </p>
             <x-code :contents="$createCustomColorUsingNewTailwindColor" disable-copy />
             <p>
-                And then use the new <x-block>malibu</x-block> in the component class:
+                And then use the new <x-block>malibu</x-block>color in the component usage:
             </p>
             <x-code language="blade" :contents="$useNewCustomColor" disable-copy />
             <x-warning>

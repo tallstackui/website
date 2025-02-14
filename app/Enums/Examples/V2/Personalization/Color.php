@@ -320,7 +320,9 @@ class Color
             // ...
 
             colors: {
-                'malibu': {
+                // ...
+
+                'malibu': { // [tl! add:13]
                     DEFAULT: '#6ebcf7',
                     '50': '#f0f7ff',
                     '100': '#e1effd',

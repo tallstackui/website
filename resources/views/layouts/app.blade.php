@@ -38,6 +38,7 @@
       x-bind:class="{ 'bg-dots-white dark bg-slate-900' : darkTheme, 'bg-dots-darker bg-white' : !darkTheme }"
       x-data="{ mobile : false }"
       x-cloak>
+    <div id="docsearch" style="display: none !important;"></div>
     <x-dialog />
     <x-toast />
     <x-top-bar />

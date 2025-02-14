@@ -16,7 +16,7 @@
         various visual information associated with different cores per environment. The EnvBar is different from the <a href="{{ route('documentation', ['v2', 'ui', 'environment']) }}" class="underline">environment component</a>,
         the environment component is very simple compared to the EnvBar. The EnvBar is an official TallStackUI package installed via composer.
     </x-section>
-    <x-section title="Demonstration">
+    <x-section title="Demonstration" disable-copy>
         <div class="space-y-4">
             <img src="{{ url('assets/images/env-bar.png') }}" />
             <p>
@@ -32,7 +32,7 @@
             </ul>
         </div>
     </x-section>
-    <x-section title="Installation">
+    <x-section title="Installation" disable-copy>
         <div class="space-y-4">
             <x-code language="shell" :contents="$installation" />
             <p class="underline">
@@ -40,7 +40,7 @@
             </p>
         </div>
     </x-section>
-    <x-section title="Available Configurations">
+    <x-section title="Available Configurations" disable-copy>
         <div class="space-y-4">
             <x-code language="shell" :contents="$configuration" />
             There are several useful settings available through the <x-block>config/envbar.php</x-block>
@@ -72,7 +72,7 @@
             </ul>
         </div>
     </x-section>
-    <x-section title="Production Environment">
+    <x-section title="Production Environment" disable-copy>
         <div class="space-y-4">
             <p>
                 By default, EnvBar does not work in the production environment. This is because it is important to read
@@ -93,7 +93,7 @@
             <x-code :contents="$gate" disable-copy />
         </div>
     </x-section>
-    <x-section title="Configure Color Scheme">
+    <x-section title="Configure Color Scheme" disable-copy>
         <div class="space-y-4">
             <p>
                 You can customize the color scheme for each environment in the configuration file. The default value will be similar to the following:
@@ -104,7 +104,7 @@
             </p>
         </div>
     </x-section>
-    <x-section title="Ignores">
+    <x-section title="Ignores" disable-copy>
         <div class="space-y-4">
             <p>
                 You can control which pages the EnvBar will be ignored on via the configuration file:
@@ -115,7 +115,7 @@
             </p>
         </div>
     </x-section>
-    <x-section title="Commands">
+    <x-section title="Commands" disable-copy>
         <div class="space-y-4">
             <p>
                 To avoid multiple requests to the git provider, the latest release is cached for <x-block>ENVBAR_*_CACHED_FOR</x-block> day(s).
@@ -130,7 +130,7 @@
             <x-code language="shell" :contents="$show" />
         </div>
     </x-section>
-    <x-section title="Helper Links">
+    <x-section title="Helper Links" disable-copy>
         <div class="space-y-4">
             <p>
                 The EnvBar has the ability to display links in a dropdown to serve as a collection of documents or development
@@ -150,7 +150,7 @@
             </ul>
         </div>
     </x-section>
-    <x-section title="Dedicated Repository">
+    <x-section title="Dedicated Repository" disable-copy>
         <a href="https://github.com/tallstackui/envbar" class="underline" target="_blank">EnvBar has its own dedicated repository.</a> For this
         reason, issues, pull requests should be submitted to this repository instead of the official TallStackUI repository. We don't have releases on there,
         only tags.

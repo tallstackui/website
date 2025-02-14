@@ -34,10 +34,8 @@ $save = function () {
              center
              blur>
         <p class="mb-4">
-            The documentation code examples are displayed without the <a href="{{ route('documentation', ['v2', 'component-prefix']) }}" wire:navigate class="underline">component prefix.</a>
-            In this form, you can set the prefix you use in your projects. All code examples
-            will be displayed using the prefix, which makes it easier for you to copy and paste
-            the code examples.
+            The code examples are displayed without the <a href="{{ route('documentation', ['v2', 'component-prefix']) }}" wire:navigate class="underline">component prefix.</a>
+            You can use this form here to set the prefix you are using in your Laravel project. All code examples will be displayed using the prefix, which makes it easier for you to copy and paste  the code examples.
         </p>
         <form id="prefix" wire:submit="save">
             <x-input label="Prefix"

@@ -35,8 +35,8 @@
                 <x-warning>
                     The TallStackUI script must be loaded <b class="underline">above of the the @verbatim @vite @endverbatim tag.</b>
                 </x-warning>
-            <p class="mt-4">3. Edit the <x-block>tailwind.config.js</x-block> of your application inserting this content:</p>
-            <x-code language="js" :contents="$tailwindcss" disable-copy />
+            <p class="mt-4">3. Edit the <x-block>tailwind.config.js</x-block> of your application by inserting all above marked contents:</p>
+            <x-code language="js" :contents="$tailwindcss" disable-copy unpadding />
             <x-warning>
                 Your TailwindCSS setup must load the <a href="https://tailwindcss.com/docs/plugins#forms" class="underline" target="_blank">form plugin</a>
             </x-warning>

@@ -6,6 +6,7 @@
     'anchor'      => null,
     'description' => null,
     'disableCopy' => null,
+    'dontCopy'    => null,
 ])
 
 @php($anchor ??= str($title)->slug()->lower())
@@ -15,9 +16,12 @@
         <div @class(['flex items-center justify-between', 'mb-2' => $description === null])>
             @if ($title)
             <h2 @class(['text-xl tracking-tight text-pink-600 font-medium cursor-pointer', 'flex items-center gap-2' => $new]) x-on:mouseover="anchor = true" x-on:mouseleave="anchor = false">
-                <a href="#{{ $anchor }}">
+                <a class="flex gap-1" href="#{{ $anchor }}">
                     <span class="text-gray-400 dark:text-gray-400" x-show="anchor">#</span>
                     {{ $title }}
+                    @if (!$dontCopy)
+                        <x-clipboard icon text="{{ url()->current() . '#' . $anchor }}" x-show="anchor" />
+                    @endif
                 </a>
                 @if ($new)
                     <x-badge xs color="pink" light>NEW</x-badge>

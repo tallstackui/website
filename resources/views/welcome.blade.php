@@ -34,11 +34,11 @@
     @livewireStyles
     @vite(['resources/css/app.scss', 'resources/js/app.js'])
 </head>
-<body class="min-h-full flex-col justify-center" x-bind:class="{ 'bg-dots-white dark bg-slate-900' : darkTheme, 'bg-dots-darker bg-white' : !darkTheme }">
+<body class="min-h-full flex-col justify-center" x-bind:class="{ 'bg-dots-white dark bg-slate-900' : darkTheme, 'bg-dots-darker bg-white' : !darkTheme }" x-cloak>
     <x-top-bar />
     <x-toast />
     <x-dialog />
-    <div id="docsearch" class="hidden"></div>
+    <div id="docsearch" style="display: none !important;"></div>
     <div class="flex flex-col">
         <main class="relative mx-auto flex w-full max-w-screen-2xl flex-auto justify-center sm:px-2 lg:px-8 xl:px-12">
             <div class="min-w-0 max-w-2xl flex-auto px-4 py-16 lg:max-w-none lg:pr-0 lg:pl-8 xl:px-16">
@@ -47,9 +47,10 @@
                         <div class="flex lg:flex-1">
                             <x-svg.banner class="h-8 w-10" />
                         </div>
-                        <div class="hidden gap-10 lg:flex lg:flex-1 lg:justify-end">
+                        <div class="hidden gap-4 lg:flex lg:flex-1 lg:justify-end">
                             <x-icon x-on:click="darkTheme = false" name="sun" class="h-6 w-6 cursor-pointer text-yellow-500" x-show="darkTheme" />
                             <x-icon x-on:click="darkTheme = true" name="moon" class="h-6 w-6 cursor-pointer text-blue-500" x-show="!darkTheme" />
+                            <x-github repository />
                         </div>
                     </nav>
                 </header>
