@@ -315,6 +315,8 @@ ui:
     - Basic Usage
     - Left & Right Slots
     - Custom Icons
+    - Avoid Component Conflict
+    - Custom Icon Name Pattern
     - Variations
     - Internal Icon Guide
   modal:

@@ -13,7 +13,7 @@
         custom icons maintained by TallStackUI in favor of using custom icons through the community repositories of the <a href="https://blade-ui-kit.com/" class="underline" target="_blank">Blade UI Kit project</a></b>,
         which supports more than 100K icons in total, divided between repositories.
     </x-section>
-    <x-section title="Basic Usage">
+    <x-section title="Basic Usage" description="An option to allow you to use the default icons, Heroicons.">
         <x-preview language="blade" :contents="$basic">
             <div class="inline-flex space-x-2">
                 <x-icon name="users" class="h-5 w-5"/>
@@ -57,10 +57,34 @@
                     <x-code language="shell" :contents="$clean" />
                 </li>
             </ul>
+        </div>
+    </x-section>
+    <x-section title="Avoid Component Conflict" disable-copy>
+        <div class="space-y-4">
             <p>
-                After that, you can use any icon from the chosen pack:
+                By following the example above and installing the <x-block>owenvoke/blade-fontawesome</x-block> package, Composer will also install the base for any
+                Blade UI Kit icons, which is the <x-block>blade-ui-kit/blade-icons</x-block> package. This package in turn brings with it two Blade components: <x-block>Icon</x-block> and <x-block>Svg</x-block>.
+                This way, when using the icons through the <x-block>icon</x-block> component you will be using the icon via Blade UI Kit, instead of using it via TallStackUI.
+                To resolve this small conflict you can adopt one of these alternatives:
             </p>
-            <x-code language="blade" :contents="$owenvoke" />
+            <ul class="list-decimal list-inside">
+                <li>
+                    <a href="{{ route('documentation', ['v2', 'component-prefix']) }}" class="underline">Set a component prefix name for the TallStackUI components</a>.
+                </li>
+                <li>
+                    Change the default Blade UI Kit icon component name, <a href="https://github.com/blade-ui-kit/blade-icons?tab=readme-ov-file#default-component" class="underline" target="_blank">click here.</a>
+                </li>
+            </ul>
+        </div>
+    </x-section>
+    <x-section title="Custom Icon Name Pattern" disable-copy>
+        <div class="space-y-4">
+            <p>
+                To use the custom icons offered through Blade UI Kit all you have to do is use the icon replacing from <x-block>-</x-block> to <x-block>.</x-block>
+                in the icon name, because internally TallStackUI will do the reverse substitution, from <x-block>.</x-block> to <x-block>-</x-block> .
+                This is way TallStackUI interprets what custom icons are:
+            </p>
+            <x-code language="blade" :contents="$symbol" disable-copy />
         </div>
     </x-section>
     <x-section title="Variations" disable-copy>

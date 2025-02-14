@@ -17,10 +17,24 @@ class Icon
     HTML;
 
     public const OWENVOKE = <<<'HTML'
-    <x-icon name="fas-cloud" class="w-6 h-6 text-gray-500"/>
+    <x-icon name="fas.cloud" class="w-6 h-6 text-gray-500"/>
 
     <!-- This way would also work: -->
     <x-fas-cloud class="w-6 h-6 text-gray-500"/>
+    HTML;
+
+    public const SYMBOL = <<<'HTML'
+    <!-- Assuming you have installed: secondnetwork/blade-tabler-icons -->
+    <x-icon name="tabler.sun" />
+    <x-icon name="tabler.moon" />
+    <x-icon name="tabler.a-b" />
+    <x-icon name="tabler.users" />
+    <x-icon name="tabler.brand-vimeo" />
+
+    <!-- Assuming you have installed: owenvoke/blade-fontawesome -->
+    <x-icon name="far.moon" />
+    <x-icon name="fas.moon" />
+    <x-icon name="fab.facebook" />
     HTML;
 
     public const BASIC = <<<'HTML'
@@ -33,8 +47,8 @@ class Icon
     <x-icon name="users" outline />
 
     <!-- FontAwesome, via owenvoke/blade-fontawesome -->
-    <x-icon name="far-user" /> <!-- far -->
-    <x-icon name="fas-user" /> <!-- fas -->
+    <x-icon name="far.user" /> <!-- far -->
+    <x-icon name="fas.user" /> <!-- fas -->
     HTML;
 
     public const LEFT_RIGHT = <<<'HTML'
@@ -69,7 +83,7 @@ class Icon
             'arrow-trending-down' => null,
             'arrow-up-tray' => null,
             'bars-4' => null, // [tl! remove, focus:1]
-            'bars-4' => 'far-chart-bar', // [tl! add]
+            'bars-4' => 'far.chart-bar', // [tl! add]
             
             // ...
         ],
