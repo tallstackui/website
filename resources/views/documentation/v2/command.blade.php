@@ -12,7 +12,7 @@
     </x-section>
     <x-section title="Find Component" description="Command used to find component usages in all Blade files." disable-copy>
         <div class="space-y-4">
-            <x-code language="shell" :contents="$findComponent"/>
+            <x-code language="shell" :contents="$find"/>
             <p>
                 After running the command, you will need to select the component
                 you want to find usages for, and then the command will list all
@@ -28,17 +28,29 @@
     </x-section>
     <x-section title="Setup Prefix" description="Command used to set up component prefix." disable-copy>
         <div class="space-y-4">
-            <x-code language="shell" :contents="$setupPrefix"/>
+            <x-code language="shell" :contents="$prefix"/>
             <p>
-                This command is used to set up the component prefix. <a href="{{ route('documentation', ['v2', 'component-prefix']) }}" class="underline">You can read more about it by clicking here.</a>
+                This command is used to set up the component prefix. <a href="{{ route('documentation', ['v2', 'component-prefix']) }}" class="underline">Read more about it by clicking here.</a>
             </p>
         </div>
     </x-section>
-    <x-section title="Setup Prefix" description="Command used to set up component prefix." disable-copy>
+    <x-section title="Setup Colors" description="Command used to set up component colors." disable-copy>
         <div class="space-y-4">
-            <x-code language="shell" :contents="$setupColor"/>
+            <x-code language="shell" :contents="$colors"/>
             <p>
-                This command is used to set up or manipulate component colors. <a href="{{ route('documentation', ['v2', 'personalization', 'color']).'#create-or-manipulate-colors' }}" class="underline">You can read more about it by clicking here.</a>
+                This command is used to set up or manipulate component colors. <a href="{{ route('documentation', ['v2', 'personalization', 'color']).'#create-or-manipulate-colors' }}" class="underline">Read more about it by clicking here.</a>
+            </p>
+        </div>
+    </x-section>
+    <x-section title="IDE" description="Command used to generate ide.json file." disable-copy>
+        <div class="space-y-4">
+            <p>
+                The version 2.0 of TallStackUI introduces the <x-block>ide</x-block> command:
+            </p>
+            <x-code language="shell" :contents="$ide"/>
+            <p>
+                This command will map all the components based on the TallStackUI configuration file to create an <x-block>ide.json</x-block> file - in the base path of the Laravel application,
+                which will be used by the <a href="https://laravel-idea.com/" class="underline" target="_blank">Laravel Idea - PhpStorm plugin</a>, to scan this file and provide autocomplete functionality for TallStackUI components.
             </p>
         </div>
     </x-section>

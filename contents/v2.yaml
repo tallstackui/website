@@ -16,6 +16,12 @@ without-livewire:
   - Concept
   - Example
   - Parse Request Value
+command:
+  - Introduction
+  - Find Component
+  - Setup Prefix
+  - Setup Colors
+  - IDE
 contribution:
   - Possibilities
   - TallStackUI Way
