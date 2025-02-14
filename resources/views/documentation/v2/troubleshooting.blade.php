@@ -25,4 +25,20 @@
             <x-code language="blade" :contents="$laravel1035Bug" disable-copy />
         </div>
     </x-section>
+    <x-section title="JS & CSS, Assets Missing" disable-copy>
+        <div class="space-y-4">
+            <p>
+                In the previous version of the TallStackUI (1.0) several devs reported an issue involving JS and CSS assets when deploying their application using TallStackUI
+                to production. While it appeared to be something involving the web server, there was no known reason for the issue, nor was there a correct way
+                to reproduce it. For this reason, in version 2.0 of TallStackUI, an asset fallback feature was introduced, configured via the <x-block>TALLSTACKUI_ASSETS_FALLBACK</x-block>
+                environment variable, which is enabled by default in version 2.0.
+            </p>
+            <p>Behind the scenes, this is the logic related to asset fallback:</p>
+            <ul class="list-decimal list-inside">
+                <li>Using <x-block>tallstackui:script</x-block> - or any TallStackUI Blade directives, prints the assets source - JS or CSS.</li>
+                <li>If the desired asset is not found, TallStackUI will use the found asset, be it JS or CSS.</li>
+            </ul>
+            <p class="font-bold">Do not disable this unless you are sure about what you are doing.</p>
+        </div>
+    </x-section>
 </x-layout>
