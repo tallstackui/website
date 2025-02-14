@@ -172,6 +172,7 @@ form:
         - Image Preview
         - Description
         - Searchable
+        - Lazy Load
         - Grouped
         - Slot After
         - Events
@@ -179,6 +180,7 @@ form:
       contents:
         - Concept
         - Basic Usage
+        - Unfiltered Results
         - Advanced Usage
 ui:
   alert:

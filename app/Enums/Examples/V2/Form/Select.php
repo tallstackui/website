@@ -141,6 +141,41 @@ class Select
     ]" searchable />
     HTML;
 
+    public const STYLED_LAZY = <<<'HTML'
+    <x-select.styled :options="[
+        ['label' => 'PHP', 'value' => 1], 
+        ['label' => 'JavaScript', 'value' => 2],
+        ['label' => 'Python', 'value' => 3],
+        ['label' => 'Java', 'value' => 4],
+        ['label' => 'C#', 'value' => 5],
+        ['label' => 'C++', 'value' => 6],
+        ['label' => 'Ruby', 'value' => 7],
+        ['label' => 'Swift', 'value' => 8],
+        ['label' => 'Kotlin', 'value' => 9],
+        ['label' => 'Go', 'value' => 10],
+        ['label' => 'TypeScript', 'value' => 11],
+        ['label' => 'C', 'value' => 12],
+        ['label' => 'Objective-C', 'value' => 13],
+        ['label' => 'R', 'value' => 14],
+        ['label' => 'Perl', 'value' => 15],
+        ['label' => 'Scala', 'value' => 16],
+        ['label' => 'Haskell', 'value' => 17],
+        ['label' => 'Lua', 'value' => 18],
+        ['label' => 'Rust', 'value' => 19],
+        ['label' => 'Dart', 'value' => 20],
+        ['label' => 'Assembly', 'value' => 21],
+        ['label' => 'SQL', 'value' => 22],
+        ['label' => 'NoSQL', 'value' => 23],
+        ['label' => 'HTML', 'value' => 24],
+        ['label' => 'CSS', 'value' => 25],
+        ['label' => 'Bash', 'value' => 26],
+        ['label' => 'PowerShell', 'value' => 27],
+        ['label' => 'Groovy', 'value' => 28],
+        ['label' => 'Visual Basic', 'value' => 29],
+        ['label' => 'Fortran', 'value' => 30],
+    ]" lazy="10" />
+    HTML;
+
     public const STYLED_GROUPED = <<<'HTML'
     <x-select.styled group :options="[
         [
@@ -190,18 +225,39 @@ class Select
     /* Styled API */
 
     public const STYLED_API = <<<'HTML'
-    <x-select.styled :request="route('api.users')"
-                     select="label:name|value:id" />
+    <x-select.styled :request="route('api.users')" />
+    HTML;
+
+    public const STYLED_API_UNFILTERED = <<<'HTML'
+    <x-select.styled :request="route('api.users')" unfiltered />
     HTML;
 
     public const STYLED_API_ADVANCED = <<<'HTML'
-    <!-- Method can be 'get' or 'post' -->
-
     <x-select.styled :request="[
                         'url' => route('api.users'),
                         'method' => 'get',
                         'params' => ['library' => 'TallStackUi'],
-                     ]" select="label:name|value:id" />
+                     ]" />
+    HTML;
+
+    public const STYLED_API_UNFILTERED_QUERY = <<<'HTML'
+    use App\Models\User;
+    use Illuminate\Http\Request;
+    use Illuminate\Support\Facades\Route;
+    use Illuminate\Database\Eloquent\Builder;
+    
+    Route::get('/users', function (Request $request) {
+        $search = $request->get('search');
+    
+        return User::query()
+            ->when($search, fn (Builder $query) => $query->where('name', 'like', "%{$search}%"))
+            ->unless($search, fn (Builder $query) => $query->limit(10))
+            ->get()
+            ->map(fn (User $user): array => [
+                'label' => $user->name,
+                'value' => $user->id,
+            ]);
+    })->name('api.users');
     HTML;
 
     public const PERSONALIZATION_NATIVE = <<<'HTML'
