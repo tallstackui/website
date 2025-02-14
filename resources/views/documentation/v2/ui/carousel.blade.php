@@ -85,13 +85,18 @@
         </x-preview>
     </x-section>
     <x-section title="Fixed Aspect Radio">
-        <x-preview language="blade" :background="false" :contents="$aspect">
-            <x-carousel :images="[
+        <div class="space-y-4">
+            <x-preview language="blade" :background="false" :contents="$aspect">
+                <x-carousel :images="[
                 ['src' => url('assets/images/wallpapers/1.jpg'), 'alt' => 'Wallpaper 1'],
                 ['src' => url('assets/images/wallpapers/2.jpg'), 'alt' => 'Wallpaper 2'],
                 ['src' => url('assets/images/wallpapers/3.jpg'), 'alt' => 'Wallpaper 3'],
             ]" wrapper="aspect-[3/1]" />
-        </x-preview>
+            </x-preview>
+            <x-warning>
+                Remember to rebuild your assets to tell TailwindCSS to build these aspect ratio classes.
+            </x-warning>
+        </div>
     </x-section>
     <x-section title="Slots">
         <x-preview language="blade" :background="false" :contents="$slots">

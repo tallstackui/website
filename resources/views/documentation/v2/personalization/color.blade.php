@@ -91,8 +91,20 @@
             </p>
             <x-code language="blade" :contents="$useCustomColor" disable-copy />
             <p>
-                Although this example used <x-block>red</x-block>, you can use completely custom colors as you build in TailwindCSS.
+                Although this example used <x-block>red</x-block>, you can use completely custom colors as you build in TailwindCSS:
             </p>
+            <x-code language="js" :contents="$newCustomColor" disable-copy />
+            <p>
+                After that, just apply the new color name, <x-block>malibu</x-block> in this example, instead of <x-block>red</x-block>:
+            </p>
+            <x-code :contents="$createCustomColorUsingNewTailwindColor" disable-copy />
+            <p>
+                And then use the new <x-block>malibu</x-block> in the component class:
+            </p>
+            <x-code language="blade" :contents="$useNewCustomColor" disable-copy />
+            <x-warning>
+                Remember to rebuild your assets after making any adjustments to TailwindCSS colors.
+            </x-warning>
         </div>
     </x-section>
 </x-layout>

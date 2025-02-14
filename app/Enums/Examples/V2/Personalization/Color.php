@@ -313,4 +313,73 @@ class Color
     public const USE_CUSTOM_COLOR = <<<'HTML'
     <x-alert text="My custom color is foo-bar" color="foo-bar" />
     HTML;
+
+    public const NEW_CUSTOM_COLOR = <<<'HTML'
+    theme: {
+        extend: {
+            // ...
+
+            colors: {
+                'malibu': {
+                    DEFAULT: '#6ebcf7',
+                    '50': '#f0f7ff',
+                    '100': '#e1effd',
+                    '200': '#bcdefb',
+                    '300': '#6ebcf7',
+                    '400': '#3ea8f2',
+                    '500': '#158ce2',
+                    '600': '#086ec1',
+                    '700': '#08589c',
+                    '800': '#0b4b81',
+                    '900': '#0f3f6b',
+                    '950': '#0a2847',
+                },
+            }
+        },
+    },
+    HTML;
+
+    public const CREATE_CUSTOM_COLOR_USING_NEW_TAILWIND_COLOR = <<<'HTML'
+    namespace App\View\Components\TallStackUi\Colors;
+    
+    use Illuminate\View\Component;
+    
+    class AlertColors
+    {
+        /**
+         * Background colors.
+         */
+        public function backgroundColors(Component $component): array
+        {
+            return [
+                'solid' => [
+                    'malibu' => 'bg-malibu-500', // [tl! add]
+
+                    // ...
+                ],
+                // ...
+            ];
+        }
+    
+        /**
+         * Text colors.
+         */
+        public function textColors(Component $component): array
+        {
+            return [
+                'solid' => [
+                    'malibu' => 'text-malibu-900', // [tl! add]
+
+                    // ...
+                ],
+                
+                // ...
+            ];
+        }
+    }
+    HTML;
+
+    public const USE_NEW_CUSTOM_COLOR = <<<'HTML'
+    <x-alert text="My custom color is foo-bar" color="malibu" />
+    HTML;
 }
