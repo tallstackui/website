@@ -1,8 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}"
-      class="h-full antialiased"
-      x-data="tallstackui_darkTheme({ default: 'dark' })"
-      x-bind:class="{ 'dark bg-gray-700': darkTheme, 'bg-white': !darkTheme }">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" class="h-full antialiased" x-data="tallstackui_darkTheme({ default: 'dark' })">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -37,7 +34,7 @@
     @livewireStyles
     @vite(['resources/css/app.scss', 'resources/js/app.js'])
 </head>
-<body class="min-h-full flex-col justify-center bg-gray-100 dark:bg-slate-900" x-bind:class="{ 'bg-dots-white' : darkTheme, 'bg-dots-darker' : !darkTheme }">
+<body class="min-h-full flex-col justify-center" x-bind:class="{ 'bg-dots-white dark bg-slate-900' : darkTheme, 'bg-dots-darker bg-white' : !darkTheme }">
     <x-top-bar />
     <x-toast />
     <x-dialog />
