@@ -128,7 +128,14 @@
                 </p>
             </div>
             <div>
-                <h2 class="text-lg tracking-tight text-pink-600 font-medium">6. Update the Composer:</h2>
+                <h2 class="text-lg tracking-tight text-pink-600 font-medium">6. Redo your custom icons:</h2>
+                <p>
+                    Since custom icon support has changed in version 2.x, we recommend that you read the <a href="{{ route('documentation', ['v2', 'ui', 'icon']) }}" class="underline">new icon documentation page</a>
+                    to understand the changes and make any necessary adjustments. <b>If you do not use custom icons, then just skip this step!</b>
+                </p>
+            </div>
+            <div>
+                <h2 class="text-lg tracking-tight text-pink-600 font-medium">7. Update the Composer:</h2>
                 <p>
                     Finally, it's time to update your application to the beta version 2.x. Edit your <x-block>composer.json</x-block> file:
                 </p>
