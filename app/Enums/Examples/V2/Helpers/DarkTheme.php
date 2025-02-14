@@ -13,25 +13,25 @@ class DarkTheme
     HTML;
 
     public const HELPER = <<<'HTML'
-    <html ...
-          x-data="tallstackui_darkTheme()" {{-- [tl! highlight:1] --}}
-          x-bind:class="{ 'dark bg-gray-700': darkTheme, 'bg-white': !darkTheme }">
+    <html ... x-data="tallstackui_darkTheme()"> {{-- [tl! highlight] --}}
         <!-- ... -->
     </html>
     HTML;
 
+    public const BODY = <<<'HTML'
+    <body x-bind:class="{ 'dark bg-gray-700': darkTheme, 'bg-white': !darkTheme }"> {{-- [tl! highlight] --}}
+        <!-- ... -->
+    </body>
+    HTML;
+
     public const CUSTOMIZED = <<<'HTML'
-    <html ...
-          x-data="tallstackui_darkTheme({ name: 'other-name' })" {{-- [tl! focus] --}}
-          ...>
+    <html ... x-data="tallstackui_darkTheme({ name: 'other-name' })"> {{-- [tl! highlight] --}}
         <!-- ... -->
     </html>
     HTML;
 
     public const DARK = <<<'HTML'
-    <html ...
-          x-data="tallstackui_darkTheme({ dark: true })" {{-- [tl! focus] --}}
-          ...>
+    <html ... x-data="tallstackui_darkTheme({ default: 'dark' })"> {{-- [tl! highlight] --}}
         <!-- ... -->
     </html>
     HTML;

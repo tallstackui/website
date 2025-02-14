@@ -23,14 +23,15 @@
             <x-code language="blade" :contents="$helper" disable-copy/>
             <p>You can customize the name of the state stored in local storage of the browser, default name is <x-block>dark-theme</x-block></p>
             <x-code language="blade" :contents="$customized" disable-copy/>
-            <p>You can also force the <x-block>darkTheme</x-block> variable to be initialized to true:</p>
+            <p>You can also force the <x-block>darkTheme</x-block> variable to be initialized to <x-block>true</x-block>:</p>
             <x-code language="blade" :contents="$dark" disable-copy/>
             <p>This is useful if your theme is dark theme by default.</p>
-            <p>Create a button to control the dark theme:</p>
+            <p>To avoid conflicts with the Livewire 3 <x-block>wire:navigate</x-block>, the class control block must be inserted in the <x-block>body</x-block> tag:</p>
+            <x-code language="blade" :contents="$body" disable-copy/>
+            <p>After that, create a button to control the dark theme:</p>
             <x-code language="blade" :contents="$button" disable-copy />
             <p>
-                This button must be covered by the layout that received the <b>tallstackui_darkTheme</b> helper.
-                If you prefer, <a href="{{ route('documentation', ['v2', 'ui', 'theme-switch']) }}" wire:navigate class="underline">TallStackUI offer the Theme Switch component</a> to easily manage the dark theme.
+                This button must be covered by the layout that received the helper. If you prefer, <a href="{{ route('documentation', ['v2', 'ui', 'theme-switch']) }}" wire:navigate class="underline">TallStackUI offer the Theme Switch component</a> to easily manage the dark theme.
             </p>
             <p>Rebuild your assets using this command:</p>
             <x-code language="shell" :contents="$assets" />
