@@ -15,6 +15,6 @@ class UpgradeGuide
     HTML;
 
     public const COMMAND = <<<'HTML'
-    rm -fr vendor/ && composer install
+    composer install
     HTML;
 }

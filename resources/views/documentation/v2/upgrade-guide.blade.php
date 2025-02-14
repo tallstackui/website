@@ -134,12 +134,9 @@
                 </p>
                 <x-code language="json" :contents="$composer" disable-copy />
                 <p>
-                    After that, run this command:
+                    After that remove the <x-block>vendor</x-block> folder and them run this command to reinstall all your dependencies:
                 </p>
                 <x-code language="shell" :contents="$command" />
-                <p>
-                    This will delete your vendor folder - to ensure a correct update, and install the beta version of TallStackUI.
-                </p>
             </div>
         </div>
         <x-warning>
