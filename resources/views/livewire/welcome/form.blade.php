@@ -69,7 +69,6 @@ $save = function () {
                              icon="user"
                              delay="1"
                              centralized
-                             selectable
                              wire:model="age" />
                 </div>
                 <div class="col-span-1">
@@ -89,7 +88,6 @@ $save = function () {
                 <div class="col-span-1">
                     <x-select.styled :request="route('api.users')"
                                      multiple
-                                     select="label:name|value:id"
                                      label="Preferable Laravel Developer *"
                                      hint="You can choose more than one"
                                      wire:model="developer" />
