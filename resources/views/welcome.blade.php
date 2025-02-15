@@ -412,6 +412,11 @@
         </footer>
     </div>
     <x-back-to-top />
+    <script>
+        var version = "v2";
+        var algolia_app_id = '{{ config('services.algolia.id', false) }}';
+        var algolia_search_key = '{{ config('services.algolia.secret', false) }}';
+    </script>
     @livewireScripts
 </body>
 </html>

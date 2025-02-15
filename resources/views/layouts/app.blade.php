@@ -96,6 +96,8 @@
     <x-back-to-top />
     <script>
         var version = @js($current());
+        var algolia_app_id = '{{ config('services.algolia.id', false) }}';
+        var algolia_search_key = '{{ config('services.algolia.secret', false) }}';
     </script>
     @livewireScripts
 </body>
