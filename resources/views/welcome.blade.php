@@ -87,7 +87,6 @@
                                                     <x-button :href="route('documentation', ['v2', 'installation'])"
                                                               color="pink"
                                                               position="right"
-                                                              wire:navigate
                                                               lg>
                                                         Getting Started
                                                     </x-button>
