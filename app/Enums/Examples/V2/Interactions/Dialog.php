@@ -116,7 +116,7 @@ class Dialog
     {
         $this->dialog()
             ->success('...')
-            ->hooks([
+            ->hook([
                 // When using `success()`, `error()`, `warning()`, `info()` and pressing the OK button.
                 'ok' => [
                     'method' => 'method',
@@ -143,7 +143,7 @@ class Dialog
     {
         $this->dialog()
             ->success('...')
-            ->hooks([
+            ->hook([
                 'ok' => [
                     'method' => 'method',
                     'params' => fn () => ['param1', 'param2'] // [tl! highlight]

@@ -153,7 +153,7 @@ class Toast
     {
         $this->toast()
             ->success('...')
-            ->hooks([
+            ->hook([
                 // When close the toast by clicking on the "x" button.
                 'close' => [
                     'method' => 'method',
@@ -175,7 +175,7 @@ class Toast
     {
         $this->toast()
             ->success('...')
-            ->hooks([
+            ->hook([
                 'close' => [
                     'method' => 'method',
                     'params' => fn () => ['param1', 'param2'] // [tl! highlight]
