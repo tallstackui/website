@@ -80,7 +80,7 @@ new class extends VoltComponent {
                         <div>
                             <x-clipboard :id="uniqid()" label="Name" :text="$original['block']" />
                         </div>
-                        <div>
+                        <div wire:key="{{ uniqid() }}">
                             <p class="block text-sm font-semibold text-gray-600 dark:text-dark-400">Original Content:</p>
                             <x-code language="text" :contents="$original['class']" unpadding />
                         </div>

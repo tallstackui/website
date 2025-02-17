@@ -17,7 +17,7 @@
         <p>2. Prepare your base layout:
         <x-code language="blade" :contents="$layout" disable-copy />
         <x-warning>
-            The TallStackUI script must be loaded <b class="underline">above of the the @verbatim @vite @endverbatim tag.</b>
+            The TallStackUI script must be loaded <b class="underline">above of the @verbatim @vite @endverbatim tag.</b>
         </x-warning>
         <p class="mt-4">3. Edit the <x-block>tailwind.config.js</x-block> of your application inserting this content:</p>
         <x-code language="js" :contents="$tailwindcss" disable-copy />

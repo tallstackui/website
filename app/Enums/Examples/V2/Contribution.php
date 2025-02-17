@@ -12,11 +12,13 @@ class Contribution
     },
     
     // ...
+    
+    // Replace the "url" with the path to the TallStackUI on your computer. [tl! highlight:7]
 
-    "repositories": [ // [tl! highlight:5]
+    "repositories": [
         {
             "type": "path",
-            "url": "./Users/foobar/tallstackui/tallstackui"
+            "url": "path/to/tallstackui"
         }
     ],
     
