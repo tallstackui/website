@@ -87,7 +87,7 @@
             </p>
             <ul class="space-y-2">
                 <li><x-block>local</x-block> - shades of <b class="text-green-700">green</b> colors</li>
-                <li><x-block>stating</x-block> - shades of <b class="text-yellow-700">yellow</b> colors</li>
+                <li><x-block>staging</x-block> - shades of <b class="text-yellow-700">yellow</b> colors</li>
                 <li><x-block>sandbox</x-block> - shades of <b class="text-orange-700">orange</b> colors</li>
                 <li><x-block>production</x-block> - shades of <b class="text-red-700">red</b> colors</li>
                 <li>Others - shades of <b class="text-primary-700">primary</b> colors</li>
