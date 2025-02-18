@@ -166,7 +166,7 @@
                 <u>While this is extremely useful for delaying the loading of large amounts of options</u>, there is two major caveat:
             </p>
             <ul class="list-inside list-decimal">
-                <li>The <x-block>searchable</x-block> attribute, will not work to search for options that have not yet been loaded.</li>
+                <li>The <x-block>searchable</x-block> attribute will not work to search for options that have not yet been loaded.</li>
                 <li>The <x-block>lazy</x-block> attribute expects to receive values greater than or equal to 10.</li>
             </ul>
             <x-preview language="blade" :contents="$styledLazy">
