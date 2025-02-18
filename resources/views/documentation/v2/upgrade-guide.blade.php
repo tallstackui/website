@@ -55,6 +55,7 @@
                         <li>- New Scoped Soft Personalization concept.</li>
                         <li>- New colors personalization concept.</li>
                         <li>- New icons concept.</li>
+                        <li>- New <x-block>tallstackui:ide</x-block> command.</li>
                         <li>- <x-block>Card</x-block> Component: support of colors, image and minimize effect.</li>
                         <li>- <x-block>Dropdown</x-block> Component: support to nested dropdown.</li>
                         <li>- <x-block>Floating</x-block> Component: ability to personalize floating class per component.</li>
@@ -64,6 +65,7 @@
                         <li>- <x-block>Form Select Styled</x-block> Component: support of a basic lazy loading.</li>
                         <li>- <x-block>Form Select Styled</x-block> Component: support of group options.</li>
                         <li>- <x-block>Form Select Styled</x-block> Component: support of set <x-block>select</x-block> with default values.</li>
+                        <li>- <x-block>Form Select Styled</x-block> Component: addition of <x-block>unfiltered</x-block> attribute.</li>
                         <li>- <x-block>Form Password</x-block> Component: ability to change password generator algorithm.</li>
                         <li>- <x-block>Form Number</x-block> Component: ability to increase/decrease by using <x-block>step</x-block> attribute.</li>
                         <li>- <x-block>Form Upload</x-block> Component: ability to validate BEFORE the upload.</li>

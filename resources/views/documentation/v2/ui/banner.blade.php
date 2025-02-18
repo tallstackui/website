@@ -60,11 +60,8 @@
             <p>
                 One of the benefits of the banner component is that it can be integrated with Livewire to send messages from the backend to the frontend -
                 similar to the concept of using things like Toast or Dialog. When choosing to use the banner in this way, the only configurable attribute
-                is the <x-block>size</x-block>, since all other things will be configured through the Livewire integration.
-            </p>
-            <p>
-                Preparing the component is simple, just define the <x-block>wire</x-block> attribute in the component so that
-                TallStackUI identifies the usage format integrated with Livewire:
+                is the <x-block>size</x-block>, since all other things will be configured through the Livewire integration. Preparing the component is simple,
+                just define the <x-block>wire</x-block> attribute in the component so that TallStackUI identifies the usage format integrated with Livewire:
             </p>
             <x-code language="blade" :contents="$livewire" disable-copy />
         </div>

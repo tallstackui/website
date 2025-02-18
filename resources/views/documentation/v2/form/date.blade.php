@@ -97,7 +97,7 @@
             ]" />
         </x-preview>
     </x-section>
-    <x-section title="Month Year Only" new description="An option to select only month and year.">
+    <x-section title="Month Year Only" description="An option to select only month and year.">
         <x-preview language="blade" :contents="$monthYearOnly">
             <x-date month-year-only />
         </x-preview>
