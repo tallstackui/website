@@ -1056,16 +1056,16 @@
         },
         {
             "name": "laravel/framework",
-            "version": "v11.42.1",
+            "version": "v11.43.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "ff392f42f6c55cc774ce75553a11c6b031da67f8"
+                "reference": "70760d976486310b11d8e487e873077db069e77a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/ff392f42f6c55cc774ce75553a11c6b031da67f8",
-                "reference": "ff392f42f6c55cc774ce75553a11c6b031da67f8",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/70760d976486310b11d8e487e873077db069e77a",
+                "reference": "70760d976486310b11d8e487e873077db069e77a",
                 "shasum": ""
             },
             "require": {
@@ -1267,7 +1267,7 @@
                 "issues": "https://github.com/laravel/framework/issues",
                 "source": "https://github.com/laravel/framework"
             },
-            "time": "2025-02-12T20:58:18+00:00"
+            "time": "2025-02-18T15:37:56+00:00"
         },
         {
             "name": "laravel/prompts",
@@ -5749,16 +5749,16 @@
         },
         {
             "name": "tallstackui/tallstackui",
-            "version": "v2.0.1",
+            "version": "v2.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/tallstackui/tallstackui.git",
-                "reference": "c324616756858a9a734898571c3d34ab9e9bcb42"
+                "reference": "55b2e4d9008fe397f0fb11c0e247aa8c15a133f0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tallstackui/tallstackui/zipball/c324616756858a9a734898571c3d34ab9e9bcb42",
-                "reference": "c324616756858a9a734898571c3d34ab9e9bcb42",
+                "url": "https://api.github.com/repos/tallstackui/tallstackui/zipball/55b2e4d9008fe397f0fb11c0e247aa8c15a133f0",
+                "reference": "55b2e4d9008fe397f0fb11c0e247aa8c15a133f0",
                 "shasum": ""
             },
             "require": {
@@ -5814,7 +5814,7 @@
             "description": "TallStackUI is a powerful suite of Blade components that elevate your workflow of Livewire applications.",
             "support": {
                 "issues": "https://github.com/tallstackui/tallstackui/issues",
-                "source": "https://github.com/tallstackui/tallstackui/tree/v2.0.1"
+                "source": "https://github.com/tallstackui/tallstackui/tree/v2.0.2"
             },
             "funding": [
                 {
@@ -5822,7 +5822,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2025-02-18T01:24:01+00:00"
+            "time": "2025-02-18T15:37:12+00:00"
         },
         {
             "name": "tijsverkoyen/css-to-inline-styles",
