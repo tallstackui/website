@@ -50,7 +50,8 @@
             <x-code language="shell" :contents="$ide"/>
             <p>
                 This command will map all the components based on the TallStackUI configuration file to create an <x-block>ide.json</x-block> file - in the base path of the Laravel application,
-                which will be used by the <a href="https://laravel-idea.com/" class="underline" target="_blank">Laravel Idea - PhpStorm plugin</a>, to scan this file and provide autocomplete functionality for TallStackUI components.
+                which will be used by the <a href="https://laravel-idea.com/" class="underline" target="_blank">Laravel Idea - PhpStorm plugin</a>, to scan the TallStackUI component class and
+                provide autocomplete functionality for TallStackUI components. You need to restart your PhpStorm after running the command.
             </p>
         </div>
     </x-section>

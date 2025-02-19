@@ -299,7 +299,7 @@ ui:
     - Icon
     - Static Icon
     - Header Slot
-    - Nested Dropdown
+    - Dropdown Submenu
     - Action Slot
   error:
     - Basic Usage
@@ -427,6 +427,12 @@ ui:
     - Background Blur
     - Size Variations
     - Z Index
+    - Persistent
+    - Wireable
+    - Wireable Personalized
+    - AlpineJS Helper
+    - Events
+    - Configurations
   stats:
     - Basic Usage
     - Title
@@ -498,6 +504,7 @@ interactions:
     - Basic Usage
     - Confirmations
     - Time Control
+    - Persistent
     - Expandable
     - Events
     - Hooks

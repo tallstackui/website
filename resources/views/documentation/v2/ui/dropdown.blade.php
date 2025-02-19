@@ -12,6 +12,7 @@
     <x-slot:personalization>
         <livewire:personalization :$personalization component="Dropdown\Dropdown" title="Dropdown" />
         <livewire:personalization :personalization="$personalizationItems" component="Dropdown\Items" />
+        <livewire:personalization :personalization="$personalizationSubmenu" component="Dropdown\Submenu" />
     </x-slot:personalization>
     <x-section title="Basic Usage">
         <x-preview language="blade" :contents="$left">
@@ -83,23 +84,29 @@
             </div>
         </x-preview>
     </x-section>
-    <x-section title="Nested Dropdown" description="An option to allow the usage of multiples dropdowns nested.">
-        <x-preview language="blade" :contents="$sub">
-            <div class="flex justify-end md:justify-center">
-                <x-dropdown text="Menu">
-                    <x-dropdown.items text="PHP" />
-                    <x-dropdown.items text="Python" />
-                    <x-dropdown.submenu text="Second Level">
-                        <x-dropdown.items text="JavaScript" />
-                        <x-dropdown.items text="Java" />
-                        <x-dropdown.submenu text="Third Level">
-                            <x-dropdown.items text="C++" />
-                            <x-dropdown.items text="Golang" />
+    <x-section title="Dropdown Submenu" description="An option to allow the usage of multiples dropdowns nested.">
+        <div class="space-y-4">
+            <x-preview language="blade" :contents="$sub">
+                <div class="flex justify-end md:justify-center">
+                    <x-dropdown text="Menu">
+                        <x-dropdown.items text="PHP" />
+                        <x-dropdown.items text="Python" />
+                        <x-dropdown.submenu text="Second Level">
+                            <x-dropdown.items text="JavaScript" />
+                            <x-dropdown.items text="Java" />
+                            <x-dropdown.submenu text="Third Level">
+                                <x-dropdown.items text="C++" />
+                                <x-dropdown.items text="Golang" />
+                            </x-dropdown.submenu>
                         </x-dropdown.submenu>
-                    </x-dropdown.submenu>
-                </x-dropdown>
-            </div>
-        </x-preview>
+                    </x-dropdown>
+                </div>
+            </x-preview>
+            <p>
+                You can also set the left chevron icon to the left side if your submenu is left-side oriented:
+            </p>
+            <x-code language="blade" :contents="$subLeft" />
+        </div>
     </x-section>
     <x-section title="Action Slot">
         <x-preview language="blade" :contents="$actionSlots">

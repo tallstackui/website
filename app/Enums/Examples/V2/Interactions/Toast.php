@@ -124,6 +124,13 @@ class Toast
         ->send();
     HTML;
 
+    public const PERSISTENT = <<<'HTML'
+    $this->toast()
+        ->persistent()
+        ->success('Success', 'This is a persistent toast.')
+        ->send();
+    HTML;
+
     public const EXPANDABLE = <<<'HTML'
     $this->toast()
         ->expandable()
@@ -132,8 +139,6 @@ class Toast
     HTML;
 
     public const IGNORING_EXPANDABLE = <<<'HTML'
-    // ...
-
     $this->toast()
         ->expandable(false) // [tl! highlight]
         ->success('Success', 'This Toast will not be expandable.')

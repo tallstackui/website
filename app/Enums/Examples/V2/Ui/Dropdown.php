@@ -83,6 +83,21 @@ class Dropdown
     </x-dropdown>
     HTML;
 
+    public const SUB_LEFT = <<<'HTML'
+    <x-dropdown text="Menu" position="bottom-end">
+        <x-dropdown.items text="PHP" />
+        <x-dropdown.items text="Python" />
+        <x-dropdown.submenu text="Second Level" position="left-start"> {{-- [tl! focus] --}}
+            <x-dropdown.items text="JavaScript" />
+            <x-dropdown.items text="Java" />
+            <x-dropdown.submenu text="Third Level" position="left-start"> {{-- [tl! focus] --}}
+                <x-dropdown.items text="C++" />
+                <x-dropdown.items text="Golang" />
+            </x-dropdown.submenu>
+        </x-dropdown.submenu>
+    </x-dropdown>
+    HTML;
+
     public const ACTION_SLOTS = <<<'HTML'
     <x-dropdown>
         <x-slot:action>
@@ -92,16 +107,20 @@ class Dropdown
         <x-dropdown.items icon="arrow-left-on-rectangle" text="Logout" separator />
     </x-dropdown>
     HTML;
-
     public const PERSONALIZATION = <<<'HTML'
     TallStackUi::personalize()
         ->dropdown()
         ->block('block', 'classes');
     HTML;
-
     public const PERSONALIZATION_ITEMS = <<<'HTML'
     TallStackUi::personalize()
         ->dropdown('items')
+        ->block('block', 'classes');
+    HTML;
+
+    public const PERSONALIZATION_SUBMENU = <<<'HTML'
+    TallStackUi::personalize()
+        ->dropdown('submenu')
         ->block('block', 'classes');
     HTML;
 }

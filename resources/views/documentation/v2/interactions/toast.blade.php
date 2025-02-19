@@ -51,6 +51,13 @@
             <x-code :contents="$defaultTime" disable-copy />
         </div>
     </x-section>
+    <x-section title="Persistent" description="An option to not set an expiration time and also hide the progress bar.">
+        <div class="space-y-4">
+            <x-preview :contents="$persistent">
+                <livewire:documentation.interactions.toast.persistent/>
+            </x-preview>
+        </div>
+    </x-section>
     <x-section title="Expandable" description="An option to show minimized description texts.">
         <div class="space-y-4">
             <x-preview :contents="$expandable">

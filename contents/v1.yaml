@@ -339,6 +339,12 @@ ui:
     - Background Blur
     - Size Variations
     - Z Index
+    - Persistent
+    - Wireable
+    - Wireable Personalized
+    - AlpineJS Helper
+    - Events
+    - Configurations
   stats:
     - Basic Usage
     - Title
