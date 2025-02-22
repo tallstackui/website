@@ -38,11 +38,16 @@
         </x-preview>
     </x-section>
     <x-section title="Character Count" description="An option to show the number of characters.">
-        <x-preview language="blade" :contents="$count">
-            <div class="mb-2 space-y-2">
-                <x-textarea label="Current and Max Quantities" maxlength="10" count />
-                <x-textarea label="Only Current Quantity" count />
-            </div>
-        </x-preview>
+        <div class="space-y-4">
+            <x-preview language="blade" :contents="$count">
+                <div class="mb-2 space-y-8">
+                    <x-textarea maxlength="10" count />
+                    <x-textarea count />
+                </div>
+            </x-preview>
+            <x-warning>
+                The character count element uses an absolute position, make sure to leave space between the elements below the component. Otherwise the number may appear on top of the HTML elements.
+            </x-warning>
+        </div>
     </x-section>
 </x-layout>

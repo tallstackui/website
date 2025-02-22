@@ -15,11 +15,11 @@ class Toast
     HTML;
 
     public const TRAIT = <<<HTML
-    use TallStackUi\Traits\Interactions; // [tl! highlight]
+    use TallStackUi\Traits\Interactions; // [tl! focus]
 
     class CreateUser extends Component
     {
-        use Interactions; // [tl! highlight]
+        use Interactions; // [tl! focus]
 
         // ...
     }

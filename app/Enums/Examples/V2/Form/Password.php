@@ -24,15 +24,11 @@ class Password
     HTML;
 
     public const FORMAT_VALIDATOR = <<<'HTML'
-    <!-- Allowed: min, symbols, numbers, mixed -->
-
-    <!-- You can set min to `min:8` or
-    omit the number to use the default -->
-
-    <!-- You can define symbols like `symbols:!@#`
-    or omit symbols to use the defaults -->
-
     <x-password :rules="['min:8', 'symbols:!@#', 'numbers', 'mixed']" />
+    HTML;
+
+    public const FORMAT_VALIDATOR_WITHOUT_RULES = <<<'HTML'
+    <x-password rules />
     HTML;
 
     public const PASSWORD_GENERATOR = <<<'HTML'

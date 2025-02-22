@@ -25,11 +25,12 @@ class Textarea
     HTML;
 
     public const COUNT = <<<'HTML'
-    <!-- Current and Max Quantities-->
-    <x-textarea maxlength="10" count />
-    
-    <!-- Only Current Quantity-->
-    <x-textarea count />
+    <div class="space-y-8">
+        <x-textarea maxlength="10" count />
+        
+        <!-- Only character quantity -->
+        <x-textarea count />
+    </div>
     HTML;
 
     public const PERSONALIZATION = <<<'HTML'

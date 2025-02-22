@@ -25,7 +25,7 @@ new class extends Component {
             'headers' => [
                 ['index' => 'id', 'label' => '#'],
                 ['index' => 'name', 'label' => 'Member'],
-                ['index' => 'action', 'label' => 'Remove From Laravel Team?', 'sortable' => false],
+                ['index' => 'action', 'label' => 'Send Notification', 'sortable' => false],
             ],
             'rows' => User::query()
                 ->when($this->search, fn (Builder $query) => $query->where('name', 'like', "%{$this->search}%"))
@@ -37,10 +37,8 @@ new class extends Component {
 
     public function notify(string $user): void
     {
-        $user = explode(' ', $user)[0];
-
         $this->toast()
-            ->error("Naaah!", "{$user} can't leave the Laravel team! 😝")
+            ->success("Done!", "{$user} will be notified! ✅")
             ->send();
     }
 }; ?>
@@ -61,8 +59,8 @@ new class extends Component {
             </div>
         @endinteract
         @interact('column_action', $user)
-        <x-button.circle color="red"
-                         icon="trash"
+        <x-button.circle color="blue"
+                         icon="paper-airplane"
                          wire:click="notify('{{ $user->name }}')"/>
         @endinteract
     </x-table>

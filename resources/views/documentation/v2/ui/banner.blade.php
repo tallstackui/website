@@ -77,7 +77,7 @@
                 <x-code language="php" :contents="$dispatch" disable-copy/>
             </li>
         </ul>
-        <x-warning text="This is an example. You can't dispatch all at the same time." />
+        <x-warning text="This is an example. You can not dispatch all at the same time." />
     </x-section>
     <x-section title="Available Options" anchor="livewire-integration-available-options" disable-copy>
         <x-code language="php" :contents="$options" disable-copy/>

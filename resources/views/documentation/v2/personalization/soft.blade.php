@@ -43,12 +43,15 @@
         </div>
     </x-section>
     <x-section title="Personalization Blocks" disable-copy>
-        <p>
-            At this point you may be wondering how to "discover" the blocks of each component. To do this, when
-            browsing the documentation of each component individually you will notice a button called
-            <x-block>Personalize: Component Name</x-block> which, when clicked, will display a modal containing
-            all the blocks - and their names, as well as the original classes that are defined by each block.
-        </p>
+        <div class="space-y-4">
+            <p>
+                At this point you may be wondering how to "discover" the blocks of each component. To do this, when
+                browsing the documentation of each component individually you will notice a button called
+                <x-block>Personalize: {Component Name}</x-block> which, when clicked, will display a modal containing
+                all the blocks - and their names, as well as the original classes that are defined by each block, for example:
+            </p>
+            <livewire:personalization :$personalization component="Form\Checkbox" />
+        </div>
     </x-section>
     <x-section title="Fluent Personalization" disable-copy>
         <p>
@@ -94,7 +97,7 @@
         <div class="space-y-4">
             Although all the examples above are valid, they overwrite the original block classes by defining the second parameter
             of the <x-block>block</x-block> method, this is a way of doing a <u>complete replacement of the original component classes
-            by the blocks</u>, an expected behavior when the soft personalization was created. Luckily we have an easy way to interact
+            by the blocks</u>, an expected behavior when the soft personalization was created. Luckily we have four special helpers to interact
             with the original classes by touching their content but preserving everything else. Let's take a look at an example:
             <x-code :contents="$replace" disable-copy/>
             <p>
@@ -103,7 +106,7 @@
                 classes in an easy way in order to make modifications while maintaining the rest of the original content.
             </p>
             <p>All the four methods:</p>
-            <x-code :contents="$usefulMethods" disable-copy/>
+            <x-code :contents="$helpers" disable-copy/>
             <p>
                 Now that these methods have been introduced, let's imagine that you want to
                 transform all your inputs into a fully round style to follow the look of your
@@ -151,6 +154,9 @@
                 and that we want to receive the effects of the defined personalization:
             </p>
             <x-code language="blade" :contents="$scopedPersonalizationUsage" disable-copy/>
+            <x-warning>
+                You can not set more than one scope in the same component.
+            </x-warning>
         </div>
     </x-section>
 </x-layout>

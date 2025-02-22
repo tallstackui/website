@@ -173,7 +173,7 @@ class Soft
     }
     HTML;
 
-    public const USEFUL_METHODS = <<<'HTML'
+    public const HELPERS = <<<'HTML'
     use TallStackUi\Facades\TallStackUi;
 
     class AppServiceProvider extends ServiceProvider
@@ -183,14 +183,31 @@ class Soft
            TallStackUi::personalize()
                ->form('input')
                ->block('input.base')
-               // Replace: replace parts of the original content. [tl! highlight:8]
-               // Accepts: single replace or an array for multiples replaces
-               ->replace('rounded-md', 'rounded-full')
-               // Remove: single removal or an array for multiple removals
-               ->remove('w-full')
-               // Append: appends classes as string
-               ->append('px-4')
-               // Prepend: prepend classes as string
+               // Replace: replace parts of the original content. [tl! focus:4,highlight:4]
+               // Accepts: 
+               // - single: from/to replace,
+               // - array for multiples replaces in the first parameter
+               ->replace('rounded-md', 'rounded-full');
+               
+               
+          TallStackUi::personalize()
+               ->form('input')
+               ->block('input.base')
+               // Remove: [tl! focus:3,highlight:3]
+               // - single removal
+               // - an array for multiple removals
+               ->remove('w-full');
+               
+           TallStackUi::personalize()
+               ->form('input')
+               ->block('input.base')
+               // Append: appends classes as string [tl! focus:1,highlight:1]
+               ->append('px-4');
+               
+           TallStackUi::personalize()
+               ->form('input')
+               ->block('input.base')
+               // Prepend: prepend classes as string [tl! focus:1,highlight:1]
                ->prepend('py-4');
         }
     }
@@ -240,19 +257,19 @@ class Soft
         public function boot(): void
         {
             // 1
-            TallStackUi::personalize('alert')
-                ->scope('circle') // [tl! highlight]
+            TallStackUi::personalize('alert') // [tl! focus:1,highlight:1]
+                ->scope('circle')
                 ->block('wrapper')
                 ->replace('rounded-lg', 'rounded-full');
             
-            // Or... 2
-            TallStackUi::personalize(component: 'alert', scope: 'circle') // [tl! highlight]
+            // Or
+            TallStackUi::personalize(component: 'alert', scope: 'circle') // [tl! focus,highlight]
                 ->block('wrapper')
                 ->replace('rounded-lg', 'rounded-full');
             
-            // Or... 3
+            // Or
             TallStackUi::personalize()
-                ->scope('circle') // [tl! highlight]
+                ->scope('circle') // [tl! focus:1,highlight:1]
                 ->alert()
                 ->block('wrapper')
                 ->replace('rounded-lg', 'rounded-full');
@@ -262,5 +279,11 @@ class Soft
 
     public const SCOPED_PERSONALIZATION_USAGE = <<<'HTML'
     <x-alert text="This is a fully round Alert component" scope="circle" />
+    HTML;
+
+    public const PERSONALIZATION = <<<'HTML'
+    TallStackUi::personalize()
+        ->form('checkbox')
+        ->block('block', 'classes');
     HTML;
 }

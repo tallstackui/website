@@ -35,7 +35,7 @@
                 <li>Toggle</li>
                 <li>Select</li>
             </ul>
-            <p class="text-lg font-medium">Can't be used out of Livewire component ❌</p>
+            <p class="text-lg font-medium">Can not be used out of Livewire component ❌</p>
             <ul class="ml-2 list-inside list-decimal marker:font-bold">
                 <li>Loading</li>
                 <li>Upload</li>

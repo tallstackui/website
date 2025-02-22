@@ -17,6 +17,11 @@
             <x-number />
         </x-preview>
     </x-section>
+    <x-section title="Step" description="An option to increase/decrease for specific quantities.">
+        <x-preview language="blade" :contents="$step">
+            <x-number step="5" />
+        </x-preview>
+    </x-section>
     <x-section title="Label & Hint">
         <x-preview language="blade" :contents="$labelHint">
             <x-number label="Quantity" hint="Press the plus button to increase one by one" />
@@ -48,11 +53,6 @@
     <x-section title="Chevron Icons" description="An option to use other icons instead of defaults.">
         <x-preview language="blade" :contents="$icon">
             <x-number chevron />
-        </x-preview>
-    </x-section>
-    <x-section title="Step" description="An option to increase/decrease for specific quantities.">
-        <x-preview language="blade" :contents="$step">
-            <x-number step="5" />
         </x-preview>
     </x-section>
     <x-section title="Livewire Bind Concern" disable-copy>

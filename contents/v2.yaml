@@ -58,13 +58,13 @@ form:
     - Configurations
   number:
     - Basic Usage
+    - Step
     - Label & Hint
     - Min & Max Control
     - Centralized
     - Selectable
     - Delay Control
     - Chevron Icons
-    - Step
     - Livewire Bind Concern
   textarea:
     - Basic Usage

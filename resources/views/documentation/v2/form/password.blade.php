@@ -29,34 +29,38 @@
         </x-preview>
     </x-section>
     <x-section title="Caps Lock Indicator" description="An option to control the caps lock indicator.">
-        <x-preview language="blade" :contents="$capsLock">
-            <x-password hint="Activate caps lock to see the indicator." />
-        </x-preview>
-        <x-warning class="mt-4">
-            The caps lock indicator does not work on mobile devices.
-        </x-warning>
+        <div class="space-y-4">
+            <x-preview language="blade" :contents="$capsLock">
+                <x-password hint="Activate caps lock to see the indicator." />
+            </x-preview>
+            <x-warning class="mt-4">
+                The caps lock indicator does not work on mobile devices.
+            </x-warning>
+        </div>
     </x-section>
     <x-section title="Format Validator" description="An option to visually validate the format of the entered password.">
-        <x-preview language="blade" :contents="$formatValidator">
-            <x-password :rules="['min:8', 'symbols:!@#', 'numbers', 'mixed']" />
-        </x-preview>
-        <x-warning class="mt-4">
-            <ul class="list-decimal list-inside text-sm">
-                <li>If you do not specify the <b>min</b> size then the default size will be <b>{{ $defaults['min'] }}</b></li>
-                <li>If you do not specify the <b>symbols</b> then the default symbols will be <b>{{ $defaults['symbols'] }}</b></li>
-            </ul>
-        </x-warning>
+        <div class="space-y-4">
+            <x-preview language="blade" :contents="$formatValidator">
+                <x-password :rules="['min:8', 'symbols:!@#', 'numbers', 'mixed']" />
+            </x-preview>
+            <p>
+                You can also omit the <x-block>rules</x-block> attribute to use the default rules that come from the <a href="{{ route('documentation', ['v2', 'configuration'])  }}" class="underline">configuration file.</a>
+            </p>
+            <x-code language="blade" :contents="$formatValidatorWithoutRules" />
+        </div>
     </x-section>
     <x-section title="Password Generator">
-        <x-preview language="blade" :contents="$passwordGenerator">
-            <x-password generator :rules="['min:8', 'symbols', 'numbers', 'mixed']" />
-        </x-preview>
-        <x-warning class="mt-4">
-            <ul class="list-decimal list-inside text-sm">
-                <li class="underline">The generator requires the <b>rules</b> attributes.</li>
-                <li>The generated password will match the rules passed to the component.</li>
-            </ul>
-        </x-warning>
+        <div class="space-y-4">
+            <x-preview language="blade" :contents="$passwordGenerator">
+                <x-password generator :rules="['min:8', 'symbols', 'numbers', 'mixed']" />
+            </x-preview>
+            <x-warning>
+                <ul class="list-decimal list-inside text-sm">
+                    <li class="underline">The generator requires the <b>rules</b> attributes.</li>
+                    <li>The generated password will match the rules passed to the component.</li>
+                </ul>
+            </x-warning>
+        </div>
     </x-section>
     <x-section title="Generator Algorithm" disable-copy>
         <div class="space-y-4">
