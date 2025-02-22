@@ -232,6 +232,34 @@ class Soft
     }
     HTML;
 
+    public const SCOPED_PERSONALIZATION_WAYS = <<<'HTML'
+    use TallStackUi\Facades\TallStackUi;
+
+    class AppServiceProvider extends ServiceProvider
+    {
+        public function boot(): void
+        {
+            // 1
+            TallStackUi::personalize('alert')
+                ->scope('circle') // [tl! highlight]
+                ->block('wrapper')
+                ->replace('rounded-lg', 'rounded-full');
+            
+            // Or... 2
+            TallStackUi::personalize(component: 'alert', scope: 'circle') // [tl! highlight]
+                ->block('wrapper')
+                ->replace('rounded-lg', 'rounded-full');
+            
+            // Or... 3
+            TallStackUi::personalize()
+                ->scope('circle') // [tl! highlight]
+                ->alert()
+                ->block('wrapper')
+                ->replace('rounded-lg', 'rounded-full');
+        }
+    }
+    HTML;
+
     public const SCOPED_PERSONALIZATION_USAGE = <<<'HTML'
     <x-alert text="This is a fully round Alert component" scope="circle" />
     HTML;

@@ -143,6 +143,10 @@
                 and as you can see above, there are two ways to define the scope name. Just choose one of them and use it as you wish.
             </p>
             <p>
+                You have three different ways to define scopes:
+            </p>
+            <x-code :contents="$scopedPersonalizationWays" disable-copy/>
+            <p>
                 <b>Lastly and most importantly</b>, we must apply the use of the scope to the components that are <x-block>alert</x-block>
                 and that we want to receive the effects of the defined personalization:
             </p>
