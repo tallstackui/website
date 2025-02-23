@@ -36,6 +36,19 @@
             <livewire:documentation.form.upload.upload :model="8" />
         </x-preview>
     </x-section>
+    <x-section title="Validation Error" anchor="upload-validation-error" disable-copy>
+        <div class="space-y-4">
+            <p>
+                Since after selecting the file to be sent it is common for the floating element to be closed, if there is
+                a validation error in the file, it will probably not be visible. For this reason a validation error message
+                will appear below the input, similar to what happens with normal <x-block>input</x-block>. However, unlike input, this message
+                cannot be disabled.
+            </p>
+            <x-preview language="blade" disable-copy>
+                <livewire:documentation.form.upload.upload :model="9" />
+            </x-preview>
+        </div>
+    </x-section>
     <x-section title="Delete" anchor="upload-delete">
         <div class="space-y-4">
             <x-preview language="blade" :contents="$delete">

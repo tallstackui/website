@@ -119,6 +119,7 @@ form:
         - Basic Usage
         - Label & Hint & Tip
         - Close After Upload
+        - Validation Error
         - Delete
         - Multiple
         - Restricting File Types

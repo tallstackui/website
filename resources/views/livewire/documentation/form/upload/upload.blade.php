@@ -16,6 +16,9 @@ new class extends Component {
     public $photo6;
     public $photo7;
 
+    #[\Livewire\Attributes\Validate(['file', 'extensions:dat'])]
+    public $validate;
+
     public int $model = 1;
 
     public function deleteUpload(array $content): void
@@ -65,5 +68,7 @@ new class extends Component {
         <x-upload wire:model="photo7" delete x-on:upload="alert('Uploaded!')" x-on:remove="alert('Removed')" />
     @elseif ($model === 8)
         <x-upload wire:model="photo7" close-after-upload />
+    @elseif ($model === 9)
+        <x-upload label="Send File Different Than .dat" wire:model.live="validate" close-after-upload />
     @endif
 </div>
