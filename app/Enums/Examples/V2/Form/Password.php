@@ -32,7 +32,11 @@ class Password
     HTML;
 
     public const PASSWORD_GENERATOR = <<<'HTML'
-    <x-password generator :rules="['min:8', 'symbols', 'numbers', 'mixed']" />
+    <x-password generator :rules="['min:5', 'symbols:!@']" />
+    HTML;
+
+    public const PASSWORD_GENERATOR_WITHOUT_RULES = <<<'HTML'
+    <x-password generator />
     HTML;
 
     public const ALGORITHM = <<<'HTML'

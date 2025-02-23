@@ -52,14 +52,14 @@
     <x-section title="Password Generator">
         <div class="space-y-4">
             <x-preview language="blade" :contents="$passwordGenerator">
-                <x-password generator :rules="['min:8', 'symbols', 'numbers', 'mixed']" />
+                <x-password generator :rules="['min:5', 'symbols:!@']" />
             </x-preview>
-            <x-warning>
-                <ul class="list-decimal list-inside text-sm">
-                    <li class="underline">The generator requires the <b>rules</b> attributes.</li>
-                    <li>The generated password will match the rules passed to the component.</li>
-                </ul>
-            </x-warning>
+            <p>
+                Similar to the format validator, mentioned above, you can also omit the <x-block>rules</x-block> attribute
+                to use the default rules that come from the <a href="{{ route('documentation', ['v2', 'configuration']) }}" class="underline">configuration file.</a> With
+                this approach all default rules will be applied to the password generator, which is better for enforcing a strong password.
+            </p>
+            <x-code language="blade" :contents="$passwordGeneratorWithoutRules" />
         </div>
     </x-section>
     <x-section title="Generator Algorithm" disable-copy>
