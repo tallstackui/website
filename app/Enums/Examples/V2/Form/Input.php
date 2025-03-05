@@ -12,6 +12,14 @@ class Input
     <x-input label="Name" hint="Insert your name" />
     HTML;
 
+    public const LABEL_RAW_HTML = <<<'HTML'
+    <x-input>
+        <x-slot:label>
+            <span>Name</span>        
+        </x-slot:label>
+    </x-input>
+    HTML;
+
     public const ASTERISK = <<<'HTML'
     <x-input label="Name *" hint="Insert your name" />
     HTML;

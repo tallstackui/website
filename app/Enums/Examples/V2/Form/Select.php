@@ -111,8 +111,6 @@ class Select
     HTML;
 
     public const STYLED_IMAGE = <<<'HTML'
-    <!-- The index of the image can be: `image`, `img`, or `img_src` -->
-
     <x-select.styled :options="[
         ['label' => 'Taylor Otwell', 'value' => 1, 'image' => 'https://unavatar.io/github/taylorotwell'],
         ['label' => 'Nuno Maduro', 'value' => 2, 'image' => 'https://unavatar.io/github/nunomaduro'],
@@ -120,14 +118,28 @@ class Select
     ]" />
     HTML;
 
-    public const STYLED_DESCRIPTION = <<<'HTML'
-    <!-- The index of the description can be: `description` or `note` -->
+    public const STYLED_IMAGE_DIFFERENT_INDEX = <<<'HTML'
+    <x-select.styled :options="[
+        ['label' => 'Taylor Otwell', 'value' => 1, 'preview' => 'https://unavatar.io/github/taylorotwell'],
+        ['label' => 'Nuno Maduro', 'value' => 2, 'preview' => 'https://unavatar.io/github/nunomaduro'],
+        ['label' => 'Jess Archer', 'value' => 3, 'preview' => 'https://unavatar.io/github/jessarcher'],
+    ]" select="label:label|value:value|image:preview" />
+    HTML;
 
+    public const STYLED_DESCRIPTION = <<<'HTML'
     <x-select.styled :options="[
         ['label' => 'Taylor Otwell', 'value' => 1, 'description' => 'Taylor Otwell is the creator of Laravel'],
         ['label' => 'Nuno Maduro', 'value' => 2, 'description' => 'Nuno Maduro is the creator of PestPHP'],
         ['label' => 'Jess Archer', 'value' => 3, 'description' => 'Jess Archer is the creator of Laravel Prompts'],
     ]" />
+    HTML;
+
+    public const STYLED_DESCRIPTION_DIFFERENT_INDEX = <<<'HTML'
+    <x-select.styled :options="[
+        ['label' => 'Taylor Otwell', 'value' => 1, 'note' => 'Taylor Otwell is the creator of Laravel'],
+        ['label' => 'Nuno Maduro', 'value' => 2, 'note' => 'Nuno Maduro is the creator of PestPHP'],
+        ['label' => 'Jess Archer', 'value' => 3, 'note' => 'Jess Archer is the creator of Laravel Prompts'],
+    ]" select="label:label|value:value|description:note" />
     HTML;
 
     public const STYLED_MULTIPLE = <<<'HTML'

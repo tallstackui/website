@@ -114,6 +114,12 @@ class Avatar
     <x-avatar image="https://i.pravatar.cc/300" lg />
     HTML;
 
+    public const IMAGE_BIND_SRC = <<<'HTML'
+    <div x-data="{ image: 'https://i.pravatar.cc/300' }">
+        <x-avatar image x-bind:src="image" />
+    </div>
+    HTML;
+
     public const IMAGE_ALT = <<<'HTML'
     <x-avatar image="https://i.pravatar.cc/300" text="alt-text-goes-here" />
     HTML;

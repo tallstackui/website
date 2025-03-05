@@ -142,12 +142,18 @@
     </x-section>
     <x-separator text="Image" />
     <x-section title="Image" description="An option to use an image as avatar.">
-        <x-preview language="blade" :contents="$image">
-            <x-avatar image="https://i.pravatar.cc/300" xs />
-            <x-avatar image="https://i.pravatar.cc/300" sm />
-            <x-avatar image="https://i.pravatar.cc/300" md />
-            <x-avatar image="https://i.pravatar.cc/300" lg />
-        </x-preview>
+        <div class="space-y-4">
+            <x-preview language="blade" :contents="$image">
+                <x-avatar image="https://i.pravatar.cc/300" xs />
+                <x-avatar image="https://i.pravatar.cc/300" sm />
+                <x-avatar image="https://i.pravatar.cc/300" md />
+                <x-avatar image="https://i.pravatar.cc/300" lg />
+            </x-preview>
+            <p>
+                You can also set the image via <x-block>x-bind:src</x-block> from AlpineJS:
+            </p>
+            <x-code language="blade" :contents="$imageBindSrc" />
+        </div>
     </x-section>
     <x-section title="Default Alt Text">
         <x-preview language="blade" :contents="$imageAlt">

@@ -21,9 +21,15 @@
         </x-warning>
     </x-section>
     <x-section title="Label & Hint">
-        <x-preview language="blade" :contents="$labelHint">
-            <x-input label="Name" hint="Insert your name" />
-        </x-preview>
+        <div class="space-y-4">
+            <x-preview language="blade" :contents="$labelHint">
+                <x-input label="Name" hint="Insert your name" />
+            </x-preview>
+            <p>
+                You can also set raw HTML in the <x-block>label</x-block> attribute:
+            </p>
+            <x-code language="blade" :contents="$labelRawHtml" />
+        </div>
     </x-section>
     <x-section title="Required Label Indicator" description="An option to display an asterisk indicating that the field is required.">
         <x-preview language="blade" :contents="$asterisk">

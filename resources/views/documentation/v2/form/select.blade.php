@@ -134,22 +134,41 @@
         </x-preview>
     </x-section>
     <x-section title="Image Preview" anchor="styled-image-preview">
-        <x-preview language="blade" :contents="$styledImage">
-            <x-select.styled :options="[
+        <div class="space-y-4">
+            <p>
+                The styled select allows you to display an image next to the option label. To do this,
+                the options simply have an index called <x-block>image</x-block> with the image URL.
+            </p>
+            <x-preview language="blade" :contents="$styledImage">
+                <x-select.styled :options="[
                 ['label' => 'Taylor Otwell', 'value' => 1, 'image' => 'https://unavatar.io/github/taylorotwell'],
                 ['label' => 'Nuno Maduro', 'value' => 2, 'image' => 'https://unavatar.io/github/nunomaduro'],
                 ['label' => 'Jess Archer', 'value' => 3, 'image' => 'https://unavatar.io/github/jessarcher'],
             ]"  />
-        </x-preview>
+            </x-preview>
+            <p>
+                You can also set a different index to the <x-block>image</x-block> via the <x-block>select</x-block> attribute.
+            </p>
+            <x-code language="blade" :contents="$styledImageDifferentIndex" />
+        </div>
     </x-section>
     <x-section title="Description" anchor="styled-description">
-        <x-preview language="blade" :contents="$styledDescription">
-            <x-select.styled :options="[
+        <div class="space-y-4">
+            <p>
+                You can also set a description for each option. To do this, the options simply have an index called <x-block>description</x-block>.
+            </p>
+            <x-preview language="blade" :contents="$styledDescription">
+                <x-select.styled :options="[
                 ['label' => 'Taylor Otwell', 'value' => 1, 'description' => 'Taylor Otwell is the creator of Laravel'],
                 ['label' => 'Nuno Maduro', 'value' => 2, 'description' => 'Nuno Maduro is the creator of PestPHP'],
                 ['label' => 'Jess Archer', 'value' => 3, 'description' => 'Jess Archer is the creator of Laravel Prompts'],
             ]"  />
-        </x-preview>
+            </x-preview>
+            <p>
+                You can also set a different index to the <x-block>description</x-block> via the <x-block>select</x-block> attribute:
+            </p>
+            <x-code language="blade" :contents="$styledDescriptionDifferentIndex" />
+        </div>
     </x-section>
     <x-section title="Searchable" anchor="styled-searchable">
         <x-preview language="blade" :contents="$styledSearchable">
