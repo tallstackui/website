@@ -1056,16 +1056,16 @@
         },
         {
             "name": "laravel/framework",
-            "version": "v11.44.0",
+            "version": "v11.44.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "e9a33da34815ac1ed46c7e4c477a775f4592f0a7"
+                "reference": "0883d4175f4e2b5c299e7087ad3c74f2ce195c6d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/e9a33da34815ac1ed46c7e4c477a775f4592f0a7",
-                "reference": "e9a33da34815ac1ed46c7e4c477a775f4592f0a7",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/0883d4175f4e2b5c299e7087ad3c74f2ce195c6d",
+                "reference": "0883d4175f4e2b5c299e7087ad3c74f2ce195c6d",
                 "shasum": ""
             },
             "require": {
@@ -1173,7 +1173,7 @@
                 "league/flysystem-read-only": "^3.25.1",
                 "league/flysystem-sftp-v3": "^3.25.1",
                 "mockery/mockery": "^1.6.10",
-                "orchestra/testbench-core": "^9.9.4",
+                "orchestra/testbench-core": "^9.11.2",
                 "pda/pheanstalk": "^5.0.6",
                 "php-http/discovery": "^1.15",
                 "phpstan/phpstan": "^2.0",
@@ -1267,7 +1267,7 @@
                 "issues": "https://github.com/laravel/framework/issues",
                 "source": "https://github.com/laravel/framework"
             },
-            "time": "2025-02-24T13:08:54+00:00"
+            "time": "2025-03-05T15:34:10+00:00"
         },
         {
             "name": "laravel/prompts",
@@ -2084,21 +2084,21 @@
         },
         {
             "name": "livewire/volt",
-            "version": "v1.6.7",
+            "version": "v1.7.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/livewire/volt.git",
-                "reference": "cc162e749a33e14cd437234ed78b0e7ad47c252a"
+                "reference": "94091094aa745c8636f9c7bed1e2da2d2a3f32b3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/livewire/volt/zipball/cc162e749a33e14cd437234ed78b0e7ad47c252a",
-                "reference": "cc162e749a33e14cd437234ed78b0e7ad47c252a",
+                "url": "https://api.github.com/repos/livewire/volt/zipball/94091094aa745c8636f9c7bed1e2da2d2a3f32b3",
+                "reference": "94091094aa745c8636f9c7bed1e2da2d2a3f32b3",
                 "shasum": ""
             },
             "require": {
                 "laravel/framework": "^10.38.2|^11.0|^12.0",
-                "livewire/livewire": "^3.0",
+                "livewire/livewire": "^3.6.1",
                 "php": "^8.1"
             },
             "require-dev": {
@@ -2152,7 +2152,7 @@
                 "issues": "https://github.com/livewire/volt/issues",
                 "source": "https://github.com/livewire/volt"
             },
-            "time": "2025-02-17T16:24:59+00:00"
+            "time": "2025-03-05T15:20:55+00:00"
         },
         {
             "name": "monolog/monolog",
@@ -5736,16 +5736,16 @@
         },
         {
             "name": "tallstackui/tallstackui",
-            "version": "v2.1.0",
+            "version": "v2.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/tallstackui/tallstackui.git",
-                "reference": "4c2acfd6fcccbaf1689e8bac6cc84c2f48674ac8"
+                "reference": "4a72147d93eec3ebebd1b400be74029824a9b161"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tallstackui/tallstackui/zipball/4c2acfd6fcccbaf1689e8bac6cc84c2f48674ac8",
-                "reference": "4c2acfd6fcccbaf1689e8bac6cc84c2f48674ac8",
+                "url": "https://api.github.com/repos/tallstackui/tallstackui/zipball/4a72147d93eec3ebebd1b400be74029824a9b161",
+                "reference": "4a72147d93eec3ebebd1b400be74029824a9b161",
                 "shasum": ""
             },
             "require": {
@@ -5801,7 +5801,7 @@
             "description": "TallStackUI is a powerful suite of Blade components that elevate your workflow of Livewire applications.",
             "support": {
                 "issues": "https://github.com/tallstackui/tallstackui/issues",
-                "source": "https://github.com/tallstackui/tallstackui/tree/v2.1.0"
+                "source": "https://github.com/tallstackui/tallstackui/tree/v2.2.0"
             },
             "funding": [
                 {
@@ -5809,7 +5809,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2025-03-05T13:06:50+00:00"
+            "time": "2025-03-10T13:02:25+00:00"
         },
         {
             "name": "tijsverkoyen/css-to-inline-styles",
@@ -7690,16 +7690,16 @@
         },
         {
             "name": "phpstan/phpstan",
-            "version": "1.12.19",
+            "version": "1.12.21",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpstan/phpstan.git",
-                "reference": "c42ba9bab7a940ed00092ecb1c77bad98896d789"
+                "reference": "14276fdef70575106a3392a4ed553c06a984df28"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/c42ba9bab7a940ed00092ecb1c77bad98896d789",
-                "reference": "c42ba9bab7a940ed00092ecb1c77bad98896d789",
+                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/14276fdef70575106a3392a4ed553c06a984df28",
+                "reference": "14276fdef70575106a3392a4ed553c06a984df28",
                 "shasum": ""
             },
             "require": {
@@ -7744,7 +7744,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2025-02-19T15:42:21+00:00"
+            "time": "2025-03-09T09:24:50+00:00"
         },
         {
             "name": "phpunit/php-code-coverage",
@@ -9466,16 +9466,16 @@
         },
         {
             "name": "spatie/laravel-ray",
-            "version": "1.39.1",
+            "version": "1.40.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spatie/laravel-ray.git",
-                "reference": "0d890fa2cd2c0b6175cf54c56b9321d81047571d"
+                "reference": "3bcca8c64cd6d45c903f20cb0a548e2143ffdf84"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spatie/laravel-ray/zipball/0d890fa2cd2c0b6175cf54c56b9321d81047571d",
-                "reference": "0d890fa2cd2c0b6175cf54c56b9321d81047571d",
+                "url": "https://api.github.com/repos/spatie/laravel-ray/zipball/3bcca8c64cd6d45c903f20cb0a548e2143ffdf84",
+                "reference": "3bcca8c64cd6d45c903f20cb0a548e2143ffdf84",
                 "shasum": ""
             },
             "require": {
@@ -9538,7 +9538,7 @@
             ],
             "support": {
                 "issues": "https://github.com/spatie/laravel-ray/issues",
-                "source": "https://github.com/spatie/laravel-ray/tree/1.39.1"
+                "source": "https://github.com/spatie/laravel-ray/tree/1.40.0"
             },
             "funding": [
                 {
@@ -9550,7 +9550,7 @@
                     "type": "other"
                 }
             ],
-            "time": "2025-02-05T08:16:15+00:00"
+            "time": "2025-03-08T10:58:11+00:00"
         },
         {
             "name": "spatie/macroable",

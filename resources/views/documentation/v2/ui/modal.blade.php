@@ -109,6 +109,9 @@
                 <x-modal id="7xl-size-modal" title="TallStackUI" size="7xl">
                     7xl
                 </x-modal>
+                <x-modal id="full-size-modal" title="TallStackUI" size="full">
+                    Full Size
+                </x-modal>
                 <x-button x-on:click="$modalOpen('default-size-modal')">
                     Default
                 </x-button>
@@ -138,6 +141,9 @@
                 </x-button>
                 <x-button x-on:click="$modalOpen('7xl-size-modal')">
                     7xl
+                </x-button>
+                <x-button x-on:click="$modalOpen('full-size-modal')">
+                    Full Size
                 </x-button>
             </div>
         </x-preview>

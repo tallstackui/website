@@ -8,6 +8,14 @@ class Number
     <x-number />
     HTML;
 
+    public const STEP = <<<'HTML'
+    <x-number step="5" />
+    HTML;
+
+    public const STEP_DECIMAL = <<<'HTML'
+    <x-number step="0.3" />
+    HTML;
+
     public const LABEL_HINT = <<<'HTML'
     <x-number label="Quantity" hint="Press the plus button to increase one by one" />
     HTML;
@@ -30,10 +38,6 @@ class Number
 
     public const ICON = <<<'HTML'
     <x-number chevron />
-    HTML;
-
-    public const STEP = <<<'HTML'
-    <x-number step="5" />
     HTML;
 
     public const PERSONALIZATION = <<<'HTML'

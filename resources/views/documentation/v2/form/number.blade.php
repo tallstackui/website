@@ -18,9 +18,17 @@
         </x-preview>
     </x-section>
     <x-section title="Step" description="An option to increase/decrease for specific quantities.">
-        <x-preview language="blade" :contents="$step">
-            <x-number step="5" />
-        </x-preview>
+        <div class="space-y-4">
+            <x-preview language="blade" :contents="$step">
+                <x-number step="5" />
+            </x-preview>
+            <p>
+                You can also set the step to be a decimal number:
+                <x-preview language="blade" :contents="$stepDecimal">
+                    <x-number step="0.3" />
+                </x-preview>
+            </p>
+        </div>
     </x-section>
     <x-section title="Label & Hint">
         <x-preview language="blade" :contents="$labelHint">
