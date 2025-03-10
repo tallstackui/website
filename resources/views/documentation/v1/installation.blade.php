@@ -43,7 +43,7 @@
             you can define a prefix for the TallStackUI components through the configuration file:
         </p>
         <x-warning class="mb-4 mt-2">
-            <a href="{{ route('documentation', ['v1', 'configuration']) }}" class="underline" target="_blank">
+            <a href="{{ route('documentation', ['v1', 'configuration']) }}" class="underline">
                 You must publish the configuration file to be able to edit your content.
             </a>
         </x-warning>

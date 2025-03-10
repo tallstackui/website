@@ -44,7 +44,7 @@
                 <x-password :rules="['min:8', 'symbols:!@#', 'numbers', 'mixed']" />
             </x-preview>
             <p>
-                You can also omit the <x-block>rules</x-block> attribute to use the default rules that come from the <a href="{{ route('documentation', ['v2', 'configuration'])  }}" class="underline">configuration file.</a>
+                You can also omit the <x-block>rules</x-block> attribute to use the default rules that come from the <a href="{{ route('documentation', ['v2', 'configuration'])  }}" class="underline" wire:navigate>configuration file.</a>
             </p>
             <x-code language="blade" :contents="$formatValidatorWithoutRules" />
         </div>

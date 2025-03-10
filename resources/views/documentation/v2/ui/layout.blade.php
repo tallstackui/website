@@ -163,6 +163,6 @@
     </x-section>
     <x-section title="Personalization" disable-copy>
         All the components mentioned above are available to be fully customized through one of the TallStackUI personalization methods:
-        <a href="{{ route('documentation', ['v2', 'personalization', 'concept']) }}" class="underline">soft personalization or deep personalization.</a>
+        <a href="{{ route('documentation', ['v2', 'personalization', 'concept']) }}" wire:navigate class="underline">soft personalization or deep personalization.</a>
     </x-section>
 </x-layout>

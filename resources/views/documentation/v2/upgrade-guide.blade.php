@@ -46,7 +46,7 @@
                         <li>- Environment</li>
                         <li>- Layout</li>
                         <li>- Signature</li>
-                        <li>- New Helper: <a href="{{ route('documentation', ['v2', 'helpers', 'env-bar']) }}" class="font-bold underline">EnvBar</a></li>
+                        <li>- New Helper: <a href="{{ route('documentation', ['v2', 'helpers', 'env-bar']) }}" wire:navigate class="font-bold underline">EnvBar</a></li>
                     </ul>
                 </div>
                 <div>
@@ -131,7 +131,7 @@
             <div>
                 <h2 class="text-lg tracking-tight text-pink-600 font-medium">6. Redo your custom icons:</h2>
                 <p>
-                    Since custom icon support has changed in version 2.x, we recommend that you read the <a href="{{ route('documentation', ['v2', 'ui', 'icon']) }}" class="underline">new icon documentation page</a>
+                    Since custom icon support has changed in version 2.x, we recommend that you read the <a href="{{ route('documentation', ['v2', 'ui', 'icon']) }}" wire:navigate class="underline">new icon documentation page</a>
                     to understand the changes and make any necessary adjustments. <b>If you do not use custom icons, then just skip this step!</b>
                 </p>
             </div>

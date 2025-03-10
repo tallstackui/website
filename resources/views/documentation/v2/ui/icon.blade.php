@@ -69,7 +69,7 @@
             </p>
             <ul class="list-decimal list-inside">
                 <li>
-                    <a href="{{ route('documentation', ['v2', 'component-prefix']) }}" class="underline">Set a component prefix name for the TallStackUI components</a>.
+                    <a href="{{ route('documentation', ['v2', 'component-prefix']) }}" wire:navigate class="underline">Set a component prefix name for the TallStackUI components</a>.
                 </li>
                 <li>
                     Change the default Blade UI Kit icon component name, <a href="https://github.com/blade-ui-kit/blade-icons?tab=readme-ov-file#default-component" class="underline" target="_blank">click here.</a>
@@ -101,7 +101,7 @@
         <div class="space-y-4">
             <p>
                 Since internally several icons are used in many components, you are free to customize these internal
-                icons through an icon guide in the <a href="{{ route('documentation', ['v2', 'configuration']) }}" class="underline">TallStackUI configuration file.</a>
+                icons through an icon guide in the <a href="{{ route('documentation', ['v2', 'configuration']) }}" class="underline" wire:navigate>TallStackUI configuration file.</a>
                 All you have to do is define the name of the icons to be used. This way, the custom icon will be used instead of the Heroicon.
             </p>
             <p>
