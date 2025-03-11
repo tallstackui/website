@@ -4,6 +4,14 @@ namespace App\Enums\Examples\V2;
 
 class Installation
 {
+    public const BREEZE = <<<'HTML'
+    composer require laravel/breeze --dev
+    HTML;
+
+    public const BREEZE_INSTALLATION = <<<'HTML'
+    php artisan breeze:install
+    HTML;
+
     public const INSTALLATION = <<<'HTML'
     composer require tallstackui/tallstackui:^2.0.0
     HTML;

@@ -2,6 +2,7 @@ installation:
   - Meet TallStackUI
   - History & Motivation
   - Requirements
+  - Laravel 12
   - Installation
 documentation:
   - Searches
