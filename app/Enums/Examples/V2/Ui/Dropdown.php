@@ -108,6 +108,15 @@ class Dropdown
     </x-dropdown>
     HTML;
 
+    public const EVENTS = <<<'HTML'
+    <x-dropdown text="Menu" 
+                x-on:open="alert(`Open, 'show' status: ${$event.detail.status}`)" 
+                x-on:select="alert('Selected')">
+        <x-dropdown.items text="Settings" />
+        <x-dropdown.items text="Logout" separator />
+    </x-dropdown>
+    HTML;
+
     public const PERSONALIZATION = <<<'HTML'
     TallStackUi::personalize()
         ->dropdown()

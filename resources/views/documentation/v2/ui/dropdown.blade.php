@@ -121,4 +121,14 @@
             </div>
         </x-preview>
     </x-section>
+    <x-section title="Events">
+        <x-preview language="blade" :contents="$events">
+            <div class="flex justify-end md:justify-center">
+                <x-dropdown text="Menu" x-on:open="alert(`Open, 'show' status: ${$event.detail.status}`)" x-on:select="alert('Selected')">
+                    <x-dropdown.items text="Settings" />
+                    <x-dropdown.items text="Logout" separator />
+                </x-dropdown>
+            </div>
+        </x-preview>
+    </x-section>
 </x-layout>

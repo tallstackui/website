@@ -303,6 +303,7 @@ ui:
     - Header Slot
     - Dropdown Submenu
     - Action Slot
+    - Events
   error:
     - Basic Usage
     - Filtering Properties
