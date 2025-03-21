@@ -1,8 +1,10 @@
-@import 'tailwindcss/base';
-@import 'tailwindcss/components';
-@import 'tailwindcss/utilities';
+@import "tailwindcss";
 @import '@docsearch/css/dist/style.css';
 @import 'search';
 @import 'torchlight';
+@import '../../vendor/tallstackui/tallstackui/dist/tailwind.css';
 
 [x-cloak] { display: none !important; }
+
+@source '../../vendor/tallstackui/tallstackui';
+@plugin "@tailwindcss/forms";
