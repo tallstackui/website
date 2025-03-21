@@ -32,7 +32,7 @@
 
     <tallstackui:script />
     @livewireStyles
-    @vite(['resources/css/app.scss', 'resources/js/app.js'])
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 <body class="min-h-full flex-col justify-center" x-bind:class="{ 'bg-dots-white dark bg-slate-900' : darkTheme, 'bg-dots-darker bg-white' : !darkTheme }" x-cloak>
     <x-top-bar />

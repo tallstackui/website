@@ -1,0 +1,15 @@
+@import "tailwindcss";
+@import './search.css';
+@import './torchlight.css';
+@import '@docsearch/css/dist/style.css';
+@import '../../vendor/tallstackui/tallstackui/css/v4.css';
+
+[x-cloak] { display: none !important; }
+
+@plugin '@tailwindcss/forms';
+
+@source '../../vendor/tallstackui/tallstackui/**/*.php';
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../vendor/livewire/flux-pro/stubs/**/*.blade.php';
+@source '../../vendor/livewire/flux/stubs/**/*.blade.php';
+@source '../views';
