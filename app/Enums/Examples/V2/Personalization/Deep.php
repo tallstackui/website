@@ -53,8 +53,6 @@ class Deep
 
     public const TAILWINDCSS_V3 = <<<'HTML'
     content: [
-        // ...
-
         './app/View/Components/**/*.php', // [tl! highlight]
     ],
     HTML;

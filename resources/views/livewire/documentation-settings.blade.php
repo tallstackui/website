@@ -43,7 +43,7 @@ $save = function (): void {
              center
              blur>
         <p class="text-sm mb-4">
-            Use this form to configure some aspects of TallStackUI documentation.
+            You can use this form to configure all configurable aspects of the TallStackUI docs.
         </p>
         <form class="space-y-4">
             <x-input label="Prefix" hint="Leave it empty to remove the current prefix." wire:model="prefix" max-length="10">

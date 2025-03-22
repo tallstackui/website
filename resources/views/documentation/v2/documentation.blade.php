@@ -14,12 +14,20 @@
             <kbd>Ctrl</kbd> + <kbd>K</kbd> or <kbd>Cmd</kbd> + <kbd>K</kbd>.
         </p>
     </x-section>
-    <x-section title="Prefixing Examples" disable-copy>
-        If you observe well, there is a button on the left side of the screen, with the text "Prefixing Examples". This button is used
-        to prefix the documentation examples with a prefix that is the same as the one used in your project. This is the time you can
-        ask yourself what is a prefix? Well, a prefix is a way to avoid conflicts between component names, in short. As you can copy
-        examples from the documentation, we created this feature so that if you copy the examples from the documentation, you can
-        already copy them with the prefixes applied. You can read more about the prefix by clicking here.
+    <x-section title="Configure Documentation" disable-copy>
+        <div class="space-y-4">
+            <p>
+                If you look closely, there is a button on the left side of the screen that says <i>"Configure Documentation"</i>. Pressing this button will take you to a modal that allows you to configure some aspects of the TallStackUI documentation:
+            </p>
+            <ul class="list-decimal list-inside space-y-2">
+                <li>
+                    <b>"Component Prefix":</b> The code examples of the docs are displayed without the <a href="{{ route('documentation', ['v2', 'component-prefix']) }}" class="underline" wire:navigate>component prefix.</a> You can use this input to set the prefix you are using in your Laravel project. All code examples of the docs will be displayed using the prefix, which makes it easier for you to copy and paste the code examples.
+                </li>
+                <li>
+                    <b>"View TailwindCSS examples using v4":</b> You can enable this toggle to have all examples involving TailwindCSS displayed adapted for TailwindCSS v4.
+                </li>
+            </ul>
+        </div>
     </x-section>
     <x-section title="Examples Without Binding" disable-copy>
         It is normal to expect that code examples in the documentation related to form components have <x-block>wire:model</x-block> as

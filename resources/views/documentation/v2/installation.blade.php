@@ -17,11 +17,11 @@
         <div class="space-y-4">
             <p>TallStackUI was created with a <b class="font-semibold text-pink-500 underline">focus on Livewire 3</b> so the usage requirements are:</p>
             <ul class="mt-4 ml-4 list-inside list-decimal space-y-2">
-                <li>PHP 8.1 or above</li>
-                <li>Laravel 10, 11 or 12.</li>
+                <li>PHP ^8.1</li>
+                <li>Laravel ^10</li>
                 <li>Livewire 3</li>
                 <li>AlpineJS 3</li>
-                <li>TailwindCSS 3</li>
+                <li>TailwindCSS ^3</li>
             </ul>
         </div>
     </x-section>
@@ -56,18 +56,18 @@
                 </li>
                 <li>
                     @if (!$tailwindcss)
-                        Edit the <x-block>tailwind.config.js</x-block> of your application by inserting all above marked contents:
+                        Edit the <x-block>tailwind.config.js</x-block> of your TailwindCSS v3 by inserting all below marked contents:
                         <x-code language="js" :contents="$tailwindcssV3" disable-copy />
-                        <x-warning>
-                            <ul class="list-decimal list-inside text-sm">
-                                <li>Your TailwindCSS setup must load the <a href="https://tailwindcss.com/docs/plugins#forms" class="underline" target="_blank">form plugin</a></li>
-                                <li>We are working to adapt the TallStackUI V2 to the TailwindCSS v4.</li>
-                            </ul>
-                        </x-warning>
                     @else
-                        Edit the <x-block>app.css</x-block> of your application by inserting all above marked contents:
+                        Edit the <x-block>app.css</x-block> of your TailwindCSS v4 by inserting all below marked contents:
                         <x-code language="js" :contents="$tailwindcssV4" disable-copy />
                     @endif
+                    <x-warning>
+                        <ul class="list-decimal list-inside text-sm">
+                            <li>{{ __('Are you using TailwindCSS :version?', ['version' => $tailwindcss ? 'v3' : 'v4']) }} <a x-on:click="$modalOpen('prefix-modal')" class="cursor-pointer underline">Click here!</a></li>
+                            <li>Your TailwindCSS setup must load the <a href="https://github.com/tailwindlabs/tailwindcss-forms" class="underline" target="_blank">form plugin</a></li>
+                        </ul>
+                    </x-warning>
                 </li>
                 <li>
                     Run the following command:

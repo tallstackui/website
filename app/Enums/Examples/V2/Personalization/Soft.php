@@ -6,22 +6,12 @@ class Soft
 {
     public const TAILWINDCSS_V3 = <<<'HTML'
     content: [
-        // If you are personalizing into service providers...
         './app/Providers/*.php', // [tl! highlight]
-
-        // If you are using object invokable classes... 
-        // Don't worry! You'll understand it below!
-        './app/NameSpaceGoesHere/**/*.php', // [tl! highlight]
     ],
     HTML;
 
     public const TAILWINDCSS_V4 = <<<'HTML'
-    // If you are personalizing into service providers...
     @source '../../app/Providers/*.php';
-
-    // If you are using object invokable classes... 
-    // Don't worry! You'll understand it below!
-    @source '../../app/NameSpaceGoesHere/**/*.php',
     HTML;
 
     public const EXAMPLE = <<<'HTML'
