@@ -1,7 +1,6 @@
 @props([
     'contents' => null,
     'language' => 'php',
-    'unpadding' => null,
     'disableCopy' => null,
     'personalization' => false,
 ])
@@ -17,6 +16,5 @@
             <x-copy-code :$contents :$margin />
         </div>
     @endif
-    <pre {{ $attributes->class(['overflow-auto custom-scrollbar rounded-lg bg-[#292D3E] p-4 my-2']) }}
-    @if ($unpadding) style="padding-left: 0rem !important;" @endif><x-torchlight-code language="{{ $language }}" :$contents /></pre>
+    <pre {{ $attributes->class(['overflow-auto custom-scrollbar rounded-lg bg-[#292D3E]']) }}><x-torchlight-code language="{{ $language }}" :$contents /></pre>
 </div>

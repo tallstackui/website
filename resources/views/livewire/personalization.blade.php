@@ -58,7 +58,7 @@ new class extends VoltComponent {
         @if ($personalization)
             <div wire:ignore>
                 <p class="text-base font-medium">Example:</p>
-                <x-code :contents="$personalization" personalization unpadding />
+                <x-code :contents="$personalization" personalization />
             </div>
         @endif
         @if ($blocks)
@@ -82,7 +82,7 @@ new class extends VoltComponent {
                         </div>
                         <div wire:key="{{ uniqid() }}">
                             <p class="block text-sm font-semibold text-gray-600 dark:text-dark-400">Original Content:</p>
-                            <x-code language="text" :contents="$original['class']" unpadding />
+                            <x-code language="text" :contents="$original['class']" />
                         </div>
                     @endif
                 </div>

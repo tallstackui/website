@@ -6,7 +6,7 @@
     }
 
     pre code.torchlight {
-        @apply block py-1 min-w-max;
+        @apply block p-4 min-w-max;
     }
 
     pre code.torchlight .line {
