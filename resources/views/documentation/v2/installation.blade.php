@@ -56,7 +56,7 @@
                 </li>
                 <li>
                     Edit the <x-block>tailwind.config.js</x-block> of your application by inserting all above marked contents:
-                    <x-code language="js" :contents="$tailwindcss" disable-copy unpadding />
+                    <x-code language="js" :contents="$tailwindcss" disable-copy />
                     <x-warning>
                         <ul class="list-decimal list-inside text-sm">
                             <li>Your TailwindCSS setup must load the <a href="https://tailwindcss.com/docs/plugins#forms" class="underline" target="_blank">form plugin</a></li>
