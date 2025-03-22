@@ -4,7 +4,8 @@
                 'text' => 'text-white'
           ]" :text="[
             'V2 is now our main version. V1 is considered EoL!',
-            'We are working to upgrade the V2 to TailwindCSS v4',
+            'V2 now support both TailwindCSS versions, v3 and v4!',
+            'Please, consider sponsor TallStackUI project to keep it alive!',
         ]" />
 @else
     <x-banner :color="['background' => 'bg-red-600', 'text' => 'text-white']">

@@ -56,16 +56,14 @@ class PageController
             $example = self::EXAMPLES[$example];
         }
 
-        $content = $this->right($version, $main, $children);
-
         if ($view === 'documentation.v2.ui.avatar') {
             auth()->loginUsingId(1);
         }
 
         return view($view, [
-            'content' => $content,
+            'content' => $this->right($version, $main, $children),
             'tailwindcss' => (bool) $request->cookie('tailwindcss'),
-            ...Example::tryFrom($example)?->variables() ?? []
+            ...Example::tryFrom($example)?->variables() ?? [],
         ]);
     }
 
