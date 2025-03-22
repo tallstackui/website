@@ -1,4 +1,4 @@
-<livewire:prefix-selector />
+<livewire:documentation-settings />
 
 <div class="relative z-40 lg:hidden" role="dialog" aria-modal="true" x-show="mobile" x-cloak>
     <div x-show="mobile"

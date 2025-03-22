@@ -17,8 +17,8 @@
                 </div>
             </button>
         </div>
-        <x-button color="pink" class="w-full uppercase" x-on:click="$modalOpen('prefix-modal')" xs>
-            {{ __('PREFIXING EXAMPLES') }}
+        <x-button icon="wrench-screwdriver" color="pink" class="w-full uppercase" x-on:click="$modalOpen('prefix-modal')" xs>
+            {{ __('CONFIGURE DOCUMENTATION') }}
         </x-button>
     </div>
     @include('components.layout.navigation.version.'.$version)

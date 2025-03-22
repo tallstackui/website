@@ -24,7 +24,11 @@
                 need to do is make sure that TailwindCSS tracks the classes that will be defined from your application's <x-block>*.php</x-block> files.
                 To do this, you need to edit your <x-block>tailwind.config.js</x-block> file by inserting this content:
             </p>
-            <x-code language="js" :contents="$tailwindcss" disable-copy/>
+            @if (! $tailwindcss)
+                <x-code language="js" :contents="$tailwindcssV3" disable-copy/>
+            @else
+                <x-code language="js" :contents="$tailwindcssV4" disable-copy/>
+            @endif
         </div>
     </x-section>
     <x-section title="Start the Personalization" disable-copy>

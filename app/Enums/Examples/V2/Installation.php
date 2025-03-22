@@ -28,7 +28,7 @@ class Installation
     </html>
     HTML;
 
-    public const TAILWINDCSS = <<<'HTML'
+    public const TAILWINDCSS_V3 = <<<'HTML'
     import defaultTheme from 'tailwindcss/defaultTheme';
     import forms from '@tailwindcss/forms'; // [tl! focus, add]
     
@@ -57,6 +57,19 @@ class Installation
             forms // [tl! add]
         ],
     };
+    HTML;
+
+    public const TAILWINDCSS_V4 = <<<'HTML'
+    @import "tailwindcss";
+    @import '../../vendor/tallstackui/tallstackui/css/v4.css'; /* [tl! add, focus] */
+    
+    @plugin '@tailwindcss/forms'; /* [tl! add, focus] */
+
+    @source '../../vendor/tallstackui/tallstackui/**/*.php'; /* [tl! add, focus] */
+    @source '../views';
+    @source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+    @source '../../vendor/livewire/flux-pro/stubs/**/*.blade.php';
+    @source '../../vendor/livewire/flux/stubs/**/*.blade.php';
     HTML;
 
     public const BUILD = <<<'HTML'

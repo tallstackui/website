@@ -6,6 +6,7 @@ use App\Enums\Example;
 use App\Traits\VersionDiscovery;
 use Illuminate\Contracts\View\View as ViewContract;
 use Illuminate\Http\RedirectResponse;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\View as ViewFacade;
 use Symfony\Component\Yaml\Yaml;
 
@@ -20,7 +21,7 @@ class PageController
         'Integrations\Alpine' => 'Alpine',
     ];
 
-    public function __invoke(string $version, ?string $main = null, ?string $children = null): ViewContract|RedirectResponse
+    public function __invoke(Request $request, string $version, ?string $main = null, ?string $children = null): ViewContract|RedirectResponse
     {
         $view = 'documentation.'.$version;
 
@@ -61,7 +62,11 @@ class PageController
             auth()->loginUsingId(1);
         }
 
-        return view($view, ['content' => $content, ...Example::tryFrom($example)?->variables() ?? []]);
+        return view($view, [
+            'content' => $content,
+            'tailwindcss' => (bool) $request->cookie('tailwindcss'),
+            ...Example::tryFrom($example)?->variables() ?? []
+        ]);
     }
 
     /**
