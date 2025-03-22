@@ -51,15 +51,20 @@
     </x-section>
     <x-section title="Tracing TailwindCSS Classes" disable-copy>
         <div class="space-y-4">
-            <p class="mb-4">
-                Just like soft personalization, if you are using deep personalization to personalize components that have
-                replaced the original component classes, you must have TailwindCSS be able to track and build the CSS classes
-                defined in your components' PHP files. Edit your <x-block>tailwind.config.js</x-block> file with the following content:
-            </p>
             @if (!$tailwindcss)
+                <p class="mb-4">
+                    Just like soft personalization, if you are using deep personalization to personalize components that have
+                    replaced the original component classes, you must have TailwindCSS be able to track and build the CSS classes
+                    defined in your components' PHP files. Edit your <x-block>tailwind.config.js</x-block> file by inserting the following content:
+                </p>
                 <x-code language="js" :contents="$tailwindcssV3" disable-copy />
             @else
-                <x-code language="js" :contents="$tailwindcssV4" disable-copy />
+                <p class="mb-4">
+                    Just like soft personalization, if you are using deep personalization to personalize components that have
+                    replaced the original component classes, you must have TailwindCSS be able to track and build the CSS classes
+                    defined in your components' PHP files. Edit your <x-block>app.css</x-block> CSS file by inserting the following content:
+                </p>
+                <x-code language="js" :contents="$tailwindcssV4" />
             @endif
         </div>
     </x-section>
