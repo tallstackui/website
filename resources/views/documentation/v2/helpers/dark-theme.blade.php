@@ -17,8 +17,13 @@
                 After applying the helper, an AlpineJS variable called <x-block>darkTheme</x-block> will be offered to control the dark theme
                 persisting the changes in the local storage.
             </p>
-            <p>Enable the dark theme support in your TailwindCSS configuration file:</p>
-            <x-code language="js" :contents="$tailwindcss" disable-copy/>
+            @if (!$tailwindcss)
+                <p>Enable the dark theme support in your <x-block>tailwind.config.js</x-block> configuration file:</p>
+                <x-code language="js" :contents="$tailwindcssV3" disable-copy/>
+            @else
+                <p>Enable the dark theme support in your <x-block>app.css</x-block> CSS configuration file:</p>
+                <x-code language="js" :contents="$tailwindcssV4" disable-copy/>
+            @endif
             <p>Add the helper on the <x-block>html</x-block> tag of your layout:</p>
             <x-code language="blade" :contents="$helper" disable-copy/>
             <p>You can customize the name of the state stored in local storage of the browser, default name is <x-block>dark-theme</x-block></p>

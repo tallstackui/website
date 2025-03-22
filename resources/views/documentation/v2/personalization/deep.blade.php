@@ -56,7 +56,11 @@
                 replaced the original component classes, you must have TailwindCSS be able to track and build the CSS classes
                 defined in your components' PHP files. Edit your <x-block>tailwind.config.js</x-block> file with the following content:
             </p>
-            <x-code language="js" :contents="$tailwindcss" disable-copy />
+            @if (!$tailwindcss)
+                <x-code language="js" :contents="$tailwindcssV3" disable-copy />
+            @else
+                <x-code language="js" :contents="$tailwindcssV4" disable-copy />
+            @endif
         </div>
     </x-section>
     <x-section title="Publish Blade Files" disable-copy>
