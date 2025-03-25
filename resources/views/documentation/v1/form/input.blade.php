@@ -22,7 +22,11 @@
     </x-section>
     <x-section title="Label & Hint">
         <x-preview language="blade" :contents="$labelHint">
-            <x-input label="Name" hint="Insert your name" />
+            <x-input>
+                <x-slot:label>
+                    FooBar
+                </x-slot:label>
+            </x-input>
         </x-preview>
     </x-section>
     <x-section title="Required Label Indicator" description="An option to display an asterisk indicating that the field is required.">

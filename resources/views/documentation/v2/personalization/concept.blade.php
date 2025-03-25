@@ -13,21 +13,17 @@
         </p>
     </x-section>
     <x-section class="grid grid-cols-2 gap-4" disable-copy>
-        <div class="col-span-full md:col-span-1">
-            <div class="rounded-lg bg-white p-6 dark:bg-slate-800">
-                <a class="inline-flex items-center gap-2" href="{{ route('documentation', ['v2', 'personalization', 'soft']) }}" wire:navigate>
-                    <u>Soft</u> Personalization
-                    <x-icon name="arrow-up-right" class="h-5 w-5 text-pink-500" />
-                </a>
-            </div>
-        </div>
-        <div class="col-span-full md:col-span-1">
-            <div class="rounded-lg bg-white p-6 dark:bg-slate-800">
-                <a class="inline-flex items-center gap-2" href="{{ route('documentation', ['v2', 'personalization', 'deep']) }}" wire:navigate>
-                    <u>Deep</u> Personalization
-                    <x-icon name="arrow-up-right" class="h-5 w-5 text-pink-500" />
-                </a>
-            </div>
-        </div>
+        <x-card>
+            <a class="inline-flex items-center gap-2" href="{{ route('documentation', ['v2', 'personalization', 'soft']) }}" wire:navigate>
+                <u>Soft</u> Personalization
+                <x-icon name="arrow-up-right" class="h-5 w-5 text-pink-500" />
+            </a>
+        </x-card>
+        <x-card>
+            <a class="inline-flex items-center gap-2" href="{{ route('documentation', ['v2', 'personalization', 'deep']) }}" wire:navigate>
+                <u>Deep</u> Personalization
+                <x-icon name="arrow-up-right" class="h-5 w-5 text-pink-500" />
+            </a>
+        </x-card>
     </x-section>
 </x-layout>

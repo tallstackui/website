@@ -13,7 +13,7 @@ class Command
     HTML;
 
     public const COLORS = <<<'HTML'
-    php artisan tallstackui:setup-colors
+    php artisan tallstackui:setup-color
     HTML;
 
     public const IDE = <<<'HTML'
