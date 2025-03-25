@@ -83,8 +83,6 @@ class Alert
     <x-alert title="TallStackUi" text="Fuchsia" color="fuchsia" />
     <x-alert title="TallStackUi" text="Pink" color="pink" />
     <x-alert title="TallStackUi" text="Rose" color="rose" />
-    <x-alert title="TallStackUi" text="Black" color="black" />
-    <x-alert title="TallStackUi" text="White" color="white" />
     HTML;
 
     public const OUTLINES = <<<'HTML'
@@ -112,8 +110,6 @@ class Alert
     <x-alert title="TallStackUi" text="Fuchsia" color="fuchsia" outline />
     <x-alert title="TallStackUi" text="Pink" color="pink" outline />
     <x-alert title="TallStackUi" text="Rose" color="rose" outline />
-    <x-alert title="TallStackUi" text="Black" color="black" outline />
-    <x-alert title="TallStackUi" text="White" color="white" outline />
     HTML;
 
     public const LIGHTS = <<<'HTML'
@@ -141,8 +137,6 @@ class Alert
     <x-alert title="TallStackUi" text="Fuchsia" color="fuchsia" light />
     <x-alert title="TallStackUi" text="Pink" color="pink" light />
     <x-alert title="TallStackUi" text="Rose" color="rose" light />
-    <x-alert title="TallStackUi" text="Black" color="black" light />
-    <x-alert title="TallStackUi" text="White" color="white" light />
     HTML;
 
     public const PERSONALIZATION = <<<'HTML'

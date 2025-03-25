@@ -84,8 +84,6 @@
                 <x-stats title="Components" icon="swatch" :number="100" color="fuchsia" outline />
                 <x-stats title="Components" icon="swatch" :number="100" color="pink" outline />
                 <x-stats title="Components" icon="swatch" :number="100" color="rose" outline />
-                <x-stats title="Components" icon="swatch" :number="100" color="black" outline />
-                <x-stats title="Components" icon="swatch" :number="100" color="white" outline />
             </div>
             <x-warning class="mt-4">
                 The color is only applied to the icon and its style.

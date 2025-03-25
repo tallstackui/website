@@ -5740,7 +5740,7 @@
             "dist": {
                 "type": "path",
                 "url": "/Users/aj/Workspace/tallstackui/tallstackui",
-                "reference": "ff7d230afb95c2741aaa0f8ddccc579651fcb019"
+                "reference": "50849fdfc885a21cd110e44b0f01b51ab9469861"
             },
             "require": {
                 "ext-zip": "*",
@@ -5804,6 +5804,9 @@
                 ],
                 "test:browser:ci": [
                     "CI=true ./vendor/bin/pest --filter=Browser"
+                ],
+                "test:browser:setup": [
+                    "./vendor/bin/dusk-updater detect --no-interaction"
                 ],
                 "bench": [
                     "vendor/bin/testbench"

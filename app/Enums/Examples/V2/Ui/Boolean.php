@@ -45,8 +45,6 @@ class Boolean
     <x-boolean :boolean="true" color-when-true="fuchsia" />
     <x-boolean :boolean="true" color-when-true="pink" />
     <x-boolean :boolean="true" color-when-true="rose" />
-    <x-boolean :boolean="true" color-when-true="white" />
-    <x-boolean :boolean="true" color-when-true="black" />
 
     <!-- When false -->
     <x-boolean :boolean="true" color-when-false="primary" />
@@ -73,8 +71,6 @@ class Boolean
     <x-boolean :boolean="true" color-when-false="fuchsia" />
     <x-boolean :boolean="true" color-when-false="pink" />
     <x-boolean :boolean="true" color-when-false="rose" />
-    <x-boolean :boolean="true" color-when-false="white" />
-    <x-boolean :boolean="true" color-when-false="black" />
     HTML;
 
     public const CLICK = <<<'HTML'

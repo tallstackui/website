@@ -334,10 +334,7 @@
                             <dl class="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-1">
                                 <div class="flex flex-col">
                                     <dd class="mt-4 text-base leading-7 text-gray-300 space-y-2">
-                                        <x-select.styled label="Preferred Laravel Developer"
-                                                         :request="route('api.users')"
-                                                         select="label:name|value:id"
-                                                         multiple />
+                                        <x-select.styled label="Preferred Laravel Developer" :request="route('api.users')" multiple />
                                     </dd>
                                 </div>
                             </dl>

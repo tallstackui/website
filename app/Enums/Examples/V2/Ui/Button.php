@@ -94,8 +94,6 @@ class Button
     <x-button text="Fuchsia" color="fuchsia" />
     <x-button text="Pink" color="pink" />
     <x-button text="Rose" color="rose" />
-    <x-button text="Black" color="black" />
-    <x-button text="White" color="white" />
     HTML;
 
     public const OUTLINE = <<<'HTML'
@@ -123,8 +121,6 @@ class Button
     <x-button text="Fuchsia" color="fuchsia" outline />
     <x-button text="Pink" color="pink" outline />
     <x-button text="Rose" color="rose" outline />
-    <x-button text="Black" color="black" outline />
-    <x-button text="White" color="white" outline />
     HTML;
 
     public const LIGHT = <<<'HTML'
@@ -152,8 +148,6 @@ class Button
     <x-button text="Fuchsia" color="fuchsia" light />
     <x-button text="Pink" color="pink" light />
     <x-button text="Rose" color="rose" light />
-    <x-button text="Black" color="black" light />
-    <x-button text="White" color="white" light />
     HTML;
 
     public const FLAT = <<<'HTML'
@@ -181,8 +175,6 @@ class Button
     <x-button text="Fuchsia" color="fuchsia" flat />
     <x-button text="Pink" color="pink" flat />
     <x-button text="Rose" color="rose" flat />
-    <x-button text="Black" color="black" flat />
-    <x-button text="White" color="white" flat />
     HTML;
 
     public const CIRCLE = <<<'HTML'
@@ -249,8 +241,6 @@ class Button
     <x-button.circle icon="bookmark" color="fuchsia" />
     <x-button.circle icon="bookmark" color="pink" />
     <x-button.circle icon="bookmark" color="rose" />
-    <x-button.circle icon="bookmark" color="black" />
-    <x-button.circle icon="bookmark" color="white" />
     HTML;
 
     public const CIRCLE_OUTLINE = <<<'HTML'
@@ -278,8 +268,6 @@ class Button
     <x-button.circle icon="bookmark" color="fuchsia" outline />
     <x-button.circle icon="bookmark" color="pink" outline />
     <x-button.circle icon="bookmark" color="rose" outline />
-    <x-button.circle icon="bookmark" color="black" outline />
-    <x-button.circle icon="bookmark" color="white" outline />
     HTML;
 
     public const CIRCLE_LIGHT = <<<'HTML'
@@ -307,8 +295,6 @@ class Button
     <x-button.circle icon="bookmark" color="fuchsia" light />
     <x-button.circle icon="bookmark" color="pink" light />
     <x-button.circle icon="bookmark" color="rose" light />
-    <x-button.circle icon="bookmark" color="black" light />
-    <x-button.circle icon="bookmark" color="white" light />
     HTML;
 
     public const CIRCLE_FLAT = <<<'HTML'
@@ -336,8 +322,6 @@ class Button
     <x-button.circle icon="bookmark" color="fuchsia" flat />
     <x-button.circle icon="bookmark" color="pink" flat />
     <x-button.circle icon="bookmark" color="rose" flat />
-    <x-button.circle icon="bookmark" color="black" flat />
-    <x-button.circle icon="bookmark" color="white" flat />
     HTML;
 
     public const PERSONALIZATION = <<<'HTML'

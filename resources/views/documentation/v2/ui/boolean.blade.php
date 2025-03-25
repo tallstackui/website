@@ -36,7 +36,7 @@
     </x-section>
     <x-section title="Color Variations">
         <x-preview language="blade" :contents="$colors" disable-copy>
-            <div class="flex flex-col gap-0.5">
+            <div class="gap-2 space-y-2">
                 <x-boolean :boolean="true" color-when-true="primary" />
                 <x-boolean :boolean="true" color-when-true="secondary" />
                 <x-boolean :boolean="true" color-when-true="slate" />
@@ -61,8 +61,6 @@
                 <x-boolean :boolean="true" color-when-true="fuchsia" />
                 <x-boolean :boolean="true" color-when-true="pink" />
                 <x-boolean :boolean="true" color-when-true="rose" />
-                <x-boolean :boolean="true" color-when-true="white" />
-                <x-boolean :boolean="true" color-when-true="black" />
             </div>
         </x-preview>
     </x-section>
