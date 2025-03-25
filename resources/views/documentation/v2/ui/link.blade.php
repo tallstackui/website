@@ -93,8 +93,6 @@
                 <x-link :href="route('documentation', ['v2', 'ui', 'link'])" text="Fuchsia" color="fuchsia" />
                 <x-link :href="route('documentation', ['v2', 'ui', 'link'])" text="Pink" color="pink" />
                 <x-link :href="route('documentation', ['v2', 'ui', 'link'])" text="Rose" color="rose" />
-                <x-link :href="route('documentation', ['v2', 'ui', 'link'])" text="White" color="white" />
-                <x-link :href="route('documentation', ['v2', 'ui', 'link'])" text="Black" color="black" />
             </div>
         </x-preview>
     </x-section>

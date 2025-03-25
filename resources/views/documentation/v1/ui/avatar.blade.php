@@ -44,8 +44,6 @@
                 <x-avatar text="TS" color="fuchsia" />
                 <x-avatar text="TS" color="pink" />
                 <x-avatar text="TS" color="rose" />
-                <x-avatar text="TS" color="black" />
-                <x-avatar text="TS" color="white" />
             </div>
         </x-preview>
     </x-section>
@@ -89,8 +87,6 @@
                 <x-avatar color="fuchsia" />
                 <x-avatar color="pink" />
                 <x-avatar color="rose" />
-                <x-avatar color="black" />
-                <x-avatar color="white" />
             </div>
         </x-preview>
     </x-section>

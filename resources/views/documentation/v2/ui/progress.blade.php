@@ -74,8 +74,6 @@
                 <x-progress :percent="50" color="fuchsia" />
                 <x-progress :percent="50" color="pink" />
                 <x-progress :percent="50" color="rose" />
-                <x-progress :percent="50" color="black" />
-                <x-progress :percent="50" color="white" />
             </div>
         </x-preview>
     </x-section>
@@ -106,8 +104,6 @@
                 <x-progress :percent="50" color="fuchsia" light />
                 <x-progress :percent="50" color="pink" light />
                 <x-progress :percent="50" color="rose" light />
-                <x-progress :percent="50" color="black" light />
-                <x-progress :percent="50" color="white" light />
             </div>
         </x-preview>
     </x-section>
@@ -175,8 +171,6 @@
                 <x-progress.circle :percent="50" color="fuchsia" />
                 <x-progress.circle :percent="50" color="pink" />
                 <x-progress.circle :percent="50" color="rose" />
-                <x-progress.circle :percent="50" color="black" />
-                <x-progress.circle :percent="50" color="white" />
             </div>
         </x-preview>
     </x-section>
@@ -207,8 +201,6 @@
                 <x-progress.circle :percent="50" color="fuchsia" light />
                 <x-progress.circle :percent="50" color="pink" light />
                 <x-progress.circle :percent="50" color="rose" light />
-                <x-progress.circle :percent="50" color="black" light />
-                <x-progress.circle :percent="50" color="white" light />
             </div>
         </x-preview>
     </x-section>

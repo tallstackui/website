@@ -125,8 +125,6 @@
                 <x-button text="Fuchsia" color="fuchsia" />
                 <x-button text="Pink" color="pink" />
                 <x-button text="Rose" color="rose" />
-                <x-button text="Black" color="black" />
-                <x-button text="White" color="white" />
             </div>
         </x-preview>
     </x-section>
@@ -155,10 +153,6 @@
                 <x-button text="Violet" color="violet" light />
                 <x-button text="Purple" color="purple" light />
                 <x-button text="Fuchsia" color="fuchsia" light />
-                <x-button text="Pink" color="pink" light />
-                <x-button text="Rose" color="rose" light />
-                <x-button text="Black" color="black" light />
-                <x-button text="White" color="white" light />
             </div>
         </x-preview>
     </x-section>
@@ -189,8 +183,6 @@
                 <x-button text="Fuchsia" color="fuchsia" outline />
                 <x-button text="Pink" color="pink" outline />
                 <x-button text="Rose" color="rose" outline />
-                <x-button text="Black" color="black" outline />
-                <x-button text="White" color="white" outline />
             </div>
         </x-preview>
     </x-section>
@@ -221,8 +213,6 @@
                 <x-button text="Fuchsia" color="fuchsia" flat />
                 <x-button text="Pink" color="pink" flat />
                 <x-button text="Rose" color="rose" flat />
-                <x-button text="Black" color="black" flat />
-                <x-button text="White" color="white" flat />
             </div>
         </x-preview>
     </x-section>
@@ -288,8 +278,6 @@
                 <x-button.circle icon="bookmark" color="fuchsia" />
                 <x-button.circle icon="bookmark" color="pink" />
                 <x-button.circle icon="bookmark" color="rose" />
-                <x-button.circle icon="bookmark" color="black" />
-                <x-button.circle icon="bookmark" color="white" />
             </div>
         </x-preview>
     </x-section>
@@ -320,8 +308,6 @@
                 <x-button.circle icon="bookmark" color="fuchsia" light />
                 <x-button.circle icon="bookmark" color="pink" light />
                 <x-button.circle icon="bookmark" color="rose" light />
-                <x-button.circle icon="bookmark" color="black" light />
-                <x-button.circle icon="bookmark" color="white" light />
             </div>
         </x-preview>
     </x-section>
@@ -352,8 +338,6 @@
                 <x-button.circle icon="bookmark" color="fuchsia" outline />
                 <x-button.circle icon="bookmark" color="pink" outline />
                 <x-button.circle icon="bookmark" color="rose" outline />
-                <x-button.circle icon="bookmark" color="black" outline />
-                <x-button.circle icon="bookmark" color="white" outline />
             </div>
         </x-preview>
     </x-section>
@@ -384,8 +368,6 @@
                 <x-button.circle icon="bookmark" color="fuchsia" flat />
                 <x-button.circle icon="bookmark" color="pink" flat />
                 <x-button.circle icon="bookmark" color="rose" flat />
-                <x-button.circle icon="bookmark" color="black" flat />
-                <x-button.circle icon="bookmark" color="white" flat />
             </div>
         </x-preview>
     </x-section>
