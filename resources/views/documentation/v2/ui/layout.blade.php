@@ -18,7 +18,7 @@
     </x-slot:personalization>
     <x-section title="Concept" disable-copy>
         <p>
-            The version 2.x of the TallStackUI introduces a new layout component for dashboard creation.
+            The version 2 of the TallStackUI introduces a new layout component for dashboard creation.
             While this component is simple, it is complete in every way. Due to the format of the TallStackUI
             documentation, there will be no code examples of the layout that makes it display.
         </p>

@@ -5,7 +5,7 @@
         <div @class(['w-full border-t border-pink-300', 'dark:border-gray-300' => $dark])></div>
     </div>
     <div class="relative flex justify-center">
-        <span @class(['bg-gray-100 px-2 text-md font-semibold text-pink-500 dark:bg-gray-900', 'dark:text-gray-300' => $dark])>
+        <span @class(['bg-white px-2 text-md font-semibold text-pink-500 dark:bg-gray-900', 'dark:text-gray-300' => $dark])>
             {!! $text ?? $slot !!}
         </span>
     </div>
