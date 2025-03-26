@@ -87,6 +87,7 @@
                 <x-toggle color="fuchsia" label="Fuchsia" checked />
                 <x-toggle color="pink" label="Pink" checked />
                 <x-toggle color="rose" label="Rose" checked />
+                <x-toggle color="black" label="Black" checked />
             </div>
         </x-preview>
     </x-section>

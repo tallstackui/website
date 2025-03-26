@@ -23,6 +23,8 @@ class Link
     HTML;
 
     public const SIZES = <<<'HTML'
+    <x-link href="https://google.com.br/" text="TallStackUI" xs />
+    
     <x-link href="https://google.com.br/" text="TallStackUI" sm />
 
     <!-- default size -->
@@ -43,6 +45,8 @@ class Link
     <x-link href="https://google.com.br/" text="TallStackUI" bold />
 
     <x-link href="https://google.com.br/" text="TallStackUI" underline />
+    
+    <x-link href="https://google.com.br/" text="TallStackUI" italic />
     HTML;
 
     public const QUERY_FRAGMENT = <<<'HTML'

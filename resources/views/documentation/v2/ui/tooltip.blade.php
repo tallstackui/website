@@ -86,6 +86,7 @@
                 <x-tooltip text="fuchsia" color="fuchsia" />
                 <x-tooltip text="pink" color="pink" />
                 <x-tooltip text="rose" color="rose" />
+                <x-tooltip text="black" color="black" />
             </div>
         </x-preview>
     </x-section>

@@ -94,6 +94,7 @@
                 <x-badge text="Fuchsia" color="fuchsia" />
                 <x-badge text="Pink" color="pink" />
                 <x-badge text="Rose" color="rose" />
+                <x-badge text="Black" color="black" />
             </div>
         </x-preview>
     </x-section>
@@ -124,6 +125,7 @@
                 <x-badge text="Fuchsia" color="fuchsia" light />
                 <x-badge text="Pink" color="pink" light />
                 <x-badge text="Rose" color="rose" light />
+                <x-badge text="Black" color="black" light />
             </div>
         </x-preview>
     </x-section>
@@ -154,6 +156,7 @@
                 <x-badge text="Fuchsia" color="fuchsia" outline />
                 <x-badge text="Pink" color="pink" outline />
                 <x-badge text="Rose" color="rose" outline />
+                <x-badge text="Black" color="black" outline />
             </div>
         </x-preview>
     </x-section>

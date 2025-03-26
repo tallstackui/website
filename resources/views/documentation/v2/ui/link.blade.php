@@ -27,6 +27,7 @@
     </x-section>
     <x-section title="Size Variations">
         <x-preview language="blade" :contents="$sizes">
+            <x-link :href="route('documentation', ['v2', 'ui', 'link'])" text="TallStackUI" xs />
             <x-link :href="route('documentation', ['v2', 'ui', 'link'])" text="TallStackUI" sm />
             <x-link :href="route('documentation', ['v2', 'ui', 'link'])" text="TallStackUI" md />
             <x-link :href="route('documentation', ['v2', 'ui', 'link'])" text="TallStackUI" lg />
@@ -51,6 +52,7 @@
                 <x-link :href="route('documentation', ['v2', 'ui', 'link'])" text="TallStackUI" blank />
                 <x-link :href="route('documentation', ['v2', 'ui', 'link'])" text="TallStackUI" bold />
                 <x-link :href="route('documentation', ['v2', 'ui', 'link'])" text="TallStackUI" underline />
+                <x-link :href="route('documentation', ['v2', 'ui', 'link'])" text="TallStackUI" italic />
             </div>
         </x-preview>
     </x-section>
@@ -93,6 +95,7 @@
                 <x-link :href="route('documentation', ['v2', 'ui', 'link'])" text="Fuchsia" color="fuchsia" />
                 <x-link :href="route('documentation', ['v2', 'ui', 'link'])" text="Pink" color="pink" />
                 <x-link :href="route('documentation', ['v2', 'ui', 'link'])" text="Rose" color="rose" />
+                <x-link :href="route('documentation', ['v2', 'ui', 'link'])" text="Black" color="black" />
             </div>
         </x-preview>
     </x-section>

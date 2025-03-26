@@ -86,6 +86,7 @@
                 <x-alert title="TallStackUI" text="Fuchsia" color="fuchsia" />
                 <x-alert title="TallStackUI" text="Pink" color="pink" />
                 <x-alert title="TallStackUI" text="Rose" color="rose" />
+                <x-alert title="TallStackUI" text="Black" color="black" />
             </div>
         </x-preview>
     </x-section>
@@ -116,6 +117,7 @@
                 <x-alert title="TallStackUI" text="Fuchsia" color="fuchsia" light />
                 <x-alert title="TallStackUI" text="Pink" color="pink" light />
                 <x-alert title="TallStackUI" text="Rose" color="rose" light />
+                <x-alert title="TallStackUI" text="Black" color="black" light />
             </div>
         </x-preview>
     </x-section>
@@ -146,6 +148,7 @@
                 <x-alert title="TallStackUI" text="Fuchsia" color="fuchsia" outline />
                 <x-alert title="TallStackUI" text="Pink" color="pink" outline />
                 <x-alert title="TallStackUI" text="Rose" color="rose" outline />
+                <x-alert title="TallStackUI" text="Black" color="black" outline />
             </div>
         </x-preview>
     </x-section>

@@ -60,6 +60,7 @@
                 <x-range color="fuchsia" label="Fuchsia" />
                 <x-range color="pink" label="Pink" />
                 <x-range color="rose" label="Rose" />
+                <x-range color="black" label="Black" />
             </div>
         </x-preview>
     </x-section>
