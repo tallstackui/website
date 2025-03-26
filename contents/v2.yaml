@@ -2,7 +2,15 @@ installation:
   - Meet TallStackUI
   - History & Motivation
   - Requirements
-  - Installation
+  - Starter Kit
+  - Manual Installation
+starter-kit:
+  - About Starter Kit
+  - Ready to Use
+  - How to Use
+  - First Usage
+  - Basic CRUD
+  - Caveats
 documentation:
   - Searches
   - Prefixing Example

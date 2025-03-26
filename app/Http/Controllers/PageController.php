@@ -19,6 +19,7 @@ class PageController
      */
     protected const EXAMPLES = [
         'Integrations\Alpine' => 'Alpine',
+        'StarterKit' => 'StarterKit',
     ];
 
     public function __invoke(Request $request, string $version, ?string $main = null, ?string $children = null): ViewContract|RedirectResponse

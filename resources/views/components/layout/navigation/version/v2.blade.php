@@ -6,6 +6,9 @@
                 <x-layout.navigation.link :href="route('documentation', ['v2', 'installation'])" text="Installation" />
             </li>
             <li class="relative ml-4">
+                <x-layout.navigation.link :href="route('documentation', ['v2', 'starter-kit'])" text="Starter Kit" new />
+            </li>
+            <li class="relative ml-4">
                 <x-layout.navigation.link :href="route('documentation', ['v2', 'documentation'])" text="Documentation" />
             </li>
             <li class="relative ml-4">

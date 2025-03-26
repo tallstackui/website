@@ -48,6 +48,7 @@ enum Example: string
     case Contribution = 'Contribution';
     case Command = 'Command';
     case Installation = 'Installation';
+    case StarterKit = 'StarterKit';
     case ComponentPrefix = 'ComponentPrefix';
     case SummerRelease = 'SummerRelease';
     case Translation = 'Translation';

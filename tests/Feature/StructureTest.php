@@ -114,6 +114,7 @@ describe('V2', function () {
         $this->get($route)->assertOk();
     })->with([
         fn () => route('documentation', ['v2', 'installation']),
+        fn () => route('documentation', ['v2', 'starter-kit']),
         fn () => route('documentation', ['v2', 'documentation']),
         fn () => route('documentation', ['v2', 'component-prefix']),
         fn () => route('documentation', ['v2', 'alpine']),
