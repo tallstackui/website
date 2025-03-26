@@ -4,7 +4,7 @@ namespace App\Enums\Examples\V2\Personalization;
 
 class Color
 {
-    public const FILE = <<<'HTML'
+    public const TAILWINDCSS_V3_FILE = <<<'HTML'
     theme: {
         extend: {
             // ...
@@ -57,6 +57,46 @@ class Color
     },
     HTML;
 
+    public const TAILWINDCSS_V4_FILE = <<<'HTML'
+    @theme {
+        --color-primary-50: #eef2ff;
+        --color-primary-100: #e0e7ff;
+        --color-primary-200: #c7d2fe;
+        --color-primary-300: #a5b4fc;
+        --color-primary-400: #818cf8;
+        --color-primary-500: #6366f1;
+        --color-primary-600: #4f46e5;
+        --color-primary-700: #4338ca;
+        --color-primary-800: #3730a3;
+        --color-primary-900: #312e81;
+        --color-primary-950: #1e1b4b;
+
+        --color-secondary-50: #f8fafc;
+        --color-secondary-100: #f1f5f9;
+        --color-secondary-200: #e2e8f0;
+        --color-secondary-300: #cbd5e1;
+        --color-secondary-400: #94a3b8;
+        --color-secondary-500: #64748b;
+        --color-secondary-600: #475569;
+        --color-secondary-700: #334155;
+        --color-secondary-800: #1e293b;
+        --color-secondary-900: #0f172a;
+        --color-secondary-950: #020617;
+
+        --color-dark-50: #f8fafc;
+        --color-dark-100: #f1f5f9;
+        --color-dark-200: #e2e8f0;
+        --color-dark-300: #cbd5e1;
+        --color-dark-400: #94a3b8;
+        --color-dark-500: #64748b;
+        --color-dark-600: #475569;
+        --color-dark-700: #334155;
+        --color-dark-800: #1e293b;
+        --color-dark-900: #0f172a;
+        --color-dark-950: #020617;
+    }
+    HTML;
+
     public const BUILD = <<<'HTML'
     npm run build && php artisan optimize:clear
     HTML;
@@ -67,11 +107,11 @@ class Color
 
     public const COLOR_CLASS = <<<'HTML'
     // app/View/Components/TallStackUi/Colors/AlertColors.php
-    
+
     namespace App\View\Components\TallStackUi\Colors;
-    
+
     use Illuminate\View\Component;
-    
+
     class AlertColors
     {
         /**
@@ -81,7 +121,6 @@ class Color
         {
             return [
                 'solid' => [
-                    'white' => null,
                     'black' => null,
                     'primary' => null,
                     'secondary' => null,
@@ -109,7 +148,6 @@ class Color
                     'rose' => null,
                 ],
                 'outline' => [
-                    'white' => null,
                     'black' => null,
                     'primary' => null,
                     'secondary' => null,
@@ -137,7 +175,6 @@ class Color
                     'rose' => null,
                 ],
                 'light' => [
-                    'white' => null,
                     'black' => null,
                     'primary' => null,
                     'secondary' => null,
@@ -166,7 +203,7 @@ class Color
                 ],
             ];
         }
-    
+
         /**
          * Text colors.
          */
@@ -174,7 +211,6 @@ class Color
         {
             return [
                 'solid' => [
-                    'white' => null,
                     'black' => null,
                     'primary' => null,
                     'secondary' => null,
@@ -202,7 +238,6 @@ class Color
                     'rose' => null,
                 ],
                 'outline' => [
-                    'white' => null,
                     'black' => null,
                     'primary' => null,
                     'secondary' => null,
@@ -230,7 +265,6 @@ class Color
                     'rose' => null,
                 ],
                 'light' => [
-                    'white' => null,
                     'black' => null,
                     'primary' => null,
                     'secondary' => null,
@@ -268,9 +302,9 @@ class Color
 
     public const CREATE_CUSTOM_COLOR = <<<'HTML'
     namespace App\View\Components\TallStackUi\Colors;
-    
+
     use Illuminate\View\Component;
-    
+
     class AlertColors
     {
         /**
@@ -290,7 +324,7 @@ class Color
                 // 'light' => [/* ... */],
             ];
         }
-    
+
         /**
          * Text colors.
          */
@@ -314,7 +348,7 @@ class Color
     <x-alert text="My custom color is foo-bar" color="foo-bar" />
     HTML;
 
-    public const NEW_CUSTOM_COLOR = <<<'HTML'
+    public const NEW_CUSTOM_COLOR_V3 = <<<'HTML'
     theme: {
         extend: {
             // ...
@@ -322,7 +356,7 @@ class Color
             colors: {
                 // ...
 
-                'malibu': { // [tl! add:13]
+                'malibu': {
                     DEFAULT: '#6ebcf7',
                     '50': '#f0f7ff',
                     '100': '#e1effd',
@@ -341,11 +375,27 @@ class Color
     },
     HTML;
 
+    public const NEW_CUSTOM_COLOR_V4 = <<<'HTML'
+    @theme {
+        --color-malibu-50: #f0f7ff;
+        --color-malibu-100: #e1effd;
+        --color-malibu-200: #bcdefb;
+        --color-malibu-300: #6ebcf7;
+        --color-malibu-400: #3ea8f2;
+        --color-malibu-500: #158ce2;
+        --color-malibu-600: #086ec1;
+        --color-malibu-700: #08589c;
+        --color-malibu-800: #0b4b81;
+        --color-malibu-900: #0f3f6b;
+        --color-malibu-950: #0a2847;
+    }
+    HTML;
+
     public const CREATE_CUSTOM_COLOR_USING_NEW_TAILWIND_COLOR = <<<'HTML'
     namespace App\View\Components\TallStackUi\Colors;
-    
+
     use Illuminate\View\Component;
-    
+
     class AlertColors
     {
         /**
@@ -362,7 +412,7 @@ class Color
                 // ...
             ];
         }
-    
+
         /**
          * Text colors.
          */
@@ -374,7 +424,7 @@ class Color
 
                     // ...
                 ],
-                
+
                 // ...
             ];
         }

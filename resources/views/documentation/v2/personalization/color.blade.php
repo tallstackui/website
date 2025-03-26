@@ -23,7 +23,11 @@
             <p>
                 If you want to customize custom colors like primary, secondary and dark, just follow the normal TailwindCSS color customization concept:
             </p>
-            <x-code language="js" :contents="$file" disable-copy />
+            @if (!$tailwindcss)
+                <x-code language="js" :contents="$tailwindcssV3File" disable-copy />
+            @else
+                <x-code language="css" :contents="$tailwindcssV4File" disable-copy />
+            @endif
             <p>Remember to rebuild your assets after making any adjustments to TailwindCSS colors:</p>
             <x-code language="shell" :contents="$build"/>
         </div>
@@ -93,7 +97,11 @@
             <p>
                 Although this example used <x-block>red</x-block>, you can use completely custom colors as you build in TailwindCSS:
             </p>
-            <x-code language="js" :contents="$newCustomColor" disable-copy />
+            @if (!$tailwindcss)
+                <x-code language="js" :contents="$newCustomColorV3" disable-copy />
+            @else
+                <x-code language="css" :contents="$newCustomColorV4" disable-copy />
+            @endif
             <p>
                 After that, just apply the new color name, <x-block>malibu</x-block> in this example, instead of <x-block>red</x-block>:
             </p>
