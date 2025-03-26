@@ -31,20 +31,20 @@ class Installation
     public const TAILWINDCSS_V3 = <<<'HTML'
     import defaultTheme from 'tailwindcss/defaultTheme';
     import forms from '@tailwindcss/forms'; // [tl! focus, add]
-    
+
     /** @type {import('tailwindcss').Config} */
     export default {
         presets: [ // [tl! focus:2]
             require('./vendor/tallstackui/tallstackui/tailwind.config.js') // [tl! add]
         ],
-    
+
         content: [ // [tl! focus:5]
             './vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php',
             './storage/framework/views/*.php',
             './resources/views/**/*.blade.php',
             './vendor/tallstackui/tallstackui/src/**/*.php', // [tl! add]
         ],
-    
+
         theme: {
             extend: {
                 fontFamily: {
@@ -52,7 +52,7 @@ class Installation
                 },
             },
         },
-    
+
         plugins: [ // [tl! focus:2]
             forms // [tl! add]
         ],
@@ -62,14 +62,12 @@ class Installation
     public const TAILWINDCSS_V4 = <<<'HTML'
     @import "tailwindcss";
     @import '../../vendor/tallstackui/tallstackui/css/v4.css'; /* [tl! add, focus] */
-    
+
     @plugin '@tailwindcss/forms'; /* [tl! add, focus] */
 
     @source '../../vendor/tallstackui/tallstackui/**/*.php'; /* [tl! add, focus] */
     @source '../views';
     @source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
-    @source '../../vendor/livewire/flux-pro/stubs/**/*.blade.php';
-    @source '../../vendor/livewire/flux/stubs/**/*.blade.php';
     HTML;
 
     public const BUILD = <<<'HTML'
