@@ -40,7 +40,9 @@
     <x-section class="mt-4" title="How to Use" disable-copy>
         <div class="space-y-4">
             <p>
-                As mentioned above, the TallStackUI starter kit requires the use of the <a href="https://laravel.com/docs/12.x#creating-a-laravel-project" target="_blank" class="underline">Laravel installer.</a>.
+                As mentioned above, the TallStackUI starter kit requires the use of the <a href="https://laravel.com/docs/12.x#creating-a-laravel-project" target="_blank" class="underline">Laravel installer.</a>
+                <b>If you want to use the TallStackUI starter kit without the Laravel installer</b> you can <a href="https://github.com/tallstackui/starter-kit" target="_blank" class="underline">clone the repository</a>,
+                and then delete the <x-block>.git</x-block> folder to do not track changes of the starter kit. In this way, you will need to install the starter kit manually, which may require more knowledge and time.
             </p>
             <ul class="list-decimal list-inside">
                 <li>
