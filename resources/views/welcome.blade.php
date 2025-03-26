@@ -90,26 +90,14 @@
                                                               lg>
                                                         Getting Started
                                                     </x-button>
-                                                    <div class="block dark:hidden">
-                                                        <x-button href="https://github.com/tallstackui/tallstackui"
-                                                                  target="_blank"
-                                                                  color="pink"
-                                                                  position="right"
-                                                                  outline
-                                                                  md>
-                                                            Source Code
-                                                        </x-button>
-                                                    </div>
-                                                    <div class="hidden dark:block">
-                                                        <x-button href="https://github.com/tallstackui/tallstackui"
-                                                                  target="_blank"
-                                                                  color="white"
-                                                                  position="right"
-                                                                  outline
-                                                                  md>
-                                                            Source Code
-                                                        </x-button>
-                                                    </div>
+                                                    <x-button href="https://github.com/tallstackui/tallstackui"
+                                                              target="_blank"
+                                                              color="pink"
+                                                              position="right"
+                                                              outline
+                                                              sm>
+                                                        Source Code
+                                                    </x-button>
                                                 </div>
                                             </div>
                                         </div>
