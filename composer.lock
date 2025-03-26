@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ce978f0ef819149ca3f40d30c65b4a72",
+    "content-hash": "78fed7abd07dd5130e9501a45134acaf",
     "packages": [
         {
             "name": "brick/math",
@@ -2156,16 +2156,16 @@
         },
         {
             "name": "monolog/monolog",
-            "version": "3.8.1",
+            "version": "3.9.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Seldaek/monolog.git",
-                "reference": "aef6ee73a77a66e404dd6540934a9ef1b3c855b4"
+                "reference": "10d85740180ecba7896c87e06a166e0c95a0e3b6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/aef6ee73a77a66e404dd6540934a9ef1b3c855b4",
-                "reference": "aef6ee73a77a66e404dd6540934a9ef1b3c855b4",
+                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/10d85740180ecba7896c87e06a166e0c95a0e3b6",
+                "reference": "10d85740180ecba7896c87e06a166e0c95a0e3b6",
                 "shasum": ""
             },
             "require": {
@@ -2243,7 +2243,7 @@
             ],
             "support": {
                 "issues": "https://github.com/Seldaek/monolog/issues",
-                "source": "https://github.com/Seldaek/monolog/tree/3.8.1"
+                "source": "https://github.com/Seldaek/monolog/tree/3.9.0"
             },
             "funding": [
                 {
@@ -2255,7 +2255,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-12-05T17:15:07+00:00"
+            "time": "2025-03-24T10:02:05+00:00"
         },
         {
             "name": "nesbot/carbon",
@@ -3268,16 +3268,16 @@
         },
         {
             "name": "ramsey/collection",
-            "version": "2.1.0",
+            "version": "2.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ramsey/collection.git",
-                "reference": "3c5990b8a5e0b79cd1cf11c2dc1229e58e93f109"
+                "reference": "344572933ad0181accbf4ba763e85a0306a8c5e2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ramsey/collection/zipball/3c5990b8a5e0b79cd1cf11c2dc1229e58e93f109",
-                "reference": "3c5990b8a5e0b79cd1cf11c2dc1229e58e93f109",
+                "url": "https://api.github.com/repos/ramsey/collection/zipball/344572933ad0181accbf4ba763e85a0306a8c5e2",
+                "reference": "344572933ad0181accbf4ba763e85a0306a8c5e2",
                 "shasum": ""
             },
             "require": {
@@ -3338,9 +3338,9 @@
             ],
             "support": {
                 "issues": "https://github.com/ramsey/collection/issues",
-                "source": "https://github.com/ramsey/collection/tree/2.1.0"
+                "source": "https://github.com/ramsey/collection/tree/2.1.1"
             },
-            "time": "2025-03-02T04:48:29+00:00"
+            "time": "2025-03-22T05:38:12+00:00"
         },
         {
             "name": "ramsey/uuid",
@@ -5736,11 +5736,17 @@
         },
         {
             "name": "tallstackui/tallstackui",
-            "version": "2.x-dev",
-            "dist": {
-                "type": "path",
-                "url": "/Users/aj/Workspace/tallstackui/tallstackui",
+            "version": "v2.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/tallstackui/tallstackui.git",
                 "reference": "17191b8f03ceea95ce87371699b072ac7be763ef"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/tallstackui/tallstackui/zipball/17191b8f03ceea95ce87371699b072ac7be763ef",
+                "reference": "17191b8f03ceea95ce87371699b072ac7be763ef",
+                "shasum": ""
             },
             "require": {
                 "ext-zip": "*",
@@ -5765,79 +5771,23 @@
             "type": "library",
             "extra": {
                 "laravel": {
-                    "providers": [
-                        "TallStackUi\\TallStackUiServiceProvider"
-                    ],
                     "aliases": {
                         "TallStackUi": "TallStackUi\\Facades\\TallStackUi"
-                    }
+                    },
+                    "providers": [
+                        "TallStackUi\\TallStackUiServiceProvider"
+                    ]
                 }
             },
             "autoload": {
-                "psr-4": {
-                    "TallStackUi\\": "src/"
-                },
                 "files": [
                     "src/helpers.php"
-                ]
-            },
-            "autoload-dev": {
+                ],
                 "psr-4": {
-                    "App\\": "vendor/orchestra/testbench-core/laravel/app",
-                    "Tests\\": "tests/"
+                    "TallStackUi\\": "src/"
                 }
             },
-            "scripts": {
-                "test": [
-                    "./vendor/bin/pest"
-                ],
-                "test:ci": [
-                    "CI=true ./vendor/bin/pest"
-                ],
-                "test:feature": [
-                    "vendor/bin/testbench view:clear",
-                    "./vendor/bin/pest --filter=Feature --parallel"
-                ],
-                "test:browser": [
-                    "./vendor/bin/pest --filter=Browser"
-                ],
-                "test:browser:ci": [
-                    "CI=true ./vendor/bin/pest --filter=Browser"
-                ],
-                "test:browser:setup": [
-                    "./vendor/bin/dusk-updater detect --no-interaction"
-                ],
-                "bench": [
-                    "vendor/bin/testbench"
-                ],
-                "type": [
-                    "./vendor/bin/pest --type-coverage"
-                ],
-                "format": [
-                    "./vendor/bin/pint",
-                    "npm run lint:fix"
-                ],
-                "rector": [
-                    "php ./vendor/bin/rector process --dry-run --config=rector.php"
-                ],
-                "analyse": [
-                    "./vendor/bin/phpstan analyse --memory-limit=2G"
-                ],
-                "ci": [
-                    "Composer\\Config::disableProcessTimeout",
-                    "./vendor/bin/pint --test",
-                    "./vendor/bin/phpstan analyse --memory-limit=2G",
-                    "./vendor/bin/testbench view:clear",
-                    "./vendor/bin/pest --filter=Feature --parallel --stop-on-failure",
-                    "./vendor/bin/testbench view:clear",
-                    "CI=true ./vendor/bin/pest --filter=Browser"
-                ],
-                "ci:analyse": [
-                    "./vendor/bin/pint --test",
-                    "./vendor/bin/phpstan analyse --memory-limit=2G",
-                    "php ./vendor/bin/rector process --dry-run --config=rector.php"
-                ]
-            },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -5848,9 +5798,17 @@
                 }
             ],
             "description": "TallStackUI is a powerful suite of Blade components that elevate your workflow of Livewire applications.",
-            "transport-options": {
-                "relative": false
-            }
+            "support": {
+                "issues": "https://github.com/tallstackui/tallstackui/issues",
+                "source": "https://github.com/tallstackui/tallstackui/tree/v2.3.0"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/devajmeireles",
+                    "type": "github"
+                }
+            ],
+            "time": "2025-03-26T02:48:03+00:00"
         },
         {
             "name": "tijsverkoyen/css-to-inline-styles",
@@ -5909,32 +5867,32 @@
         },
         {
             "name": "torchlight/torchlight-laravel",
-            "version": "v0.6.0",
+            "version": "v0.6.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/torchlight-api/torchlight-laravel.git",
-                "reference": "ecdabd33326f9b37da95032c971a340c4e3f4306"
+                "reference": "5670af34e9637761c89687848b8bd71e043d6819"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/torchlight-api/torchlight-laravel/zipball/ecdabd33326f9b37da95032c971a340c4e3f4306",
-                "reference": "ecdabd33326f9b37da95032c971a340c4e3f4306",
+                "url": "https://api.github.com/repos/torchlight-api/torchlight-laravel/zipball/5670af34e9637761c89687848b8bd71e043d6819",
+                "reference": "5670af34e9637761c89687848b8bd71e043d6819",
                 "shasum": ""
             },
             "require": {
                 "guzzlehttp/guzzle": "^7.2",
-                "illuminate/cache": "^8.0|^9.0|^10.0|^11.0",
-                "illuminate/console": "^8.0|^9.0|^10.0|^11.0",
-                "illuminate/http": "^8.0|^9.0|^10.0|^11.0",
-                "illuminate/support": "^8.0|^9.0|^10.0|^11.0",
-                "illuminate/view": "^8.0|^9.0|^10.0|^11.0",
+                "illuminate/cache": "^8.0|^9.0|^10.0|^11.0|^12.0",
+                "illuminate/console": "^8.0|^9.0|^10.0|^11.0|^12.0",
+                "illuminate/http": "^8.0|^9.0|^10.0|^11.0|^12.0",
+                "illuminate/support": "^8.0|^9.0|^10.0|^11.0|^12.0",
+                "illuminate/view": "^8.0|^9.0|^10.0|^11.0|^12.0",
                 "php": "^7.3|^8.0",
                 "ramsey/uuid": "^3.7|^4.0"
             },
             "require-dev": {
                 "mockery/mockery": "^1.3.3",
-                "orchestra/testbench": "^5.0|^6.0|^7.0|^9.0",
-                "phpunit/phpunit": "^8.5.23|^9.5|^10.5"
+                "orchestra/testbench": "^5.0|^6.0|^7.0|^9.0|^10.0",
+                "phpunit/phpunit": "^8.5.23|^9.5|^10.5|^11.5.3"
             },
             "type": "library",
             "extra": {
@@ -5968,9 +5926,9 @@
             ],
             "support": {
                 "issues": "https://github.com/torchlight-api/torchlight-laravel/issues",
-                "source": "https://github.com/torchlight-api/torchlight-laravel/tree/v0.6.0"
+                "source": "https://github.com/torchlight-api/torchlight-laravel/tree/v0.6.1"
             },
-            "time": "2024-05-16T18:16:31+00:00"
+            "time": "2025-03-22T15:38:26+00:00"
         },
         {
             "name": "vlucas/phpdotenv",
@@ -7732,16 +7690,16 @@
         },
         {
             "name": "phpstan/phpstan",
-            "version": "1.12.21",
+            "version": "1.12.23",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpstan/phpstan.git",
-                "reference": "14276fdef70575106a3392a4ed553c06a984df28"
+                "reference": "29201e7a743a6ab36f91394eab51889a82631428"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/14276fdef70575106a3392a4ed553c06a984df28",
-                "reference": "14276fdef70575106a3392a4ed553c06a984df28",
+                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/29201e7a743a6ab36f91394eab51889a82631428",
+                "reference": "29201e7a743a6ab36f91394eab51889a82631428",
                 "shasum": ""
             },
             "require": {
@@ -7786,7 +7744,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2025-03-09T09:24:50+00:00"
+            "time": "2025-03-23T14:57:32+00:00"
         },
         {
             "name": "phpunit/php-code-coverage",
@@ -10248,9 +10206,7 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "tallstackui/tallstackui": 20
-    },
+    "stability-flags": {},
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
