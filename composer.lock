@@ -5740,7 +5740,7 @@
             "dist": {
                 "type": "path",
                 "url": "/Users/aj/Workspace/tallstackui/tallstackui",
-                "reference": "f569321a1daeb1594b98069c9497d0ec90c2878b"
+                "reference": "17191b8f03ceea95ce87371699b072ac7be763ef"
             },
             "require": {
                 "ext-zip": "*",
