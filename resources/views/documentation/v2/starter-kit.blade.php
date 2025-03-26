@@ -24,6 +24,8 @@
             <ul class="ml-4 list-decimal list-inside">
                 <li>Basic <x-block>sqlite</x-block> database connection</li>
                 <li>Basic login and registration</li>
+                <li>Basic profile update page</li>
+                <li>Dark theme switcher</li>
                 <li>Users <x-block>C.R.U.D.</x-block> example</li>
                 <li>Full test covered</li>
             </ul>
@@ -76,17 +78,17 @@
                 <b>Keep in mind that the authenticated user is not displayed in the user list.</b>
             </p>
             <p>
-                Internally, the <x-block>C.R.U.D.</x-block> uses the <x-block>App\Livewire\User</x-block>
+                Internally, the <x-block>C.R.U.D.</x-block> uses the <x-block>App\Livewire\Users</x-block>
                 namespace structure dividing each <x-block>C.R.U.D.</x-block> action in a specific Livewire component for a better organization:
             </p>
             <ul class="list-decimal list-inside">
-                <li><x-block>User\Index</x-block> - Used to only list the users and also display other components</li>
-                <li><x-block>User\Create</x-block> - Used to create new users, called inside <x-block>Index</x-block></li>
-                <li><x-block>User\Update</x-block> - Used to update users, called inside <x-block>Index</x-block></li>
-                <li><x-block>User\Delete</x-block> - Used to delete users, called inside <x-block>Index</x-block></li>
+                <li><x-block>Users\Index</x-block> - Used to only list the users and also display other components</li>
+                <li><x-block>Users\Create</x-block> - Used to create new users, called inside <x-block>Index</x-block></li>
+                <li><x-block>Users\Update</x-block> - Used to update users, called inside <x-block>Index</x-block></li>
+                <li><x-block>Users\Delete</x-block> - Used to delete users, called inside <x-block>Index</x-block></li>
             </ul>
             <p>
-                The <x-block>User\Update</x-block> and <x-block>User\Delete</x-block> are called inside the loop of the table.
+                The <x-block>Users\Update</x-block> and <x-block>Users\Delete</x-block> are called inside the loop of the table.
             </p>
         </div>
     </x-section>
