@@ -67,7 +67,6 @@ class Stats
     <x-stats :number="100" color="pink" />
     <x-stats :number="100" color="rose" />
     <x-stats :number="100" color="black" />
-    <x-stats :number="100" color="white" />
     HTML;
 
     public const SYMBOLS = <<<'HTML'

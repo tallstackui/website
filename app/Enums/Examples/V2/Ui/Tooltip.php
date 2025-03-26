@@ -79,7 +79,6 @@ class Tooltip
     <x-tooltip text="pink" color="pink" />
     <x-tooltip text="rose" color="rose" />
     <x-tooltip text="black" color="black" />
-    <x-tooltip text="white" color="white" />
     HTML;
 
     public const OUTLINES = <<<'HTML'
@@ -108,7 +107,6 @@ class Tooltip
     <x-tooltip text="pink" color="pink" outline />
     <x-tooltip text="rose" color="rose" outline />
     <x-tooltip text="black" color="black" outline />
-    <x-tooltip text="white" color="white" outline />
     HTML;
 
     public const PERSONALIZATION = <<<'HTML'

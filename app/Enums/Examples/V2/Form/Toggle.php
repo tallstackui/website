@@ -68,7 +68,6 @@ class Toggle
     <x-toggle color="pink" label="Pink" />
     <x-toggle color="rose" label="Rose" />
     <x-toggle color="black" label="Black" />
-    <x-toggle color="white" label="White" />
     HTML;
 
     public const PERSONALIZATION = <<<'HTML'

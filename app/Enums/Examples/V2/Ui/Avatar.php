@@ -34,7 +34,6 @@ class Avatar
     <x-avatar text="TS" color="pink" />
     <x-avatar text="TS" color="rose" />
     <x-avatar text="TS" color="black" />
-    <x-avatar text="TS" color="white" />
     HTML;
 
     public const SIZES = <<<'HTML'
@@ -100,7 +99,6 @@ class Avatar
     <x-avatar color="pink" />
     <x-avatar color="rose" />
     <x-avatar color="black" />
-    <x-avatar color="white" />
     HTML;
 
     public const BORDERLESS = <<<'HTML'

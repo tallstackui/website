@@ -17,27 +17,12 @@
         <div class="space-y-4">
             <p>TallStackUI was created with a <b class="font-semibold text-pink-500 underline">focus on Livewire 3</b> so the usage requirements are:</p>
             <ul class="mt-4 ml-4 list-inside list-decimal space-y-2">
-                <li>PHP ^8.1</li>
-                <li>Laravel ^10</li>
+                <li>PHP 8.1 or later</li>
+                <li>Laravel 10 or later</li>
                 <li>Livewire 3</li>
                 <li>AlpineJS 3</li>
-                <li>TailwindCSS ^3</li>
+                <li>TailwindCSS 3 or later</li>
             </ul>
-        </div>
-    </x-section>
-    <x-section title="Laravel 12">
-        <div class="space-y-4">
-            <p>
-                With the release of Laravel 12, new official starter kits were introduced to the community, and among them you have
-                the "Livewire" option, which will initialize a project with Laravel 12 and Livewire 3, but using the official Livewire
-                component library - created by the same creator of Livewire. However, <u>this library is offered in a free format for use
-                of certain components, but you need to pay to use all components in a version called "pro"</u>. If you want to initialize
-                a new project using Laravel 12 and TallStackUI, you can still use the Laravel Breeze starter kit.
-            </p>
-            <p>
-                All you have to do is <u class="font-bold">initialize the Laravel 12 project without any starter kit</u> and then include and install the
-                Laravel Breeze in your project - selecting <i>"Blade with Alpine"</i> stack, and then install TallStackUI following the step-by-step instructions described below.
-            </p>
         </div>
     </x-section>
     <x-section title="Installation" disable-copy>

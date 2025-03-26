@@ -69,7 +69,6 @@ class Checkbox
     <x-checkbox color="pink" label="Pink" />
     <x-checkbox color="rose" label="Rose" />
     <x-checkbox color="black" label="Black" />
-    <x-checkbox color="white" label="White" />
     HTML;
 
     public const PERSONALIZATION = <<<'HTML'

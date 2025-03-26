@@ -100,7 +100,7 @@
                         <x-layout.navigation.link :href="route('documentation', ['v2', 'ui', 'card'])" text="Card" />
                     </li>
                     <li class="relative ml-4">
-                        <x-layout.navigation.link :href="route('documentation', ['v2', 'ui', 'carousel'])" text="Carousel" />
+                        <x-layout.navigation.link :href="route('documentation', ['v2', 'ui', 'carousel'])" text="Carousel" new />
                     </li>
                     <li class="relative ml-4">
                         <x-layout.navigation.link :href="route('documentation', ['v2', 'ui', 'clipboard'])" text="Clipboard" />
@@ -112,7 +112,7 @@
                         <x-layout.navigation.link :href="route('documentation', ['v2', 'ui', 'error'])" text="Error" />
                     </li>
                     <li class="relative ml-4">
-                        <x-layout.navigation.link :href="route('documentation', ['v2', 'ui', 'environment'])" text="Environment" />
+                        <x-layout.navigation.link :href="route('documentation', ['v2', 'ui', 'environment'])" text="Environment" new />
                     </li>
                     <li class="relative ml-4">
                         <x-layout.navigation.link :href="route('documentation', ['v2', 'ui', 'icon'])" text="Icon" />
@@ -139,7 +139,7 @@
                         <x-layout.navigation.link :href="route('documentation', ['v2', 'ui', 'rating'])" text="Rating" />
                     </li>
                     <li class="relative ml-4">
-                        <x-layout.navigation.link :href="route('documentation', ['v2', 'ui', 'signature'])" text="Signature" />
+                        <x-layout.navigation.link :href="route('documentation', ['v2', 'ui', 'signature'])" text="Signature" new />
                     </li>
                     <li class="relative ml-4">
                         <x-layout.navigation.link :href="route('documentation', ['v2', 'ui', 'slide'])" text="Slide" />
@@ -235,7 +235,7 @@
                 <h2 class="font-medium text-pink-900 font-display dark:text-pink-500">Helpers</h2>
                 <ul role="list" class="mt-4 space-y-2 dark:border-slate-800 lg:space-y-4 lg:mt-4 lg:border-slate-200">
                     <li class="relative ml-4">
-                        <x-layout.navigation.link :href="route('documentation', ['v2', 'helpers', 'env-bar'])" text="EnvBar" />
+                        <x-layout.navigation.link :href="route('documentation', ['v2', 'helpers', 'env-bar'])" text="EnvBar" new />
                     </li>
                     <li class="relative ml-4">
                         <x-layout.navigation.link :href="route('documentation', ['v2', 'helpers', 'dark-theme'])" text="Dark Theme" />

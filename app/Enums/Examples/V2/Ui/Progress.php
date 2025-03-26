@@ -55,7 +55,6 @@ class Progress
     <x-progress :percent="50" color="pink" />
     <x-progress :percent="50" color="rose" />
     <x-progress :percent="50" color="black" />
-    <x-progress :percent="50" color="white" />
     HTML;
 
     public const LIGHTS = <<<'HTML'
@@ -84,7 +83,6 @@ class Progress
     <x-progress :percent="50" color="pink" light />
     <x-progress :percent="50" color="rose" light />
     <x-progress :percent="50" color="black" light />
-    <x-progress :percent="50" color="white" light />
     HTML;
 
     public const FOOTER_SLOT = <<<'HTML'
@@ -140,7 +138,6 @@ class Progress
     <x-progress.circle :percent="50" color="pink" />
     <x-progress.circle :percent="50" color="rose" />
     <x-progress.circle :percent="50" color="black" />
-    <x-progress.circle :percent="50" color="white" />
     HTML;
 
     public const CIRCLE_LIGHTS = <<<'HTML'
@@ -169,7 +166,6 @@ class Progress
     <x-progress.circle :percent="50" color="pink" light />
     <x-progress.circle :percent="50" color="rose" light />
     <x-progress.circle :percent="50" color="black" light />
-    <x-progress.circle :percent="50" color="white" light />
     HTML;
 
     public const CIRCLE_FOOTER_SLOT = <<<'HTML'

@@ -68,7 +68,6 @@ class Error
     <x-errors color="pink" />
     <x-errors color="rose" />
     <x-errors color="black" />
-    <x-errors color="white" />
     HTML;
 
     public const EVENTS = <<<'HTML'

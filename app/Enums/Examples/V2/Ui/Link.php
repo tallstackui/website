@@ -82,7 +82,6 @@ class Link
     <x-link href="https://google.com.br/" text="Fuchsia" color="fuchsia" />
     <x-link href="https://google.com.br/" text="Pink" color="pink" />
     <x-link href="https://google.com.br/" text="Rose" color="rose" />
-    <x-link href="https://google.com.br/" text="White" color="white" />
     <x-link href="https://google.com.br/" text="Black" color="black" />
     HTML;
 

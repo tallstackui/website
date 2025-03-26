@@ -11,7 +11,7 @@
         <p>
             The docs offers a search system that can be used to quickly find what you are looking for. You can click on the text box
             "Quick search...", on the left side of the screen, or press one of the shortcuts, depending on your operating system:
-            <kbd>Ctrl</kbd> + <kbd>K</kbd> or <kbd>Cmd</kbd> + <kbd>K</kbd>.
+            <x-block>Ctrl</x-block> + <x-block>K</x-block> or <x-block>Cmd</x-block> + <x-block>K</x-block>.
         </p>
     </x-section>
     <x-section title="Configure Documentation" disable-copy>
@@ -21,10 +21,10 @@
             </p>
             <ul class="list-decimal list-inside space-y-2">
                 <li>
-                    <b>"Component Prefix":</b> The code examples of the docs are displayed without the <a href="{{ route('documentation', ['v2', 'component-prefix']) }}" class="underline" wire:navigate>component prefix.</a> You can use this input to set the prefix you are using in your Laravel project. All code examples of the docs will be displayed using the prefix, which makes it easier for you to copy and paste the code examples.
+                    <b class="italic">"Component Prefix":</b> The code examples of the docs are displayed without the <a href="{{ route('documentation', ['v2', 'component-prefix']) }}" class="underline" wire:navigate>component prefix.</a> You can use this input to set the prefix you are using in your Laravel project. All code examples of the docs will be displayed using the prefix, which makes it easier for you to copy and paste the code examples.
                 </li>
                 <li>
-                    <b>"View TailwindCSS examples using v4":</b> You can enable this toggle to have all examples involving TailwindCSS displayed adapted for TailwindCSS v4.
+                    <b class="italic">"View TailwindCSS examples using v4":</b> You can enable this toggle to have all examples involving TailwindCSS displayed adapted for TailwindCSS v4.
                 </li>
             </ul>
         </div>

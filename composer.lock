@@ -5740,7 +5740,7 @@
             "dist": {
                 "type": "path",
                 "url": "/Users/aj/Workspace/tallstackui/tallstackui",
-                "reference": "50849fdfc885a21cd110e44b0f01b51ab9469861"
+                "reference": "f569321a1daeb1594b98069c9497d0ec90c2878b"
             },
             "require": {
                 "ext-zip": "*",
@@ -5760,7 +5760,6 @@
                 "orchestra/testbench-dusk": "^8.0|^9.0",
                 "pestphp/pest": "^2.0|^3.7",
                 "pestphp/pest-plugin-type-coverage": "^2.2|^3.3",
-                "rector/rector": "^1.0|^2.0",
                 "spatie/ray": "^1.41"
             },
             "type": "library",
@@ -5828,7 +5827,6 @@
                     "Composer\\Config::disableProcessTimeout",
                     "./vendor/bin/pint --test",
                     "./vendor/bin/phpstan analyse --memory-limit=2G",
-                    "php ./vendor/bin/rector process --dry-run --config=rector.php",
                     "./vendor/bin/testbench view:clear",
                     "./vendor/bin/pest --filter=Feature --parallel --stop-on-failure",
                     "./vendor/bin/testbench view:clear",

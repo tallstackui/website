@@ -68,7 +68,6 @@ class Radio
     <x-radio color="pink" label="Pink" />
     <x-radio color="rose" label="Rose" />
     <x-radio color="black" label="Black" />
-    <x-radio color="white" label="White" />
     HTML;
 
     public const PERSONALIZATION = <<<'HTML'

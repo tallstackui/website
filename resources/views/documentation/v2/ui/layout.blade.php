@@ -118,6 +118,8 @@
                 <li>Attribute: <x-block>smart</x-block>: enable route detection behavior to enable the "current" routes effect</li>
                 <li>Attribute: <x-block>navigate</x-block>: enable <x-block>wire:navigate</x-block> routes</li>
                 <li>Attribute: <x-block>navigate-hover</x-block>: enable <x-block>wire:navigate.hover</x-block> routes</li>
+                <li>Attribute: <x-block>thin-scroll</x-block>: enable <x-block>soft-scrollbar</x-block> in the side bar</li>
+                <li>Attribute: <x-block>thick-scroll</x-block>: enable <x-block>custom-scrollbar</x-block> in the side bar</li>
             </ul>
             <p>
                 Full example:

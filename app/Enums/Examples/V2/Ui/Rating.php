@@ -97,7 +97,6 @@ class Rating
     <x-rating :rate="3" color="pink" />
     <x-rating :rate="3" color="rose" />
     <x-rating :rate="3" color="black" />
-    <x-rating :rate="3" color="white" />
     HTML;
 
     public const EVENTS = <<<'HTML'

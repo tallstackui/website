@@ -44,7 +44,6 @@ class Range
     <x-range color="pink" label="Pink" />
     <x-range color="rose" label="Rose" />
     <x-range color="black" label="Black" />
-    <x-range color="white" label="White" />
     HTML;
 
     public const PERSONALIZATION = <<<'HTML'
