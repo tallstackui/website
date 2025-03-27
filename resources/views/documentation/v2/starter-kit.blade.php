@@ -2,16 +2,26 @@
     <x-slot:title>
         Starter Kit
     </x-slot:title>
-    <x-section class="mt-4" title="About Starter Kit" disable-copy>
+    <x-section title="Preview" disable-copy>
+        <div class="space-y-4">
+            <video width="1024" height="1024" controls>
+                <source src="{{ asset('/assets/videos/tsui-starter-kit-preview.mp4') }}" type="video/mp4">
+            </video>
+            <span class="text-sm font-bold">
+                Have you ever imagined having a Laravel 12 project completely ready to use in exactly 30 secs? 🤯
+            </span>
+        </div>
+    </x-section>
+    <x-section title="About Starter Kit" disable-copy>
         The release of Laravel 12 brought the long-awaited support for community starter kits through the <a href="https://laravel.com/docs/12.x#creating-a-laravel-project" target="_blank" class="underline">Laravel installer.</a>
         The idea behind starter kits is to offer a ready-to-use base project containing customizations specific to each use case.
         The TallStackUI starter kit offers a simple project, yet fully prepared for real use. <b>The biggest benefit of
         using the TallStackUI starter kit is saving time on basic setup of new Laravel projects.</b>
     </x-section>
-    <x-section class="mt-4" title="Ready to Use" disable-copy>
+    <x-section title="Ready to Use" disable-copy>
         <div class="space-y-4">
             <p>Here is the list of everything the TallStackUI starter kit delivers <i>out of the box:</i></p>
-            <ul class="ml-4 list-decimal list-inside">
+            <ul class="list-decimal list-inside">
                 <li>Laravel 12</li>
                 <li>Livewire 3</li>
                 <li>TallStackUI 2</li>
@@ -21,23 +31,38 @@
                 <b>TallStackUI support both TailwindCSS versions, v3 and v4</b>, but we have no plans to create a TallStackUI starter kit based on TailwindCSS v3 since the main version of TailwindCSS is now v4.
             </x-warning>
             <p class="font-semibold text-pink-600">Features:</p>
-            <ul class="ml-4 list-decimal list-inside">
+            <ul class="list-decimal list-inside">
                 <li>Basic <x-block>sqlite</x-block> database connection</li>
                 <li>Basic login and registration</li>
                 <li>Basic profile update page</li>
-                <li>Dark theme switcher</li>
                 <li>Users <x-block>C.R.U.D.</x-block> example</li>
+                <li>Dark theme switcher</li>
                 <li>Full test covered</li>
+                <li>One single config file published</li>
+                <li>All unnecessary comments removed</li>
             </ul>
             <p class="font-semibold text-pink-600">Tools:</p>
-            <ul class="ml-4 list-decimal list-inside">
-                <li>Pest - <x-block>composer test</x-block> command</li>
-                <li>PhpStan - <x-block>composer analyse</x-block> command</li>
-                <li>Pint - <x-block>composer format</x-block> command</li>
+            <ul class="list-inside">
+                <li>
+                    Pest:
+                    <x-code language="shell" :contents="$pest" />
+                </li>
+                <li>
+                    PhpStan:
+                    <x-code language="shell" :contents="$phpstan" />
+                </li>
+                <li>
+                    Pint:
+                    <x-code language="shell" :contents="$pint" />
+                </li>
             </ul>
+            <p>
+                You can also use the <x-block>composer ci</x-block>, like simulating a CI/CD pipeline:
+            </p>
+            <x-code language="shell" :contents="$ci" />
         </div>
     </x-section>
-    <x-section class="mt-4" title="How to Use" disable-copy>
+    <x-section title="How to Use" disable-copy>
         <div class="space-y-4">
             <p>
                 As mentioned above, the TallStackUI starter kit requires the use of the <a href="https://laravel.com/docs/12.x#creating-a-laravel-project" target="_blank" class="underline">Laravel installer.</a>
@@ -53,7 +78,7 @@
             </ul>
         </div>
     </x-section>
-    <x-section class="mt-4" title="First Usage" disable-copy>
+    <x-section title="First Usage" disable-copy>
         <div class="space-y-4">
             <p>
                 On first use you will notice that the <x-block>welcome</x-block> page is actually the default Laravel page.
@@ -68,11 +93,12 @@
                 <li>
                     Password:
                     <x-code language="txt" :contents="$password" />
+                    <span class="text-xs"><span class="text-red-500">*</span> This password is intended to be used only locally.</span>
                 </li>
             </ul>
         </div>
     </x-section>
-    <x-section class="mt-4" title="Basic CRUD" disable-copy>
+    <x-section title="Basic CRUD" disable-copy>
         <div class="space-y-4">
             <p>
                 The TallStackUI starter kit includes a basic user <x-block>C.R.U.D.</x-block> that you can view by navigating to the <x-block>/users</x-block> page.
@@ -90,11 +116,11 @@
                 <li><x-block>Users\Delete</x-block> - Used to delete users, called inside <x-block>Index</x-block></li>
             </ul>
             <p>
-                The <x-block>Users\Update</x-block> and <x-block>Users\Delete</x-block> are called inside the loop of the table.
+                The <x-block>Create</x-block>, <x-block>Update</x-block>, and <x-block>Delete</x-block> are children of <x-block>Index</x-block>.
             </p>
         </div>
     </x-section>
-    <x-section class="mt-4" title="Caveats" disable-copy>
+    <x-section title="Caveats" disable-copy>
         <div class="space-y-4">
             <ul class="list-decimal list-inside space-y-2">
                 <li>
