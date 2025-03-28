@@ -35,8 +35,9 @@
     <x-section title="Installation" disable-copy>
         <div class="space-y-4">
             <x-code language="shell" :contents="$installation" />
-            <p class="underline">
-                The EnvBar, it will be automatically injected into your application.
+            <p>
+                <span class="underline">EnvBar will be automatically injected into your application.</span> Starting with v1.2.0, if you prefer
+                to determine where it should be injected instead of accepting automatic injection, you can use <x-block>@envbar</x-block> anywhere in your layout.
             </p>
         </div>
     </x-section>
@@ -51,6 +52,7 @@
                 <li><x-block>ENVBAR_DISABLE_ON_TESTS</x-block>: Enable/disable the EnvBar on tests.</li>
                 <li><x-block>ENVBAR_SIZE</x-block>: Set the size of the EnvBar: Allowed: xs, sm, md, lg, xl</li>
                 <li><x-block>ENVBAR_FIXED</x-block>: If the EnvBar should be fixed at the top.</li>
+                <li><x-block>ENVBAR_BOTTOM</x-block>: If the EnvBar should be fixed at the bottom instead of the top.</li>
                 <li><x-block>ENVBAR_TAILWIND_BREAKING_POINTS</x-block>: If the TailwindCSS breakpoints should be displayed.</li>
                 <li><x-block>ENVBAR_WARNING_MESSAGE</x-block>: Allows you to set a warning message.</li>
                 <li><x-block>ENVBAR_CLOSABLE_ENABLED</x-block>: If the close button should be displayed.</li>
