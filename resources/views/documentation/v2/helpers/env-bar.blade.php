@@ -113,7 +113,7 @@
             </p>
             <x-code :contents="$ignores" disable-copy />
             <p>
-                Behind the scenes, this feature uses <x-block>Request::is</x-block> to check the current route.
+                Behind the scenes, this feature uses <x-block>Request::routeIs</x-block> to check the current route.
             </p>
         </div>
     </x-section>

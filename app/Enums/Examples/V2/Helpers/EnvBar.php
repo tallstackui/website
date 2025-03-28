@@ -50,9 +50,9 @@ class EnvBar
     // ...
     
     'ignore_on' => [
-        'pulse/*',
-        'horizon/*',
-        'telescope/*',
+        'pulse.*',
+        'horizon.*',
+        'telescope.*',
     ],
 
     // ...
