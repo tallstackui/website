@@ -49,13 +49,19 @@
         <x-code language="blade" :contents="$navigate" disable-copy />
     </x-section>
     <x-section title="Icons">
-        <x-preview language="blade" :contents="$icons" :background="false">
-            <div class="grid grid-cols-3 gap-2">
-                <x-stats icon="swatch" :number="100" />
-                <x-stats icon="swatch" :number="100" light />
-                <x-stats icon="swatch" :number="100" outline />
-            </div>
-        </x-preview>
+        <div class="space-y-4">
+            <x-preview language="blade" :contents="$icons" :background="false">
+                <div class="grid grid-cols-3 gap-2">
+                    <x-stats icon="swatch" :number="100" />
+                    <x-stats icon="swatch" :number="100" light />
+                    <x-stats icon="swatch" :number="100" outline />
+                </div>
+            </x-preview>
+            <p>
+                Starting from v2.4.0 you can pass a raw HTML in the <x-block>icon</x-block> slot:
+            </p>
+            <x-code language="blade" :contents="$iconSlot"/>
+        </div>
     </x-section>
     <x-section title="Color Variations">
         <x-preview language="blade" :contents="$colors" :background="false">

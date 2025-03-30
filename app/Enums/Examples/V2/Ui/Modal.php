@@ -120,6 +120,48 @@ class Modal
     </x-modal>
     HTML;
 
+    public const FOCUS = <<<'HTML'
+    <x-button x-on:click="$modalOpen('modal-id')">
+        Open
+    </x-button>
+    
+    <x-modal id="modal-id" x-on:open="$focusOn('email')"> {{-- [tl! highlight] --}}
+        <form>
+            <x-input label="Email" 
+                     id="email" {{-- [tl! highlight] --}}
+                     hint="Insert your best email address" />
+        </form>
+    </x-modal>
+    HTML;
+
+    public const FOCUS_TIME = <<<'HTML'
+    <x-button x-on:click="$modalOpen('modal-id')">
+        Open
+    </x-button>
+    
+    <x-modal id="modal-id" x-on:open="$focusOn('email', 1000)"> {{-- [tl! highlight] --}}
+        <form>
+            <x-input label="Email" 
+                     id="email" {{-- [tl! highlight] --}}
+                     hint="Insert your best email address" />      
+        </form>
+    </x-modal>
+    HTML;
+
+    public const FOCUS_USING_DATA_ATTRIBUTE = <<<'HTML'
+    <x-button x-on:click="$modalOpen('modal-id')">
+        Open
+    </x-button>
+    
+    <x-modal id="modal-id" x-on:open="$focusOn('email')"> {{-- [tl! highlight] --}}
+        <form>
+            <x-input label="Email" 
+                     data-focus="email" {{-- [tl! highlight] --}}
+                     hint="Insert your best email address" />       
+        </form>
+    </x-modal>
+    HTML;
+
     public const PERSONALIZATION = <<<'HTML'
     TallStackUi::personalize()
         ->modal()

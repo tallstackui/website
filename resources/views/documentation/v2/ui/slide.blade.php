@@ -226,5 +226,18 @@
             </x-button>
         </x-preview>
     </x-section>
+    <x-section title="Focus Helper" description="Ah helper to interact with slide events to easily focus an input when slide open.">
+        <div class="space-y-4">
+            <x-code language="blade" :contents="$focus"/>
+            <p>
+                You can control the time (in milliseconds) to wait before focusing the input, default is <x-block>250</x-block>:
+            </p>
+            <x-code language="blade" :contents="$focusTime"/>
+            <p>
+                Additionally, you can use a custom <x-block>data-focus</x-block> HTML attribute to determine the input to be focused:
+            </p>
+            <x-code language="blade" :contents="$focusUsingDataAttribute"/>
+        </div>
+    </x-section>
     <x-available-configuration />
 </x-layout>

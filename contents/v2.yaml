@@ -351,6 +351,7 @@ ui:
     - Wireable Personalized
     - AlpineJS Helper
     - Events
+    - Focus Helper
     - Configurations
   layout:
     - Concept
@@ -443,6 +444,7 @@ ui:
     - Wireable Personalized
     - AlpineJS Helper
     - Events
+    - Focus Helper
     - Configurations
   stats:
     - Basic Usage

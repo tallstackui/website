@@ -151,6 +151,19 @@ class Layout
     </x-side-bar.item>
     HTML;
 
+    public const VISIBLE = <<<'HTML'
+    <x-side-bar.item text="Admin" :visible="true">
+        <x-side-bar.item text="Home" icon="home" current :route="route('admin.dashboard')" />
+    </x-side-bar.item>
+
+    <!-- Or -->
+
+    <x-side-bar.item text="Home" 
+                     icon="home" 
+                     :route="route('admin.dashboard')"
+                     :visible="fn () => true" />
+    HTML;
+
     public const SEPARATOR = <<<'HTML'
     <x-side-bar.item text="Home" icon="home" :route="route('dashboard')" />
     <x-side-bar.separator text="Configurations" /> <!-- [tl! focus] -->

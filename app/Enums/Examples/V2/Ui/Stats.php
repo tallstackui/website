@@ -39,6 +39,14 @@ class Stats
     <x-stats icon="swatch" :number="100" outline />
     HTML;
 
+    public const ICON_SLOT = <<<'HTML'
+    <x-stats :number="100">
+        <x-slot:icon>
+            <x-avatar :model="auth()->user()" color="fff" />        
+        </x-slot:icon>
+    </x-stats>
+    HTML;
+
     public const COLORS = <<<'HTML'
     <!-- The color is only applied to the icon and its style.-->
 

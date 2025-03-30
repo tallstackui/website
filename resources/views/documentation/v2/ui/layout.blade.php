@@ -144,6 +144,13 @@
                 These attributes are boolean, which means you can pass conditions to them:
             </p>
             <x-code language="blade" :contents="$match" disable-copy />
+            <p>
+                Additionally, you can use <x-block>visible</x-block> attribute to hide the item.
+            </p>
+            <x-code language="blade" :contents="$visible" disable-copy />
+            <p>
+                As demonstrated above, the <x-block>visible</x-block> accepts boolean values and closures to be evaluated using Laravel's <x-block>value</x-block> helper function.
+            </p>
         </div>
     </x-section>
     <x-section title="Side Bar Separator" disable-copy>

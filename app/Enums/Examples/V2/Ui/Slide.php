@@ -129,6 +129,48 @@ class Slide
     </x-slide>
     HTML;
 
+    public const FOCUS = <<<'HTML'
+    <x-button x-on:click="$slideOpen('slide-id')">
+        Open
+    </x-button>
+    
+    <x-slide id="slide-id" x-on:open="$focusOn('email')"> {{-- [tl! highlight] --}}
+        <form>
+            <x-input label="Email" 
+                     id="email" {{-- [tl! highlight] --}}
+                     hint="Insert your best email address" />
+        </form>
+    </x-slide>
+    HTML;
+
+    public const FOCUS_TIME = <<<'HTML'
+    <x-button x-on:click="$slideOpen('slide-id')">
+        Open
+    </x-button>
+    
+    <x-slide id="slide-id" x-on:open="$focusOn('email', 1000)"> {{-- [tl! highlight] --}}
+        <form>
+            <x-input label="Email" 
+                     id="email" {{-- [tl! highlight] --}}
+                     hint="Insert your best email address" />      
+        </form>
+    </x-slide>
+    HTML;
+
+    public const FOCUS_USING_DATA_ATTRIBUTE = <<<'HTML'
+    <x-button x-on:click="$slideOpen('slide-id')">
+        Open
+    </x-button>
+    
+    <x-slide id="slide-id" x-on:open="$focusOn('email')"> {{-- [tl! highlight] --}}
+        <form>
+            <x-input label="Email" 
+                     data-focus="email" {{-- [tl! highlight] --}}
+                     hint="Insert your best email address" />       
+        </form>
+    </x-slide>
+    HTML;
+
     public const PERSONALIZATION = <<<'HTML'
     TallStackUi::personalize()
         ->slide()
