@@ -22,12 +22,7 @@ $save = function (): void {
         });
     })->validate();
 
-    if (blank($this->prefix)) {
-        Cookie::queue(Cookie::forget('prefix'));
-    } else {
-        Cookie::queue(Cookie::forever('prefix', $this->prefix));
-    }
-
+    Cookie::queue(blank($this->prefix) ? Cookie::forget('prefix'): Cookie::forever('prefix', $this->prefix));
     Cookie::queue(Cookie::forever('tailwindcss', $this->tailwindcss));
 
     $this->js(<<<JS
@@ -45,7 +40,7 @@ $save = function (): void {
         <p class="text-sm mb-4">
             You can use this form to configure all configurable aspects of the TallStackUI docs.
         </p>
-        <form class="space-y-4">
+        <form id="form-documentation-settings" class="space-y-4" wire:submit="save">
             <x-input label="Prefix" hint="Leave it empty to remove the current prefix." wire:model="prefix" max-length="10">
                 <x-slot:label>
                     <a href="{{ route('documentation', ['v2', 'component-prefix']) }}" wire:navigate>Component Prefix</a>
@@ -54,7 +49,7 @@ $save = function (): void {
             <x-toggle label="View TailwindCSS examples using v4" wire:model="tailwindcss" />
         </form>
         <x-slot:footer>
-            <x-button class="w-full" type="button" color="pink" sm wire:click="save">
+            <x-button class="w-full" type="submit" form="form-documentation-settings" color="pink" sm>
                 SAVE
             </x-button>
         </x-slot:footer>
