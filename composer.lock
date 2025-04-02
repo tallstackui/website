@@ -2259,16 +2259,16 @@
         },
         {
             "name": "nesbot/carbon",
-            "version": "3.8.6",
+            "version": "3.9.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/CarbonPHP/carbon.git",
-                "reference": "ff2f20cf83bd4d503720632ce8a426dc747bf7fd"
+                "reference": "6d16a8a015166fe54e22c042e0805c5363aef50d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/CarbonPHP/carbon/zipball/ff2f20cf83bd4d503720632ce8a426dc747bf7fd",
-                "reference": "ff2f20cf83bd4d503720632ce8a426dc747bf7fd",
+                "url": "https://api.github.com/repos/CarbonPHP/carbon/zipball/6d16a8a015166fe54e22c042e0805c5363aef50d",
+                "reference": "6d16a8a015166fe54e22c042e0805c5363aef50d",
                 "shasum": ""
             },
             "require": {
@@ -2361,7 +2361,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2025-02-20T17:33:38+00:00"
+            "time": "2025-03-27T12:57:33+00:00"
         },
         {
             "name": "nette/schema",
@@ -5740,12 +5740,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/tallstackui/tallstackui.git",
-                "reference": "ff2d2d825c25e0163041e06ae5120e6a399ef513"
+                "reference": "636ee8b889b51e9fc82227116ef5b6755246d018"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tallstackui/tallstackui/zipball/ff2d2d825c25e0163041e06ae5120e6a399ef513",
-                "reference": "ff2d2d825c25e0163041e06ae5120e6a399ef513",
+                "url": "https://api.github.com/repos/tallstackui/tallstackui/zipball/636ee8b889b51e9fc82227116ef5b6755246d018",
+                "reference": "636ee8b889b51e9fc82227116ef5b6755246d018",
                 "shasum": ""
             },
             "require": {
@@ -5801,7 +5801,7 @@
             "description": "TallStackUI is a powerful suite of Blade components that elevate your workflow of Livewire applications.",
             "support": {
                 "issues": "https://github.com/tallstackui/tallstackui/issues",
-                "source": "https://github.com/tallstackui/tallstackui/tree/v2.4.0"
+                "source": "https://github.com/tallstackui/tallstackui/tree/2.x"
             },
             "funding": [
                 {
@@ -5809,7 +5809,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2025-03-30T22:10:40+00:00"
+            "time": "2025-04-02T23:08:02+00:00"
         },
         {
             "name": "tijsverkoyen/css-to-inline-styles",
