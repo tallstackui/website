@@ -12,7 +12,7 @@
         "livewire/livewire": "^3.0",
         "livewire/volt": "^1.0",
         "symfony/yaml": "^7.2",
-        "tallstackui/tallstackui": "v2.x-dev",
+        "tallstackui/tallstackui": "^v2.0.0",
         "torchlight/torchlight-laravel": "^0.6"
     },
     "require-dev": {
@@ -78,12 +78,6 @@
             "php-http/discovery": true
         }
     },
-    "repositories": [
-        {
-            "type": "path",
-            "url": "/Users/aj/Workspace/tallstackui/tallstackui"
-        }
-    ],
     "minimum-stability": "stable",
     "prefer-stable": true
 }
