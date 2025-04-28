@@ -97,6 +97,11 @@
             ]" />
         </x-preview>
     </x-section>
+    <x-section title="Start Day" description="An option to set the first day of week, starting from v2.5.0" new>
+        <x-preview language="blade" :contents="$start">
+            <x-date start="1" />
+        </x-preview>
+    </x-section>
     <x-section title="Month Year Only" description="An option to select only month and year.">
         <x-preview language="blade" :contents="$monthYearOnly">
             <x-date month-year-only />

@@ -89,6 +89,19 @@ class Date
     <x-date multiple />
     HTML;
 
+    public const START = <<<'HTML'
+    <!-- 
+    0: Sunday, (default)
+    1: Monday, 
+    2: Tuesday, 
+    3: Wednesday, 
+    4: Thursday, 
+    5: Friday, 
+    6: Saturday -->
+    
+    <x-date start="1" />
+    HTML;
+
     public const MONTH_YEAR_ONLY = <<<'HTML'
     <x-date month-year-only />
     HTML;

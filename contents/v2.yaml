@@ -150,6 +150,7 @@ form:
     - Disable Dates
     - Range Mode
     - Multiple Mode
+    - Start Day
     - Month Year Only
     - Events
   time:
