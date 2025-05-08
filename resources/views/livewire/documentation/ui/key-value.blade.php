@@ -9,12 +9,12 @@ new class extends Component {
 
     public array $metadata = [
         [
-            'key' => 'stack',
-            'value' => 'tall',
+            'key' => 'tallstackui',
+            'value' => 'AJ Meireles',
         ],
         [
-            'key' => 'server',
-            'value' => 'cloud.laravel.com',
+            'key' => 'flxui',
+            'value' => 'Caleb Porzio',
         ],
     ];
 

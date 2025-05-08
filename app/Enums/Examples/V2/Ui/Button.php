@@ -12,6 +12,14 @@ class Button
     <x-button text="TallStackUi" />
     HTML;
 
+    public const SUBMIT = <<<'HTML'
+    <x-button submit>TallStackUi</x-button>
+
+    <!-- or -->
+
+    <x-button text="TallStackUi" submit />
+    HTML;
+
     public const A = <<<'HTML'
     <x-button href="https://google.com.br" target="_blank">TallStackUi</x-button>
     HTML;

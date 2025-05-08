@@ -14,9 +14,17 @@
         <livewire:personalization :personalization="$personalizationCircle" component="Button\Circle" />
     </x-slot:personalization>
     <x-section title="Basic Usage" anchor="normal-basic-usage">
-        <x-preview language="blade" :contents="$basic">
-            <x-button>TallStackUI</x-button>
-        </x-preview>
+        <div class="space-y-4">
+            <x-preview language="blade" :contents="$basic">
+                <x-button>TallStackUI</x-button>
+            </x-preview>
+            <p>
+                By default, the button <x-block>type</x-block> is <x-block>button</x-block>, but you
+                can set this as <x-block>submit</x-block> by using the <x-block>submit</x-block> attribute.
+                The same attribute is also valid for the <x-block>button.circle</x-block> component mentioned below.
+            </p>
+            <x-code :contents="$submit" language="blade" disable-copy />
+        </div>
     </x-section>
     <x-section title="Button as Link" anchor="normal-button-as-link">
         <x-preview language="blade" :contents="$a">

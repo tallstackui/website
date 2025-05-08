@@ -11,12 +11,12 @@ class KeyValue
     {
         public array $metadata = [ // [tl! highlight:9]
             [
-                'key' => 'stack',
-                'value' => 'tall',
+                'key' => 'tallstackui',
+                'value' => 'AJ Meireles',
             ],
             [
-                'key' => 'server',
-                'value' => 'cloud.laravel.com',
+                'key' => 'flxui',
+                'value' => 'Caleb Porzio',
             ]
         ];
     
@@ -61,12 +61,12 @@ class KeyValue
     {
         public array $metadata = [
             [
-                'key' => 'blabla',
-                'value' => 'xoxo',
+                'key' => 'tallstackui',
+                'value' => 'AJ Meireles',
             ],
             [
-                'key' => 'blabla',
-                'value' => 'xoxo',
+                'key' => 'flxui',
+                'value' => 'Caleb Porzio',
             ]
         ];
     
