@@ -384,6 +384,16 @@ ui:
     - Text Slot
     - Target & Delay Options
     - Configurations
+  key-value:
+    - Concept
+    - Basic Usage
+    - Label & Value
+    - Without Placeholders
+    - Limit
+    - Static
+    - Deletable
+    - Change Delete Icon
+    - Events
   progress:
     Normal:
       contents:
