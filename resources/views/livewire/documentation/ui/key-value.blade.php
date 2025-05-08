@@ -37,7 +37,7 @@ new class extends Component {
     @if ($model === 1)
         <x-key-value wire:model="metadata" />
     @elseif ($model === 2)
-        <x-key-value wire:model="metadata" label="ID" value="DATA" />
+        <x-key-value wire:model="metadata" label="LIBRARY" value="CREATOR" />
     @elseif ($model === 3)
         <x-key-value wire:model="empty" :placeholders="false" />
     @elseif ($model === 4)

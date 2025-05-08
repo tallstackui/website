@@ -33,7 +33,7 @@ class KeyValue
     HTML;
 
     public const LABEL_VALUE = <<<'HTML'
-    <x-key-value label="ID" value="DATA" />
+    <x-key-value label="LIBRARY" value="CREATOR" />
     HTML;
 
     public const PLACEHOLDERS = <<<'HTML'
