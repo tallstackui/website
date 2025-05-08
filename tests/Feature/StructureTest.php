@@ -154,6 +154,7 @@ describe('V2', function () {
         fn () => route('documentation', ['v2', 'ui', 'layout']),
         fn () => route('documentation', ['v2', 'ui', 'link']),
         fn () => route('documentation', ['v2', 'ui', 'loading']),
+        fn () => route('documentation', ['v2', 'ui', 'key-value']),
         fn () => route('documentation', ['v2', 'ui', 'progress']),
         fn () => route('documentation', ['v2', 'ui', 'reaction']),
         fn () => route('documentation', ['v2', 'ui', 'rating']),
