@@ -9,12 +9,12 @@ new class extends Component {
 
     public array $metadata = [
         [
-            'key' => 'tallstackui',
-            'value' => 'AJ Meireles',
+            'key' => 'php',
+            'value' => 'Laravel',
         ],
         [
-            'key' => 'flxui',
-            'value' => 'Caleb Porzio',
+            'key' => 'vuejs',
+            'value' => 'NuxtJS',
         ],
     ];
 
@@ -37,7 +37,7 @@ new class extends Component {
     @if ($model === 1)
         <x-key-value wire:model="metadata" />
     @elseif ($model === 2)
-        <x-key-value wire:model="metadata" label="LIBRARY" value="CREATOR" />
+        <x-key-value wire:model="metadata" label="LANGUAGE" value="FRAMEWORK" />
     @elseif ($model === 3)
         <x-key-value wire:model="empty" :placeholders="false" />
     @elseif ($model === 4)

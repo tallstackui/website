@@ -11,12 +11,12 @@ class KeyValue
     {
         public array $metadata = [ // [tl! highlight:9]
             [
-                'key' => 'tallstackui',
-                'value' => 'AJ Meireles',
+                'key' => 'php',
+                'value' => 'Laravel',
             ],
             [
-                'key' => 'flxui',
-                'value' => 'Caleb Porzio',
+                'key' => 'vuejs',
+                'value' => 'NuxtJS',
             ]
         ];
     
@@ -33,7 +33,7 @@ class KeyValue
     HTML;
 
     public const LABEL_VALUE = <<<'HTML'
-    <x-key-value label="LIBRARY" value="CREATOR" />
+    <x-key-value label="LANGUAGE" value="FRAMEWORK" />
     HTML;
 
     public const PLACEHOLDERS = <<<'HTML'
@@ -61,12 +61,12 @@ class KeyValue
     {
         public array $metadata = [
             [
-                'key' => 'tallstackui',
-                'value' => 'AJ Meireles',
+                'key' => 'php',
+                'value' => 'Laravel',
             ],
             [
-                'key' => 'flxui',
-                'value' => 'Caleb Porzio',
+                'key' => 'vuejs',
+                'value' => 'NuxtJS',
             ]
         ];
     
