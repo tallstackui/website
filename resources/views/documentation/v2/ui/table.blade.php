@@ -103,5 +103,10 @@
             directive, you must specify a unique key for each component:
         </p>
         <x-code :contents="$loop" disable-copy />
+        <p>
+            You can use <x-block>$loop</x-block> inside the <x-block>@verbatim @interact @endverbatim</x-block> directive to
+            interact with the data of each row. The <x-block>$loop</x-block> variable is a special variable
+            provided by Blade that contains information about the current iteration of the loop.
+        </p>
     </x-section>
 </x-layout>
