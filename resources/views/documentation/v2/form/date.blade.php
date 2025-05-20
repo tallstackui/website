@@ -77,6 +77,20 @@
             <x-date :value="$current" :disable="collect([now()->subDay()->format('Y-m-d'), now()->addDay()->format('Y-m-d')])" />
         </x-preview>
     </x-section>
+    <x-section title="Disable Specific Days" description="Added in: v2.7.0" new=">= v2.7.0">
+        <div class="space-y-4">
+            <x-preview language="blade" :contents="$disableSpecificDays">
+                <div class="space-y-2">
+                    <x-date label="Only Wednesday" hint="Disable all days other than Wednesday" only="3" />
+                    <x-date label="Only Weekdays" hint="Disable Weekends" weekdays />
+                    <x-date label="Only Weekends" hint="Disable Weekdays" weekends />
+                </div>
+            </x-preview>
+            <x-warning>
+                This feature does not validate the date you pass to the component.
+            </x-warning>
+        </div>
+    </x-section>
     <x-section title="Range Mode">
         <x-preview language="blade" :contents="$range">
             <x-date range :value="[now()->addDays(2)->format('Y-m-d'), now()->addWeek()->format('Y-m-d')]" />

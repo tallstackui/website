@@ -60,6 +60,24 @@ class Date
     <x-date :disable="\Carbon\CarbonInterval::days(1)->toPeriod(now(), now()->addWeek())->toArray()" />
     HTML;
 
+    public const DISABLE_SPECIFIC_DAYS = <<<'HTML'
+    <!-- 
+    0: Sunday,
+    1: Monday, 
+    2: Tuesday, 
+    3: Wednesday, 
+    4: Thursday, 
+    5: Friday, 
+    6: Saturday -->
+    <x-date only="3" />
+    
+    <!-- Only weekdays, no weekends -->
+    <x-date weekdays />
+    
+    <!-- Only weekends, no weekdays -->
+    <x-date weekends />
+    HTML;
+
     public const RANGE = <<<'HTML'
     <!-- 
     The Livewire property must be an array with two positions,
