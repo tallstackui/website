@@ -115,7 +115,7 @@ class Layout
     HTML;
 
     public const SIDEBAR_OPTIONS = <<<'HTML'
-    <x-side-bar smart navigate>
+    <x-side-bar smart navigate thin-scroll collapsible>
         <x-slot:brand>
             <div class="flex justify-center">
                 <img src="..." />

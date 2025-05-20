@@ -120,9 +120,13 @@
                 <li>Attribute: <x-block>navigate-hover</x-block>: enable <x-block>wire:navigate.hover</x-block> routes</li>
                 <li>Attribute: <x-block>thin-scroll</x-block>: enable <x-block>soft-scrollbar</x-block> in the side bar</li>
                 <li>Attribute: <x-block>thick-scroll</x-block>: enable <x-block>custom-scrollbar</x-block> in the side bar</li>
+                <li>Attribute: <x-block>collapsible</x-block>: enable <x-block>collapsible</x-block> behavior to the sidebar</li>
             </ul>
+            <x-warning>
+                The collapsible will work properly if all of your items have icons and you don't use three levels of items.
+            </x-warning>
             <p>
-                Full example:
+                Example:
             </p>
             <x-code language="blade" :contents="$sidebarOptions" disable-copy />
         </div>
