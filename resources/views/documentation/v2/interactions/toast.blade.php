@@ -76,7 +76,7 @@
                 By default, the Toast position is configured using <a href="{{ route('documentation', ['v2', 'configuration']) }}" wire:navigate class="underline">the configuration file.</a>.
                 However, you can set the Toast position at runtime using the <x-block>position</x-block> method:
             </p>
-            <x-preview :contents="$expandable">
+            <x-preview :contents="$position">
                 <livewire:documentation.interactions.toast.position/>
             </x-preview>
             <p class="mt-2">

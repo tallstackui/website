@@ -138,6 +138,15 @@ class Toast
         ->send();
     HTML;
 
+    public const POSITION = <<<'HTML'
+    /* Available positions: top-left, top-right, bottom-left, bottom-right */
+    
+    $this->toast()
+        ->position('top-left') // [tl! highlight]
+        ->success('Success', 'This is a success message.')
+        ->send();
+    HTML;
+
     public const IGNORING_EXPANDABLE = <<<'HTML'
     $this->toast()
         ->expandable(false) // [tl! highlight]
