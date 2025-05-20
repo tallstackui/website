@@ -148,6 +148,7 @@ form:
     - Min & Max Dates
     - Min & Max Years
     - Disable Dates
+    - Disable Specific Days
     - Range Mode
     - Multiple Mode
     - Start Day
