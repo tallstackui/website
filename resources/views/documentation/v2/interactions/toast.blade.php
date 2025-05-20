@@ -70,6 +70,22 @@
             <x-code :contents="$ignoringExpandable" disable-copy />
         </div>
     </x-section>
+    <x-section title="Position" description="An option to control the toast position at runtime.">
+        <div class="space-y-4">
+            <p class="mt-2">
+                By default, the Toast position is configured using <a href="{{ route('documentation', ['v2', 'configuration']) }}" wire:navigate class="underline">the configuration file.</a>.
+                However, you can set the Toast position at runtime using the <x-block>position</x-block> method:
+            </p>
+            <x-preview :contents="$expandable">
+                <livewire:documentation.interactions.toast.position/>
+            </x-preview>
+            <p class="mt-2">
+                If you quickly click on all the buttons above, you will see that the position
+                of the Toasts that were already displayed will change. This happens because the
+                <x-block>position</x-block> method will control the position of all the Toasts that are fired.
+            </p>
+        </div>
+    </x-section>
     <x-section title="Events" description="An option to listen to events.">
         <div class="space-y-4">
             <x-preview language="blade" :contents="$events">
