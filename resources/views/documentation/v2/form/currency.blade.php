@@ -15,7 +15,7 @@
     <x-section title="Concept" disable-copy>
         The currency component is a component designed for displaying and formatting
         currency values. Behind the scenes the currency component is an adaptation of
-        the Input component with application of JavaScript's <x-block>Intl.NumberFormat</x-block>
+        the Input component with usage of native JavaScript's <x-block>Intl.NumberFormat</x-block>
     </x-section>
     <x-section title="Basic Usage">
         <x-preview language="blade" :contents="$basic">
@@ -74,7 +74,7 @@
                 </div>
             </x-preview>
             <p>
-                The symbols are not based on the <x-block>locale</x-block> attribute, but rather on your app's <x-block>app.locale</x-block>.
+                The symbols are not based on the <x-block>locale</x-block> attribute, but rather on your app's <x-block>app.locale</x-block> configuration.
                 This is because you may want to display a currency for currencies other than your app's <x-block>app.locale</x-block>. If you
                 want to replace the symbols at runtime, you can set a string value on it:
             </p>
