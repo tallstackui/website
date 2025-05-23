@@ -124,6 +124,7 @@ describe('V2', function () {
         fn () => route('documentation', ['v2', 'form', 'input']),
         fn () => route('documentation', ['v2', 'form', 'password']),
         fn () => route('documentation', ['v2', 'form', 'color']),
+        fn () => route('documentation', ['v2', 'form', 'currency']),
         fn () => route('documentation', ['v2', 'form', 'textarea']),
         fn () => route('documentation', ['v2', 'form', 'number']),
         fn () => route('documentation', ['v2', 'form', 'checkbox']),
