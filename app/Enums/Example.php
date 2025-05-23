@@ -13,6 +13,7 @@ enum Example: string
     // region Form
     case Checkbox = 'Form\\Checkbox';
     case Color = 'Form\\Color';
+    case Currency = 'Form\\Currency';
     case Date = 'Form\\Date';
     case Input = 'Form\\Input';
     case Number = 'Form\\Number';

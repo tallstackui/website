@@ -65,6 +65,15 @@ form:
     - Clearable
     - Events
     - Configurations
+  currency:
+    - Concept
+    - Basic Usage
+    - Different Currencies
+    - Label & Hint
+    - Clearable
+    - Intl Options
+    - Symbols
+    - Caveats
   number:
     - Basic Usage
     - Step

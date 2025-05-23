@@ -38,6 +38,9 @@
                         <x-layout.navigation.link :href="route('documentation', ['v2', 'form', 'color'])" text="Color" />
                     </li>
                     <li class="relative ml-4">
+                        <x-layout.navigation.link :href="route('documentation', ['v2', 'form', 'currency'])" text="Currency" new />
+                    </li>
+                    <li class="relative ml-4">
                         <x-layout.navigation.link :href="route('documentation', ['v2', 'form', 'date'])" text="Date" />
                     </li>
                     <li class="relative ml-4">
