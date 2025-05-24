@@ -24,7 +24,7 @@
     </x-section>
     <x-section title="Label & Hint">
         <x-preview language="blade" :contents="$labelHint">
-            <x-currency label="Salady Expectation" hint="Between 5,000 and 10,000 USD" />
+            <x-currency label="Salary Expectation" hint="Between 5,000 and 10,000 USD" />
         </x-preview>
     </x-section>
     <x-section title="Clearable">
