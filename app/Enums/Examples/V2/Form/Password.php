@@ -49,6 +49,10 @@ class Password
     </script> 
     HTML;
 
+    public const TYPING_ONLY = <<<'HTML'
+    <x-password typing-only />
+    HTML;
+
     public const EVENTS = <<<'HTML'
     <x-password value="TallStackUI"
                 generator

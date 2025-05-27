@@ -55,6 +55,7 @@ form:
     - Format Validator
     - Password Generator
     - Generator Algorithm
+    - Disable Paste Event
     - Events
   color:
     - Basic Usage

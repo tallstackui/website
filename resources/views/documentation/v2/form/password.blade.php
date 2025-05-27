@@ -80,6 +80,18 @@
             </p>
         </div>
     </x-section>
+    <x-section title="Disable Paste Event">
+        <div class="space-y-4">
+            <p>
+                Since some systems disallow the action of pasting a value to be the password,
+                the password input component also offers this ability when using the <x-block>typing-only</x-block> attribute,
+                starting from the version 2.8.2:
+            </p>
+            <x-preview language="blade" :contents="$typingOnly">
+                <x-password label="Password" hint="You will not be able to paste a value on this password input" typing-only />
+            </x-preview>
+        </div>
+    </x-section>
     <x-section title="Events">
         <x-preview language="blade" :contents="$events">
             <x-password value="TallStackUI"
