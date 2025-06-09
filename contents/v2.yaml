@@ -542,6 +542,7 @@ interactions:
     - Persistent
     - Expandable
     - Position
+    - Sole
     - Events
     - Hooks
     - JavaScript API
