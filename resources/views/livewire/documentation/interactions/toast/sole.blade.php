@@ -10,18 +10,17 @@ new class extends Component {
     {
         $this->toast()
             ->success('One')
+            ->persistent()
             ->send();
 
         $this->toast()
             ->success('Two')
+            ->persistent()
             ->send();
 
         $this->toast()
-            ->success('Three')
-            ->send();
-
-        $this->toast()
-            ->success('Now click on "sole" button.')
+            ->success('Three persistent toasts', 'Now click on "sole" button.')
+            ->persistent()
             ->send();
     }
 
