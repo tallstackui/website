@@ -86,6 +86,16 @@
             </p>
         </div>
     </x-section>
+    <x-section title="Sole">
+        <div class="space-y-4">
+            <p class="mt-2">
+                Starting from version v2.9.0, you can use the <x-block>sole</x-block> method to clear all other displayed Toasts in favor of displaying only a specific Toast.
+            </p>
+            <x-preview :contents="$sole">
+                <livewire:documentation.interactions.toast.sole/>
+            </x-preview>
+        </div>
+    </x-section>
     <x-section title="Events" description="An option to listen to events.">
         <div class="space-y-4">
             <x-preview language="blade" :contents="$events">

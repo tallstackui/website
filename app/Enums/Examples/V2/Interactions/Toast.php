@@ -147,6 +147,13 @@ class Toast
         ->send();
     HTML;
 
+    public const SOLE = <<<'HTML'
+    $this->toast()
+        ->sole() // [tl! highlight]
+        ->success('Success', 'This is a success message.')
+        ->send();
+    HTML;
+
     public const IGNORING_EXPANDABLE = <<<'HTML'
     $this->toast()
         ->expandable(false) // [tl! highlight]
