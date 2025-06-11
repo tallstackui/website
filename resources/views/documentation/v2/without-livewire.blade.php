@@ -12,9 +12,9 @@
     <x-section title="Concept" disable-copy>
         <div class="space-y-4">
             <p>
-                TallStackUI is a component library that was designed for Livewire 3, but after various requests
-                from the entire user community, <b>you can use form components out of Livewire components.</b>
-                Check below the list of all components that can be used out of Livewire components, and also those that cannot.
+                TallStackUI is a component library designed for Livewire 3, but after many requests from the community, <u>we have 
+                adapted TallStackUI to work perfectly well outside of Livewire components.</u> Below is a list of some components 
+                that can be used outside of Livewire components, and also those that cannot.
             </p>
             <div class="mt-2 space-y-2">
                 <p class="text-md font-medium">List of components that CAN be used out of Livewire component ✅</p>
@@ -28,22 +28,23 @@
                     <li>Pin</li>
                     <li>Radio</li>
                     <li>Range</li>
-                    <li>Tag</li>
-                    <li>Time</li>
-                    <li>Textarea</li>
-                    <li>Toggle</li>
                     <li>Select</li>
+                    <li>Tag</li>
+                    <li>TextArea</li>
+                    <li>Time</li>
+                    <li>Toggle</li>
                 </ul>
-                <p class="text-md font-medium">List of components that CAN NOT be used out of Livewire component ❌</p>
+                <p class="text-md font-medium">Examples of components that CANNOT be used out of Livewire component ❌</p>
                 <ul class="list-inside list-decimal">
+                    <li>KeyValue</li>
                     <li>Loading</li>
-                    <li>Upload</li>
                     <li>Reactions</li>
                     <li>Signature</li>
                     <li>Table</li>
+                    <li>Upload</li>
                 </ul>
                 <p>
-                    Many other components can be used out of Livewire components, such as alert, modal, dropdown, etc. These are components that do not contain any logic that depends on Livewire.
+                    Many other components can be used out of Livewire components, such as: alert, modal, dropdown, etc. These are components that do not contain any logic that depends on Livewire.
                 </p>
             </div>
         </div>
@@ -53,12 +54,12 @@
     </x-section>
     <x-section title="Parse Request Value" disable-copy>
         <p class="mt-2">
-            Some components, such as <x-block>select.styled, date, tags</x-block> and others, send an array to the backend
+            Some components, such as: select.styled, date, tags and some others, send an array to the backend
             when the form is submitted. In these cases you must use the PHP <x-block>json_decode</x-block> function to access the items of the array.
         </p>
-        <p class="mt-4"><b>1)</b> Preparing the Blade:</p>
+        <p class="mt-4"><b>1)</b> Preparing the form:</p>
         <x-code language="blade" :contents="$jsonDecodeBlade" disable-copy />
-        <p><b>2)</b> Using the PHP <x-block>json_decode</x-block> to access the array of items:</p>
+        <p><b>2)</b> Intercepting the request and parsing it using <x-block>json_decode</x-block> to access the array of items:</p>
         <x-code :contents="$jsonDecodeController" disable-copy />
     </x-section>
 </x-layout>

@@ -91,11 +91,13 @@ class WithoutLivewire
 
         public function store(Request $request)
         {
+            $tagFrameworks = json_decode($request->get('frameworks')); // [tl! highlight]
+
             $selectOptions = json_decode($request->get('select_options')); // [tl! highlight]
 
-            $tagFrameworks = json_decode($request->get('frameworks')); // [tl! highlight]
-            
             $vacationDates = json_decode($request->get('vacation')); // [tl! highlight]
+            
+            dd($tagFrameworks, $selectOptions, $vacationDates);
 
             // ...
         }

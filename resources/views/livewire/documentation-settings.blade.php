@@ -36,12 +36,13 @@ $save = function (): void {
     <x-modal id="prefix-modal"
              :title="__('CONFIGURE DOCUMENTATION')"
              center
-             blur>
+             blur
+             x-on:open="$focusOn('doc-prefix')">
         <p class="text-sm mb-4">
             You can use this form to configure all configurable aspects of the TallStackUI docs.
         </p>
         <form id="form-documentation-settings" class="space-y-4" wire:submit="save">
-            <x-input label="Prefix" hint="Leave it empty to remove the current prefix." wire:model="prefix" max-length="10">
+            <x-input label="Prefix" hint="Leave it empty to remove the current prefix." id="doc-prefix" wire:model="prefix" max-length="10">
                 <x-slot:label>
                     <a href="{{ route('documentation', ['v2', 'component-prefix']) }}" wire:navigate>Component Prefix</a>
                 </x-slot:label>
