@@ -107,12 +107,20 @@ enum Example: string
 
         $constants = (new ReflectionClass($class))->getConstants();
 
+        $personalize = <<<HTML
+        // AppServiceProvider, "boot" method.
+
+        {%model%}
+        HTML;
+
         return [...collect($constants)
-            ->mapWithKeys(function (string $value, string $key) {
+            ->mapWithKeys(function (string $value, string $key) use ($personalize) {
                 return [
                     str($key)->lower()
                         ->camel()
-                        ->value() => trim($value),
+                        ->value() => ! str_contains($value, 'AppServiceProvider') && str_contains($value, 'TallStackUi::personalize()')
+                    ? str_replace('{%model%}', $value, $personalize)
+                    : $value,
                 ];
             })->toArray()];
     }
