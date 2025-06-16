@@ -44,6 +44,14 @@ class Carousel
     ]" />
     HTML;
 
+    public const SHUFFLE = <<<'HTML'
+    <x-carousel :images="[
+        ['src' => url('assets/images/wallpapers/1.jpg'), 'alt' => 'Wallpaper 1'],
+        ['src' => url('assets/images/wallpapers/2.jpg'), 'alt' => 'Wallpaper 2'],
+        ['src' => url('assets/images/wallpapers/3.jpg'), 'alt' => 'Wallpaper 3'],
+    ]" shuffle />
+    HTML;
+
     public const AUTOPLAY = <<<'HTML'
     <x-carousel :images="[
         ['src' => url('assets/images/wallpapers/1.jpg'), 'alt' => 'Wallpaper 1'],

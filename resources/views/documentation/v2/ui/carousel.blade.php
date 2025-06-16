@@ -39,6 +39,15 @@
             ]" :cover="2" />
         </x-preview>
     </x-section>
+    <x-section title="Shuffle" description="An option to shuffle the images in the carousel.">
+        <x-preview language="blade" :background="false" :contents="$shuffle">
+            <x-carousel :images="[
+                ['src' => url('assets/images/wallpapers/1.jpg'), 'alt' => 'Wallpaper 1'],
+                ['src' => url('assets/images/wallpapers/2.jpg'), 'alt' => 'Wallpaper 2'],
+                ['src' => url('assets/images/wallpapers/3.jpg'), 'alt' => 'Wallpaper 3'],
+            ]" shuffle />
+        </x-preview>
+    </x-section>
     <x-section title="Autoplay">
         <x-preview language="blade" :background="false" :contents="$autoplay">
             <x-carousel :images="[

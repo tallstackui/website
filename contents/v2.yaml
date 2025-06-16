@@ -298,6 +298,7 @@ ui:
     - Basic Usage
     - Round
     - Different Cover Image
+    - Shuffle
     - Autoplay
     - Autoplay, Stop on hover
     - Autoplay, Without Loop
