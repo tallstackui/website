@@ -355,6 +355,7 @@ ui:
     - Basic Usage
     - Title Slot
     - Footer Slot
+    - Scrollable
     - Background Blur
     - Size Variations
     - Centered

@@ -40,6 +40,12 @@ class Modal
     </x-modal>
     HTML;
 
+    public const SCROLLABLE = <<<'HTML'
+    <x-modal scrollable>
+        Your content goes here. It can be very long, so it will scroll.
+    </x-modal>
+    HTML;
+
     public const BLUR = <<<'HTML'
     <!-- sm, md, lg, xl -->
     
