@@ -107,7 +107,7 @@ enum Example: string
 
         $constants = (new ReflectionClass($class))->getConstants();
 
-        $personalize = <<<HTML
+        $personalize = <<<'HTML'
         // AppServiceProvider, "boot" method.
 
         {%model%}
