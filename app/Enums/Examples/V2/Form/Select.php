@@ -28,27 +28,6 @@ class Select
     ]" select="label:name|value:id" />
     HTML;
 
-    public const NATIVE_GROUPED = <<<'HTML'
-    <x-select.native group :options="[
-         [
-             'label' => 'Brazil',
-             'value' => [
-                 ['label' => 'São Paulo', 'value' => 4],
-                 ['label' => 'Rio de Janeiro', 'value' => 5],
-                 ['label' => 'Brasília', 'value' => 6]
-             ]
-         ],
-         [
-             'label' => 'United States',
-             'value' => [
-                 ['label' => 'New York', 'value' => 7],
-                 ['label' => 'Los Angeles', 'value' => 8],
-                 ['label' => 'Chicago', 'value' => 9]
-             ]
-         ],
-     ]" />
-    HTML;
-
     /* Styled Common */
 
     public const STYLED_BASIC = <<<'HTML'
@@ -186,31 +165,6 @@ class Select
         ['label' => 'Visual Basic', 'value' => 29],
         ['label' => 'Fortran', 'value' => 30],
     ]" lazy="10" />
-    HTML;
-
-    public const STYLED_GROUPED = <<<'HTML'
-    <x-select.styled group :options="[
-        [
-            'label' => 'Brazil',
-            'image' => 'https://placehold.co/15x15/cyan/white',
-            'description' => 'Brazil is a country known for being the land of samba.',
-            'value' => [
-                 ['label' => 'São Paulo', 'value' => 4, 'image' => 'https://placehold.co/15x15/orange/white'],
-                 ['label' => 'Rio de Janeiro', 'value' => 5, 'image' => 'https://placehold.co/15x15/orange/white'],
-                 ['label' => 'Brasília', 'value' => 6, 'image' => 'https://placehold.co/15x15/orange/white']
-            ]
-        ],
-        [
-            'label' => 'United States',
-            'image' => 'https://placehold.co/15x15/purple/white',
-            'description' => 'The United States is a country known for being the land of opportunity.',
-            'value' => [
-                ['label' => 'New York', 'value' => 7, 'image' => 'https://placehold.co/15x15/blue/white'],
-                ['label' => 'Los Angeles', 'value' => 8, 'image' => 'https://placehold.co/15x15/blue/white'],
-                ['label' => 'Chicago', 'value' => 9, 'image' => 'https://placehold.co/15x15/blue/white']
-            ]
-        ],
-    ]" />
     HTML;
 
     public const STYLED_SLOT = <<<'HTML'

@@ -56,7 +56,7 @@
         ],
         "test": "./vendor/bin/pest",
         "type": "./vendor/bin/pest --type-coverage",
-        "format": "./vendor/bin/pint",
+        "format": "./vendor/bin/pint --parallel",
         "ci": [
             "./vendor/bin/pint --test",
             "./vendor/bin/pest --type-coverage",

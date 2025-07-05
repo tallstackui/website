@@ -180,7 +180,6 @@ form:
         - Basic Usage
         - Label & Hint
         - Multi-dimensional Array
-        - Grouped
     Styled:
       contents:
         - Basic Usage
@@ -195,7 +194,6 @@ form:
         - Description
         - Searchable
         - Lazy Load
-        - Grouped
         - Slot After
         - Events
     Styled API:
