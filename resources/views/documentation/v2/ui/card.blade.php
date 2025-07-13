@@ -21,21 +21,15 @@
     </x-section>
     <x-section title="Header Slot">
         <x-preview language="blade" :background="false" :contents="$header">
-            <x-card>
-                <x-slot:header>
-                    Header
-                </x-slot:header>
+            <x-card header="Header">
                 Body
             </x-card>
         </x-preview>
     </x-section>
     <x-section title="Footer Slot">
         <x-preview language="blade" :background="false" :contents="$footer">
-            <x-card>
+            <x-card footer="Footer">
                 Body
-                <x-slot:footer>
-                    Footer
-                </x-slot:footer>
             </x-card>
         </x-preview>
     </x-section>

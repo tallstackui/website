@@ -13,7 +13,7 @@ class Card
     public const HEADER = <<<'HTML'
     <x-card>
         <x-slot:header>
-            TallStackUI
+            Raw HTML content
         </x-slot:header>
         TallStackUI
     </x-card>
@@ -29,7 +29,7 @@ class Card
     <x-card>
         TallStackUI
         <x-slot:footer>
-            TallStackUI
+            Raw HTML content
         </x-slot:footer>
     </x-card>
 
