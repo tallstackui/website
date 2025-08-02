@@ -49,6 +49,10 @@ class Input
     <x-input value="TallStackUI" clearable />
     HTML;
 
+    public const STRIP_ZEROS = <<<'HTML'
+    <x-input strip-zeros />
+    HTML;
+
     public const INVALIDATE = <<<'HTML'
     <x-input label="Name" invalidate />
     HTML;

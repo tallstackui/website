@@ -62,6 +62,11 @@
             </div>
         </x-preview>
     </x-section>
+    <x-section title="Strip Zeros" description="An option to remove the first zero characters" new>
+        <x-preview language="blade" :contents="$stripZeros">
+            <x-input strip-zeros />
+        </x-preview>
+    </x-section>
     <x-section title="Invalidate" description="An option to not show validation error message.">
         <div class="space-y-4">
             <x-preview language="blade" :contents="$invalidate">

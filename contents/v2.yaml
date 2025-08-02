@@ -46,6 +46,7 @@ form:
     - Icon Slot
     - Prefix & Suffix
     - Clearable
+    - Strip Zeros
     - Invalidate
   password:
     - Basic Usage
