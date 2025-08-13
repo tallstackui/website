@@ -43,9 +43,16 @@
     </x-warning>
     <x-separator text="Styled Select" />
     <x-section title="Basic Usage" anchor="styled-basic-usage" description="Customized styled select component to interact with Livewire.">
-        <x-preview language="blade" :contents="$styledBasic">
-            <x-select.styled :options="[1,2,3]" />
-        </x-preview>
+        <div class="space-y-4">
+            <x-preview language="blade" :contents="$styledBasic">
+                <x-select.styled :options="[1,2,3]" />
+            </x-preview>
+            <p>
+                While there are no explicit examples in the documentation, you're free to use multiple <x-block>select.styled</x-block> on the same page,
+                and also make options reactive based on other properties using <x-block>wire:model.live</x-block>. If you encounter any misbehavior
+                in this regard, try to fully explore options like <x-block>wire:ignore</x-block> or <x-block>wire:replace</x-block> —with <x-block>.self</x-block> variants of the directives.
+            </p>
+        </div>
     </x-section>
     <x-section title="Label & Hint" anchor="styled-label-hint">
         <x-preview language="blade" :contents="$styledLabelHint">
