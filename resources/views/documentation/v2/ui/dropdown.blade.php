@@ -38,18 +38,21 @@
         </x-preview>
     </x-section>
     <x-section title="Links">
-        <x-preview language="blade" :contents="$links">
-            <div class="flex justify-end md:justify-center">
-                <x-dropdown icon="chevron-down" position="bottom-end">
-                    <a href="https://google.com.br" target="_blank">
-                        <x-dropdown.items text="Google" />
-                    </a>
-                    <a href="https://twitter.com" target="_blank">
-                        <x-dropdown.items text="Twitter" separator />
-                    </a>
-                </x-dropdown>
-            </div>
-        </x-preview>
+        <div class="space-y-4">
+            <x-preview language="blade" :contents="$links">
+                <div class="flex justify-end md:justify-center">
+                    <x-dropdown icon="chevron-down" position="bottom-end">
+                        <a href="https://google.com.br" target="_blank">
+                            <x-dropdown.items text="Google" />
+                        </a>
+                        <a href="https://twitter.com" target="_blank">
+                            <x-dropdown.items text="Twitter" separator />
+                        </a>
+                    </x-dropdown>
+                </div>
+            </x-preview>
+            <p>You can also use the attributes <x-block>navigate</x-block> or <x-block>navigateHover</x-block> when using <a href="https://livewire.laravel.com/docs/navigate" target="_blank" class="underline">Livewire Navigate mode.</a></p>
+        </div>
     </x-section>
     <x-section title="Icon">
         <x-preview language="blade" :contents="$icons">
