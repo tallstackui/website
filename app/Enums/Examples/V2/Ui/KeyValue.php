@@ -49,11 +49,11 @@ class KeyValue
     HTML;
 
     public const DELETE = <<<'HTML'
-    <x-key-value delete />
+    <x-key-value deletable />
     HTML;
 
     public const DELETE_METHOD = <<<'HTML'
-    <x-key-value delete delete-method="delete" />
+    <x-key-value deletable delete-method="delete" />
     HTML;
 
     public const DELETE_METHOD_PHP = <<<'HTML'
@@ -80,7 +80,7 @@ class KeyValue
     HTML;
 
     public const DELETE_ICON = <<<'HTML'
-    <x-key-value icon="x-mark" delete delete-method="delete" />
+    <x-key-value icon="x-mark" deletable delete-method="delete" />
     HTML;
 
     public const SLOTS = <<<'HTML'
