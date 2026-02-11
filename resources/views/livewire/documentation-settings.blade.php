@@ -3,7 +3,7 @@
 use function Livewire\Volt\{state, rules, mount};
 use Illuminate\Support\Facades\Cookie;
 
-state(prefix: null, tailwindcss: false);
+state(prefix: null, tailwindcss: false, version: null);
 
 rules(['prefix' => ['nullable', 'max:10'], 'tailwindcss' => ['boolean']]);
 
@@ -42,12 +42,14 @@ $save = function (): void {
             You can use this form to configure all configurable aspects of the TallStackUI docs.
         </p>
         <form id="form-documentation-settings" class="space-y-4" wire:submit="save">
-            <x-input label="Prefix" hint="Leave it empty to remove the current prefix." id="doc-prefix" wire:model="prefix" max-length="10">
+            <x-input label="Prefix" hint="If you use TallStackUI with a prefix, you can set it here. This way, the code examples in the documentation will have the prefix defined, and when you copy a code example, the prefix will already be applied to the code, ready to use. Leave the field blank to remove the current prefix." id="doc-prefix" wire:model="prefix" max-length="10">
                 <x-slot:label>
                     <a href="{{ route('documentation', ['v2', 'component-prefix']) }}" wire:navigate>Component Prefix</a>
                 </x-slot:label>
             </x-input>
-            <x-toggle label="View TailwindCSS examples using v4" wire:model="tailwindcss" />
+            @if ($version === 'v2')
+                <x-toggle label="View TailwindCSS examples using v4" wire:model="tailwindcss" />
+            @endif
         </form>
         <x-slot:footer>
             <x-button class="w-full" type="submit" form="form-documentation-settings" color="pink" sm>
