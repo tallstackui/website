@@ -32,8 +32,8 @@ class AppServiceProvider extends ServiceProvider
 
     private function configurePersonalization(): void
     {
-        TallStackUi::personalize('alert')
-            ->scope('circle')
+        TallStackUi::customize()
+            ->alert('circle')
             ->block('wrapper')
             ->replace('rounded-lg', 'rounded-full');
     }
