@@ -45,16 +45,10 @@
                     </x-warning>
                 </li>
                 <li>
-                    @if (!$tailwindcss)
-                        Edit the <x-block>tailwind.config.js</x-block> of your TailwindCSS v3 by inserting all below marked contents:
-                        <x-code language="js" :contents="$tailwindcssV3" disable-copy />
-                    @else
-                        Edit the <x-block>app.css</x-block> of your TailwindCSS v4 by inserting all below marked contents:
-                        <x-code language="js" :contents="$tailwindcssV4" disable-copy />
-                    @endif
+                    Edit the <x-block>app.css</x-block> of your TailwindCSS v4 by inserting all below marked contents:
+                    <x-code language="js" :contents="$tailwindcssV4" disable-copy />
                     <x-warning>
                         <ul class="list-decimal list-inside text-sm">
-                            <li>{{ __('Are you using TailwindCSS :version?', ['version' => $tailwindcss ? 'v3' : 'v4']) }} <a x-on:click="$modalOpen('prefix-modal')" class="cursor-pointer underline">Click here!</a></li>
                             <li>Your TailwindCSS setup must load the <a href="https://github.com/tailwindlabs/tailwindcss-forms" class="underline" target="_blank">form plugin</a></li>
                         </ul>
                     </x-warning>

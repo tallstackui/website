@@ -18,9 +18,6 @@
                 <x-layout.navigation.link :href="route('documentation', ['v3', 'alpine'])" text="AlpineJS Requirement" />
             </li>
             <li class="relative ml-4">
-                <x-layout.navigation.link :href="route('documentation', ['v3', 'troubleshooting'])" text="Troubleshooting" />
-            </li>
-            <li class="relative ml-4">
                 <x-layout.navigation.link :href="route('documentation', ['v3', 'upgrade-guide'])" text="Upgrade Guide" />
             </li>
         </ul>

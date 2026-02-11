@@ -395,7 +395,7 @@
             </div>
         </footer>
     </div>
-    <x-back-to-top />
+    <x-back-to-top color="pink" />
     <script>
         var version = "v3";
         var algolia_app_id = '{{ config('services.algolia.id', false) }}';

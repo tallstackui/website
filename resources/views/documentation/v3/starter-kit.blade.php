@@ -22,9 +22,9 @@
         <div class="space-y-4">
             <p>Here is the list of everything the TallStackUI starter kit delivers <i>out of the box:</i></p>
             <ul class="list-decimal list-inside">
-                <li>Laravel 12</li>
-                <li>Livewire 3</li>
-                <li>TallStackUI 2</li>
+                <li>Laravel v12</li>
+                <li>Livewire v4</li>
+                <li>TallStackUI v3</li>
                 <li>TailwindCSS v4</li>
             </ul>
             <x-warning>

@@ -92,7 +92,7 @@
             @endif
         </div>
     </div>
-    <x-back-to-top />
+    <x-back-to-top color="pink" />
     <script>
         var version = @js($current());
         var algolia_app_id = '{{ config('services.algolia.id', false) }}';
