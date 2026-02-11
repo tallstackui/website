@@ -21,7 +21,7 @@
             </p>
             <ul class="list-decimal list-inside space-y-2">
                 <li>
-                    <b class="italic">"Component Prefix":</b> The code examples of the docs are displayed without the <a href="{{ route('documentation', ['v2', 'component-prefix']) }}" class="underline" wire:navigate>component prefix.</a> You can use this input to set the prefix you are using in your Laravel project. All code examples of the docs will be displayed using the prefix, which makes it easier for you to copy and paste the code examples.
+                    <b class="italic">"Component Prefix":</b> The code examples of the docs are displayed without the <a href="{{ route('documentation', ['v3', 'component-prefix']) }}" class="underline" wire:navigate>component prefix.</a> You can use this input to set the prefix you are using in your Laravel project. All code examples of the docs will be displayed using the prefix, which makes it easier for you to copy and paste the code examples.
                 </li>
                 <li>
                     <b class="italic">"View TailwindCSS examples using v4":</b> You can enable this toggle to have all examples involving TailwindCSS displayed adapted for TailwindCSS v4.

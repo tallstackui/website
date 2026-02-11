@@ -44,7 +44,7 @@
                 <x-password :rules="['min:8', 'symbols:!@#', 'numbers', 'mixed']" />
             </x-preview>
             <p>
-                You can also omit the <x-block>rules</x-block> attribute to use the default rules that come from the <a href="{{ route('documentation', ['v2', 'configuration'])  }}" class="underline" wire:navigate>configuration file.</a>
+                You can also omit the <x-block>rules</x-block> attribute to use the default rules that come from the <a href="{{ route('documentation', ['v3', 'configuration'])  }}" class="underline" wire:navigate>configuration file.</a>
             </p>
             <x-code language="blade" :contents="$formatValidatorWithoutRules" />
         </div>
@@ -56,7 +56,7 @@
             </x-preview>
             <p>
                 Similar to the format validator, mentioned above, you can also omit the <x-block>rules</x-block> attribute
-                to use the default rules that come from the <a href="{{ route('documentation', ['v2', 'configuration']) }}" class="underline">configuration file.</a> With
+                to use the default rules that come from the <a href="{{ route('documentation', ['v3', 'configuration']) }}" class="underline">configuration file.</a> With
                 this approach all default rules will be applied to the password generator, which is better for enforcing a strong password.
             </p>
             <x-code language="blade" :contents="$passwordGeneratorWithoutRules" />

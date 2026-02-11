@@ -64,7 +64,7 @@
                 <livewire:documentation.interactions.toast.expandable/>
             </x-preview>
             <p class="mt-2">
-                You can configure Toast to be extensible by default in <a href="{{ route('documentation', ['v2', 'configuration']) }}" wire:navigate class="underline">the configuration file.</a> When you
+                You can configure Toast to be extensible by default in <a href="{{ route('documentation', ['v3', 'configuration']) }}" wire:navigate class="underline">the configuration file.</a> When you
                 do that, you can optionally ignore the expandable for specific Toast:
             </p>
             <x-code :contents="$ignoringExpandable" disable-copy />
@@ -73,7 +73,7 @@
     <x-section title="Position" description="An option to control the toast position at runtime.">
         <div class="space-y-4">
             <p class="mt-2">
-                By default, the Toast position is configured using <a href="{{ route('documentation', ['v2', 'configuration']) }}" wire:navigate class="underline">the configuration file.</a>.
+                By default, the Toast position is configured using <a href="{{ route('documentation', ['v3', 'configuration']) }}" wire:navigate class="underline">the configuration file.</a>.
                 However, you can set the Toast position at runtime using the <x-block>position</x-block> method:
             </p>
             <x-preview :contents="$position">

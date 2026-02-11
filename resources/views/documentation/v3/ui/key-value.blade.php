@@ -35,7 +35,7 @@
                 <livewire:documentation.ui.key-value :model="2" />
             </x-preview>
             <p>
-                You can personalize all translations of the component by <a href="{{ route('documentation', ['v2', 'translation']) }}" class="underline" wire:navigate>publishing the translations files.</a>
+                You can personalize all translations of the component by <a href="{{ route('documentation', ['v3', 'translation']) }}" class="underline" wire:navigate>publishing the translations files.</a>
             </p>
         </div>
     </x-section>

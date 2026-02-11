@@ -276,7 +276,7 @@
                 <li>When <x-block>search</x-block> is not set, then the query will return only 10 results.</li>
             </ul>
             <p>
-                Optionally, you can set the <x-block>unfiltered</x-block> globally by the TallStackUI <a href="{{ route('documentation', ['v2', 'configuration']) }}" wire:navigate class="underline">configuration file.</a>
+                Optionally, you can set the <x-block>unfiltered</x-block> globally by the TallStackUI <a href="{{ route('documentation', ['v3', 'configuration']) }}" wire:navigate class="underline">configuration file.</a>
             </p>
         </div>
     </x-section>

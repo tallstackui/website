@@ -63,7 +63,7 @@
         <div class="space-y-4">
             <p>
                 You can display symbols related to each supported
-                currency through <a href="{{ route('documentation', ['v2', 'translation']) }}" class="underline">TallStackUI's translation system.</a> You can control which symbol
+                currency through <a href="{{ route('documentation', ['v3', 'translation']) }}" class="underline">TallStackUI's translation system.</a> You can control which symbol
                 will be displayed via arguments.
             </p>
             <x-preview language="blade" :contents="$symbols">
