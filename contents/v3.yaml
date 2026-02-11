@@ -1,0 +1,593 @@
+installation:
+  - Meet TallStackUI
+  - History & Motivation
+  - Requirements
+  - Starter Kit
+  - Manual Installation
+starter-kit:
+  - Preview
+  - About Starter Kit
+  - Ready to Use
+  - How to Use
+  - First Usage
+  - Basic CRUD
+  - Caveats
+documentation:
+  - Searches
+  - Prefixing Example
+  - Examples Without Binding
+component-prefix:
+  - Configuration File
+  - Environment Variable
+  - Command
+  - Using Prefix
+without-livewire:
+  - Concept
+  - Example
+  - Parse Request Value
+command:
+  - Introduction
+  - Find Component
+  - Setup Prefix
+  - Setup Colors
+  - IDE
+contribution:
+  - Possibilities
+  - TallStackUI Way
+  - Prepare Environment
+  - Dusk Tests
+  - Run Tests
+  - Synchronize Changes
+form:
+  input:
+    - Basic Usage
+    - Label & Hint
+    - Required Label Indicator
+    - Icon Slot
+    - Prefix & Suffix
+    - Clearable
+    - Strip Zeros
+    - Invalidate
+  password:
+    - Basic Usage
+    - Label & Hint
+    - Required Label Indicator
+    - Caps Lock Indicator
+    - Format Validator
+    - Password Generator
+    - Generator Algorithm
+    - Disable Paste Event
+    - Events
+  color:
+    - Basic Usage
+    - Label & Hint
+    - Picker Mode
+    - Selectable
+    - Custom Colors
+    - Clearable
+    - Events
+    - Configurations
+  currency:
+    - Concept
+    - Basic Usage
+    - Different Currencies
+    - Label & Hint
+    - Clearable
+    - Intl Options
+    - Symbols
+    - Caveats
+  number:
+    - Basic Usage
+    - Step
+    - Label & Hint
+    - Min & Max Control
+    - Centralized
+    - Selectable
+    - Delay Control
+    - Chevron Icons
+    - Livewire Bind Concern
+  textarea:
+    - Basic Usage
+    - Label & Hint
+    - Required Label Indicator
+    - Resize
+    - Resize Auto
+    - Character Count
+  checkbox:
+    - Basic Usage
+    - Label
+    - Label Slot
+    - Label Alignment
+    - Size Variations
+    - Color Variations
+  radio:
+    - Basic Usage
+    - Label
+    - Label Slot
+    - Label Alignment
+    - Size Variations
+    - Color Variations
+  tag:
+    - Basic Usage
+    - Label & Hint
+    - Limit Options
+    - Prefix
+    - Events
+  toggle:
+    - Basic Usage
+    - Label
+    - Label Slot
+    - Label Alignment
+    - Size Variations
+    - Color Variations
+  range:
+    - Basic Usage
+    - Label
+    - Size Variations
+    - Color Variations
+  pin:
+    - Concept
+    - Basic Usage
+    - Label & Hint
+    - Prefix
+    - Clear
+    - Masks
+    - Events
+  upload:
+    Upload:
+      contents:
+        - Basic Usage
+        - Label & Hint & Tip
+        - Close After Upload
+        - Validation Error
+        - Delete
+        - Multiple
+        - Restricting File Types
+        - Footer Slot
+        - Validate Before Upload
+        - Events
+    Static:
+      contents:
+        - Concept
+        - Prepare the Usage
+        - Demonstration
+  date:
+    - Basic Usage
+    - Label & Hint
+    - Available Formats
+    - Helpers
+    - Min & Max Dates
+    - Min & Max Years
+    - Disable Dates
+    - Disable Specific Days
+    - Range Mode
+    - Multiple Mode
+    - Start Day
+    - Month Year Only
+    - Events
+  time:
+    - Basic Usage
+    - Label & Hint
+    - Available Formats
+    - Min & Max Hours and Minutes
+    - Required
+    - Helper
+    - Step Hour & Minute
+    - Footer Slot
+    - Events
+  select:
+    Native:
+      contents:
+        - Basic Usage
+        - Label & Hint
+        - Multi-dimensional Array
+    Styled:
+      contents:
+        - Basic Usage
+        - Label & Hint
+        - Placeholders
+        - Required
+        - Multiple
+        - Multi-dimensional Array
+        - Disable Options
+        - Limit Selection
+        - Image Preview
+        - Description
+        - Searchable
+        - Lazy Load
+        - Slot After
+        - Events
+    Styled API:
+      contents:
+        - Concept
+        - Basic Usage
+        - Unfiltered Results
+        - Advanced Usage
+ui:
+  alert:
+    - Basic Usage
+    - Title
+    - Close Option
+    - Icon Slot
+    - Footer Slot
+    - Color Variations
+    - Light Variations
+    - Outline Variations
+  avatar:
+    - Basic Usage
+    - Color Variations
+    - Size Variations
+    - Square Variations
+    - Placeholder
+    - Borderless
+    - Modelable
+    - Image
+  badge:
+    - Basic Usage
+    - Square Variation
+    - Round Variation
+    - Left & Right Slots
+    - Icon Slot
+    - Size Variations
+    - Color Variations
+    - Light Variations
+    - Outline Variations
+  banner:
+    Static:
+      contents:
+        - Concept
+        - Usage
+        - Messages
+        - Left Slot
+        - Close Option
+        - Animations
+        - Date Limit
+        - Size Variations
+        - Color Variations & Light Option
+        - Dispatching via Controllers
+    Livewire Integration:
+      contents:
+        - Concept
+        - Usage
+        - Available Options
+        - Example
+        - Display After Redirects
+  button:
+    Normal:
+      contents:
+        - Basic Usage
+        - Button as Link
+        - Square Variation
+        - Round Variation
+        - Left & Right Slots
+        - Icon Slot
+        - Size Variations
+        - Loading Effect
+        - Color Variations
+        - Light Variations
+        - Outline Variations
+        - Flat Variations
+    Circle:
+      contents:
+        - Basic Usage
+        - Button as Link
+        - Square Variation
+        - Round Variation
+        - Icon Slot
+        - Size Variations
+        - Loading Effect
+        - Color Variations
+        - Light Variations
+        - Outline Variations
+        - Flat Variations
+  boolean:
+    - Concept
+    - Basic Usage
+    - Icon Variation
+    - Color Variations
+    - Livewire Click Actions
+  card:
+    - Basic Usage
+    - Header Slot
+    - Footer Slot
+    - Minimizable
+    - Image
+    - Color Variations
+  carousel:
+    - Basic Usage
+    - Round
+    - Different Cover Image
+    - Shuffle
+    - Autoplay
+    - Autoplay, Stop on hover
+    - Autoplay, Without Loop
+    - Without Indicators
+    - Image Title & Description
+    - Fixed Aspect Radio
+    - Slots
+    - Events
+  clipboard:
+    - Basic Usage
+    - Button at Left
+    - Label & Hint
+    - Secret Content
+    - Events
+    - Icon Style
+    - Using Different Icons
+  dropdown:
+    - Basic Usage
+    - Available Positions
+    - Links
+    - Icon
+    - Static Icon
+    - Header Slot
+    - Dropdown Submenu
+    - Action Slot
+    - Events
+  error:
+    - Basic Usage
+    - Filtering Properties
+    - Title Customization
+    - Close Option
+    - Footer Slot
+    - Color Variations
+    - Events
+  environment:
+    - Basic Usage
+    - Beyond Basic, EnvBar
+    - Round Variation
+    - Square Variation
+    - Size Variations
+    - Without Branch
+    - Branch Detection Algorithm
+    - Color Scheme
+  icon:
+    - Concept
+    - Basic Usage
+    - Left & Right Slots
+    - Custom Icons
+    - Avoid Component Conflict
+    - Custom Icon Name Pattern
+    - Variations
+    - Internal Icon Guide
+  modal:
+    - Basic Usage
+    - Title Slot
+    - Footer Slot
+    - Scrollable
+    - Background Blur
+    - Size Variations
+    - Centered
+    - Z Index
+    - Persistent
+    - Wireable
+    - Wireable Personalized
+    - AlpineJS Helper
+    - Events
+    - Focus Helper
+    - Configurations
+  layout:
+    - Concept
+    - Layout Example
+    - "Slot: Header"
+    - "Slot: Menu"
+    - "Slot: Top"
+    - "Slot: Footer"
+    - Layout Header
+    - Side Bar
+    - Side Bar Item
+    - Side Bar Separator
+    - Disable Layout Components
+    - Personalization
+  link:
+    - Basic Usage
+    - Size Variations
+    - Icon Slot
+    - Target Blank & Style Options
+    - Query String & Fragment Options
+    - Color Variations
+    - Without Color
+    - Livewire SPA Navigation
+  loading:
+    - Concept
+    - Attributes
+    - Usage
+    - Basic Usage
+    - Text Slot
+    - Target & Delay Options
+    - Configurations
+  key-value:
+    - Concept
+    - Basic Usage
+    - Label & Value
+    - Without Placeholders
+    - Limit
+    - Static
+    - Deletable
+    - Change Delete Icon
+    - Events
+  progress:
+    Normal:
+      contents:
+        - Basic Usage
+        - Styles
+        - Without Text
+        - Size Variations
+        - Color Variations
+        - Light Variations
+        - Footer Slot
+    Circle:
+      contents:
+        - Basic Usage
+        - Strokes
+        - Size Variations
+        - Color Variations
+        - Light Variations
+        - Footer Slot
+  reaction:
+    - Concept
+    - Persist Reaction
+    - Basic Usage
+    - Animated Style
+    - Tooltip Position
+    - Quantity Slot
+    - Using Less Icons
+    - Slot
+    - Events
+  rating:
+    - Concept
+    - Persist Rating
+    - Basic Usage
+    - Rating Quantity
+    - Text
+    - Size Variations
+    - Color Variations
+    - Events
+  signature:
+    - Concept
+    - Basic Usage
+    - Label & Hint
+    - Pen Color
+    - Background Color
+    - Line Weight
+    - Height
+    - Clearable
+    - Exportable
+    - Events
+  slide:
+    - Basic Usage
+    - Positions
+    - Title Slot
+    - Footer Slot
+    - Background Blur
+    - Size Variations
+    - Z Index
+    - Persistent
+    - Wireable
+    - Wireable Personalized
+    - AlpineJS Helper
+    - Events
+    - Focus Helper
+    - Configurations
+  stats:
+    - Basic Usage
+    - Title
+    - Link
+    - Icons
+    - Color Variations
+    - Indicators
+    - Animated Effect
+    - Number Format
+    - Slots
+  step:
+    - Basic Usage
+    - Title & Description
+    - Final Step
+    - Helpers
+    - Allow Navigation Previous
+    - Alternative Styles
+    - Finish Slot
+    - Wireable
+    - Live Wireable
+    - Event
+  tab:
+    - Basic Usage
+    - Scroll on Mobile
+    - Slots
+    - Events
+    - Wireable
+    - Live Wireable
+  table:
+    - Concept
+    - Data for Table
+    - Basic Usage
+    - Without Header
+    - Striped Style
+    - Filters
+    - Loading Effect
+    - Sorting
+    - Pagination
+    - Slots
+    - Selection
+    - Clickable
+    - Interacting With Data
+  theme-switch:
+    - Concept
+    - Basic Usage
+    - Sizes
+    - Only Icon
+  tooltip:
+    - Basic Usage
+    - Available Positions
+    - Customized Icon
+    - Size Variations
+    - HTML Content
+    - Color Variations
+    - Variations
+interactions:
+  dialog:
+    - Configuration
+    - Basic Usage
+    - Confirmations
+    - Events
+    - Hooks
+    - JavaScript API
+    - Display After Redirects
+    - Dispatching via Controllers
+    - Configurations
+  toast:
+    - Configuration
+    - Basic Usage
+    - Confirmations
+    - Time Control
+    - Persistent
+    - Expandable
+    - Position
+    - Sole
+    - Events
+    - Hooks
+    - JavaScript API
+    - Display After Redirects
+    - Dispatching via Controllers
+    - Configurations
+personalization:
+  soft:
+    - Concept
+    - Tracing TailwindCSS Classes
+    - Start the Personalization
+    - Personalization Blocks
+    - Fluent Personalization
+    - Multiple Personalization Ways
+    - Invokable Class
+    - Component Data Parameters
+    - Interacting with Default Classes
+    - Scoped Soft Personalization
+  deep:
+    - Concept
+    - Publishing Configuration File
+    - Override Component Class
+    - Tracing TailwindCSS Classes
+    - Publish Blade Files
+  color:
+    - Concept
+    - Change Colors Definitions
+    - Create or Manipulate Colors
+    - Change the Default Namespace
+    - Create Custom Color
+helpers:
+  debug-mode:
+    - Concept
+    - Example
+    - Activate Debug Mode
+    - Available Configurations
+  env-bar:
+    - Concept
+    - Demonstration
+    - Installation
+    - Available Configuration
+    - Production Environment
+    - Configure Color Scheme
+    - Ignores
+    - Commands
+    - Helper Links
+    - Dedicated Repository

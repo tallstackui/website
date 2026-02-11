@@ -1,0 +1,117 @@
+@php
+    foreach (apply_prefix($__data) as $key => $value) $$key = $value;
+@endphp
+
+<x-layout :$content>
+    <x-slot:title>
+        Link
+    </x-slot:title>
+    <x-slot:description>
+        Link component.
+    </x-slot:description>
+    <x-slot:personalization>
+        <livewire:personalization :$personalization component="Link" />
+    </x-slot:personalization>
+    <x-section title="Basic Usage">
+        <x-preview language="blade" :contents="$basic">
+            <div class="flex flex-col">
+                <x-link :href="route('documentation', ['v2', 'ui', 'link'])">
+                    TallStackUI
+                </x-link>
+                <x-link :href="route('documentation', ['v2', 'ui', 'link'])" />
+            </div>
+        </x-preview>
+        <x-warning class="mt-4">
+            The href attribute will be mandatory unless the fragment is defined.
+        </x-warning>
+    </x-section>
+    <x-section title="Size Variations">
+        <x-preview language="blade" :contents="$sizes">
+            <x-link :href="route('documentation', ['v2', 'ui', 'link'])" text="TallStackUI" xs />
+            <x-link :href="route('documentation', ['v2', 'ui', 'link'])" text="TallStackUI" sm />
+            <x-link :href="route('documentation', ['v2', 'ui', 'link'])" text="TallStackUI" md />
+            <x-link :href="route('documentation', ['v2', 'ui', 'link'])" text="TallStackUI" lg />
+        </x-preview>
+    </x-section>
+    <x-section title="Icon Slot">
+        <x-preview language="blade" :contents="$icons">
+            <div class="flex items-center gap-x-2">
+                <x-link :href="route('documentation', ['v2', 'ui', 'link'])"
+                        text="TallStackUI"
+                        icon="link" />
+                <x-link :href="route('documentation', ['v2', 'ui', 'link'])"
+                        text="TallStackUI"
+                        icon="arrow-up-right"
+                        position="right" />
+            </div>
+        </x-preview>
+    </x-section>
+    <x-section title="Target Blank & Style Options">
+        <x-preview language="blade" :contents="$blankBoldUnderline">
+            <div class="flex items-center gap-x-2">
+                <x-link :href="route('documentation', ['v2', 'ui', 'link'])" text="TallStackUI" blank />
+                <x-link :href="route('documentation', ['v2', 'ui', 'link'])" text="TallStackUI" bold />
+                <x-link :href="route('documentation', ['v2', 'ui', 'link'])" text="TallStackUI" underline />
+                <x-link :href="route('documentation', ['v2', 'ui', 'link'])" text="TallStackUI" italic />
+            </div>
+        </x-preview>
+    </x-section>
+    <x-section title="Query String & Fragment Options" description="Hover the mouse to see the options in the browser link preview.">
+        <x-preview language="blade" :contents="$queryFragment">
+            <div class="flex items-center gap-x-2">
+                <x-link :href="route('documentation', ['v2', 'ui', 'link'])"
+                        text="TallStackUI"
+                        :query="['status' => 'active']" />
+                <x-link :href="route('documentation', ['v2', 'ui', 'link'])"
+                        text="TallStackUI"
+                        fragment="query-string-fragment-options" />
+            </div>
+        </x-preview>
+    </x-section>
+    <x-section title="Color Variations">
+        <x-preview language="blade" :contents="$colors">
+            <div class="flex flex-col gap-x-2">
+                <x-link :href="route('documentation', ['v2', 'ui', 'link'])" text="Primary" />
+                <x-link :href="route('documentation', ['v2', 'ui', 'link'])" text="Secondary" color="secondary" />
+                <x-link :href="route('documentation', ['v2', 'ui', 'link'])" text="Slate" color="slate" />
+                <x-link :href="route('documentation', ['v2', 'ui', 'link'])" text="Gray" color="gray" />
+                <x-link :href="route('documentation', ['v2', 'ui', 'link'])" text="Zinc" color="zinc" />
+                <x-link :href="route('documentation', ['v2', 'ui', 'link'])" text="Neutral" color="neutral" />
+                <x-link :href="route('documentation', ['v2', 'ui', 'link'])" text="Stone" color="stone" />
+                <x-link :href="route('documentation', ['v2', 'ui', 'link'])" text="Red" color="red" />
+                <x-link :href="route('documentation', ['v2', 'ui', 'link'])" text="Orange" color="orange" />
+                <x-link :href="route('documentation', ['v2', 'ui', 'link'])" text="Amber" color="amber" />
+                <x-link :href="route('documentation', ['v2', 'ui', 'link'])" text="Yellow" color="yellow" />
+                <x-link :href="route('documentation', ['v2', 'ui', 'link'])" text="Lime" color="lime" />
+                <x-link :href="route('documentation', ['v2', 'ui', 'link'])" text="Green" color="green" />
+                <x-link :href="route('documentation', ['v2', 'ui', 'link'])" text="Emerald" color="emerald" />
+                <x-link :href="route('documentation', ['v2', 'ui', 'link'])" text="Teal" color="teal" />
+                <x-link :href="route('documentation', ['v2', 'ui', 'link'])" text="Cyan" color="cyan" />
+                <x-link :href="route('documentation', ['v2', 'ui', 'link'])" text="Sky" color="sky" />
+                <x-link :href="route('documentation', ['v2', 'ui', 'link'])" text="Blue" color="blue" />
+                <x-link :href="route('documentation', ['v2', 'ui', 'link'])" text="Indigo" color="indigo" />
+                <x-link :href="route('documentation', ['v2', 'ui', 'link'])" text="Violet" color="violet" />
+                <x-link :href="route('documentation', ['v2', 'ui', 'link'])" text="Purple" color="purple" />
+                <x-link :href="route('documentation', ['v2', 'ui', 'link'])" text="Fuchsia" color="fuchsia" />
+                <x-link :href="route('documentation', ['v2', 'ui', 'link'])" text="Pink" color="pink" />
+                <x-link :href="route('documentation', ['v2', 'ui', 'link'])" text="Rose" color="rose" />
+                <x-link :href="route('documentation', ['v2', 'ui', 'link'])" text="Black" color="black" />
+            </div>
+        </x-preview>
+    </x-section>
+    <x-section title="Without Color">
+        <x-preview language="blade" :contents="$withoutColor">
+            <div class="flex flex-col gap-x-2">
+                <x-link :href="route('documentation', ['v2', 'ui', 'link'])" text="TallStackUI" colorless />
+            </div>
+        </x-preview>
+    </x-section>
+    <x-section title="Livewire SPA Navigation" description="An option to easily add Livewire 3 navigation effects in SPA mode.">
+        <x-preview language="blade" :contents="$navigate">
+            <div class="flex flex-col gap-x-2">
+                <x-link :href="route('documentation', ['v2', 'ui', 'link'])" text="Navigate" navigate />
+                <x-link :href="route('documentation', ['v2', 'ui', 'link'])" text="Navigate Hover" navigate-hover />
+            </div>
+        </x-preview>
+    </x-section>
+</x-layout>

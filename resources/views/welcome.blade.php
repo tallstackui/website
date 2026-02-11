@@ -84,7 +84,7 @@
                                                     </span> that elevate your workflow of <i>Livewire</i> applications.
                                                 </p>
                                                 <div class="mt-6 flex items-center gap-x-2">
-                                                    <x-button :href="route('documentation', ['v2', 'installation'])"
+                                                    <x-button :href="route('documentation', ['v3', 'installation'])"
                                                               color="pink"
                                                               position="right"
                                                               lg>
@@ -356,7 +356,7 @@
                                         <h1 class="mt-10 text-4xl font-bold tracking-tight text-gray-700 dark:text-white sm:text-6xl">A personalization approach never seen before.</h1>
                                         <p class="mt-6 text-lg leading-8 text-gray-600 dark:text-gray-300">Enjoy <u class="font-semibold text-pink-700 dark:text-gray-300">soft personalization</u> to customize your components at runtime. In just a few minutes and without technical effort, you can personalize all the TallStackUI components.</p>
                                         <div class="mt-10 flex items-center gap-x-6">
-                                            <a href="{{ route('documentation', ['v2', 'personalization', 'soft']) }}" wire:navigate class="text-sm font-semibold leading-6 text-gray-700 dark:text-gray-400">Learn more <span aria-hidden="true">→</span></a>
+                                            <a href="{{ route('documentation', ['v3', 'personalization', 'soft']) }}" wire:navigate class="text-sm font-semibold leading-6 text-gray-700 dark:text-gray-400">Learn more <span aria-hidden="true">→</span></a>
                                         </div>
                                     </div>
                                 </div>
@@ -369,7 +369,7 @@
                         </div>
                     </div>
                     <div class="mt-8 flex justify-center">
-                        <a href="{{ route('documentation', ['v2', 'installation']) }}" wire:navigate class="text-2xl font-semibold text-gray-700 dark:text-pink-600">
+                        <a href="{{ route('documentation', ['v3', 'installation']) }}" wire:navigate class="text-2xl font-semibold text-gray-700 dark:text-pink-600">
                             ... And muuuch more 🔥 Start your next <i>TALL</i> idea using TallStackUI!
                         </a>
                     </div>
@@ -397,7 +397,7 @@
     </div>
     <x-back-to-top />
     <script>
-        var version = "v2";
+        var version = "v3";
         var algolia_app_id = '{{ config('services.algolia.id', false) }}';
         var algolia_search_key = '{{ config('services.algolia.secret', false) }}';
     </script>
