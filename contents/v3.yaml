@@ -135,6 +135,7 @@ form:
     - Clear
     - Masks
     - Events
+    - Smart
   upload:
     Upload:
       contents:

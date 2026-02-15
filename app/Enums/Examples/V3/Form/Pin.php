@@ -32,6 +32,14 @@ class Pin
     <x-pin length="5" clear x-on:clear="alert(`Cleared: ${$event.detail.model}`)" />
     HTML;
 
+    public const SMART = <<<'HTML'
+    <!-- Livewire string property: $pin -->
+
+    <form wire:submit="verify">
+        <x-pin length="5" wire:model.live="pin" label="Enter your code" smart numbers /> <!-- [tl! highlight] -->
+    </form>
+    HTML;
+
     public const PERSONALIZATION = <<<'HTML'
     TallStackUi::customize()
         ->form('pin')

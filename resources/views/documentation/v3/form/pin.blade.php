@@ -38,7 +38,7 @@
     </x-section>
     <x-section title="Clear" description="An option to append a clear button.">
         <x-preview language="blade" :contents="$clear">
-            <livewire:documentation.form.pin />
+            <livewire:documentation.form.pin :mode="1" />
         </x-preview>
         <x-warning class="mt-4">
             The clear button will only be displayed when the input is not empty.
@@ -62,5 +62,18 @@
         <x-warning class="mt-4">
             The clear event needs the clear option to be enabled.
         </x-warning>
+    </x-section>
+    <x-section title="Smart" description="An option to automatically submit the form when all pin boxes are filled.">
+        <div class="space-y-4">
+            <p>
+                The <x-block>smart</x-block> attribute automatically submits the parent form when all pin boxes are filled.
+            </p>
+            <x-preview language="blade" :contents="$smart">
+                <livewire:documentation.form.pin :mode="2" />
+            </x-preview>
+            <x-warning>
+                The form will only be submitted once. After submission, the user must clear and re-fill the pin to submit again.
+            </x-warning>
+        </div>
     </x-section>
 </x-layout>
