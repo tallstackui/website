@@ -262,6 +262,7 @@ ui:
     Normal:
       contents:
         - Basic Usage
+        - Block
         - Button as Link
         - Square Variation
         - Round Variation

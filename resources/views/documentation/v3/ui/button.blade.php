@@ -26,6 +26,11 @@
             <x-code :contents="$submit" language="blade" disable-copy />
         </div>
     </x-section>
+    <x-section title="Block" anchor="normal-block" description="An option to expand the button to full width.">
+        <x-preview language="blade" :contents="$block">
+            <x-button block>TallStackUI</x-button>
+        </x-preview>
+    </x-section>
     <x-section title="Button as Link" anchor="normal-button-as-link">
         <x-preview language="blade" :contents="$a">
             <x-button href="https://google.com.br" target="_blank">TallStackUI</x-button>

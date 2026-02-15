@@ -12,6 +12,10 @@ class Button
     <x-button text="TallStackUi" />
     HTML;
 
+    public const BLOCK = <<<'HTML'
+    <x-button block>TallStackUI</x-button>
+    HTML;
+
     public const SUBMIT = <<<'HTML'
     <x-button submit>TallStackUi</x-button>
 
