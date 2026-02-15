@@ -236,7 +236,7 @@
                                         <x-modal title="TallStackUI" id="modal-example">
                                             Your form content goes here...
                                             <x-slot:footer>
-                                                <x-button color="red" x-on:click="$modalClose('modal-example')">
+                                                <x-button color="red" x-on:click="$tsui.modal.close('modal-example')">
                                                     Close
                                                 </x-button>
                                             </x-slot:footer>
@@ -244,7 +244,7 @@
                                         <x-modal title="TallStackUI" blur id="modal-blur-example">
                                             Your form content goes here...
                                             <x-slot:footer>
-                                                <x-button color="red" x-on:click="$modalClose('modal-blur-example')">
+                                                <x-button color="red" x-on:click="$tsui.modal.close('modal-blur-example')">
                                                     Close
                                                 </x-button>
                                             </x-slot:footer>
@@ -255,7 +255,7 @@
                                         <x-slide title="TallStackUI" blur id="slide-full-example" size="full">
                                             ... Can you imagine a big content here?
                                             <x-slot:footer end>
-                                                <x-button color="red" x-on:click="$slideClose('slide-full-example')">
+                                                <x-button color="red" x-on:click="$tsui.slide.close('slide-full-example')">
                                                     Close
                                                 </x-button>
                                             </x-slot:footer>

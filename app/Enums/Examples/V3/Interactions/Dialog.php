@@ -168,19 +168,19 @@ class Dialog
         <x-button color="secondary" onclick="confirm()">Confirmation</x-button>
 
         <script>
-            show = () => $interaction('dialog')
+            show = () => $tsui.interaction('dialog')
                 .success('Success', 'This is a success message.')
                 .send();
 
-            error = () => $interaction('dialog')
+            error = () => $tsui.interaction('dialog')
                 .error('Success', 'This is a error message.')
                 .send();
 
-            warning = () => $interaction('dialog')
+            warning = () => $tsui.interaction('dialog')
                 .warning('Success', 'This is a warning message.')
                 .send();
 
-            info = () => $interaction('dialog')
+            info = () => $tsui.interaction('dialog')
                 .info('Success', 'This is a info message.')
                 .send();
 
@@ -188,10 +188,9 @@ class Dialog
             // a Livewire component, it is necessary to pass the id of
             // the component where the method is defined. You need to
             // do this by interacting with the `wireable()` method.
-
             const component = Livewire.find('your-component-id-goes-here').id; // [tl! highlight]
 
-            confirm = () => $interaction('dialog')
+            confirm = () => $tsui.interaction('dialog')
                 .wireable(component) // [tl! highlight]
                 .question('Warning', 'Are you sure?')
                 .confirm('Confirm', 'confirmed', 'Confirmed Successfully')
@@ -201,7 +200,7 @@ class Dialog
             // Alternatively, you can pass the component id as an
             // empty string to use the FIRST LIVEWIRE COMPONENT OF THE PAGE.
 
-            confirm = () => $interaction('dialog')
+            confirm = () => $tsui.interaction('dialog')
                 .wireable() // [tl! highlight]
                 .question('Warning', 'Are you sure?')
                 .confirm('Confirm', 'confirmed', 'Confirmed Successfully')

@@ -218,7 +218,7 @@
             <x-modal id="persistent-modal" title="TallStackUI" persistent>
                 TallStackUI
                 <x-slot:footer>
-                    <x-button color="red" x-on:click="$modalClose('persistent-modal')">Close</x-button>
+                    <x-button color="red" x-on:click="$tsui.modal.close('persistent-modal')">Close</x-button>
                 </x-slot:footer>
             </x-modal>
             <x-button x-on:click="$tsui.open.modal('persistent-modal')">

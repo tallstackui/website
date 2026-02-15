@@ -188,7 +188,7 @@
             <x-slide id="persistent-slide" title="TallStackUI" persistent>
                 TallStackUI
                 <x-slot:footer end>
-                    <x-button color="red" x-on:click="$slideClose('persistent-slide')">Close</x-button>
+                    <x-button color="red" x-on:click="$tsui.slide.close('persistent-slide')">Close</x-button>
                 </x-slot:footer>
             </x-slide>
             <x-button x-on:click="$tsui.open.slide('persistent-slide')">
@@ -234,7 +234,7 @@
             </p>
             <x-code language="blade" :contents="$focusTime"/>
             <p>
-                Additionally, you can use a custom <x-block>data-focus</x-block> HTML attribute to determine the input to be focused:
+                Additionally, you can use a custom <x-block>data-focus</x-block> or <x-block>x-ref</x-block> HTML attribute to determine the input to be focused:
             </p>
             <x-code language="blade" :contents="$focusUsingDataAttribute"/>
         </div>

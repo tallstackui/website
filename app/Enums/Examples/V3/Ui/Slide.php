@@ -116,7 +116,7 @@ class Slide
         Open
     </x-button>
 
-    <x-button x-on:click="$slideClose('slide-id')">
+    <x-button x-on:click="$tsui.slide.close('slide-id')">
         Close
     </x-button>
     HTML;

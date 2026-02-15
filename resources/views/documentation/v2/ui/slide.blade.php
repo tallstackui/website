@@ -188,7 +188,7 @@
             <x-slide id="persistent-slide" title="TallStackUI" persistent>
                 TallStackUI
                 <x-slot:footer end>
-                    <x-button color="red" x-on:click="$slideClose('persistent-slide')">Close</x-button>
+                    <x-button color="red" x-on:click="$tsui.slide.close('persistent-slide')">Close</x-button>
                 </x-slot:footer>
             </x-slide>
             <x-button x-on:click="$tsui.open.slide('persistent-slide')">

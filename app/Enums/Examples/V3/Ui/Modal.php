@@ -113,7 +113,7 @@ class Modal
         Open
     </x-button>
 
-    <x-button x-on:click="$modalClose('modal-id')">
+    <x-button x-on:click="$tsui.modal.close('modal-id')">
         Close
     </x-button>
     HTML;

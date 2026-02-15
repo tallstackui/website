@@ -106,7 +106,7 @@
     <x-section title="Route-Based Tabs">
         <div class="space-y-4">
             <p>
-                Tabs can be associated with URLs using the <x-block>href</x-block> attribute on <x-block>tab.items</x-block>.
+                Starting from v3, tabs can be associated with URLs using the <x-block>href</x-block> attribute on <x-block>tab.items</x-block>.
                 When set, the tab's content only renders server-side if the current URL matches. Clicking a different tab navigates
                 to its URL. This avoids rendering heavy Livewire components for inactive tabs.
             </p>

@@ -218,7 +218,7 @@
             <x-modal id="persistent-modal" title="TallStackUI" persistent>
                 TallStackUI
                 <x-slot:footer>
-                    <x-button color="red" x-on:click="$modalClose('persistent-modal')">Close</x-button>
+                    <x-button color="red" x-on:click="$tsui.modal.close('persistent-modal')">Close</x-button>
                 </x-slot:footer>
             </x-modal>
             <x-button x-on:click="$tsui.open.modal('persistent-modal')">
@@ -264,7 +264,7 @@
             </p>
             <x-code language="blade" :contents="$focusTime"/>
             <p>
-                Additionally, you can use a custom <x-block>data-focus</x-block> HTML attribute to determine the input to be focused:
+                Additionally, you can use a custom <x-block>data-focus</x-block> or <x-block>x-ref</x-block> HTML attribute to determine the input to be focused:
             </p>
             <x-code language="blade" :contents="$focusUsingDataAttribute"/>
         </div>

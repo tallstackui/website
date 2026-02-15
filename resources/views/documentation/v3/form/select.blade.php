@@ -212,7 +212,7 @@
             <x-select.styled searchable :options="[1,2,3]">
                 <x-slot:after>
                     <div class="mb-2 flex items-center justify-center px-2">
-                        <x-button x-on:click="show = false; $interaction('dialog').success('Done!', `Term: ${search}`).send()">
+                        <x-button x-on:click="show = false; $tsui.interaction('dialog').success('Done!', `Term: ${search}`).send()">
                             <span x-html="`Create user <b>${search}</b>`"></span>
                         </x-button>
                     </div>
