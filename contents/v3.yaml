@@ -299,6 +299,7 @@ ui:
     - Minimizable
     - Image
     - Color Variations
+    - Loading
   carousel:
     - Basic Usage
     - Round

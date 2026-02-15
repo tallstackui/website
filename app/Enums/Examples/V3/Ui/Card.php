@@ -92,6 +92,18 @@ class Card
     </x-card>
     HTML;
 
+    public const LOADING = <<<'HTML'
+    <x-card loading>
+        TallStackUI
+    </x-card>
+
+    <!-- You can use all the Livewire delay options: shortest, shorter, short, long, longer, longest -->
+
+    <x-card loading="save" delay="longest">
+        TallStackUI
+    </x-card>
+    HTML;
+
     public const PERSONALIZATION = <<<'HTML'
     TallStackUi::customize()
         ->card()

@@ -85,4 +85,10 @@
             Just like the minimizeable option, the colors are only applied when the Card has a header.
         </x-warning>
     </x-section>
+    <x-section title="Loading" description="An option to set the card in a loading state.">
+        <x-preview language="blade" :contents="$loading">
+            <livewire:documentation.ui.card />
+        </x-preview>
+        <p class="mt-4">Even if you use the <x-block>header</x-block> slot to set a raw HTML content the loading effect will be visible</p>
+    </x-section>
 </x-layout>
