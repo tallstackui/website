@@ -235,7 +235,7 @@ class Banner
     HTML;
 
     public const PERSONALIZATION = <<<'HTML'
-    TallStackUi::personalize()
+    TallStackUi::customize()
         ->banner()
         ->block('block', 'classes');
     HTML;

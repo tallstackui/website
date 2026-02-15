@@ -90,21 +90,21 @@ class Carousel
     public const TITLE_DESCRIPTION = <<<'HTML'
     <x-carousel :images="[
         [
-            'src' => url('assets/images/wallpapers/1.jpg'), 
-            'alt' => 'Wallpaper 1', 
-            'title' => 'Image 1', 
+            'src' => url('assets/images/wallpapers/1.jpg'),
+            'alt' => 'Wallpaper 1',
+            'title' => 'Image 1',
             'description' => 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
         ],
         [
-            'src' => url('assets/images/wallpapers/2.jpg'), 
-            'alt' => 'Wallpaper 2', 
-            'title' => 'Image 2', 
+            'src' => url('assets/images/wallpapers/2.jpg'),
+            'alt' => 'Wallpaper 2',
+            'title' => 'Image 2',
             'description' => 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
         ],
         [
-            'src' => url('assets/images/wallpapers/3.jpg'), 
-            'alt' => 'Wallpaper 3', 
-            'title' => 'Image 3', 
+            'src' => url('assets/images/wallpapers/3.jpg'),
+            'alt' => 'Wallpaper 3',
+            'title' => 'Image 3',
             'description' => 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
         ],
     ]" />
@@ -135,7 +135,7 @@ class Carousel
 
     public const EVENTS = <<<'HTML'
     <!-- $event.detail will receive: {current: integer, image: object{current image}} -->
-    
+
     <x-carousel :images="[
         ['src' => url('assets/images/wallpapers/1.jpg'), 'alt' => 'Wallpaper 1'],
         ['src' => url('assets/images/wallpapers/2.jpg'), 'alt' => 'Wallpaper 2'],
@@ -145,7 +145,7 @@ class Carousel
     HTML;
 
     public const PERSONALIZATION = <<<'HTML'
-    TallStackUi::personalize()
+    TallStackUi::customize()
         ->carousel()
         ->block('block', 'classes');
     HTML;

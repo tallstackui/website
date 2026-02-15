@@ -24,7 +24,7 @@ class Link
 
     public const SIZES = <<<'HTML'
     <x-link href="https://google.com.br/" text="TallStackUI" xs />
-    
+
     <x-link href="https://google.com.br/" text="TallStackUI" sm />
 
     <!-- default size -->
@@ -45,7 +45,7 @@ class Link
     <x-link href="https://google.com.br/" text="TallStackUI" bold />
 
     <x-link href="https://google.com.br/" text="TallStackUI" underline />
-    
+
     <x-link href="https://google.com.br/" text="TallStackUI" italic />
     HTML;
 
@@ -100,7 +100,7 @@ class Link
     HTML;
 
     public const PERSONALIZATION = <<<'HTML'
-    TallStackUi::personalize()
+    TallStackUi::customize()
         ->link()
         ->block('block', 'classes');
     HTML;

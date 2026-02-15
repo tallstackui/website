@@ -122,7 +122,7 @@ class Stats
     HTML;
 
     public const PERSONALIZATION = <<<'HTML'
-    TallStackUi::personalize()
+    TallStackUi::customize()
         ->stats()
         ->block('block', 'classes');
     HTML;

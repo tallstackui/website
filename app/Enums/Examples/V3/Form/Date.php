@@ -130,7 +130,7 @@ class Date
     HTML;
 
     public const PERSONALIZATION = <<<'HTML'
-    TallStackUi::personalize()
+    TallStackUi::customize()
         ->form('date')
         ->block('block', 'classes');
     HTML;

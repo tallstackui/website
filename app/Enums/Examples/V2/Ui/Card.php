@@ -75,17 +75,17 @@ class Card
 
     public const COLOR = <<<'HTML'
     <!-- Accepted colors: primary, secondary, and ANY other TailwindCSS color. -->
-    
+
     <!-- Normal -->
     <x-card header="TallStackUI" color="primary">
         TallStackUI
     </x-card>
-    
+
     <!-- Light Variation -->
     <x-card header="TallStackUI" color="primary">
         TallStackUI
     </x-card>
-    
+
     <!-- Border Only -->
     <x-card header="TallStackUI" color="primary" bordered>
         TallStackUI
@@ -93,7 +93,7 @@ class Card
     HTML;
 
     public const PERSONALIZATION = <<<'HTML'
-    TallStackUi::personalize()
+    TallStackUi::customize()
         ->card()
         ->block('block', 'classes');
     HTML;

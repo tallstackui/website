@@ -116,7 +116,7 @@ class Toast
         // ...
         'timeout' => 10, // [tl! highlight]
     ],
-    
+
     // Then use the timeout() method without parameters
     $this->toast()
         ->timeout() // [tl! highlight]
@@ -247,23 +247,23 @@ class Toast
     use Illuminate\Contracts\View\View;
     use Livewire\Component;
     use TallStackUi\Traits\Interactions;
-    
+
     class Payment extends Component
     {
         use Interactions;
-    
+
         public function render(): View
         {
             return view('livewire.livewire');
         }
-    
+
         public function save()
         {
             $this->toast()
                 ->success('Done!', 'Your money has been sent!')
                 ->flash() // [tl! highlight]
                 ->send();
-    
+
             return $this->redirect(route('dashboard'));
         }
     }
@@ -272,22 +272,22 @@ class Toast
     public const CONTROLLERS = <<<'HTML'
     use Illuminate\Http\Request;
     use TallStackUi\Traits\Interactions;
-    
+
     class PaymentController extends Controller
     {
         use Interactions; // [tl! highlight]
-    
+
         public function index()
         {
             return view('payment.index', [
                 //
             ]);
         }
-    
+
         public function update(Request $request)
         {
             // ...
-    
+
             $this->toast() // [tl! highlight:2]
                 ->success('...')
                 ->send();
@@ -296,7 +296,7 @@ class Toast
     HTML;
 
     public const PERSONALIZATION = <<<'HTML'
-    TallStackUi::personalize()
+    TallStackUi::customize()
         ->toast()
         ->block('block', 'classes');
     HTML;

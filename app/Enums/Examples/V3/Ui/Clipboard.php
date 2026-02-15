@@ -49,7 +49,7 @@ class Clipboard
     HTML;
 
     public const PERSONALIZATION = <<<'HTML'
-    TallStackUi::personalize()
+    TallStackUi::customize()
         ->clipboard()
         ->block('block', 'classes');
     HTML;

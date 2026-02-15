@@ -260,16 +260,16 @@
                                                 </x-button>
                                             </x-slot:footer>
                                         </x-slide>
-                                        <x-button x-on:click="$modalOpen('modal-example')">
+                                        <x-button x-on:click="$tsui.open.modal('modal-example')">
                                             Modal
                                         </x-button>
-                                        <x-button x-on:click="$modalOpen('modal-blur-example')">
+                                        <x-button x-on:click="$tsui.open.modal('modal-blur-example')">
                                             Modal <i>(Blur)</i>
                                         </x-button>
-                                        <x-button color="pink" x-on:click="$slideOpen('slide-example')">
+                                        <x-button color="pink" x-on:click="$tsui.open.slide('slide-example')">
                                             Slide
                                         </x-button>
-                                        <x-button color="pink" x-on:click="$slideOpen('slide-full-example')">
+                                        <x-button color="pink" x-on:click="$tsui.open.slide('slide-full-example')">
                                             Slide <i>(Full)</i>
                                         </x-button>
                                     </dd>

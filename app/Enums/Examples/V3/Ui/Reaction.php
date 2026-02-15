@@ -84,7 +84,7 @@ class Reaction
     HTML;
 
     public const PERSONALIZATION = <<<'HTML'
-    TallStackUi::personalize()
+    TallStackUi::customize()
         ->reaction()
         ->block('block', 'classes');
     HTML;

@@ -46,7 +46,7 @@ class Signature
     HTML;
 
     public const PERSONALIZATION = <<<'HTML'
-    TallStackUi::personalize()
+    TallStackUi::customize()
         ->signature()
         ->block('block', 'classes');
     HTML;

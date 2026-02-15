@@ -71,7 +71,7 @@ class Radio
     HTML;
 
     public const PERSONALIZATION = <<<'HTML'
-    TallStackUi::personalize()
+    TallStackUi::customize()
         ->form('radio')
         ->block('block', 'classes');
     HTML;

@@ -118,19 +118,19 @@ class Dropdown
     HTML;
 
     public const PERSONALIZATION = <<<'HTML'
-    TallStackUi::personalize()
+    TallStackUi::customize()
         ->dropdown()
         ->block('block', 'classes');
     HTML;
 
     public const PERSONALIZATION_ITEMS = <<<'HTML'
-    TallStackUi::personalize()
+    TallStackUi::customize()
         ->dropdown('items')
         ->block('block', 'classes');
     HTML;
 
     public const PERSONALIZATION_SUBMENU = <<<'HTML'
-    TallStackUi::personalize()
+    TallStackUi::customize()
         ->dropdown('submenu')
         ->block('block', 'classes');
     HTML;

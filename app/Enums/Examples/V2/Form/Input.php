@@ -15,7 +15,7 @@ class Input
     public const LABEL_RAW_HTML = <<<'HTML'
     <x-input>
         <x-slot:label>
-            <span>Name</span>        
+            <span>Name</span>
         </x-slot:label>
     </x-input>
     HTML;
@@ -58,7 +58,7 @@ class Input
     HTML;
 
     public const PERSONALIZATION = <<<'HTML'
-    TallStackUi::personalize()
+    TallStackUi::customize()
         ->form('input')
         ->block('block', 'classes');
     HTML;

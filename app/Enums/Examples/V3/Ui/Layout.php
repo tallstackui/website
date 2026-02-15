@@ -182,31 +182,31 @@ class Layout
     HTML;
 
     public const PERSONALIZATION_LAYOUT = <<<'HTML'
-    TallStackUi::personalize()
+    TallStackUi::customize()
         ->layout()
         ->block('block', 'classes');
     HTML;
 
     public const PERSONALIZATION_LAYOUT_HEADER = <<<'HTML'
-    TallStackUi::personalize()
+    TallStackUi::customize()
         ->layout('header')
         ->block('block', 'classes');
     HTML;
 
     public const PERSONALIZATION_SIDEBAR = <<<'HTML'
-    TallStackUi::personalize()
+    TallStackUi::customize()
         ->sideBar()
         ->block('block', 'classes');
     HTML;
 
     public const PERSONALIZATION_SIDEBAR_ITEM = <<<'HTML'
-    TallStackUi::personalize()
+    TallStackUi::customize()
         ->sideBar('item')
         ->block('block', 'classes');
     HTML;
 
     public const PERSONALIZATION_SIDEBAR_SEPARATOR = <<<'HTML'
-    TallStackUi::personalize()
+    TallStackUi::customize()
         ->sideBar('separator')
         ->block('block', 'classes');
     HTML;

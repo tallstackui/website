@@ -21,7 +21,7 @@ class ThemeSwitch
     HTML;
 
     public const PERSONALIZATION = <<<'HTML'
-    TallStackUi::personalize()
+    TallStackUi::customize()
         ->themeSwitch()
         ->block('block', 'classes');
     HTML;

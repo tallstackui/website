@@ -109,8 +109,8 @@ class Dropdown
     HTML;
 
     public const EVENTS = <<<'HTML'
-    <x-dropdown text="Menu" 
-                x-on:open="alert(`Open, 'show' status: ${$event.detail.status}`)" 
+    <x-dropdown text="Menu"
+                x-on:open="alert(`Open, 'show' status: ${$event.detail.status}`)"
                 x-on:select="alert('Selected')">
         <x-dropdown.items text="Settings" />
         <x-dropdown.items text="Logout" separator />
@@ -118,19 +118,19 @@ class Dropdown
     HTML;
 
     public const PERSONALIZATION = <<<'HTML'
-    TallStackUi::personalize()
+    TallStackUi::customize()
         ->dropdown()
         ->block('block', 'classes');
     HTML;
 
     public const PERSONALIZATION_ITEMS = <<<'HTML'
-    TallStackUi::personalize()
+    TallStackUi::customize()
         ->dropdown('items')
         ->block('block', 'classes');
     HTML;
 
     public const PERSONALIZATION_SUBMENU = <<<'HTML'
-    TallStackUi::personalize()
+    TallStackUi::customize()
         ->dropdown('submenu')
         ->block('block', 'classes');
     HTML;

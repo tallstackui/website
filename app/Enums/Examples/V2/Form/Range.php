@@ -47,7 +47,7 @@ class Range
     HTML;
 
     public const PERSONALIZATION = <<<'HTML'
-    TallStackUi::personalize()
+    TallStackUi::customize()
         ->form('range')
         ->block('block', 'classes');
     HTML;

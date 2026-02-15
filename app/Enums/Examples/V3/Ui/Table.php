@@ -436,7 +436,7 @@ class Table
     HTML;
 
     public const PERSONALIZATION = <<<'HTML'
-    TallStackUi::personalize()
+    TallStackUi::customize()
         ->table()
         ->block('block', 'classes');
     HTML;

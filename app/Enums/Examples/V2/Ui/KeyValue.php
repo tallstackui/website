@@ -6,7 +6,7 @@ class KeyValue
 {
     public const BASIC_PHP = <<<'HTML'
     use Livewire\Component;
-    
+
     class ProductMetadata extends Component
     {
         public array $metadata = [ // [tl! highlight:9]
@@ -19,7 +19,7 @@ class KeyValue
                 'value' => 'NuxtJS',
             ]
         ];
-    
+
         // ...
     }
     HTML;
@@ -69,9 +69,9 @@ class KeyValue
                 'value' => 'NuxtJS',
             ]
         ];
-    
+
         // ...
-    
+
         public function delete($index, $rows) // [tl! highlight:3]
         {
             //
@@ -93,12 +93,12 @@ class KeyValue
 
     public const EVENTS = <<<'HTML'
     <!-- $event.detail.rows: will contain the rows -->
-    
+
     <x-key-value x-on:add="alert('Added')" x-on:remove="alert('Removed')" />
     HTML;
 
     public const PERSONALIZATION = <<<'HTML'
-    TallStackUi::personalize()
+    TallStackUi::customize()
         ->keyValue()
         ->block('block', 'classes');
     HTML;

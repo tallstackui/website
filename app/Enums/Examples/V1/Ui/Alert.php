@@ -146,7 +146,7 @@ class Alert
     HTML;
 
     public const PERSONALIZATION = <<<'HTML'
-    TallStackUi::personalize()
+    TallStackUi::customize()
         ->alert()
         ->block('block', 'classes');
     HTML;

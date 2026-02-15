@@ -264,7 +264,7 @@ class Dialog
     HTML;
 
     public const PERSONALIZATION = <<<'HTML'
-    TallStackUi::personalize()
+    TallStackUi::customize()
         ->dialog()
         ->block('block', 'classes');
     HTML;

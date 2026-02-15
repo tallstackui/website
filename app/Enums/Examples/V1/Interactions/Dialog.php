@@ -215,23 +215,23 @@ class Dialog
     use Illuminate\Contracts\View\View;
     use Livewire\Component;
     use TallStackUi\Traits\Interactions;
-    
+
     class Payment extends Component
     {
         use Interactions;
-    
+
         public function render(): View
         {
             return view('livewire.livewire');
         }
-    
+
         public function save()
         {
             $this->dialog()
                 ->success('Done!', 'Your money has been sent!')
                 ->flash() // [tl! highlight]
                 ->send();
-    
+
             return $this->redirect(route('dashboard'));
         }
     }
@@ -240,22 +240,22 @@ class Dialog
     public const CONTROLLERS = <<<'HTML'
     use Illuminate\Http\Request;
     use TallStackUi\Traits\Interactions;
-    
+
     class PaymentController extends Controller
     {
         use Interactions; // [tl! highlight]
-    
+
         public function index()
         {
             return view('payment.index', [
                 //
             ]);
         }
-    
+
         public function update(Request $request)
         {
             // ...
-    
+
             $this->dialog() // [tl! highlight:2]
                 ->success('...')
                 ->send();
@@ -264,7 +264,7 @@ class Dialog
     HTML;
 
     public const PERSONALIZATION = <<<'HTML'
-    TallStackUi::personalize()
+    TallStackUi::customize()
         ->dialog()
         ->block('block', 'classes');
     HTML;

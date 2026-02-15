@@ -17,7 +17,7 @@
             <x-modal id="basic-modal">
                 TallStackUI
             </x-modal>
-            <x-button x-on:click="$modalOpen('basic-modal')">
+            <x-button x-on:click="$tsui.open.modal('basic-modal')">
                 Open Modal
             </x-button>
         </x-preview>
@@ -30,7 +30,7 @@
                 </x-slot:title>
                 TallStackUI
             </x-modal>
-            <x-button x-on:click="$modalOpen('title-modal')">
+            <x-button x-on:click="$tsui.open.modal('title-modal')">
                 Open Modal
             </x-button>
         </x-preview>
@@ -43,7 +43,7 @@
                     TallStackUI
                 </x-slot:footer>
             </x-modal>
-            <x-button x-on:click="$modalOpen('footer-modal')">
+            <x-button x-on:click="$tsui.open.modal('footer-modal')">
                 Open Modal
             </x-button>
         </x-preview>
@@ -62,16 +62,16 @@
             <x-modal id="blur-modal-xl" title="TallStackUI" blur="xl">
                 XL
             </x-modal>
-            <x-button x-on:click="$modalOpen('blur-modal-sm')">
+            <x-button x-on:click="$tsui.open.modal('blur-modal-sm')">
                 SM
             </x-button>
-            <x-button x-on:click="$modalOpen('blur-modal-md')">
+            <x-button x-on:click="$tsui.open.modal('blur-modal-md')">
                 MD
             </x-button>
-            <x-button x-on:click="$modalOpen('blur-modal-lg')">
+            <x-button x-on:click="$tsui.open.modal('blur-modal-lg')">
                 LG
             </x-button>
-            <x-button x-on:click="$modalOpen('blur-modal-xl')">
+            <x-button x-on:click="$tsui.open.modal('blur-modal-xl')">
                 XL
             </x-button>
         </x-preview>
@@ -109,34 +109,34 @@
                 <x-modal id="7xl-size-modal" title="TallStackUI" size="7xl">
                     7xl
                 </x-modal>
-                <x-button x-on:click="$modalOpen('default-size-modal')">
+                <x-button x-on:click="$tsui.open.modal('default-size-modal')">
                     Default
                 </x-button>
-                <x-button x-on:click="$modalOpen('sm-size-modal')">
+                <x-button x-on:click="$tsui.open.modal('sm-size-modal')">
                     sm
                 </x-button>
-                <x-button x-on:click="$modalOpen('md-size-modal')">
+                <x-button x-on:click="$tsui.open.modal('md-size-modal')">
                     md
                 </x-button>
-                <x-button x-on:click="$modalOpen('lg-size-modal')">
+                <x-button x-on:click="$tsui.open.modal('lg-size-modal')">
                     lg
                 </x-button>
-                <x-button x-on:click="$modalOpen('xl-size-modal')">
+                <x-button x-on:click="$tsui.open.modal('xl-size-modal')">
                     xl
                 </x-button>
-                <x-button x-on:click="$modalOpen('3xl-size-modal')">
+                <x-button x-on:click="$tsui.open.modal('3xl-size-modal')">
                     3xl
                 </x-button>
-                <x-button x-on:click="$modalOpen('4xl-size-modal')">
+                <x-button x-on:click="$tsui.open.modal('4xl-size-modal')">
                     4xl
                 </x-button>
-                <x-button x-on:click="$modalOpen('5xl-size-modal')">
+                <x-button x-on:click="$tsui.open.modal('5xl-size-modal')">
                     5xl
                 </x-button>
-                <x-button x-on:click="$modalOpen('6xl-size-modal')">
+                <x-button x-on:click="$tsui.open.modal('6xl-size-modal')">
                     6xl
                 </x-button>
-                <x-button x-on:click="$modalOpen('7xl-size-modal')">
+                <x-button x-on:click="$tsui.open.modal('7xl-size-modal')">
                     7xl
                 </x-button>
             </div>
@@ -150,7 +150,7 @@
             <x-modal id="center" title="TallStackUI" center>
                 TallStackUI
             </x-modal>
-            <x-button x-on:click="$modalOpen('center')">
+            <x-button x-on:click="$tsui.open.modal('center')">
                 Open
             </x-button>
         </x-preview>
@@ -163,7 +163,7 @@
             <x-modal id="z-modal" title="TallStackUI" z-index="z-10">
                 TallStackUI
             </x-modal>
-            <x-button x-on:click="$modalOpen('z-modal')">
+            <x-button x-on:click="$tsui.open.modal('z-modal')">
                 Open
             </x-button>
         </x-preview>
@@ -176,7 +176,7 @@
                     <x-button color="red" x-on:click="$modalClose('persistent-modal')">Close</x-button>
                 </x-slot:footer>
             </x-modal>
-            <x-button x-on:click="$modalOpen('persistent-modal')">
+            <x-button x-on:click="$tsui.open.modal('persistent-modal')">
                 Open
             </x-button>
         </x-preview>
@@ -203,10 +203,10 @@
             <x-modal id="event-close" title="TallStackUI" x-on:close="alert('Closed!')">
                 TallStackUI
             </x-modal>
-            <x-button x-on:click="$modalOpen('event-open')">
+            <x-button x-on:click="$tsui.open.modal('event-open')">
                 Open Event
             </x-button>
-            <x-button x-on:click="$modalOpen('event-close')">
+            <x-button x-on:click="$tsui.open.modal('event-close')">
                 Close Event
             </x-button>
         </x-preview>

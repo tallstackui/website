@@ -17,7 +17,7 @@
             <x-slide id="basic-slide">
                 TallStackUI
             </x-slide>
-            <x-button x-on:click="$slideOpen('basic-slide')">
+            <x-button x-on:click="$tsui.open.slide('basic-slide')">
                 Open Slide
             </x-button>
         </x-preview>
@@ -27,7 +27,7 @@
             <x-slide id="left-slide" left>
                 TallStackUI
             </x-slide>
-            <x-button x-on:click="$slideOpen('left-slide')">
+            <x-button x-on:click="$tsui.open.slide('left-slide')">
                 Open Slide
             </x-button>
         </x-preview>
@@ -40,7 +40,7 @@
                 </x-slot:title>
                 TallStackUI
             </x-slide>
-            <x-button x-on:click="$slideOpen('title-slide')">
+            <x-button x-on:click="$tsui.open.slide('title-slide')">
                 Open Slide
             </x-button>
         </x-preview>
@@ -53,7 +53,7 @@
                     TallStackUI
                 </x-slot:footer>
             </x-slide>
-            <x-button x-on:click="$slideOpen('footer-slide')">
+            <x-button x-on:click="$tsui.open.slide('footer-slide')">
                 Open Slide
             </x-button>
         </x-preview>
@@ -72,16 +72,16 @@
             <x-slide id="blur-slide-xl" title="TallStackUI" blur="xl">
                 XL
             </x-slide>
-            <x-button x-on:click="$slideOpen('blur-slide-sm')">
+            <x-button x-on:click="$tsui.open.slide('blur-slide-sm')">
                 SM
             </x-button>
-            <x-button x-on:click="$slideOpen('blur-slide-md')">
+            <x-button x-on:click="$tsui.open.slide('blur-slide-md')">
                 MD
             </x-button>
-            <x-button x-on:click="$slideOpen('blur-slide-lg')">
+            <x-button x-on:click="$tsui.open.slide('blur-slide-lg')">
                 LG
             </x-button>
-            <x-button x-on:click="$slideOpen('blur-slide-xl')">
+            <x-button x-on:click="$tsui.open.slide('blur-slide-xl')">
                 XL
             </x-button>
         </x-preview>
@@ -119,34 +119,34 @@
                 <x-slide id="full-size-slide" title="TallStackUI" size="full">
                     Full
                 </x-slide>
-                <x-button x-on:click="$slideOpen('default-size-slide')">
+                <x-button x-on:click="$tsui.open.slide('default-size-slide')">
                     Default
                 </x-button>
-                <x-button x-on:click="$slideOpen('sm-size-slide')">
+                <x-button x-on:click="$tsui.open.slide('sm-size-slide')">
                     sm
                 </x-button>
-                <x-button x-on:click="$slideOpen('md-size-slide')">
+                <x-button x-on:click="$tsui.open.slide('md-size-slide')">
                     md
                 </x-button>
-                <x-button x-on:click="$slideOpen('xl-size-slide')">
+                <x-button x-on:click="$tsui.open.slide('xl-size-slide')">
                     xl
                 </x-button>
-                <x-button x-on:click="$slideOpen('3xl-size-slide')">
+                <x-button x-on:click="$tsui.open.slide('3xl-size-slide')">
                     3xl
                 </x-button>
-                <x-button x-on:click="$slideOpen('4xl-size-slide')">
+                <x-button x-on:click="$tsui.open.slide('4xl-size-slide')">
                     4xl
                 </x-button>
-                <x-button x-on:click="$slideOpen('5xl-size-slide')">
+                <x-button x-on:click="$tsui.open.slide('5xl-size-slide')">
                     5xl
                 </x-button>
-                <x-button x-on:click="$slideOpen('6xl-size-slide')">
+                <x-button x-on:click="$tsui.open.slide('6xl-size-slide')">
                     6xl
                 </x-button>
-                <x-button x-on:click="$slideOpen('7xl-size-slide')">
+                <x-button x-on:click="$tsui.open.slide('7xl-size-slide')">
                     7xl
                 </x-button>
-                <x-button x-on:click="$slideOpen('full-size-slide')">
+                <x-button x-on:click="$tsui.open.slide('full-size-slide')">
                     Full
                 </x-button>
             </div>
@@ -160,7 +160,7 @@
             <x-slide id="z-slide" title="TallStackUI" z-index="z-10">
                 TallStackUI
             </x-slide>
-            <x-button x-on:click="$slideOpen('z-slide')">
+            <x-button x-on:click="$tsui.open.slide('z-slide')">
                 Open
             </x-button>
         </x-preview>
@@ -173,7 +173,7 @@
                     <x-button color="red" x-on:click="$slideClose('persistent-slide')">Close</x-button>
                 </x-slot:footer>
             </x-slide>
-            <x-button x-on:click="$slideOpen('persistent-slide')">
+            <x-button x-on:click="$tsui.open.slide('persistent-slide')">
                 Open
             </x-button>
         </x-preview>
@@ -200,10 +200,10 @@
             <x-slide id="event-close" title="TallStackUI" x-on:close="alert('Closed!')">
                 TallStackUI
             </x-slide>
-            <x-button x-on:click="$slideOpen('event-open')">
+            <x-button x-on:click="$tsui.open.slide('event-open')">
                 Open Event
             </x-button>
-            <x-button x-on:click="$slideOpen('event-close')">
+            <x-button x-on:click="$tsui.open.slide('event-close')">
                 Close Event
             </x-button>
         </x-preview>

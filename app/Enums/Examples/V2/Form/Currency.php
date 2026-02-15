@@ -19,7 +19,7 @@ class Currency
     public const DIFFERENT_CURRENCIES = <<<'HTML'
     <!-- Default -->
     <x-currency locale="en-US" />
-    
+
     <x-currency locale="pt-BR" />
 
     <x-currency locale="es-ES" />
@@ -36,15 +36,15 @@ class Currency
 
     public const SYMBOLS = <<<'HTML'
     <x-currency label="Only symbol" symbol />
-    
+
     <x-currency label="Only currency code" currency />
-    
+
     <x-currency label="Both" symbol currency />
     HTML;
 
     public const CUSTOM_SYMBOLS = <<<'HTML'
     <x-currency symbol="$$" />
-    
+
     <x-currency currency="$$" />
     HTML;
 
@@ -53,7 +53,7 @@ class Currency
     HTML;
 
     public const PERSONALIZATION = <<<'HTML'
-    TallStackUi::personalize()
+    TallStackUi::customize()
         ->form('currency')
         ->block('block', 'classes');
     HTML;

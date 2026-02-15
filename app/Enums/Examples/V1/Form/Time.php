@@ -15,7 +15,7 @@ class Time
     public const FORMATS = <<<'HTML'
     <!-- 12-hour format -->
     <x-time />
-    
+
     <!-- 24-hour format -->
     <x-time format="24" />
     HTML;
@@ -23,7 +23,7 @@ class Time
     public const MIN_MAX = <<<'HTML'
     <!-- Hours -->
     <x-time :min-hour="5" :max-hour="10" />
-    
+
     <!-- Minutes -->
     <x-time :min-minute="30" :max-minute="45" />
     HTML;
@@ -59,7 +59,7 @@ class Time
     HTML;
 
     public const PERSONALIZATION = <<<'HTML'
-    TallStackUi::personalize()
+    TallStackUi::customize()
         ->form('time')
         ->block('block', 'classes');
     HTML;

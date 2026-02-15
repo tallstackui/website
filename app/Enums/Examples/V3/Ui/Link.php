@@ -100,7 +100,7 @@ class Link
     HTML;
 
     public const PERSONALIZATION = <<<'HTML'
-    TallStackUi::personalize()
+    TallStackUi::customize()
         ->link()
         ->block('block', 'classes');
     HTML;

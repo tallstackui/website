@@ -29,7 +29,7 @@ class Environment
 
     public const BRANCH_ALGORITHM = <<<'HTML'
     use Illuminate\Support\Facades\File;
-    
+
     private function branch(): ?string
     {
         // ...
@@ -50,13 +50,13 @@ class Environment
 
     public const CUSTOM_ALGORITHM = <<<'HTML'
     use Illuminate\Support\ServiceProvider;
-    
+
     class AppServiceProvider extends ServiceProvider
     {
         public function register(): void
         {
             // ...
-    
+
             $this->app->bind('tallstackui::environment::branch', function () {
                 return 'logic goes here';
             });
@@ -65,7 +65,7 @@ class Environment
     HTML;
 
     public const PERSONALIZATION = <<<'HTML'
-    TallStackUi::personalize()
+    TallStackUi::customize()
         ->environment()
         ->block('block', 'classes');
     HTML;

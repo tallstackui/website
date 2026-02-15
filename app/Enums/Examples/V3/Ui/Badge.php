@@ -128,7 +128,7 @@ class Badge
     HTML;
 
     public const PERSONALIZATION = <<<'HTML'
-    TallStackUi::personalize()
+    TallStackUi::customize()
         ->badge()
         ->block('block', 'classes');
     HTML;

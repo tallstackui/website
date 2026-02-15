@@ -72,7 +72,7 @@ class Checkbox
     HTML;
 
     public const PERSONALIZATION = <<<'HTML'
-    TallStackUi::personalize()
+    TallStackUi::customize()
         ->form('checkbox')
         ->block('block', 'classes');
     HTML;

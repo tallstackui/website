@@ -41,7 +41,7 @@ class Card
     HTML;
 
     public const PERSONALIZATION = <<<'HTML'
-    TallStackUi::personalize()
+    TallStackUi::customize()
         ->card()
         ->block('block', 'classes');
     HTML;

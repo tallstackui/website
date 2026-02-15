@@ -317,7 +317,7 @@ class Toast
     HTML;
 
     public const PERSONALIZATION = <<<'HTML'
-    TallStackUi::personalize()
+    TallStackUi::customize()
         ->toast()
         ->block('block', 'classes');
     HTML;

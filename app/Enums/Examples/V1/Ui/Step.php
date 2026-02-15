@@ -101,7 +101,7 @@ class Step
 
     public const STYLES = <<<'HTML'
     <!-- Circles -->
-    <x-step selected="1" 
+    <x-step selected="1"
             circles {{-- [tl! highlight] --}}
             helpers>
         <x-step.items step="1"
@@ -122,7 +122,7 @@ class Step
     </x-step>
 
     <!-- Panels -->
-    <x-step selected="1" 
+    <x-step selected="1"
             panels {{-- [tl! highlight] --}}
             helpers>
         <x-step.items step="1"
@@ -192,9 +192,9 @@ class Step
 
     public const WIREABLE = <<<'HTML'
     <!--  Livewire string property: $step - initial value: "1" -->
-    
-    <x-step wire:model="step" 
-            helpers 
+
+    <x-step wire:model="step"
+            helpers
             previous>
         <x-step.items step="1"
                       title="Starting"
@@ -216,9 +216,9 @@ class Step
 
     public const LIVE_WIREABLE = <<<'HTML'
     <!--  Livewire string property: $step - initial value: "1" -->
-    
-    <x-step wire:model.live="step" 
-            helpers 
+
+    <x-step wire:model.live="step"
+            helpers
             previous>
         <x-step.items step="1"
                       title="Starting"
@@ -239,7 +239,7 @@ class Step
     HTML;
 
     public const PERSONALIZATION = <<<'HTML'
-    TallStackUi::personalize()
+    TallStackUi::customize()
         ->step()
         ->block('block', 'classes');
     HTML;

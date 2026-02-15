@@ -342,13 +342,13 @@ class Button
     HTML;
 
     public const PERSONALIZATION = <<<'HTML'
-    TallStackUi::personalize()
+    TallStackUi::customize()
         ->button()
         ->block('block', 'classes');
     HTML;
 
     public const PERSONALIZATION_CIRCLE = <<<'HTML'
-    TallStackUi::personalize()
+    TallStackUi::customize()
         ->button('circle')
         ->block('block', 'classes');
     HTML;

@@ -48,7 +48,7 @@ class Slide
 
     public const BLUR = <<<'HTML'
     <!-- sm, md, lg, xl -->
-    
+
     <x-slide blur> <!-- sm blur -->
         TallStackUi
     </x-slide>
@@ -103,7 +103,7 @@ class Slide
         TallStackUi
     </x-slide>
 
-    <x-button x-on:click="$slideOpen('slide-id')">
+    <x-button x-on:click="$tsui.open.slide('slide-id')">
         Open
     </x-button>
 
@@ -121,7 +121,7 @@ class Slide
     HTML;
 
     public const PERSONALIZATION = <<<'HTML'
-    TallStackUi::personalize()
+    TallStackUi::customize()
         ->slide()
         ->block('block', 'classes');
     HTML;

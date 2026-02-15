@@ -33,7 +33,7 @@ class Color
     HTML;
 
     public const PERSONALIZATION = <<<'HTML'
-    TallStackUi::personalize()
+    TallStackUi::customize()
         ->form('color')
         ->block('block', 'classes');
     HTML;

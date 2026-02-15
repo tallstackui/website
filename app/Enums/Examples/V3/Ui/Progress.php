@@ -177,13 +177,13 @@ class Progress
     HTML;
 
     public const PERSONALIZATION = <<<'HTML'
-    TallStackUi::personalize()
+    TallStackUi::customize()
         ->progress()
         ->block('block', 'classes');
     HTML;
 
     public const PERSONALIZATION_CIRCLE = <<<'HTML'
-    TallStackUi::personalize()
+    TallStackUi::customize()
         ->progress('circle')
         ->block('block', 'classes');
     HTML;

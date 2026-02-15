@@ -38,7 +38,7 @@ new class extends VoltComponent {
     {
         $this->original = null;
 
-        $this->blocks = app("TallStackUi\\View\\Components\\".$this->component)->personalization();
+        $this->blocks = app("TallStackUi\\Components\\$this->component\\Component")->customization();
     }
 
     public function content(string $block, string $class): void
@@ -89,7 +89,7 @@ new class extends VoltComponent {
             </div>
         @endif
     </x-modal>
-    <x-button x-on:click="$modalOpen('{{ $id }}'); $wire.call('open');"
+    <x-button x-on:click="$tsui.open.modal('{{ $id }}'); $wire.call('open');"
               text="Personalize: {{ $title }}"
               color="pink"
               xs/>

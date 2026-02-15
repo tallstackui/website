@@ -37,7 +37,7 @@ class Layout
 
     public const HEADER = <<<'HTML'
     <x-slot:header>
-        <x-layout.header> 
+        <x-layout.header>
             <!-- ... -->
         </x-layout.header>
     </x-slot:header>
@@ -52,12 +52,12 @@ class Layout
     public const JAVASCRIPT = <<<'HTML'
     <!-- Opening -->
     <button x-on:click="$dispatch('tallstackui-menu-mobile', { status : true })">
-        Open Mobile    
+        Open Mobile
     </button>
-    
+
     <!-- Closing -->
     <button x-on:click="$dispatch('tallstackui-menu-mobile', { status : false })">
-        Close Mobile    
+        Close Mobile
     </button>
     HTML;
 
@@ -71,13 +71,13 @@ class Layout
 
     public const TOP = <<<'HTML'
     <div x-data="{ tallStackUiMenuMobile : false }" x-on:tallstackui-menu-mobile.window="tallStackUiMenuMobile = $event.detail.status">
-        @if ($top) {{-- [tl! focus:2] --}} 
+        @if ($top) {{-- [tl! focus:2] --}}
             {{ $top }}
         @endif
         @if ($menu)
             {{ $menu }}
         @endif
-        
+
         <!-- ... -->
     </div>
     HTML;
@@ -86,14 +86,14 @@ class Layout
     <div x-data="{ tallStackUiMenuMobile : false }" x-on:tallstackui-menu-mobile.window="tallStackUiMenuMobile = $event.detail.status">
         <!-- ... -->
 
-        @if ($footer) {{-- [tl! focus:2] --}} 
+        @if ($footer) {{-- [tl! focus:2] --}}
             {{ $footer }}
         @endif
     </div>
     HTML;
 
     public const HEADER_SLOTS = <<<'HTML'
-    <x-layout.header>  
+    <x-layout.header>
         <x-slot:left>
             <!-- ... -->
         </x-slot:left>
@@ -144,9 +144,9 @@ class Layout
 
     public const MATCH = <<<'HTML'
     <x-side-bar.item text="Admin" :opened="route()->requestIs('admin.*')">
-        <x-side-bar.item text="Home" 
-                         icon="home" 
-                         :current="route()->requestIs('admin.dashboard')" 
+        <x-side-bar.item text="Home"
+                         icon="home"
+                         :current="route()->requestIs('admin.dashboard')"
                          :route="route('admin.dashboard')" />
     </x-side-bar.item>
     HTML;
@@ -158,8 +158,8 @@ class Layout
 
     <!-- Or -->
 
-    <x-side-bar.item text="Home" 
-                     icon="home" 
+    <x-side-bar.item text="Home"
+                     icon="home"
                      :route="route('admin.dashboard')"
                      :visible="fn () => true" />
     HTML;
@@ -182,31 +182,31 @@ class Layout
     HTML;
 
     public const PERSONALIZATION_LAYOUT = <<<'HTML'
-    TallStackUi::personalize()
+    TallStackUi::customize()
         ->layout()
         ->block('block', 'classes');
     HTML;
 
     public const PERSONALIZATION_LAYOUT_HEADER = <<<'HTML'
-    TallStackUi::personalize()
+    TallStackUi::customize()
         ->layout('header')
         ->block('block', 'classes');
     HTML;
 
     public const PERSONALIZATION_SIDEBAR = <<<'HTML'
-    TallStackUi::personalize()
+    TallStackUi::customize()
         ->sideBar()
         ->block('block', 'classes');
     HTML;
 
     public const PERSONALIZATION_SIDEBAR_ITEM = <<<'HTML'
-    TallStackUi::personalize()
+    TallStackUi::customize()
         ->sideBar('item')
         ->block('block', 'classes');
     HTML;
 
     public const PERSONALIZATION_SIDEBAR_SEPARATOR = <<<'HTML'
-    TallStackUi::personalize()
+    TallStackUi::customize()
         ->sideBar('separator')
         ->block('block', 'classes');
     HTML;

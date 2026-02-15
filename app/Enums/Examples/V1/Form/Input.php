@@ -42,7 +42,7 @@ class Input
     HTML;
 
     public const PERSONALIZATION = <<<'HTML'
-    TallStackUi::personalize()
+    TallStackUi::customize()
         ->form('input')
         ->block('block', 'classes');
     HTML;

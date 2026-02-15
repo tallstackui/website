@@ -37,7 +37,7 @@ class Number
     HTML;
 
     public const PERSONALIZATION = <<<'HTML'
-    TallStackUi::personalize()
+    TallStackUi::customize()
         ->form('number')
         ->block('block', 'classes');
     HTML;

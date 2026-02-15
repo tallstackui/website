@@ -14,7 +14,7 @@ class Upload
 
     public const DELETE = <<<'HTML'
     <!-- The Livewire component should have the "deleteUpload" method -->
-    
+
     <x-upload delete />
 
     <!-- Or you can specify a different method name -->
@@ -25,10 +25,10 @@ class Upload
     public const DELETE_METHOD = <<<'HTML'
     use Illuminate\Support\Arr;
     use Illuminate\Http\UploadedFile;
-    
+
     public function deleteUpload(array $content): void
     {
-        /* 
+        /*
          the $content contains:
          [
              'temporary_name',
@@ -37,9 +37,9 @@ class Upload
              'size',
              'path',
              'url',
-         ] 
+         ]
          */
-    
+
         if (! $this->photo) {
             return;
         }
@@ -49,14 +49,14 @@ class Upload
         /** @var UploadedFile $file */
         $file = collect($files)->filter(fn (UploadedFile $item) => $item->getFilename() === $content['temporary_name'])->first();
 
-        // 1. Here we delete the file. Even if we have a error here, we simply 
-        // ignore it because as long as the file is not persisted, it is 
+        // 1. Here we delete the file. Even if we have a error here, we simply
+        // ignore it because as long as the file is not persisted, it is
         // temporary and will be deleted at some point if there is a failure here.
         rescue(fn () => $file->delete(), report: false);
 
         $collect = collect($files)->filter(fn (UploadedFile $item) => $item->getFilename() !== $content['temporary_name']);
 
-        // 2. We guarantee restore of remaining files regardless of upload 
+        // 2. We guarantee restore of remaining files regardless of upload
         // type, whether you are dealing with multiple or single uploads
         $this->photo = is_array($this->photo) ? $collect->toArray() : $collect->first();
     }
@@ -64,7 +64,7 @@ class Upload
 
     public const MULTIPLE = <<<'HTML'
     <!-- The Livewire property must be an array -->
-    
+
     <x-upload multiple />
     HTML;
 
@@ -76,7 +76,7 @@ class Upload
     class MyComponent extends Component
     {
         use WithFileUploads;
-    
+
         // For multiple files the property must be an array [tl! highlight:1]
         public $photos = [];
 
@@ -88,20 +88,20 @@ class Upload
             // 2. We store the uploaded files in the temporary property
             $this->backup = $this->photos;
         }
-    
+
         public function updatedPhotos(): void
         {
             if (!$this->photos) {
                 return;
             }
-    
-            // 3. We merge the newly uploaded files with the saved ones 
+
+            // 3. We merge the newly uploaded files with the saved ones
             $file = Arr::flatten(array_merge($this->backup, [$this->photos]));
-    
+
             // 4. We finishing by removing the duplicates
             $this->photos = collect($file)->unique(fn (UploadedFile $item) => $item->getClientOriginalName())->toArray();
         }
-        
+
         // ...
     }
     HTML;
@@ -111,10 +111,10 @@ class Upload
 
     public $photos = []; // [tl! remove]
     public $files = []; // [tl! add]
-    
+
     public function updatingPhotos(): void {} // [tl! remove]
     public function updatingFiles(): void {} // [tl! add]
-    
+
     public function updatedPhotos(): void {} // [tl! remove]
     public function updatedFiles(): void {} // [tl! add]
     HTML;
@@ -145,7 +145,7 @@ class Upload
 
     public const EVENTS = <<<'HTML'
     <x-upload x-on:upload="console.log($event.detail.files)" />
-    
+
     <x-upload delete x-on:remove="console.log($event.detail.file)" />
     HTML;
 
@@ -162,7 +162,7 @@ class Upload
 
         public function mount(): void
         {
-            // We get all files and map the contents of the files 
+            // We get all files and map the contents of the files
             // to ensure a necessary structure for the component.
             $this->photos = collect(File::allFiles(public_path('storage/images')))->map(fn (SplFileInfo $file) => [
                 'name' => $file->getFilename(),
@@ -171,33 +171,33 @@ class Upload
                 'path' => $file->getPath(),
                 'url' => Storage::url('images/'.$file->getFilename()),
             ])->toArray();
-            
-            // In this example we are using the images that exists 
-            // in the application server, but you can use any other 
+
+            // In this example we are using the images that exists
+            // in the application server, but you can use any other
             // files for example, files that are stored in the S3 bucket.
         }
-        
+
         // ...
     }
     HTML;
 
     public const BLADE_COMPONENT_FOR_STATIC_USAGE = <<<'HTML'
     <!-- All other options is available when static:
-        label, hint, tip, 
+        label, hint, tip,
         footer slot,
         events (only remove event)
         renaming delete method -->
-    
+
     <!-- WITHOUT delete action -->
     <x-upload wire:model="photos" static />
-    
+
     <!-- WITH delete action -->
     <x-upload wire:model="photos" static delete />
-    
+
     <!-- You can set a custom placeholder for the input -->
     <x-upload wire:model="photos"
              :placeholder="count($photos) . ' images'" {{-- [tl! highlight] --}}
-             static 
+             static
              delete />
     HTML;
 
@@ -207,7 +207,7 @@ class Upload
 
     public function deleteUpload(array $content): void
     {
-        /* 
+        /*
          the $content contains:
          [
              'temporary_name',
@@ -216,9 +216,9 @@ class Upload
              'size',
              'path',
              'url',
-         ] 
+         ]
          */
-    
+
         if (empty($this->photos)) {
             return;
         }
@@ -234,7 +234,7 @@ class Upload
     HTML;
 
     public const PERSONALIZATION = <<<'HTML'
-    TallStackUi::personalize()
+    TallStackUi::customize()
         ->form('upload')
         ->block('block', 'classes');
     HTML;

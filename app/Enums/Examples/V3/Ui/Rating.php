@@ -104,7 +104,7 @@ class Rating
     HTML;
 
     public const PERSONALIZATION = <<<'HTML'
-    TallStackUi::personalize()
+    TallStackUi::customize()
         ->rating()
         ->block('block', 'classes');
     HTML;

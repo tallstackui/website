@@ -11,7 +11,7 @@ class Welcome
     {
         public function boot(): void
         {
-           TallStackUi::personalize()
+           TallStackUi::customize()
                 // Determining the component...
                ->badge() // [tl! highlight]
                // Pointing the block...

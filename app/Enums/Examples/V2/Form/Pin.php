@@ -28,12 +28,12 @@ class Pin
 
     public const EVENTS = <<<'HTML'
     <x-pin length="5" x-on:filled="alert(`Filled: ${$event.detail.model}`)" />
-    
+
     <x-pin length="5" clear x-on:clear="alert(`Cleared: ${$event.detail.model}`)" />
     HTML;
 
     public const PERSONALIZATION = <<<'HTML'
-    TallStackUi::personalize()
+    TallStackUi::customize()
         ->form('pin')
         ->block('block', 'classes');
     HTML;

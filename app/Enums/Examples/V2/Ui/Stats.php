@@ -7,7 +7,7 @@ class Stats
     public const BASIC = <<<'HTML'
     <!-- Single -->
     <x-stats :number="30" />
-    
+
     <!-- Multiple -->
     <div class="grid grid-cols-3 gap-2">
         <x-stats :number="30" />
@@ -29,7 +29,7 @@ class Stats
 
     public const NAVIGATE = <<<'HTML'
     <x-stats ... navigate />
-    
+
     <x-stats ... navigate-hover />
     HTML;
 
@@ -42,7 +42,7 @@ class Stats
     public const ICON_SLOT = <<<'HTML'
     <x-stats :number="100">
         <x-slot:icon>
-            <x-avatar :model="auth()->user()" color="fff" />        
+            <x-avatar :model="auth()->user()" color="fff" />
         </x-slot:icon>
     </x-stats>
     HTML;
@@ -83,9 +83,9 @@ class Stats
 
     <!-- These parameters are boolean, so you can do:-->
     @php($status = 2 > 1)
-    
-    <x-stats :number="50" 
-             :increase="$status" 
+
+    <x-stats :number="50"
+             :increase="$status"
              :decrease="$status" />
     HTML;
 
@@ -122,7 +122,7 @@ class Stats
     HTML;
 
     public const PERSONALIZATION = <<<'HTML'
-    TallStackUi::personalize()
+    TallStackUi::customize()
         ->stats()
         ->block('block', 'classes');
     HTML;

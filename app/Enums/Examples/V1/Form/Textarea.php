@@ -27,7 +27,7 @@ class Textarea
     public const COUNT = <<<'HTML'
     <!-- Current and Max Quantities-->
     <x-textarea maxlength="10" count />
-    
+
     <!-- Only Current Quantity-->
     <x-textarea count />
     HTML;
@@ -37,7 +37,7 @@ class Textarea
     HTML;
 
     public const PERSONALIZATION = <<<'HTML'
-    TallStackUi::personalize()
+    TallStackUi::customize()
         ->form('textarea')
         ->block('block', 'classes');
     HTML;

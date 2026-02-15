@@ -33,7 +33,7 @@ class Pin
     HTML;
 
     public const PERSONALIZATION = <<<'HTML'
-    TallStackUi::personalize()
+    TallStackUi::customize()
         ->form('pin')
         ->block('block', 'classes');
     HTML;

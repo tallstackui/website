@@ -21,10 +21,10 @@ class Date
     public const CREATE_FROM_FORMAT = <<<'HTML'
     // Your current date
     $date = '20/02/2024'; // 20/02/2024
-    
+
     // Formatting
     $date = now()->createFromFormat('d/m/Y', $date)->format('Y-m-d');
-    
+
     // Same date, but now in the correct format
     $date; // 2024-02-20
     HTML;
@@ -35,7 +35,7 @@ class Date
 
     public const MIN_MAX_DATES = <<<'HTML'
     <!-- You can use dates as strings or Carbon instances -->
-    
+
     <x-date :min-date="now()->subWeek()" :max-date="now()->addWeek()" />
     HTML;
 
@@ -46,7 +46,7 @@ class Date
     public const DISABLED = <<<'HTML'
     <!-- Simple Array -->
     <x-date :disable="['2020-01-01','2020-01-02','2020-01-03']" />
-    
+
     <!-- Multiple Arrays -->
     <x-date :disable="[
         ['2020-01-01','2020-01-02','2020-01-03'],
@@ -61,31 +61,31 @@ class Date
     HTML;
 
     public const DISABLE_SPECIFIC_DAYS = <<<'HTML'
-    <!-- 
+    <!--
     0: Sunday,
-    1: Monday, 
-    2: Tuesday, 
-    3: Wednesday, 
-    4: Thursday, 
-    5: Friday, 
+    1: Monday,
+    2: Tuesday,
+    3: Wednesday,
+    4: Thursday,
+    5: Friday,
     6: Saturday -->
     <x-date only="3" />
-    
+
     <!-- Only weekdays, no weekends -->
     <x-date weekdays />
-    
+
     <!-- Only weekends, no weekdays -->
     <x-date weekends />
     HTML;
 
     public const RANGE = <<<'HTML'
-    <!-- 
+    <!--
     The Livewire property must be an array with two positions,
     the first one is the start date and the second one is the end date.
-    
+
     Property:
     public array $date = ['2021-01-01', '2021-01-31'];
-    
+
     Usage:
     <x-date range wire:model="date" />
     -->
@@ -94,29 +94,29 @@ class Date
     HTML;
 
     public const MULTIPLE = <<<'HTML'
-    <!-- 
+    <!--
     The Livewire property must be an array with multiples dates.
-    
+
     Property:
     public array $date = ['2021-01-01', '2021-01-02', '2021-01-03'];
-    
+
     Usage:
     <x-date multiple wire:model="date" />
     -->
-    
+
     <x-date multiple />
     HTML;
 
     public const START = <<<'HTML'
-    <!-- 
+    <!--
     0: Sunday, (default)
-    1: Monday, 
-    2: Tuesday, 
-    3: Wednesday, 
-    4: Thursday, 
-    5: Friday, 
+    1: Monday,
+    2: Tuesday,
+    3: Wednesday,
+    4: Thursday,
+    5: Friday,
     6: Saturday -->
-    
+
     <x-date start="1" />
     HTML;
 
@@ -125,12 +125,12 @@ class Date
     HTML;
 
     public const EVENTS = <<<'HTML'
-    <x-date x-on:select="alert(`Selected Date: ${$event.detail.date}`)" 
+    <x-date x-on:select="alert(`Selected Date: ${$event.detail.date}`)"
             x-on:clear="alert(`Cleaned!`)" />
     HTML;
 
     public const PERSONALIZATION = <<<'HTML'
-    TallStackUi::personalize()
+    TallStackUi::customize()
         ->form('date')
         ->block('block', 'classes');
     HTML;

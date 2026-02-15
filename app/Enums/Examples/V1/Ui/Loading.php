@@ -48,7 +48,7 @@ class Loading
     HTML;
 
     public const PERSONALIZATION = <<<'HTML'
-    TallStackUi::personalize()
+    TallStackUi::customize()
         ->loading()
         ->block('block', 'classes');
     HTML;

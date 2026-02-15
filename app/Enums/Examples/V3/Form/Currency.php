@@ -53,7 +53,7 @@ class Currency
     HTML;
 
     public const PERSONALIZATION = <<<'HTML'
-    TallStackUi::personalize()
+    TallStackUi::customize()
         ->form('currency')
         ->block('block', 'classes');
     HTML;

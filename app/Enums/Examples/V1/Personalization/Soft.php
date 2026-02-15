@@ -13,7 +13,7 @@ class Soft
         {
             // ...
 
-           TallStackUi::personalize()
+           TallStackUi::customize()
                ->form('input')
                ->block('input.class.base', 'w-full rounded-full');
 
@@ -67,7 +67,7 @@ class Soft
         {
             // 1. Property
 
-           TallStackUi::personalize()
+           TallStackUi::customize()
                ->form('input')
                ->block('input.class.base', 'w-full rounded-full')
                ->and // [tl! highlight]
@@ -76,7 +76,7 @@ class Soft
 
            // 2. Method
 
-           TallStackUi::personalize()
+           TallStackUi::customize()
                ->form('input')
                ->block('input.class.base', 'w-full rounded-full')
                ->and() // [tl! highlight]
@@ -94,7 +94,7 @@ class Soft
     {
         public function boot(): void
         {
-           TallStackUi::personalize()
+           TallStackUi::customize()
                ->form('input')
                ->block('input.class.base', new InputPersonalization())
                ->block('icon.wrapper', fn (array $data) => 'px-4 py-2')
@@ -102,7 +102,7 @@ class Soft
 
            // or ...
 
-            TallStackUi::personalize()
+            TallStackUi::customize()
                ->form('input')
                ->block([
                     'input.class' => new InputPersonalization(),
@@ -121,7 +121,7 @@ class Soft
     {
         public function boot(): void
         {
-           TallStackUi::personalize()
+           TallStackUi::customize()
                ->form('input')
                ->block('input.class.base', new InputPersonalization()); // [tl! focus]
         }
@@ -153,14 +153,14 @@ class Soft
     {
         public function boot(): void
         {
-           TallStackUi::personalize()
+           TallStackUi::customize()
                ->form('input')
                ->block('input.class.base')
                ->replace('rounded-md', 'rounded-full'); // [tl! focus]
 
            // or...
 
-          TallStackUi::personalize()
+          TallStackUi::customize()
               ->form('input')
               ->block('input.class.base')
               ->replace([ // [tl! focus:3]
@@ -178,7 +178,7 @@ class Soft
     {
         public function boot(): void
         {
-           TallStackUi::personalize()
+           TallStackUi::customize()
                ->form('input')
                ->block('input.class.base')
                // string or array [tl! highlight:7]
@@ -200,7 +200,7 @@ class Soft
     {
         public function boot(): void
         {
-           TallStackUi::personalize()
+           TallStackUi::customize()
                ->form('input')
                ->block('input.class.base')
                ->replace('rounded-md', 'rounded-full'); // [tl! highlight]
@@ -257,7 +257,7 @@ class Soft
 
     public const SCOPED_PERSONALIZATION_WITH_CLASS_PHP_EXAMPLE = <<<'HTML'
     namespace App\ScopedPersonalization;
-    
+
     class Alert
     {
         public function __invoke(array $classes): array
@@ -269,7 +269,7 @@ class Soft
                     ],
                 ],
             ];
-        }    
+        }
     }
     HTML;
 

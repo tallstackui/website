@@ -119,7 +119,7 @@ class Avatar
     HTML;
 
     public const PERSONALIZATION = <<<'HTML'
-    TallStackUi::personalize()
+    TallStackUi::customize()
         ->avatar()
         ->block('block', 'classes');
     HTML;

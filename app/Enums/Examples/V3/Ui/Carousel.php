@@ -145,7 +145,7 @@ class Carousel
     HTML;
 
     public const PERSONALIZATION = <<<'HTML'
-    TallStackUi::personalize()
+    TallStackUi::customize()
         ->carousel()
         ->block('block', 'classes');
     HTML;

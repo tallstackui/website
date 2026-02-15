@@ -21,9 +21,9 @@ class Tag
     HTML;
 
     public const EVENTS = <<<'HTML'
-    <!-- 
+    <!--
     For the erase event the correct index is
-    $event.detail.tags instead of $event.detail.tag 
+    $event.detail.tags instead of $event.detail.tag
     -->
 
     <x-tag ...
@@ -33,7 +33,7 @@ class Tag
     HTML;
 
     public const PERSONALIZATION = <<<'HTML'
-    TallStackUi::personalize()
+    TallStackUi::customize()
         ->form('tag')
         ->block('block', 'classes');
     HTML;

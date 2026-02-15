@@ -62,7 +62,7 @@ class Password
     HTML;
 
     public const PERSONALIZATION = <<<'HTML'
-    TallStackUi::personalize()
+    TallStackUi::customize()
         ->form('password')
         ->block('block', 'classes');
     HTML;

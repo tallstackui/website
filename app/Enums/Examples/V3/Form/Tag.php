@@ -33,7 +33,7 @@ class Tag
     HTML;
 
     public const PERSONALIZATION = <<<'HTML'
-    TallStackUi::personalize()
+    TallStackUi::customize()
         ->form('tag')
         ->block('block', 'classes');
     HTML;

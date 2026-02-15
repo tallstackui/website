@@ -34,7 +34,7 @@ class Textarea
     HTML;
 
     public const PERSONALIZATION = <<<'HTML'
-    TallStackUi::personalize()
+    TallStackUi::customize()
         ->form('textarea')
         ->block('block', 'classes');
     HTML;

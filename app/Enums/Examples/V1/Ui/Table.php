@@ -310,9 +310,9 @@ class Table
 
     public const SELECTABLE = <<<'HTML'
     <!-- This is a resumed example without the full explanation -->
-    
-    <!-- You need to create a public array property in the component to store 
-    the selected rows. In this example we are using the `selected` property, 
+
+    <!-- You need to create a public array property in the component to store
+    the selected rows. In this example we are using the `selected` property,
     but you can choose any name, as long as it is an array. -->
 
     <x-table ... selectable wire:model="selected" />
@@ -322,9 +322,9 @@ class Table
     <!-- This is a resumed example without the full explanation -->
 
     <x-table ... link="https://google.com.br/?user={id}" />
-    
+
     <x-table ... link="https://google.com.br/?user={name}" />
-    
+
     <!-- Using dot notation to use relationship data: -->
     <x-table ... link="https://google.com.br/?postcode={address.postcode}" />
 
@@ -436,7 +436,7 @@ class Table
     HTML;
 
     public const PERSONALIZATION = <<<'HTML'
-    TallStackUi::personalize()
+    TallStackUi::customize()
         ->table()
         ->block('block', 'classes');
     HTML;

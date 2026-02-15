@@ -239,7 +239,7 @@ class Step
     HTML;
 
     public const PERSONALIZATION = <<<'HTML'
-    TallStackUi::personalize()
+    TallStackUi::customize()
         ->step()
         ->block('block', 'classes');
     HTML;

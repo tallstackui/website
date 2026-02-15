@@ -248,7 +248,7 @@ class Upload
     HTML;
 
     public const PERSONALIZATION = <<<'HTML'
-    TallStackUi::personalize()
+    TallStackUi::customize()
         ->form('upload')
         ->block('block', 'classes');
     HTML;

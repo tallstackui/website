@@ -41,12 +41,12 @@ class Signature
 
     public const EVENT = <<<'HTML'
     <!-- $event.detail will receive: {signature: url} -->
-    
+
     <x-signature exportable x-on:export="alert('Exported!')" />
     HTML;
 
     public const PERSONALIZATION = <<<'HTML'
-    TallStackUi::personalize()
+    TallStackUi::customize()
         ->signature()
         ->block('block', 'classes');
     HTML;

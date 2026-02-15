@@ -17,7 +17,7 @@
                 </div>
             </button>
         </div>
-        <x-button icon="wrench-screwdriver" color="pink" class="w-full uppercase" x-on:click="$modalOpen('prefix-modal')" xs>
+        <x-button icon="wrench-screwdriver" color="pink" class="w-full uppercase" x-on:click="$tsui.open.modal('prefix-modal')" xs>
             {{ __('CONFIGURE DOCUMENTATION') }}
         </x-button>
     </div>

@@ -65,7 +65,7 @@ class Environment
     HTML;
 
     public const PERSONALIZATION = <<<'HTML'
-    TallStackUi::personalize()
+    TallStackUi::customize()
         ->environment()
         ->block('block', 'classes');
     HTML;

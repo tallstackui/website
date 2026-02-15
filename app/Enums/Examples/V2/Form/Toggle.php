@@ -71,7 +71,7 @@ class Toggle
     HTML;
 
     public const PERSONALIZATION = <<<'HTML'
-    TallStackUi::personalize()
+    TallStackUi::customize()
         ->form('toggle')
         ->block('block', 'classes');
     HTML;

@@ -7,7 +7,7 @@ class Progress
     public const BASIC = <<<'HTML'
     <!-- As integer -->
     <x-progress :percent="50" />
-    
+
     <!-- As string -->
     <x-progress percent="50.55" />
     HTML;
@@ -98,7 +98,7 @@ class Progress
     public const CIRCLE_BASIC = <<<'HTML'
     <!-- As integer -->
     <x-progress.circle :percent="50" />
-    
+
     <!-- As string -->
     <x-progress.circle percent="50.55" />
     HTML;
@@ -181,11 +181,11 @@ class Progress
     HTML;
 
     public const PERSONALIZATION = <<<'HTML'
-    TallStackUi::personalize()
+    TallStackUi::customize()
         ->progress()
         ->block('block', 'classes');
 
-    TallStackUi::personalize()
+    TallStackUi::customize()
         ->progress('circle')
         ->block('block', 'classes');
     HTML;

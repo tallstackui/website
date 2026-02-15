@@ -27,14 +27,14 @@ class Textarea
     public const COUNT = <<<'HTML'
     <div class="space-y-8">
         <x-textarea maxlength="10" count />
-        
+
         <!-- Only character quantity -->
         <x-textarea count />
     </div>
     HTML;
 
     public const PERSONALIZATION = <<<'HTML'
-    TallStackUi::personalize()
+    TallStackUi::customize()
         ->form('textarea')
         ->block('block', 'classes');
     HTML;

@@ -75,7 +75,7 @@ class Error
     HTML;
 
     public const PERSONALIZATION = <<<'HTML'
-    TallStackUi::personalize()
+    TallStackUi::customize()
         ->dropdown('errors')
         ->block('block', 'classes');
     HTML;

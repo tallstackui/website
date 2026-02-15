@@ -42,7 +42,7 @@ class Modal
 
     public const BLUR = <<<'HTML'
     <!-- sm, md, lg, xl -->
-    
+
     <x-modal title="TallStackUi" blur> <!-- sm blur -->
         TallStackUi
     </x-modal>
@@ -103,7 +103,7 @@ class Modal
         TallStackUi
     </x-modal>
 
-    <x-button x-on:click="$modalOpen('modal-id')">
+    <x-button x-on:click="$tsui.open.modal('modal-id')">
         Open
     </x-button>
 
@@ -121,7 +121,7 @@ class Modal
     HTML;
 
     public const PERSONALIZATION = <<<'HTML'
-    TallStackUi::personalize()
+    TallStackUi::customize()
         ->modal()
         ->block('block', 'classes');
     HTML;

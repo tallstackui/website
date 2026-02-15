@@ -110,7 +110,7 @@ class Tooltip
     HTML;
 
     public const PERSONALIZATION = <<<'HTML'
-    TallStackUi::personalize()
+    TallStackUi::customize()
         ->tooltip()
         ->block('block', 'classes');
     HTML;

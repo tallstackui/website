@@ -42,11 +42,11 @@ class Password
     public const ALGORITHM = <<<'HTML'
     <script>
         window.TallStackUi = window.TallStackUi || {};
-    
+
         window.TallStackUi.passwordGenerator = function (min, mixed, numbers, symbols) {
             return 'logic-goes-here';
         };
-    </script> 
+    </script>
     HTML;
 
     public const TYPING_ONLY = <<<'HTML'
@@ -62,7 +62,7 @@ class Password
     HTML;
 
     public const PERSONALIZATION = <<<'HTML'
-    TallStackUi::personalize()
+    TallStackUi::customize()
         ->form('password')
         ->block('block', 'classes');
     HTML;

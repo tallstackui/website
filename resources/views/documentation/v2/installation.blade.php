@@ -54,7 +54,7 @@
                     @endif
                     <x-warning>
                         <ul class="list-decimal list-inside text-sm">
-                            <li>{{ __('Are you using TailwindCSS :version?', ['version' => $tailwindcss ? 'v3' : 'v4']) }} <a x-on:click="$modalOpen('prefix-modal')" class="cursor-pointer underline">Click here!</a></li>
+                            <li>{{ __('Are you using TailwindCSS :version?', ['version' => $tailwindcss ? 'v3' : 'v4']) }} <a x-on:click="$tsui.open.modal('prefix-modal')" class="cursor-pointer underline">Click here!</a></li>
                             <li>Your TailwindCSS setup must load the <a href="https://github.com/tailwindlabs/tailwindcss-forms" class="underline" target="_blank">form plugin</a></li>
                         </ul>
                     </x-warning>

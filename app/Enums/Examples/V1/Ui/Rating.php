@@ -7,16 +7,16 @@ class Rating
     public const PHP = <<<'HTML'
     use Livewire\Component;
     use Illuminate\Contracts\View\View;
-    
+
     class Profile extends Component
     {
         public $rate = 2;
-    
+
         public function render(): View
         {
             return view('livewire.profile');
         }
-    
+
         public function evaluate(int $quantity): void
         {
             //
@@ -35,7 +35,7 @@ class Rating
     public const NORMAL = <<<'HTML'
     <x-rating :$rate />
 
-    <!-- The "static" parameter disable 
+    <!-- The "static" parameter disable
     the click effect on the starts -->
     <x-rating :$rate static />
     HTML;
@@ -105,7 +105,7 @@ class Rating
     HTML;
 
     public const PERSONALIZATION = <<<'HTML'
-    TallStackUi::personalize()
+    TallStackUi::customize()
         ->rating()
         ->block('block', 'classes');
     HTML;

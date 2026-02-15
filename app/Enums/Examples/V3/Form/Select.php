@@ -227,13 +227,13 @@ class Select
     HTML;
 
     public const PERSONALIZATION_NATIVE = <<<'HTML'
-    TallStackUi::personalize()
+    TallStackUi::customize()
         ->select()
         ->block('block', 'classes');
     HTML;
 
     public const PERSONALIZATION_STYLED = <<<'HTML'
-    TallStackUi::personalize()
+    TallStackUi::customize()
         ->select('styled')
         ->block('block', 'classes');
     HTML;

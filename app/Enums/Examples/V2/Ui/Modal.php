@@ -48,7 +48,7 @@ class Modal
 
     public const BLUR = <<<'HTML'
     <!-- sm, md, lg, xl -->
-    
+
     <x-modal title="TallStackUi" blur> <!-- sm blur -->
         TallStackUi
     </x-modal>
@@ -109,7 +109,7 @@ class Modal
         TallStackUi
     </x-modal>
 
-    <x-button x-on:click="$modalOpen('modal-id')">
+    <x-button x-on:click="$tsui.open.modal('modal-id')">
         Open
     </x-button>
 
@@ -127,13 +127,13 @@ class Modal
     HTML;
 
     public const FOCUS = <<<'HTML'
-    <x-button x-on:click="$modalOpen('modal-id')">
+    <x-button x-on:click="$tsui.open.modal('modal-id')">
         Open
     </x-button>
-    
+
     <x-modal id="modal-id" x-on:open="$focusOn('email')"> {{-- [tl! highlight] --}}
         <form>
-            <x-input label="Email" 
+            <x-input label="Email"
                      id="email" {{-- [tl! highlight] --}}
                      hint="Insert your best email address" />
         </form>
@@ -141,35 +141,35 @@ class Modal
     HTML;
 
     public const FOCUS_TIME = <<<'HTML'
-    <x-button x-on:click="$modalOpen('modal-id')">
+    <x-button x-on:click="$tsui.open.modal('modal-id')">
         Open
     </x-button>
-    
+
     <x-modal id="modal-id" x-on:open="$focusOn('email', 1000)"> {{-- [tl! highlight] --}}
         <form>
-            <x-input label="Email" 
+            <x-input label="Email"
                      id="email" {{-- [tl! highlight] --}}
-                     hint="Insert your best email address" />      
+                     hint="Insert your best email address" />
         </form>
     </x-modal>
     HTML;
 
     public const FOCUS_USING_DATA_ATTRIBUTE = <<<'HTML'
-    <x-button x-on:click="$modalOpen('modal-id')">
+    <x-button x-on:click="$tsui.open.modal('modal-id')">
         Open
     </x-button>
-    
+
     <x-modal id="modal-id" x-on:open="$focusOn('email')"> {{-- [tl! highlight] --}}
         <form>
-            <x-input label="Email" 
+            <x-input label="Email"
                      data-focus="email" {{-- [tl! highlight] --}}
-                     hint="Insert your best email address" />       
+                     hint="Insert your best email address" />
         </form>
     </x-modal>
     HTML;
 
     public const PERSONALIZATION = <<<'HTML'
-    TallStackUi::personalize()
+    TallStackUi::customize()
         ->modal()
         ->block('block', 'classes');
     HTML;

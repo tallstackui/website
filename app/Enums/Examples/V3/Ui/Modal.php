@@ -109,7 +109,7 @@ class Modal
         TallStackUi
     </x-modal>
 
-    <x-button x-on:click="$modalOpen('modal-id')">
+    <x-button x-on:click="$tsui.open.modal('modal-id')">
         Open
     </x-button>
 
@@ -127,7 +127,7 @@ class Modal
     HTML;
 
     public const FOCUS = <<<'HTML'
-    <x-button x-on:click="$modalOpen('modal-id')">
+    <x-button x-on:click="$tsui.open.modal('modal-id')">
         Open
     </x-button>
 
@@ -141,7 +141,7 @@ class Modal
     HTML;
 
     public const FOCUS_TIME = <<<'HTML'
-    <x-button x-on:click="$modalOpen('modal-id')">
+    <x-button x-on:click="$tsui.open.modal('modal-id')">
         Open
     </x-button>
 
@@ -155,7 +155,7 @@ class Modal
     HTML;
 
     public const FOCUS_USING_DATA_ATTRIBUTE = <<<'HTML'
-    <x-button x-on:click="$modalOpen('modal-id')">
+    <x-button x-on:click="$tsui.open.modal('modal-id')">
         Open
     </x-button>
 
@@ -169,7 +169,7 @@ class Modal
     HTML;
 
     public const PERSONALIZATION = <<<'HTML'
-    TallStackUi::personalize()
+    TallStackUi::customize()
         ->modal()
         ->block('block', 'classes');
     HTML;

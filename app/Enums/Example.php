@@ -5,6 +5,8 @@ namespace App\Enums;
 use App\Traits\VersionDiscovery;
 use Exception;
 use ReflectionClass;
+use ReflectionException;
+use Throwable;
 
 enum Example: string
 {
@@ -98,6 +100,7 @@ enum Example: string
     case Tooltip = 'Ui\\Tooltip';
     // endregion
 
+    /** @throws ReflectionException|Throwable */
     public function variables(): array
     {
         $version = strtoupper($this->current());

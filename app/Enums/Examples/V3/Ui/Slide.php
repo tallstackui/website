@@ -112,7 +112,7 @@ class Slide
         TallStackUi
     </x-slide>
 
-    <x-button x-on:click="$slideOpen('slide-id')">
+    <x-button x-on:click="$tsui.open.slide('slide-id')">
         Open
     </x-button>
 
@@ -130,7 +130,7 @@ class Slide
     HTML;
 
     public const FOCUS = <<<'HTML'
-    <x-button x-on:click="$slideOpen('slide-id')">
+    <x-button x-on:click="$tsui.open.slide('slide-id')">
         Open
     </x-button>
 
@@ -144,7 +144,7 @@ class Slide
     HTML;
 
     public const FOCUS_TIME = <<<'HTML'
-    <x-button x-on:click="$slideOpen('slide-id')">
+    <x-button x-on:click="$tsui.open.slide('slide-id')">
         Open
     </x-button>
 
@@ -158,7 +158,7 @@ class Slide
     HTML;
 
     public const FOCUS_USING_DATA_ATTRIBUTE = <<<'HTML'
-    <x-button x-on:click="$slideOpen('slide-id')">
+    <x-button x-on:click="$tsui.open.slide('slide-id')">
         Open
     </x-button>
 
@@ -172,7 +172,7 @@ class Slide
     HTML;
 
     public const PERSONALIZATION = <<<'HTML'
-    TallStackUi::personalize()
+    TallStackUi::customize()
         ->slide()
         ->block('block', 'classes');
     HTML;

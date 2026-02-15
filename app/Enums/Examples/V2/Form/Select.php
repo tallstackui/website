@@ -134,7 +134,7 @@ class Select
 
     public const STYLED_LAZY = <<<'HTML'
     <x-select.styled :options="[
-        ['label' => 'PHP', 'value' => 1], 
+        ['label' => 'PHP', 'value' => 1],
         ['label' => 'JavaScript', 'value' => 2],
         ['label' => 'Python', 'value' => 3],
         ['label' => 'Java', 'value' => 4],
@@ -211,10 +211,10 @@ class Select
     use Illuminate\Http\Request;
     use Illuminate\Support\Facades\Route;
     use Illuminate\Database\Eloquent\Builder;
-    
+
     Route::get('/users', function (Request $request) {
         $search = $request->get('search');
-    
+
         return User::query()
             ->when($search, fn (Builder $query) => $query->where('name', 'like', "%{$search}%"))
             ->unless($search, fn (Builder $query) => $query->limit(10))
@@ -227,13 +227,13 @@ class Select
     HTML;
 
     public const PERSONALIZATION_NATIVE = <<<'HTML'
-    TallStackUi::personalize()
+    TallStackUi::customize()
         ->select()
         ->block('block', 'classes');
     HTML;
 
     public const PERSONALIZATION_STYLED = <<<'HTML'
-    TallStackUi::personalize()
+    TallStackUi::customize()
         ->select('styled')
         ->block('block', 'classes');
     HTML;
