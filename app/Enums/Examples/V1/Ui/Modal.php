@@ -103,7 +103,7 @@ class Modal
         TallStackUi
     </x-modal>
 
-    <x-button x-on:click="$tsui.open.modal('modal-id')">
+    <x-button x-on:click="$modalOpen('modal-id')">
         Open
     </x-button>
 

@@ -103,7 +103,7 @@ class Slide
         TallStackUi
     </x-slide>
 
-    <x-button x-on:click="$tsui.open.slide('slide-id')">
+    <x-button x-on:click="$slideOpen('slide-id')">
         Open
     </x-button>
 

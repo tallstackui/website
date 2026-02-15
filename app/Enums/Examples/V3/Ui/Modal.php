@@ -131,7 +131,7 @@ class Modal
         Open
     </x-button>
 
-    <x-modal id="modal-id" x-on:open="$focusOn('email')"> {{-- [tl! highlight] --}}
+    <x-modal id="modal-id" x-on:open="$tsui.focusOn('email')"> {{-- [tl! highlight] --}}
         <form>
             <x-input label="Email"
                      id="email" {{-- [tl! highlight] --}}
@@ -145,7 +145,7 @@ class Modal
         Open
     </x-button>
 
-    <x-modal id="modal-id" x-on:open="$focusOn('email', 1000)"> {{-- [tl! highlight] --}}
+    <x-modal id="modal-id" x-on:open="$tsui.focusOn('email', 1000)"> {{-- [tl! highlight] --}}
         <form>
             <x-input label="Email"
                      id="email" {{-- [tl! highlight] --}}
@@ -159,7 +159,7 @@ class Modal
         Open
     </x-button>
 
-    <x-modal id="modal-id" x-on:open="$focusOn('email')"> {{-- [tl! highlight] --}}
+    <x-modal id="modal-id" x-on:open="$tsui.focusOn('email')"> {{-- [tl! highlight] --}}
         <form>
             <x-input label="Email"
                      data-focus="email" {{-- [tl! highlight] --}}

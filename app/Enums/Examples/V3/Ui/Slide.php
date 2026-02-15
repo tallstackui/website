@@ -134,7 +134,7 @@ class Slide
         Open
     </x-button>
 
-    <x-slide id="slide-id" x-on:open="$focusOn('email')"> {{-- [tl! highlight] --}}
+    <x-slide id="slide-id" x-on:open="$tsui.focusOn('email')"> {{-- [tl! highlight] --}}
         <form>
             <x-input label="Email"
                      id="email" {{-- [tl! highlight] --}}
@@ -148,7 +148,7 @@ class Slide
         Open
     </x-button>
 
-    <x-slide id="slide-id" x-on:open="$focusOn('email', 1000)"> {{-- [tl! highlight] --}}
+    <x-slide id="slide-id" x-on:open="$tsui.focusOn('email', 1000)"> {{-- [tl! highlight] --}}
         <form>
             <x-input label="Email"
                      id="email" {{-- [tl! highlight] --}}
@@ -162,7 +162,7 @@ class Slide
         Open
     </x-button>
 
-    <x-slide id="slide-id" x-on:open="$focusOn('email')"> {{-- [tl! highlight] --}}
+    <x-slide id="slide-id" x-on:open="$tsui.focusOn('email')"> {{-- [tl! highlight] --}}
         <form>
             <x-input label="Email"
                      data-focus="email" {{-- [tl! highlight] --}}
