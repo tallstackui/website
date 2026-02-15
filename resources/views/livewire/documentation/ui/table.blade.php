@@ -39,11 +39,13 @@ new class extends Component
 
     public function with(): array
     {
-        $rows = User::query()
-            ->when($this->search, fn (Builder $query) => $query->where('name', 'like', "%{$this->search}%"))
-            ->when($this->mode === 6, fn (Builder $query) => $query->orderBy(...array_values($this->sort)))
-            ->paginate($this->quantity)
-            ->withQueryString();
+        $rows = $this->mode === 13
+            ? collect()
+            : User::query()
+                ->when($this->search, fn (Builder $query) => $query->where('name', 'like', "%{$this->search}%"))
+                ->when($this->mode === 6, fn (Builder $query) => $query->orderBy(...array_values($this->sort)))
+                ->paginate($this->quantity)
+                ->withQueryString();
 
         if ($this->mode === 11) {
             $rows->through(fn (User $user) => $user->setAttribute('highlight', match ($user->id) {
@@ -101,5 +103,7 @@ new class extends Component
                 ]" />
             @endinteract
         </x-table>
+    @elseif ($mode === 13)
+        <x-table :$headers :$rows empty="No records found." />
     @endif
 </div>

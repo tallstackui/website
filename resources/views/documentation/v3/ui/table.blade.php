@@ -89,6 +89,11 @@
             <livewire:documentation.ui.table :mode="10" />
         </x-preview>
     </x-section>
+    <x-section title="Empty State" description="An option to display a custom message when the table is empty.">
+        <x-preview language="blade" :contents="$empty" :background="false">
+            <livewire:documentation.ui.table :mode="13" />
+        </x-preview>
+    </x-section>
     <x-section title="Highlight" description="An option to highlight rows based on a color property.">
         <x-preview language="blade" :contents="$highlight" :background="false">
             <livewire:documentation.ui.table :mode="11" />

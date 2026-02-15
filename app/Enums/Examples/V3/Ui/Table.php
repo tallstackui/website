@@ -468,6 +468,18 @@ class Table
     </div>
     HTML;
 
+    public const EMPTY = <<<'HTML'
+    <!-- Using the attribute -->
+    <x-table :$headers :$rows empty="No records found." />
+
+    <!-- Using the slot for custom HTML -->
+    <x-table :$headers :$rows>
+        <x-slot:empty>
+            <p>No records found. <a href="/create" class="underline">Create one?</a></p>
+        </x-slot:empty>
+    </x-table>
+    HTML;
+
     public const EXPANDABLE_NESTED = <<<'HTML'
     <x-table :$headers :$rows expandable>
         @interact('sub_table', $row)
