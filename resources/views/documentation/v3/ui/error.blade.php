@@ -31,6 +31,9 @@
         <x-preview language="blade" :contents="$close">
             <livewire:documentation.ui.errors close/>
         </x-preview>
+        <x-warning class="mt-4">
+            If the user closes the error component and a new validation error subsequently occurs, the component will be displayed again with the new errors.
+        </x-warning>
     </x-section>
     <x-section title="Footer Slot">
         <x-preview language="blade" :contents="$slot">

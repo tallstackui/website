@@ -8,6 +8,10 @@ class ThemeSwitch
     <x-theme-switch />
     HTML;
 
+    public const BASIC_BLOCK = <<<'HTML'
+    <x-theme-switch block />
+    HTML;
+
     public const SIZES = <<<'HTML'
     <x-theme-switch xs />
     <x-theme-switch sm />
@@ -16,8 +20,12 @@ class ThemeSwitch
     <x-theme-switch xl />
     HTML;
 
+    public const SIMPLE = <<<'HTML'
+    <x-theme-switch simple />
+    HTML;
+
     public const ICONS = <<<'HTML'
-    <x-theme-switch only-icons />
+    <x-theme-switch simple only-icons />
     HTML;
 
     public const PERSONALIZATION = <<<'HTML'
