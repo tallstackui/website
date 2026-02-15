@@ -65,6 +65,8 @@ form:
     - Selectable
     - Custom Colors
     - Clearable
+    - Exclude Step
+    - Exclude Color
     - Events
     - Configurations
   currency:

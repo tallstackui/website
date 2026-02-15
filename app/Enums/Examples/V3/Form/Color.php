@@ -24,6 +24,22 @@ class Color
     <x-color :colors="['#83493D', '#3D8357', '#693D83', '#3AB3D1', '#5DD116']" />
     HTML;
 
+    public const EXCLUDE_STEP = <<<'HTML'
+    <x-color exclude-step="500" />
+
+    <!-- or an array of steps -->
+
+    <x-color :exclude-step="['100', '500']" />
+    HTML;
+
+    public const EXCLUDE_COLOR = <<<'HTML'
+    <x-color exclude-step="red" />
+
+    <!-- or an array of colors -->
+
+    <x-color :exclude-step="['red', 'yellow']" />
+    HTML;
+
     public const CLEARABLE = <<<'HTML'
     <x-color clearable />
     HTML;

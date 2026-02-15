@@ -45,6 +45,22 @@
             <x-color selectable picker clearable />
         </x-preview>
     </x-section>
+    <x-section title="Exclude Step" description="An option to exclude a step from the color selector in picker mode.">
+        <x-preview language="blade" :contents="$excludeStep">
+            <x-color picker excluded-step="500" />
+        </x-preview>
+        <x-warning class="mt-4">
+            Excluded step can only be used with <b>picker mode.</b>
+        </x-warning>
+    </x-section>
+    <x-section title="Exclude Color" description="An option to exclude a specific color from the color selector in picker mode.">
+        <x-preview language="blade" :contents="$excludeColor">
+            <x-color picker excluded-color="red" />
+        </x-preview>
+        <x-warning class="mt-4">
+            Excluded step can only be used with <b>picker mode.</b>
+        </x-warning>
+    </x-section>
     <x-section title="Events">
         <x-preview language="blade" :contents="$events">
             <x-color picker x-on:set="alert(`Selected Color: ${$event.detail.color}`)" />
