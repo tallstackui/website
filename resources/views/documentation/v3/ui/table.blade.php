@@ -89,6 +89,11 @@
             <livewire:documentation.ui.table :mode="10" />
         </x-preview>
     </x-section>
+    <x-section title="Highlight" description="An option to highlight rows based on a color property.">
+        <x-preview language="blade" :contents="$highlight" :background="false">
+            <livewire:documentation.ui.table :mode="11" />
+        </x-preview>
+    </x-section>
     <x-section title="Interacting With Data" disable-copy>
         <p>
             The table component provides a custom Blade directive <x-block>@verbatim @interact @endverbatim</x-block>

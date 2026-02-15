@@ -519,6 +519,7 @@ ui:
     - Slots
     - Selection
     - Clickable
+    - Highlight
     - Interacting With Data
   theme-switch:
     - Concept

@@ -435,6 +435,39 @@ class Table
     </div>
     HTML;
 
+    public const HIGHLIGHT = <<<'HTML'
+    <?php
+
+    use App\Models\User;
+    use Livewire\Volt\Component;
+
+    new class extends Component {
+
+        public function with(): array
+        {
+            return [
+                'headers' => [
+                    ['index' => 'id', 'label' => '#'],
+                    ['index' => 'name', 'label' => 'Member'],
+                ],
+                'rows' => User::all()->map(fn (User $user) => $user->setAttribute( // [tl! highlight:6]
+                    // Default property is `highlight`, but you can specify a
+                    // custom property name with `highlight-property` attribute
+                    'highlight', match ($user->id) {
+                        1, 5 => 'green',
+                        3 => 'red',
+                        default => null,
+                    }
+                )),
+            ];
+        }
+    }; ?>
+
+    <div>
+        <x-table :$headers :$rows highlight /> <!-- [tl! highlight] -->
+    </div>
+    HTML;
+
     public const PERSONALIZATION = <<<'HTML'
     TallStackUi::customize()
         ->table()
