@@ -2,7 +2,7 @@
 
 use App\Models\User;
 use Illuminate\Database\Eloquent\Builder;
-use Livewire\Volt\Component;
+use Livewire\Component;
 use Livewire\WithPagination;
 use TallStackUi\Traits\Interactions;
 
@@ -41,7 +41,9 @@ new class extends Component {
             ->success("Done!", "{$user} will be notified! ✅")
             ->send();
     }
-}; ?>
+};
+
+?>
 
 <div>
     <x-table :$headers

@@ -1,7 +1,11 @@
 <?php
-use function Livewire\Volt\{state};
 
-state(value: 1000.50);
+use Livewire\Component;
+
+new class extends Component {
+    public float $value = 1000.50;
+};
+
 ?>
 
 <div>

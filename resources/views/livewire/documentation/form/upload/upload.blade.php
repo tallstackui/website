@@ -1,6 +1,7 @@
 <?php
 
-use Livewire\Volt\Component;
+use Livewire\Attributes\Validate;
+use Livewire\Component;
 use Livewire\WithFileUploads;
 use Illuminate\Support\Arr;
 use Illuminate\Http\UploadedFile;
@@ -16,7 +17,7 @@ new class extends Component {
     public $photo6;
     public $photo7;
 
-    #[\Livewire\Attributes\Validate(['file', 'extensions:dat'])]
+    #[Validate(['file', 'extensions:dat'])]
     public $validate;
 
     public int $model = 1;
@@ -40,7 +41,9 @@ new class extends Component {
 
         $this->{$property} = is_array($this->{$property}) ? $collect->toArray() : $collect->first();
     }
-} ?>
+};
+
+?>
 
 <div>
     @if ($model === 1)

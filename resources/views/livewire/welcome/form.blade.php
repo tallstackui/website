@@ -1,47 +1,51 @@
 <?php
 
+use Livewire\Component;
 use TallStackUi\Traits\Interactions;
-use function Livewire\Volt\{state, rules, uses};
 
-uses(Interactions::class);
+new class extends Component {
+    use Interactions;
 
-state([
-    'name',
-    'email',
-    'age',
-    'country',
-    'color',
-    'developer',
-    'secret',
-    'secret_accepted' => false,
-    'terms',
-]);
+    public $name;
+    public $email;
+    public $age;
+    public $country;
+    public $color;
+    public $developer;
+    public $secret;
+    public bool $secret_accepted = false;
+    public $terms;
 
-rules(fn () => [
-    'name' => ['required', 'min:6'],
-    'email' => ['required'],
-    'age' => ['required', 'numeric', 'gte:10'],
-    'country' => ['required'],
-    'color' => ['required'],
-    'developer' => ['required'],
-    'secret' => ['required'],
-    'terms' => ['required', 'boolean'],
-]);
+    protected function rules(): array
+    {
+        return [
+            'name' => ['required', 'min:6'],
+            'email' => ['required'],
+            'age' => ['required', 'numeric', 'gte:10'],
+            'country' => ['required'],
+            'color' => ['required'],
+            'developer' => ['required'],
+            'secret' => ['required'],
+            'terms' => ['required', 'boolean'],
+        ];
+    }
 
-$save = function () {
-    $this->withValidator(function ($validator) {
-        $validator->after(function ($validator) {
-            if ($this->secret === '12345') {
-                $this->secret_accepted = true;
-            }
-        });
-    })->validate();
+    public function save(): void
+    {
+        $this->withValidator(function ($validator) {
+            $validator->after(function ($validator) {
+                if ($this->secret === '12345') {
+                    $this->secret_accepted = true;
+                }
+            });
+        })->validate();
 
-    $this->dialog()
-        ->success('Success!', 'You have completed the example form successfully. Welcome to the TallStackUI community!')
-        ->send();
+        $this->dialog()
+            ->success('Success!', 'You have completed the example form successfully. Welcome to the TallStackUI community!')
+            ->send();
 
-    $this->reset();
+        $this->reset();
+    }
 };
 
 ?>

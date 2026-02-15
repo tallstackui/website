@@ -1,6 +1,6 @@
 <?php
 
-use Livewire\Volt\Component;
+use Livewire\Component;
 use Livewire\WithPagination;
 use App\Actions\RetrieveReleases;
 use Illuminate\Pagination\LengthAwarePaginator;
@@ -36,7 +36,9 @@ new class extends Component {
             'rows' => new LengthAwarePaginator($releases->forPage($this->getPage(), 10), $releases->count(), 10, $this->getPage())
         ];
     }
-} ?>
+};
+
+?>
 
 <div>
     <div class="flex justify-end mb-4">

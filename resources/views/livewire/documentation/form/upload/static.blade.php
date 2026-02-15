@@ -1,6 +1,6 @@
 <?php
 
-use Livewire\Volt\Component;
+use Livewire\Component;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Storage;
@@ -29,7 +29,9 @@ new class extends Component {
             ->error('Ooops!', 'This is a demonstration only 😜')
             ->send();
     }
-} ?>
+};
+
+?>
 
 <div>
     <x-upload label="Recently Uploaded Images"
