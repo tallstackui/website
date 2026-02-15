@@ -1,9 +1,12 @@
 <?php
 
-use function Livewire\Volt\{state};
+use Livewire\Component;
 
-state('step', 1);
-state(live: false);
+new class extends Component {
+    public int $step = 1;
+
+    public bool $live = false;
+};
 
 ?>
 

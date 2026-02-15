@@ -1,9 +1,10 @@
 <?php
 
-use Livewire\Volt\Component;
+use Livewire\Component;
+use TallStackUi\Traits\Interactions;
 
 new class extends Component {
-    use \TallStackUi\Traits\Interactions;
+    use Interactions;
 
     public ?int $model = 1;
 
@@ -31,7 +32,9 @@ new class extends Component {
             ->success('Deleted', "Key <b>{$row[$index]['key']}</b> deleted successfully.")
             ->send();
     }
-} ?>
+};
+
+?>
 
 <div>
     @if ($model === 1)

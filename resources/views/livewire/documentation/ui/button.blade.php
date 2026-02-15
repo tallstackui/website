@@ -1,6 +1,6 @@
 <?php
 
-use Livewire\Volt\Component;
+use Livewire\Component;
 
 new class extends Component {
     public int $model = 1;
@@ -20,7 +20,9 @@ new class extends Component {
     {
         sleep(5);
     }
-} ?>
+};
+
+?>
 
 <div>
     @if ($model === 1)

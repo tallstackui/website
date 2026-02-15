@@ -1,7 +1,7 @@
 <?php
 
+use Livewire\Component;
 use TallStackUi\Traits\Interactions;
-use Livewire\Volt\Component;
 
 new class extends Component {
     use Interactions;
@@ -37,7 +37,9 @@ new class extends Component {
             ->success('Foo')
             ->send();
     }
-} ?>
+};
+
+?>
 
 <div>
     <x-button color="green" wire:click="bottomLeft">Bottom Left</x-button>

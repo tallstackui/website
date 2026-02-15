@@ -1,10 +1,12 @@
 <?php
 
-use Livewire\Volt\Component;
+use Livewire\Component;
 
 new class extends Component {
     public int $model = 1;
-} ?>
+};
+
+?>
 
 <div>
     @if ($model === 1)

@@ -1,8 +1,8 @@
 <?php
 
-use TallStackUi\Traits\Interactions;
-use Livewire\Volt\Component;
+use Livewire\Component;
 use Livewire\Attributes\On;
+use TallStackUi\Traits\Interactions;
 
 new class extends Component {
     use Interactions;
@@ -25,7 +25,9 @@ new class extends Component {
     {
         $this->toast()->error('Cancelled', $message)->send();
     }
-} ?>
+};
+
+?>
 
 <div>
     <x-button color="red" wire:click="confirm">Confirm</x-button>

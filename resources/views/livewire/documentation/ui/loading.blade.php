@@ -1,6 +1,6 @@
 <?php
 
-use Livewire\Volt\Component;
+use Livewire\Component;
 
 new class extends Component {
     public int $model = 0;
@@ -9,7 +9,9 @@ new class extends Component {
     {
         sleep($delay);
     }
-} ?>
+};
+
+?>
 
 <div>
     @if ($model === 0)

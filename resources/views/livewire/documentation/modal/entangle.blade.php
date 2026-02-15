@@ -1,8 +1,10 @@
 <?php
 
-use function Livewire\Volt\{state};
+use Livewire\Component;
 
-$modal = state('modal', false);
+return new class extends Component {
+    public bool $modal = false;
+};
 
 ?>
 

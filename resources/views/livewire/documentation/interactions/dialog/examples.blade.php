@@ -1,7 +1,7 @@
 <?php
 
+use Livewire\Component;
 use TallStackUi\Traits\Interactions;
-use Livewire\Volt\Component;
 
 new class extends Component {
     use Interactions;
@@ -25,7 +25,9 @@ new class extends Component {
     {
         $this->dialog()->info('Info', 'This is an info message.')->send();
     }
-} ?>
+};
+
+?>
 
 <div class="flex flex-col space-y-2 md:space-x-2 md:space-y-0 md:flex-row">
     <x-button color="green" wire:click="success">Success</x-button>

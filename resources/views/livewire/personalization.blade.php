@@ -1,9 +1,8 @@
 <?php
 
-use Livewire\Volt\Component as VoltComponent;
-use Illuminate\View\Component as ViewComponent;
+use Livewire\Component;
 
-new class extends VoltComponent {
+new class extends Component {
     public string $component;
 
     public string $id = '';
@@ -46,7 +45,9 @@ new class extends VoltComponent {
         $this->original['block'] = $block;
         $this->original['class'] = $class;
     }
-} ?>
+};
+
+?>
 
 <div>
     <x-modal id="{{ $id }}">

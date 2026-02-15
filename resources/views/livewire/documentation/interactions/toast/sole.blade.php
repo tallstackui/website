@@ -1,7 +1,7 @@
 <?php
 
+use Livewire\Component;
 use TallStackUi\Traits\Interactions;
-use Livewire\Volt\Component;
 
 new class extends Component {
     use Interactions;
@@ -31,7 +31,9 @@ new class extends Component {
             ->success('Sole!')
             ->send();
     }
-} ?>
+};
+
+?>
 
 <div>
     <x-button color="green" wire:click="multiples">Display Multiple Toasts</x-button>

@@ -1,19 +1,26 @@
 <?php
 
-use function Livewire\Volt\{state, uses};
+use Livewire\Component;
 use App\Traits\VersionDiscovery;
-use Illuminate\Support\Facades\Cookie;
 
-uses(VersionDiscovery::class);
+return new class extends Component {
+    use VersionDiscovery;
 
-state(['version' => fn() => $this->current()]);
+    public string $version;
 
-$change = function (): void {
-    match ($this->version) {
-        'v3' => redirect(route('documentation', ['v3', 'installation'])),
-        'v2' => redirect(route('documentation', ['v2', 'installation'])),
-        'v1' => redirect(route('documentation', ['v1', 'installation'])),
-    };
+    public function mount(): void
+    {
+        $this->version = $this->current();
+    }
+
+    public function change(): void
+    {
+        match ($this->version) {
+            'v3' => redirect(route('documentation', ['v3', 'installation'])),
+            'v2' => redirect(route('documentation', ['v2', 'installation'])),
+            'v1' => redirect(route('documentation', ['v1', 'installation'])),
+        };
+    }
 };
 ?>
 

@@ -1,8 +1,10 @@
 <?php
 
-use function Livewire\Volt\{state};
+use Livewire\Component;
 
-$tallstackui = state('tallstackui', false);
+return new class extends Component {
+    public bool $tallstackui = false;
+};
 
 ?>
 

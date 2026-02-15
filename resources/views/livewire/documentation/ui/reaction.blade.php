@@ -1,7 +1,7 @@
 <?php
 
+use Livewire\Component;
 use TallStackUi\Traits\Interactions;
-use Livewire\Volt\Component;
 
 new class extends Component {
     use Interactions;
@@ -25,7 +25,9 @@ new class extends Component {
             ->success('🚀🚀🚀', 'TallStackUI is the best UI library!')
             ->send();
     }
-} ?>
+};
+
+?>
 
 <div>
     @if ($model === 1)

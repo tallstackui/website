@@ -1,11 +1,11 @@
 <?php
 
-use function Livewire\Volt\{state};
+use Livewire\Component;
 
-state(['model' => 1, 'rate' => 3]);
+new class extends Component {
+    public int $model = 1;
 
-$evaluate = function () {
-    //
+    public int $rate = 3;
 };
 
 ?>

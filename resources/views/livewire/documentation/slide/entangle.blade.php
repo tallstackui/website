@@ -1,8 +1,10 @@
 <?php
 
-use function Livewire\Volt\{state};
+use Livewire\Component;
 
-$slide = state('slide', false);
+return new class extends Component {
+    public bool $state = false;
+};
 
 ?>
 

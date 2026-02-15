@@ -1,9 +1,13 @@
 <?php
 
-use function Livewire\Volt\{state};
+use Livewire\Component;
 
-$live = state(live: false);
-$tab = state(tab: 'Tab 1');
+new class extends Component {
+    public bool $live = false;
+
+    public string $tab = 'Tab 1';
+};
+
 ?>
 
 <div>

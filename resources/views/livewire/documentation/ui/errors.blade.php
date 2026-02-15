@@ -1,6 +1,6 @@
 <?php
 
-use Livewire\Volt\Component;
+use Livewire\Component;
 
 new class extends Component {
     public array $only = [];
@@ -15,7 +15,9 @@ new class extends Component {
         $this->addError('name', 'The name field is required.');
         $this->addError('description', 'The description field is required.');
     }
-} ?>
+};
+
+?>
 
 <div>
     @if ($events)

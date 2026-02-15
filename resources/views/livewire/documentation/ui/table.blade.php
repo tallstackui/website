@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Database\Eloquent\Builder;
-use Livewire\Volt\Component;
+use Livewire\Component;
 use Livewire\WithPagination;
 use App\Models\User;
 
@@ -50,7 +50,9 @@ new class extends Component {
                 ->withQueryString()
         ];
     }
-} ?>
+};
+
+?>
 
 <div>
     @if ($mode === 1)

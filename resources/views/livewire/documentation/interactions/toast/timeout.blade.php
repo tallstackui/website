@@ -1,7 +1,7 @@
 <?php
 
+use Livewire\Component;
 use TallStackUi\Traits\Interactions;
-use Livewire\Volt\Component;
 
 new class extends Component {
     use Interactions;
@@ -13,7 +13,9 @@ new class extends Component {
             ->success('Success', 'This is a success message.')
             ->send();
     }
-} ?>
+};
+
+?>
 
 <div>
     <x-button color="green" wire:click="success">10 seconds</x-button>

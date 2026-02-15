@@ -1,6 +1,6 @@
 <?php
 
-use Livewire\Volt\Component;
+use Livewire\Component;
 use TallStackUi\Traits\Interactions;
 
 new class extends Component {
@@ -12,7 +12,9 @@ new class extends Component {
             ->success('Clicked!')
             ->send();
     }
-} ?>
+};
+
+?>
 
 <div>
     <x-boolean :boolean="true" wire:click="save" />
