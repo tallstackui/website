@@ -159,4 +159,33 @@
                       text="Taylor Otwell, Creator of Laravel" />
         </x-preview>
     </x-section>
+    <x-section title="Group">
+        <x-preview language="blade" :contents="$avatarGroup">
+            <x-avatar.group>
+                <x-avatar image="https://i.pravatar.cc/300" borderless />
+                <x-avatar image="https://i.pravatar.cc/200" borderless />
+                <x-avatar image="https://i.pravatar.cc/100" borderless />
+            </x-avatar.group>
+        </x-preview>
+    </x-section>
+    <x-section title="Presence" description="An option to indicate the presence status of the avatar.">
+        <x-preview language="blade" :contents="$presence">
+            <x-avatar image="https://i.pravatar.cc/300" presence />
+            <x-avatar image="https://i.pravatar.cc/300" presence pulse />
+        </x-preview>
+    </x-section>
+    <x-section title="Presence Color">
+        <x-preview language="blade" :contents="$presenceColors">
+            <x-avatar image="https://i.pravatar.cc/30" presence presence-color="green" />
+            <x-avatar image="https://i.pravatar.cc/50" presence presence-color="neutral" />
+        </x-preview>
+    </x-section>
+    <x-section title="Presence Positions">
+        <x-preview language="blade" :contents="$presencePositions">
+            <x-avatar image="https://i.pravatar.cc/500" presence presence-position="right-top" />
+            <x-avatar image="https://i.pravatar.cc/500" presence presence-position="right-bottom" />
+            <x-avatar image="https://i.pravatar.cc/500" presence presence-position="left-top" />
+            <x-avatar image="https://i.pravatar.cc/500" presence presence-position="left-bottom" />
+        </x-preview>
+    </x-section>
 </x-layout>

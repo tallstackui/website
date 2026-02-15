@@ -122,6 +122,34 @@ class Avatar
     <x-avatar image="https://i.pravatar.cc/300" text="alt-text-goes-here" />
     HTML;
 
+    public const AVATAR_GROUP = <<<'HTML'
+    <x-avatar.group>
+        <x-avatar image="https://i.pravatar.cc/300" borderless />
+        <x-avatar image="https://i.pravatar.cc/200" borderless />
+        <x-avatar image="https://i.pravatar.cc/100" borderless />
+    </x-avatar.group>
+    HTML;
+
+    public const PRESENCE = <<<'HTML'
+    <x-avatar image="https://i.pravatar.cc/300" presence />
+
+    <!-- with a pulse indicator -->
+
+    <x-avatar image="https://i.pravatar.cc/300" presence pulse />
+    HTML;
+
+    public const PRESENCE_COLORS = <<<'HTML'
+    <x-avatar image="https://i.pravatar.cc/300" presence presence-color="green" />
+    <x-avatar image="https://i.pravatar.cc/300" presence presence-color="neutral" />
+    HTML;
+
+    public const PRESENCE_POSITIONS = <<<'HTML'
+    <x-avatar image="https://i.pravatar.cc/300" presence presence-position="top-left" />
+    <x-avatar image="https://i.pravatar.cc/300" presence presence-position="top-right" />
+    <x-avatar image="https://i.pravatar.cc/300" presence presence-position="bottom-left" />
+    <x-avatar image="https://i.pravatar.cc/300" presence presence-position="bottom-right" />
+    HTML;
+
     public const PERSONALIZATION = <<<'HTML'
     TallStackUi::customize()
         ->avatar()

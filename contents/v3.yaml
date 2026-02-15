@@ -224,6 +224,10 @@ ui:
     - Borderless
     - Modelable
     - Image
+    - Group
+    - Presence
+    - Presence Color
+    - Presence Positions
   badge:
     - Basic Usage
     - Square Variation
