@@ -499,8 +499,10 @@ ui:
     - Event
   tab:
     - Basic Usage
+    - Centered
     - Scroll on Mobile
     - Slots
+    - Route-Based Tabs
     - Events
     - Wireable
     - Live Wireable

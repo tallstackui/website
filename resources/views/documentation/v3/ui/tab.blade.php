@@ -33,6 +33,21 @@
             </x-tab>
         </x-preview>
     </x-section>
+    <x-section title="Centered" description="An option to center the tab navigation items.">
+        <x-preview language="blade" :background="false" :contents="$centered">
+            <x-tab selected="Tab 1" centered>
+                <x-tab.items tab="Tab 1">
+                    Tab 1
+                </x-tab.items>
+                <x-tab.items tab="Tab 2">
+                    Tab 2
+                </x-tab.items>
+                <x-tab.items tab="Tab 3">
+                    Tab 3
+                </x-tab.items>
+            </x-tab>
+        </x-preview>
+    </x-section>
     <x-section title="Scroll on Mobile">
         <div class="space-y-4">
             <p>
@@ -87,6 +102,28 @@
                 </x-tab.items>
             </x-tab>
         </x-preview>
+    </x-section>
+    <x-section title="Route-Based Tabs">
+        <div class="space-y-4">
+            <p>
+                Tabs can be associated with URLs using the <x-block>href</x-block> attribute on <x-block>tab.items</x-block>.
+                When set, the tab's content only renders server-side if the current URL matches. Clicking a different tab navigates
+                to its URL. This avoids rendering heavy Livewire components for inactive tabs.
+            </p>
+            <p>
+                You can use the <x-block>navigate</x-block> attribute to use Livewire SPA navigation:
+            </p>
+            <x-code language="blade" :contents="$routeBased" />
+            <p>
+                You can also use <x-block>navigate-hover</x-block> to prefetch the URL on hover before navigating on click:
+            </p>
+            <x-code language="blade" :contents="$routeBasedNavigateHover" />
+            <p>
+                Without <x-block>navigate</x-block> or <x-block>navigate-hover</x-block>, clicking a tab with
+                <x-block>href</x-block> will use plain <x-block>window.location.href</x-block> navigation.
+                Tabs without <x-block>href</x-block> continue to work as before with client-side switching.
+            </p>
+        </div>
     </x-section>
     <x-section title="Events">
         <x-preview language="blade" :background="false" :contents="$events">

@@ -24,6 +24,20 @@ class Tab
     </x-tab>
     HTML;
 
+    public const CENTERED = <<<'HTML'
+    <x-tab selected="Tab 1" centered>
+        <x-tab.items tab="Tab 1">
+            Tab 1
+        </x-tab.items>
+        <x-tab.items tab="Tab 2">
+            Tab 2
+        </x-tab.items>
+        <x-tab.items tab="Tab 3">
+            Tab 3
+        </x-tab.items>
+    </x-tab>
+    HTML;
+
     public const MOBILE = <<<'HTML'
     <x-tab selected="Tab 1" scroll-on-mobile>
         <x-tab.items tab="Tab 1">
@@ -83,6 +97,28 @@ class Tab
                 <x-icon name="currency-dollar" class="w-5 h-5" />
             </x-slot:left>
             Transactions
+        </x-tab.items>
+    </x-tab>
+    HTML;
+
+    public const ROUTE_BASED = <<<'HTML'
+    <x-tab>
+        <x-tab.items tab="users" title="Users" :href="route('users.index')" navigate>
+            <livewire:users.index />
+        </x-tab.items>
+        <x-tab.items tab="invoices" title="Invoices" :href="route('invoices.index')" navigate>
+            <livewire:invoices.index />
+        </x-tab.items>
+    </x-tab>
+    HTML;
+
+    public const ROUTE_BASED_NAVIGATE_HOVER = <<<'HTML'
+    <x-tab>
+        <x-tab.items tab="users" title="Users" :href="route('users.index')" navigate-hover>
+            <livewire:users.index />
+        </x-tab.items>
+        <x-tab.items tab="invoices" title="Invoices" :href="route('invoices.index')" navigate-hover>
+            <livewire:invoices.index />
         </x-tab.items>
     </x-tab>
     HTML;
