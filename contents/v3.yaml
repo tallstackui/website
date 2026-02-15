@@ -521,6 +521,7 @@ ui:
     - Clickable
     - Highlight
     - Interacting With Data
+    - Expandable
   theme-switch:
     - Concept
     - Basic Usage

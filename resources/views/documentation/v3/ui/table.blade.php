@@ -114,4 +114,9 @@
             provided by Blade that contains information about the current iteration of the loop.
         </p>
     </x-section>
+    <x-section title="Expandable" description="An option to expand rows to display sub-content such as nested tables.">
+        <div class="space-y-4">
+            <x-code language="blade" :contents="$expandableNested" />
+        </div>
+    </x-section>
 </x-layout>

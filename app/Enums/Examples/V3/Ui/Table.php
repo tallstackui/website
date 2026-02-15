@@ -468,6 +468,20 @@ class Table
     </div>
     HTML;
 
+    public const EXPANDABLE_NESTED = <<<'HTML'
+    <x-table :$headers :$rows expandable>
+        @interact('sub_table', $row)
+            <x-table :headers="[
+                ['index' => 'property', 'label' => 'Property'],
+                ['index' => 'value', 'label' => 'Value'],
+            ]" :rows="[
+                ['property' => 'Email', 'value' => $row->email],
+                ['property' => 'Created', 'value' => $row->created_at->format('Y-m-d')],
+            ]" />
+        @endinteract
+    </x-table>
+    HTML;
+
     public const PERSONALIZATION = <<<'HTML'
     TallStackUi::customize()
         ->table()

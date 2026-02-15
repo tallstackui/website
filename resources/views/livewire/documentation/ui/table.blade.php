@@ -89,5 +89,17 @@ new class extends Component
         <x-table :$headers :$rows link="https://google.com.br/?users={id}" blank />
     @elseif ($mode === 11)
         <x-table :$headers :$rows highlight />
+    @elseif ($mode === 12)
+        <x-table :$headers :$rows expandable>
+            @interact('sub_table', $row)
+                <x-table :headers="[
+                    ['index' => 'property', 'label' => 'Property'],
+                    ['index' => 'value', 'label' => 'Value'],
+                ]" :rows="[
+                    ['property' => 'Email', 'value' => $row->email],
+                    ['property' => 'Created', 'value' => $row->created_at->format('Y-m-d')],
+                ]" />
+            @endinteract
+        </x-table>
     @endif
 </div>
