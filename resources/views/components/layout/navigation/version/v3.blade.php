@@ -133,6 +133,9 @@
                         <x-layout.navigation.link :href="route('documentation', ['v3', 'ui', 'loading'])" text="Loading" />
                     </li>
                     <li class="relative ml-4">
+                        <x-layout.navigation.link :href="route('documentation', ['v3', 'ui', 'kbd'])" text="Kbd" new />
+                    </li>
+                    <li class="relative ml-4">
                         <x-layout.navigation.link :href="route('documentation', ['v3', 'ui', 'key-value'])" text="KeyValue" />
                     </li>
                     <li class="relative ml-4">

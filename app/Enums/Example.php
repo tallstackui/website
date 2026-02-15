@@ -85,6 +85,7 @@ enum Example: string
     case Layout = 'Ui\\Layout';
     case Link = 'Ui\\Link';
     case Loading = 'Ui\\Loading';
+    case Kbd = 'Ui\\Kbd';
     case KeyValue = 'Ui\\KeyValue';
     case Modal = 'Ui\\Modal';
     case Progress = 'Ui\\Progress';

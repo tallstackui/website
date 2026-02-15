@@ -405,6 +405,13 @@ ui:
     - Text Slot
     - Target & Delay Options
     - Configurations
+  kbd:
+    - Basic Usage
+    - Key Combination
+    - Size Variations
+    - Borderless
+    - Tooltip
+    - Slot
   key-value:
     - Concept
     - Basic Usage
