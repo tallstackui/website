@@ -239,6 +239,19 @@ ui:
     - Color Variations
     - Light Variations
     - Outline Variations
+  breadcrumbs:
+    - Concept
+    - Basic Usage
+    - Named Routes
+    - Icons
+    - Tooltips
+    - Sizes
+    - Separator
+    - Separator Class
+    - Slots
+    - Route-Aware Builder
+    - Parent Chaining
+    - Route Model Binding
   banner:
     Static:
       contents:
