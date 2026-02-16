@@ -49,26 +49,9 @@ form:
     - Strip Zeros
     - Invalidate
   input-select:
-    Overview:
-      contents:
-        - Basic Usage
-    Native:
-      contents:
-        - Left Addon
-        - Right Addon
-    Styled:
-      contents:
-        - Left Addon
-        - Right Addon
-        - Searchable
-        - API
-        - Multiple
-    Features:
-      contents:
-        - Label & Hint
-        - Icon
-        - Prefix & Suffix
-        - Clearable
+    - Concept
+    - Select Native
+    - Select Styled
   password:
     - Basic Usage
     - Label & Hint
@@ -357,6 +340,19 @@ ui:
     - Events
     - Icon Style
     - Using Different Icons
+  dial:
+    - Concept
+    - Basic Usage
+    - Positions
+    - Horizontal
+    - Hover Mode
+    - Labels
+    - Without Tooltip
+    - Icon
+    - Square Variation
+    - Links
+    - Size Variations
+    - Color Variations
   dropdown:
     - Basic Usage
     - Available Positions

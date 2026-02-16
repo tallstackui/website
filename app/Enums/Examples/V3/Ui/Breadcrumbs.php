@@ -100,7 +100,11 @@ class Breadcrumbs
         public function boot(): void
         {
             TallStackUi::breadcrumbs()
-                ->for('home', fn (BreadcrumbTrail $trail) => $trail->add(label: 'Home', link: '/'));
+                ->for(
+                    'home',
+                    fn (BreadcrumbTrail $trail) => $trail
+                        ->add(label: 'Home', link: '/')
+                );
         }
     }
     HTML;

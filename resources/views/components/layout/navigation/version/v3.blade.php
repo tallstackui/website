@@ -115,6 +115,9 @@
                         <x-layout.navigation.link :href="route('documentation', ['v3', 'ui', 'clipboard'])" text="Clipboard" />
                     </li>
                     <li class="relative ml-4">
+                        <x-layout.navigation.link :href="route('documentation', ['v3', 'ui', 'dial'])" text="Dial" new />
+                    </li>
+                    <li class="relative ml-4">
                         <x-layout.navigation.link :href="route('documentation', ['v3', 'ui', 'dropdown'])" text="Dropdown" />
                     </li>
                     <li class="relative ml-4">
