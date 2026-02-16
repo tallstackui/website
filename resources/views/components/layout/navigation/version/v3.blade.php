@@ -97,6 +97,9 @@
                         <x-layout.navigation.link :href="route('documentation', ['v3', 'ui', 'boolean'])" text="Boolean" />
                     </li>
                     <li class="relative ml-4">
+                        <x-layout.navigation.link :href="route('documentation', ['v3', 'ui', 'breadcrumbs'])" text="Breadcrumb" new />
+                    </li>
+                    <li class="relative ml-4">
                         <x-layout.navigation.link :href="route('documentation', ['v3', 'ui', 'button'])" text="Button" />
                     </li>
                     <li class="relative ml-4">
