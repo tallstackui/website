@@ -48,6 +48,27 @@ form:
     - Clearable
     - Strip Zeros
     - Invalidate
+  input-select:
+    Overview:
+      contents:
+        - Basic Usage
+    Native:
+      contents:
+        - Left Addon
+        - Right Addon
+    Styled:
+      contents:
+        - Left Addon
+        - Right Addon
+        - Searchable
+        - API
+        - Multiple
+    Features:
+      contents:
+        - Label & Hint
+        - Icon
+        - Prefix & Suffix
+        - Clearable
   password:
     - Basic Usage
     - Label & Hint

@@ -78,28 +78,31 @@ class Breadcrumbs
 
     TallStackUi::breadcrumbs()
         ->for('home', fn (BreadcrumbTrail $trail) => $trail
-            ->add('Home', '/', icon: 'home')
+            ->add(label: 'Home', link: '/', icon: 'home')
         )
         ->for('users.index', fn (BreadcrumbTrail $trail) => $trail
-            ->parent('home')
-            ->add('Users', 'users.index')
+            ->parent(route: 'home')
+            ->add(label: 'Users', link: 'users.index')
         )
         ->for('users.show', fn (BreadcrumbTrail $trail, User $user) => $trail
-            ->parent('users.index')
-            ->add($user->name)
+            ->parent(route: 'users.index')
+            ->add(label: $user->name)
         );
     HTML;
 
     public const string SERVICE_PROVIDER = <<<'HTML'
     use TallStackUi\Facades\TallStackUi;
+    use Illuminate\Support\ServiceProvider;
     use TallStackUi\Support\Breadcrumbs\BreadcrumbTrail;
 
-    // AppServiceProvider, "boot" method.
-
-    TallStackUi::breadcrumbs()
-        ->for('home', fn (BreadcrumbTrail $trail) => $trail
-            ->add('Home', '/')
-        );
+    class AppServiceProvider extends ServiceProvider
+    {
+        public function boot(): void
+        {
+            TallStackUi::breadcrumbs()
+                ->for('home', fn (BreadcrumbTrail $trail) => $trail->add(label: 'Home', link: '/'));
+        }
+    }
     HTML;
 
     public const string CONFIG_FILES = <<<'HTML'
@@ -110,41 +113,40 @@ class Breadcrumbs
         [
             'files' => [
                 'routes/breadcrumbs.php',
-                'routes/admin-breadcrumbs.php', // additional files
+                'routes/admin-breadcrumbs.php', // [tl! add]
             ],
         ],
     ],
     HTML;
 
     public const string AUTO_RESOLVE = <<<'HTML'
-    {{-- No items needed — auto-resolves from current route --}}
     <x-breadcrumbs />
     HTML;
 
     public const string PARENT_CHAINING = <<<'HTML'
     TallStackUi::breadcrumbs()
         ->for('home', fn (BreadcrumbTrail $trail) => $trail
-            ->add('Home', '/')
+            ->add(label: 'Home', link: '/')
         )
         ->for('settings.index', fn (BreadcrumbTrail $trail) => $trail
-            ->parent('home')
-            ->add('Settings', 'settings.index')
+            ->parent(route: 'home')
+            ->add(label: 'Settings', link: 'settings.index')
         )
         ->for('settings.profile', fn (BreadcrumbTrail $trail) => $trail
-            ->parent('settings.index')
-            ->add('Profile')
+            ->parent(route: 'settings.index')
+            ->add(label: 'Profile')
         );
     HTML;
 
     public const string ROUTE_MODEL_BINDING = <<<'HTML'
     TallStackUi::breadcrumbs()
         ->for('posts.show', fn (BreadcrumbTrail $trail, Post $post) => $trail
-            ->parent('posts.index')
-            ->add($post->title)
+            ->parent(route: 'posts.index')
+            ->add(label: $post->title)
         )
         ->for('posts.comments.show', fn (BreadcrumbTrail $trail, Post $post, Comment $comment) => $trail
-            ->parent('posts.show')
-            ->add("Comment #{$comment->id}")
+            ->parent(route: 'posts.show')
+            ->add(label: "Comment #{$comment->id}")
         );
     HTML;
 

@@ -22,7 +22,7 @@
             </p>
         </div>
     </x-section>
-    <x-section title="Basic Usage" new>
+    <x-section title="Basic Usage">
         <x-code language="blade" :contents="$basic" />
     </x-section>
     <x-section title="Named Routes">
@@ -105,13 +105,14 @@
     <x-section title="Parent Chaining" disable-copy>
         <div class="space-y-4">
             <p>
-                Use <x-block>parent()</x-block> to inherit breadcrumb items from a parent route.
-                Parents are resolved recursively, allowing deep hierarchies:
+                You can create a relationship of children and parent routes by using the <x-block>parent()</x-block> method to
+                inherit breadcrumb items from a parent route. Parents are resolved recursively, allowing deep hierarchies:
             </p>
             <x-code language="php" :contents="$parentChaining" />
             <p>
-                Visiting <x-block>settings.profile</x-block> renders:
-                <x-block>Home / Settings / Profile</x-block>
+                In the code above, note that <x-block>parent</x-block> is defined after the base (parent)
+                route is defined, not before. Now when you visiting the page that is associated with the
+                route <x-block>settings.profile</x-block> you will see something like this: <x-block>Home / Settings / Profile</x-block>
             </p>
         </div>
     </x-section>

@@ -44,6 +44,9 @@
                         <x-layout.navigation.link :href="route('documentation', ['v3', 'form', 'input'])" text="Input" />
                     </li>
                     <li class="relative ml-4">
+                        <x-layout.navigation.link :href="route('documentation', ['v3', 'form', 'input-select'])" text="Input Select" new />
+                    </li>
+                    <li class="relative ml-4">
                         <x-layout.navigation.link :href="route('documentation', ['v3', 'form', 'number'])" text="Number" />
                     </li>
                     <li class="relative ml-4">

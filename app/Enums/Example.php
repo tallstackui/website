@@ -18,6 +18,7 @@ enum Example: string
     case Currency = 'Form\\Currency';
     case Date = 'Form\\Date';
     case Input = 'Form\\Input';
+    case InputSelect = 'Form\\InputSelect';
     case Number = 'Form\\Number';
     case Password = 'Form\\Password';
     case Pin = 'Form\\Pin';
