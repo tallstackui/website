@@ -80,6 +80,7 @@ enum Example: string
     case Badge = 'Ui\\Badge';
     case Banner = 'Ui\\Banner';
     case Boolean = 'Ui\\Boolean';
+    case Breadcrumbs = 'Ui\\Breadcrumbs';
     case Button = 'Ui\\Button';
     case Card = 'Ui\\Card';
     case Carousel = 'Ui\\Carousel';
