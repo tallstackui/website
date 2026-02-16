@@ -4,7 +4,7 @@ namespace App\Enums\Examples\V2\Personalization;
 
 class Color
 {
-    public const TAILWINDCSS_V3_FILE = <<<'HTML'
+    public const string TAILWINDCSS_V3_FILE = <<<'HTML'
     theme: {
         extend: {
             // ...
@@ -57,7 +57,7 @@ class Color
     },
     HTML;
 
-    public const TAILWINDCSS_V4_FILE = <<<'HTML'
+    public const string TAILWINDCSS_V4_FILE = <<<'HTML'
     @theme {
         --color-primary-50: #eef2ff;
         --color-primary-100: #e0e7ff;
@@ -348,7 +348,7 @@ class Color
     <x-alert text="My custom color is foo-bar" color="foo-bar" />
     HTML;
 
-    public const NEW_CUSTOM_COLOR_V3 = <<<'HTML'
+    public const string NEW_CUSTOM_COLOR_V3 = <<<'HTML'
     theme: {
         extend: {
             // ...
@@ -375,7 +375,7 @@ class Color
     },
     HTML;
 
-    public const NEW_CUSTOM_COLOR_V4 = <<<'HTML'
+    public const string NEW_CUSTOM_COLOR_V4 = <<<'HTML'
     @theme {
         --color-malibu-50: #f0f7ff;
         --color-malibu-100: #e1effd;

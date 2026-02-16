@@ -51,21 +51,12 @@
     </x-section>
     <x-section title="Tracing TailwindCSS Classes" disable-copy>
         <div class="space-y-4">
-            @if (!$tailwindcss)
-                <p class="mb-4">
-                    Just like soft customization, if you are using deep customization to customize components that have
-                    replaced the original component classes, you must have TailwindCSS be able to track and build the CSS classes
-                    defined in your components' PHP files. Edit your <x-block>tailwind.config.js</x-block> file by inserting the following content:
-                </p>
-                <x-code language="js" :contents="$tailwindcssV3" disable-copy />
-            @else
-                <p class="mb-4">
-                    Just like soft customization, if you are using deep customization to customize components that have
-                    replaced the original component classes, you must have TailwindCSS be able to track and build the CSS classes
-                    defined in your components' PHP files. Edit your <x-block>app.css</x-block> CSS file by inserting the following content:
-                </p>
-                <x-code language="js" :contents="$tailwindcssV4" />
-            @endif
+            <p class="mb-4">
+                Just like soft customization, if you are using deep customization to customize components that have
+                replaced the original component classes, you must have TailwindCSS be able to track and build the CSS classes
+                defined in your components' PHP files. Edit your <x-block>app.css</x-block> CSS file by inserting the following content:
+            </p>
+            <x-code language="css" :contents="$tailwindcss" />
         </div>
     </x-section>
     <x-section title="Publish Blade Files" disable-copy>

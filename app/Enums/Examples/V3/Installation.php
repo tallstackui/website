@@ -28,7 +28,7 @@ class Installation
     </html>
     HTML;
 
-    public const TAILWINDCSS_V4 = <<<'HTML'
+    public const string TAILWINDCSS_V4 = <<<'HTML'
     @import "tailwindcss";
     @import '../../vendor/tallstackui/tallstackui/css/v4.css'; /* [tl! add, focus] */
 

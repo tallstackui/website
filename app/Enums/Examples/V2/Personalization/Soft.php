@@ -4,13 +4,13 @@ namespace App\Enums\Examples\V2\Personalization;
 
 class Soft
 {
-    public const TAILWINDCSS_V3 = <<<'HTML'
+    public const string TAILWINDCSS_V3 = <<<'HTML'
     content: [
         './app/Providers/*.php', // [tl! highlight]
     ],
     HTML;
 
-    public const TAILWINDCSS_V4 = <<<'HTML'
+    public const string TAILWINDCSS_V4 = <<<'HTML'
     @source '../../app/Providers/*.php';
     HTML;
 

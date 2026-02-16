@@ -4,7 +4,7 @@ namespace App\Enums\Examples\V2;
 
 class Troubleshooting
 {
-    public const LARAVEL_1035_BUG = <<<'HTML'
+    public const string LARAVEL_1035_BUG = <<<'HTML'
     <!-- using the input like this -->
     <x-input name="name" foo="bar" />
 

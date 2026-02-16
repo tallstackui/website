@@ -4,7 +4,7 @@ namespace App\Enums\Examples\V2\Helpers;
 
 class DarkTheme
 {
-    public const TAILWINDCSS_V3 = <<<'HTML'
+    public const string TAILWINDCSS_V3 = <<<'HTML'
     export default {
         darkMode: 'class', // [tl! highlight]
 
@@ -12,7 +12,7 @@ class DarkTheme
     }
     HTML;
 
-    public const TAILWINDCSS_V4 = <<<'HTML'
+    public const string TAILWINDCSS_V4 = <<<'HTML'
     @custom-variant dark (&:where(.dark, .dark *));
     HTML;
 

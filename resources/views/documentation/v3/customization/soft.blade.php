@@ -19,21 +19,12 @@
     </x-section>
     <x-section title="Tracing TailwindCSS Classes" disable-copy>
         <div class="space-y-4">
-            @if (! $tailwindcss)
-                <p>
-                    Since the idea of soft customization is to apply customization through PHP object classes, the first thing you
-                    need to do is make sure that TailwindCSS tracks the classes that will be defined from your application's <x-block>*.php</x-block> files.
-                    To do this, you need to edit your <x-block>tailwind.config.js</x-block> file by inserting this content:
-                </p>
-                <x-code language="js" :contents="$tailwindcssV3" disable-copy/>
-            @else
-                <p>
-                    Since the idea of soft customization is to apply customization through PHP object classes, the first thing you
-                    need to do is make sure that TailwindCSS tracks the classes that will be defined from your application's <x-block>*.php</x-block> files.
-                    To do this, you need to edit your <x-block>app.css</x-block> CSS file by inserting this content:
-                </p>
-                <x-code language="js" :contents="$tailwindcssV4" disable-copy/>
-            @endif
+            <p>
+                Since the idea of soft customization is to apply customization through PHP object classes, the first thing you
+                need to do is make sure that TailwindCSS tracks the classes that will be defined from your application's <x-block>*.php</x-block> files.
+                To do this, you need to edit your <x-block>app.css</x-block> CSS file by inserting this content:
+            </p>
+            <x-code language="css" :contents="$tailwindcss" disable-copy/>
         </div>
     </x-section>
     <x-section title="Start the Customization" disable-copy>

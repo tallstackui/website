@@ -21,7 +21,7 @@
                 <li>Laravel: v10 or later</li>
                 <li>Livewire: v3 or v4 🚀</li>
                 <li>AlpineJS: v3</li>
-                <li>TailwindCSS: v3 or later</li>
+                <li>TailwindCSS: v4</li>
             </ul>
         </div>
     </x-section>

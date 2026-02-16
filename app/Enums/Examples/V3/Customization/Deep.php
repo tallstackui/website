@@ -51,13 +51,7 @@ class Deep
     }
     HTML;
 
-    public const TAILWINDCSS_V3 = <<<'HTML'
-    content: [
-        './app/View/Components/**/*.php', // [tl! highlight]
-    ],
-    HTML;
-
-    public const TAILWINDCSS_V4 = <<<'HTML'
+    public const string TAILWINDCSS = <<<'HTML'
     @source '../../app/View/Components/**/*.php';
     HTML;
 

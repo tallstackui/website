@@ -4,60 +4,7 @@ namespace App\Enums\Examples\V3\Customization;
 
 class Color
 {
-    public const TAILWINDCSS_V3_FILE = <<<'HTML'
-    theme: {
-        extend: {
-            // ...
-
-            colors: {
-                'primary': {
-                    DEFAULT: '#acf73b',
-                    '50': '#f7ffe5',
-                    '100': '#edffc7',
-                    '200': '#daff95',
-                    '300': '#beff57',
-                    '400': '#acf73b',
-                    '500': '#83dd05',
-                    '600': '#63b100',
-                    '700': '#4b8605',
-                    '800': '#3e690b',
-                    '900': '#34590e',
-                    '950': '#193201',
-                },
-                'secondary': {
-                    DEFAULT: '#b5b5b5',
-                    '50': '#f7f7f7',
-                    '100': '#ededed',
-                    '200': '#dfdfdf',
-                    '300': '#c8c8c8',
-                    '400': '#b5b5b5',
-                    '500': '#999999',
-                    '600': '#888888',
-                    '700': '#7b7b7b',
-                    '800': '#676767',
-                    '900': '#545454',
-                    '950': '#363636',
-                },
-                'dark': {
-                    DEFAULT: '#3f4d69',
-                    '50': '#f6f7f9',
-                    '100': '#ebeef3',
-                    '200': '#d3d9e4',
-                    '300': '#acb8cd',
-                    '400': '#7f92b1',
-                    '500': '#5f7498',
-                    '600': '#4b5d7e',
-                    '700': '#3f4d69',
-                    '800': '#364156',
-                    '900': '#30384a',
-                    '950': '#202531',
-                }
-            }
-        },
-    },
-    HTML;
-
-    public const TAILWINDCSS_V4_FILE = <<<'HTML'
+    public const string TAILWINDCSS_FILE = <<<'HTML'
     @theme {
         --color-primary-50: #eef2ff;
         --color-primary-100: #e0e7ff;
@@ -348,34 +295,7 @@ class Color
     <x-alert text="My custom color is foo-bar" color="foo-bar" />
     HTML;
 
-    public const NEW_CUSTOM_COLOR_V3 = <<<'HTML'
-    theme: {
-        extend: {
-            // ...
-
-            colors: {
-                // ...
-
-                'malibu': {
-                    DEFAULT: '#6ebcf7',
-                    '50': '#f0f7ff',
-                    '100': '#e1effd',
-                    '200': '#bcdefb',
-                    '300': '#6ebcf7',
-                    '400': '#3ea8f2',
-                    '500': '#158ce2',
-                    '600': '#086ec1',
-                    '700': '#08589c',
-                    '800': '#0b4b81',
-                    '900': '#0f3f6b',
-                    '950': '#0a2847',
-                },
-            }
-        },
-    },
-    HTML;
-
-    public const NEW_CUSTOM_COLOR_V4 = <<<'HTML'
+    public const string NEW_CUSTOM_COLOR = <<<'HTML'
     @theme {
         --color-malibu-50: #f0f7ff;
         --color-malibu-100: #e1effd;
