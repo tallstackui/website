@@ -4,11 +4,11 @@ namespace App\Enums\Examples\V1;
 
 class Installation
 {
-    public const INSTALLATION = <<<'HTML'
+    public const string INSTALLATION = <<<'HTML'
     composer require tallstackui/tallstackui
     HTML;
 
-    public const LAYOUT = <<<'HTML'
+    public const string LAYOUT = <<<'HTML'
     <html>
         <head>
             <!-- ... -->
@@ -20,7 +20,7 @@ class Installation
     </html>
     HTML;
 
-    public const TAILWINDCSS = <<<'HTML'
+    public const string TAILWINDCSS = <<<'HTML'
     import forms from '@tailwindcss/forms'; // [tl! highlight]
 
     presets: [
@@ -36,7 +36,7 @@ class Installation
     plugins: [forms], // [tl! highlight]
     HTML;
 
-    public const PREFIXING = <<<'HTML'
+    public const string PREFIXING = <<<'HTML'
     <?php
 
     use TallStackUi\View\Components;
@@ -58,7 +58,7 @@ class Installation
     // ...
     HTML;
 
-    public const PREFIX_EXAMPLES = <<<'HTML'
+    public const string PREFIX_EXAMPLES = <<<'HTML'
     <!-- Prefixing: "ts-" -->
 
     <x-alert /> {{-- [tl! remove] --}}
@@ -74,11 +74,11 @@ class Installation
     <x-ts-input /> {{-- [tl! add] --}}
     HTML;
 
-    public const PREFIX_COMMAND = <<<'HTML'
+    public const string PREFIX_COMMAND = <<<'HTML'
     php artisan tallstackui:setup-prefix
     HTML;
 
-    public const ALPINE = <<<'HTML'
+    public const string ALPINE = <<<'HTML'
     <html>
         <head>
             <!-- ... -->
@@ -95,7 +95,7 @@ class Installation
     </html>
     HTML;
 
-    public const BUILD = <<<'HTML'
+    public const string BUILD = <<<'HTML'
     npm run build && php artisan optimize:clear
     HTML;
 }

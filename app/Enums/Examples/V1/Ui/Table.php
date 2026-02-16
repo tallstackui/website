@@ -4,7 +4,7 @@ namespace App\Enums\Examples\V1\Ui;
 
 class Table
 {
-    public const EXAMPLE_ARRAY = <<<'HTML'
+    public const string EXAMPLE_ARRAY = <<<'HTML'
     @php
         $headers = [
             ['index' => 'id', 'label' => '#'],
@@ -22,7 +22,7 @@ class Table
     <x-table :$headers :$rows />
     HTML;
 
-    public const EXAMPLE_ELOQUENT = <<<'HTML'
+    public const string EXAMPLE_ELOQUENT = <<<'HTML'
     <?php
 
     use App\Models\User;
@@ -47,7 +47,7 @@ class Table
     </div>
     HTML;
 
-    public const BASIC = <<<'HTML'
+    public const string BASIC = <<<'HTML'
     <?php
 
     use App\Models\User;
@@ -74,7 +74,7 @@ class Table
     </div>
     HTML;
 
-    public const WITHOUT_HEADER = <<<'HTML'
+    public const string WITHOUT_HEADER = <<<'HTML'
     <?php
 
     use App\Models\User;
@@ -99,7 +99,7 @@ class Table
     </div>
     HTML;
 
-    public const STRIPED = <<<'HTML'
+    public const string STRIPED = <<<'HTML'
     <?php
 
     use App\Models\User;
@@ -124,7 +124,7 @@ class Table
     </div>
     HTML;
 
-    public const FILTERS = <<<'HTML'
+    public const string FILTERS = <<<'HTML'
     <?php
 
     use App\Models\User;
@@ -177,7 +177,7 @@ class Table
     </div>
     HTML;
 
-    public const LOADING = <<<'HTML'
+    public const string LOADING = <<<'HTML'
     <?php
 
     use App\Models\User;
@@ -212,7 +212,7 @@ class Table
     </div>
     HTML;
 
-    public const SORT = <<<'HTML'
+    public const string SORT = <<<'HTML'
     <?php
 
     use App\Models\User;
@@ -246,7 +246,7 @@ class Table
     </div>
     HTML;
 
-    public const PAGINATE = <<<'HTML'
+    public const string PAGINATE = <<<'HTML'
     <?php
 
     use App\Models\User;
@@ -289,7 +289,7 @@ class Table
     </div>
     HTML;
 
-    public const SLOTS = <<<'HTML'
+    public const string SLOTS = <<<'HTML'
     <!-- This is a resumed example without the full explanation -->
 
     <x-table header="Header Slot"
@@ -308,7 +308,7 @@ class Table
     </x-table>
     HTML;
 
-    public const SELECTABLE = <<<'HTML'
+    public const string SELECTABLE = <<<'HTML'
     <!-- This is a resumed example without the full explanation -->
 
     <!-- You need to create a public array property in the component to store
@@ -318,7 +318,7 @@ class Table
     <x-table ... selectable wire:model="selected" />
     HTML;
 
-    public const CLICKABLE = <<<'HTML'
+    public const string CLICKABLE = <<<'HTML'
     <!-- This is a resumed example without the full explanation -->
 
     <x-table ... link="https://google.com.br/?user={id}" />
@@ -332,7 +332,7 @@ class Table
     <x-table ... link="https://google.com.br/?user={id}" blank />
     HTML;
 
-    public const COLUMNS = <<<'HTML'
+    public const string COLUMNS = <<<'HTML'
     <?php
 
     use App\Models\User;
@@ -393,7 +393,7 @@ class Table
     </div>
     HTML;
 
-    public const LOOP = <<<'HTML'
+    public const string LOOP = <<<'HTML'
     <?php
 
     use App\Models\User;
@@ -435,7 +435,7 @@ class Table
     </div>
     HTML;
 
-    public const PERSONALIZATION = <<<'HTML'
+    public const string PERSONALIZATION = <<<'HTML'
     TallStackUi::customize()
         ->table()
         ->block('block', 'classes');

@@ -4,11 +4,11 @@ namespace App\Enums\Examples\V2\Ui;
 
 class Error
 {
-    public const BASIC = <<<'HTML'
+    public const string BASIC = <<<'HTML'
     <x-errors />
     HTML;
 
-    public const SPECIFIC = <<<'HTML'
+    public const string SPECIFIC = <<<'HTML'
     <x-errors only="name" />
 
     <!-- use array for more than one -->
@@ -16,15 +16,15 @@ class Error
     <x-errors :only="['name', 'description']" />
     HTML;
 
-    public const CUSTOMIZED = <<<'HTML'
+    public const string CUSTOMIZED = <<<'HTML'
     <x-errors title="Ops! There are :count validation errors:" />
     HTML;
 
-    public const CLOSE = <<<'HTML'
+    public const string CLOSE = <<<'HTML'
     <x-errors close />
     HTML;
 
-    public const SLOT = <<<'HTML'
+    public const string SLOT = <<<'HTML'
     <x-errors footer="Footer Slot" />
 
     <!-- or -->
@@ -40,7 +40,7 @@ class Error
     </x-errors>
     HTML;
 
-    public const COLORS = <<<'HTML'
+    public const string COLORS = <<<'HTML'
     <!-- Default: red -->
 
     <x-errors />
@@ -70,11 +70,11 @@ class Error
     <x-errors color="black" />
     HTML;
 
-    public const EVENTS = <<<'HTML'
+    public const string EVENTS = <<<'HTML'
     <x-errors close x-on:close="alert('Errors Closed')" />
     HTML;
 
-    public const PERSONALIZATION = <<<'HTML'
+    public const string PERSONALIZATION = <<<'HTML'
     TallStackUi::customize()
         ->dropdown('errors')
         ->block('block', 'classes');

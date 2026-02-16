@@ -17,7 +17,7 @@ class PageController
     /**
      * Bypass to the examples.
      */
-    protected const EXAMPLES = [
+    protected const array EXAMPLES = [
         'Integrations\Alpine' => 'Alpine',
         'StarterKit' => 'StarterKit',
     ];
@@ -57,7 +57,7 @@ class PageController
             $example = self::EXAMPLES[$example];
         }
 
-        if ($view === 'documentation.v2.ui.avatar') {
+        if (str_contains($view, 'ui.avatar')) {
             auth()->loginUsingId(1);
         }
 

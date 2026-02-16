@@ -4,7 +4,7 @@ namespace App\Enums\Examples\V2\Ui;
 
 class Reaction
 {
-    public const METHOD = <<<'HTML'
+    public const string METHOD = <<<'HTML'
     use Livewire\Component;
 
     class MyComponent extends Component
@@ -18,35 +18,35 @@ class Reaction
     }
     HTML;
 
-    public const USING_OTHER_METHOD_NAME = <<<'HTML'
+    public const string USING_OTHER_METHOD_NAME = <<<'HTML'
     <x-reaction react-method="reacting" />
     HTML;
 
-    public const BASIC = <<<'HTML'
+    public const string BASIC = <<<'HTML'
     <x-reaction />
     HTML;
 
-    public const ANIMATED = <<<'HTML'
+    public const string ANIMATED = <<<'HTML'
     <x-reaction animated />
     HTML;
 
-    public const POSITION = <<<'HTML'
+    public const string POSITION = <<<'HTML'
     <!-- Accept all positions of Tooltip component -->
 
     <x-reaction position="top" />
     HTML;
 
-    public const QUANTITY = <<<'HTML'
+    public const string QUANTITY = <<<'HTML'
     <x-reaction :quantity="12" />
     HTML;
 
-    public const QUANTITY_BIND = <<<'HTML'
+    public const string QUANTITY_BIND = <<<'HTML'
     <!-- $quantity is an integer Livewire public property -->
 
     <x-reaction wire:model="quantity" :$quantity />
     HTML;
 
-    public const ONLY = <<<'HTML'
+    public const string ONLY = <<<'HTML'
     <!-- Available:
 
         'smile',
@@ -73,17 +73,17 @@ class Reaction
     <x-reaction :only="['thumbs-up', 'thumbs-down', 'heart']" />
     HTML;
 
-    public const SLOT = <<<'HTML'
+    public const string SLOT = <<<'HTML'
     <x-reaction>
         React to the TallStackUI
     </x-reaction>
     HTML;
 
-    public const EVENTS = <<<'HTML'
+    public const string EVENTS = <<<'HTML'
     <x-reaction x-on:react="alert(`Reacted: ${$event.detail.reaction.reaction}`)" />
     HTML;
 
-    public const PERSONALIZATION = <<<'HTML'
+    public const string PERSONALIZATION = <<<'HTML'
     TallStackUi::customize()
         ->reaction()
         ->block('block', 'classes');

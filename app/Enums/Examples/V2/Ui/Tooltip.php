@@ -4,11 +4,11 @@ namespace App\Enums\Examples\V2\Ui;
 
 class Tooltip
 {
-    public const BASIC = <<<'HTML'
+    public const string BASIC = <<<'HTML'
     <x-tooltip text="TallStackUI" />
     HTML;
 
-    public const POSITIONS = <<<'HTML'
+    public const string POSITIONS = <<<'HTML'
     <!-- Available Positions:
          bottom,
          bottom-start,
@@ -33,27 +33,27 @@ class Tooltip
     <x-tooltip text="Right" position="right" />
     HTML;
 
-    public const ICONS = <<<'HTML'
+    public const string ICONS = <<<'HTML'
     <x-tooltip text="Top" position="top" icon="exclamation-circle" />
     <x-tooltip text="Bottom" position="bottom" icon="exclamation-triangle" />
     <x-tooltip text="Left" position="left" icon="shield-exclamation" />
     <x-tooltip text="Right" position="right" />
     HTML;
 
-    public const SIZES = <<<'HTML'
+    public const string SIZES = <<<'HTML'
     <x-tooltip text="XS" xs/>
     <x-tooltip text="SM" sm/>
     <x-tooltip text="MD" md/>
     <x-tooltip text="LG" lg/>
     HTML;
 
-    public const HTML = <<<'HTML'
+    public const string HTML = <<<'HTML'
     <x-tooltip>
         <b>Tall</b><i>Stack</i><u>Ui</u>
     </x-tooltip>
     HTML;
 
-    public const COLORS = <<<'HTML'
+    public const string COLORS = <<<'HTML'
     <x-tooltip text="primary" />
     <x-tooltip text="secondary" color="secondary" />
     <x-tooltip text="slate" color="slate" />
@@ -81,7 +81,7 @@ class Tooltip
     <x-tooltip text="black" color="black" />
     HTML;
 
-    public const OUTLINES = <<<'HTML'
+    public const string OUTLINES = <<<'HTML'
     <x-tooltip text="primary" outline />
     <x-tooltip text="secondary" color="secondary" outline />
     <x-tooltip text="slate" color="slate" outline />
@@ -109,7 +109,7 @@ class Tooltip
     <x-tooltip text="black" color="black" outline />
     HTML;
 
-    public const PERSONALIZATION = <<<'HTML'
+    public const string PERSONALIZATION = <<<'HTML'
     TallStackUi::customize()
         ->tooltip()
         ->block('block', 'classes');

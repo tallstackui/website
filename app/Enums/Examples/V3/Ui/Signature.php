@@ -4,48 +4,48 @@ namespace App\Enums\Examples\V3\Ui;
 
 class Signature
 {
-    public const BASIC = <<<'HTML'
+    public const string BASIC = <<<'HTML'
     <x-signature />
     HTML;
 
-    public const LABEL_HINT = <<<'HTML'
+    public const string LABEL_HINT = <<<'HTML'
     <x-signature label="Sign your name" hint="You can revert if you have written something wrong." />
     HTML;
 
-    public const PEN = <<<'HTML'
+    public const string PEN = <<<'HTML'
     <x-signature color="#ff0000" />
     HTML;
 
-    public const BACKGROUND = <<<'HTML'
+    public const string BACKGROUND = <<<'HTML'
     <x-signature background="#cc1002" />
     HTML;
 
-    public const LINE = <<<'HTML'
+    public const string LINE = <<<'HTML'
     <x-signature line="10" />
     HTML;
 
-    public const HEIGHT = <<<'HTML'
+    public const string HEIGHT = <<<'HTML'
     <x-signature height="500" />
     HTML;
 
-    public const CLEARABLE = <<<'HTML'
+    public const string CLEARABLE = <<<'HTML'
     <x-signature clearable />
     HTML;
 
-    public const EXPORTABLE = <<<'HTML'
+    public const string EXPORTABLE = <<<'HTML'
     <x-signature exportable />
 
     <!-- You can set "jpeg" to export as jpeg -->
     <x-signature exportable jpeg />
     HTML;
 
-    public const EVENT = <<<'HTML'
+    public const string EVENT = <<<'HTML'
     <!-- $event.detail will receive: {signature: url} -->
 
     <x-signature exportable x-on:export="alert('Exported!')" />
     HTML;
 
-    public const PERSONALIZATION = <<<'HTML'
+    public const string CUSTOMIZATION = <<<'HTML'
     TallStackUi::customize()
         ->signature()
         ->block('block', 'classes');

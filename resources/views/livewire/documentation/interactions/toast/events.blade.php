@@ -38,7 +38,7 @@ new class extends Component {
 <script>
     show = (toast) => {
         // This approach was used to avoid show alerts for other toasts.
-        if (toast.component !== @js($__livewire->__id)) return;
+        if (toast.reference !== @js($__livewire->__id)) return;
 
         alert(toast.description);
     }

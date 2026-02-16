@@ -4,7 +4,7 @@ namespace App\Enums\Examples\V2\Ui;
 
 class Step
 {
-    public const BASIC = <<<'HTML'
+    public const string BASIC = <<<'HTML'
     <x-step selected="1" navigate>
         <x-step.items step="1">
             Step one...
@@ -18,7 +18,7 @@ class Step
     </x-step>
     HTML;
 
-    public const TITLE_DESCRIPTION = <<<'HTML'
+    public const string TITLE_DESCRIPTION = <<<'HTML'
     <x-step selected="1" navigate>
         <x-step.items step="1"
                       title="Starting"
@@ -38,7 +38,7 @@ class Step
     </x-step>
     HTML;
 
-    public const FINAL_STEP = <<<'HTML'
+    public const string FINAL_STEP = <<<'HTML'
     <x-step selected="1" navigate>
         <x-step.items step="1"
                       title="Starting"
@@ -59,7 +59,7 @@ class Step
     </x-step>
     HTML;
 
-    public const HELPERS = <<<'HTML'
+    public const string HELPERS = <<<'HTML'
     <x-step selected="1" helpers>
         <x-step.items step="1"
                       title="Starting"
@@ -79,7 +79,7 @@ class Step
     </x-step>
     HTML;
 
-    public const NAVIGATE_PREVIOUS = <<<'HTML'
+    public const string NAVIGATE_PREVIOUS = <<<'HTML'
     <x-step selected="1" helpers navigate-previous>
         <x-step.items step="1"
                       title="Starting"
@@ -99,7 +99,7 @@ class Step
     </x-step>
     HTML;
 
-    public const STYLES = <<<'HTML'
+    public const string STYLES = <<<'HTML'
     <!-- Circles -->
     <x-step selected="1"
             circles {{-- [tl! highlight] --}}
@@ -143,7 +143,7 @@ class Step
     </x-step>
     HTML;
 
-    public const SLOT = <<<'HTML'
+    public const string SLOT = <<<'HTML'
     <x-step selected="1" helpers>
         <x-step.items step="1"
                       title="Starting"
@@ -166,7 +166,7 @@ class Step
     </x-step>
     HTML;
 
-    public const EVENTS = <<<'HTML'
+    public const string EVENTS = <<<'HTML'
     <x-step selected="1"
             helpers
             x-on:change="alert(`Changed: ${$event.detail.step}`)"
@@ -190,7 +190,7 @@ class Step
     </x-step>
     HTML;
 
-    public const WIREABLE = <<<'HTML'
+    public const string WIREABLE = <<<'HTML'
     <!--  Livewire string property: $step - initial value: "1" -->
 
     <x-step wire:model="step"
@@ -214,7 +214,7 @@ class Step
     </x-step>
     HTML;
 
-    public const LIVE_WIREABLE = <<<'HTML'
+    public const string LIVE_WIREABLE = <<<'HTML'
     <!--  Livewire string property: $step - initial value: "1" -->
 
     <x-step wire:model.live="step"
@@ -238,7 +238,7 @@ class Step
     </x-step>
     HTML;
 
-    public const PERSONALIZATION = <<<'HTML'
+    public const string PERSONALIZATION = <<<'HTML'
     TallStackUi::customize()
         ->step()
         ->block('block', 'classes');

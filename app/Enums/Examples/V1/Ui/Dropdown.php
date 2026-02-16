@@ -4,14 +4,14 @@ namespace App\Enums\Examples\V1\Ui;
 
 class Dropdown
 {
-    public const LEFT = <<<'HTML'
+    public const string LEFT = <<<'HTML'
     <x-dropdown text="Menu" position="bottom-end">
         <x-dropdown.items text="Settings" />
         <x-dropdown.items text="Logout" separator />
     </x-dropdown>
     HTML;
 
-    public const POSITIONS = <<<'HTML'
+    public const string POSITIONS = <<<'HTML'
     <!-- Available Positions:
          bottom,
          bottom-start,
@@ -33,7 +33,7 @@ class Dropdown
     </x-dropdown>
     HTML;
 
-    public const LINKS = <<<'HTML'
+    public const string LINKS = <<<'HTML'
     <x-dropdown icon="chevron-down" position="bottom-end">
         <a href="https://google.com.br" target="_blank">
             <x-dropdown.items text="Google" />
@@ -44,21 +44,21 @@ class Dropdown
     </x-dropdown>
     HTML;
 
-    public const ICONS = <<<'HTML'
+    public const string ICONS = <<<'HTML'
     <x-dropdown icon="chevron-down">
         <x-dropdown.items text="Settings" />
         <x-dropdown.items text="Logout" separator />
     </x-dropdown>
     HTML;
 
-    public const ICONS_STATIC = <<<'HTML'
+    public const string ICONS_STATIC = <<<'HTML'
     <x-dropdown icon="ellipsis-vertical" static>
         <x-dropdown.items text="Settings" />
         <x-dropdown.items text="Logout" separator />
     </x-dropdown>
     HTML;
 
-    public const HEADER_SLOTS = <<<'HTML'
+    public const string HEADER_SLOTS = <<<'HTML'
     <x-dropdown text="Menu">
         <x-slot:header>
             <p>Welcome!</p>
@@ -68,7 +68,7 @@ class Dropdown
     </x-dropdown>
     HTML;
 
-    public const ACTION_SLOTS = <<<'HTML'
+    public const string ACTION_SLOTS = <<<'HTML'
     <x-dropdown>
         <x-slot:action>
             <x-button x-on:click="show = !show" sm outline>Open</x-button>
@@ -78,13 +78,13 @@ class Dropdown
     </x-dropdown>
     HTML;
 
-    public const PERSONALIZATION = <<<'HTML'
+    public const string PERSONALIZATION = <<<'HTML'
     TallStackUi::customize()
         ->dropdown()
         ->block('block', 'classes');
     HTML;
 
-    public const PERSONALIZATION_ITEMS = <<<'HTML'
+    public const string PERSONALIZATION_ITEMS = <<<'HTML'
     TallStackUi::customize()
         ->dropdown('items')
         ->block('block', 'classes');

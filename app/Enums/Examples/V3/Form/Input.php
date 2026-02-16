@@ -4,15 +4,15 @@ namespace App\Enums\Examples\V3\Form;
 
 class Input
 {
-    public const BASIC = <<<'HTML'
+    public const string BASIC = <<<'HTML'
     <x-input />
     HTML;
 
-    public const LABEL_HINT = <<<'HTML'
+    public const string LABEL_HINT = <<<'HTML'
     <x-input label="Name" hint="Insert your name" />
     HTML;
 
-    public const LABEL_RAW_HTML = <<<'HTML'
+    public const string LABEL_RAW_HTML = <<<'HTML'
     <x-input>
         <x-slot:label>
             <span>Name</span>
@@ -20,16 +20,16 @@ class Input
     </x-input>
     HTML;
 
-    public const ASTERISK = <<<'HTML'
+    public const string ASTERISK = <<<'HTML'
     <x-input label="Name *" hint="Insert your name" />
     HTML;
 
-    public const ICONS = <<<'HTML'
+    public const string ICONS = <<<'HTML'
     <x-input label="Name" icon="users" />
     <x-input label="Name" icon="cog" position="right" />
     HTML;
 
-    public const PREFIX_SUFFIX = <<<'HTML'
+    public const string PREFIX_SUFFIX = <<<'HTML'
     <x-input prefix="https://" label="Domain" />
     <x-input suffix="@gmail.com" label="E-mail" />
 
@@ -45,19 +45,19 @@ class Input
     </x-input>
     HTML;
 
-    public const CLEARABLE = <<<'HTML'
+    public const string CLEARABLE = <<<'HTML'
     <x-input value="TallStackUI" clearable />
     HTML;
 
-    public const STRIP_ZEROS = <<<'HTML'
+    public const string STRIP_ZEROS = <<<'HTML'
     <x-input strip-zeros />
     HTML;
 
-    public const INVALIDATE = <<<'HTML'
+    public const string INVALIDATE = <<<'HTML'
     <x-input label="Name" invalidate />
     HTML;
 
-    public const PERSONALIZATION = <<<'HTML'
+    public const string CUSTOMIZATION = <<<'HTML'
     TallStackUi::customize()
         ->form('input')
         ->block('block', 'classes');

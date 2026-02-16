@@ -9,9 +9,9 @@
     <x-slot:description>
         Form pin component.
     </x-slot:description>
-    <x-slot:personalization>
-        <livewire:personalization :$personalization component="Form\Pin" />
-    </x-slot:personalization>
+    <x-slot:customization>
+        <livewire:customization :$customization component="Form\Pin" />
+    </x-slot:customization>
     <x-section title="Concept" disable-copy>
         Many modern applications need to validate and authorize things such
         as user registration or even login, through mechanisms such as 2FA.

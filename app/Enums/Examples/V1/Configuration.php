@@ -4,11 +4,11 @@ namespace App\Enums\Examples\V1;
 
 class Configuration
 {
-    public const COMMAND = <<<'HTML'
+    public const string COMMAND = <<<'HTML'
     php artisan vendor:publish --tag=tallstackui.config
     HTML;
 
-    public const CONFIGURATION = <<<'HTML'
+    public const string CONFIGURATION = <<<'HTML'
     // ...
 
     /*
@@ -103,7 +103,7 @@ class Configuration
     // ...
     HTML;
 
-    public const TAILWINDCSS = <<<'HTML'
+    public const string TAILWINDCSS = <<<'HTML'
     content: [
         // ...
 

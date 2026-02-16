@@ -4,13 +4,13 @@ namespace App\Enums\Examples\V3\Ui;
 
 class Card
 {
-    public const BASIC = <<<'HTML'
+    public const string BASIC = <<<'HTML'
     <x-card>
         TallStackUI
     </x-card>
     HTML;
 
-    public const HEADER = <<<'HTML'
+    public const string HEADER = <<<'HTML'
     <x-card>
         <x-slot:header>
             Raw HTML content
@@ -25,7 +25,7 @@ class Card
     </x-card>
     HTML;
 
-    public const FOOTER = <<<'HTML'
+    public const string FOOTER = <<<'HTML'
     <x-card>
         TallStackUI
         <x-slot:footer>
@@ -40,7 +40,7 @@ class Card
     </x-card>
     HTML;
 
-    public const MINIMIZE = <<<'HTML'
+    public const string MINIMIZE = <<<'HTML'
     <x-card header="TallStackUI" minimize>
         TallStackUI
     </x-card>
@@ -55,13 +55,13 @@ class Card
     </x-card>
     HTML;
 
-    public const MINIMIZE_FROM_MOUNT = <<<'HTML'
+    public const string MINIMIZE_FROM_MOUNT = <<<'HTML'
     <x-card header="TallStackUI" minimize="mount">
         TallStackUI
     </x-card>
     HTML;
 
-    public const IMAGE = <<<'HTML'
+    public const string IMAGE = <<<'HTML'
     <!-- Top position -->
     <x-card image="https://picsum.photos/750/300">
         TallStackUI
@@ -73,7 +73,7 @@ class Card
     </x-card>
     HTML;
 
-    public const COLOR = <<<'HTML'
+    public const string COLOR = <<<'HTML'
     <!-- Accepted colors: primary, secondary, and ANY other TailwindCSS color. -->
 
     <!-- Normal -->
@@ -92,7 +92,7 @@ class Card
     </x-card>
     HTML;
 
-    public const LOADING = <<<'HTML'
+    public const string LOADING = <<<'HTML'
     <x-card loading>
         TallStackUI
     </x-card>
@@ -104,7 +104,7 @@ class Card
     </x-card>
     HTML;
 
-    public const PERSONALIZATION = <<<'HTML'
+    public const string CUSTOMIZATION = <<<'HTML'
     TallStackUi::customize()
         ->card()
         ->block('block', 'classes');

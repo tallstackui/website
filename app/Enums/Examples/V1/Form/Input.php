@@ -4,24 +4,24 @@ namespace App\Enums\Examples\V1\Form;
 
 class Input
 {
-    public const BASIC = <<<'HTML'
+    public const string BASIC = <<<'HTML'
     <x-input />
     HTML;
 
-    public const LABEL_HINT = <<<'HTML'
+    public const string LABEL_HINT = <<<'HTML'
     <x-input label="Name" hint="Insert your name" />
     HTML;
 
-    public const ASTERISK = <<<'HTML'
+    public const string ASTERISK = <<<'HTML'
     <x-input label="Name *" hint="Insert your name" />
     HTML;
 
-    public const ICONS = <<<'HTML'
+    public const string ICONS = <<<'HTML'
     <x-input label="Name" icon="users" />
     <x-input label="Name" icon="cog" position="right" />
     HTML;
 
-    public const PREFIX_SUFFIX = <<<'HTML'
+    public const string PREFIX_SUFFIX = <<<'HTML'
     <x-input prefix="https://" label="Domain" />
     <x-input suffix="@gmail.com" label="E-mail" />
 
@@ -37,11 +37,11 @@ class Input
     </x-input>
     HTML;
 
-    public const INVALIDATE = <<<'HTML'
+    public const string INVALIDATE = <<<'HTML'
     <x-input label="Name" invalidate />
     HTML;
 
-    public const PERSONALIZATION = <<<'HTML'
+    public const string PERSONALIZATION = <<<'HTML'
     TallStackUi::customize()
         ->form('input')
         ->block('block', 'classes');

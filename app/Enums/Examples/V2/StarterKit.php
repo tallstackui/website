@@ -4,31 +4,31 @@ namespace App\Enums\Examples\V2;
 
 class StarterKit
 {
-    public const COMMAND = <<<'HTML'
+    public const string COMMAND = <<<'HTML'
     laravel new --using=tallstackui/starter-kit
     HTML;
 
-    public const PEST = <<<'HTML'
+    public const string PEST = <<<'HTML'
     composer test
     HTML;
 
-    public const PHPSTAN = <<<'HTML'
+    public const string PHPSTAN = <<<'HTML'
     composer analyse
     HTML;
 
-    public const PINT = <<<'HTML'
+    public const string PINT = <<<'HTML'
     composer format
     HTML;
 
-    public const CI = <<<'HTML'
+    public const string CI = <<<'HTML'
     composer ci
     HTML;
 
-    public const EMAIL = <<<'HTML'
+    public const string EMAIL = <<<'HTML'
     test@example.com
     HTML;
 
-    public const PASSWORD = <<<'HTML'
+    public const string PASSWORD = <<<'HTML'
     password
     HTML;
 }

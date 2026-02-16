@@ -4,7 +4,7 @@ namespace App\Enums\Examples\V2\Interactions;
 
 class Dialog
 {
-    public const TAG = <<<'HTML'
+    public const string TAG = <<<'HTML'
     <html>
         <body>
             <x-dialog /> <!-- [tl! highlight] -->
@@ -14,7 +14,7 @@ class Dialog
     </html>
     HTML;
 
-    public const TRAIT = <<<HTML
+    public const string TRAIT = <<<HTML
     use TallStackUi\Traits\Interactions; // [tl! focus]
 
     class CreateUser extends Component
@@ -25,7 +25,7 @@ class Dialog
     }
     HTML;
 
-    public const DISPATCH = <<<'HTML'
+    public const string DISPATCH = <<<'HTML'
     public function save(): void
     {
         $this->dialog()->success('...')->send();
@@ -35,14 +35,14 @@ class Dialog
     }
     HTML;
 
-    public const BASIC = <<<'HTML'
+    public const string BASIC = <<<'HTML'
     $this->dialog()->success('Success', 'This is a success message.')->send();
     $this->dialog()->error('Error', 'This is an error message.')->send();
     $this->dialog()->warning('Warning', 'This is a warning message.')->send();
     $this->dialog()->info('Info', 'This is an info message.')->send();
     HTML;
 
-    public const CONFIRMATION = <<<'HTML'
+    public const string CONFIRMATION = <<<'HTML'
     public function save(): void
     {
         $this->dialog()
@@ -63,7 +63,7 @@ class Dialog
     }
     HTML;
 
-    public const CONFIRMATION_EXPLANATION = <<<'HTML'
+    public const string CONFIRMATION_EXPLANATION = <<<'HTML'
     public function save(): void
     {
         // 1. The methods `confirm()` and `cancel()` are optional.
@@ -103,7 +103,7 @@ class Dialog
     }
     HTML;
 
-    public const EVENTS = <<<'HTML'
+    public const string EVENTS = <<<'HTML'
     <div x-on:dialog:accepted.window="alert($event.detail.description)"
          x-on:dialog:rejected.window="alert($event.detail.description)"
          x-on:dialog:dismissed.window="show($event.detail.description)">
@@ -111,7 +111,7 @@ class Dialog
     </div>
     HTML;
 
-    public const HOOKS = <<<'HTML'
+    public const string HOOKS = <<<'HTML'
     public function save(): void
     {
         $this->dialog()
@@ -138,7 +138,7 @@ class Dialog
     }
     HTML;
 
-    public const HOOKS_CALLABLE = <<<'HTML'
+    public const string HOOKS_CALLABLE = <<<'HTML'
     public function save(): void
     {
         $this->dialog()
@@ -159,7 +159,7 @@ class Dialog
     }
     HTML;
 
-    public const JAVASCRIPT = <<<'HTML'
+    public const string JAVASCRIPT = <<<'HTML'
     <div>
         <x-button color="green" onclick="show()">Success</x-button>
         <x-button color="red" onclick="error()">Error</x-button>
@@ -211,7 +211,7 @@ class Dialog
     </div>
     HTML;
 
-    public const FLASH = <<<'HTML'
+    public const string FLASH = <<<'HTML'
     use Illuminate\Contracts\View\View;
     use Livewire\Component;
     use TallStackUi\Traits\Interactions;
@@ -237,7 +237,7 @@ class Dialog
     }
     HTML;
 
-    public const CONTROLLERS = <<<'HTML'
+    public const string CONTROLLERS = <<<'HTML'
     use Illuminate\Http\Request;
     use TallStackUi\Traits\Interactions;
 
@@ -263,7 +263,7 @@ class Dialog
     }
     HTML;
 
-    public const PERSONALIZATION = <<<'HTML'
+    public const string PERSONALIZATION = <<<'HTML'
     TallStackUi::customize()
         ->dialog()
         ->block('block', 'classes');

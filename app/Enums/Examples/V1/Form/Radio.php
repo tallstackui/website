@@ -4,16 +4,16 @@ namespace App\Enums\Examples\V1\Form;
 
 class Radio
 {
-    public const BASIC = <<<'HTML'
+    public const string BASIC = <<<'HTML'
     <x-radio />
     HTML;
 
-    public const LABEL = <<<'HTML'
+    public const string LABEL = <<<'HTML'
     <x-radio label="Receive Alert" />
     <x-radio label="Receive Alert" position="left" />
     HTML;
 
-    public const HTML = <<<'HTML'
+    public const string HTML = <<<'HTML'
     <x-radio>
         <x-slot:label>
             I agree to the <a href="#">terms and conditions</a>
@@ -21,7 +21,7 @@ class Radio
     </x-radio>
     HTML;
 
-    public const ALIGNMENT = <<<'HTML'
+    public const string ALIGNMENT = <<<'HTML'
     <x-radio>
         <x-slot:label>
             Align on Middle
@@ -35,14 +35,14 @@ class Radio
     </x-radio>
     HTML;
 
-    public const SIZES = <<<'HTML'
+    public const string SIZES = <<<'HTML'
     <x-radio xs />
     <x-radio sm />
     <x-radio md />
     <x-radio lg />
     HTML;
 
-    public const COLORS = <<<'HTML'
+    public const string COLORS = <<<'HTML'
     <x-radio label="Primary" />
     <x-radio color="secondary" label="Secondary" />
     <x-radio color="slate" label="Slate" />
@@ -71,11 +71,11 @@ class Radio
     <x-radio color="white" label="White" />
     HTML;
 
-    public const INVALIDATE = <<<'HTML'
+    public const string INVALIDATE = <<<'HTML'
     <x-radio label="Receive Alert" invalidate />
     HTML;
 
-    public const PERSONALIZATION = <<<'HTML'
+    public const string PERSONALIZATION = <<<'HTML'
     TallStackUi::customize()
         ->form('radio')
         ->block('block', 'classes');

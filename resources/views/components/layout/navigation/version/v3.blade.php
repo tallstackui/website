@@ -222,21 +222,21 @@
                 <x-layout.navigation.link :href="route('documentation', ['v3', 'without-livewire'])" text="Without Livewire" />
             </li>
             <li class="relative ml-4">
-                <h2 class="font-medium text-pink-900 font-display dark:text-pink-500">Personalization</h2>
+                <h2 class="font-medium text-pink-900 font-display dark:text-pink-500">Customization</h2>
                 <ul role="list" class="mt-4 space-y-2 dark:border-slate-800 lg:space-y-4 lg:mt-4 lg:border-slate-200">
                     <li class="relative ml-4">
-                        <x-layout.navigation.link :href="route('documentation', ['v3', 'personalization', 'concept'])" text="Concept" />
+                        <x-layout.navigation.link :href="route('documentation', ['v3', 'customization', 'concept'])" text="Concept" />
                     </li>
                 </ul>
                 <ul role="list" class="mt-4 space-y-2 dark:border-slate-800 lg:space-y-4 lg:mt-4 lg:border-slate-200">
                     <li class="relative ml-4">
-                        <x-layout.navigation.link :href="route('documentation', ['v3', 'personalization', 'soft'])" text="Soft Personalization" />
+                        <x-layout.navigation.link :href="route('documentation', ['v3', 'customization', 'soft'])" text="Soft Customization" />
                     </li>
                     <li class="relative ml-4">
-                        <x-layout.navigation.link :href="route('documentation', ['v3', 'personalization', 'deep'])" text="Deep Personalization" />
+                        <x-layout.navigation.link :href="route('documentation', ['v3', 'customization', 'deep'])" text="Deep Customization" />
                     </li>
                     <li class="relative ml-4">
-                        <x-layout.navigation.link :href="route('documentation', ['v3', 'personalization', 'color'])" text="Colors" />
+                        <x-layout.navigation.link :href="route('documentation', ['v3', 'customization', 'color'])" text="Colors" />
                     </li>
                 </ul>
             </li>

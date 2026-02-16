@@ -4,11 +4,11 @@ namespace App\Enums\Examples\V2\Ui;
 
 class ThemeSwitch
 {
-    public const BASIC = <<<'HTML'
+    public const string BASIC = <<<'HTML'
     <x-theme-switch />
     HTML;
 
-    public const SIZES = <<<'HTML'
+    public const string SIZES = <<<'HTML'
     <x-theme-switch xs />
     <x-theme-switch sm />
     <x-theme-switch md />
@@ -16,11 +16,11 @@ class ThemeSwitch
     <x-theme-switch xl />
     HTML;
 
-    public const ICONS = <<<'HTML'
+    public const string ICONS = <<<'HTML'
     <x-theme-switch only-icons />
     HTML;
 
-    public const PERSONALIZATION = <<<'HTML'
+    public const string PERSONALIZATION = <<<'HTML'
     TallStackUi::customize()
         ->themeSwitch()
         ->block('block', 'classes');

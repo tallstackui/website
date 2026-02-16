@@ -4,7 +4,7 @@ namespace App\Enums\Examples\V3\Ui;
 
 class Button
 {
-    public const BASIC = <<<'HTML'
+    public const string BASIC = <<<'HTML'
     <x-button>TallStackUi</x-button>
 
     <!-- or -->
@@ -12,11 +12,11 @@ class Button
     <x-button text="TallStackUi" />
     HTML;
 
-    public const BLOCK = <<<'HTML'
+    public const string BLOCK = <<<'HTML'
     <x-button block>TallStackUI</x-button>
     HTML;
 
-    public const SUBMIT = <<<'HTML'
+    public const string SUBMIT = <<<'HTML'
     <x-button submit>TallStackUi</x-button>
 
     <!-- or -->
@@ -24,19 +24,19 @@ class Button
     <x-button text="TallStackUi" submit />
     HTML;
 
-    public const A = <<<'HTML'
+    public const string A = <<<'HTML'
     <x-button href="https://google.com.br" target="_blank">TallStackUi</x-button>
     HTML;
 
-    public const SQUARE = <<<'HTML'
+    public const string SQUARE = <<<'HTML'
     <x-button square>TallStackUi</x-button>
     HTML;
 
-    public const ROUND = <<<'HTML'
+    public const string ROUND = <<<'HTML'
     <x-button round>TallStackUi</x-button>
     HTML;
 
-    public const LEFT_RIGHT = <<<'HTML'
+    public const string LEFT_RIGHT = <<<'HTML'
     <x-button>
         <x-slot:left>
             <x-badge color="yellow" text="+99" round light />
@@ -51,19 +51,19 @@ class Button
     </x-button>
     HTML;
 
-    public const ICON = <<<'HTML'
+    public const string ICON = <<<'HTML'
     <x-button icon="cog" position="left">TallStackUi</x-button>
     <x-button icon="users" position="right">TallStackUi</x-button>
     HTML;
 
-    public const SIZE = <<<'HTML'
+    public const string SIZE = <<<'HTML'
     <x-button xs>TallStackUi</x-button>
     <x-button sm>TallStackUi</x-button>
     <x-button md>TallStackUi</x-button>
     <x-button lg>TallStackUi</x-button>
     HTML;
 
-    public const LOADING = <<<'HTML'
+    public const string LOADING = <<<'HTML'
     <x-button wire:click="target" loading>
         Basic
     </x-button>
@@ -81,7 +81,7 @@ class Button
     </x-button>
     HTML;
 
-    public const COLOR = <<<'HTML'
+    public const string COLOR = <<<'HTML'
     <x-button text="Primary" />
     <x-button text="Secondary" color="secondary" />
     <x-button text="Slate" color="slate" />
@@ -109,7 +109,7 @@ class Button
     <x-button text="Black" color="black" />
     HTML;
 
-    public const OUTLINE = <<<'HTML'
+    public const string OUTLINE = <<<'HTML'
     <x-button text="Primary" outline />
     <x-button text="Secondary" color="secondary" outline />
     <x-button text="Slate" color="slate" outline />
@@ -138,7 +138,7 @@ class Button
     <x-button text="Black" color="black" outline />
     HTML;
 
-    public const LIGHT = <<<'HTML'
+    public const string LIGHT = <<<'HTML'
     <x-button text="Primary" light />
     <x-button text="Secondary" color="secondary" light />
     <x-button text="Slate" color="slate" light />
@@ -166,7 +166,7 @@ class Button
     <x-button text="Black" color="black" light />
     HTML;
 
-    public const FLAT = <<<'HTML'
+    public const string FLAT = <<<'HTML'
     <x-button text="Primary" flat />
     <x-button text="Secondary" color="secondary" flat />
     <x-button text="Slate" color="slate" flat />
@@ -194,7 +194,7 @@ class Button
     <x-button text="Black" color="black" flat />
     HTML;
 
-    public const CIRCLE = <<<'HTML'
+    public const string CIRCLE = <<<'HTML'
     <x-button.circle>TS</x-button.circle>
 
     <!-- or -->
@@ -202,21 +202,21 @@ class Button
     <x-button.circle text="TS" />
     HTML;
 
-    public const CIRCLE_A = <<<'HTML'
+    public const string CIRCLE_A = <<<'HTML'
     <x-button.circle href="https://google.com.br" target="_blank">TS</x-button.circle>
     HTML;
 
-    public const CIRCLE_ICON = <<<'HTML'
+    public const string CIRCLE_ICON = <<<'HTML'
     <x-button.circle icon="pencil" />
     HTML;
 
-    public const CIRCLE_SIZE = <<<'HTML'
+    public const string CIRCLE_SIZE = <<<'HTML'
     <x-button.circle text="SM" sm/>
     <x-button.circle text="MD" />
     <x-button.circle text="LG" lg/>
     HTML;
 
-    public const CIRCLE_LOADING = <<<'HTML'
+    public const string CIRCLE_LOADING = <<<'HTML'
     <x-button.circle wire:click="basic" icon="pencil" loading />
 
     <!-- You can specify the target of the delay (method or property) -->
@@ -233,7 +233,7 @@ class Button
                      delay="longest" />
     HTML;
 
-    public const CIRCLE_COLOR = <<<'HTML'
+    public const string CIRCLE_COLOR = <<<'HTML'
     <x-button.circle icon="bookmark" />
     <x-button.circle icon="bookmark" color="secondary" />
     <x-button.circle icon="bookmark" color="slate" />
@@ -261,7 +261,7 @@ class Button
     <x-button.circle icon="bookmark" color="black" />
     HTML;
 
-    public const CIRCLE_OUTLINE = <<<'HTML'
+    public const string CIRCLE_OUTLINE = <<<'HTML'
     <x-button.circle icon="bookmark" outline />
     <x-button.circle icon="bookmark" color="secondary" outline />
     <x-button.circle icon="bookmark" color="slate" outline />
@@ -289,7 +289,7 @@ class Button
     <x-button.circle icon="bookmark" color="black" outline />
     HTML;
 
-    public const CIRCLE_LIGHT = <<<'HTML'
+    public const string CIRCLE_LIGHT = <<<'HTML'
     <x-button.circle icon="bookmark" light />
     <x-button.circle icon="bookmark" color="secondary" light />
     <x-button.circle icon="bookmark" color="slate" light />
@@ -317,7 +317,7 @@ class Button
     <x-button.circle icon="bookmark" color="black" light />
     HTML;
 
-    public const CIRCLE_FLAT = <<<'HTML'
+    public const string CIRCLE_FLAT = <<<'HTML'
     <x-button.circle icon="bookmark" flat />
     <x-button.circle icon="bookmark" color="secondary" flat />
     <x-button.circle icon="bookmark" color="slate" flat />
@@ -345,13 +345,13 @@ class Button
     <x-button.circle icon="bookmark" color="black" flat />
     HTML;
 
-    public const PERSONALIZATION = <<<'HTML'
+    public const string CUSTOMIZATION = <<<'HTML'
     TallStackUi::customize()
         ->button()
         ->block('block', 'classes');
     HTML;
 
-    public const PERSONALIZATION_CIRCLE = <<<'HTML'
+    public const string CUSTOMIZATION_CIRCLE = <<<'HTML'
     TallStackUi::customize()
         ->button('circle')
         ->block('block', 'classes');

@@ -9,7 +9,7 @@ new class extends Component {
     public function success(): void
     {
         $this->toast()
-            ->timeout(seconds: 10)
+            ->timeout(10)
             ->success('Success', 'This is a success message.')
             ->send();
     }

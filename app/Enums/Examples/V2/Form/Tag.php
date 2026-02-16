@@ -4,23 +4,23 @@ namespace App\Enums\Examples\V2\Form;
 
 class Tag
 {
-    public const BASIC = <<<'HTML'
+    public const string BASIC = <<<'HTML'
     <x-tag />
     HTML;
 
-    public const LABEL_HINT = <<<'HTML'
+    public const string LABEL_HINT = <<<'HTML'
     <x-tag label="Frameworks" hint="Select your preferred frameworks" />
     HTML;
 
-    public const LIMIT = <<<'HTML'
+    public const string LIMIT = <<<'HTML'
     <x-tag label="Frameworks" hint="Select your preferred frameworks" :limit="2" />
     HTML;
 
-    public const PREFIX = <<<'HTML'
+    public const string PREFIX = <<<'HTML'
     <x-tag prefix="#" />
     HTML;
 
-    public const EVENTS = <<<'HTML'
+    public const string EVENTS = <<<'HTML'
     <!--
     For the erase event the correct index is
     $event.detail.tags instead of $event.detail.tag
@@ -32,7 +32,7 @@ class Tag
            x-on:erase="alert(`Erased: ${$event.detail.tags}`)" />
     HTML;
 
-    public const PERSONALIZATION = <<<'HTML'
+    public const string PERSONALIZATION = <<<'HTML'
     TallStackUi::customize()
         ->form('tag')
         ->block('block', 'classes');

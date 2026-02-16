@@ -4,7 +4,7 @@ namespace App\Enums\Examples\V3\Ui;
 
 class Alert
 {
-    public const BASIC = <<<'HTML'
+    public const string BASIC = <<<'HTML'
     <x-alert>
         TallStackUi
     </x-alert>
@@ -14,7 +14,7 @@ class Alert
     <x-alert text="TallStackUi" />
     HTML;
 
-    public const TITLE = <<<'HTML'
+    public const string TITLE = <<<'HTML'
     <x-alert>
         <x-slot:title>
             TallStackUi
@@ -29,13 +29,13 @@ class Alert
     </x-alert>
     HTML;
 
-    public const CLOSE = <<<'HTML'
+    public const string CLOSE = <<<'HTML'
     <x-alert title="TallStackUi" close>
         TallStackUi
     </x-alert>
     HTML;
 
-    public const ICON = <<<'HTML'
+    public const string ICON = <<<'HTML'
     <x-alert icon="cog">
         TallStackUi
     </x-alert>
@@ -47,7 +47,7 @@ class Alert
     </x-alert>
     HTML;
 
-    public const FOOTER = <<<'HTML'
+    public const string FOOTER = <<<'HTML'
     <x-alert>
         TallStackUi
         <x-slot:footer>
@@ -58,7 +58,7 @@ class Alert
     </x-alert>
     HTML;
 
-    public const COLORS = <<<'HTML'
+    public const string COLORS = <<<'HTML'
     <x-alert title="TallStackUi" text="Primary" />
     <x-alert title="TallStackUi" text="Secondary" color="secondary" />
     <x-alert title="TallStackUi" text="Slate" color="slate" />
@@ -86,7 +86,7 @@ class Alert
     <x-alert title="TallStackUi" text="Black" color="black" />
     HTML;
 
-    public const OUTLINES = <<<'HTML'
+    public const string OUTLINES = <<<'HTML'
     <x-alert title="TallStackUi" text="Primary" outline />
     <x-alert title="TallStackUi" text="Secondary" color="secondary" outline />
     <x-alert title="TallStackUi" text="Slate" color="slate" outline />
@@ -114,7 +114,7 @@ class Alert
     <x-alert title="TallStackUi" text="Black" color="black" outline />
     HTML;
 
-    public const LIGHTS = <<<'HTML'
+    public const string LIGHTS = <<<'HTML'
     <x-alert title="TallStackUi" text="Primary" light />
     <x-alert title="TallStackUi" text="Secondary" color="secondary" light />
     <x-alert title="TallStackUi" text="Slate" color="slate" light />
@@ -142,7 +142,7 @@ class Alert
     <x-alert title="TallStackUi" text="Black" color="black" light />
     HTML;
 
-    public const PERSONALIZATION = <<<'HTML'
+    public const string CUSTOMIZATION = <<<'HTML'
     TallStackUi::customize()
         ->alert()
         ->block('block', 'classes');

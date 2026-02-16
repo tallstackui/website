@@ -7,7 +7,7 @@
         Colors
     </x-slot:title>
     <x-slot:description>
-        The colors personalization.
+        The colors customization.
     </x-slot:description>
     <x-section title="Concept" disable-copy>
         <p>

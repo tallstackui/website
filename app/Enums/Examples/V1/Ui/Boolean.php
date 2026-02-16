@@ -4,7 +4,7 @@ namespace App\Enums\Examples\V1\Ui;
 
 class Boolean
 {
-    public const BASIC = <<<'HTML'
+    public const string BASIC = <<<'HTML'
     <x-boolean :boolean="true" />
     <x-boolean :boolean="false" />
 
@@ -13,11 +13,11 @@ class Boolean
     <x-boolean :boolean="fn () => false" />
     HTML;
 
-    public const ICONS = <<<'HTML'
+    public const string ICONS = <<<'HTML'
     <x-boolean :boolean="$trueOrFalse" icon-when-true="hand-thumb-up" icon-when-false="hand-thumb-down" />
     HTML;
 
-    public const COLORS = <<<'HTML'
+    public const string COLORS = <<<'HTML'
     <!-- When true -->
     <x-boolean :boolean="true" color-when-true="primary" />
     <x-boolean :boolean="true" color-when-true="secondary" />
@@ -75,11 +75,11 @@ class Boolean
     <x-boolean :boolean="true" color-when-false="black" />
     HTML;
 
-    public const CLICK = <<<'HTML'
+    public const string CLICK = <<<'HTML'
     <x-boolean :boolean="true" wire:click="save" />
     HTML;
 
-    public const PERSONALIZATION = <<<'HTML'
+    public const string PERSONALIZATION = <<<'HTML'
     TallStackUi::customize()
         ->boolean()
         ->block('block', 'classes');

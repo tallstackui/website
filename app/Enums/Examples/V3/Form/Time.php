@@ -4,15 +4,15 @@ namespace App\Enums\Examples\V3\Form;
 
 class Time
 {
-    public const BASIC = <<<'HTML'
+    public const string BASIC = <<<'HTML'
     <x-time />
     HTML;
 
-    public const LABEL_HINT = <<<'HTML'
+    public const string LABEL_HINT = <<<'HTML'
     <x-time label="Time" hint="Select the hour" />
     HTML;
 
-    public const FORMATS = <<<'HTML'
+    public const string FORMATS = <<<'HTML'
     <!-- 12-hour format -->
     <x-time />
 
@@ -20,7 +20,7 @@ class Time
     <x-time format="24" />
     HTML;
 
-    public const MIN_MAX = <<<'HTML'
+    public const string MIN_MAX = <<<'HTML'
     <!-- Hours -->
     <x-time :min-hour="5" :max-hour="10" />
 
@@ -28,19 +28,19 @@ class Time
     <x-time :min-minute="30" :max-minute="45" />
     HTML;
 
-    public const REQUIRED = <<<'HTML'
+    public const string REQUIRED = <<<'HTML'
     <x-time required />
     HTML;
 
-    public const HELPER = <<<'HTML'
+    public const string HELPER = <<<'HTML'
     <x-time helper />
     HTML;
 
-    public const STEP = <<<'HTML'
+    public const string STEP = <<<'HTML'
     <x-time :step-hour="3" :step-minute="15" />
     HTML;
 
-    public const FOOTER_SLOT = <<<'HTML'
+    public const string FOOTER_SLOT = <<<'HTML'
     <x-time>
         <x-slot:footer>
             Footer Slot
@@ -48,13 +48,13 @@ class Time
     </x-time>
     HTML;
 
-    public const EVENTS = <<<'HTML'
+    public const string EVENTS = <<<'HTML'
     <x-time x-on:hour="alert(`Hour Selected: ${$event.detail.hour}`)"
             x-on:minute="alert(`Minute Selected: ${$event.detail.minute}`)"
             x-on:interval="alert(`Interval Changed: ${$event.detail.interval}`)"/>
     HTML;
 
-    public const PERSONALIZATION = <<<'HTML'
+    public const string CUSTOMIZATION = <<<'HTML'
     TallStackUi::customize()
         ->form('time')
         ->block('block', 'classes');

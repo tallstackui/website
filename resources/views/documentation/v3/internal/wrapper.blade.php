@@ -1,12 +1,12 @@
 @php
-    $personalization['input'] = <<<'HTML'
-    TallStackUi::personalize()
+    $customization['input'] = <<<'HTML'
+    TallStackUi::customize()
         ->wrapper('input')
         ->block('block', 'classes');
     HTML;
 
-    $personalization['radio'] = <<<'HTML'
-    TallStackUi::personalize()
+    $customization['radio'] = <<<'HTML'
+    TallStackUi::customize()
         ->wrapper('radio')
         ->block('block', 'classes');
     HTML;
@@ -19,9 +19,9 @@
     <x-slot:description>
         The generic wrapper component used to wrapper form components.
     </x-slot:description>
-    <x-slot:personalization>
-        <livewire:personalization :personalization="$personalization['input']" component="Wrapper\Input" />
-        <livewire:personalization :personalization="$personalization['radio']" component="Wrapper\Radio" />
-    </x-slot:personalization>
-    <x-internals-warning />
+    <x-slot:customization>
+        <livewire:customization :customization="$customization['input']" component="Wrapper\Input" />
+        <livewire:customization :customization="$customization['radio']" component="Wrapper\Radio" />
+    </x-slot:customization>
+    <x-internals-warning customization />
 </x-layout>

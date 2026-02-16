@@ -9,10 +9,10 @@
     <x-slot:description>
         Select components.
     </x-slot:description>
-    <x-slot:personalization>
-        <livewire:personalization :personalization="$personalizationNative" component="Form\Select\Native" title="Select Native" />
-        <livewire:personalization :personalization="$personalizationStyled" component="Form\Select\Styled" title="Select Styled" />
-    </x-slot:personalization>
+    <x-slot:customization>
+        <livewire:customization :customization="$customizationNative" component="Form\Select\Native" title="Select Native" />
+        <livewire:customization :customization="$customizationStyled" component="Form\Select\Styled" title="Select Styled" />
+    </x-slot:customization>
     <x-section title="Basic Usage" anchor="native-basic-usage">
         <x-preview language="blade" :contents="$nativeBasic">
             <x-select.native :options="[1,2,3]"/>

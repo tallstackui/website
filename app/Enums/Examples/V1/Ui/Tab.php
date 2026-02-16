@@ -4,7 +4,7 @@ namespace App\Enums\Examples\V1\Ui;
 
 class Tab
 {
-    public const BASIC = <<<'HTML'
+    public const string BASIC = <<<'HTML'
     <x-tab selected="Tab 1">
         <x-tab.items tab="Tab 1">
             Tab 1
@@ -24,7 +24,7 @@ class Tab
     </x-tab>
     HTML;
 
-    public const SLOTS = <<<'HTML'
+    public const string SLOTS = <<<'HTML'
     <x-tab selected="Invoices">
         <x-tab.items tab="Invoices">
             <x-slot:right>
@@ -41,7 +41,7 @@ class Tab
     </x-tab>
     HTML;
 
-    public const EVENTS = <<<'HTML'
+    public const string EVENTS = <<<'HTML'
     <x-tab selected="Invoices" x-on:navigate="alert($event.detail.select)">
         <x-tab.items tab="Invoices">
             <x-slot:right>
@@ -58,7 +58,7 @@ class Tab
     </x-tab>
     HTML;
 
-    public const WIREABLE = <<<'HTML'
+    public const string WIREABLE = <<<'HTML'
     <!--  Livewire string property: $tab - initial value: "Tab 1" -->
 
     <x-tab wire:model="tab">
@@ -82,7 +82,7 @@ class Tab
     <x-button wire:click="$set('tab', 'Tab 5')">Change to Tab 5</x-button>
     HTML;
 
-    public const WIREABLE_LIVE = <<<'HTML'
+    public const string WIREABLE_LIVE = <<<'HTML'
     <!--  Livewire string property: $tab - initial value: "Tab 1" -->
 
     <x-tab wire:model.live="tab">
@@ -104,13 +104,13 @@ class Tab
     </x-tab>
     HTML;
 
-    public const PERSONALIZATION = <<<'HTML'
+    public const string PERSONALIZATION = <<<'HTML'
     TallStackUi::customize()
         ->tab()
         ->block('block', 'classes');
     HTML;
 
-    public const PERSONALIZATION_ITEMS = <<<'HTML'
+    public const string PERSONALIZATION_ITEMS = <<<'HTML'
     TallStackUi::customize()
         ->tab('items')
         ->block('block', 'classes');

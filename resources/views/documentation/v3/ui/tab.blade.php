@@ -9,9 +9,9 @@
     <x-slot:description>
         Tab component.
     </x-slot:description>
-    <x-slot:personalization>
-        <livewire:personalization :$personalization component="Tab\Tab" title="Tab" />
-    </x-slot:personalization>
+    <x-slot:customization>
+        <livewire:customization :$customization component="Tab\Tab" title="Tab" />
+    </x-slot:customization>
     <x-section title="Basic Usage">
         <x-preview language="blade" :background="false" :contents="$basic">
             <x-tab selected="Tab 1">

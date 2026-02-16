@@ -9,9 +9,9 @@
     <x-slot:description>
         Carousel component.
     </x-slot:description>
-    <x-slot:personalization>
-        <livewire:personalization :$personalization component="Carousel" />
-    </x-slot:personalization>
+    <x-slot:customization>
+        <livewire:customization :$customization component="Carousel" />
+    </x-slot:customization>
     <x-section title="Basic Usage">
         <x-preview language="blade" :background="false" :contents="$basic">
             <x-carousel :images="[

@@ -6,15 +6,15 @@ use TallStackUi\Traits\Interactions;
 new class extends Component {
     use Interactions;
 
-    public $name;
-    public $email;
-    public $age;
-    public $country;
-    public $color;
-    public $developer;
-    public $secret;
+    public ?string $name = null;
+    public ?string $email = null;
+    public ?string $age = null;
+    public ?string $country = null;
+    public ?string $color = null;
+    public ?string $developer = null;
+    public ?string $secret = null;
     public bool $secret_accepted = false;
-    public $terms;
+    public bool $terms = false;
 
     protected function rules(): array
     {

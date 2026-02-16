@@ -4,11 +4,11 @@ namespace App\Enums\Examples\V2\Ui;
 
 class Avatar
 {
-    public const BASIC = <<<'HTML'
+    public const string BASIC = <<<'HTML'
     <x-avatar text="TS" />
     HTML;
 
-    public const COLORS = <<<'HTML'
+    public const string COLORS = <<<'HTML'
     <x-avatar text="TS" />
     <x-avatar text="TS" color="secondary" />
     <x-avatar text="TS" color="slate" />
@@ -36,26 +36,26 @@ class Avatar
     <x-avatar text="TS" color="black" />
     HTML;
 
-    public const SIZES = <<<'HTML'
+    public const string SIZES = <<<'HTML'
     <x-avatar text="XS" xs />
     <x-avatar text="SM" sm />
     <x-avatar text="MD" md />
     <x-avatar text="LG" lg />
     HTML;
 
-    public const SQUARE = <<<'HTML'
+    public const string SQUARE = <<<'HTML'
     <x-avatar text="TS" square />
     HTML;
 
-    public const MODELABLE = <<<'HTML'
+    public const string MODELABLE = <<<'HTML'
     <x-avatar :model="auth()->user()" color="fff" />
     HTML;
 
-    public const MODELABLE_CUSTOMIZED = <<<'HTML'
+    public const string MODELABLE_CUSTOMIZED = <<<'HTML'
     <x-avatar :model="auth()->user()" property="email" color="fff" />
     HTML;
 
-    public const MODELABLE_CUSTOMIZED_COLORS = <<<'HTML'
+    public const string MODELABLE_CUSTOMIZED_COLORS = <<<'HTML'
     <!-- "background" and "color" must be hexadecimals -->
 
     <x-avatar :model="auth()->user()"
@@ -64,7 +64,7 @@ class Avatar
               color="fff" />
     HTML;
 
-    public const MODELABLE_OPTIONS = <<<'HTML'
+    public const string MODELABLE_OPTIONS = <<<'HTML'
     <x-avatar :model="auth()->user()"
               property="email"
               background="ff0000"
@@ -73,7 +73,7 @@ class Avatar
     />
     HTML;
 
-    public const PLACEHOLDER = <<<'HTML'
+    public const string PLACEHOLDER = <<<'HTML'
     <x-avatar />
     <x-avatar color="secondary" />
     <x-avatar color="slate" />
@@ -101,28 +101,28 @@ class Avatar
     <x-avatar color="black" />
     HTML;
 
-    public const BORDERLESS = <<<'HTML'
+    public const string BORDERLESS = <<<'HTML'
     <x-avatar color="primary" borderless />
     HTML;
 
-    public const IMAGE = <<<'HTML'
+    public const string IMAGE = <<<'HTML'
     <x-avatar image="https://i.pravatar.cc/300" xs />
     <x-avatar image="https://i.pravatar.cc/300" sm />
     <x-avatar image="https://i.pravatar.cc/300" md />
     <x-avatar image="https://i.pravatar.cc/300" lg />
     HTML;
 
-    public const IMAGE_BIND_SRC = <<<'HTML'
+    public const string IMAGE_BIND_SRC = <<<'HTML'
     <div x-data="{ image: 'https://i.pravatar.cc/300' }">
         <x-avatar image x-bind:src="image" />
     </div>
     HTML;
 
-    public const IMAGE_ALT = <<<'HTML'
+    public const string IMAGE_ALT = <<<'HTML'
     <x-avatar image="https://i.pravatar.cc/300" text="alt-text-goes-here" />
     HTML;
 
-    public const PERSONALIZATION = <<<'HTML'
+    public const string PERSONALIZATION = <<<'HTML'
     TallStackUi::customize()
         ->avatar()
         ->block('block', 'classes');

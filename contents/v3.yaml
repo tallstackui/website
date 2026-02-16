@@ -370,7 +370,7 @@ ui:
     - Z Index
     - Persistent
     - Wireable
-    - Wireable Personalized
+    - Wireable Customized
     - AlpineJS Helper
     - Events
     - Focus Helper
@@ -387,7 +387,7 @@ ui:
     - Side Bar Item
     - Side Bar Separator
     - Disable Layout Components
-    - Personalization
+    - Customization
   link:
     - Basic Usage
     - Size Variations
@@ -480,7 +480,7 @@ ui:
     - Z Index
     - Persistent
     - Wireable
-    - Wireable Personalized
+    - Wireable Customized
     - AlpineJS Helper
     - Events
     - Focus Helper
@@ -571,18 +571,18 @@ interactions:
     - Display After Redirects
     - Dispatching via Controllers
     - Configurations
-personalization:
+customization:
   soft:
     - Concept
     - Tracing TailwindCSS Classes
-    - Start the Personalization
-    - Personalization Blocks
-    - Fluent Personalization
-    - Multiple Personalization Ways
+    - Start the Customization
+    - Customization Blocks
+    - Fluent Customization
+    - Multiple Customization Ways
     - Invokable Class
     - Component Data Parameters
     - Interacting with Default Classes
-    - Scoped Soft Personalization
+    - Scoped Soft Customization
   deep:
     - Concept
     - Publishing Configuration File

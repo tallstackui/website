@@ -4,21 +4,21 @@ namespace App\Enums\Examples\V3\Form;
 
 class Range
 {
-    public const BASIC = <<<'HTML'
+    public const string BASIC = <<<'HTML'
     <x-range />
     HTML;
 
-    public const LABEL_HINT = <<<'HTML'
+    public const string LABEL_HINT = <<<'HTML'
     <x-range label="Quantity" hint="Select an average desired salary" />
     HTML;
 
-    public const SIZES = <<<'HTML'
+    public const string SIZES = <<<'HTML'
     <x-range sm />
     <x-range md />
     <x-range lg />
     HTML;
 
-    public const COLORS = <<<'HTML'
+    public const string COLORS = <<<'HTML'
     <x-range label="Primary" />
     <x-range color="secondary" label="Secondary" />
     <x-range color="slate" label="Slate" />
@@ -46,7 +46,7 @@ class Range
     <x-range color="black" label="Black" />
     HTML;
 
-    public const PERSONALIZATION = <<<'HTML'
+    public const string CUSTOMIZATION = <<<'HTML'
     TallStackUi::customize()
         ->form('range')
         ->block('block', 'classes');

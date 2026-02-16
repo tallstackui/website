@@ -4,26 +4,26 @@ namespace App\Enums\Examples\V3\Ui;
 
 class Icon
 {
-    public const INSTALLATION = <<<'HTML'
+    public const string INSTALLATION = <<<'HTML'
     composer require owenvoke/blade-fontawesome
     HTML;
 
-    public const ENV = <<<'HTML'
+    public const string ENV = <<<'HTML'
     TALLSTACKUI_ICON_TYPE="owenvoke/blade-fontawesome"
     HTML;
 
-    public const CLEAN = <<<'HTML'
+    public const string CLEAN = <<<'HTML'
     php artisan optimize:clear
     HTML;
 
-    public const OWENVOKE = <<<'HTML'
+    public const string OWENVOKE = <<<'HTML'
     <x-icon name="fas.cloud" class="w-6 h-6 text-gray-500"/>
 
     <!-- This way would also work: -->
     <x-fas-cloud class="w-6 h-6 text-gray-500"/>
     HTML;
 
-    public const SYMBOL = <<<'HTML'
+    public const string SYMBOL = <<<'HTML'
     <!-- Assuming you have installed: secondnetwork/blade-tabler-icons -->
     <x-icon name="tabler.sun" />
     <x-icon name="tabler.moon" />
@@ -37,12 +37,12 @@ class Icon
     <x-icon name="fab.facebook" />
     HTML;
 
-    public const BASIC = <<<'HTML'
+    public const string BASIC = <<<'HTML'
     <x-icon name="users" class="h-5 w-5"/>
     <x-icon name="clipboard" class="h-5 w-5"/>
     HTML;
 
-    public const VARIATIONS = <<<'HTML'
+    public const string VARIATIONS = <<<'HTML'
     <!-- Default, Heroicons: outline -->
     <x-icon name="users" outline />
 
@@ -51,7 +51,7 @@ class Icon
     <x-icon name="fas.user" /> <!-- fas -->
     HTML;
 
-    public const LEFT_RIGHT = <<<'HTML'
+    public const string LEFT_RIGHT = <<<'HTML'
     <x-icon name="users" class="h-5 w-5">
         <x-slot:left>
             Users
@@ -64,7 +64,7 @@ class Icon
     </x-icon>
     HTML;
 
-    public const GUIDE = <<<'HTML'
+    public const string GUIDE = <<<'HTML'
     // ...
 
     'custom' => [

@@ -1,6 +1,6 @@
 @php
-    $personalization = <<<'HTML'
-    TallStackUi::personalize()
+    $customization = <<<'HTML'
+    TallStackUi::customize()
         ->form('label')
         ->block('block', 'classes');
     HTML;
@@ -13,8 +13,8 @@
     <x-slot:description>
         The generic label component used in form components.
     </x-slot:description>
-    <x-slot:personalization>
-        <livewire:personalization :$personalization component="Form\Label" />
-    </x-slot:personalization>
-    <x-internals-warning />
+    <x-slot:customization>
+        <livewire:customization :$customization component="Form\Label" />
+    </x-slot:customization>
+    <x-internals-warning customization />
 </x-layout>

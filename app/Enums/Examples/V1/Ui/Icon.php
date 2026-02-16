@@ -4,12 +4,12 @@ namespace App\Enums\Examples\V1\Ui;
 
 class Icon
 {
-    public const BASIC = <<<'HTML'
+    public const string BASIC = <<<'HTML'
     <x-icon name="users" class="h-5 w-5"/>
     <x-icon name="clipboard" class="h-5 w-5"/>
     HTML;
 
-    public const VARIATIONS = <<<'HTML'
+    public const string VARIATIONS = <<<'HTML'
     <!-- HeroIcons -->
     <x-icon name="users" outline />
 
@@ -31,7 +31,7 @@ class Icon
     <x-icon name="users" />
     HTML;
 
-    public const LEFT_RIGHT = <<<'HTML'
+    public const string LEFT_RIGHT = <<<'HTML'
     <x-icon name="users" class="h-5 w-5">
         <x-slot:left>
             Users
@@ -44,7 +44,7 @@ class Icon
     </x-icon>
     HTML;
 
-    public const OLD_CONFIGURATION = <<<'HTML'
+    public const string OLD_CONFIGURATION = <<<'HTML'
     /*
     |--------------------------------------------------------------------------
     | Icon Style
@@ -55,7 +55,7 @@ class Icon
     'icon' => 'solid',
     HTML;
 
-    public const NEW_CONFIGURATION = <<<'HTML'
+    public const string NEW_CONFIGURATION = <<<'HTML'
     /*
     |--------------------------------------------------------------------------
     | Icon Style
@@ -97,7 +97,7 @@ class Icon
     ],
     HTML;
 
-    public const START_SETUP_ICON_LIBRARY = <<<'HTML'
+    public const string START_SETUP_ICON_LIBRARY = <<<'HTML'
     /*
     |--------------------------------------------------------------------------
     | Icon Style
@@ -133,11 +133,11 @@ class Icon
     ],
     HTML;
 
-    public const COMMAND_SETUP_ICON = <<<'HTML'
+    public const string COMMAND_SETUP_ICON = <<<'HTML'
     php artisan tallstackui:setup-icon
     HTML;
 
-    public const COMPOSER_HOOK = <<<'HTML'
+    public const string COMPOSER_HOOK = <<<'HTML'
     "scripts": {
         "post-autoload-dump": [
             "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",

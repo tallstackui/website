@@ -6,6 +6,11 @@ new class extends Component {
     public int $model = 1;
 
     public int $rate = 3;
+
+    public function evaluate(): void
+    {
+        //
+    }
 };
 
 ?>

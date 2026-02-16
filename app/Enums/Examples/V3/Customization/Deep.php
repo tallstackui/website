@@ -1,14 +1,14 @@
 <?php
 
-namespace App\Enums\Examples\V3\Personalization;
+namespace App\Enums\Examples\V3\Customization;
 
 class Deep
 {
-    public const COMMAND = <<<'HTML'
+    public const string COMMAND = <<<'HTML'
     php artisan make:component Input
     HTML;
 
-    public const OVERRIDE = <<<'HTML'
+    public const string OVERRIDE = <<<'HTML'
     /*
     |--------------------------------------------------------------------------
     | Components List
@@ -26,7 +26,7 @@ class Deep
     ],
     HTML;
 
-    public const EXTENDS = <<<'HTML'
+    public const string EXTENDS = <<<'HTML'
     namespace App\View\Components;
 
     use Illuminate\Contracts\View\View;
@@ -37,14 +37,14 @@ class Deep
     }
     HTML;
 
-    public const CUSTOMIZATION = <<<'HTML'
+    public const string CUSTOMIZATION = <<<'HTML'
     namespace App\View\Components;
 
     use Illuminate\Contracts\View\View;
 
     class Input extends \TallStackUi\View\Components\Form\Input
     {
-        public function personalization(): array // [tl! focus:3]
+        public function customization(): array // [tl! focus:3]
         {
             return [/* ... */];
         }
@@ -61,7 +61,7 @@ class Deep
     @source '../../app/View/Components/**/*.php';
     HTML;
 
-    public const VIEWS = <<<'HTML'
+    public const string VIEWS = <<<'HTML'
     php artisan vendor:publish --tag=tallstackui.views
     HTML;
 }

@@ -4,19 +4,19 @@ namespace App\Enums\Examples\V3\Form;
 
 class Currency
 {
-    public const BASIC = <<<'HTML'
+    public const string BASIC = <<<'HTML'
     <x-currency />
     HTML;
 
-    public const LABEL_HINT = <<<'HTML'
+    public const string LABEL_HINT = <<<'HTML'
     <x-currency label="Salady Expectation" hint="Between 5,000 and 10,000 USD" />
     HTML;
 
-    public const CLEARABLE = <<<'HTML'
+    public const string CLEARABLE = <<<'HTML'
     <x-currency clearable />
     HTML;
 
-    public const DIFFERENT_CURRENCIES = <<<'HTML'
+    public const string DIFFERENT_CURRENCIES = <<<'HTML'
     <!-- Default -->
     <x-currency locale="en-US" />
 
@@ -25,7 +25,7 @@ class Currency
     <x-currency locale="es-ES" />
     HTML;
 
-    public const INTL_OPTIONS = <<<'HTML'
+    public const string INTL_OPTIONS = <<<'HTML'
     // <x-currency decimals="2" precision="4" />  [tl! highlight]
 
     new Intl.NumberFormat(this.locale, {
@@ -34,7 +34,7 @@ class Currency
     }).format(number);
     HTML;
 
-    public const SYMBOLS = <<<'HTML'
+    public const string SYMBOLS = <<<'HTML'
     <x-currency label="Only symbol" symbol />
 
     <x-currency label="Only currency code" currency />
@@ -42,17 +42,17 @@ class Currency
     <x-currency label="Both" symbol currency />
     HTML;
 
-    public const CUSTOM_SYMBOLS = <<<'HTML'
+    public const string CUSTOM_SYMBOLS = <<<'HTML'
     <x-currency symbol="$$" />
 
     <x-currency currency="$$" />
     HTML;
 
-    public const MUTATE = <<<'HTML'
+    public const string MUTATE = <<<'HTML'
     <x-currency mutate />
     HTML;
 
-    public const PERSONALIZATION = <<<'HTML'
+    public const string CUSTOMIZATION = <<<'HTML'
     TallStackUi::customize()
         ->form('currency')
         ->block('block', 'classes');

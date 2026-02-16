@@ -4,43 +4,43 @@ namespace App\Enums\Examples\V2\Form;
 
 class Number
 {
-    public const BASIC = <<<'HTML'
+    public const string BASIC = <<<'HTML'
     <x-number />
     HTML;
 
-    public const STEP = <<<'HTML'
+    public const string STEP = <<<'HTML'
     <x-number step="5" />
     HTML;
 
-    public const STEP_DECIMAL = <<<'HTML'
+    public const string STEP_DECIMAL = <<<'HTML'
     <x-number step="0.3" />
     HTML;
 
-    public const LABEL_HINT = <<<'HTML'
+    public const string LABEL_HINT = <<<'HTML'
     <x-number label="Quantity" hint="Press the plus button to increase one by one" />
     HTML;
 
-    public const MIN_MAX = <<<'HTML'
+    public const string MIN_MAX = <<<'HTML'
     <x-number min="2" max="5" />
     HTML;
 
-    public const CENTRALIZED = <<<'HTML'
+    public const string CENTRALIZED = <<<'HTML'
     <x-number centralized />
     HTML;
 
-    public const SELECTABLE = <<<'HTML'
+    public const string SELECTABLE = <<<'HTML'
     <x-number selectable />
     HTML;
 
-    public const DELAY = <<<'HTML'
+    public const string DELAY = <<<'HTML'
     <x-number delay="1" min="1" max="10" />
     HTML;
 
-    public const ICON = <<<'HTML'
+    public const string ICON = <<<'HTML'
     <x-number chevron />
     HTML;
 
-    public const PERSONALIZATION = <<<'HTML'
+    public const string PERSONALIZATION = <<<'HTML'
     TallStackUi::customize()
         ->form('number')
         ->block('block', 'classes');

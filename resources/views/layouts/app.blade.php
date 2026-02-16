@@ -69,9 +69,9 @@
                             @if ($description)
                                 <p class="text-sm text-slate-500 dark:text-slate-400">{{ $description }}</p>
                             @endif
-                            @if ($personalization)
+                            @if ($personalization || $customization)
                                 <div class="mt-2 inline-flex space-x-2">
-                                    {{ $personalization }}
+                                    {{ $personalization ?? $customization }}
                                 </div>
                             @endif
                         </header>

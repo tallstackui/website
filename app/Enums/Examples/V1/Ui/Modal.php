@@ -4,13 +4,13 @@ namespace App\Enums\Examples\V1\Ui;
 
 class Modal
 {
-    public const BASIC = <<<'HTML'
+    public const string BASIC = <<<'HTML'
     <x-modal>
         TallStackUi
     </x-modal>
     HTML;
 
-    public const TITLE = <<<'HTML'
+    public const string TITLE = <<<'HTML'
     <x-modal>
         <x-slot:title>
             TallStackUi
@@ -25,7 +25,7 @@ class Modal
     </x-modal>
     HTML;
 
-    public const FOOTER = <<<'HTML'
+    public const string FOOTER = <<<'HTML'
     <x-modal>
         TallStackUi
         <x-slot:footer>
@@ -40,7 +40,7 @@ class Modal
     </x-modal>
     HTML;
 
-    public const BLUR = <<<'HTML'
+    public const string BLUR = <<<'HTML'
     <!-- sm, md, lg, xl -->
 
     <x-modal title="TallStackUi" blur> <!-- sm blur -->
@@ -48,7 +48,7 @@ class Modal
     </x-modal>
     HTML;
 
-    public const SIZES = <<<'HTML'
+    public const string SIZES = <<<'HTML'
     <!-- sm, md, lg, xl, 2xl, 3xl, 4xl, 5xl, 6xl, 7xl -->
 
     <x-modal title="TallStackUi" size="2xl">
@@ -56,25 +56,25 @@ class Modal
     </x-modal>
     HTML;
 
-    public const CENTER = <<<'HTML'
+    public const string CENTER = <<<'HTML'
     <x-modal title="TallStackUi" center>
         TallStackUi
     </x-modal>
     HTML;
 
-    public const Z_INDEX = <<<'HTML'
+    public const string Z_INDEX = <<<'HTML'
     <x-modal title="TallStackUi" z-index="z-10">
         TallStackUi
     </x-modal>
     HTML;
 
-    public const PERSISTENT = <<<'HTML'
+    public const string PERSISTENT = <<<'HTML'
     <x-modal title="TallStackUi" persistent>
         TallStackUi
     </x-modal>
     HTML;
 
-    public const WIREABLE = <<<'HTML'
+    public const string WIREABLE = <<<'HTML'
     <!-- Livewire boolean property: $modal -->
 
     <x-modal title="TallStackUi" wire>
@@ -86,7 +86,7 @@ class Modal
     </x-button>
     HTML;
 
-    public const WIREABLE_CUSTOMIZED = <<<'HTML'
+    public const string WIREABLE_CUSTOMIZED = <<<'HTML'
     <!-- Livewire boolean property: $tallstackui -->
 
     <x-modal title="TallStackUi" wire="tallstackui">
@@ -98,7 +98,7 @@ class Modal
     </x-button>
     HTML;
 
-    public const ALPINEJS = <<<'HTML'
+    public const string ALPINEJS = <<<'HTML'
     <x-modal id="modal-id">
         TallStackUi
     </x-modal>
@@ -112,7 +112,7 @@ class Modal
     </x-button>
     HTML;
 
-    public const EVENTS = <<<'HTML'
+    public const string EVENTS = <<<'HTML'
     <x-modal title="TallStackUi"
              x-on:open="alert('Opened!')"
              x-on:close="alert('Closed!')">
@@ -120,7 +120,7 @@ class Modal
     </x-modal>
     HTML;
 
-    public const PERSONALIZATION = <<<'HTML'
+    public const string PERSONALIZATION = <<<'HTML'
     TallStackUi::customize()
         ->modal()
         ->block('block', 'classes');

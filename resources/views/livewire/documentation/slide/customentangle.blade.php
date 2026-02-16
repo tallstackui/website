@@ -3,16 +3,16 @@
 use Livewire\Component;
 
 return new class extends Component {
-    public bool $tallstackui = false;
+    public bool $slide = false;
 };
 
 ?>
 
 <div>
-    <x-slide title="TallStackUI" wire="tallstackui">
+    <x-slide title="TallStackUI" wire>
         TallStackUI
     </x-slide>
-    <x-button wire:click="$toggle('tallstackui')">
+    <x-button wire:click="$toggle('slide')">
         Open Slide
     </x-button>
 </div>

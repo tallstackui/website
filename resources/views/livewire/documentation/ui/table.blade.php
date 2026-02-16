@@ -5,8 +5,7 @@ use Illuminate\Database\Eloquent\Builder;
 use Livewire\Component;
 use Livewire\WithPagination;
 
-new class extends Component
-{
+new class extends Component {
     use WithPagination;
 
     public int $mode = 1;

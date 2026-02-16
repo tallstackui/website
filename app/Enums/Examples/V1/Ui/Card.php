@@ -4,13 +4,13 @@ namespace App\Enums\Examples\V1\Ui;
 
 class Card
 {
-    public const BASIC = <<<'HTML'
+    public const string BASIC = <<<'HTML'
     <x-card>
         TallStackUi
     </x-card>
     HTML;
 
-    public const HEADER = <<<'HTML'
+    public const string HEADER = <<<'HTML'
     <x-card>
         <x-slot:header>
             TallStackUi
@@ -25,7 +25,7 @@ class Card
     </x-card>
     HTML;
 
-    public const FOOTER = <<<'HTML'
+    public const string FOOTER = <<<'HTML'
     <x-card>
         TallStackUi
         <x-slot:footer>
@@ -40,7 +40,7 @@ class Card
     </x-card>
     HTML;
 
-    public const PERSONALIZATION = <<<'HTML'
+    public const string PERSONALIZATION = <<<'HTML'
     TallStackUi::customize()
         ->card()
         ->block('block', 'classes');

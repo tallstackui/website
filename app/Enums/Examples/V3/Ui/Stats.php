@@ -4,7 +4,7 @@ namespace App\Enums\Examples\V3\Ui;
 
 class Stats
 {
-    public const BASIC = <<<'HTML'
+    public const string BASIC = <<<'HTML'
     <!-- Single -->
     <x-stats :number="30" />
 
@@ -16,30 +16,30 @@ class Stats
     </div>
     HTML;
 
-    public const TITLE = <<<'HTML'
+    public const string TITLE = <<<'HTML'
     <x-stats title="Components" :number="100" />
     HTML;
 
-    public const LINK = <<<'HTML'
+    public const string LINK = <<<'HTML'
     <x-stats href="https://tallstackui.com" target="_blank" :number="100" />
 
     <!-- Also accepts wire:click to call a Livewire method. -->
     <x-stats wire:click="updateQuantity" :number="$quantity" />
     HTML;
 
-    public const NAVIGATE = <<<'HTML'
+    public const string NAVIGATE = <<<'HTML'
     <x-stats ... navigate />
 
     <x-stats ... navigate-hover />
     HTML;
 
-    public const ICONS = <<<'HTML'
+    public const string ICONS = <<<'HTML'
     <x-stats icon="swatch" :number="100" />
     <x-stats icon="swatch" :number="100" light />
     <x-stats icon="swatch" :number="100" outline />
     HTML;
 
-    public const ICON_SLOT = <<<'HTML'
+    public const string ICON_SLOT = <<<'HTML'
     <x-stats :number="100">
         <x-slot:icon>
             <x-avatar :model="auth()->user()" color="fff" />
@@ -47,7 +47,7 @@ class Stats
     </x-stats>
     HTML;
 
-    public const COLORS = <<<'HTML'
+    public const string COLORS = <<<'HTML'
     <!-- The color is only applied to the icon and its style.-->
 
     <x-stats :number="100" />
@@ -77,7 +77,7 @@ class Stats
     <x-stats :number="100" color="black" />
     HTML;
 
-    public const SYMBOLS = <<<'HTML'
+    public const string SYMBOLS = <<<'HTML'
     <x-stats :number="50" increase />
     <x-stats :number="100" decrease />
 
@@ -89,15 +89,15 @@ class Stats
              :decrease="$status" />
     HTML;
 
-    public const ANIMATED = <<<'HTML'
+    public const string ANIMATED = <<<'HTML'
     <x-stats :number="25" animated />
     HTML;
 
-    public const NUMBER_FORMAT = <<<'HTML'
+    public const string NUMBER_FORMAT = <<<'HTML'
     <x-stats number="U$ 25,00" />
     HTML;
 
-    public const SLOTS = <<<'HTML'
+    public const string SLOTS = <<<'HTML'
     <!-- Default Styles -->
     <x-stats :number="50" header="TallStackUI" footer="The best TALL Stack component library">
         <x-slot:right>
@@ -121,7 +121,7 @@ class Stats
     </x-stats>
     HTML;
 
-    public const PERSONALIZATION = <<<'HTML'
+    public const string CUSTOMIZATION = <<<'HTML'
     TallStackUi::customize()
         ->stats()
         ->block('block', 'classes');

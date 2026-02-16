@@ -4,7 +4,7 @@ namespace App\Enums\Examples\V3;
 
 class Alpine
 {
-    public const INSTALLATION = <<<'HTML'
+    public const string INSTALLATION = <<<'HTML'
     <html>
         <head>
             <!-- ... -->
@@ -21,7 +21,7 @@ class Alpine
     </html>
     HTML;
 
-    public const INPUT = <<<'HTML'
+    public const string INPUT = <<<'HTML'
     <x-input label="Birthday"
              hint="Insert your birthday"
              x-mask="99/99/9999" {{-- [tl! highlight] --}}

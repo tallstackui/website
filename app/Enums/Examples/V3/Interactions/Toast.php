@@ -4,7 +4,7 @@ namespace App\Enums\Examples\V3\Interactions;
 
 class Toast
 {
-    public const TAG = <<<'HTML'
+    public const string TAG = <<<'HTML'
     <html>
         <body>
             <x-toast /> <!-- [tl! highlight] -->
@@ -14,7 +14,7 @@ class Toast
     </html>
     HTML;
 
-    public const TRAIT = <<<HTML
+    public const string TRAIT = <<<HTML
     use TallStackUi\Traits\Interactions; // [tl! focus]
 
     class CreateUser extends Component
@@ -25,7 +25,7 @@ class Toast
     }
     HTML;
 
-    public const DISPATCH = <<<'HTML'
+    public const string DISPATCH = <<<'HTML'
     public function save(): void
     {
         $this->toast()->success('...')->send();
@@ -35,14 +35,14 @@ class Toast
     }
     HTML;
 
-    public const BASIC = <<<'HTML'
+    public const string BASIC = <<<'HTML'
     $this->toast()->success('Success', 'This is a success message.')->send();
     $this->toast()->error('Error', 'This is an error message.')->send();
     $this->toast()->warning('Warning', 'This is a warning message.')->send();
     $this->toast()->info('Info', 'This is an info message.')->send();
     HTML;
 
-    public const CONFIRMATION = <<<'HTML'
+    public const string CONFIRMATION = <<<'HTML'
     public function save(): void
     {
         $this->toast()
@@ -63,7 +63,7 @@ class Toast
     }
     HTML;
 
-    public const CONFIRMATION_EXPLANATION = <<<'HTML'
+    public const string CONFIRMATION_EXPLANATION = <<<'HTML'
     public function save(): void
     {
         // 1. The methods `confirm()` and `cancel()` are optional.
@@ -103,14 +103,14 @@ class Toast
     }
     HTML;
 
-    public const TIME = <<<'HTML'
+    public const string TIME = <<<'HTML'
     $this->toast()
         ->timeout(seconds: 10)
         ->success('Success', 'This is a success message.')
         ->send();
     HTML;
 
-    public const DEFAULT_TIME = <<<'HTML'
+    public const string DEFAULT_TIME = <<<'HTML'
     // In config/tallstackui.php file
     'toast' => [
         // ...
@@ -124,21 +124,21 @@ class Toast
         ->send();
     HTML;
 
-    public const PERSISTENT = <<<'HTML'
+    public const string PERSISTENT = <<<'HTML'
     $this->toast()
         ->persistent()
         ->success('Success', 'This is a persistent toast.')
         ->send();
     HTML;
 
-    public const EXPANDABLE = <<<'HTML'
+    public const string EXPANDABLE = <<<'HTML'
     $this->toast()
         ->expandable()
         ->success('Success', 'When the description has more than 30 characters, the toast can be optionally expandable.')
         ->send();
     HTML;
 
-    public const POSITION = <<<'HTML'
+    public const string POSITION = <<<'HTML'
     /* Available positions: top-left, top-right, bottom-left, bottom-right */
 
     $this->toast()
@@ -147,21 +147,21 @@ class Toast
         ->send();
     HTML;
 
-    public const SOLE = <<<'HTML'
+    public const string SOLE = <<<'HTML'
     $this->toast()
         ->sole() // [tl! highlight]
         ->success('Success', 'This is a success message.')
         ->send();
     HTML;
 
-    public const IGNORING_EXPANDABLE = <<<'HTML'
+    public const string IGNORING_EXPANDABLE = <<<'HTML'
     $this->toast()
         ->expandable(false) // [tl! highlight]
         ->success('Success', 'This Toast will not be expandable.')
         ->send();
     HTML;
 
-    public const EVENTS = <<<'HTML'
+    public const string EVENTS = <<<'HTML'
     <div x-on:toast:accepted.window="alert($event.detail.description)"
          x-on:toast:rejected.window="alert($event.detail.description)"
          x-on:toast:timeout.window="alert($event.detail.description)">
@@ -169,7 +169,7 @@ class Toast
     </div>
     HTML;
 
-    public const HOOKS = <<<'HTML'
+    public const string HOOKS = <<<'HTML'
     public function save(): void
     {
         $this->toast()
@@ -191,7 +191,7 @@ class Toast
     }
     HTML;
 
-    public const HOOKS_CALLABLE = <<<'HTML'
+    public const string HOOKS_CALLABLE = <<<'HTML'
     public function save(): void
     {
         $this->toast()
@@ -212,7 +212,7 @@ class Toast
     }
     HTML;
 
-    public const JAVASCRIPT = <<<'HTML'
+    public const string JAVASCRIPT = <<<'HTML'
     <div>
         <x-button color="green" onclick="show()">Success</x-button>
         <x-button color="red" onclick="error()">Error</x-button>
@@ -264,7 +264,7 @@ class Toast
     </div>
     HTML;
 
-    public const FLASH = <<<'HTML'
+    public const string FLASH = <<<'HTML'
     use Illuminate\Contracts\View\View;
     use Livewire\Component;
     use TallStackUi\Traits\Interactions;
@@ -290,7 +290,7 @@ class Toast
     }
     HTML;
 
-    public const CONTROLLERS = <<<'HTML'
+    public const string CONTROLLERS = <<<'HTML'
     use Illuminate\Http\Request;
     use TallStackUi\Traits\Interactions;
 
@@ -316,7 +316,7 @@ class Toast
     }
     HTML;
 
-    public const PERSONALIZATION = <<<'HTML'
+    public const string CUSTOMIZATION = <<<'HTML'
     TallStackUi::customize()
         ->toast()
         ->block('block', 'classes');

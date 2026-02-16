@@ -4,26 +4,26 @@ namespace App\Enums\Examples\V1\Form;
 
 class Password
 {
-    public const BASIC = <<<'HTML'
+    public const string BASIC = <<<'HTML'
     <x-password value="TallStackUi" />
     HTML;
 
-    public const LABEL_HINT = <<<'HTML'
+    public const string LABEL_HINT = <<<'HTML'
     <x-password label="Password" hint="Insert your best password" value="TallStackUi" />
     HTML;
 
-    public const ASTERISK = <<<'HTML'
+    public const string ASTERISK = <<<'HTML'
     <x-password label="Password *" hint="Insert your password" value="TallStackUi" />
     HTML;
 
-    public const CAPS_LOCK = <<<'HTML'
+    public const string CAPS_LOCK = <<<'HTML'
     <x-password hint="Activate caps lock to see the indicator." />
 
     <!-- To disable and do not show the indicator use `mixed-case` -->
     <x-password hint="Activate caps lock to see the indicator." mixed-case />
     HTML;
 
-    public const FORMAT_VALIDATOR = <<<'HTML'
+    public const string FORMAT_VALIDATOR = <<<'HTML'
     <!-- Allowed: min, symbols, numbers, mixed -->
 
     <!-- You can set min to `min:8` or
@@ -35,11 +35,11 @@ class Password
     <x-password :rules="['min:8', 'symbols:!@#', 'numbers', 'mixed']" />
     HTML;
 
-    public const PASSWORD_GENERATOR = <<<'HTML'
+    public const string PASSWORD_GENERATOR = <<<'HTML'
     <x-password generator :rules="['min:8', 'symbols', 'numbers', 'mixed']" />
     HTML;
 
-    public const EVENTS = <<<'HTML'
+    public const string EVENTS = <<<'HTML'
     <x-password value="TallStackUI"
                 generator
                 :rules="['min:8', 'symbols', 'numbers', 'mixed']"
@@ -47,14 +47,14 @@ class Password
                 x-on:generate="alert(`Password Generated: ${$event.detail.password}`)" />
     HTML;
 
-    public const INVALIDATE = <<<'HTML'
+    public const string INVALIDATE = <<<'HTML'
     <x-password label="Password"
                 hint="Insert your best password"
                 value="TallStackUi"
                 invalidate />
     HTML;
 
-    public const PERSONALIZATION = <<<'HTML'
+    public const string PERSONALIZATION = <<<'HTML'
     TallStackUi::customize()
         ->form('password')
         ->block('block', 'classes');

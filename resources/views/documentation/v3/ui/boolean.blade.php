@@ -9,9 +9,9 @@
     <x-slot:description>
         Boolean component.
     </x-slot:description>
-    <x-slot:personalization>
-        <livewire:personalization :$personalization component="Boolean" />
-    </x-slot:personalization>
+    <x-slot:customization>
+        <livewire:customization :$customization component="Boolean" />
+    </x-slot:customization>
     <x-section title="Concept" disable-copy>
         <p>
             In many cases when we are building the UI of an application, we need to

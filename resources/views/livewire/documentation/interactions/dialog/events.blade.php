@@ -46,7 +46,7 @@ new class extends Component {
 <script>
     show = (dialog) => {
         // This approach was used to avoid show alerts for other dialogs.
-        if (dialog.component !== @js($__livewire->__id)) return;
+        if (dialog.reference !== @js($__livewire->__id)) return;
 
         alert(dialog.description);
     }

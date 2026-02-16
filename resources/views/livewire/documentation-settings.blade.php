@@ -40,7 +40,6 @@ return new class extends Component {
         );
     }
 };
-
 ?>
 
 <div class="ml-0.5">

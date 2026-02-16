@@ -4,7 +4,7 @@ namespace App\Enums\Examples\V1;
 
 class Welcome
 {
-    public const PERSONALIZATION = <<<'HTML'
+    public const string PERSONALIZATION = <<<'HTML'
     use TallStackUi\Facades\TallStackUi;
 
     class AppServiceProvider extends ServiceProvider

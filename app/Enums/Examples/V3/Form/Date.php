@@ -4,21 +4,21 @@ namespace App\Enums\Examples\V3\Form;
 
 class Date
 {
-    public const BASIC = <<<'HTML'
+    public const string BASIC = <<<'HTML'
     <x-date />
     HTML;
 
-    public const LABEL_HINT = <<<'HTML'
+    public const string LABEL_HINT = <<<'HTML'
     <x-date label="Date" hint="Select your DoB" />
     HTML;
 
-    public const FORMATS = <<<'HTML'
+    public const string FORMATS = <<<'HTML'
     <x-date format="YYYY-MM-DD" />
     <x-date format="YYYY, MMMM, DD" />
     <x-date format="DD [of] MMMM [of] YYYY" />
     HTML;
 
-    public const CREATE_FROM_FORMAT = <<<'HTML'
+    public const string CREATE_FROM_FORMAT = <<<'HTML'
     // Your current date
     $date = '20/02/2024'; // 20/02/2024
 
@@ -29,21 +29,21 @@ class Date
     $date; // 2024-02-20
     HTML;
 
-    public const HELPERS = <<<'HTML'
+    public const string HELPERS = <<<'HTML'
     <x-date helpers />
     HTML;
 
-    public const MIN_MAX_DATES = <<<'HTML'
+    public const string MIN_MAX_DATES = <<<'HTML'
     <!-- You can use dates as strings or Carbon instances -->
 
     <x-date :min-date="now()->subWeek()" :max-date="now()->addWeek()" />
     HTML;
 
-    public const MIN_MAX_YEARS = <<<'HTML'
+    public const string MIN_MAX_YEARS = <<<'HTML'
     <x-date :min-year="2020" :max-year="2024" />
     HTML;
 
-    public const DISABLED = <<<'HTML'
+    public const string DISABLED = <<<'HTML'
     <!-- Simple Array -->
     <x-date :disable="['2020-01-01','2020-01-02','2020-01-03']" />
 
@@ -60,7 +60,7 @@ class Date
     <x-date :disable="\Carbon\CarbonInterval::days(1)->toPeriod(now(), now()->addWeek())->toArray()" />
     HTML;
 
-    public const DISABLE_SPECIFIC_DAYS = <<<'HTML'
+    public const string DISABLE_SPECIFIC_DAYS = <<<'HTML'
     <!--
     0: Sunday,
     1: Monday,
@@ -78,7 +78,7 @@ class Date
     <x-date weekends />
     HTML;
 
-    public const RANGE = <<<'HTML'
+    public const string RANGE = <<<'HTML'
     <!--
     The Livewire property must be an array with two positions,
     the first one is the start date and the second one is the end date.
@@ -93,7 +93,7 @@ class Date
     <x-date range />
     HTML;
 
-    public const MULTIPLE = <<<'HTML'
+    public const string MULTIPLE = <<<'HTML'
     <!--
     The Livewire property must be an array with multiples dates.
 
@@ -107,7 +107,7 @@ class Date
     <x-date multiple />
     HTML;
 
-    public const START = <<<'HTML'
+    public const string START = <<<'HTML'
     <!--
     0: Sunday, (default)
     1: Monday,
@@ -120,16 +120,16 @@ class Date
     <x-date start="1" />
     HTML;
 
-    public const MONTH_YEAR_ONLY = <<<'HTML'
+    public const string MONTH_YEAR_ONLY = <<<'HTML'
     <x-date month-year-only />
     HTML;
 
-    public const EVENTS = <<<'HTML'
+    public const string EVENTS = <<<'HTML'
     <x-date x-on:select="alert(`Selected Date: ${$event.detail.date}`)"
             x-on:clear="alert(`Cleaned!`)" />
     HTML;
 
-    public const PERSONALIZATION = <<<'HTML'
+    public const string CUSTOMIZATION = <<<'HTML'
     TallStackUi::customize()
         ->form('date')
         ->block('block', 'classes');

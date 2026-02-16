@@ -9,9 +9,9 @@
     <x-slot:description>
         Stats components.
     </x-slot:description>
-    <x-slot:personalization>
-        <livewire:personalization :$personalization component="Stats" />
-    </x-slot:personalization>
+    <x-slot:customization>
+        <livewire:customization :$customization component="Stats" />
+    </x-slot:customization>
     <x-section title="Basic Usage">
         <x-preview language="blade" :contents="$basic" :background="false">
             <div class="grid grid-cols-3 gap-2">

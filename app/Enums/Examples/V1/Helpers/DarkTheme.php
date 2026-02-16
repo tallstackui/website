@@ -4,7 +4,7 @@ namespace App\Enums\Examples\V1\Helpers;
 
 class DarkTheme
 {
-    public const TAILWINDCSS = <<<'HTML'
+    public const string TAILWINDCSS = <<<'HTML'
     export default {
         darkMode: 'class', // [tl! highlight]
 
@@ -12,7 +12,7 @@ class DarkTheme
     }
     HTML;
 
-    public const HELPER = <<<'HTML'
+    public const string HELPER = <<<'HTML'
     <html ...
           x-data="tallstackui_darkTheme()" {{-- [tl! highlight:1] --}}
           x-bind:class="{ 'dark bg-gray-700': darkTheme, 'bg-white': !darkTheme }">
@@ -20,7 +20,7 @@ class DarkTheme
     </html>
     HTML;
 
-    public const CUSTOMIZED = <<<'HTML'
+    public const string CUSTOMIZED = <<<'HTML'
     <html ...
           x-data="tallstackui_darkTheme('other-name')" {{-- [tl! focus] --}}
           ...>
@@ -28,7 +28,7 @@ class DarkTheme
     </html>
     HTML;
 
-    public const INITIALIZE_AS_TRUE = <<<'HTML'
+    public const string INITIALIZE_AS_TRUE = <<<'HTML'
     <html ...
           x-data="tallstackui_darkTheme('other-name', true)" {{-- [tl! focus, highlight] --}}
           ...>
@@ -36,15 +36,15 @@ class DarkTheme
     </html>
     HTML;
 
-    public const BUTTON = <<<'HTML'
+    public const string BUTTON = <<<'HTML'
     <x-button x-on:click="darkTheme = !darkTheme">Light / Dark Mode</x-button>
     HTML;
 
-    public const ASSETS = <<<'HTML'
+    public const string ASSETS = <<<'HTML'
     npm run build && php artisan optimize:clear
     HTML;
 
-    public const EXAMPLE = <<<'HTML'
+    public const string EXAMPLE = <<<'HTML'
     <p class="text-gray-700 dark:text-white">Hello World</p>
     <div class="bg-white dark:gray-800">Hello World</div>
     HTML;

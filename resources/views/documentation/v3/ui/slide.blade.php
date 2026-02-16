@@ -9,9 +9,9 @@
     <x-slot:description>
         Slide component.
     </x-slot:description>
-    <x-slot:personalization>
-        <livewire:personalization :$personalization component="Slide" />
-    </x-slot:personalization>
+    <x-slot:customization>
+        <livewire:customization :$customization component="Slide" />
+    </x-slot:customization>
     <x-section title="Basic Usage">
         <x-preview language="blade" :contents="$basic">
             <x-slide id="basic-slide">
@@ -202,7 +202,7 @@
             <livewire:documentation.slide.entangle/>
         </x-preview>
     </x-section>
-    <x-section title="Wireable Personalized" description="Customize which property to use to control the slide via Livewire.">
+    <x-section title="Wireable Customized" description="Customize which property to use to control the slide via Livewire.">
         <x-preview language="blade" :contents="$wireableCustomized">
             <livewire:documentation.slide.customentangle/>
         </x-preview>

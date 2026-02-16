@@ -97,15 +97,15 @@ class Color
     }
     HTML;
 
-    public const BUILD = <<<'HTML'
+    public const string BUILD = <<<'HTML'
     npm run build && php artisan optimize:clear
     HTML;
 
-    public const COMMAND = <<<'HTML'
+    public const string COMMAND = <<<'HTML'
     php artisan tallstackui:setup-color
     HTML;
 
-    public const COLOR_CLASS = <<<'HTML'
+    public const string COLOR_CLASS = <<<'HTML'
     // app/View/Components/TallStackUi/Colors/AlertColors.php
 
     namespace App\View\Components\TallStackUi\Colors;
@@ -296,11 +296,11 @@ class Color
     }
     HTML;
 
-    public const NAMESPACE_ENV_VARIABLE = <<<'HTML'
+    public const string NAMESPACE_ENV_VARIABLE = <<<'HTML'
     TALLSTACKUI_COLOR_CLASSES_NAMESPACE="App\\View\\Components\\TallStackUi\\Colors"
     HTML;
 
-    public const CREATE_CUSTOM_COLOR = <<<'HTML'
+    public const string CREATE_CUSTOM_COLOR = <<<'HTML'
     namespace App\View\Components\TallStackUi\Colors;
 
     use Illuminate\View\Component;
@@ -344,7 +344,7 @@ class Color
     }
     HTML;
 
-    public const USE_CUSTOM_COLOR = <<<'HTML'
+    public const string USE_CUSTOM_COLOR = <<<'HTML'
     <x-alert text="My custom color is foo-bar" color="foo-bar" />
     HTML;
 
@@ -391,7 +391,7 @@ class Color
     }
     HTML;
 
-    public const CREATE_CUSTOM_COLOR_USING_NEW_TAILWIND_COLOR = <<<'HTML'
+    public const string CREATE_CUSTOM_COLOR_USING_NEW_TAILWIND_COLOR = <<<'HTML'
     namespace App\View\Components\TallStackUi\Colors;
 
     use Illuminate\View\Component;
@@ -431,7 +431,7 @@ class Color
     }
     HTML;
 
-    public const USE_NEW_CUSTOM_COLOR = <<<'HTML'
+    public const string USE_NEW_CUSTOM_COLOR = <<<'HTML'
     <x-alert text="My custom color is foo-bar" color="malibu" />
     HTML;
 }

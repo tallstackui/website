@@ -11,9 +11,9 @@
     <x-slot:description>
         Form date component.
     </x-slot:description>
-    <x-slot:personalization>
-        <livewire:personalization :$personalization component="Form\Date" />
-    </x-slot:personalization>
+    <x-slot:customization>
+        <livewire:customization :$customization component="Form\Date" />
+    </x-slot:customization>
     <x-section title="Basic Usage">
         <x-preview language="blade" :contents="$basic">
             <x-date />

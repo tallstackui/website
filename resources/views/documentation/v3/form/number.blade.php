@@ -9,9 +9,9 @@
     <x-slot:description>
         Form number component.
     </x-slot:description>
-    <x-slot:personalization>
-        <livewire:personalization :$personalization component="Form\Number" />
-    </x-slot:personalization>
+    <x-slot:customization>
+        <livewire:customization :$customization component="Form\Number" />
+    </x-slot:customization>
     <x-section title="Basic Usage">
         <x-preview language="blade" :contents="$basic">
             <x-number />

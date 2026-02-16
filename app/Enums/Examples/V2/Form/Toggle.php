@@ -4,16 +4,16 @@ namespace App\Enums\Examples\V2\Form;
 
 class Toggle
 {
-    public const BASIC = <<<'HTML'
+    public const string BASIC = <<<'HTML'
     <x-toggle />
     HTML;
 
-    public const LABEL = <<<'HTML'
+    public const string LABEL = <<<'HTML'
     <x-toggle label="Receive Alert" />
     <x-toggle label="Receive Alert" position="left" />
     HTML;
 
-    public const HTML = <<<'HTML'
+    public const string HTML = <<<'HTML'
     <x-toggle>
         <x-slot:label>
             I agree to the <a href="#">terms and conditions</a>
@@ -21,7 +21,7 @@ class Toggle
     </x-toggle>
     HTML;
 
-    public const ALIGNMENT = <<<'HTML'
+    public const string ALIGNMENT = <<<'HTML'
     <x-toggle>
         <x-slot:label>
             Align on Middle
@@ -35,14 +35,14 @@ class Toggle
     </x-toggle>
     HTML;
 
-    public const SIZES = <<<'HTML'
+    public const string SIZES = <<<'HTML'
     <x-toggle xs />
     <x-toggle sm />
     <x-toggle md />
     <x-toggle lg />
     HTML;
 
-    public const COLORS = <<<'HTML'
+    public const string COLORS = <<<'HTML'
     <x-toggle label="Primary" />
     <x-toggle color="secondary" label="Secondary" />
     <x-toggle color="slate" label="Slate" />
@@ -70,7 +70,7 @@ class Toggle
     <x-toggle color="black" label="Black" />
     HTML;
 
-    public const PERSONALIZATION = <<<'HTML'
+    public const string PERSONALIZATION = <<<'HTML'
     TallStackUi::customize()
         ->form('toggle')
         ->block('block', 'classes');

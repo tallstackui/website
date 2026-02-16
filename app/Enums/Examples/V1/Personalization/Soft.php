@@ -4,7 +4,7 @@ namespace App\Enums\Examples\V1\Personalization;
 
 class Soft
 {
-    public const EXAMPLE = <<<'HTML'
+    public const string EXAMPLE = <<<'HTML'
     use TallStackUi\Facades\TallStackUi;
 
     class AppServiceProvider extends ServiceProvider
@@ -25,7 +25,7 @@ class Soft
     }
     HTML;
 
-    public const AVATAR = <<<'HTML'
+    public const string AVATAR = <<<'HTML'
     public function personalization(): array
     {
         return Arr::dot([
@@ -58,7 +58,7 @@ class Soft
     }
     HTML;
 
-    public const FLUENT = <<<'HTML'
+    public const string FLUENT = <<<'HTML'
     use TallStackUi\Facades\TallStackUi;
 
     class AppServiceProvider extends ServiceProvider
@@ -86,7 +86,7 @@ class Soft
     }
     HTML;
 
-    public const USAGES = <<<'HTML'
+    public const string USAGES = <<<'HTML'
     use TallStackUi\Facades\TallStackUi;
     use App\TallStackUi\InputPersonalization;
 
@@ -113,7 +113,7 @@ class Soft
     }
     HTML;
 
-    public const INVOKABLE_EXAMPLE = <<<'HTML'
+    public const string INVOKABLE_EXAMPLE = <<<'HTML'
     use TallStackUi\Facades\TallStackUi;
     use App\TallStackUi\InputPersonalization; // [tl! focus]
 
@@ -128,7 +128,7 @@ class Soft
     }
     HTML;
 
-    public const INVOKABLE_CLASS = <<<'HTML'
+    public const string INVOKABLE_CLASS = <<<'HTML'
     namespace App\TallStackUi;
 
     use TallStackUi\Contracts\Personalizable; // [tl! highlight]
@@ -142,11 +142,11 @@ class Soft
     }
     HTML;
 
-    public const USING_COMPONENT = <<<'HTML'
+    public const string USING_COMPONENT = <<<'HTML'
     <x-input label="Name" hint="Your full name" />
     HTML;
 
-    public const REPLACE = <<<'HTML'
+    public const string REPLACE = <<<'HTML'
     use TallStackUi\Facades\TallStackUi;
 
     class AppServiceProvider extends ServiceProvider
@@ -171,7 +171,7 @@ class Soft
     }
     HTML;
 
-    public const USEFUL_METHODS = <<<'HTML'
+    public const string USEFUL_METHODS = <<<'HTML'
     use TallStackUi\Facades\TallStackUi;
 
     class AppServiceProvider extends ServiceProvider
@@ -193,7 +193,7 @@ class Soft
     }
     HTML;
 
-    public const REAL_EXAMPLE = <<<'HTML'
+    public const string REAL_EXAMPLE = <<<'HTML'
     use TallStackUi\Facades\TallStackUi;
 
     class AppServiceProvider extends ServiceProvider
@@ -208,7 +208,7 @@ class Soft
     }
     HTML;
 
-    public const SCOPED_PERSONALIZATION = <<<'HTML'
+    public const string SCOPED_PERSONALIZATION = <<<'HTML'
     <!-- Displaying a normal Alert component -->
     <x-alert>This is a normal Alert component</x-alert>
 
@@ -224,7 +224,7 @@ class Soft
     </x-alert>
     HTML;
 
-    public const SCOPED_PERSONALIZATION_EXAMPLES = <<<'HTML'
+    public const string SCOPED_PERSONALIZATION_EXAMPLES = <<<'HTML'
     <x-alert :personalize="[
         {{-- Override all content [tl! highlight]--}}
         'content.wrapper' => 'flex items-start',
@@ -251,11 +251,11 @@ class Soft
     </x-alert>
     HTML;
 
-    public const SCOPED_PERSONALIZATION_WITH_CLASS_BLADE_EXAMPLE = <<<'HTML'
+    public const string SCOPED_PERSONALIZATION_WITH_CLASS_BLADE_EXAMPLE = <<<'HTML'
     <x-alert :personalize="\App\ScopedPersonalization\Alert::class" />
     HTML;
 
-    public const SCOPED_PERSONALIZATION_WITH_CLASS_PHP_EXAMPLE = <<<'HTML'
+    public const string SCOPED_PERSONALIZATION_WITH_CLASS_PHP_EXAMPLE = <<<'HTML'
     namespace App\ScopedPersonalization;
 
     class Alert
@@ -273,7 +273,7 @@ class Soft
     }
     HTML;
 
-    public const DATA = <<<'HTML'
+    public const string DATA = <<<'HTML'
     [
       "id" => null
       "label" => "Name"
@@ -291,7 +291,7 @@ class Soft
     ]
     HTML;
 
-    public const TAILWINDCSS = <<<'HTML'
+    public const string TAILWINDCSS = <<<'HTML'
     content: [
         // If you are personalizing into AppServiceProvider or other
 

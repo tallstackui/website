@@ -9,10 +9,10 @@
     <x-slot:description>
         Progress component.
     </x-slot:description>
-    <x-slot:personalization>
-        <livewire:personalization :$personalization component="Progress\Progress" title="Progress" />
-        <livewire:personalization :personalization="$personalizationCircle" component="Progress\Circle" />
-    </x-slot:personalization>
+    <x-slot:customization>
+        <livewire:customization :$customization component="Progress\Progress" title="Progress" />
+        <livewire:customization :customization="$customizationCircle" component="Progress\Circle" />
+    </x-slot:customization>
     <x-section title="Basic Usage" anchor="normal-basic-usage">
         <x-preview language="blade" :contents="$basic">
             <div class="space-y-2">

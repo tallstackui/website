@@ -4,19 +4,19 @@ namespace App\Enums\Examples\V3;
 
 class Installation
 {
-    public const BREEZE = <<<'HTML'
+    public const string BREEZE = <<<'HTML'
     composer require laravel/breeze --dev
     HTML;
 
-    public const BREEZE_INSTALLATION = <<<'HTML'
+    public const string BREEZE_INSTALLATION = <<<'HTML'
     php artisan breeze:install
     HTML;
 
-    public const INSTALLATION = <<<'HTML'
+    public const string INSTALLATION = <<<'HTML'
     composer require tallstackui/tallstackui:^3.0.0
     HTML;
 
-    public const LAYOUT = <<<'HTML'
+    public const string LAYOUT = <<<'HTML'
     <html>
         <head>
             <!-- ... -->
@@ -39,7 +39,7 @@ class Installation
     @source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
     HTML;
 
-    public const BUILD = <<<'HTML'
+    public const string BUILD = <<<'HTML'
     npm run build && php artisan optimize:clear
     HTML;
 }

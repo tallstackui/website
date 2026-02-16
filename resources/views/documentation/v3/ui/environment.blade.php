@@ -9,9 +9,9 @@
     <x-slot:description>
         Environment component.
     </x-slot:description>
-    <x-slot:personalization>
-        <livewire:personalization :$personalization component="Environment" />
-    </x-slot:personalization>
+    <x-slot:customization>
+        <livewire:customization :$customization component="Environment" />
+    </x-slot:customization>
     <x-section title="Concept" disable-copy>
         <p>
             Many modern applications need to have different environments for different purposes, such as: local -
@@ -93,7 +93,7 @@
                 <li>Others - shades of <b class="text-primary-700">primary</b> colors</li>
             </ul>
             <p>
-                You can personalize or create new colors per room by following <a href="{{ route('documentation', ['v3', 'personalization', 'color']) }}" class="underline">TallStackUI color personalization.</a>
+                You can customize or create new colors per room by following <a href="{{ route('documentation', ['v3', 'customization', 'color']) }}" class="underline">TallStackUI color customization.</a>
             </p>
         </div>
     </x-section>

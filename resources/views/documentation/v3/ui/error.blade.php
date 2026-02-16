@@ -9,9 +9,9 @@
     <x-slot:description>
         Errors component.
     </x-slot:description>
-    <x-slot:personalization>
-        <livewire:personalization :$personalization component="Errors" />
-    </x-slot:personalization>
+    <x-slot:customization>
+        <livewire:customization :$customization component="Errors" />
+    </x-slot:customization>
     <x-section title="Basic Usage">
         <x-preview language="blade" :contents="$basic">
             <livewire:documentation.ui.errors/>

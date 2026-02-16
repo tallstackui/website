@@ -9,9 +9,9 @@
     <x-slot:description>
         Theme switch component.
     </x-slot:description>
-    <x-slot:personalization>
-        <livewire:personalization :$personalization component="ThemeSwitch" />
-    </x-slot:personalization>
+    <x-slot:customization>
+        <livewire:customization :$customization component="ThemeSwitch" />
+    </x-slot:customization>
     <x-warning class="mt-2">
         You should only use this component if are using the <a href="{{ route('documentation', ['v3', 'helpers', 'dark-theme']) }}" wire:navigate class="underline">dark theme helper.</a>
     </x-warning>

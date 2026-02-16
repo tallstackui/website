@@ -4,7 +4,7 @@ namespace App\Enums\Examples\V1\Ui;
 
 class Rating
 {
-    public const PHP = <<<'HTML'
+    public const string PHP = <<<'HTML'
     use Livewire\Component;
     use Illuminate\Contracts\View\View;
 
@@ -24,15 +24,15 @@ class Rating
     }
     HTML;
 
-    public const BLADE = <<<'HTML'
+    public const string BLADE = <<<'HTML'
     <x-rating wire:model="rate" />
     HTML;
 
-    public const METHOD = <<<'HTML'
+    public const string METHOD = <<<'HTML'
     <x-rating wire:model="rate" evaluate-method="evaluating" />
     HTML;
 
-    public const NORMAL = <<<'HTML'
+    public const string NORMAL = <<<'HTML'
     <x-rating :$rate />
 
     <!-- The "static" parameter disable
@@ -40,15 +40,15 @@ class Rating
     <x-rating :$rate static />
     HTML;
 
-    public const BASIC = <<<'HTML'
+    public const string BASIC = <<<'HTML'
     <x-rating :rate="3" />
     HTML;
 
-    public const QUANTITY = <<<'HTML'
+    public const string QUANTITY = <<<'HTML'
     <x-rating :rate="1" :quantity="3" />
     HTML;
 
-    public const LABEL = <<<'HTML'
+    public const string LABEL = <<<'HTML'
     <x-rating :rate="3" text="TALL" position="right" />
 
     <x-rating :rate="3" text="LIVT" />
@@ -64,14 +64,14 @@ class Rating
     </x-rating>
     HTML;
 
-    public const SIZE = <<<'HTML'
+    public const string SIZE = <<<'HTML'
     <x-rating :rate="3" xs />
     <x-rating :rate="3" sm />
     <x-rating :rate="3" md />
     <x-rating :rate="3" lg />
     HTML;
 
-    public const COLOR = <<<'HTML'
+    public const string COLOR = <<<'HTML'
     <x-rating :rate="3" />
     <x-rating :rate="3" color="secondary" />
     <x-rating :rate="3" color="slate" />
@@ -100,11 +100,11 @@ class Rating
     <x-rating :rate="3" color="white" />
     HTML;
 
-    public const EVENTS = <<<'HTML'
+    public const string EVENTS = <<<'HTML'
     <x-rating :rate="3" x-on:evaluate="alert(`Evaluated: ${JSON.stringify($event.detail.evaluate)}`)" />
     HTML;
 
-    public const PERSONALIZATION = <<<'HTML'
+    public const string PERSONALIZATION = <<<'HTML'
     TallStackUi::customize()
         ->rating()
         ->block('block', 'classes');

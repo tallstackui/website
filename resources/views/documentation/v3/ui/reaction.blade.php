@@ -9,9 +9,9 @@
     <x-slot:description>
         Reaction component.
     </x-slot:description>
-    <x-slot:personalization>
-        <livewire:personalization :$personalization component="Reaction" />
-    </x-slot:personalization>
+    <x-slot:customization>
+        <livewire:customization :$customization component="Reaction" />
+    </x-slot:customization>
     <x-section title="Concept" disable-copy>
         <p>
             In the modern world many applications have blogs, posts or articles. This

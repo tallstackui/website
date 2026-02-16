@@ -9,9 +9,9 @@
     <x-slot:description>
         KeyValue component.
     </x-slot:description>
-    <x-slot:personalization>
-        <livewire:personalization :$personalization component="KeyValue" />
-    </x-slot:personalization>
+    <x-slot:customization>
+        <livewire:customization :$customization component="KeyValue" />
+    </x-slot:customization>
     <x-section title="Concept" disable-copy>
         <div class="space-y-4">
             <p>
@@ -29,13 +29,13 @@
             <livewire:documentation.ui.key-value />
         </x-preview>
     </x-section>
-    <x-section title="Label & Value" description="An option to personalize the headers of the component.">
+    <x-section title="Label & Value" description="An option to customize the headers of the component.">
         <div class="space-y-4">
             <x-preview language="blade" :contents="$labelValue">
                 <livewire:documentation.ui.key-value :model="2" />
             </x-preview>
             <p>
-                You can personalize all translations of the component by <a href="{{ route('documentation', ['v3', 'translation']) }}" class="underline" wire:navigate>publishing the translations files.</a>
+                You can customize all translations of the component by <a href="{{ route('documentation', ['v3', 'translation']) }}" class="underline" wire:navigate>publishing the translations files.</a>
             </p>
         </div>
     </x-section>

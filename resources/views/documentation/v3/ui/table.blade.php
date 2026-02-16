@@ -9,9 +9,9 @@
     <x-slot:description>
         Table component.
     </x-slot:description>
-    <x-slot:personalization>
-        <livewire:personalization :$personalization component="Table" />
-    </x-slot:personalization>
+    <x-slot:customization>
+        <livewire:customization :$customization component="Table" />
+    </x-slot:customization>
     <x-warning class="mb-4">
         All examples in this page use Livewire through Laravel Volt because the TallStackUI
         documentation uses Livewire through Laravel Volt instead of pure Livewire components.

@@ -9,9 +9,9 @@
     <x-slot:description>
         Loading component.
     </x-slot:description>
-    <x-slot:personalization>
-        <livewire:personalization :$personalization component="Loading" />
-    </x-slot:personalization>
+    <x-slot:customization>
+        <livewire:customization :$customization component="Loading" />
+    </x-slot:customization>
     <x-section title="Concept" disable-copy>
         <p>
             The loading component aims to be used to display a full-page loading overlay for

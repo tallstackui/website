@@ -9,9 +9,9 @@
     <x-slot:description>
         Link component.
     </x-slot:description>
-    <x-slot:personalization>
-        <livewire:personalization :$personalization component="Link" />
-    </x-slot:personalization>
+    <x-slot:customization>
+        <livewire:customization :$customization component="Link" />
+    </x-slot:customization>
     <x-section title="Basic Usage">
         <x-preview language="blade" :contents="$basic">
             <div class="flex flex-col">

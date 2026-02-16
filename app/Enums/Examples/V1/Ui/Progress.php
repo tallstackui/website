@@ -4,7 +4,7 @@ namespace App\Enums\Examples\V1\Ui;
 
 class Progress
 {
-    public const BASIC = <<<'HTML'
+    public const string BASIC = <<<'HTML'
     <!-- As integer -->
     <x-progress :percent="50" />
 
@@ -12,24 +12,24 @@ class Progress
     <x-progress percent="50.55" />
     HTML;
 
-    public const STYLES = <<<'HTML'
+    public const string STYLES = <<<'HTML'
     <x-progress :percent="50" />
     <x-progress :percent="50" title="Percentage" />
     <x-progress :percent="50" floating />
     HTML;
 
-    public const WITHOUT_TEXT = <<<'HTML'
+    public const string WITHOUT_TEXT = <<<'HTML'
     <x-progress :percent="50" without-text />
     HTML;
 
-    public const SIZES = <<<'HTML'
+    public const string SIZES = <<<'HTML'
     <x-progress :percent="50" xs />
     <x-progress :percent="50" sm />
     <x-progress :percent="50" md />
     <x-progress :percent="50" lg />
     HTML;
 
-    public const COLORS = <<<'HTML'
+    public const string COLORS = <<<'HTML'
     <x-progress :percent="50" />
     <x-progress :percent="50" color="secondary" />
     <x-progress :percent="50" color="slate" />
@@ -58,7 +58,7 @@ class Progress
     <x-progress :percent="50" color="white" />
     HTML;
 
-    public const LIGHTS = <<<'HTML'
+    public const string LIGHTS = <<<'HTML'
     <x-progress :percent="50" light />
     <x-progress :percent="50" color="secondary" light />
     <x-progress :percent="50" color="slate" light />
@@ -87,7 +87,7 @@ class Progress
     <x-progress :percent="50" color="white" light />
     HTML;
 
-    public const FOOTER_SLOT = <<<'HTML'
+    public const string FOOTER_SLOT = <<<'HTML'
     <x-progress :percent="50">
         <x-slot:footer>
             TallStackUI
@@ -95,7 +95,7 @@ class Progress
     </x-progress>
     HTML;
 
-    public const CIRCLE_BASIC = <<<'HTML'
+    public const string CIRCLE_BASIC = <<<'HTML'
     <!-- As integer -->
     <x-progress.circle :percent="50" />
 
@@ -103,18 +103,18 @@ class Progress
     <x-progress.circle percent="50.55" />
     HTML;
 
-    public const CIRCLE_STROKES = <<<'HTML'
+    public const string CIRCLE_STROKES = <<<'HTML'
     <x-progress.circle :percent="50" :stroke-circle="1" :stroke-percent="2" />
     HTML;
 
-    public const CIRCLE_SIZES = <<<'HTML'
+    public const string CIRCLE_SIZES = <<<'HTML'
     <x-progress.circle :percent="50" xs />
     <x-progress.circle :percent="50" sm />
     <x-progress.circle :percent="50" md />
     <x-progress.circle :percent="50" lg />
     HTML;
 
-    public const CIRCLE_COLORS = <<<'HTML'
+    public const string CIRCLE_COLORS = <<<'HTML'
     <x-progress.circle :percent="50" />
     <x-progress.circle :percent="50" color="secondary" />
     <x-progress.circle :percent="50" color="slate" />
@@ -143,7 +143,7 @@ class Progress
     <x-progress.circle :percent="50" color="white" />
     HTML;
 
-    public const CIRCLE_LIGHTS = <<<'HTML'
+    public const string CIRCLE_LIGHTS = <<<'HTML'
     <x-progress.circle :percent="50" light />
     <x-progress.circle :percent="50" color="secondary" light />
     <x-progress.circle :percent="50" color="slate" light />
@@ -172,7 +172,7 @@ class Progress
     <x-progress.circle :percent="50" color="white" light />
     HTML;
 
-    public const CIRCLE_FOOTER_SLOT = <<<'HTML'
+    public const string CIRCLE_FOOTER_SLOT = <<<'HTML'
     <x-progress :percent="50">
         <x-slot:footer>
             TallStackUI
@@ -180,7 +180,7 @@ class Progress
     </x-progress>
     HTML;
 
-    public const PERSONALIZATION = <<<'HTML'
+    public const string PERSONALIZATION = <<<'HTML'
     TallStackUi::customize()
         ->progress()
         ->block('block', 'classes');

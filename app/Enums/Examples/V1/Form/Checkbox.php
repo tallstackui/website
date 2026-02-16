@@ -4,17 +4,17 @@ namespace App\Enums\Examples\V1\Form;
 
 class Checkbox
 {
-    public const BASIC = <<<'HTML'
+    public const string BASIC = <<<'HTML'
     <x-checkbox />
     HTML;
 
-    public const LABEL = <<<'HTML'
+    public const string LABEL = <<<'HTML'
     <x-checkbox label="Receive Alert" />
 
     <x-checkbox label="Receive Alert" position="left" />
     HTML;
 
-    public const HTML = <<<'HTML'
+    public const string HTML = <<<'HTML'
     <x-checkbox>
         <x-slot:label>
             I agree to the <a href="#">terms and conditions</a>
@@ -22,7 +22,7 @@ class Checkbox
     </x-checkbox>
     HTML;
 
-    public const ALIGNMENT = <<<'HTML'
+    public const string ALIGNMENT = <<<'HTML'
     <x-checkbox>
         <x-slot:label>
             Align on Middle
@@ -36,14 +36,14 @@ class Checkbox
     </x-checkbox>
     HTML;
 
-    public const SIZES = <<<'HTML'
+    public const string SIZES = <<<'HTML'
     <x-checkbox xs />
     <x-checkbox sm />
     <x-checkbox md />
     <x-checkbox lg />
     HTML;
 
-    public const COLORS = <<<'HTML'
+    public const string COLORS = <<<'HTML'
     <x-checkbox label="Primary" />
     <x-checkbox color="secondary" label="Secondary" />
     <x-checkbox color="slate" label="Slate" />
@@ -72,11 +72,11 @@ class Checkbox
     <x-checkbox color="white" label="White" />
     HTML;
 
-    public const INVALIDATE = <<<'HTML'
+    public const string INVALIDATE = <<<'HTML'
     <x-checkbox label="Receive Alert" invalidate />
     HTML;
 
-    public const PERSONALIZATION = <<<'HTML'
+    public const string PERSONALIZATION = <<<'HTML'
     TallStackUi::customize()
         ->form('checkbox')
         ->block('block', 'classes');

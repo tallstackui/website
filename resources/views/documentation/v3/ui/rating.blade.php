@@ -9,9 +9,9 @@
     <x-slot:description>
         Rating component.
     </x-slot:description>
-    <x-slot:personalization>
-        <livewire:personalization :$personalization component="Rating" />
-    </x-slot:personalization>
+    <x-slot:customization>
+        <livewire:customization :$customization component="Rating" />
+    </x-slot:customization>
     <x-section title="Concept" disable-copy>
         <p>
             In the modern world, many applications need to collect their

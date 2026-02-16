@@ -4,7 +4,7 @@ namespace App\Enums\Examples\V3;
 
 class Welcome
 {
-    public const PERSONALIZATION = <<<'HTML'
+    public const string CUSTOMIZATION = <<<'HTML'
     use TallStackUi\Facades\TallStackUi;
 
     class AppServiceProvider extends ServiceProvider
@@ -16,11 +16,11 @@ class Welcome
                ->badge() // [tl! highlight]
                // Pointing the block...
                ->block('wrapper.class') // [tl! highlight]
-               // Personalizing!
+               // Customizing!
                ->replace('rounded-md', 'rounded-sm') // [tl! highlight]
                // Sequentially we can...
                ->and() // [tl! highlight]
-               // Personalize other components!
+               // Customize other components!
                ->avatar()
                ->block('content.text.class')
                ->prepend('text-2xl');

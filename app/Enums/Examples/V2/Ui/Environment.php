@@ -4,30 +4,30 @@ namespace App\Enums\Examples\V2\Ui;
 
 class Environment
 {
-    public const BASIC = <<<'HTML'
+    public const string BASIC = <<<'HTML'
     <x-environment />
     HTML;
 
-    public const ROUND = <<<'HTML'
+    public const string ROUND = <<<'HTML'
     <x-environment round />
     HTML;
 
-    public const SQUARE = <<<'HTML'
+    public const string SQUARE = <<<'HTML'
     <x-environment square />
     HTML;
 
-    public const SIZES = <<<'HTML'
+    public const string SIZES = <<<'HTML'
     <x-environment xs /> <!-- Default -->
     <x-environment sm />
     <x-environment md />
     <x-environment lg />
     HTML;
 
-    public const WITHOUT_BRANCH = <<<'HTML'
+    public const string WITHOUT_BRANCH = <<<'HTML'
     <x-environment without-branch />
     HTML;
 
-    public const BRANCH_ALGORITHM = <<<'HTML'
+    public const string BRANCH_ALGORITHM = <<<'HTML'
     use Illuminate\Support\Facades\File;
 
     private function branch(): ?string
@@ -48,7 +48,7 @@ class Environment
     }
     HTML;
 
-    public const CUSTOM_ALGORITHM = <<<'HTML'
+    public const string CUSTOM_ALGORITHM = <<<'HTML'
     use Illuminate\Support\ServiceProvider;
 
     class AppServiceProvider extends ServiceProvider
@@ -64,7 +64,7 @@ class Environment
     }
     HTML;
 
-    public const PERSONALIZATION = <<<'HTML'
+    public const string PERSONALIZATION = <<<'HTML'
     TallStackUi::customize()
         ->environment()
         ->block('block', 'classes');

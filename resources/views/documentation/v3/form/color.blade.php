@@ -9,9 +9,9 @@
     <x-slot:description>
         Form color component.
     </x-slot:description>
-    <x-slot:personalization>
-        <livewire:personalization :$personalization component="Form\Color" />
-    </x-slot:personalization>
+    <x-slot:customization>
+        <livewire:customization :$customization component="Form\Color" />
+    </x-slot:customization>
     <x-section title="Basic Usage">
         <x-preview language="blade" :contents="$basic">
             <x-color />

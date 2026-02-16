@@ -9,9 +9,9 @@
     <x-slot:description>
         Form textarea component.
     </x-slot:description>
-    <x-slot:personalization>
-        <livewire:personalization :$personalization component="Form\Textarea" />
-    </x-slot:personalization>
+    <x-slot:customization>
+        <livewire:customization :$customization component="Form\Textarea" />
+    </x-slot:customization>
     <x-section title="Basic Usage">
         <x-preview language="blade" :contents="$basic">
             <x-textarea />

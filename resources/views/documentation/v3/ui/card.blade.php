@@ -9,9 +9,9 @@
     <x-slot:description>
         Card component.
     </x-slot:description>
-    <x-slot:personalization>
-        <livewire:personalization :$personalization component="Card" />
-    </x-slot:personalization>
+    <x-slot:customization>
+        <livewire:customization :$customization component="Card" />
+    </x-slot:customization>
     <x-section title="Basic Usage">
         <x-preview language="blade" :background="false" :contents="$basic">
             <x-card>

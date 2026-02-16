@@ -4,11 +4,11 @@ namespace App\Enums\Examples\V1\Personalization;
 
 class Deep
 {
-    public const COMMAND = <<<'HTML'
+    public const string COMMAND = <<<'HTML'
     php artisan make:component Input
     HTML;
 
-    public const OVERRIDE = <<<'HTML'
+    public const string OVERRIDE = <<<'HTML'
     /*
     |--------------------------------------------------------------------------
     | Components List
@@ -27,7 +27,7 @@ class Deep
     ],
     HTML;
 
-    public const EXTENDS = <<<'HTML'
+    public const string EXTENDS = <<<'HTML'
     namespace App\View\Components;
 
     use Illuminate\Contracts\View\View;
@@ -38,7 +38,7 @@ class Deep
     }
     HTML;
 
-    public const CUSTOMIZATION = <<<'HTML'
+    public const string CUSTOMIZATION = <<<'HTML'
     namespace App\View\Components;
 
     use Illuminate\Contracts\View\View;
@@ -52,7 +52,7 @@ class Deep
     }
     HTML;
 
-    public const COLORS = <<<'HTML'
+    public const string COLORS = <<<'HTML'
     namespace App\View\Components;
 
     use Illuminate\Contracts\View\View;
@@ -103,7 +103,7 @@ class Deep
     }
     HTML;
 
-    public const COLORS_PERSONALIZATION_EXAMPLE = <<<'HTML'
+    public const string COLORS_PERSONALIZATION_EXAMPLE = <<<'HTML'
     namespace App\View\Components;
 
     use Illuminate\Contracts\View\View;
@@ -121,7 +121,7 @@ class Deep
     }
     HTML;
 
-    public const PREPARE_TAILWIND_FOR_CUSTOM_COLOR = <<<'HTML'
+    public const string PREPARE_TAILWIND_FOR_CUSTOM_COLOR = <<<'HTML'
     theme: {
         extend: {
             // ...
@@ -145,7 +145,7 @@ class Deep
     },
     HTML;
 
-    public const APPLYING_CUSTOM_COLORS_USING_DEEP_PERSONALIZATION = <<<'HTML'
+    public const string APPLYING_CUSTOM_COLORS_USING_DEEP_PERSONALIZATION = <<<'HTML'
     namespace App\View\Components;
 
     use Illuminate\Contracts\View\View;
@@ -175,7 +175,7 @@ class Deep
     }
     HTML;
 
-    public const USING_COMPONENT_WITH_CUSTOM_COLORS = <<<'HTML'
+    public const string USING_COMPONENT_WITH_CUSTOM_COLORS = <<<'HTML'
     <x-button icon="users"
               color="ocean" {{-- [tl! highlight:1] --}}
               outline
@@ -184,11 +184,11 @@ class Deep
     </x-button>
     HTML;
 
-    public const VIEWS = <<<'HTML'
+    public const string VIEWS = <<<'HTML'
     php artisan vendor:publish --tag=tallstackui.views
     HTML;
 
-    public const TAILWINDCSS = <<<'HTML'
+    public const string TAILWINDCSS = <<<'HTML'
     content: [
         // ...
 

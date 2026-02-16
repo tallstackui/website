@@ -4,7 +4,7 @@ namespace App\Enums\Examples\V1\Personalization;
 
 class Color
 {
-    public const FILE = <<<'HTML'
+    public const string FILE = <<<'HTML'
     theme: {
         extend: {
             // ...
@@ -57,7 +57,7 @@ class Color
     },
     HTML;
 
-    public const BUILD = <<<'HTML'
+    public const string BUILD = <<<'HTML'
     npm run build && php artisan optimize:clear
     HTML;
 }

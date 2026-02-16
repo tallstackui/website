@@ -9,13 +9,13 @@
     <x-slot:description>
         Layout component.
     </x-slot:description>
-    <x-slot:personalization>
-        <livewire:personalization :personalization="$personalizationLayout" component="Layout\Layout" title="Layout" />
-        <livewire:personalization :personalization="$personalizationLayoutHeader" component="Layout\Header" />
-        <livewire:personalization :personalization="$personalizationSidebar" component="Layout\SideBar\SideBar" title="Sidebar" />
-        <livewire:personalization :personalization="$personalizationSidebarItem" component="Layout\SideBar\Item" title="Sidebar Item" />
-        <livewire:personalization :personalization="$personalizationSidebarSeparator" component="Layout\SideBar\Separator" title="Sidebar Separator" />
-    </x-slot:personalization>
+    <x-slot:customization>
+        <livewire:customization :customization="$customizationLayout" component="Layout\Layout" title="Layout" />
+        <livewire:customization :customization="$customizationLayoutHeader" component="Layout\Header" />
+        <livewire:customization :customization="$customizationSidebar" component="Layout\SideBar\SideBar" title="Sidebar" />
+        <livewire:customization :customization="$customizationSidebarItem" component="Layout\SideBar\Item" title="Sidebar Item" />
+        <livewire:customization :customization="$customizationSidebarSeparator" component="Layout\SideBar\Separator" title="Sidebar Separator" />
+    </x-slot:customization>
     <x-section title="Concept" disable-copy>
         <p>
             The version 2 of the TallStackUI introduces a new layout component for dashboard creation.
@@ -174,8 +174,8 @@
         set the environment variable <x-block>TALLSTACKUI_AVOID_LAYOUT_REGISTRATION</x-block> to <x-block>true</x-block> to achieve this
         behavior without having to publish the configuration file and comment out the components - which would also be a valid measure, but less practical.
     </x-section>
-    <x-section title="Personalization" disable-copy>
-        All the components mentioned above are available to be fully customized through one of the TallStackUI personalization methods:
-        <a href="{{ route('documentation', ['v3', 'personalization', 'concept']) }}" wire:navigate class="underline">soft personalization or deep personalization.</a>
+    <x-section title="Customization" disable-copy>
+        All the components mentioned above are available to be fully customized through one of the TallStackUI customization methods:
+        <a href="{{ route('documentation', ['v3', 'customization', 'concept']) }}" wire:navigate class="underline">soft customization or deep customization.</a>
     </x-section>
 </x-layout>

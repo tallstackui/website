@@ -9,9 +9,9 @@
     <x-slot:description>
         Avatar component.
     </x-slot:description>
-    <x-slot:personalization>
-        <livewire:personalization :$personalization component="Avatar" />
-    </x-slot:personalization>
+    <x-slot:customization>
+        <livewire:customization :$customization component="Avatar" />
+    </x-slot:customization>
     <x-section title="Basic Usage">
         <x-preview language="blade" :contents="$basic">
             <x-avatar text="TS" />
@@ -177,7 +177,7 @@
     <x-section title="Presence Color">
         <x-preview language="blade" :contents="$presenceColors">
             <x-avatar image="https://i.pravatar.cc/30" presence presence-color="green" />
-            <x-avatar image="https://i.pravatar.cc/50" presence presence-color="neutral" />
+            <x-avatar image="https://i.pravatar.cc/50" presence presence-color="red" />
         </x-preview>
     </x-section>
     <x-section title="Presence Positions">

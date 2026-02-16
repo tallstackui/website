@@ -4,19 +4,19 @@ namespace App\Enums\Examples\V2\Form;
 
 class Upload
 {
-    public const BASIC = <<<'HTML'
+    public const string BASIC = <<<'HTML'
     <x-upload />
     HTML;
 
-    public const LABEL_HINT_TIP = <<<'HTML'
+    public const string LABEL_HINT_TIP = <<<'HTML'
     <x-upload label="Screenshot" hint="We need to analyze your screenshot" tip="Drag and drop your screenshot here" />
     HTML;
 
-    public const CLOSE_AFTER_UPLOAD = <<<'HTML'
+    public const string CLOSE_AFTER_UPLOAD = <<<'HTML'
     <x-upload close-after-upload />
     HTML;
 
-    public const DELETE = <<<'HTML'
+    public const string DELETE = <<<'HTML'
     <!-- The Livewire component should have the "deleteUpload" method -->
 
     <x-upload delete />
@@ -26,7 +26,7 @@ class Upload
     <x-upload delete delete-method="deleting" />
     HTML;
 
-    public const DELETE_METHOD = <<<'HTML'
+    public const string DELETE_METHOD = <<<'HTML'
     use Illuminate\Support\Arr;
     use Illuminate\Http\UploadedFile;
 
@@ -66,13 +66,13 @@ class Upload
     }
     HTML;
 
-    public const MULTIPLE = <<<'HTML'
+    public const string MULTIPLE = <<<'HTML'
     <!-- The Livewire property must be an array -->
 
     <x-upload multiple />
     HTML;
 
-    public const MULTIPLE_BATCHES = <<<'HTML'
+    public const string MULTIPLE_BATCHES = <<<'HTML'
     use Livewire\Component;
     use Livewire\WithFileUploads;
     use Illuminate\Http\UploadedFile;
@@ -110,7 +110,7 @@ class Upload
     }
     HTML;
 
-    public const MULTIPLE_BATCHES_OTHER_PROPERTIES = <<<'HTML'
+    public const string MULTIPLE_BATCHES_OTHER_PROPERTIES = <<<'HTML'
     // Supposing you want to use $files instead of $photos:
 
     public $photos = []; // [tl! remove]
@@ -123,11 +123,11 @@ class Upload
     public function updatedFiles(): void {} // [tl! add]
     HTML;
 
-    public const ACCEPT = <<<'HTML'
+    public const string ACCEPT = <<<'HTML'
     <x-upload accept="application/pdf" />
     HTML;
 
-    public const FOOTER_SLOT = <<<'HTML'
+    public const string FOOTER_SLOT = <<<'HTML'
     <x-upload>
         <x-slot:footer>
             <x-button class="w-full">
@@ -137,7 +137,7 @@ class Upload
     </x-upload>
     HTML;
 
-    public const BEFORE = <<<'HTML'
+    public const string BEFORE = <<<'HTML'
     <script>
         window.TallStackUi = window.TallStackUi || {};
 
@@ -147,7 +147,7 @@ class Upload
     </script>
     HTML;
 
-    public const FOOTER_SLOT_WHEN_UPLOADED = <<<'HTML'
+    public const string FOOTER_SLOT_WHEN_UPLOADED = <<<'HTML'
     <x-upload>
         <x-slot:footer when-uploaded> {{-- [tl! highlight] --}}
             <x-button class="w-full" wire:click="store">
@@ -157,13 +157,13 @@ class Upload
     </x-upload>
     HTML;
 
-    public const EVENTS = <<<'HTML'
+    public const string EVENTS = <<<'HTML'
     <x-upload x-on:upload="console.log($event.detail.files)" />
 
     <x-upload delete x-on:remove="console.log($event.detail.file)" />
     HTML;
 
-    public const PREPARE_STATIC_USAGE = <<<'HTML'
+    public const string PREPARE_STATIC_USAGE = <<<'HTML'
     use Livewire\Component;
     use Illuminate\Support\Facades\File;
     use Illuminate\Support\Facades\Storage;
@@ -195,7 +195,7 @@ class Upload
     }
     HTML;
 
-    public const BLADE_COMPONENT_FOR_STATIC_USAGE = <<<'HTML'
+    public const string BLADE_COMPONENT_FOR_STATIC_USAGE = <<<'HTML'
     <!-- All other options is available when static:
         label, hint, tip,
         footer slot,
@@ -215,7 +215,7 @@ class Upload
              delete />
     HTML;
 
-    public const DELETING_FILE_IN_STATIC_USAGE = <<<'HTML'
+    public const string DELETING_FILE_IN_STATIC_USAGE = <<<'HTML'
     use Illuminate\Support\Arr;
     use Illuminate\Support\Facades\File;
 
@@ -247,7 +247,7 @@ class Upload
     }
     HTML;
 
-    public const PERSONALIZATION = <<<'HTML'
+    public const string PERSONALIZATION = <<<'HTML'
     TallStackUi::customize()
         ->form('upload')
         ->block('block', 'classes');

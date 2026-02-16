@@ -9,9 +9,9 @@
     <x-slot:description>
         Kbd component.
     </x-slot:description>
-    <x-slot:personalization>
-        <livewire:personalization :$personalization component="Kbd" />
-    </x-slot:personalization>
+    <x-slot:customization>
+        <livewire:customization :$customization component="Kbd" />
+    </x-slot:customization>
     <x-section title="Basic Usage" new>
         <x-preview language="blade" :contents="$basic">
             <x-kbd text="Ctrl" />

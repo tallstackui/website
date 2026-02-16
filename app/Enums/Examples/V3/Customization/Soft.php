@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Enums\Examples\V3\Personalization;
+namespace App\Enums\Examples\V3\Customization;
 
 class Soft
 {
@@ -14,7 +14,7 @@ class Soft
     @source '../../app/Providers/*.php';
     HTML;
 
-    public const EXAMPLE = <<<'HTML'
+    public const string EXAMPLE = <<<'HTML'
     use TallStackUi\Facades\TallStackUi;
 
     class AppServiceProvider extends ServiceProvider
@@ -29,13 +29,13 @@ class Soft
 
             // or...
 
-           TallStackUi::personalize('form.input')
+           TallStackUi::customize('form.input')
                ->block('input.base', 'w-full rounded-full');
         }
     }
     HTML;
 
-    public const FLUENT = <<<'HTML'
+    public const string FLUENT = <<<'HTML'
     use TallStackUi\Facades\TallStackUi;
 
     class AppServiceProvider extends ServiceProvider
@@ -63,9 +63,9 @@ class Soft
     }
     HTML;
 
-    public const USAGES = <<<'HTML'
+    public const string USAGES = <<<'HTML'
     use TallStackUi\Facades\TallStackUi;
-    use App\TallStackUi\InputPersonalization;
+    use App\TallStackUi\InputCustomization;
 
     class AppServiceProvider extends ServiceProvider
     {
@@ -73,7 +73,7 @@ class Soft
         {
            TallStackUi::customize()
                ->form('input')
-               ->block('input.base', new InputPersonalization())
+               ->block('input.base', new InputCustomization())
                ->block('icon.wrapper', fn (array $data) => 'px-4 py-2')
                ->block('icon.paddings.left', 'pl-10');
 
@@ -82,7 +82,7 @@ class Soft
             TallStackUi::customize()
                ->form('input')
                ->block([
-                    'input.class' => new InputPersonalization(),
+                    'input.class' => new InputCustomization(),
                     'icon.wrapper' => fn (array $data) => 'px-4 py-2',
                     'icon.paddings.left' => 'pl-10',
                ]);
@@ -90,9 +90,9 @@ class Soft
     }
     HTML;
 
-    public const INVOKABLE_EXAMPLE = <<<'HTML'
+    public const string INVOKABLE_EXAMPLE = <<<'HTML'
     use TallStackUi\Facades\TallStackUi;
-    use App\TallStackUi\InputPersonalization; // [tl! focus]
+    use App\TallStackUi\InputCustomization; // [tl! focus]
 
     class AppServiceProvider extends ServiceProvider
     {
@@ -100,16 +100,16 @@ class Soft
         {
            TallStackUi::customize()
                ->form('input')
-               ->block('input.base', new InputPersonalization()); // [tl! focus]
+               ->block('input.base', new InputCustomization()); // [tl! focus]
         }
     }
     HTML;
 
-    public const INVOKABLE_CLASS = <<<'HTML'
+    public const string INVOKABLE_CLASS = <<<'HTML'
     // You must track this namespace in the TailwindCSS config file!
     namespace App\TallStackUi;
 
-    class InputPersonalization
+    class InputCustomization
     {
         public function __invoke(array $data): string // [tl! highlight]
         {
@@ -118,11 +118,11 @@ class Soft
     }
     HTML;
 
-    public const USING_COMPONENT = <<<'HTML'
+    public const string USING_COMPONENT = <<<'HTML'
     <x-input label="Name" hint="Your full name" />
     HTML;
 
-    public const DATA = <<<'HTML'
+    public const string DATA = <<<'HTML'
     [
         "label" => "Name"
         "hint" => "Your full name"
@@ -135,7 +135,7 @@ class Soft
         "componentName" => "input"
         "attributes" => Illuminate\View\ComponentAttributeBag {...}
         "blade" => Illuminate\View\InvokableComponentVariable {...}
-        "personalization" => Illuminate\View\InvokableComponentVariable {...}
+        "customization" => Illuminate\View\InvokableComponentVariable {...}
         "ignoredParameterNames" => Illuminate\View\InvokableComponentVariable {...}
         "classes" => TallStackUi\View\Components\Form\Input::classes(?Closure $callback = null): [...]
         "slot" => Illuminate\View\ComponentSlot {...}
@@ -147,7 +147,7 @@ class Soft
     ]
     HTML;
 
-    public const REPLACE = <<<'HTML'
+    public const string REPLACE = <<<'HTML'
     use TallStackUi\Facades\TallStackUi;
 
     class AppServiceProvider extends ServiceProvider
@@ -172,7 +172,7 @@ class Soft
     }
     HTML;
 
-    public const HELPERS = <<<'HTML'
+    public const string HELPERS = <<<'HTML'
     use TallStackUi\Facades\TallStackUi;
 
     class AppServiceProvider extends ServiceProvider
@@ -212,7 +212,7 @@ class Soft
     }
     HTML;
 
-    public const REAL_EXAMPLE = <<<'HTML'
+    public const string REAL_EXAMPLE = <<<'HTML'
     use TallStackUi\Facades\TallStackUi;
 
     class AppServiceProvider extends ServiceProvider
@@ -227,28 +227,28 @@ class Soft
     }
     HTML;
 
-    public const SCOPED_PERSONALIZATION_DEFINITION = <<<'HTML'
+    public const string SCOPED_CUSTOMIZATION_DEFINITION = <<<'HTML'
     use TallStackUi\Facades\TallStackUi;
 
     class AppServiceProvider extends ServiceProvider
     {
         public function boot(): void
         {
-            TallStackUi::personalize('alert')
+            TallStackUi::customize('alert')
                 ->scope('circle') // [tl! highlight]
                 ->block('wrapper')
                 ->replace('rounded-lg', 'rounded-full');
 
             // Or ...
 
-            TallStackUi::personalize(component: 'alert', scope: 'circle') // [tl! highlight]
+            TallStackUi::customize(component: 'alert', scope: 'circle') // [tl! highlight]
                 ->block('wrapper')
                 ->replace('rounded-lg', 'rounded-full');
         }
     }
     HTML;
 
-    public const SCOPED_PERSONALIZATION_WAYS = <<<'HTML'
+    public const string SCOPED_CUSTOMIZATION_WAYS = <<<'HTML'
     use TallStackUi\Facades\TallStackUi;
 
     class AppServiceProvider extends ServiceProvider
@@ -256,13 +256,13 @@ class Soft
         public function boot(): void
         {
             // 1
-            TallStackUi::personalize('alert') // [tl! focus:1,highlight:1]
+            TallStackUi::customize('alert') // [tl! focus:1,highlight:1]
                 ->scope('circle')
                 ->block('wrapper')
                 ->replace('rounded-lg', 'rounded-full');
 
             // Or
-            TallStackUi::personalize(component: 'alert', scope: 'circle') // [tl! focus,highlight]
+            TallStackUi::customize(component: 'alert', scope: 'circle') // [tl! focus,highlight]
                 ->block('wrapper')
                 ->replace('rounded-lg', 'rounded-full');
 
@@ -276,11 +276,11 @@ class Soft
     }
     HTML;
 
-    public const SCOPED_PERSONALIZATION_USAGE = <<<'HTML'
+    public const string SCOPED_CUSTOMIZATION_USAGE = <<<'HTML'
     <x-alert text="This is a fully round Alert component" scope="circle" />
     HTML;
 
-    public const PERSONALIZATION = <<<'HTML'
+    public const string CUSTOMIZATION = <<<'HTML'
     TallStackUi::customize()
         ->form('checkbox')
         ->block('block', 'classes');

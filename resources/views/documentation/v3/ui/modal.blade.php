@@ -9,9 +9,9 @@
     <x-slot:description>
         Modal component.
     </x-slot:description>
-    <x-slot:personalization>
-        <livewire:personalization :$personalization component="Modal" />
-    </x-slot:personalization>
+    <x-slot:customization>
+        <livewire:customization :$customization component="Modal" />
+    </x-slot:customization>
     <x-section title="Basic Usage">
         <x-preview language="blade" :contents="$basic">
             <x-modal id="basic-modal">
@@ -232,7 +232,7 @@
             <livewire:documentation.modal.entangle/>
         </x-preview>
     </x-section>
-    <x-section title="Wireable Personalized" description="Customize which property to use to control the modal via Livewire.">
+    <x-section title="Wireable Customized" description="Customize which property to use to control the modal via Livewire.">
         <x-preview language="blade" :contents="$wireableCustomized">
             <livewire:documentation.modal.customentangle/>
         </x-preview>

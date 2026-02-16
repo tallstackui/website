@@ -4,7 +4,7 @@ namespace App\Enums\Examples\V2;
 
 class ComponentPrefix
 {
-    public const CONFIGURATION = <<<'HTML'
+    public const string CONFIGURATION = <<<'HTML'
     <?php
 
     use TallStackUi\View\Components;
@@ -27,19 +27,19 @@ class ComponentPrefix
         // ...
     HTML;
 
-    public const PUBLISH = <<<'HTML'
+    public const string PUBLISH = <<<'HTML'
     php artisan vendor:publish --tag=tallstackui.config
     HTML;
 
-    public const ENVIRONMENT = <<<'HTML'
+    public const string ENVIRONMENT = <<<'HTML'
     TALLSTACKUI_PREFIX="ts-"
     HTML;
 
-    public const COMMAND = <<<'HTML'
+    public const string COMMAND = <<<'HTML'
     php artisan tallstackui:setup-prefix
     HTML;
 
-    public const EXAMPLES = <<<'HTML'
+    public const string EXAMPLES = <<<'HTML'
     <!-- Prefixing: "ts-" -->
 
     <x-alert /> {{-- [tl! remove] --}}

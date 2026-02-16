@@ -9,9 +9,9 @@
     <x-slot:description>
         Alert components.
     </x-slot:description>
-    <x-slot:personalization>
-        <livewire:personalization :$personalization component="Alert" />
-    </x-slot:personalization>
+    <x-slot:customization>
+        <livewire:customization :$customization component="Alert" />
+    </x-slot:customization>
     <x-section title="Basic Usage">
         <x-preview language="blade" :contents="$basic">
             <x-alert>

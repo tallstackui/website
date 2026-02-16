@@ -4,15 +4,15 @@ namespace App\Enums\Examples\V2\Helpers;
 
 class EnvBar
 {
-    public const INSTALLATION = <<<'HTML'
+    public const string INSTALLATION = <<<'HTML'
     composer require tallstackui/envbar
     HTML;
 
-    public const CONFIGURATION = <<<'HTML'
+    public const string CONFIGURATION = <<<'HTML'
     php artisan vendor:publish --tag=envbar-config
     HTML;
 
-    public const GATE = <<<'HTML'
+    public const string GATE = <<<'HTML'
     use App\Models\User;
     use Illuminate\Support\ServiceProvider;
     use Illuminate\Support\Facades\Gate; // [tl! focus]
@@ -33,7 +33,7 @@ class EnvBar
     }
     HTML;
 
-    public const COLORS = <<<'HTML'
+    public const string COLORS = <<<'HTML'
     // ...
     
     'environments' => [
@@ -46,7 +46,7 @@ class EnvBar
     // ...
     HTML;
 
-    public const IGNORES = <<<'HTML'
+    public const string IGNORES = <<<'HTML'
     // ...
     
     'ignore_on' => [
@@ -58,19 +58,19 @@ class EnvBar
     // ...
     HTML;
 
-    public const LINKS = <<<'HTML'
+    public const string LINKS = <<<'HTML'
     ENVBAR_LINKS="https://google.com.br,https://github.com"
     HTML;
 
-    public const LABELS = <<<'HTML'
+    public const string LABELS = <<<'HTML'
     ENVBAR_LINKS="Google|https://google.com.br,GitHub|https://github.com"
     HTML;
 
-    public const FLUSH = <<<'HTML'
+    public const string FLUSH = <<<'HTML'
     php artisan envbar:flush
     HTML;
 
-    public const SHOW = <<<'HTML'
+    public const string SHOW = <<<'HTML'
     php artisan envbar:show
     HTML;
 }

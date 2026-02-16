@@ -9,9 +9,9 @@
     <x-slot:description>
         Tooltip component.
     </x-slot:description>
-    <x-slot:personalization>
-        <livewire:personalization :$personalization component="Tooltip" />
-    </x-slot:personalization>
+    <x-slot:customization>
+        <livewire:customization :$customization component="Tooltip" />
+    </x-slot:customization>
     <x-section title="Basic Usage">
         <x-preview language="blade" :contents="$basic">
             <x-tooltip text="TallStackUI" />

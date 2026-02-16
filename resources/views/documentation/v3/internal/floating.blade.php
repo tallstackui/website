@@ -1,6 +1,6 @@
 @php
-    $personalization = <<<'HTML'
-    TallStackUi::personalize()
+    $customization = <<<'HTML'
+    TallStackUi::customize()
         ->floating()
         ->block('block', 'classes');
     HTML;
@@ -14,14 +14,14 @@
         The generic floating component used in: form date, form time, form
         password, form upload, form color, dropdown, and select styled.
     </x-slot:description>
-    <x-slot:personalization>
-        <livewire:personalization :$personalization component="Floating" />
-    </x-slot:personalization>
-    <x-internals-warning />
+    <x-slot:customization>
+        <livewire:customization :$customization component="Floating" />
+    </x-slot:customization>
+    <x-internals-warning customization />
     <x-section class="mt-4">
         <p>
-            You can individually personalize the floating of each component. Each component that uses floating has a special
-            <x-block>floating</x-block> that allows individual soft personalization of that component's floating. Here is
+            You can individually customize the floating of each component. Each component that uses floating has a special
+            <x-block>floating</x-block> that allows individual soft customization of that component's floating. Here is
             the list of components that use floating:
         </p>
         <ul class="mt-2 list-decimal list-inside">

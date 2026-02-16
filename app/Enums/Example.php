@@ -62,10 +62,16 @@ enum Example: string
     case WithoutLivewire = 'WithoutLivewire';
     // endregion
 
-    // region Personalization
+    // region Personalization (v1/v2)
     case ColorPersonalization = 'Personalization\\Color';
     case DeepPersonalization = 'Personalization\\Deep';
     case SoftPersonalization = 'Personalization\\Soft';
+    // endregion
+
+    // region Customization (v3)
+    case ColorCustomization = 'Customization\\Color';
+    case DeepCustomization = 'Customization\\Deep';
+    case SoftCustomization = 'Customization\\Soft';
     // endregion
 
     // region UI
@@ -111,19 +117,21 @@ enum Example: string
 
         $constants = (new ReflectionClass($class))->getConstants();
 
-        $personalize = <<<'HTML'
+        $wrapper = <<<'HTML'
         // AppServiceProvider, "boot" method.
 
         {%model%}
         HTML;
 
         return [...collect($constants)
-            ->mapWithKeys(function (string $value, string $key) use ($personalize) {
+            ->mapWithKeys(function (string $value, string $key) use ($wrapper) {
+                $hasApiCall = str_contains($value, 'TallStackUi::personalize()') || str_contains($value, 'TallStackUi::customize()');
+
                 return [
                     str($key)->lower()
                         ->camel()
-                        ->value() => ! str_contains($value, 'AppServiceProvider') && str_contains($value, 'TallStackUi::personalize()')
-                    ? str_replace('{%model%}', $value, $personalize)
+                        ->value() => ! str_contains($value, 'AppServiceProvider') && $hasApiCall
+                    ? str_replace('{%model%}', $value, $wrapper)
                     : $value,
                 ];
             })->toArray()];

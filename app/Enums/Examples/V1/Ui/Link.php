@@ -4,7 +4,7 @@ namespace App\Enums\Examples\V1\Ui;
 
 class Link
 {
-    public const BASIC = <<<'HTML'
+    public const string BASIC = <<<'HTML'
     <x-link href="https://google.com.br">
         TallStackUI
     </x-link>
@@ -22,7 +22,7 @@ class Link
     <x-link href="https://tallstackui.com/docs/ui/link" />
     HTML;
 
-    public const SIZES = <<<'HTML'
+    public const string SIZES = <<<'HTML'
     <x-link href="https://google.com.br/" text="TallStackUI" sm />
 
     <!-- default size -->
@@ -31,13 +31,13 @@ class Link
     <x-link href="https://google.com.br/" text="TallStackUI" lg />
     HTML;
 
-    public const ICONS = <<<'HTML'
+    public const string ICONS = <<<'HTML'
     <x-link href="https://google.com.br/" text="TallStackUI" icon="link" />
 
     <x-link href="https://google.com.br/" text="TallStackUI" icon="arrow-up-right" position="right" />
     HTML;
 
-    public const BLANK_BOLD_UNDERLINE = <<<'HTML'
+    public const string BLANK_BOLD_UNDERLINE = <<<'HTML'
     <x-link href="https://google.com.br/" text="TallStackUI" blank />
 
     <x-link href="https://google.com.br/" text="TallStackUI" bold />
@@ -45,7 +45,7 @@ class Link
     <x-link href="https://google.com.br/" text="TallStackUI" underline />
     HTML;
 
-    public const QUERY_FRAGMENT = <<<'HTML'
+    public const string QUERY_FRAGMENT = <<<'HTML'
     <!-- The "query" accepts an array or an instance of Collection. -->
 
     <x-link href="https://google.com.br/" text="TallStackUI" :query="['status' => 'active']" />
@@ -53,7 +53,7 @@ class Link
     <x-link href="https://google.com.br/" text="TallStackUI" fragment="query-string-fragment-options" />
     HTML;
 
-    public const COLORS = <<<'HTML'
+    public const string COLORS = <<<'HTML'
     <x-link href="https://google.com.br/" text="Primary" />
     <x-link href="https://google.com.br/" text="Secondary" color="secondary" />
     <x-link href="https://google.com.br/" text="Slate" color="slate" />
@@ -82,7 +82,7 @@ class Link
     <x-link href="https://google.com.br/" text="Black" color="black" />
     HTML;
 
-    public const WITHOUT_COLOR = <<<'HTML'
+    public const string WITHOUT_COLOR = <<<'HTML'
     <x-link href="https://google.com.br/" text="TallStackUI" colorless />
 
     <!-- or -->
@@ -90,13 +90,13 @@ class Link
     <x-link href="https://google.com.br/" text="TallStackUI" :color="null" />
     HTML;
 
-    public const NAVIGATE = <<<'HTML'
+    public const string NAVIGATE = <<<'HTML'
     <x-link :href="route('route-name-goes-here')" text="Navigate" navigate />
 
     <x-link :href="route('route-name-goes-here')" text="Navigate Hover" navigate-hover />
     HTML;
 
-    public const PERSONALIZATION = <<<'HTML'
+    public const string PERSONALIZATION = <<<'HTML'
     TallStackUi::customize()
         ->link()
         ->block('block', 'classes');

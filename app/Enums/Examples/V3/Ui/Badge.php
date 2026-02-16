@@ -4,19 +4,19 @@ namespace App\Enums\Examples\V3\Ui;
 
 class Badge
 {
-    public const BASIC = <<<'HTML'
+    public const string BASIC = <<<'HTML'
     <x-badge text="TallStackUi" />
     HTML;
 
-    public const SQUARE = <<<'HTML'
+    public const string SQUARE = <<<'HTML'
     <x-badge text="TallStackUi" square />
     HTML;
 
-    public const ROUND = <<<'HTML'
+    public const string ROUND = <<<'HTML'
     <x-badge text="TallStackUi" round />
     HTML;
 
-    public const LEFT_RIGHT = <<<'HTML'
+    public const string LEFT_RIGHT = <<<'HTML'
     <x-badge lg>
         <x-slot:left>
             <p class="text-yellow-300 text-xs mr-2">+99</p>
@@ -31,19 +31,19 @@ class Badge
     </x-badge>
     HTML;
 
-    public const ICONS = <<<'HTML'
+    public const string ICONS = <<<'HTML'
     <x-badge text="TallStackUi" icon="users" position="left" />
     <x-badge text="TallStackUi" icon="cog" position="right" />
     HTML;
 
-    public const SIZES = <<<'HTML'
+    public const string SIZES = <<<'HTML'
     <x-badge text="XS" xs />
     <x-badge text="SM" sm />
     <x-badge text="MD" md />
     <x-badge text="LG" lg />
     HTML;
 
-    public const COLORS = <<<'HTML'
+    public const string COLORS = <<<'HTML'
     <x-badge text="Primary" />
     <x-badge text="Secondary" color="secondary" />
     <x-badge text="Slate" color="slate" />
@@ -71,7 +71,7 @@ class Badge
     <x-badge text="Black" color="black" />
     HTML;
 
-    public const LIGHTS = <<<'HTML'
+    public const string LIGHTS = <<<'HTML'
     <x-badge text="Primary" light />
     <x-badge text="Secondary" color="secondary" light />
     <x-badge text="Slate" color="slate" light />
@@ -99,7 +99,7 @@ class Badge
     <x-badge text="Black" color="black" light />
     HTML;
 
-    public const OUTLINES = <<<'HTML'
+    public const string OUTLINES = <<<'HTML'
     <x-badge text="Primary" outline />
     <x-badge text="Secondary" color="secondary" outline />
     <x-badge text="Slate" color="slate" outline />
@@ -127,7 +127,7 @@ class Badge
     <x-badge text="Black" color="black" outline />
     HTML;
 
-    public const PERSONALIZATION = <<<'HTML'
+    public const string CUSTOMIZATION = <<<'HTML'
     TallStackUi::customize()
         ->badge()
         ->block('block', 'classes');

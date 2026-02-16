@@ -3,11 +3,12 @@
     'language' => 'php',
     'disableCopy' => null,
     'personalization' => false,
+    'customization' => false,
 ])
 
 @php
     $contents ??= $slot->toHtml();
-    $margin = $personalization ? 'mt-4' : null;
+    $margin = ($personalization || $customization) ? 'mt-4' : null;
 @endphp
 
 <div class="relative">

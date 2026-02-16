@@ -26,7 +26,7 @@ new class extends Component {
         ],
     ];
 
-    public function deleted($index, $row)
+    public function deleted($index, $row): void
     {
         $this->dialog()
             ->success('Deleted', "Key <b>{$row[$index]['key']}</b> deleted successfully.")

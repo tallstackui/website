@@ -4,31 +4,31 @@
 
 <x-layout :$content>
     <x-slot:title>
-        Soft Personalization
+        Soft Customization
     </x-slot:title>
     <x-slot:description>
-        The soft personalization.
+        The soft customization.
     </x-slot:description>
     <x-section title="Concept" disable-copy>
         <p>
-            The soft personalization involves personalizing components at runtime, either through a service provider like
-            AppServiceProvider or object classes. The idea behind soft personalization is to explore the building blocks
-            of personalization for each component. Even if you are starting with Laravel, with a little attention to the docs
-            below, you will be able to fully personalize the components using this concept.
+            The soft customization involves customizing components at runtime, either through a service provider like
+            AppServiceProvider or object classes. The idea behind soft customization is to explore the building blocks
+            of customization for each component. Even if you are starting with Laravel, with a little attention to the docs
+            below, you will be able to fully customize the components using this concept.
         </p>
     </x-section>
     <x-section title="Tracing TailwindCSS Classes" disable-copy>
         <div class="space-y-4">
             @if (! $tailwindcss)
                 <p>
-                    Since the idea of soft personalization is to apply personalization through PHP object classes, the first thing you
+                    Since the idea of soft customization is to apply customization through PHP object classes, the first thing you
                     need to do is make sure that TailwindCSS tracks the classes that will be defined from your application's <x-block>*.php</x-block> files.
                     To do this, you need to edit your <x-block>tailwind.config.js</x-block> file by inserting this content:
                 </p>
                 <x-code language="js" :contents="$tailwindcssV3" disable-copy/>
             @else
                 <p>
-                    Since the idea of soft personalization is to apply personalization through PHP object classes, the first thing you
+                    Since the idea of soft customization is to apply customization through PHP object classes, the first thing you
                     need to do is make sure that TailwindCSS tracks the classes that will be defined from your application's <x-block>*.php</x-block> files.
                     To do this, you need to edit your <x-block>app.css</x-block> CSS file by inserting this content:
                 </p>
@@ -36,10 +36,10 @@
             @endif
         </div>
     </x-section>
-    <x-section title="Start the Personalization" disable-copy>
+    <x-section title="Start the Customization" disable-copy>
         <div class="space-y-4">
             <p>
-                Now that you havve prepared TailwindCSS to track your custom classes, let's start
+                Now that you have prepared TailwindCSS to track your custom classes, let's start
                 customizing your components. Let's take a look at an example:
             </p>
             <x-code language="php" :contents="$example" disable-copy/>
@@ -51,29 +51,29 @@
             </p>
         </div>
     </x-section>
-    <x-section title="Personalization Blocks" disable-copy>
+    <x-section title="Customization Blocks" disable-copy>
         <div class="space-y-4">
             <p>
                 At this point you may be wondering how to "discover" the blocks of each component. To do this, when
                 browsing the documentation of each component individually you will notice a button called
-                <x-block>Personalize: {Component Name}</x-block> which, when clicked, will display a modal containing
+                <x-block>Customize: {Component Name}</x-block> which, when clicked, will display a modal containing
                 all the blocks - and their names, as well as the original classes that are defined by each block, for example:
             </p>
-            <livewire:personalization :$personalization component="Form\Checkbox" />
+            <livewire:customization :$customization component="Form\Checkbox" />
         </div>
     </x-section>
-    <x-section title="Fluent Personalization" disable-copy>
+    <x-section title="Fluent Customization" disable-copy>
         <p>
-            Since soft personalization was created to be easy to use, just like <a href="https://pestphp.com" target="_blank" class="underline">Pest</a>,
-            the soft personalization offers a concept of fluency when using the <x-block>and</x-block> like a property or method.
-            The idea behind this approach is to personalize more than one component at the same time.
+            Since soft customization was created to be easy to use, just like <a href="https://pestphp.com" target="_blank" class="underline">Pest</a>,
+            the soft customization offers a concept of fluency when using the <x-block>and</x-block> like a property or method.
+            The idea behind this approach is to customize more than one component at the same time.
         </p>
         <x-code language="php" :contents="$fluent" disable-copy/>
     </x-section>
-    <x-section title="Multiple Personalization Ways" disable-copy>
+    <x-section title="Multiple Customization Ways" disable-copy>
         <p>
             Since a component has several blocks that organize the classes applied to the component,
-            you can personalize one block at a time or all of them at once:
+            you can customize one block at a time or all of them at once:
         </p>
         <x-code language="php" :contents="$usages" disable-copy/>
     </x-section>
@@ -81,12 +81,12 @@
         <div class="space-y-4">
             <p>
                 You may have noticed that in the example above we used the <x-block>InputPersonalization</x-block> class.
-                This is a simple invokable object class, because soft personalization also allows you to make your personalization into object invokable
+                This is a simple invokable object class, because soft customization also allows you to make your customization into object invokable
                 classes. This approach is ideal if you are someone who prioritizes organization above all else. Let's take a look at an example:
             </p>
             <p>Preparing:</p>
             <x-code language="php" :contents="$invokableExample" disable-copy/>
-            <p>Personalizing:</p>
+            <p>Customizing:</p>
             <x-code language="php" :contents="$invokableClass" disable-copy/>
         </div>
     </x-section>
@@ -106,7 +106,7 @@
         <div class="space-y-4">
             Although all the examples above are valid, they overwrite the original block classes by defining the second parameter
             of the <x-block>block</x-block> method, this is a way of doing a <u>complete replacement of the original component classes
-            by the blocks</u>, an expected behavior when the soft personalization was created. Luckily we have four special helpers to interact
+            by the blocks</u>, an expected behavior when the soft customization was created. Luckily we have four special helpers to interact
             with the original classes by touching their content but preserving everything else. Let's take a look at an example:
             <x-code :contents="$replace" disable-copy/>
             <p>
@@ -124,13 +124,13 @@
             <x-code :contents="$realExample" disable-copy/>
         </div>
     </x-section>
-    <x-section title="Scoped Soft Personalization" disable-copy>
+    <x-section title="Scoped Soft Customization" disable-copy>
         <div class="space-y-4">
             <p>
-                While soft personalization is powerful and easy to use, there is a catch: <u>all soft personalization are applied to all components</u>,
-                and you cannot assign specific personalization to a component only once. However, just like in VueJS, where we have scoped CSS -
-                CSS applied only to the component that defined the scope, soft personalization offers the same concept of scoped personalization -
-                personalization that will only be applied to the components that have the scope defined.
+                While soft customization is powerful and easy to use, there is a catch: <u>all soft customization are applied to all components</u>,
+                and you cannot assign specific customization to a component only once. However, just like in VueJS, where we have scoped CSS -
+                CSS applied only to the component that defined the scope, soft customization offers the same concept of scoped customization -
+                customization that will only be applied to the components that have the scope defined.
                 Let's take a look at an example:
             </p>
             <div class="my-4 space-y-4">
@@ -142,27 +142,27 @@
             </div>
             <p>
                 Notice how one alert is normal while the other is fully rounded? This was
-                only possible thanks to scoped soft personalization, which instead of turning all alerts into
+                only possible thanks to scoped soft customization, which instead of turning all alerts into
                 rounded alerts, turned only the one that was defined with the circle scope. Now let's see how
                 to achieve the same result as in the example above:
             </p>
             <p>
-                First, let's do the same soft personalization via service provider:
+                First, let's do the same soft customization via service provider:
             </p>
-            <x-code :contents="$scopedPersonalizationDefinition" disable-copy/>
+            <x-code :contents="$scopedCustomizationDefinition" disable-copy/>
             <p>
-                The difference is that we must instruct that personalization to be applied to a scope - <b>defined by a unique name</b>,
+                The difference is that we must instruct that customization to be applied to a scope - <b>defined by a unique name</b>,
                 and as you can see above, there are two ways to define the scope name. Just choose one of them and use it as you wish.
             </p>
             <p>
                 You have three different ways to define scopes:
             </p>
-            <x-code :contents="$scopedPersonalizationWays" disable-copy/>
+            <x-code :contents="$scopedCustomizationWays" disable-copy/>
             <p>
                 <b>Lastly and most importantly</b>, we must apply the use of the scope to the components that are <x-block>alert</x-block>
-                and that we want to receive the effects of the defined personalization:
+                and that we want to receive the effects of the defined customization:
             </p>
-            <x-code language="blade" :contents="$scopedPersonalizationUsage" disable-copy/>
+            <x-code language="blade" :contents="$scopedCustomizationUsage" disable-copy/>
             <x-warning>
                 You can not set more than one scope in the same component.
             </x-warning>

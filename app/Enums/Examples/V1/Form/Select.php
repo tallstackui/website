@@ -6,39 +6,39 @@ class Select
 {
     /* Native */
 
-    public const NATIVE_BASIC = <<<'HTML'
+    public const string NATIVE_BASIC = <<<'HTML'
     <x-select.native :options="[1,2,3]" />
     HTML;
 
-    public const NATIVE_LABEL_HINT = <<<'HTML'
+    public const string NATIVE_LABEL_HINT = <<<'HTML'
     <x-select.native label="Select One Option" hint="You can choose 1, 2 or 3" :options="[1,2,3]" />
     HTML;
 
-    public const NATIVE_ADVANCED = <<<'HTML'
+    public const string NATIVE_ADVANCED = <<<'HTML'
     <x-select.native :options="[
         ['label' => 'TALL', 'value' => 1],
         ['label' => 'LIVT', 'value' => 2],
     ]" select="label:label|value:value" />
     HTML;
 
-    public const NATIVE_INVALIDATE = <<<'HTML'
+    public const string NATIVE_INVALIDATE = <<<'HTML'
     <x-select.native :options="[1,2,3]" invalidate />
     HTML;
 
     /* Styled Common */
 
-    public const STYLED_BASIC = <<<'HTML'
+    public const string STYLED_BASIC = <<<'HTML'
     <x-select.styled :options="[1,2,3]" />
     HTML;
 
-    public const STYLED_LABEL_HINT = <<<'HTML'
+    public const string STYLED_LABEL_HINT = <<<'HTML'
     <x-select.styled label="Select One Option"
                      placeholder="Custom Placeholder"
                      hint="You can choose 1, 2 or 3"
                      :options="[1,2,3]" />
     HTML;
 
-    public const STYLED_PLACEHOLDERS = <<<'HTML'
+    public const string STYLED_PLACEHOLDERS = <<<'HTML'
     <!-- Changing only the placeholder of the input -->
     <x-select.styled placeholder="Custom Placeholder" ... />
 
@@ -50,25 +50,25 @@ class Select
                      ]" ... />
     HTML;
 
-    public const STYLED_REQUIRED = <<<'HTML'
+    public const string STYLED_REQUIRED = <<<'HTML'
     <x-select.styled :options="[1,2,3]" required />
     HTML;
 
-    public const STYLED_MULTIDIMENSIONAL = <<<'HTML'
+    public const string STYLED_MULTIDIMENSIONAL = <<<'HTML'
     <x-select.styled  :options="[
         ['label' => 'TALL', 'value' => 1],
         ['label' => 'LIVT', 'value' => 2],
     ]" select="label:label|value:value" />
     HTML;
 
-    public const STYLED_DISABLED = <<<'HTML'
+    public const string STYLED_DISABLED = <<<'HTML'
     <x-select.styled :options="[
         ['label' => 'TALL', 'value' => 1, 'disabled' => true],
         ['label' => 'LIVT', 'value' => 2],
     ]" select="label:label|value:value" />
     HTML;
 
-    public const STYLED_LIMIT = <<<'HTML'
+    public const string STYLED_LIMIT = <<<'HTML'
     <!-- Applicable only when selection is multiple -->
 
     <x-select.styled :limit="2" :options="[
@@ -79,7 +79,7 @@ class Select
     ]" select="label:label|value:value" multiple />
     HTML;
 
-    public const STYLED_IMAGE = <<<'HTML'
+    public const string STYLED_IMAGE = <<<'HTML'
     <!-- The index of the image can be: `image`, `img`, or `img_src` -->
 
     <x-select.styled :options="[
@@ -89,7 +89,7 @@ class Select
     ]" select="label:label|value:value" />
     HTML;
 
-    public const STYLED_DESCRIPTION = <<<'HTML'
+    public const string STYLED_DESCRIPTION = <<<'HTML'
     <!-- The index of the description can be: `description` or `note` -->
 
     <x-select.styled :options="[
@@ -99,18 +99,18 @@ class Select
     ]" select="label:label|value:value" />
     HTML;
 
-    public const STYLED_MULTIPLE = <<<'HTML'
+    public const string STYLED_MULTIPLE = <<<'HTML'
     <x-select.styled :options="[1,2,3,4,5,6]" multiple />
     HTML;
 
-    public const STYLED_SEARCHABLE = <<<'HTML'
+    public const string STYLED_SEARCHABLE = <<<'HTML'
     <x-select.styled :options="[
         ['label' => 'TALL', 'value' => 1],
         ['label' => 'LIVT', 'value' => 2],
     ]" select="label:label|value:value" searchable />
     HTML;
 
-    public const STYLED_SLOT = <<<'HTML'
+    public const string STYLED_SLOT = <<<'HTML'
     <x-select.styled searchable :options="[1,2,3]">
         <x-slot:after>
             <div class="px-2 mb-2 flex justify-center items-center">
@@ -122,7 +122,7 @@ class Select
     </x-select.styled>
     HTML;
 
-    public const STYLED_EVENTS = <<<'HTML'
+    public const string STYLED_EVENTS = <<<'HTML'
     <x-select.styled :options="[
         ['label' => 'TALL', 'value' => 1],
         ['label' => 'LIVT', 'value' => 2],
@@ -134,12 +134,12 @@ class Select
 
     /* Styled API */
 
-    public const STYLED_API = <<<'HTML'
+    public const string STYLED_API = <<<'HTML'
     <x-select.styled :request="route('api.users')"
                      select="label:name|value:id" />
     HTML;
 
-    public const STYLED_API_ADVANCED = <<<'HTML'
+    public const string STYLED_API_ADVANCED = <<<'HTML'
     <!-- Method can be 'get' or 'post' -->
 
     <x-select.styled :request="[
@@ -149,13 +149,13 @@ class Select
                      ]" select="label:name|value:id" />
     HTML;
 
-    public const PERSONALIZATION_NATIVE = <<<'HTML'
+    public const string PERSONALIZATION_NATIVE = <<<'HTML'
     TallStackUi::customize()
         ->select()
         ->block('block', 'classes');
     HTML;
 
-    public const PERSONALIZATION_STYLED = <<<'HTML'
+    public const string PERSONALIZATION_STYLED = <<<'HTML'
     TallStackUi::customize()
         ->select('styled')
         ->block('block', 'classes');

@@ -9,9 +9,9 @@
     <x-slot:description>
         Banner component.
     </x-slot:description>
-    <x-slot:personalization>
-        <livewire:personalization :$personalization component="Banner" />
-    </x-slot:personalization>
+    <x-slot:customization>
+        <livewire:customization :$customization component="Banner" />
+    </x-slot:customization>
     <x-section title="Concept" anchor="static-concept" disable-copy>
         The banner component is a component intended to display text at the top of the page. It has two usage approaches: static usage
         to display fixed or random messages or Livewire integration to display messages that comes from the backend to the frontend.

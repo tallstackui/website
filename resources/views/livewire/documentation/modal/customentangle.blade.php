@@ -3,16 +3,16 @@
 use Livewire\Component;
 
 return new class extends Component {
-    public bool $tallstackui = false;
+    public bool $modal = false;
 };
 
 ?>
 
 <div>
-    <x-modal title="TallStackUI" wire="tallstackui">
+    <x-modal title="TallStackUI" wire>
         TallStackUI
     </x-modal>
-    <x-button wire:click="$toggle('tallstackui')">
+    <x-button wire:click="$toggle('modal')">
         Open Modal
     </x-button>
 </div>

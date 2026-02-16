@@ -4,7 +4,7 @@ namespace App\Enums\Examples\V2\Ui;
 
 class Layout
 {
-    public const LAYOUT = <<<'HTML'
+    public const string LAYOUT = <<<'HTML'
     <body>
 
         <x-layout> <!-- [tl! focus:22] -->
@@ -35,7 +35,7 @@ class Layout
     </body>
     HTML;
 
-    public const HEADER = <<<'HTML'
+    public const string HEADER = <<<'HTML'
     <x-slot:header>
         <x-layout.header>
             <!-- ... -->
@@ -43,13 +43,13 @@ class Layout
     </x-slot:header>
     HTML;
 
-    public const HEADER_WITHOUT_BUTTON = <<<'HTML'
+    public const string HEADER_WITHOUT_BUTTON = <<<'HTML'
     <x-layout.header without-mobile-button>
         <!-- ... -->
     </x-layout.header>
     HTML;
 
-    public const JAVASCRIPT = <<<'HTML'
+    public const string JAVASCRIPT = <<<'HTML'
     <!-- Opening -->
     <button x-on:click="$dispatch('tallstackui-menu-mobile', { status : true })">
         Open Mobile
@@ -61,7 +61,7 @@ class Layout
     </button>
     HTML;
 
-    public const MENU = <<<'HTML'
+    public const string MENU = <<<'HTML'
     <x-slot:menu>
         <x-side-bar>
             <!-- ... -->
@@ -69,7 +69,7 @@ class Layout
     </x-slot:menu>
     HTML;
 
-    public const TOP = <<<'HTML'
+    public const string TOP = <<<'HTML'
     <div x-data="{ tallStackUiMenuMobile : false }" x-on:tallstackui-menu-mobile.window="tallStackUiMenuMobile = $event.detail.status">
         @if ($top) {{-- [tl! focus:2] --}}
             {{ $top }}
@@ -82,7 +82,7 @@ class Layout
     </div>
     HTML;
 
-    public const FOOTER = <<<'HTML'
+    public const string FOOTER = <<<'HTML'
     <div x-data="{ tallStackUiMenuMobile : false }" x-on:tallstackui-menu-mobile.window="tallStackUiMenuMobile = $event.detail.status">
         <!-- ... -->
 
@@ -92,7 +92,7 @@ class Layout
     </div>
     HTML;
 
-    public const HEADER_SLOTS = <<<'HTML'
+    public const string HEADER_SLOTS = <<<'HTML'
     <x-layout.header>
         <x-slot:left>
             <!-- ... -->
@@ -108,13 +108,13 @@ class Layout
     </x-layout.header>
     HTML;
 
-    public const SIDEBAR = <<<'HTML'
+    public const string SIDEBAR = <<<'HTML'
     <x-side-bar>
         <!-- ... -->
     </x-side-bar>
     HTML;
 
-    public const SIDEBAR_OPTIONS = <<<'HTML'
+    public const string SIDEBAR_OPTIONS = <<<'HTML'
     <x-side-bar smart navigate thin-scroll collapsible>
         <x-slot:brand>
             <div class="flex justify-center">
@@ -126,7 +126,7 @@ class Layout
     </x-side-bar>
     HTML;
 
-    public const ITEM = <<<'HTML'
+    public const string ITEM = <<<'HTML'
     <!-- Individual -->
     <x-side-bar.item text="Home" icon="home" :route="route('dashboard')" />
 
@@ -136,13 +136,13 @@ class Layout
     </x-side-bar.item>
     HTML;
 
-    public const ATTRIBUTES = <<<'HTML'
+    public const string ATTRIBUTES = <<<'HTML'
     <x-side-bar.item text="Admin" opened>
         <x-side-bar.item text="Home" icon="home" current :route="route('admin.dashboard')" />
     </x-side-bar.item>
     HTML;
 
-    public const MATCH = <<<'HTML'
+    public const string MATCH = <<<'HTML'
     <x-side-bar.item text="Admin" :opened="route()->requestIs('admin.*')">
         <x-side-bar.item text="Home"
                          icon="home"
@@ -151,7 +151,7 @@ class Layout
     </x-side-bar.item>
     HTML;
 
-    public const VISIBLE = <<<'HTML'
+    public const string VISIBLE = <<<'HTML'
     <x-side-bar.item text="Admin" :visible="true">
         <x-side-bar.item text="Home" icon="home" current :route="route('admin.dashboard')" />
     </x-side-bar.item>
@@ -164,13 +164,13 @@ class Layout
                      :visible="fn () => true" />
     HTML;
 
-    public const SEPARATOR = <<<'HTML'
+    public const string SEPARATOR = <<<'HTML'
     <x-side-bar.item text="Home" icon="home" :route="route('dashboard')" />
     <x-side-bar.separator text="Configurations" /> <!-- [tl! focus] -->
     <x-side-bar.item text="Settings" icon="cog" :route="route('settings')" />
     HTML;
 
-    public const STYLES = <<<'HTML'
+    public const string STYLES = <<<'HTML'
     <!-- Default, only text -->
     <x-side-bar.separator text="Configurations" />
 
@@ -181,31 +181,31 @@ class Layout
     <x-side-bar.separator text="Configurations" line-right />
     HTML;
 
-    public const PERSONALIZATION_LAYOUT = <<<'HTML'
+    public const string PERSONALIZATION_LAYOUT = <<<'HTML'
     TallStackUi::customize()
         ->layout()
         ->block('block', 'classes');
     HTML;
 
-    public const PERSONALIZATION_LAYOUT_HEADER = <<<'HTML'
+    public const string PERSONALIZATION_LAYOUT_HEADER = <<<'HTML'
     TallStackUi::customize()
         ->layout('header')
         ->block('block', 'classes');
     HTML;
 
-    public const PERSONALIZATION_SIDEBAR = <<<'HTML'
+    public const string PERSONALIZATION_SIDEBAR = <<<'HTML'
     TallStackUi::customize()
         ->sideBar()
         ->block('block', 'classes');
     HTML;
 
-    public const PERSONALIZATION_SIDEBAR_ITEM = <<<'HTML'
+    public const string PERSONALIZATION_SIDEBAR_ITEM = <<<'HTML'
     TallStackUi::customize()
         ->sideBar('item')
         ->block('block', 'classes');
     HTML;
 
-    public const PERSONALIZATION_SIDEBAR_SEPARATOR = <<<'HTML'
+    public const string PERSONALIZATION_SIDEBAR_SEPARATOR = <<<'HTML'
     TallStackUi::customize()
         ->sideBar('separator')
         ->block('block', 'classes');

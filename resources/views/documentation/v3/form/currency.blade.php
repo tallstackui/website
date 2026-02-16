@@ -9,9 +9,9 @@
     <x-slot:description>
         Form currency component.
     </x-slot:description>
-    <x-slot:personalization>
-        <livewire:personalization :$personalization component="Form\Currency" />
-    </x-slot:personalization>
+    <x-slot:customization>
+        <livewire:customization :$customization component="Form\Currency" />
+    </x-slot:customization>
     <x-section title="Concept" disable-copy>
         The currency component is a component designed for displaying and formatting
         currency values. Behind the scenes the currency component is an adaptation of

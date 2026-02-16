@@ -9,11 +9,11 @@
     <x-slot:description>
         Dropdown component.
     </x-slot:description>
-    <x-slot:personalization>
-        <livewire:personalization :$personalization component="Dropdown\Dropdown" title="Dropdown" />
-        <livewire:personalization :personalization="$personalizationItems" component="Dropdown\Items" />
-        <livewire:personalization :personalization="$personalizationSubmenu" component="Dropdown\Submenu" />
-    </x-slot:personalization>
+    <x-slot:customization>
+        <livewire:customization :$customization component="Dropdown\Dropdown" title="Dropdown" />
+        <livewire:customization :customization="$customizationItems" component="Dropdown\Items" />
+        <livewire:customization :customization="$customizationSubmenu" component="Dropdown\Submenu" />
+    </x-slot:customization>
     <x-section title="Basic Usage">
         <x-preview language="blade" :contents="$left">
             <div class="flex justify-end md:justify-center">

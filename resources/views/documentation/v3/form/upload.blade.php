@@ -9,9 +9,9 @@
     <x-slot:description>
         Form upload component.
     </x-slot:description>
-    <x-slot:personalization>
-        <livewire:personalization :$personalization component="Form\Upload" />
-    </x-slot:personalization>
+    <x-slot:customization>
+        <livewire:customization :$customization component="Form\Upload" />
+    </x-slot:customization>
     <x-warning class="mb-4">
         Files can be uploaded through selection or drag-and-drop. Also, when
         sending a <u>png, jpg, jpeg or gif file</u>, a preview is offered when clicking on the

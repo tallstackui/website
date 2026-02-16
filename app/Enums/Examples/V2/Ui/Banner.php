@@ -4,7 +4,7 @@ namespace App\Enums\Examples\V2\Ui;
 
 class Banner
 {
-    public const INTRODUCTION = <<<'HTML'
+    public const string INTRODUCTION = <<<'HTML'
     <html>
         <body>
             <x-banner /> {{-- [tl! highlight] --}}
@@ -14,7 +14,7 @@ class Banner
     </html>
     HTML;
 
-    public const TEXT = <<<'HTML'
+    public const string TEXT = <<<'HTML'
     <html>
         <body>
             <x-banner text="Welcome to the TallStackUI!" /> {{-- [tl! focus] --}}
@@ -22,7 +22,7 @@ class Banner
     </html>
     HTML;
 
-    public const ALTERNATIVE = <<<'HTML'
+    public const string ALTERNATIVE = <<<'HTML'
     <html>
         <body>
             <!-- Plain array --> {{-- [tl! focus:4] --}}
@@ -40,7 +40,7 @@ class Banner
     </html>
     HTML;
 
-    public const SLOT = <<<'HTML'
+    public const string SLOT = <<<'HTML'
     <html>
         <body>
             <x-banner text="Welcome to the TallStackUI!"> {{-- [tl! focus:4] --}}
@@ -52,7 +52,7 @@ class Banner
     </html>
     HTML;
 
-    public const CLOSE = <<<'HTML'
+    public const string CLOSE = <<<'HTML'
     <html>
         <body>
             <x-banner text="Welcome to the TallStackUI!" close /> {{-- [tl! focus] --}}
@@ -60,7 +60,7 @@ class Banner
     </html>
     HTML;
 
-    public const ANIMATED = <<<'HTML'
+    public const string ANIMATED = <<<'HTML'
     <html>
         <body>
             <!-- Default: entering in 3 seconds --> {{-- [tl! focus:1] --}}
@@ -75,7 +75,7 @@ class Banner
     </html>
     HTML;
 
-    public const DATES = <<<'HTML'
+    public const string DATES = <<<'HTML'
     <html>
         <body>
             <x-banner text="Welcome to the TallStackUI!" until="2023-12-31" /> {{-- [tl! focus] --}}
@@ -83,7 +83,7 @@ class Banner
     </html>
     HTML;
 
-    public const SIZES = <<<'HTML'
+    public const string SIZES = <<<'HTML'
     <html>
         <body>
             <!-- Allowed: sm, md, lg --> {{-- [tl! focus:1] --}}
@@ -92,7 +92,7 @@ class Banner
     </html>
     HTML;
 
-    public const COLORS = <<<'HTML'
+    public const string COLORS = <<<'HTML'
     <html>
         <body>
             <!-- All TailwindCSS colors --> {{-- [tl! focus:2] --}}
@@ -113,7 +113,7 @@ class Banner
     </html>
     HTML;
 
-    public const LIVEWIRE = <<<'HTML'
+    public const string LIVEWIRE = <<<'HTML'
     <html>
         <body>
             <x-banner wire /> {{-- [tl! focus] --}}
@@ -126,7 +126,7 @@ class Banner
     </html>
     HTML;
 
-    public const TRAIT = <<<HTML
+    public const string TRAIT = <<<HTML
     use TallStackUi\Traits\Interactions; // [tl! highlight]
 
     class CreateUser extends Component
@@ -137,7 +137,7 @@ class Banner
     }
     HTML;
 
-    public const DISPATCH = <<<'HTML'
+    public const string DISPATCH = <<<'HTML'
     public function save(): void
     {
         $this->banner()->success('...')->send();
@@ -147,7 +147,7 @@ class Banner
     }
     HTML;
 
-    public const OPTIONS = <<<'HTML'
+    public const string OPTIONS = <<<'HTML'
     public function save(): void
     {
         $this->banner()
@@ -168,7 +168,7 @@ class Banner
     }
     HTML;
 
-    public const EXAMPLE = <<<'HTML'
+    public const string EXAMPLE = <<<'HTML'
     public function success(): void
     {
         $this->banner()
@@ -179,7 +179,7 @@ class Banner
     }
     HTML;
 
-    public const FLASH = <<<'HTML'
+    public const string FLASH = <<<'HTML'
     use Illuminate\Contracts\View\View;
     use Livewire\Component;
     use TallStackUi\Traits\Interactions;
@@ -205,7 +205,7 @@ class Banner
     }
     HTML;
 
-    public const CONTROLLERS = <<<'HTML'
+    public const string CONTROLLERS = <<<'HTML'
     use Illuminate\Http\Request;
     use TallStackUi\Traits\Interactions;
 
@@ -234,7 +234,7 @@ class Banner
     }
     HTML;
 
-    public const PERSONALIZATION = <<<'HTML'
+    public const string PERSONALIZATION = <<<'HTML'
     TallStackUi::customize()
         ->banner()
         ->block('block', 'classes');

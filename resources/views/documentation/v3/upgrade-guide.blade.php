@@ -52,13 +52,13 @@
                 <div>
                     <h2 class="text-lg tracking-tight text-pink-600 font-medium">🌐 Others:</h2>
                     <ul>
-                        <li>- New Scoped Soft Personalization concept.</li>
-                        <li>- New colors personalization concept.</li>
+                        <li>- New Scoped Soft Customization concept.</li>
+                        <li>- New colors customization concept.</li>
                         <li>- New icons concept.</li>
                         <li>- New <x-block>tallstackui:ide</x-block> command.</li>
                         <li>- <x-block>Card</x-block> Component: support of colors, image and minimize effect.</li>
                         <li>- <x-block>Dropdown</x-block> Component: support to nested dropdown.</li>
-                        <li>- <x-block>Floating</x-block> Component: ability to personalize floating class per component.</li>
+                        <li>- <x-block>Floating</x-block> Component: ability to customize floating class per component.</li>
                         <li>- <x-block>Form Color</x-block> Component: support of clearable option.</li>
                         <li>- <x-block>Form Input</x-block> Component: support of clearable option.</li>
                         <li>- <x-block>Form Input</x-block> Component: ability to globally <x-block>invalidate</x-block> form validation errors.</li>
@@ -92,26 +92,26 @@
         </p>
         <div class="pl-4 space-y-4">
             <div>
-                <h2 class="text-lg tracking-tight text-pink-600 font-medium">1. Check soft personalization keys:</h2>
+                <h2 class="text-lg tracking-tight text-pink-600 font-medium">1. Check soft customization keys:</h2>
                 <p>
-                    Before starting the update process, check if the names of the Soft Personalization keys remain the same. I've renamed some of them
-                    for better internal organization regarding the naming logic. <b>If you do not use Soft Personalization, then just skip this step!</b>
+                    Before starting the update process, check if the names of the Soft Customization keys remain the same. I've renamed some of them
+                    for better internal organization regarding the naming logic. <b>If you do not use Soft Customization, then just skip this step!</b>
                 </p>
             </div>
             <div>
-                <h2 class="text-lg tracking-tight text-pink-600 font-medium">2. Redo deep personalization:</h2>
+                <h2 class="text-lg tracking-tight text-pink-600 font-medium">2. Redo deep customization:</h2>
                 <p>
                     While I know this is a lot of work, if you have published TallStackUI Blade files or extended component classes to change specific behaviors -
                     such as the 1.x color scheme customization, we recommend that you back up your files, republish the new ones, and adjust the new files with your
                     adjustments. This is necessary because since we are talking about a new version, several internal changes have been made, so your current files
-                    will be out of date. <b>If you do not use Soft Personalization, then just skip this step!</b>
+                    will be out of date. <b>If you do not use Soft Customization, then just skip this step!</b>
                 </p>
             </div>
             <div>
-                <h2 class="text-lg tracking-tight text-pink-600 font-medium">3. Save soft personalization scoped:</h2>
+                <h2 class="text-lg tracking-tight text-pink-600 font-medium">3. Save soft customization scoped:</h2>
                 <p>
-                    The concept of Scoped Soft Personalization has changed in version 2.x, and the change is for the better! So save all your customizations to
-                    apply them using the new concept. I explain everything about this on the Soft Personalization page. <b>If you do not use Soft Personalization, then just skip this step!</b>
+                    The concept of Scoped Soft Customization has changed in version 2.x, and the change is for the better! So save all your customizations to
+                    apply them using the new concept. I explain everything about this on the Soft Customization page. <b>If you do not use Soft Customization, then just skip this step!</b>
                 </p>
             </div>
             <div>

@@ -1,6 +1,6 @@
 @php
-    $personalization = <<<'HTML'
-    TallStackUi::personalize()
+    $customization = <<<'HTML'
+    TallStackUi::customize()
         ->form('hint')
         ->block('block', 'classes');
     HTML;
@@ -13,8 +13,8 @@
     <x-slot:description>
         The generic hint component used in form components.
     </x-slot:description>
-    <x-slot:personalization>
-        <livewire:personalization :$personalization component="Form\Hint" />
-    </x-slot:personalization>
-    <x-internals-warning />
+    <x-slot:customization>
+        <livewire:customization :$customization component="Form\Hint" />
+    </x-slot:customization>
+    <x-internals-warning customization />
 </x-layout>

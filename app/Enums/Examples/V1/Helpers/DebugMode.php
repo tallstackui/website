@@ -4,11 +4,11 @@ namespace App\Enums\Examples\V1\Helpers;
 
 class DebugMode
 {
-    public const ENV = <<<'HTML'
+    public const string ENV = <<<'HTML'
     TALLSTACKUI_DEBUG_MODE=true
     HTML;
 
-    public const CONFIGURATION = <<<'HTML'
+    public const string CONFIGURATION = <<<'HTML'
     // ...
 
     'debug' => [

@@ -4,19 +4,19 @@ namespace App\Enums\Examples\V1\Ui;
 
 class Slide
 {
-    public const BASIC = <<<'HTML'
+    public const string BASIC = <<<'HTML'
     <x-slide>
         TallStackUi
     </x-slide>
     HTML;
 
-    public const LEFT = <<<'HTML'
+    public const string LEFT = <<<'HTML'
     <x-slide left>
         TallStackUi
     </x-slide>
     HTML;
 
-    public const TITLE = <<<'HTML'
+    public const string TITLE = <<<'HTML'
     <x-slide id="title-slide">
         <x-slot:title>
             TallStackUi
@@ -31,7 +31,7 @@ class Slide
     </x-slide>
     HTML;
 
-    public const FOOTER = <<<'HTML'
+    public const string FOOTER = <<<'HTML'
     <x-slide>
         TallStackUi
         <x-slot:footer start> <!-- start: justify-start, end: justify-end -->
@@ -46,7 +46,7 @@ class Slide
     </x-slide>
     HTML;
 
-    public const BLUR = <<<'HTML'
+    public const string BLUR = <<<'HTML'
     <!-- sm, md, lg, xl -->
 
     <x-slide blur> <!-- sm blur -->
@@ -54,7 +54,7 @@ class Slide
     </x-slide>
     HTML;
 
-    public const SIZES = <<<'HTML'
+    public const string SIZES = <<<'HTML'
     <!-- sm, md, lg, xl, 2xl, 3xl, 4xl, 5xl, 6xl, 7xl, full -->
 
     <x-slide title="TallStackUi" size="2xl">
@@ -62,19 +62,19 @@ class Slide
     </x-slide>
     HTML;
 
-    public const Z_INDEX = <<<'HTML'
+    public const string Z_INDEX = <<<'HTML'
     <x-slide title="TallStackUi" z-index="z-10">
         TallStackUi
     </x-slide>
     HTML;
 
-    public const PERSISTENT = <<<'HTML'
+    public const string PERSISTENT = <<<'HTML'
     <x-slide title="TallStackUi" persistent>
         TallStackUi
     </x-slide>
     HTML;
 
-    public const WIREABLE = <<<'HTML'
+    public const string WIREABLE = <<<'HTML'
     <!-- Livewire boolean property: $slide -->
 
     <x-slide title="TallStackUi" wire>
@@ -86,7 +86,7 @@ class Slide
     </x-button>
     HTML;
 
-    public const WIREABLE_CUSTOMIZED = <<<'HTML'
+    public const string WIREABLE_CUSTOMIZED = <<<'HTML'
     <!-- Livewire boolean property: $tallstackui -->
 
     <x-slide title="TallStackUi" wire="tallstackui">
@@ -98,7 +98,7 @@ class Slide
     </x-button>
     HTML;
 
-    public const ALPINEJS = <<<'HTML'
+    public const string ALPINEJS = <<<'HTML'
     <x-slide id="slide-id">
         TallStackUi
     </x-slide>
@@ -112,7 +112,7 @@ class Slide
     </x-button>
     HTML;
 
-    public const EVENTS = <<<'HTML'
+    public const string EVENTS = <<<'HTML'
     <x-slide title="TallStackUi"
              x-on:open="alert('Opened!')"
              x-on:close="alert('Closed!')">
@@ -120,7 +120,7 @@ class Slide
     </x-slide>
     HTML;
 
-    public const PERSONALIZATION = <<<'HTML'
+    public const string PERSONALIZATION = <<<'HTML'
     TallStackUi::customize()
         ->slide()
         ->block('block', 'classes');

@@ -4,7 +4,7 @@ namespace App\Enums\Examples\V2\Ui;
 
 class Carousel
 {
-    public const BASIC = <<<'HTML'
+    public const string BASIC = <<<'HTML'
     <!-- Basic array -->
     <x-carousel :images="[
         ['src' => url('assets/images/wallpapers/1.jpg'), 'alt' => 'Wallpaper 1'],
@@ -20,7 +20,7 @@ class Carousel
     ])" />
     HTML;
 
-    public const ROUND = <<<'HTML'
+    public const string ROUND = <<<'HTML'
     <x-carousel :images="[
         ['src' => url('assets/images/wallpapers/1.jpg'), 'alt' => 'Wallpaper 1'],
         ['src' => url('assets/images/wallpapers/2.jpg'), 'alt' => 'Wallpaper 2'],
@@ -28,7 +28,7 @@ class Carousel
     ]" round />
     HTML;
 
-    public const COVER = <<<'HTML'
+    public const string COVER = <<<'HTML'
     <!-- Using a dedicated attribute -->
     <x-carousel :images="[
         ['src' => url('assets/images/wallpapers/1.jpg'), 'alt' => 'Wallpaper 1'],
@@ -44,7 +44,7 @@ class Carousel
     ]" />
     HTML;
 
-    public const SHUFFLE = <<<'HTML'
+    public const string SHUFFLE = <<<'HTML'
     <x-carousel :images="[
         ['src' => url('assets/images/wallpapers/1.jpg'), 'alt' => 'Wallpaper 1'],
         ['src' => url('assets/images/wallpapers/2.jpg'), 'alt' => 'Wallpaper 2'],
@@ -52,7 +52,7 @@ class Carousel
     ]" shuffle />
     HTML;
 
-    public const AUTOPLAY = <<<'HTML'
+    public const string AUTOPLAY = <<<'HTML'
     <x-carousel :images="[
         ['src' => url('assets/images/wallpapers/1.jpg'), 'alt' => 'Wallpaper 1'],
         ['src' => url('assets/images/wallpapers/2.jpg'), 'alt' => 'Wallpaper 2'],
@@ -63,7 +63,7 @@ class Carousel
     <x-carousel ... autoplay interval="2" />
     HTML;
 
-    public const AUTOPLAY_STOP_ON_HOVER = <<<'HTML'
+    public const string AUTOPLAY_STOP_ON_HOVER = <<<'HTML'
     <x-carousel :images="[
         ['src' => url('assets/images/wallpapers/1.jpg'), 'alt' => 'Wallpaper 1'],
         ['src' => url('assets/images/wallpapers/2.jpg'), 'alt' => 'Wallpaper 2'],
@@ -71,7 +71,7 @@ class Carousel
     ]" autoplay stop-on-hover />
     HTML;
 
-    public const AUTOPLAY_WITHOUT_LOOP = <<<'HTML'
+    public const string AUTOPLAY_WITHOUT_LOOP = <<<'HTML'
     <x-carousel :images="[
         ['src' => url('assets/images/wallpapers/1.jpg'), 'alt' => 'Wallpaper 1'],
         ['src' => url('assets/images/wallpapers/2.jpg'), 'alt' => 'Wallpaper 2'],
@@ -79,7 +79,7 @@ class Carousel
     ]" autoplay without-loop />
     HTML;
 
-    public const INDICATORS = <<<'HTML'
+    public const string INDICATORS = <<<'HTML'
     <x-carousel :images="[
         ['src' => url('assets/images/wallpapers/1.jpg'), 'alt' => 'Wallpaper 1'],
         ['src' => url('assets/images/wallpapers/2.jpg'), 'alt' => 'Wallpaper 2'],
@@ -87,7 +87,7 @@ class Carousel
     ]" without-indicators />
     HTML;
 
-    public const TITLE_DESCRIPTION = <<<'HTML'
+    public const string TITLE_DESCRIPTION = <<<'HTML'
     <x-carousel :images="[
         [
             'src' => url('assets/images/wallpapers/1.jpg'),
@@ -110,7 +110,7 @@ class Carousel
     ]" />
     HTML;
 
-    public const ASPECT = <<<'HTML'
+    public const string ASPECT = <<<'HTML'
     <x-carousel :images="[
         ['src' => url('assets/images/wallpapers/1.jpg'), 'alt' => 'Wallpaper 1'],
         ['src' => url('assets/images/wallpapers/2.jpg'), 'alt' => 'Wallpaper 2'],
@@ -118,7 +118,7 @@ class Carousel
     ]" wrapper="aspect-[3/1]" />
     HTML;
 
-    public const SLOTS = <<<'HTML'
+    public const string SLOTS = <<<'HTML'
     <x-carousel :images="[
         ['src' => url('assets/images/wallpapers/1.jpg'), 'alt' => 'Wallpaper 1'],
         ['src' => url('assets/images/wallpapers/2.jpg'), 'alt' => 'Wallpaper 2'],
@@ -133,7 +133,7 @@ class Carousel
     </x-carousel>
     HTML;
 
-    public const EVENTS = <<<'HTML'
+    public const string EVENTS = <<<'HTML'
     <!-- $event.detail will receive: {current: integer, image: object{current image}} -->
 
     <x-carousel :images="[
@@ -144,7 +144,7 @@ class Carousel
        x-on:previous="alert('Navigated to the previous image')" />
     HTML;
 
-    public const PERSONALIZATION = <<<'HTML'
+    public const string PERSONALIZATION = <<<'HTML'
     TallStackUi::customize()
         ->carousel()
         ->block('block', 'classes');

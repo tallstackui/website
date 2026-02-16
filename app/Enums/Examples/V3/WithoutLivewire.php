@@ -4,7 +4,7 @@ namespace App\Enums\Examples\V3;
 
 class WithoutLivewire
 {
-    public const EXAMPLE = <<<'HTML'
+    public const string EXAMPLE = <<<'HTML'
     <form action="{{ route('users.profile') }}" method="post">
         @csrf
 
@@ -53,7 +53,7 @@ class WithoutLivewire
     </form>
     HTML;
 
-    public const JSON_DECODE_BLADE = <<<'HTML'
+    public const string JSON_DECODE_BLADE = <<<'HTML'
     <form action="{{ route('users.profile') }}" method="post">
         @csrf
 
@@ -80,7 +80,7 @@ class WithoutLivewire
     </form>
     HTML;
 
-    public const JSON_DECODE_CONTROLLER = <<<'HTML'
+    public const string JSON_DECODE_CONTROLLER = <<<'HTML'
     namespace App\Http\Controllers;
 
     use Illuminate\Http\Request;
