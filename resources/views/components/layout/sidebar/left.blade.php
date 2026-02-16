@@ -34,7 +34,7 @@
                     </svg>
                 </button>
             </div>
-            <div class="mt-5 h-0 flex-1 overflow-y-auto soft-scrollbar">
+            <div class="mt-5 h-0 flex-1 overflow-y-auto custom-scrollbar">
                 <div class="flex justify-center items-center mb-6">
                     <x-svg.banner class="w-14 h-14" />
                 </div>
@@ -44,7 +44,7 @@
     </div>
 </div>
 <div class="hidden lg:relative lg:block lg:flex-none">
-    <div class="sticky top-[4.75rem] -ml-0.5 h-[calc(100vh-4.75rem)] w-64 overflow-y-auto soft-scrollbar overflow-x-hidden py-4 pl-0.5 pr-8 xl:w-72 xl:pr-16">
+    <div class="sticky top-[4.75rem] -ml-0.5 h-[calc(100vh-4.75rem)] w-64 overflow-y-auto custom-scrollbar overflow-x-hidden py-4 pl-0.5 pr-8 xl:w-72 xl:pr-16">
         <x-layout.navigation.version />
     </div>
 </div>
