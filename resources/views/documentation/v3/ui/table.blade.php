@@ -12,11 +12,6 @@
     <x-slot:customization>
         <livewire:customization :$customization component="Table" />
     </x-slot:customization>
-    <x-warning class="mb-4">
-        All examples in this page use Livewire through Laravel Volt because the TallStackUI
-        documentation uses Livewire through Laravel Volt instead of pure Livewire components.
-        You can use the table component in pure Livewire components, i.e. without Laravel Volt.
-    </x-warning>
     <x-section title="Concept" disable-copy>
         <p>
             Although many packages can add table features to your project, TallStackUI offers you a simple table

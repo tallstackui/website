@@ -32,7 +32,7 @@ php artisan migrate:fresh --seed
 
 ## Technology Stack
 
-- **Backend:** PHP 8.4+, Laravel 12, Livewire 3, Volt (functional Livewire components)
+- **Backend:** PHP 8.4+, Laravel 12, Livewire 3
 - **Frontend:** TailwindCSS v4, Alpine.js, Vite 6
 - **Code Highlighting:** Torchlight (requires `TORCHLIGHT_TOKEN` env var)
 - **Search:** Algolia DocSearch
@@ -67,10 +67,6 @@ Code snippets shown in documentation are defined as PHP class constants, not inl
 ### Version Discovery
 
 The `VersionDiscovery` trait (used by `PageController`, `Example` enum, `ShareVersionVariable` middleware) detects the current documentation version from the route parameter. The latest version is defined as `LATEST_VERSION` constant in `app/helpers.php`.
-
-### Livewire Volt Components
-
-Interactive demos live in `resources/views/livewire/` as Volt functional components (mounted via `VoltServiceProvider`). These include the personalization demo, version selector, and documentation settings panel.
 
 ### View Components
 
