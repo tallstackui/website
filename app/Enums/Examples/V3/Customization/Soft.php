@@ -274,6 +274,28 @@ class Soft
     <x-alert text="This is a fully round Alert component" scope="circle" />
     HTML;
 
+    public const string INTERNAL_SCOPED = <<<'HTML'
+    use TallStackUi\Facades\TallStackUi;
+
+    class AppServiceProvider extends ServiceProvider
+    {
+        public function boot(): void
+        {
+            // Customize the input used inside the color picker
+            TallStackUi::customize(component: 'input', scope: 'form.color.input')
+                ->block('input.base', 'rounded-full');
+
+            // Customize the floating used inside the date picker
+            TallStackUi::customize(component: 'floating', scope: 'form.date.floating')
+                ->block('wrapper', 'shadow-2xl');
+
+            // Customize the badge used inside sidebar items
+            TallStackUi::customize(component: 'badge', scope: 'sidebar.item.badge')
+                ->block('wrapper.class', 'border-0');
+        }
+    }
+    HTML;
+
     public const string CUSTOMIZATION = <<<'HTML'
     TallStackUi::customize()
         ->form('checkbox')

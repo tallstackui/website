@@ -47,7 +47,7 @@ return new class extends Component {
              :title="__('CONFIGURE DOCUMENTATION')"
              center
              blur
-             x-on:open="$focusOn('doc-prefix')">
+             x-on:open="$tsui.focus('doc-prefix')">
         <p class="text-sm mb-4">
             You can use this form to configure all configurable aspects of the TallStackUI docs.
         </p>

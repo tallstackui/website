@@ -5942,7 +5942,7 @@
             "dist": {
                 "type": "path",
                 "url": "/Users/aj/Workspace/tallstackui/tallstackui",
-                "reference": "5cd9d8e7b07b3b943b9a7b774107f2ee18317327"
+                "reference": "0d3ce7e8a63eb18370d9372ee15ba1b0fceb7396"
             },
             "require": {
                 "ext-zip": "*",

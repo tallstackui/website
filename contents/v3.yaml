@@ -642,6 +642,7 @@ customization:
     - Component Data Parameters
     - Interacting with Default Classes
     - Scoped Soft Customization
+    - Internal Scoped Customization
   deep:
     - Concept
     - Publishing Configuration File

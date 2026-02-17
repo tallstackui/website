@@ -1,10 +1,5 @@
 @props(['first' => null, 'buttons' => null])
 
-<td {{ $attributes->class([
-        'whitespace-nowrap py-4 text-sm',
-        'pl-4 pr-3 font-medium text-gray-900 dark:text-gray-400 sm:pl-6' => $first,
-        'px-3 text-gray-500 dark:text-gray-300'                          => ! $buttons,
-        'relative pl-3 pr-4 text-right font-medium sm:pr-6' => $buttons
-    ]) }}>
+<td {{ $attributes->merge(['class' => 'px-4 py-3 text-sm text-gray-600 dark:text-gray-400']) }}>
     {{ $slot }}
 </td>
