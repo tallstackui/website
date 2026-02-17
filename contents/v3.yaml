@@ -198,6 +198,7 @@ form:
         - Multiple
         - Multi-dimensional Array
         - Disable Options
+        - Grouped Options
         - Limit Selection
         - Image Preview
         - Description
@@ -205,12 +206,14 @@ form:
         - Lazy Load
         - Slot After
         - Events
+        - AlpineJS Helper
     Styled API:
       contents:
         - Concept
         - Basic Usage
         - Unfiltered Results
         - Advanced Usage
+        - Recycle
 ui:
   alert:
     - Basic Usage

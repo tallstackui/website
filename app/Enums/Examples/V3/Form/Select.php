@@ -78,6 +78,26 @@ class Select
     ]" />
     HTML;
 
+    public const string STYLED_GROUPED = <<<'HTML'
+    <x-select.styled :options="[
+        [
+            'label' => 'Brazil',
+            'description' => 'South America',
+            'value' => [
+                ['label' => 'São Paulo', 'value' => 4],
+                ['label' => 'Rio de Janeiro', 'value' => 5],
+            ]
+        ],
+        [
+            'label' => 'United States',
+            'value' => [
+                ['label' => 'New York', 'value' => 7],
+                ['label' => 'Los Angeles', 'value' => 8],
+            ]
+        ],
+    ]" select="label:label|value:value" />
+    HTML;
+
     public const string STYLED_LIMIT = <<<'HTML'
     <!-- Applicable only when selection is multiple -->
 
@@ -186,6 +206,22 @@ class Select
     ]" x-on:select="alert(`Select: ${JSON.stringify($event.detail.select)}`)"
        x-on:remove="alert(`Remove: ${JSON.stringify($event.detail.select)}`)"
        multiple />
+    HTML;
+
+    public const string STYLED_ALPINEJS = <<<'HTML'
+    <x-select.styled id="languages" :options="[
+        ['label' => 'PHP', 'value' => 1],
+        ['label' => 'JavaScript', 'value' => 2],
+        ['label' => 'Python', 'value' => 3],
+    ]" />
+
+    <x-button x-on:click="$tsui.open.select('languages')">
+        Open
+    </x-button>
+
+    <x-button x-on:click="$tsui.close.select('languages')">
+        Close
+    </x-button>
     HTML;
 
     /* Styled API */

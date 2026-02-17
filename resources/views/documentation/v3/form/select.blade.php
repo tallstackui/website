@@ -106,6 +106,39 @@
             ]"  />
         </x-preview>
     </x-section>
+    <x-section title="Grouped Options" anchor="styled-grouped-options">
+        <div class="space-y-4">
+            <p>
+                Options can be organized into groups. When an option's <x-block>value</x-block> is an array of sub-options,
+                the component automatically detects grouped mode. Group headers display the label, optional description,
+                and optional image, but only the nested items within groups are selectable.
+            </p>
+            <x-preview language="blade" :contents="$styledGrouped">
+                <x-select.styled :options="[
+                    [
+                        'label' => 'Brazil',
+                        'description' => 'South America',
+                        'value' => [
+                            ['label' => 'São Paulo', 'value' => 4],
+                            ['label' => 'Rio de Janeiro', 'value' => 5],
+                        ]
+                    ],
+                    [
+                        'label' => 'United States',
+                        'description' => 'North America',
+                        'value' => [
+                            ['label' => 'New York', 'value' => 7],
+                            ['label' => 'Los Angeles', 'value' => 8],
+                        ]
+                    ],
+                ]" select="label:label|value:value" />
+            </x-preview>
+            <p>
+                Search filters items within groups and hides groups with no matching items. Grouped options
+                work with both single and multiple selection modes.
+            </p>
+        </div>
+    </x-section>
     <x-section title="Limit Selection" description="An option to limit the number of selections." anchor="styled-limit-selection">
         <x-preview language="blade" :contents="$styledLimit">
             <x-select.styled :limit="2" :options="[
@@ -231,6 +264,9 @@
                multiple />
         </x-preview>
     </x-section>
+    <x-section title="AlpineJS Helper" description="Helpers to open and close the styled select using AlpineJS." anchor="styled-alpinejs-helper" disable-copy>
+        <x-code language="blade" :contents="$styledAlpinejs" disable-copy />
+    </x-section>
     {{-- Styled API Select --}}
     <x-separator text="Styled API Select" />
     <x-section title="Concept" anchor="styled-api-concept" disable-copy>
@@ -297,5 +333,13 @@
                            ]" />
             </x-preview>
         </div>
+    </x-section>
+    <x-section title="Recycle" anchor="styled-api-recycle" disable-copy>
+        <p>
+            By default, the styled API select clears previous results every time it is reopened. You can use the
+            <x-block>recycle</x-block> attribute to preserve the previous results when reopening the select. You can
+            also control this globally in the <a href="{{ route('documentation', ['v3', 'configuration']) }}" wire:navigate class="underline">configuration file</a>,
+            where the default is <x-block>false</x-block>.
+        </p>
     </x-section>
 </x-layout>
