@@ -78,6 +78,7 @@ enum Example: string
     // region UI
     case Alert = 'Ui\\Alert';
     case Avatar = 'Ui\\Avatar';
+    case BackToTop = 'Ui\\BackToTop';
     case Badge = 'Ui\\Badge';
     case Banner = 'Ui\\Banner';
     case Boolean = 'Ui\\Boolean';

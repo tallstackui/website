@@ -91,6 +91,9 @@
                         <x-layout.navigation.link :href="route('documentation', ['v3', 'ui', 'avatar'])" text="Avatar" />
                     </li>
                     <li class="relative ml-4">
+                        <x-layout.navigation.link :href="route('documentation', ['v3', 'ui', 'back-to-top'])" text="Back to Top" new />
+                    </li>
+                    <li class="relative ml-4">
                         <x-layout.navigation.link :href="route('documentation', ['v3', 'ui', 'badge'])" text="Badge" />
                     </li>
                     <li class="relative ml-4">

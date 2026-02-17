@@ -234,6 +234,16 @@ ui:
     - Presence
     - Presence Color
     - Presence Positions
+  back-to-top:
+    - Concept
+    - Basic Usage
+    - Positions
+    - Icon
+    - Square Variation
+    - Size Variations
+    - Color Variations
+    - Anchor Observer
+    - Immediate
   badge:
     - Basic Usage
     - Square Variation
