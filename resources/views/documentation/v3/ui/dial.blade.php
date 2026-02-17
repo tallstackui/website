@@ -22,10 +22,10 @@
             only one dial should be used per page.
         </p>
     </x-section>
-    <x-section title="Basic Usage">
+    <x-section title="Basic Usage" disable-copy>
         <x-code language="blade" :contents="$basic" />
     </x-section>
-    <x-section title="Positions">
+    <x-section title="Positions" disable-copy>
         <div class="space-y-4">
             <p>
                 You can control which corner of the screen the dial appears in using the <x-block>position</x-block> attribute.
@@ -34,7 +34,7 @@
             <x-code language="blade" :contents="$positions" />
         </div>
     </x-section>
-    <x-section title="Horizontal">
+    <x-section title="Horizontal" disable-copy>
         <div class="space-y-4">
             <p>
                 By default, items fan out vertically from the main button. Use the <x-block>horizontal</x-block>
@@ -43,7 +43,7 @@
             <x-code language="blade" :contents="$horizontal" />
         </div>
     </x-section>
-    <x-section title="Hover Mode">
+    <x-section title="Hover Mode" disable-copy>
         <div class="space-y-4">
             <p>
                 By default, the dial opens on click. Use the <x-block>hover</x-block> attribute
@@ -52,16 +52,19 @@
             <x-code language="blade" :contents="$hover" />
         </div>
     </x-section>
-    <x-section title="Labels">
+    <x-section title="Labels" disable-copy>
         <div class="space-y-4">
             <p>
                 Each <x-block>dial.items</x-block> accepts a <x-block>label</x-block> attribute
-                that displays a tooltip-style text next to the item, helping users identify each action:
+                that displays a tooltip-style text next to the item, helping users identify each action.
             </p>
             <x-code language="blade" :contents="$labels" />
+            <x-warning>
+                The <x-block pink>label</x-block> is not mandatory.
+            </x-warning>
         </div>
     </x-section>
-    <x-section title="Without Tooltip">
+    <x-section title="Without Tooltip" disable-copy>
         <div class="space-y-4">
             <p>
                 If you prefer to hide all labels at once, use the <x-block>without-tooltip</x-block>
@@ -70,7 +73,7 @@
             <x-code language="blade" :contents="$withoutTooltip" />
         </div>
     </x-section>
-    <x-section title="Icon">
+    <x-section title="Icon" disable-copy>
         <div class="space-y-4">
             <p>
                 The main button displays a <x-block>plus</x-block> icon by default, which rotates 45 degrees
@@ -79,7 +82,7 @@
             <x-code language="blade" :contents="$icon" />
         </div>
     </x-section>
-    <x-section title="Square Variation">
+    <x-section title="Square Variation" disable-copy>
         <div class="space-y-4">
             <p>
                 Use the <x-block>square</x-block> attribute to render the main
@@ -88,7 +91,7 @@
             <x-code language="blade" :contents="$square" />
         </div>
     </x-section>
-    <x-section title="Links">
+    <x-section title="Links" disable-copy>
         <div class="space-y-4">
             <p>
                 Each <x-block>dial.items</x-block> can act as a link by providing the <x-block>href</x-block> attribute.
@@ -102,10 +105,10 @@
             <x-code language="blade" :contents="$linksNavigate" />
         </div>
     </x-section>
-    <x-section title="Size Variations">
+    <x-section title="Size Variations" disable-copy>
         <x-code language="blade" :contents="$sizes" />
     </x-section>
-    <x-section title="Color Variations">
+    <x-section title="Color Variations" disable-copy>
         <div class="space-y-4">
             <p>
                 The <x-block>color</x-block> attribute changes the main button color.
