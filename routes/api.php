@@ -12,7 +12,7 @@ Route::withoutMiddleware('throttle:api')
         return User::query()
             ->when(
                 $search = $request->get('search'),
-                fn ($query) => $query->where('name', 'like', "%{$search}%")
+                fn ($query) => $query->whereAny(['name', 'email', 'username'], 'like', "%{$search}%")
             )
             ->when(! $search && $selected, function (Builder $query) use ($selected) {
                 $query->whereIn('id', $selected)
@@ -27,5 +27,6 @@ Route::withoutMiddleware('throttle:api')
                 'label' => $user->name,
                 'value' => $user->id,
                 'image' => asset('assets/images/avatar/'.random_int(1, 20).'.jpg'),
+                'description' => sprintf('The user e-mail is %s', $user->email),
             ]);
     })->name('api.users');

@@ -14,31 +14,37 @@
     </x-slot:customization>
     <x-section title="Concept" disable-copy>
         <p>
-            The <x-block>command-palette</x-block> component is a searchable overlay triggered by a keyboard
-            shortcut (default: <x-block>Ctrl+K</x-block>). It fetches results from a server endpoint with a
-            300ms debounce, supports full keyboard navigation (arrow keys, Enter, Escape), and can display
-            images, icons, and descriptions alongside each result. The component is designed to be placed once
-            in your application layout for app-wide access, but can also be used on specific pages with inline
-            event handling.
+            Many modern applications use a command palette to help users quickly find and navigate
+            to anything — pages, actions, contacts, or settings — without leaving the keyboard.
+            The <x-block>command-palette</x-block> component provides exactly that: searchable overlay
+            that fetches results from your server, supports keyboard navigation, and can display
+            images, icons, and descriptions alongside each result. Place it once in your layout for
+            app-wide access using a keyboard shortcut (default: <x-block>Ctrl+K</x-block>), or use it
+            on specific pages with inline event handling.
         </p>
     </x-section>
     <x-section title="Basic Usage">
         <x-preview language="blade" :contents="$basic">
-            <x-command-palette request="/api/users"
-                               select="label:name|value:id" />
-            <x-button x-on:click="$tsui.open.commandPalette()">
+            <x-command-palette id="basic" :request="route('api.users')" x-on:select="alert(`Selected: ${event.detail.value}`)" />
+            <x-button x-on:click="$tsui.open.commandPalette('basic')">
                 Open Command Palette
             </x-button>
         </x-preview>
+        <p class="mt-4">
+            When you press enter to select an option, the component dispatches a <x-block>select</x-block> event with the selected
+            option's value in the <x-block>event.detail.value</x-block> property. Continue reading to learn about all the ways to
+            interact with the component and handle selections.
+        </p>
     </x-section>
     <x-section title="Keyboard Shortcut" disable-copy>
         <div class="space-y-4">
             <p>
-                The palette opens when the user presses the configured keyboard shortcut. The default is
-                <x-block>Ctrl+K</x-block>, but you can change it in <x-block>config/tallstackui.php</x-block>
-                using dot notation:
+                The command palette opens when the user presses the configured keyboard shortcut. The default is
+                <x-kbd>Ctrl</x-kbd> + <x-kbd>K</x-kbd>, but you can change it inline or globally in the
+                <a href="{{ route('documentation', ['v3', 'configuration']) }}" wire:navigate class="underline">configuration file</a>
+                using dot notation: <x-block>ctrl.k</x-block>, <x-block>ctrl.shift.p</x-block>, <x-block>meta.k</x-block>, or even
+                inline using the <x-block>shortcut</x-block> attribute with the same dot notation.
             </p>
-            <x-code language="blade" :contents="$shortcut" />
         </div>
     </x-section>
     <x-section title="Request Configuration" disable-copy>
@@ -66,13 +72,7 @@
                 The <x-block>select</x-block> attribute maps your API response fields to the component's
                 internal structure. The format is <x-block>label:key|value:key|description:key|image:key|icon:key</x-block>:
             </p>
-            <x-preview language="blade" :contents="$fieldMapping">
-                <x-command-palette request="/api/users"
-                                   select="label:name|value:id|image:image" />
-                <x-button x-on:click="$tsui.open.commandPalette()">
-                    Search Users
-                </x-button>
-            </x-preview>
+            <x-code language="blade" :contents="$fieldMapping" disable-copy />
         </div>
     </x-section>
     <x-section title="Disabled Options" disable-copy>
@@ -81,7 +81,12 @@
                 Options can be marked as disabled in the API response. Disabled options are displayed with
                 muted styles and cannot be selected:
             </p>
-            <x-code language="json" :contents="$disabledOptions" />
+            <x-code language="json" :contents="$disabledOptions" disable-copy />
+            <p>
+                Talking about the API response, you can also set an extra field called <x-block>additional</x-block> to include
+                any other data from your API response in array format. This additional data will be available in the selection
+                event, allowing you to use it for various purposes.
+            </p>
         </div>
     </x-section>
     <x-section title="Recycle" disable-copy>
@@ -90,7 +95,10 @@
                 By default, the component preserves previous search results when the palette is reopened. Use the
                 <x-block>recycle</x-block> attribute to control this behavior:
             </p>
-            <x-code language="blade" :contents="$recycle" />
+            <x-code language="blade" :contents="$recycle" disable-copy />
+            <p>
+                You can also control it globally in the <a href="{{ route('documentation', ['v3', 'configuration']) }}" wire:navigate class="underline">configuration file.</a>
+            </p>
         </div>
     </x-section>
     <x-section title="Placeholders" disable-copy>
@@ -100,12 +108,12 @@
                 Available keys are: <x-block>search</x-block>, <x-block>empty</x-block>,
                 <x-block>navigate</x-block>, <x-block>select</x-block>, and <x-block>close</x-block>:
             </p>
-            <x-code language="blade" :contents="$placeholders" />
+            <x-code language="blade" :contents="$placeholders" disable-copy />
         </div>
     </x-section>
-    <x-section title="Empty Slot">
+    <x-section title="Empty Slot" disable-copy>
         <x-preview language="blade" :contents="$emptySlot">
-            <x-command-palette request="/api/users">
+            <x-command-palette id="empty" request="/api/users" :placeholders="['search' => 'Search something dummy...']">
                 <x-slot:empty>
                     <div class="flex flex-col items-center gap-2 p-8">
                         <x-icon name="magnifying-glass" class="h-8 w-8 text-gray-400" />
@@ -113,85 +121,62 @@
                     </div>
                 </x-slot:empty>
             </x-command-palette>
-            <x-button x-on:click="$tsui.open.commandPalette()">
+            <x-button x-on:click="$tsui.open.commandPalette('empty')">
                 Open Command Palette
             </x-button>
         </x-preview>
     </x-section>
-    <x-section title="Selection Handling" disable-copy>
-        <div class="space-y-4">
-            <p>
-                When a user selects an option, the component follows a priority chain to determine how to handle it:
-            </p>
-            <x-code language="blade" :contents="$selectionHandling" />
-            <p>
-                In all cases, internal keys prefixed with <x-block>__</x-block> are stripped from the option
-                data before dispatching.
-            </p>
-        </div>
-    </x-section>
     <x-section title="Inline Event" disable-copy>
         <div class="space-y-4">
             <p>
-                Use <x-block>x-on:select</x-block> for component-scoped selection handling. When present, this
-                takes the highest priority and suppresses both the actionable and global event:
+                You have three different ways to interact with an item selection. The simplest way is to set <x-block>x-on:select</x-block>
+                to handle the selection with component scope. When present, this option has the highest priority and suppresses both the actionable and global events.
             </p>
-            <x-code language="blade" :contents="$inlineEvent" />
+            <x-code language="blade" :contents="$inlineEvent" disable-copy />
         </div>
     </x-section>
     <x-section title="Actionable" disable-copy>
         <div class="space-y-4">
             <p>
-                Configure an invocable PHP class in <x-block>config/tallstackui.php</x-block> to handle
-                selections on the server side. The actionable endpoint uses Laravel's signed URLs for security:
+                Since you might want to use the component globally—like in a layout file—you can interact with
+                item selection in two other ways. You can configure an invocable PHP class in the <a href="{{ route('documentation', ['v3', 'configuration']) }}" wire:navigate class="underline">configuration file</a>
+                to handle selections on the server side. This way, selecting an item will go through an internal
+                TallStackUI route to handle the action of creating the instance of your class and invoking it through
+                the Laravel container. The internal TallStackUI endpoint uses Laravel-signed URLs for added security.
             </p>
-            <x-code :contents="$actionableConfig" />
+            <x-code :contents="$actionableConfig" disable-copy />
             <p>
                 The class receives an <x-block>ItemSelected</x-block> value object and must return a
                 <x-block>Callback</x-block> response:
             </p>
-            <x-code :contents="$actionableClass" />
+            <x-code :contents="$actionableClass" disable-copy />
             <p>
                 The <x-block>ItemSelected</x-block> object provides access to all selection data:
             </p>
-            <x-code :contents="$itemSelected" />
+            <x-code :contents="$itemSelected" disable-copy />
             <p>
-                The <x-block>Callback</x-block> class offers two response types — redirect the user to a page
+                The <x-block>Callback</x-block> class offers two response types: redirect the user to a page (internal ou external)
                 or dispatch a browser event:
             </p>
-            <x-code :contents="$actionableCallback" />
+            <x-code :contents="$actionableCallback" disable-copy />
         </div>
     </x-section>
     <x-section title="Lifecycle Events" disable-copy>
         <div class="space-y-4">
             <p>
-                The component dispatches open and close events regardless of the selection mode.
-                You can listen to them inline or globally:
+                The component triggers opening and closing events, as well as a global event when something is selected
+                – this is the third option available for handling item selection, regardless of the selection mode.
+                You can listen for them inline or globally. The window's global events include the component's <x-block>id</x-block> in the event name:
             </p>
-            <x-code language="blade" :contents="$lifecycleEvents" />
+            <x-code language="blade" :contents="$lifecycleEvents" disable-copy />
         </div>
     </x-section>
     <x-section title="AlpineJS Helper" description="Helpers to open and close the command palette using AlpineJS.">
-        <x-code language="blade" :contents="$alpinejs" />
+        <x-code language="blade" :contents="$alpinejs" disable-copy />
     </x-section>
     <x-section title="Background Blur" disable-copy>
-        <div class="space-y-4">
-            <p>
-                Add a blur effect to the backdrop using the <x-block>blur</x-block> attribute.
-                Accepts <x-block>true</x-block> (defaults to sm), <x-block>md</x-block>,
-                <x-block>lg</x-block>, or <x-block>xl</x-block>:
-            </p>
-            <x-code language="blade" :contents="$blur" />
-        </div>
-    </x-section>
-    <x-section title="Persistent" disable-copy>
-        <div class="space-y-4">
-            <p>
-                Use the <x-block>persistent</x-block> attribute to prevent the palette from closing when the
-                user clicks outside. The user can still close it using the <x-block>Escape</x-block> key or
-                the AlpineJS helper:
-            </p>
-            <x-code language="blade" :contents="$persistent" />
-        </div>
+        Since you generally won't want to change this all the time, the blur setting is defined
+        exclusively via a <a href="{{ route('documentation', ['v3', 'configuration']) }}" wire:navigate class="underline">configuration file</a>,
+        with four available variables: <x-block>false</x-block>, <x-block>sm</x-block>, <x-block>md</x-block>, and <x-block>lg</x-block>. The default is <x-block>md</x-block>.
     </x-section>
 </x-layout>
