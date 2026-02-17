@@ -26,6 +26,6 @@ Route::withoutMiddleware('throttle:api')
             ->map(fn (User $user): array => [
                 'label' => $user->name,
                 'value' => $user->id,
-                'image' => "https://unavatar.io/github/{$user->username}",
+                'image' => asset('assets/images/avatar/'.random_int(1, 20).'.jpg'),
             ]);
     })->name('api.users');

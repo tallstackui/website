@@ -56,7 +56,7 @@ new class extends Component {
              id="users">
         @interact('column_name', $user)
             <div class="flex items-center gap-2">
-                <img src="https://unavatar.io/github/{{  $user->username }}" alt="{{ $user->name }}" class="w-8 h-8 rounded-full"/>
+                <img src="{{ asset('assets/images/avatar/'.random_int(1, 20).'.jpg') }}" alt="{{ $user->name }}" class="w-8 h-8 rounded-full"/>
                 {{ $user->name }}
             </div>
         @endinteract

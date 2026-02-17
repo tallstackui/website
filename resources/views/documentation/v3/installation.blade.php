@@ -19,9 +19,9 @@
             <ul class="mt-4 ml-4 list-inside list-decimal space-y-2">
                 <li>PHP: v8.1 or later</li>
                 <li>Laravel: v10 or later</li>
-                <li>Livewire: v3 or v4 🚀</li>
-                <li>AlpineJS: v3</li>
-                <li>TailwindCSS: v4</li>
+                <li>Livewire: v3 or later</li>
+                <li>AlpineJS: v3 or later</li>
+                <li>TailwindCSS: v4 or later</li>
             </ul>
         </div>
     </x-section>
@@ -48,9 +48,7 @@
                     Edit the <x-block>app.css</x-block> of your TailwindCSS v4 by inserting all below marked contents:
                     <x-code language="js" :contents="$tailwindcssV4" disable-copy />
                     <x-warning>
-                        <ul class="list-decimal list-inside text-sm">
-                            <li>Your TailwindCSS setup must load the <a href="https://github.com/tailwindlabs/tailwindcss-forms" class="underline" target="_blank">form plugin</a></li>
-                        </ul>
+                        Your TailwindCSS setup must load the <a href="https://github.com/tailwindlabs/tailwindcss-forms" class="underline" target="_blank">form plugin</a>
                     </x-warning>
                 </li>
                 <li>

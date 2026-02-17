@@ -86,6 +86,7 @@ enum Example: string
     case Card = 'Ui\\Card';
     case Carousel = 'Ui\\Carousel';
     case Clipboard = 'Ui\\Clipboard';
+    case CommandPalette = 'Ui\\CommandPalette';
     case Dial = 'Ui\\Dial';
     case Dropdown = 'Ui\\Dropdown';
     case Error = 'Ui\\Error';

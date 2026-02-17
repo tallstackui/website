@@ -340,6 +340,23 @@ ui:
     - Events
     - Icon Style
     - Using Different Icons
+  command-palette:
+    - Concept
+    - Basic Usage
+    - Keyboard Shortcut
+    - Request Configuration
+    - Field Mapping
+    - Disabled Options
+    - Recycle
+    - Placeholders
+    - Empty Slot
+    - Selection Handling
+    - Inline Event
+    - Actionable
+    - Lifecycle Events
+    - AlpineJS Helper
+    - Background Blur
+    - Persistent
   dial:
     - Concept
     - Basic Usage
