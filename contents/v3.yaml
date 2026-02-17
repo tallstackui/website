@@ -45,6 +45,7 @@ form:
     - Required Label Indicator
     - Icon Slot
     - Prefix & Suffix
+    - Button Support
     - Clearable
     - Strip Zeros
     - Invalidate

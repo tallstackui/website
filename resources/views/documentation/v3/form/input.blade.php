@@ -55,6 +55,41 @@
             Using a prefix or suffix will disable browser autocomplete as long as this is not explicitly defined.
         </x-warning>
     </x-section>
+    <x-section title="Button Support">
+        <div class="space-y-4">
+            <p>
+                You can place buttons inside the <x-block>prefix</x-block> and <x-block>suffix</x-block> slots
+                by adding the <x-block>button</x-block> attribute. This activates addon mode, where the button
+                sits flush against the input with a unified ring and focus style:
+            </p>
+            <x-preview language="blade" :contents="$buttonAddonSuffix">
+                <x-input label="Search">
+                    <x-slot:suffix button>
+                        <x-button text="Go" sm />
+                    </x-slot:suffix>
+                </x-input>
+            </x-preview>
+            <p>The same works for the prefix side:</p>
+            <x-preview language="blade" :contents="$buttonAddonPrefix">
+                <x-input label="URL">
+                    <x-slot:prefix button>
+                        <x-button text="https" sm />
+                    </x-slot:prefix>
+                </x-input>
+            </x-preview>
+            <p>You can also place buttons on both sides:</p>
+            <x-preview language="blade" :contents="$buttonAddonBoth">
+                <x-input label="Amount">
+                    <x-slot:prefix button>
+                        <x-button icon="minus" sm />
+                    </x-slot:prefix>
+                    <x-slot:suffix button>
+                        <x-button icon="plus" sm />
+                    </x-slot:suffix>
+                </x-input>
+            </x-preview>
+        </div>
+    </x-section>
     <x-section title="Clearable">
         <x-preview language="blade" :contents="$clearable">
             <div class="space-y-2">
@@ -62,7 +97,7 @@
             </div>
         </x-preview>
     </x-section>
-    <x-section title="Strip Zeros" description="An option to remove the first zero characters" new>
+    <x-section title="Strip Zeros" description="An option to remove the first zero characters">
         <x-preview language="blade" :contents="$stripZeros">
             <x-input strip-zeros />
         </x-preview>

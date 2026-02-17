@@ -45,6 +45,33 @@ class Input
     </x-input>
     HTML;
 
+    public const string BUTTON_ADDON_SUFFIX = <<<'HTML'
+    <x-input label="Search">
+        <x-slot:suffix button>
+            <x-button text="Go" sm />
+        </x-slot:suffix>
+    </x-input>
+    HTML;
+
+    public const string BUTTON_ADDON_PREFIX = <<<'HTML'
+    <x-input label="URL">
+        <x-slot:prefix button>
+            <x-button text="https" sm />
+        </x-slot:prefix>
+    </x-input>
+    HTML;
+
+    public const string BUTTON_ADDON_BOTH = <<<'HTML'
+    <x-input label="Amount">
+        <x-slot:prefix button>
+            <x-button icon="minus" sm />
+        </x-slot:prefix>
+        <x-slot:suffix button>
+            <x-button icon="plus" sm />
+        </x-slot:suffix>
+    </x-input>
+    HTML;
+
     public const string CLEARABLE = <<<'HTML'
     <x-input value="TallStackUI" clearable />
     HTML;
