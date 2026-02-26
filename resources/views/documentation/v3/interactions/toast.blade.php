@@ -151,5 +151,14 @@
             </p>
         </div>
     </x-section>
+    <x-section title="Colorful" disable-copy>
+        <p>
+            You can invert the Toast colors using the <x-block>colorful</x-block> global so the body background
+            takes the notification type color (green for success, red for error, and so on) with white text.
+            <a href="{{ route('documentation', ['v3', 'customization', 'globals']) }}" wire:navigate class="underline">
+                Learn more about the global Colorful.
+            </a>
+        </p>
+    </x-section>
     <x-available-configuration />
 </x-layout>

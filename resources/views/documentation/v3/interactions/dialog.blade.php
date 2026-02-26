@@ -95,5 +95,19 @@
             </p>
         </div>
     </x-section>
+    <x-section title="Persistent" description="An option to prevent the dialog from being closed by clicking outside.">
+        <div class="space-y-4">
+            <x-code :contents="$persistent" disable-copy />
+        </div>
+    </x-section>
+    <x-section title="Colorful" disable-copy>
+        <p>
+            You can invert the Dialog colors using the <x-block>colorful</x-block> global so the body background
+            takes the notification type color (green for success, red for error, and so on) with white text.
+            <a href="{{ route('documentation', ['v3', 'customization', 'globals']) }}" wire:navigate class="underline">
+                Learn more about the global Colorful.
+            </a>
+        </p>
+    </x-section>
     <x-available-configuration />
 </x-layout>

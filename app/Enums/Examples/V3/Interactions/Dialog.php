@@ -262,6 +262,13 @@ class Dialog
     }
     HTML;
 
+    public const string PERSISTENT = <<<'HTML'
+    $this->dialog()
+        ->success('Success', 'This is a success message.')
+        ->persistent()
+        ->send();
+    HTML;
+
     public const string CUSTOMIZATION = <<<'HTML'
     TallStackUi::customize()
         ->dialog()

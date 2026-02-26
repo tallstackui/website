@@ -624,6 +624,8 @@ interactions:
     - JavaScript API
     - Display After Redirects
     - Dispatching via Controllers
+    - Persistent
+    - Colorful
     - Configurations
   toast:
     - Configuration
@@ -639,6 +641,7 @@ interactions:
     - JavaScript API
     - Display After Redirects
     - Dispatching via Controllers
+    - Colorful
     - Configurations
 customization:
   soft:
