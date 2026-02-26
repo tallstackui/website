@@ -253,6 +253,9 @@
                     <li class="relative ml-4">
                         <x-layout.navigation.link :href="route('documentation', ['v3', 'customization', 'color'])" text="Colors" />
                     </li>
+                    <li class="relative ml-4">
+                        <x-layout.navigation.link :href="route('documentation', ['v3', 'customization', 'globals'])" text="Globals" new />
+                    </li>
                 </ul>
             </li>
             <li class="relative ml-4">

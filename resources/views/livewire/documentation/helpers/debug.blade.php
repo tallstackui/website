@@ -7,14 +7,14 @@ new class extends Component {
 
     public function mount(): void
     {
-        config()->set('tallstackui.debug.status', true);
+        config()->set('ts-ui.debug.status', true);
 
-        config()->set('tallstackui.debug.environments', ['local', 'production']);
+        config()->set('ts-ui.debug.environments', ['local', 'production']);
     }
 
     public function rendered(): void
     {
-        config()->set('tallstackui.debug.status', false);
+        config()->set('ts-ui.debug.status', false);
     }
 };
 

@@ -9,7 +9,7 @@ class DebugMode
     HTML;
 
     public const string CONFIGURATION = <<<'HTML'
-    use TallStackUi\View\Components;
+    use TallStackUi\Components;
 
     /*
     |--------------------------------------------------------------------------
@@ -38,8 +38,8 @@ class DebugMode
         |----------------------------------------------------------------------
         */
         'ignore' => [
-            // Components\Alert::class,
-            // Components\Avatar::class
+            // Components\Alert\Component::class,
+            // Components\Avatar\Component::class
         ],
     ],
 

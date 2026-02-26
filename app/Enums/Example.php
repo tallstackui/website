@@ -72,6 +72,7 @@ enum Example: string
     // region Customization (v3)
     case ColorCustomization = 'Customization\\Color';
     case DeepCustomization = 'Customization\\Deep';
+    case GlobalsCustomization = 'Customization\\Globals';
     case SoftCustomization = 'Customization\\Soft';
     // endregion
 

@@ -15,7 +15,7 @@
     <x-section title="Concept" disable-copy>
         <p>
             Many modern applications use a command palette to help users quickly find and navigate
-            to anything — pages, actions, contacts, or settings — without leaving the keyboard.
+            to anything (pages, actions, contacts, or settings) without leaving the keyboard.
             The <x-block>command-palette</x-block> component provides exactly that: searchable overlay
             that fetches results from your server, supports keyboard navigation, and can display
             images, icons, and descriptions alongside each result. Place it once in your layout for
@@ -138,7 +138,7 @@
     <x-section title="Actionable" disable-copy>
         <div class="space-y-4">
             <p>
-                Since you might want to use the component globally—like in a layout file—you can interact with
+                Since you might want to use the component globally, like in a layout file, you can interact with
                 item selection in two other ways. You can configure an invocable PHP class in the <a href="{{ route('documentation', ['v3', 'configuration']) }}" wire:navigate class="underline">configuration file</a>
                 to handle selections on the server side. This way, selecting an item will go through an internal
                 TallStackUI route to handle the action of creating the instance of your class and invoking it through

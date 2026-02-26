@@ -44,9 +44,6 @@
     </x-section>
     <x-section title="IDE" description="Command used to generate ide.json file." disable-copy>
         <div class="space-y-4">
-            <p>
-                The version 2.0 of TallStackUI introduces the <x-block>ide</x-block> command:
-            </p>
             <x-code language="shell" :contents="$ide"/>
             <p>
                 This command will map all the components based on the TallStackUI configuration file to create an <x-block>ide.json</x-block> file - in the base path of the Laravel application,

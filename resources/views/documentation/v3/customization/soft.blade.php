@@ -162,7 +162,7 @@
     <x-section title="Internal Scoped Customization" disable-copy>
         <div class="space-y-4">
             <p>
-                Some TallStackUI components use other TallStackUI components internally — for example, the Color Picker
+                Some TallStackUI components use other TallStackUI components internally. For example, the Color Picker
                 renders an Input, and the Date Picker renders a Floating panel. With internal scoped customization, you can
                 target and customize these internal instances without publishing Blade templates. The second parameter of the
                 <x-block>customize</x-block> method accepts the scope name of the internal component:

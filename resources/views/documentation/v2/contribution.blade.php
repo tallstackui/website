@@ -10,8 +10,8 @@
         TallStackUI Contribuition Guide.
     </x-slot:description>
     <x-section title="Possibilities" disable-copy>
-        There are several ways to contribute to a library like TallStackUI — <b class="underline">it’s not just about code!</b>
-        Even if you’re not an experienced developer, don’t worry — there are other ways to help. Do you enjoy writing? You can
+        There are several ways to contribute to a library like TallStackUI, <b class="underline">it’s not just about code!</b>
+        Even if you’re not an experienced developer, don’t worry, there are other ways to help. Do you enjoy writing? You can
         review the texts on both TallStackUI and our website, identifying and pointing out possible mistakes. Did you find
         an issue on the website, documentation, or any TallStackUI component? Create an issue and report the problem. Are
         you a fan of TallStackUI? Share it with your friends and community! Spreading the word is also a valuable contribution.

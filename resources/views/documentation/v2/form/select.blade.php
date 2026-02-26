@@ -50,7 +50,7 @@
             <p>
                 While there are no explicit examples in the documentation, you're free to use multiple <x-block>select.styled</x-block> on the same page,
                 and also make options reactive based on other properties using <x-block>wire:model.live</x-block>. If you encounter any misbehavior
-                in this regard, try to fully explore options like <x-block>wire:ignore</x-block> or <x-block>wire:replace</x-block> —with <x-block>.self</x-block> variants of the directives.
+                in this regard, try to fully explore options like <x-block>wire:ignore</x-block> or <x-block>wire:replace</x-block>, with <x-block>.self</x-block> variants of the directives.
             </p>
         </div>
     </x-section>

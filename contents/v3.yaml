@@ -656,6 +656,13 @@ customization:
     - Create or Manipulate Colors
     - Change the Default Namespace
     - Create Custom Color
+  globals:
+    - Concept
+    - Flash
+    - Square
+    - Colorful
+    - Selective Application
+    - Chaining
 helpers:
   debug-mode:
     - Concept

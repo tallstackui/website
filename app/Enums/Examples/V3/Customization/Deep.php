@@ -19,7 +19,7 @@ class Deep
     'components' => [
         // ...
 
-        'input' => Components\Form\Input::class, // [tl! remove]
+        'input' => Components\Form\Input\Component::class, // [tl! remove]
         'input' => \App\View\Components\Input::class, // [tl! add]
 
         // ...
@@ -31,7 +31,7 @@ class Deep
 
     use Illuminate\Contracts\View\View;
 
-    class Input extends \TallStackUi\View\Components\Form\Input // [tl! highlight]
+    class Input extends \TallStackUi\Components\Form\Input\Component // [tl! highlight]
     {
         //
     }
@@ -42,7 +42,7 @@ class Deep
 
     use Illuminate\Contracts\View\View;
 
-    class Input extends \TallStackUi\View\Components\Form\Input
+    class Input extends \TallStackUi\Components\Form\Input\Component
     {
         public function customization(): array // [tl! focus:3]
         {
