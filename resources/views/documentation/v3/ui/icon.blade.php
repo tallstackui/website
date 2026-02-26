@@ -11,7 +11,8 @@
         As a result, TallStackUI was adopted - still in version 1.x, to support other libraries, and it worked. However, this created a problem:
         maintaining more repositories and updating the icons periodically. <b>From version 2.x onwards we dropped support for
         custom icons maintained by TallStackUI in favor of using custom icons through the community repositories of the <a href="https://blade-ui-kit.com/" class="underline" target="_blank">Blade UI Kit project</a></b>,
-        which supports more than 100K icons in total, divided between repositories.
+        which supports more than 100K icons in total, divided between repositories. Additionally, starting from version 3.x you can also
+        use any local icon based on an anonymous Blade component. Continue to read to understand how to use and configure the icons of your project.
     </x-section>
     <x-section title="Basic Usage" description="An option to allow you to use the default icons, Heroicons.">
         <x-preview language="blade" :contents="$basic">
@@ -55,6 +56,7 @@
                 <li>
                     Perform a general cleanup in Laravel:
                     <x-code language="shell" :contents="$clean" />
+                    <p>Continue to read to understand how to use local custom icons...</p>
                 </li>
             </ul>
         </div>
@@ -111,6 +113,35 @@
                 You can refer to the list of <a href="https://heroicons.com/" class="underline" target="_blank">available icons from Heroicons</a> for visual reference.
             </p>
             <x-code :contents="$guide" disable-copy />
+        </div>
+    </x-section>
+    <x-section title="Custom Local Icons" disable-copy>
+        <div class="space-y-4">
+            <p>
+                Beyond the Blade UI Kit packages, you can use your own local SVG files as icons.
+                Save them as anonymous Blade components and map them in the configuration file.
+            </p>
+            <ul class="list-decimal list-inside space-y-2">
+                <li>
+                    Set the <x-block>TALLSTACKUI_ICON_TYPE</x-block> environment variable to the path
+                    (relative to <x-block>resources/views</x-block>) where your icon Blade files live:
+                    <x-code :contents="$customEnv" />
+                </li>
+                <li>
+                    Create the anonymous Blade component. The key requirement is including <x-block>&#123;&#123; $attributes &#125;&#125;</x-block>
+                    on the SVG tag so TallStackUI can pass attributes through:
+                    <x-code language="blade" :contents="$customBlade" />
+                </li>
+                <li>
+                    Use the icon normally, or map the icon in the configuration file's <x-block>custom.guide</x-block> section. The key is the internal icon
+                    name and the value is the filename of your Blade component:
+                    <x-code :contents="$customConfig" />
+                </li>
+            </ul>
+            <x-warning>
+                The Blade component must include <x-block pink>&#123;&#123; $attributes &#125;&#125;</x-block> in the SVG tag,
+                otherwise component attributes like classes will not be applied.
+            </x-warning>
         </div>
     </x-section>
 </x-layout>

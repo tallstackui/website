@@ -419,6 +419,7 @@ ui:
     - Custom Icon Name Pattern
     - Variations
     - Internal Icon Guide
+    - Custom Local Icons
   modal:
     - Basic Usage
     - Title Slot
