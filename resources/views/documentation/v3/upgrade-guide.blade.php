@@ -10,71 +10,94 @@
     <x-section title="Before Start" disable-copy>
         <div class="space-y-4">
             <p>
-                Before you start updating your application to TallStackUI 2.x, I, <a href="https://github.com/devajmeireles" target="_blank" class="underline">AJ</a>,
-                would like to thank you for using TallStackUI. I am very happy to know that by solving my problem, I was able to help you too, because TallStackUI
-                was designed to solve my problem of not relying on other component libraries that are abandoned over time.
+                First, I owe you an apology. Version 3 took longer than expected, and the main reason is simple: I
+                maintain this library solo. If TallStackUI brings value to your work, please consider
+                <a href="https://github.com/sponsors/devajmeireles" target="_blank" class="underline text-pink-500">sponsoring the project</a>,
+                it makes a real difference in keeping development going.
             </p>
             <p>
-                Also, I would like to apologize for the delay! Yes, I consider it a big delay. My goal was to release version 2.x on the same date as version 1.x,
-                on November 28th. Unfortunately, I was unable to meet this deadline due to several issues I had in my office.
+                That said, I love TallStackUI and have no intention of abandoning it. I use it in every Tall Stack
+                project I build, and that's exactly what drove version 3 forward: real needs from real projects shaped
+                into new features.
+            </p>
+            <p>
+                Now, to the good stuff. <b>Welcome to the TallStackUI 3 upgrade guide!</b> I'm excited to share this major
+                release with you. Version 3 is a significant milestone that brings TailwindCSS v4 support, Laravel 13
+                compatibility, brand new components, AI-powered development tools, and dozens of enhancements across the
+                board.
+            </p>
+            <p>
+                Thank you for being part of the TallStackUI community. Your feedback and contributions have been invaluable in shaping this release.
             </p>
         </div>
     </x-section>
-    <x-section title="Whats News" disable-copy>
+    <x-section title="Whats New" disable-copy>
         <div class="space-y-4">
             <p>
-                TallStackUI 2.x brings a number of things that I consider important. You can think of components, components, and components, but a library like TallStackUI
-                isn't just about new components. Version 2.x brings new components, improvements to current components, and hundreds of small bug fixes.
-            </p>
-            <p>
-                Here's a quick list of what you can expect from version 2.x 👇
+                TallStackUI 3 is a big release. Beyond new components, it introduces AI integration, a revamped customization
+                system, and broad compatibility upgrades. Here's what you can expect 👇
             </p>
             <div class="pl-4 space-y-4">
                 <div>
                     <h2 class="text-lg tracking-tight text-pink-600 font-medium">👀 Internal:</h2>
                     <ul>
-                        <li>- Redesigned internal structure for better long-term maintenance.</li>
-                        <li>- Internal documentation in important logic sections.</li>
-                        <li>- New internal concepts to improve Blade file structure.</li>
-                        <li class="font-bold">- Increased performance for rendering various components by up to 10%</li>
+                        <li>- TailwindCSS v4 support (TailwindCSS v3 dropped).</li>
+                        <li>- Laravel 13 support.</li>
+                        <li>- Performance improvements across multiple components.</li>
+                        <li>- Isolated JS bundles.</li>
+                        <li>- Refactored asset controller.</li>
+                        <li>- New vendor publishable name: <x-block>ts-ui</x-block>.</li>
+                        <li>- AI-ready <x-block>.ai/</x-block> documentation directory for AI assistants.</li>
                     </ul>
                 </div>
                 <div>
-                    <h2 class="text-lg tracking-tight text-pink-600 font-medium">🥳 New Components and Helper:</h2>
+                    <h2 class="text-lg tracking-tight text-pink-600 font-medium">🥳 New Components:</h2>
                     <ul>
-                        <li>- Carousel</li>
-                        <li>- Environment</li>
-                        <li>- Layout</li>
-                        <li>- Signature</li>
-                        <li>- New Helper: <a href="{{ route('documentation', ['v3', 'helpers', 'env-bar']) }}" wire:navigate class="font-bold underline">EnvBar</a></li>
+                        <li>- Back to Top</li>
+                        <li>- Breadcrumbs</li>
+                        <li>- Command Palette</li>
+                        <li>- Dial</li>
+                        <li>- Kbd</li>
+                    </ul>
+                </div>
+                <div>
+                    <h2 class="text-lg tracking-tight text-pink-600 font-medium">🤖 AI Integration:</h2>
+                    <ul>
+                        <li>- <x-block>.ai/</x-block> directory with component instruction files for AI assistants (GitHub Copilot, Claude, Cursor, etc.).</li>
+                        <li>- MCP server hosted on the documentation website for real-time component documentation access.</li>
+                        <li>- Learn more on the <a href="{{ route('documentation', ['v3', 'ai']) }}" wire:navigate class="font-bold underline">AI documentation page</a>.</li>
                     </ul>
                 </div>
                 <div>
                     <h2 class="text-lg tracking-tight text-pink-600 font-medium">🌐 Others:</h2>
                     <ul>
-                        <li>- New Scoped Soft Customization concept.</li>
-                        <li>- New colors customization concept.</li>
-                        <li>- New icons concept.</li>
-                        <li>- New <x-block>tallstackui:ide</x-block> command.</li>
-                        <li>- <x-block>Card</x-block> Component: support of colors, image and minimize effect.</li>
-                        <li>- <x-block>Dropdown</x-block> Component: support to nested dropdown.</li>
-                        <li>- <x-block>Floating</x-block> Component: ability to customize floating class per component.</li>
-                        <li>- <x-block>Form Color</x-block> Component: support of clearable option.</li>
-                        <li>- <x-block>Form Input</x-block> Component: support of clearable option.</li>
-                        <li>- <x-block>Form Input</x-block> Component: ability to globally <x-block>invalidate</x-block> form validation errors.</li>
-                        <li>- <x-block>Form Select Styled</x-block> Component: support of a basic lazy loading.</li>
-                        <li>- <x-block>Form Select Styled</x-block> Component: support of group options.</li>
-                        <li>- <x-block>Form Select Styled</x-block> Component: support of set <x-block>select</x-block> with default values.</li>
-                        <li>- <x-block>Form Select Styled</x-block> Component: addition of <x-block>unfiltered</x-block> attribute.</li>
-                        <li>- <x-block>Form Password</x-block> Component: ability to change password generator algorithm.</li>
-                        <li>- <x-block>Form Number</x-block> Component: ability to increase/decrease by using <x-block>step</x-block> attribute.</li>
-                        <li>- <x-block>Form Upload</x-block> Component: ability to validate BEFORE the upload.</li>
-                        <li>- <x-block>Form Upload</x-block>Component: ability to control the floating closing effect after upload.</li>
-                        <li>- <x-block>Rating</x-block> Component: ability to use any icon.</li>
-                        <li>- <x-block>Slide</x-block> Component: ability of opening via new positions: top and bottom.</li>
-                        <li>- <x-block>Stats</x-block> Component: support to <x-block>wire:click</x-block>.</li>
-                        <li>- Helper <x-block>darkTheme</x-block>: several enhancements.</li>
-                        <li>- Helper <x-block>Debug Mode</x-block>: now the ignore works with component class name instead of pure string.</li>
+                        <li>- Dozens of community feature requests addressed.</li>
+                        <li>- <b>"Personalization" renamed to "Customization"</b> across the entire library.</li>
+                        <li>
+                            - New <a href="{{ route('documentation', ['v3', 'customization', 'globals']) }}" wire:navigate class="underline">Globals customization</a> concept (flash, square, colorful) -
+                            <i>think of them as presets.</i>
+                        </li>
+                        <li>- New <a href="{{ route('documentation', ['v3', 'configuration']) }}" wire:navigate class="underline">configuration file structure</a> documentation.</li>
+                        <li>- New <a href="{{ route('documentation', ['v3', 'customization', 'soft']) }}" wire:navigate class="underline">Internal Scoped Customization</a> concept.</li>
+                        <li>- New <x-block>$tsui</x-block> JavaScript helper.</li>
+                        <li>- <x-block>Avatar</x-block> Component: group and presence indicators.</li>
+                        <li>- <x-block>Button</x-block> Component: block style.</li>
+                        <li>- <x-block>Card</x-block> Component: loading effect and events.</li>
+                        <li>- <x-block>Command Palette</x-block> Component: support for class as action when clicked.</li>
+                        <li>- <x-block>Table</x-block> Component: empty state, highlight, and expandable rows.</li>
+                        <li>- <x-block>Tab</x-block> Component: centered and route-based tabs.</li>
+                        <li>- <x-block>Layout</x-block> Component: brand collapsed, sidebar footer, new attributes, and dozens of general improvements.</li>
+                        <li>- <x-block>Dialog</x-block> and <x-block>Toast</x-block>: persistent and colorful modes.</li>
+                        <li>- <x-block>Modal</x-block> Component: mobile device adaptations.</li>
+                        <li>- <x-block>Form Input</x-block> Component: better button positioning.</li>
+                        <li>- <x-block>Form Select Styled</x-block> Component: grouped options, AlpineJS helper, and recycle option.</li>
+                        <li>- <x-block>Form Color</x-block> Component: exclude specific colors or color steps.</li>
+                        <li>- <x-block>Radio</x-block>, <x-block>Checkbox</x-block> and <x-block>Toggle</x-block>: custom color customization.</li>
+                        <li>- <x-block>Radio</x-block> Component: no longer requires explicit value/id.</li>
+                        <li>- <x-block>Pin</x-block> Component: smart mode with auto-submit.</li>
+                        <li>- <x-block>ThemeSwitch</x-block> Component: redesigned with <x-block>simple</x-block> and <x-block>only-icons</x-block> modes, block style for dropdown usage.</li>
+                        <li>- <x-block>Icon</x-block> Component: custom local icons, raw icons in all icon slots, and fully customized SVG as Blade component.</li>
+                        <li>- <x-block>$tsui.focus()</x-block> helper: now supports focusing elements based on <x-block>x-ref</x-block>.</li>
                     </ul>
                 </div>
             </div>
@@ -85,70 +108,145 @@
     </x-section>
     <x-section class="space-y-4" title="How to Upgrade" disable-copy>
         <p>
-            Now that I've listed everything I've done in this new version so far, let's talk about how to upgrade your application
-            from version 1.x to the new version, 2.x. First of all, it's important to mention that how much work it will be to upgrade
-            to version 2.x will depend on how your application is doing. I've upgraded two of my SaaS applications by simply changing
-            the version reference in <x-block>composer.json</x-block>
+            Now let's talk about how to upgrade your application from version 2.x to 3. The amount of work will depend on
+            how much customization you've done. If you use TallStackUI "in a basic way", the upgrade should be straightforward.
         </p>
         <div class="pl-4 space-y-4">
             <div>
-                <h2 class="text-lg tracking-tight text-pink-600 font-medium">1. Check soft customization keys:</h2>
+                <h2 class="text-lg tracking-tight text-pink-600 font-medium">1. Rename "personalization" to "customization":</h2>
                 <p>
-                    Before starting the update process, check if the names of the Soft Customization keys remain the same. I've renamed some of them
-                    for better internal organization regarding the naming logic. <b>If you do not use Soft Customization, then just skip this step!</b>
+                    The terminology has changed across the entire library: "Soft Personalization" is now "Soft Customization", "Deep Personalization"
+                    is now "Deep Customization", and so on. The main facade method has also changed from <x-block>personalize()</x-block> to
+                    <x-block>customize()</x-block>. Update any references in your code accordingly:
+                </p>
+                <x-code language="php" :contents="$personalization" />
+                <p>
+                    <b>If you do not use any personalization/customization features, then just skip this step!</b>
                 </p>
             </div>
             <div>
-                <h2 class="text-lg tracking-tight text-pink-600 font-medium">2. Redo deep customization:</h2>
+                <h2 class="text-lg tracking-tight text-pink-600 font-medium">2. Check soft customization keys:</h2>
                 <p>
-                    While I know this is a lot of work, if you have published TallStackUI Blade files or extended component classes to change specific behaviors -
-                    such as the 1.x color scheme customization, we recommend that you back up your files, republish the new ones, and adjust the new files with your
-                    adjustments. This is necessary because since we are talking about a new version, several internal changes have been made, so your current files
-                    will be out of date. <b>If you do not use Soft Customization, then just skip this step!</b>
+                    Some soft customization keys may have been renamed for better organization. Before upgrading, review the
+                    <a href="{{ route('documentation', ['v3', 'customization', 'soft']) }}" wire:navigate class="underline">Soft Customization documentation</a>
+                    to verify your keys are up to date. <b>If you do not use Soft Customization, then just skip this step!</b>
                 </p>
             </div>
             <div>
-                <h2 class="text-lg tracking-tight text-pink-600 font-medium">3. Save soft customization scoped:</h2>
+                <h2 class="text-lg tracking-tight text-pink-600 font-medium">3. Redo deep customization:</h2>
                 <p>
-                    The concept of Scoped Soft Customization has changed in version 2.x, and the change is for the better! So save all your customizations to
-                    apply them using the new concept. I explain everything about this on the Soft Customization page. <b>If you do not use Soft Customization, then just skip this step!</b>
+                    If you have published TallStackUI Blade files or extended component classes, we recommend that you back up your files,
+                    republish the new ones, and reapply your adjustments. Internal changes require fresh files to work properly.
+                    <b>If you do not use Deep Customization, then just skip this step!</b>
                 </p>
             </div>
             <div>
-                <h2 class="text-lg tracking-tight text-pink-600 font-medium">4. Component attributes:</h2>
+                <h2 class="text-lg tracking-tight text-pink-600 font-medium">4. Update TailwindCSS to v4:</h2>
                 <p>
-                    As for the components and their attributes, there is no change, they are the same. In this regard, I hope you will not have any problems.
-                    That is why if you use TallStackUI "in a basic way", then the upgrade process becomes extremely easy, as in my personal projects.
+                    <b>TallStackUI 3 requires TailwindCSS v4. Support for TailwindCSS v3 has been discontinued.</b> Follow the
+                    <a href="https://tailwindcss.com/docs/upgrade-guide" target="_blank" class="underline">official TailwindCSS v4 migration guide</a>
+                    to update your project. <b>This is an important step for all users.</b>
                 </p>
             </div>
             <div>
-                <h2 class="text-lg tracking-tight text-pink-600 font-medium">5. Republish the configuration file:</h2>
+                <h2 class="text-lg tracking-tight text-pink-600 font-medium">5. Update vendor publishable tag:</h2>
                 <p>
-                    The TallStackUI configuration file - <x-block>config/tallstackui.php</x-block>, will contain changes and additions to content in this new version, 2.x.
-                    <b>Be sure to compare your changes with the new file and synchronize accordingly so that your file has the necessary modifications and additions</b>, such as the addition of new components.
+                    <b>Important:</b> The vendor publishable tag has been renamed from <x-block>tallstackui</x-block> to <x-block>ts-ui</x-block>.
+                    This affects all <x-block>php artisan vendor:publish</x-block> commands. If you have any scripts, CI pipelines, or documentation
+                    referencing the old tag name, make sure to update them to use <x-block>ts-ui</x-block> instead.
+                </p>
+                <x-warning class="pt-2">
+                    All publishable resources (configuration files, Blade views, etc.) now use the <x-block pink>ts-ui</x-block> tag.
+                    The old <x-block pink>tallstackui</x-block> tag will no longer work in version 3.
+                </x-warning>
+            </div>
+            <div>
+                <h2 class="text-lg tracking-tight text-pink-600 font-medium">6. Republish the configuration file:</h2>
+                <p>
+                    The TallStackUI configuration file - <x-block>config/tallstackui.php</x-block>, contains changes and additions in version 3.
+                    <b>Be sure to compare your changes with the new file and synchronize accordingly so that your file has the necessary modifications and additions.</b>
                 </p>
             </div>
             <div>
-                <h2 class="text-lg tracking-tight text-pink-600 font-medium">6. Redo your custom icons:</h2>
+                <h2 class="text-lg tracking-tight text-pink-600 font-medium">7. Migrate to the <x-block>$tsui</x-block> JavaScript helper:</h2>
                 <p>
-                    Since custom icon support has changed in version 2.x, we recommend that you read the <a href="{{ route('documentation', ['v3', 'ui', 'icon']) }}" wire:navigate class="underline">new icon documentation page</a>
-                    to understand the changes and make any necessary adjustments. <b>If you do not use custom icons, then just skip this step!</b>
+                    In version 3, all individual JavaScript helpers have been unified into a single global <x-block>$tsui</x-block> object.
+                    If you use any of the old helpers in your Alpine.js expressions or Blade templates, you must update them:
+                </p>
+                <div class="my-2">
+                    <x-custom-table>
+                        <x-custom-table.thead>
+                            <x-custom-table.tr>
+                                <x-custom-table.th first label="Before (v2)"/>
+                                <x-custom-table.th label="After (v3)"/>
+                            </x-custom-table.tr>
+                        </x-custom-table.thead>
+                        <x-custom-table.tbody>
+                            <x-custom-table.tr>
+                                <x-custom-table.td first><x-block>$modalOpen('name')</x-block></x-custom-table.td>
+                                <x-custom-table.td><x-block>$tsui.open.modal('name')</x-block></x-custom-table.td>
+                            </x-custom-table.tr>
+                            <x-custom-table.tr>
+                                <x-custom-table.td first><x-block>$modalClose('name')</x-block></x-custom-table.td>
+                                <x-custom-table.td><x-block>$tsui.close.modal('name')</x-block></x-custom-table.td>
+                            </x-custom-table.tr>
+                            <x-custom-table.tr>
+                                <x-custom-table.td first><x-block>$slideOpen('name')</x-block></x-custom-table.td>
+                                <x-custom-table.td><x-block>$tsui.open.slide('name')</x-block></x-custom-table.td>
+                            </x-custom-table.tr>
+                            <x-custom-table.tr>
+                                <x-custom-table.td first><x-block>$slideClose('name')</x-block></x-custom-table.td>
+                                <x-custom-table.td><x-block>$tsui.close.slide('name')</x-block></x-custom-table.td>
+                            </x-custom-table.tr>
+                            <x-custom-table.tr>
+                                <x-custom-table.td first><x-block>$selectOpen('name')</x-block></x-custom-table.td>
+                                <x-custom-table.td><x-block>$tsui.open.select('name')</x-block></x-custom-table.td>
+                            </x-custom-table.tr>
+                            <x-custom-table.tr>
+                                <x-custom-table.td first><x-block>$selectClose('name')</x-block></x-custom-table.td>
+                                <x-custom-table.td><x-block>$tsui.close.select('name')</x-block></x-custom-table.td>
+                            </x-custom-table.tr>
+                            <x-custom-table.tr>
+                                <x-custom-table.td first><x-block>$focusOn('id')</x-block></x-custom-table.td>
+                                <x-custom-table.td><x-block>$tsui.focus('id')</x-block></x-custom-table.td>
+                            </x-custom-table.tr>
+                        </x-custom-table.tbody>
+                    </x-custom-table>
+                </div>
+                <x-warning>
+                    The old JavaScript helpers (<x-block pink>$modalOpen</x-block>, <x-block pink>$focusOn</x-block>, <x-block pink>$selectOpen</x-block>, etc.)
+                    are no longer available in version 3. <b>You must migrate all usages to the new helper.</b>
+                </x-warning>
+            </div>
+            <div>
+                <h2 class="text-lg tracking-tight text-pink-600 font-medium">8. Rename environment variable:</h2>
+                <p>
+                    The environment variable <x-block>TALLSTACKUI_AVOID_LAYOUT_REGISTRATION</x-block> has been renamed to
+                    <x-block>TALLSTACKUI_IGNORE_LAYOUT_REGISTRATION</x-block>. If you use this variable in your <x-block>.env</x-block>
+                    file or CI/CD pipelines, make sure to update it. <b>The old variable name will not be recognized in version 3.</b>
                 </p>
             </div>
             <div>
-                <h2 class="text-lg tracking-tight text-pink-600 font-medium">7. Update the Composer:</h2>
+                <h2 class="text-lg tracking-tight text-pink-600 font-medium">9. Component attributes:</h2>
                 <p>
-                    Finally, it's time to update your application to the beta version 2.x. Edit your <x-block>composer.json</x-block> file:
+                    Most component attributes remain the same. New attributes have been added to several components (check individual component
+                    documentation pages for details). In this regard, you should not have any breaking changes.
+                </p>
+            </div>
+            <div>
+                <h2 class="text-lg tracking-tight text-pink-600 font-medium">10. Update the Composer:</h2>
+                <p>
+                    Finally, it's time to update your application to version 3. Edit your <x-block>composer.json</x-block> file:
                 </p>
                 <x-code language="json" :contents="$composer" disable-copy />
                 <p>
-                    After that remove the <x-block>vendor</x-block> folder and them run this command to reinstall all your dependencies:
+                    After that, remove the <x-block>vendor</x-block> folder and then run this command to reinstall all your dependencies:
                 </p>
                 <x-code language="shell" :contents="$command" />
             </div>
         </div>
         <x-warning>
-            If you notice any inconsistencies with this guide or any unexpected behavior during the beta phase, <a class="underline" href="{{ route('issue') }}" target="_blank">please help us by reporting as an issue.</a>
+            If you notice any inconsistencies with this guide, <a class="underline" href="{{ route('issue') }}" target="_blank">please help us by reporting as an issue.</a>
         </x-warning>
     </x-section>
 </x-layout>

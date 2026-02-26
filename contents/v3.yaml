@@ -41,6 +41,10 @@ contribution:
   - Dusk Tests
   - Run Tests
   - Synchronize Changes
+upgrade-guide:
+  - Before Start
+  - Whats New
+  - How to Upgrade
 ai:
   - AI-Powered Development
   - Component Instructions
