@@ -35,9 +35,9 @@
     <x-section title="Prepare Environment" disable-copy>
         <div class="space-y-4">
             <ul class="list-inside list-decimal">
-                <li>Fork the <x-block>2.x</x-block> branch of the <a href="https://github.com/tallstackui/tallstackui" class="underline" target="_blank">TallStackUI repository</a></li>
+                <li>Fork the <x-block>3.x</x-block> branch of the <a href="https://github.com/tallstackui/tallstackui" class="underline" target="_blank">TallStackUI repository</a></li>
                 <li>Clone the repository forked for your computer.</li>
-                <li>Create a new branch based on <x-block>2.x</x-block> - <b class="italic">THIS IS A MANDATORY REQUIREMENT!</b></li>
+                <li>Create a new branch based on <x-block>3.x</x-block> - <b class="italic">THIS IS A MANDATORY REQUIREMENT!</b></li>
                 <li>Create a basic Laravel project using <a href="https://laravel.com/docs/10.x/starter-kits#laravel-breeze" class="underline" target="_blank">Laravel Breeze</a> with <b>Livewire (V3)</b> stack.</li>
                 <li>Prepare any authentication way to access the <x-block>/dashboard</x-block></li>
                 <li>

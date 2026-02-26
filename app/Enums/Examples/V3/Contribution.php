@@ -6,7 +6,7 @@ class Contribution
 {
     public const string COMPOSER = <<<'HTML'
     "require": {
-        "tallstackui/tallstackui": "v2.x-dev", // [tl! highlight]
+        "tallstackui/tallstackui": "v3.x-dev", // [tl! highlight]
 
         // ...
     },
