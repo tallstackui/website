@@ -47,9 +47,6 @@
                 <li>
                     Edit the <x-block>app.css</x-block> of your TailwindCSS v4 by inserting all below marked contents:
                     <x-code language="js" :contents="$tailwindcssV4" disable-copy />
-                    <x-warning>
-                        Your TailwindCSS setup must load the <a href="https://github.com/tailwindlabs/tailwindcss-forms" class="underline" target="_blank">form plugin</a>
-                    </x-warning>
                 </li>
                 <li>
                     Run the following command:

@@ -77,7 +77,7 @@
             <x-date :value="$current" :disable="collect([now()->subDay()->format('Y-m-d'), now()->addDay()->format('Y-m-d')])" />
         </x-preview>
     </x-section>
-    <x-section title="Disable Specific Days" description="Added in: v2.7.0" new=">= v2.7.0">
+    <x-section title="Disable Specific Days">
         <div class="space-y-4">
             <x-preview language="blade" :contents="$disableSpecificDays">
                 <div class="space-y-2">

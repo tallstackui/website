@@ -84,20 +84,21 @@
             <p><b>1)</b> Publish a dedicated breadcrumb file (recommended):</p>
             <x-code language="shell" :contents="$publishCommand" />
             <p>
-                This creates a <x-block>routes/breadcrumbs.php</x-block> file. Define your breadcrumbs there:
+                This command will creates a <x-block>routes/breadcrumbs.php</x-block> file. Define your breadcrumbs there:
             </p>
             <x-code language="php" :contents="$registryFile" />
             <p>
-                You can configure additional breadcrumb files in <x-block>config/tallstackui.php</x-block>.
-                Paths are relative to <x-block>base_path()</x-block> and non-existent files are
+                Additionally, you can load any other breadcrumb files in <x-block>config/tallstackui.php</x-block>.
+                The paths are relative to <x-block>base_path()</x-block> and non-existent files are
                 silently skipped:
             </p>
             <x-code language="php" :contents="$configFiles" />
-            <p><b>2)</b> Register breadcrumbs in any service provider's <x-block>boot</x-block> method:</p>
+            <p><b>2)</b> Or you can register breadcrumbs in any service provider's <x-block>boot</x-block> method:</p>
             <x-code language="php" :contents="$serviceProvider" />
             <p>
                 Once registered, use the component without passing <x-block>items</x-block> to
-                auto-resolve breadcrumbs from the current route:
+                auto-resolve breadcrumbs from the current route. The component will automatically
+                detect the current route and use the breadcrumb definitions to build the trail:
             </p>
             <x-code language="blade" :contents="$autoResolve" />
         </div>

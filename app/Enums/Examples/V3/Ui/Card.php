@@ -104,6 +104,15 @@ class Card
     </x-card>
     HTML;
 
+    public const string EVENTS = <<<'HTML'
+    <x-card header="TallStackUI" minimize
+            x-on:minimize="alert('Minimized!')"
+            x-on:maximize="alert('Maximized!')"
+            x-on:close="alert('Closed!')">
+        TallStackUI
+    </x-card>
+    HTML;
+
     public const string CUSTOMIZATION = <<<'HTML'
     TallStackUi::customize()
         ->card()

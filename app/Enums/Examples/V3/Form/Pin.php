@@ -36,7 +36,7 @@ class Pin
     <!-- Livewire string property: $pin -->
 
     <form wire:submit="verify">
-        <x-pin length="5" wire:model.live="pin" label="Enter your code" smart numbers /> <!-- [tl! highlight] -->
+        <x-pin length="5" wire:model.live="pin" label="Enter your code" smart numbers />
     </form>
     HTML;
 

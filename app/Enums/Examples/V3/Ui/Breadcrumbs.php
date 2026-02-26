@@ -110,10 +110,17 @@ class Breadcrumbs
     HTML;
 
     public const string CONFIG_FILES = <<<'HTML'
-    // config/tallstackui.php
+    // ...
 
     'breadcrumbs' => [
-        \TallStackUi\Components\Breadcrumbs\Component::class,
+        Components\Breadcrumbs\Component::class,
+        /*
+        |----------------------------------------------------------------------
+        | Breadcrumbs Settings
+        |----------------------------------------------------------------------
+        |
+        | files: array of files (relative to base_path()) that register breadcrumb definitions.
+        */
         [
             'files' => [
                 'routes/breadcrumbs.php',
@@ -121,6 +128,8 @@ class Breadcrumbs
             ],
         ],
     ],
+
+    // ...
     HTML;
 
     public const string AUTO_RESOLVE = <<<'HTML'

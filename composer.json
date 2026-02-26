@@ -82,7 +82,7 @@
     "repositories": [
         {
             "type": "path",
-            "url": "/Users/aj/Workspace/tallstackui/tallstackui"
+            "url": "/Users/aj/Workspace/tallstack/tallstackui"
         }
     ]
 }

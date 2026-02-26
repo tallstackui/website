@@ -333,6 +333,7 @@ ui:
     - Image
     - Color Variations
     - Loading
+    - Events
   carousel:
     - Basic Usage
     - Round

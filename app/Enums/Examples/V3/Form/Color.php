@@ -33,11 +33,11 @@ class Color
     HTML;
 
     public const string EXCLUDE_COLOR = <<<'HTML'
-    <x-color exclude-step="red" />
+    <x-color exclude-color="red" />
 
     <!-- or an array of colors -->
 
-    <x-color :exclude-step="['red', 'yellow']" />
+    <x-color :exclude-color="['red', 'yellow']" />
     HTML;
 
     public const string CLEARABLE = <<<'HTML'
