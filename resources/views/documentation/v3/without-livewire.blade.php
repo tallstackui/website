@@ -12,28 +12,11 @@
     <x-section title="Concept" disable-copy>
         <div class="space-y-4">
             <p>
-                TallStackUI is a component library designed for Livewire 3, but after many requests from the community, <u>we have 
-                adapted TallStackUI to work perfectly well outside of Livewire components.</u> Below is a list of some components 
-                that can be used outside of Livewire components, and also those that cannot.
+                TallStackUI is a component library designed for Livewire 3, but after many requests from the community,
+                we have adapted TallStackUI to work perfectly well outside of Livewire components. For your convenience,
+                below is a list of components that DO NOT WORK outside of the Livewire component context.
             </p>
             <div class="mt-2 space-y-2">
-                <p class="text-md font-medium">List of components that CAN be used out of Livewire component ✅</p>
-                <ul class="list-inside list-decimal">
-                    <li>Checkbox</li>
-                    <li>Color</li>
-                    <li>Date</li>
-                    <li>Input</li>
-                    <li>Number</li>
-                    <li>Password</li>
-                    <li>Pin</li>
-                    <li>Radio</li>
-                    <li>Range</li>
-                    <li>Select</li>
-                    <li>Tag</li>
-                    <li>TextArea</li>
-                    <li>Time</li>
-                    <li>Toggle</li>
-                </ul>
                 <p class="text-md font-medium">Examples of components that CANNOT be used out of Livewire component ❌</p>
                 <ul class="list-inside list-decimal">
                     <li>KeyValue</li>
@@ -44,7 +27,7 @@
                     <li>Upload</li>
                 </ul>
                 <p>
-                    Many other components can be used out of Livewire components, such as: alert, modal, dropdown, etc. These are components that do not contain any logic that depends on Livewire.
+                    Any other component not listed above can be used outside of Livewire components.
                 </p>
             </div>
         </div>
