@@ -23,4 +23,18 @@
             </p>
         </div>
     </x-section>
+    <x-section title="Configuration File Structure" disable-copy>
+        <div class="space-y-4">
+            <p>
+                Starting from version 3, the configuration file has a significantly different structure compared to version 2. It now includes a flat
+                <x-block>components</x-block> array where each component is mapped to its class, and some components include
+                inline settings arrays for per-component configuration (such as z-index, blur, overflow, and other defaults).
+                This approach gives you granular control over individual component behavior directly from the configuration file.
+            </p>
+            <p>
+                Below is the full configuration file structure with all available options and their descriptions:
+            </p>
+            <x-code language="php" :contents="$structure"/>
+        </div>
+    </x-section>
 </x-layout>

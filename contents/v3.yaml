@@ -16,6 +16,9 @@ documentation:
   - Searches
   - Prefixing Example
   - Examples Without Binding
+configuration:
+  - Concept
+  - Configuration File Structure
 component-prefix:
   - Configuration File
   - Environment Variable
