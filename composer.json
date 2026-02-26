@@ -12,7 +12,7 @@
         "laravel/tinker": "^2.8",
         "livewire/livewire": "^4.0",
         "symfony/yaml": "^7.2",
-        "tallstackui/tallstackui": "^3.x-dev",
+        "tallstackui/tallstackui": "^3.0",
         "torchlight/torchlight-laravel": "^0.6"
     },
     "require-dev": {
@@ -79,11 +79,5 @@
         }
     },
     "minimum-stability": "stable",
-    "prefer-stable": true,
-    "repositories": [
-        {
-            "type": "path",
-            "url": "/Users/aj/Workspace/tallstack/tallstackui"
-        }
-    ]
+    "prefer-stable": true
 }
