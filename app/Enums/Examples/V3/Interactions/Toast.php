@@ -111,13 +111,34 @@ class Toast
     HTML;
 
     public const string DEFAULT_TIME = <<<'HTML'
-    // In config/tallstackui.php file
+    // ...
+
     'toast' => [
-        // ...
-        'timeout' => 10, // [tl! highlight]
+        Components\Toast\Component::class,
+        [
+            /*
+            |----------------------------------------------------------------------
+            | Toast Global Settings
+            |----------------------------------------------------------------------
+            |
+            | z-index: controls the default z-index.
+            | progress: enables the progress bar.
+            | expandable: enables the expanded effect by default.
+            | position: controls the default toast position (Allowed: top-right, top-left, bottom-right, bottom-left).
+            | timeout: controls the default timeout in seconds.
+            */
+            'z-index' => 'z-50',
+            'progress' => true,
+            'expandable' => false,
+            'position' => 'top-right',
+            'timeout' => 10, // [tl! highlight]
+        ],
     ],
 
-    // Then use the timeout() method without parameters
+    // ...
+    HTML;
+
+    public const string DEFAULT_TIME_USAGE = <<<'HTML'
     $this->toast()
         ->timeout() // [tl! highlight]
         ->success('Success', 'This is a success message.')

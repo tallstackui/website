@@ -7,7 +7,7 @@ class ComponentPrefix
     public const string CONFIGURATION = <<<'HTML'
     <?php
 
-    use TallStackUi\View\Components;
+    use TallStackUi\Components;
 
     return [
         /*
@@ -19,7 +19,7 @@ class ComponentPrefix
         | to prefix all TallStackUI components. This is useful to avoid conflicts
         | with other components registered by other libraries or created by yourself.
         |
-        | For example: prefixing as 'ts-', the `alert` usage will be: '<x-ts-alert />'
+        | For example, prefixing as 'ts-', the `alert` usage will be: '<x-ts-alert />'
         */
         'prefix' => env('TALLSTACKUI_PREFIX'), // [tl! remove]
         'prefix' => 'ts-', // [tl! add]

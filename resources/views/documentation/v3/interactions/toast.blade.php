@@ -48,7 +48,10 @@
             <x-preview :contents="$time">
                 <livewire:documentation.interactions.toast.timeout/>
             </x-preview>
+            <p>You can also control the default time by interacting with <a href="{{ route('documentation', ['v3', 'configuration']) }}" wire:navigate class="underline">the configuration file</a>:
             <x-code :contents="$defaultTime" disable-copy />
+            <p>Then use the <x-block>timeout</x-block> method without parameters:</p>
+            <x-code :contents="$defaultTimeUsage" disable-copy />
         </div>
     </x-section>
     <x-section title="Persistent" description="An option to not set an expiration time and also hide the progress bar.">

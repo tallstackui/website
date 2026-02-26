@@ -95,15 +95,39 @@ class CommandPalette
     HTML;
 
     public const string ACTIONABLE_CONFIG = <<<'HTML'
-    // config/tallstackui.php
+    // ...
 
     'command-palette' => [
-        TallStackUi\Components\CommandPalette\Component::class,
+        Components\CommandPalette\Component::class,
+        /*
+        |----------------------------------------------------------------------
+        | Command Palette Settings
+        |----------------------------------------------------------------------
+        |
+        | actionable: the callable class for handling item selection (e.g., App\Support\GlobalSearch::class).
+        | request: the data source for the command palette.
+        | z-index: controls the default z-index.
+        | blur: enables the background blur effect (Allowed: false, sm, md, lg, xl).
+        | overflow: avoids hiding the overflow, allowing the scroll of the page.
+        | shortcut: keyboard shortcut to toggle the palette (e.g., 'ctrl.k', 'ctrl.shift.p').
+        | recycle: when true, preserves previous results when reopening the palette.
+        | elements: when true, shows the keyboard hints in the footer.
+        | scrollbar: when true, applies a custom minimal scrollbar to the results list.
+        */
         [
             'actionable' => App\Actions\CommandPaletteAction::class, // [tl! highlight]
-            // ...
+            'request' => null,
+            'z-index' => 'z-50',
+            'blur' => false,
+            'overflow' => false,
+            'shortcut' => 'ctrl.k',
+            'recycle' => true,
+            'elements' => true,
+            'scrollbar' => true,
         ],
     ],
+
+    // ...
     HTML;
 
     public const string ACTIONABLE_CLASS = <<<'HTML'

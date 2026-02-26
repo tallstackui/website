@@ -109,7 +109,7 @@ class Breadcrumbs
     }
     HTML;
 
-    public const string CONFIG_FILES = <<<'HTML'
+    public const string CONFIG = <<<'HTML'
     // ...
 
     'breadcrumbs' => [
