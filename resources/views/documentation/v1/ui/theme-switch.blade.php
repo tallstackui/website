@@ -28,23 +28,23 @@
     </x-section>
     <x-section title="Basic Usage">
         <x-preview language="blade" :contents="$basic">
-            <x-theme-switch />
+            <x-theme-switch simple />
         </x-preview>
     </x-section>
     <x-section title="Sizes">
         <x-preview language="blade" :contents="$sizes">
             <div class="space-y-2">
-                <x-theme-switch xs />
-                <x-theme-switch sm />
-                <x-theme-switch md />
-                <x-theme-switch lg />
-                <x-theme-switch xl />
+                <x-theme-switch simple xs />
+                <x-theme-switch simple sm />
+                <x-theme-switch simple md />
+                <x-theme-switch simple lg />
+                <x-theme-switch simple xl />
             </div>
         </x-preview>
     </x-section>
     <x-section title="Only Icons" description="An option to only display icons, without the toggle.">
         <x-preview language="blade" :contents="$icons">
-            <x-theme-switch only-icons />
+            <x-theme-switch only-icons simple />
         </x-preview>
     </x-section>
 </x-layout>

@@ -141,7 +141,15 @@
                 </p>
             </div>
             <div>
-                <h2 class="text-lg tracking-tight text-pink-600 font-medium">4. Update TailwindCSS to v4:</h2>
+                <h2 class="text-lg tracking-tight text-pink-600 font-medium">4. Internal Scoped Customization:</h2>
+                <p>
+                    If you used to publish Blade files to customize internal components within other components, this is no longer necessary.
+                    Learn about the <a href="{{ route('documentation', ['v3', 'customization', 'soft']) }}" wire:navigate class="underline font-bold">Internal Scoped Customization</a>:
+                    a way to customize internal components without publishing Blade files or changing all components globally.
+                </p>
+            </div>
+            <div>
+                <h2 class="text-lg tracking-tight text-pink-600 font-medium">5. Update TailwindCSS to v4:</h2>
                 <p>
                     <b>TallStackUI 3 requires TailwindCSS v4. Support for TailwindCSS v3 has been discontinued.</b> Follow the
                     <a href="https://tailwindcss.com/docs/upgrade-guide" target="_blank" class="underline">official TailwindCSS v4 migration guide</a>
@@ -149,7 +157,7 @@
                 </p>
             </div>
             <div>
-                <h2 class="text-lg tracking-tight text-pink-600 font-medium">5. Update vendor publishable tag:</h2>
+                <h2 class="text-lg tracking-tight text-pink-600 font-medium">6. Update vendor publishable tag:</h2>
                 <p>
                     <b>Important:</b> The vendor publishable tag has been renamed from <x-block>tallstackui</x-block> to <x-block>ts-ui</x-block>.
                     This affects all <x-block>php artisan vendor:publish</x-block> commands. If you have any scripts, CI pipelines, or documentation
@@ -161,14 +169,14 @@
                 </x-warning>
             </div>
             <div>
-                <h2 class="text-lg tracking-tight text-pink-600 font-medium">6. Republish the configuration file:</h2>
+                <h2 class="text-lg tracking-tight text-pink-600 font-medium">7. Republish the configuration file:</h2>
                 <p>
                     The TallStackUI configuration file - <x-block>config/tallstackui.php</x-block>, contains changes and additions in version 3.
                     <b>Be sure to compare your changes with the new file and synchronize accordingly so that your file has the necessary modifications and additions.</b>
                 </p>
             </div>
             <div>
-                <h2 class="text-lg tracking-tight text-pink-600 font-medium">7. Migrate to the <x-block>$tsui</x-block> JavaScript helper:</h2>
+                <h2 class="text-lg tracking-tight text-pink-600 font-medium">8. Migrate to the <x-block>$tsui</x-block> JavaScript helper:</h2>
                 <p>
                     In version 3, all individual JavaScript helpers have been unified into a single global <x-block>$tsui</x-block> object.
                     If you use any of the old helpers in your Alpine.js expressions or Blade templates, you must update them:
@@ -219,7 +227,7 @@
                 </x-warning>
             </div>
             <div>
-                <h2 class="text-lg tracking-tight text-pink-600 font-medium">8. Rename environment variable:</h2>
+                <h2 class="text-lg tracking-tight text-pink-600 font-medium">9. Rename environment variable:</h2>
                 <p>
                     The environment variable <x-block>TALLSTACKUI_AVOID_LAYOUT_REGISTRATION</x-block> has been renamed to
                     <x-block>TALLSTACKUI_IGNORE_LAYOUT_REGISTRATION</x-block>. If you use this variable in your <x-block>.env</x-block>
@@ -227,14 +235,14 @@
                 </p>
             </div>
             <div>
-                <h2 class="text-lg tracking-tight text-pink-600 font-medium">9. Component attributes:</h2>
+                <h2 class="text-lg tracking-tight text-pink-600 font-medium">10. Component attributes:</h2>
                 <p>
                     Most component attributes remain the same. New attributes have been added to several components (check individual component
                     documentation pages for details). In this regard, you should not have any breaking changes.
                 </p>
             </div>
             <div>
-                <h2 class="text-lg tracking-tight text-pink-600 font-medium">10. Update the Composer:</h2>
+                <h2 class="text-lg tracking-tight text-pink-600 font-medium">11. Update the Composer:</h2>
                 <p>
                     Finally, it's time to update your application to version 3. Edit your <x-block>composer.json</x-block> file:
                 </p>
