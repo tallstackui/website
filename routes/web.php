@@ -3,6 +3,7 @@
 use App\Enums\Example;
 use App\Http\Controllers\PageController;
 use App\Http\Middleware\ShareVersionVariable;
+use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Route;
 
 Route::redirect('/docs', '/docs/v3/installation');
@@ -14,6 +15,14 @@ Route::redirect('/summer-release', '/docs/v1/summer-release');
 Route::redirect('/upgrade', '/docs/v3/upgrade-guide');
 Route::redirect('/install', '/docs/v3/installation');
 Route::redirect('/issue', 'https://github.com/tallstackui/tallstackui/issues/new?template=bug_report.yml')->name('issue');
+
+Route::get('/ai/{name}.md', function (string $name) {
+    $response = Http::get("https://raw.githubusercontent.com/tallstackui/tallstackui/refs/heads/3.x/.ai/components/{$name}.md");
+
+    abort_if($response->failed(), 404);
+
+    return response($response->body(), 200, ['Content-Type' => 'text/plain; charset=UTF-8']);
+})->where('name', '.*')->name('ai.component');
 
 Route::middleware(ShareVersionVariable::class)
     ->group(function () {

@@ -20,6 +20,9 @@
             <li class="relative ml-4">
                 <x-layout.navigation.link :href="route('documentation', ['v3', 'upgrade-guide'])" text="Upgrade Guide" />
             </li>
+            <li class="relative ml-4">
+                <x-layout.navigation.link :href="route('documentation', ['v3', 'ai'])" text="AI" new />
+            </li>
         </ul>
     </li>
     <li>

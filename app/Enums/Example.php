@@ -48,6 +48,7 @@ enum Example: string
     // endregion
 
     // region Miscellaneous
+    case Ai = 'Ai';
     case Configuration = 'Configuration';
     case Contribution = 'Contribution';
     case Command = 'Command';

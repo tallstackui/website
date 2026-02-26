@@ -41,6 +41,14 @@ contribution:
   - Dusk Tests
   - Run Tests
   - Synchronize Changes
+ai:
+  - AI-Powered Development
+  - Component Instructions
+  - MCP Server
+  - Available Tools
+  - Connecting to Claude Code
+  - Connecting to Cursor
+  - Connecting to Gemini CLI
 form:
   input:
     - Basic Usage
