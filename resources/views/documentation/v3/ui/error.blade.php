@@ -67,6 +67,10 @@
                 <livewire:documentation.ui.errors color="fuchsia" />
                 <livewire:documentation.ui.errors color="pink" />
                 <livewire:documentation.ui.errors color="rose" />
+                <livewire:documentation.ui.errors color="mauve" />
+                <livewire:documentation.ui.errors color="olive" />
+                <livewire:documentation.ui.errors color="mist" />
+                <livewire:documentation.ui.errors color="taupe" />
                 <livewire:documentation.ui.errors color="black" />
             </div>
         </x-preview>

@@ -67,6 +67,10 @@ class Error
     <x-errors color="fuchsia" />
     <x-errors color="pink" />
     <x-errors color="rose" />
+    <x-errors color="mauve" />
+    <x-errors color="olive" />
+    <x-errors color="mist" />
+    <x-errors color="taupe" />
     <x-errors color="black" />
     HTML;
 

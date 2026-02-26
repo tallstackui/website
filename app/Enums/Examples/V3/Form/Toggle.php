@@ -67,6 +67,10 @@ class Toggle
     <x-toggle color="fuchsia" label="Fuchsia" />
     <x-toggle color="pink" label="Pink" />
     <x-toggle color="rose" label="Rose" />
+    <x-toggle color="mauve" label="Mauve" />
+    <x-toggle color="olive" label="Olive" />
+    <x-toggle color="mist" label="Mist" />
+    <x-toggle color="taupe" label="Taupe" />
     <x-toggle color="black" label="Black" />
     HTML;
 

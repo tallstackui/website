@@ -68,6 +68,10 @@ class Checkbox
     <x-checkbox color="fuchsia" label="Fuchsia" />
     <x-checkbox color="pink" label="Pink" />
     <x-checkbox color="rose" label="Rose" />
+    <x-checkbox color="mauve" label="Mauve" />
+    <x-checkbox color="olive" label="Olive" />
+    <x-checkbox color="mist" label="Mist" />
+    <x-checkbox color="taupe" label="Taupe" />
     <x-checkbox color="black" label="Black" />
     HTML;
 

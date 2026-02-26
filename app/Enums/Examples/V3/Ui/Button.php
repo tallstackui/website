@@ -106,6 +106,10 @@ class Button
     <x-button text="Fuchsia" color="fuchsia" />
     <x-button text="Pink" color="pink" />
     <x-button text="Rose" color="rose" />
+    <x-button text="Mauve" color="mauve" />
+    <x-button text="Olive" color="olive" />
+    <x-button text="Mist" color="mist" />
+    <x-button text="Taupe" color="taupe" />
     <x-button text="Black" color="black" />
     HTML;
 
@@ -134,6 +138,10 @@ class Button
     <x-button text="Fuchsia" color="fuchsia" outline />
     <x-button text="Pink" color="pink" outline />
     <x-button text="Rose" color="rose" outline />
+    <x-button text="Mauve" color="mauve" outline />
+    <x-button text="Olive" color="olive" outline />
+    <x-button text="Mist" color="mist" outline />
+    <x-button text="Taupe" color="taupe" outline />
     <x-button text="Black" color="black" outline />
     <x-button text="Black" color="black" outline />
     HTML;
@@ -163,6 +171,10 @@ class Button
     <x-button text="Fuchsia" color="fuchsia" light />
     <x-button text="Pink" color="pink" light />
     <x-button text="Rose" color="rose" light />
+    <x-button text="Mauve" color="mauve" light />
+    <x-button text="Olive" color="olive" light />
+    <x-button text="Mist" color="mist" light />
+    <x-button text="Taupe" color="taupe" light />
     <x-button text="Black" color="black" light />
     HTML;
 
@@ -191,6 +203,10 @@ class Button
     <x-button text="Fuchsia" color="fuchsia" flat />
     <x-button text="Pink" color="pink" flat />
     <x-button text="Rose" color="rose" flat />
+    <x-button text="Mauve" color="mauve" flat />
+    <x-button text="Olive" color="olive" flat />
+    <x-button text="Mist" color="mist" flat />
+    <x-button text="Taupe" color="taupe" flat />
     <x-button text="Black" color="black" flat />
     HTML;
 
@@ -258,6 +274,10 @@ class Button
     <x-button.circle icon="bookmark" color="fuchsia" />
     <x-button.circle icon="bookmark" color="pink" />
     <x-button.circle icon="bookmark" color="rose" />
+    <x-button.circle icon="bookmark" color="mauve" />
+    <x-button.circle icon="bookmark" color="olive" />
+    <x-button.circle icon="bookmark" color="mist" />
+    <x-button.circle icon="bookmark" color="taupe" />
     <x-button.circle icon="bookmark" color="black" />
     HTML;
 
@@ -286,6 +306,10 @@ class Button
     <x-button.circle icon="bookmark" color="fuchsia" outline />
     <x-button.circle icon="bookmark" color="pink" outline />
     <x-button.circle icon="bookmark" color="rose" outline />
+    <x-button.circle icon="bookmark" color="mauve" outline />
+    <x-button.circle icon="bookmark" color="olive" outline />
+    <x-button.circle icon="bookmark" color="mist" outline />
+    <x-button.circle icon="bookmark" color="taupe" outline />
     <x-button.circle icon="bookmark" color="black" outline />
     HTML;
 
@@ -314,6 +338,10 @@ class Button
     <x-button.circle icon="bookmark" color="fuchsia" light />
     <x-button.circle icon="bookmark" color="pink" light />
     <x-button.circle icon="bookmark" color="rose" light />
+    <x-button.circle icon="bookmark" color="mauve" light />
+    <x-button.circle icon="bookmark" color="olive" light />
+    <x-button.circle icon="bookmark" color="mist" light />
+    <x-button.circle icon="bookmark" color="taupe" light />
     <x-button.circle icon="bookmark" color="black" light />
     HTML;
 
@@ -342,6 +370,10 @@ class Button
     <x-button.circle icon="bookmark" color="fuchsia" flat />
     <x-button.circle icon="bookmark" color="pink" flat />
     <x-button.circle icon="bookmark" color="rose" flat />
+    <x-button.circle icon="bookmark" color="mauve" flat />
+    <x-button.circle icon="bookmark" color="olive" flat />
+    <x-button.circle icon="bookmark" color="mist" flat />
+    <x-button.circle icon="bookmark" color="taupe" flat />
     <x-button.circle icon="bookmark" color="black" flat />
     HTML;
 

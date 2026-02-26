@@ -90,6 +90,10 @@
                 <x-stats title="Components" icon="swatch" :number="100" color="fuchsia" outline />
                 <x-stats title="Components" icon="swatch" :number="100" color="pink" outline />
                 <x-stats title="Components" icon="swatch" :number="100" color="rose" outline />
+                <x-stats title="Components" icon="swatch" :number="100" color="mauve" outline />
+                <x-stats title="Components" icon="swatch" :number="100" color="olive" outline />
+                <x-stats title="Components" icon="swatch" :number="100" color="mist" outline />
+                <x-stats title="Components" icon="swatch" :number="100" color="taupe" outline />
                 <x-stats title="Components" icon="swatch" :number="100" color="black" outline />
             </div>
             <x-warning class="mt-4">

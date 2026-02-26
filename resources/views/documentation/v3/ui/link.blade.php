@@ -95,6 +95,10 @@
                 <x-link :href="route('documentation', ['v3', 'ui', 'link'])" text="Fuchsia" color="fuchsia" />
                 <x-link :href="route('documentation', ['v3', 'ui', 'link'])" text="Pink" color="pink" />
                 <x-link :href="route('documentation', ['v3', 'ui', 'link'])" text="Rose" color="rose" />
+                <x-link :href="route('documentation', ['v3', 'ui', 'link'])" text="Mauve" color="mauve" />
+                <x-link :href="route('documentation', ['v3', 'ui', 'link'])" text="Olive" color="olive" />
+                <x-link :href="route('documentation', ['v3', 'ui', 'link'])" text="Mist" color="mist" />
+                <x-link :href="route('documentation', ['v3', 'ui', 'link'])" text="Taupe" color="taupe" />
                 <x-link :href="route('documentation', ['v3', 'ui', 'link'])" text="Black" color="black" />
             </div>
         </x-preview>

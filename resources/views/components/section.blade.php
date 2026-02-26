@@ -34,7 +34,12 @@
                             :class="{
                         'text-pink-500 font-semibold': code,
                         'text-gray-400 dark:text-slate-300': !code
-                    }" type="button" x-on:click="code = !code" x-cloak>
+                    }" type="button" x-on:click="
+                        if (!code) {
+                            document.querySelectorAll('[data-floating]').forEach(el => el.style.display = 'none');
+                        }
+                        code = !code
+                    " x-cloak>
                         <x-icon name="code-bracket" solid class="text-gray-600 dark:text-slate-400 h-5 w-5" />
                     </button>
                 </div>

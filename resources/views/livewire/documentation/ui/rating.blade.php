@@ -53,6 +53,10 @@ new class extends Component {
         <x-rating :rate="3" color="fuchsia" />
         <x-rating :rate="3" color="pink" />
         <x-rating :rate="3" color="rose" />
+        <x-rating :rate="3" color="mauve" />
+        <x-rating :rate="3" color="olive" />
+        <x-rating :rate="3" color="mist" />
+        <x-rating :rate="3" color="taupe" />
         <x-rating :rate="3" color="black" />
     @elseif ($model === 6)
         <x-rating :rate="3" x-on:evaluate="alert(`Evaluated: ${JSON.stringify($event.detail.evaluate)}`)" />

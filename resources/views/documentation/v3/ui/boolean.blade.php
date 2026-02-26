@@ -61,6 +61,10 @@
                 <x-boolean :boolean="true" color-when-true="fuchsia" />
                 <x-boolean :boolean="true" color-when-true="pink" />
                 <x-boolean :boolean="true" color-when-true="rose" />
+                <x-boolean :boolean="true" color-when-true="mauve" />
+                <x-boolean :boolean="true" color-when-true="olive" />
+                <x-boolean :boolean="true" color-when-true="mist" />
+                <x-boolean :boolean="true" color-when-true="taupe" />
                 <x-boolean :boolean="true" color-when-true="black" />
             </div>
         </x-preview>

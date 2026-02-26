@@ -74,6 +74,10 @@ class Stats
     <x-stats :number="100" color="fuchsia" />
     <x-stats :number="100" color="pink" />
     <x-stats :number="100" color="rose" />
+    <x-stats :number="100" color="mauve" />
+    <x-stats :number="100" color="olive" />
+    <x-stats :number="100" color="mist" />
+    <x-stats :number="100" color="taupe" />
     <x-stats :number="100" color="black" />
     HTML;
 

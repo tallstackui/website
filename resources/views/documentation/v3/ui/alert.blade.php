@@ -86,6 +86,10 @@
                 <x-alert title="TallStackUI" text="Fuchsia" color="fuchsia" />
                 <x-alert title="TallStackUI" text="Pink" color="pink" />
                 <x-alert title="TallStackUI" text="Rose" color="rose" />
+                <x-alert title="TallStackUI" text="Mauve" color="mauve" />
+                <x-alert title="TallStackUI" text="Olive" color="olive" />
+                <x-alert title="TallStackUI" text="Mist" color="mist" />
+                <x-alert title="TallStackUI" text="Taupe" color="taupe" />
                 <x-alert title="TallStackUI" text="Black" color="black" />
             </div>
         </x-preview>
@@ -117,6 +121,10 @@
                 <x-alert title="TallStackUI" text="Fuchsia" color="fuchsia" light />
                 <x-alert title="TallStackUI" text="Pink" color="pink" light />
                 <x-alert title="TallStackUI" text="Rose" color="rose" light />
+                <x-alert title="TallStackUI" text="Mauve" color="mauve" light />
+                <x-alert title="TallStackUI" text="Olive" color="olive" light />
+                <x-alert title="TallStackUI" text="Mist" color="mist" light />
+                <x-alert title="TallStackUI" text="Taupe" color="taupe" light />
                 <x-alert title="TallStackUI" text="Black" color="black" light />
             </div>
         </x-preview>
@@ -148,6 +156,10 @@
                 <x-alert title="TallStackUI" text="Fuchsia" color="fuchsia" outline />
                 <x-alert title="TallStackUI" text="Pink" color="pink" outline />
                 <x-alert title="TallStackUI" text="Rose" color="rose" outline />
+                <x-alert title="TallStackUI" text="Mauve" color="mauve" outline />
+                <x-alert title="TallStackUI" text="Olive" color="olive" outline />
+                <x-alert title="TallStackUI" text="Mist" color="mist" outline />
+                <x-alert title="TallStackUI" text="Taupe" color="taupe" outline />
                 <x-alert title="TallStackUI" text="Black" color="black" outline />
             </div>
         </x-preview>

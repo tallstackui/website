@@ -54,6 +54,10 @@ class Progress
     <x-progress :percent="50" color="fuchsia" />
     <x-progress :percent="50" color="pink" />
     <x-progress :percent="50" color="rose" />
+    <x-progress :percent="50" color="mauve" />
+    <x-progress :percent="50" color="olive" />
+    <x-progress :percent="50" color="mist" />
+    <x-progress :percent="50" color="taupe" />
     <x-progress :percent="50" color="black" />
     HTML;
 
@@ -82,6 +86,10 @@ class Progress
     <x-progress :percent="50" color="fuchsia" light />
     <x-progress :percent="50" color="pink" light />
     <x-progress :percent="50" color="rose" light />
+    <x-progress :percent="50" color="mauve" light />
+    <x-progress :percent="50" color="olive" light />
+    <x-progress :percent="50" color="mist" light />
+    <x-progress :percent="50" color="taupe" light />
     <x-progress :percent="50" color="black" light />
     HTML;
 
@@ -137,6 +145,10 @@ class Progress
     <x-progress.circle :percent="50" color="fuchsia" />
     <x-progress.circle :percent="50" color="pink" />
     <x-progress.circle :percent="50" color="rose" />
+    <x-progress.circle :percent="50" color="mauve" />
+    <x-progress.circle :percent="50" color="olive" />
+    <x-progress.circle :percent="50" color="mist" />
+    <x-progress.circle :percent="50" color="taupe" />
     <x-progress.circle :percent="50" color="black" />
     HTML;
 
@@ -165,6 +177,10 @@ class Progress
     <x-progress.circle :percent="50" color="fuchsia" light />
     <x-progress.circle :percent="50" color="pink" light />
     <x-progress.circle :percent="50" color="rose" light />
+    <x-progress.circle :percent="50" color="mauve" light />
+    <x-progress.circle :percent="50" color="olive" light />
+    <x-progress.circle :percent="50" color="mist" light />
+    <x-progress.circle :percent="50" color="taupe" light />
     <x-progress.circle :percent="50" color="black" light />
     HTML;
 

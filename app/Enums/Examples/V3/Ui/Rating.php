@@ -96,6 +96,10 @@ class Rating
     <x-rating :rate="3" color="fuchsia" />
     <x-rating :rate="3" color="pink" />
     <x-rating :rate="3" color="rose" />
+    <x-rating :rate="3" color="mauve" />
+    <x-rating :rate="3" color="olive" />
+    <x-rating :rate="3" color="mist" />
+    <x-rating :rate="3" color="taupe" />
     <x-rating :rate="3" color="black" />
     HTML;
 

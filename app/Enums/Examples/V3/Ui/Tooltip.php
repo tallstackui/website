@@ -78,6 +78,10 @@ class Tooltip
     <x-tooltip text="fuchsia" color="fuchsia" />
     <x-tooltip text="pink" color="pink" />
     <x-tooltip text="rose" color="rose" />
+    <x-tooltip text="mauve" color="mauve" />
+    <x-tooltip text="olive" color="olive" />
+    <x-tooltip text="mist" color="mist" />
+    <x-tooltip text="taupe" color="taupe" />
     <x-tooltip text="black" color="black" />
     HTML;
 
@@ -106,6 +110,10 @@ class Tooltip
     <x-tooltip text="fuchsia" color="fuchsia" outline />
     <x-tooltip text="pink" color="pink" outline />
     <x-tooltip text="rose" color="rose" outline />
+    <x-tooltip text="mauve" color="mauve" outline />
+    <x-tooltip text="olive" color="olive" outline />
+    <x-tooltip text="mist" color="mist" outline />
+    <x-tooltip text="taupe" color="taupe" outline />
     <x-tooltip text="black" color="black" outline />
     HTML;
 

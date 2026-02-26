@@ -67,6 +67,10 @@ class Radio
     <x-radio color="fuchsia" label="Fuchsia" />
     <x-radio color="pink" label="Pink" />
     <x-radio color="rose" label="Rose" />
+    <x-radio color="mauve" label="Mauve" />
+    <x-radio color="olive" label="Olive" />
+    <x-radio color="mist" label="Mist" />
+    <x-radio color="taupe" label="Taupe" />
     <x-radio color="black" label="Black" />
     HTML;
 

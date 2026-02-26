@@ -43,6 +43,10 @@ class Range
     <x-range color="fuchsia" label="Fuchsia" />
     <x-range color="pink" label="Pink" />
     <x-range color="rose" label="Rose" />
+    <x-range color="mauve" label="Mauve" />
+    <x-range color="olive" label="Olive" />
+    <x-range color="mist" label="Mist" />
+    <x-range color="taupe" label="Taupe" />
     <x-range color="black" label="Black" />
     HTML;
 

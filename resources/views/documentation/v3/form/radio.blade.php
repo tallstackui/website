@@ -87,6 +87,10 @@
                 <x-radio color="fuchsia" label="Fuchsia" checked />
                 <x-radio color="pink" label="Pink" checked />
                 <x-radio color="rose" label="Rose" checked />
+                <x-radio color="mauve" label="Mauve" checked />
+                <x-radio color="olive" label="Olive" checked />
+                <x-radio color="mist" label="Mist" checked />
+                <x-radio color="taupe" label="Taupe" checked />
                 <x-radio color="black" label="Black" checked />
             </div>
         </x-preview>

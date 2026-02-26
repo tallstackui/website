@@ -87,6 +87,10 @@
                 <x-checkbox color="fuchsia" label="Fuchsia" checked />
                 <x-checkbox color="pink" label="Pink" checked />
                 <x-checkbox color="rose" label="Rose" checked />
+                <x-checkbox color="mauve" label="Mauve" checked />
+                <x-checkbox color="olive" label="Olive" checked />
+                <x-checkbox color="mist" label="Mist" checked />
+                <x-checkbox color="taupe" label="Taupe" checked />
                 <x-checkbox color="black" label="Black" checked />
             </div>
         </x-preview>

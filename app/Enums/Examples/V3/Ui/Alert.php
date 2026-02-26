@@ -83,6 +83,10 @@ class Alert
     <x-alert title="TallStackUi" text="Fuchsia" color="fuchsia" />
     <x-alert title="TallStackUi" text="Pink" color="pink" />
     <x-alert title="TallStackUi" text="Rose" color="rose" />
+    <x-alert title="TallStackUi" text="Mauve" color="mauve" />
+    <x-alert title="TallStackUi" text="Olive" color="olive" />
+    <x-alert title="TallStackUi" text="Mist" color="mist" />
+    <x-alert title="TallStackUi" text="Taupe" color="taupe" />
     <x-alert title="TallStackUi" text="Black" color="black" />
     HTML;
 
@@ -111,6 +115,10 @@ class Alert
     <x-alert title="TallStackUi" text="Fuchsia" color="fuchsia" outline />
     <x-alert title="TallStackUi" text="Pink" color="pink" outline />
     <x-alert title="TallStackUi" text="Rose" color="rose" outline />
+    <x-alert title="TallStackUi" text="Mauve" color="mauve" outline />
+    <x-alert title="TallStackUi" text="Olive" color="olive" outline />
+    <x-alert title="TallStackUi" text="Mist" color="mist" outline />
+    <x-alert title="TallStackUi" text="Taupe" color="taupe" outline />
     <x-alert title="TallStackUi" text="Black" color="black" outline />
     HTML;
 
@@ -139,6 +147,10 @@ class Alert
     <x-alert title="TallStackUi" text="Fuchsia" color="fuchsia" light />
     <x-alert title="TallStackUi" text="Pink" color="pink" light />
     <x-alert title="TallStackUi" text="Rose" color="rose" light />
+    <x-alert title="TallStackUi" text="Mauve" color="mauve" light />
+    <x-alert title="TallStackUi" text="Olive" color="olive" light />
+    <x-alert title="TallStackUi" text="Mist" color="mist" light />
+    <x-alert title="TallStackUi" text="Taupe" color="taupe" light />
     <x-alert title="TallStackUi" text="Black" color="black" light />
     HTML;
 
