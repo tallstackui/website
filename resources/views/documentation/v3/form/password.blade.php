@@ -1,6 +1,5 @@
 @php
     foreach (apply_prefix($__data) as $key => $value) $$key = $value;
-    $defaults = config('tallstackui.settings.form.password.rules');
 @endphp
 
 <x-layout :$content>

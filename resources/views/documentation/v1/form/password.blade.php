@@ -1,6 +1,6 @@
 @php
     foreach (apply_prefix($__data) as $key => $value) $$key = $value;
-    $defaults = config('tallstackui.settings.form.password.rules');
+    $defaults = __ts_get_component_configuration(TallStackUi\Components\Form\Password\Component::class, 'rules');
 @endphp
 
 <x-layout :$content>

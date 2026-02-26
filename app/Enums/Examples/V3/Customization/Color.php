@@ -93,6 +93,10 @@ class Color
                     'fuchsia' => null,
                     'pink' => null,
                     'rose' => null,
+                    'mauve' => null,
+                    'olive' => null,
+                    'mist' => null,
+                    'taupe' => null,
                 ],
                 'outline' => [
                     'black' => null,
@@ -120,6 +124,10 @@ class Color
                     'fuchsia' => null,
                     'pink' => null,
                     'rose' => null,
+                    'mauve' => null,
+                    'olive' => null,
+                    'mist' => null,
+                    'taupe' => null,
                 ],
                 'light' => [
                     'black' => null,
@@ -147,6 +155,10 @@ class Color
                     'fuchsia' => null,
                     'pink' => null,
                     'rose' => null,
+                    'mauve' => null,
+                    'olive' => null,
+                    'mist' => null,
+                    'taupe' => null,
                 ],
             ];
         }
@@ -183,6 +195,10 @@ class Color
                     'fuchsia' => null,
                     'pink' => null,
                     'rose' => null,
+                    'mauve' => null,
+                    'olive' => null,
+                    'mist' => null,
+                    'taupe' => null,
                 ],
                 'outline' => [
                     'black' => null,
@@ -210,6 +226,10 @@ class Color
                     'fuchsia' => null,
                     'pink' => null,
                     'rose' => null,
+                    'mauve' => null,
+                    'olive' => null,
+                    'mist' => null,
+                    'taupe' => null,
                 ],
                 'light' => [
                     'black' => null,
@@ -237,6 +257,10 @@ class Color
                     'fuchsia' => null,
                     'pink' => null,
                     'rose' => null,
+                    'mauve' => null,
+                    'olive' => null,
+                    'mist' => null,
+                    'taupe' => null,
                 ],
             ];
         }
