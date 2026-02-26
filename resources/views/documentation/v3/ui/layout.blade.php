@@ -18,9 +18,11 @@
     </x-slot:customization>
     <x-section title="Concept" disable-copy>
         <p>
-            The version 2 of the TallStackUI introduces a new layout component for dashboard creation.
-            While this component is simple, it is complete in every way. Due to the format of the TallStackUI
-            documentation, there will be no code examples of the layout that makes it display.
+            The TallStackUI layout component was introduced in version 2 for dashboard creation and
+            has been enhanced in version 3 with features like a collapsible sidebar, collapsed branding,
+            a sidebar footer slot, and item badges. While this component is simple, it is complete in
+            every way. Due to the format of the TallStackUI documentation, there will be no code examples
+            of the layout that makes it display.
         </p>
     </x-section>
     <x-section title="Layout Example" disable-copy>
@@ -115,6 +117,8 @@
             </p>
             <ul class="list-inside list-decimal">
                 <li>Slot: <x-block>brand</x-block>: special slot for adding an image/text above the options menu</li>
+                <li>Slot: <x-block>brand-collapsed</x-block>: compact branding shown when the collapsible sidebar is collapsed</li>
+                <li>Slot: <x-block>footer</x-block>: content pinned to the bottom of the sidebar</li>
                 <li>Attribute: <x-block>smart</x-block>: enable route detection behavior to enable the "current" routes effect</li>
                 <li>Attribute: <x-block>navigate</x-block>: enable <x-block>wire:navigate</x-block> routes</li>
                 <li>Attribute: <x-block>navigate-hover</x-block>: enable <x-block>wire:navigate.hover</x-block> routes</li>
@@ -129,6 +133,25 @@
                 Example:
             </p>
             <x-code language="blade" :contents="$sidebarOptions" disable-copy />
+        </div>
+    </x-section>
+    <x-section title="Brand Collapsed" disable-copy>
+        <div class="space-y-4">
+            <p>
+                When using the <x-block>collapsible</x-block> attribute, you can provide a
+                <x-block>brand-collapsed</x-block> slot to display a compact version of your branding
+                when the sidebar is collapsed. This is useful for showing an icon instead of a full logo:
+            </p>
+            <x-code language="blade" :contents="$brandCollapsed" disable-copy />
+        </div>
+    </x-section>
+    <x-section title="Side Bar Footer" disable-copy>
+        <div class="space-y-4">
+            <p>
+                The <x-block>footer</x-block> slot allows you to pin content to the bottom of the sidebar,
+                such as version information or user profile links:
+            </p>
+            <x-code language="blade" :contents="$sidebarFooter" disable-copy />
         </div>
     </x-section>
     <x-section title="Side Bar Item" disable-copy>
@@ -155,6 +178,35 @@
             <p>
                 As demonstrated above, the <x-block>visible</x-block> accepts boolean values and closures to be evaluated using Laravel's <x-block>value</x-block> helper function.
             </p>
+        </div>
+    </x-section>
+    <x-section title="Href Attribute" disable-copy>
+        <div class="space-y-4">
+            <p>
+                By default, sidebar items use the <x-block>route</x-block> attribute which integrates with smart
+                route matching and <x-block>wire:navigate</x-block>. If you need to link to an external URL or
+                bypass route matching entirely, use the <x-block>href</x-block> attribute instead:
+            </p>
+            <x-code language="blade" :contents="$href" disable-copy />
+        </div>
+    </x-section>
+    <x-section title="Match Attribute" disable-copy>
+        <div class="space-y-4">
+            <p>
+                The <x-block>match</x-block> attribute provides a flexible way to control the active state
+                of a sidebar item using a route name pattern. This is useful when you want an item to appear
+                active across multiple related routes:
+            </p>
+            <x-code language="blade" :contents="$itemMatch" disable-copy />
+        </div>
+    </x-section>
+    <x-section title="Badge" disable-copy>
+        <div class="space-y-4">
+            <p>
+                Sidebar items support a <x-block>badge</x-block> slot to display notification counts or labels.
+                You can customize the badge color using the <x-block>badge-color</x-block> attribute:
+            </p>
+            <x-code language="blade" :contents="$badge" disable-copy />
         </div>
     </x-section>
     <x-section title="Side Bar Separator" disable-copy>

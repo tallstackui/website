@@ -181,6 +181,59 @@ class Layout
     <x-side-bar.separator text="Configurations" line-right />
     HTML;
 
+    public const string BRAND_COLLAPSED = <<<'HTML'
+    <x-side-bar collapsible>
+        <x-slot:brand>
+            <div class="flex justify-center">
+                <img src="/logo-full.svg" class="h-8" />
+            </div>
+        </x-slot:brand>
+        <x-slot:brand-collapsed> <!-- [tl! focus:4] -->
+            <div class="flex justify-center">
+                <img src="/logo-icon.svg" class="h-6" />
+            </div>
+        </x-slot:brand-collapsed>
+
+        <!-- side-bar items goes here... -->
+    </x-side-bar>
+    HTML;
+
+    public const string SIDEBAR_FOOTER = <<<'HTML'
+    <x-side-bar>
+        <!-- side-bar items goes here... -->
+
+        <x-slot:footer> <!-- [tl! focus:2] -->
+            <p class="text-sm text-gray-500">v3.0.0</p>
+        </x-slot:footer>
+    </x-side-bar>
+    HTML;
+
+    public const string BADGE = <<<'HTML'
+    <x-side-bar.item text="Notifications" icon="bell" :route="route('notifications')">
+        <x-slot:badge>5</x-slot:badge> <!-- [tl! focus] -->
+    </x-side-bar.item>
+
+    <!-- Custom badge color -->
+    <x-side-bar.item text="Messages" icon="envelope" badge-color="blue" :route="route('messages')"> <!-- [tl! focus:1] -->
+        <x-slot:badge>3</x-slot:badge>
+    </x-side-bar.item>
+    HTML;
+
+    public const string HREF = <<<'HTML'
+    <!-- Using named route (supports smart matching + wire:navigate) -->
+    <x-side-bar.item text="Dashboard" icon="home" :route="route('dashboard')" />
+
+    <!-- Using raw href (bypasses route matching and wire:navigate) --> <!-- [tl! focus:1] -->
+    <x-side-bar.item text="External Docs" icon="book-open" href="https://docs.example.com" />
+    HTML;
+
+    public const string ITEM_MATCH = <<<'HTML'
+    <x-side-bar.item text="Orders"
+                     icon="shopping-cart"
+                     :route="route('orders.index')"
+                     match="orders.*" /> <!-- [tl! focus] -->
+    HTML;
+
     public const string CUSTOMIZATION_LAYOUT = <<<'HTML'
     TallStackUi::customize()
         ->layout()

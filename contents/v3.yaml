@@ -445,7 +445,12 @@ ui:
     - "Slot: Footer"
     - Layout Header
     - Side Bar
+    - Brand Collapsed
+    - Side Bar Footer
     - Side Bar Item
+    - Href Attribute
+    - Match Attribute
+    - Badge
     - Side Bar Separator
     - Disable Layout Components
     - Customization
