@@ -70,7 +70,7 @@
         <div class="space-y-4">
             <p>
                 The <x-block>select</x-block> attribute maps your API response fields to the component's
-                internal structure. The format is <x-block>label:key|value:key|description:key|image:key|icon:key</x-block>:
+                internal structure. The format is similar to the <x-block>select.styled</x-block> component:
             </p>
             <x-code language="blade" :contents="$fieldMapping" disable-copy />
         </div>
