@@ -113,6 +113,7 @@ class CommandPalette
         | recycle: when true, preserves previous results when reopening the palette.
         | elements: when true, shows the keyboard hints in the footer.
         | scrollbar: when true, applies a custom minimal scrollbar to the results list.
+        | centered: when true, centers the palette vertically on mobile with fully rounded corners.
         */
         [
             'actionable' => App\Actions\CommandPaletteAction::class, // [tl! highlight]
@@ -124,6 +125,7 @@ class CommandPalette
             'recycle' => true,
             'elements' => true,
             'scrollbar' => true,
+            'centered' => false,
         ],
     ],
 
