@@ -35,6 +35,7 @@ new class extends Component {
     <x-button color="red" wire:click="confirm">Confirm</x-button>
 </div>
 
+@script
 <script>
     show = (toast) => {
         // This approach was used to avoid show alerts for other toasts.
@@ -43,3 +44,4 @@ new class extends Component {
         alert(toast.description);
     }
 </script>
+@endscript
