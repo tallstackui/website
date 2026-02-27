@@ -80,10 +80,10 @@
                         <li>- New <a href="{{ route('documentation', ['v3', 'configuration']) }}" wire:navigate class="underline">configuration file structure</a> documentation.</li>
                         <li>- New <a href="{{ route('documentation', ['v3', 'customization', 'soft']) }}" wire:navigate class="underline">Internal Scoped Customization</a> concept.</li>
                         <li>- New <x-block>$tsui</x-block> JavaScript helper.</li>
+                        <li>- New TailwindCSS colors added in v4.2 of TailwindCSS</li>
                         <li>- <x-block>Avatar</x-block> Component: group and presence indicators.</li>
                         <li>- <x-block>Button</x-block> Component: block style.</li>
                         <li>- <x-block>Card</x-block> Component: loading effect and events.</li>
-                        <li>- <x-block>Command Palette</x-block> Component: support for class as action when clicked.</li>
                         <li>- <x-block>Table</x-block> Component: empty state, highlight, and expandable rows.</li>
                         <li>- <x-block>Tab</x-block> Component: centered and route-based tabs.</li>
                         <li>- <x-block>Layout</x-block> Component: brand collapsed, sidebar footer, new attributes, and dozens of general improvements.</li>
@@ -92,7 +92,7 @@
                         <li>- <x-block>Form Input</x-block> Component: better button positioning.</li>
                         <li>- <x-block>Form Select Styled</x-block> Component: grouped options, AlpineJS helper, and recycle option.</li>
                         <li>- <x-block>Form Color</x-block> Component: exclude specific colors or color steps.</li>
-                        <li>- <x-block>Radio</x-block>, <x-block>Checkbox</x-block> and <x-block>Toggle</x-block>: custom color customization.</li>
+                        <li>- <x-block>Radio</x-block>, <x-block>Checkbox</x-block> and <x-block>Toggle</x-block>: custom color customization individually.</li>
                         <li>- <x-block>Radio</x-block> Component: no longer requires explicit value/id.</li>
                         <li>- <x-block>Pin</x-block> Component: smart mode with auto-submit.</li>
                         <li>- <x-block>ThemeSwitch</x-block> Component: redesigned with <x-block>simple</x-block> and <x-block>only-icons</x-block> modes, block style for dropdown usage.</li>
