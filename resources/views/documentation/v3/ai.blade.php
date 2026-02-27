@@ -29,31 +29,33 @@
                 of the TallStackUI package. Each file contains comprehensive documentation for AI assistants, including
                 attributes, slots, usage examples, and soft customization options.
             </p>
-            @foreach ($components as $category => $items)
-                <h3 class="text-lg font-semibold dark:text-white">{{ $category }}</h3>
-                <x-custom-table>
-                    <x-custom-table.thead>
-                        <x-custom-table.tr>
-                            <x-custom-table.th first label="Component"/>
-                            <x-custom-table.th label="Instructions"/>
-                        </x-custom-table.tr>
-                    </x-custom-table.thead>
-                    <x-custom-table.tbody>
+            <x-custom-table>
+                <x-custom-table.thead>
+                    <x-custom-table.tr>
+                        <x-custom-table.th first label="Component"/>
+                        <x-custom-table.th label="Instructions"/>
+                    </x-custom-table.tr>
+                </x-custom-table.thead>
+                <x-custom-table.tbody>
+                    @foreach ($components as $category => $items)
                         @foreach ($items as $item)
                             <x-custom-table.tr>
                                 <x-custom-table.td first>{{ $item['name'] }}</x-custom-table.td>
                                 <x-custom-table.td>
-                                    <a href="{{ route('ai.component', ['name' => str_replace('components/', '', str_replace('.md', '', $item['file']))]) }}"
-                                       class="underline text-pink-600 dark:text-pink-400"
-                                       target="_blank">
-                                        {{ $item['file'] }}
-                                    </a>
+                                    <div class="flex items-center gap-2">
+                                        <a href="{{ route('ai.component', ['name' => str_replace('components/', '', str_replace('.md', '', $item['file']))]) }}"
+                                           class="underline text-pink-600 dark:text-pink-400"
+                                           target="_blank">
+                                            {{ $item['file'] }}
+                                        </a>
+                                        <x-clipboard :text="route('ai.component', ['name' => str_replace('components/', '', str_replace('.md', '', $item['file']))])" icon />
+                                    </div>
                                 </x-custom-table.td>
                             </x-custom-table.tr>
                         @endforeach
-                    </x-custom-table.tbody>
-                </x-custom-table>
-            @endforeach
+                    @endforeach
+                </x-custom-table.tbody>
+            </x-custom-table>
         </div>
     </x-section>
     <x-section title="MCP Server" disable-copy>

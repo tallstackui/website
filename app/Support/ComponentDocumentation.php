@@ -49,9 +49,9 @@ class ComponentDocumentation
             return null;
         }
 
-        $filePath = $this->base.'/'.$match['file'];
+        $path = $this->base.'/'.$match['file'];
 
-        if (! file_exists($filePath)) {
+        if (! file_exists($path)) {
             return null;
         }
 
@@ -59,7 +59,7 @@ class ComponentDocumentation
             'name' => $match['name'],
             'category' => $match['category'],
             'livewire_only' => $match['livewire_only'],
-            'content' => file_get_contents($filePath),
+            'content' => file_get_contents($path),
         ];
     }
 
