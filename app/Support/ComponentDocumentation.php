@@ -4,6 +4,10 @@ namespace App\Support;
 
 use Illuminate\Support\Collection;
 use Illuminate\Support\Str;
+use TallStackUi\Attributes\SoftCustomization;
+use TallStackUi\Support\Miscellaneous\ReflectComponent;
+
+use function __ts_soft_customization_components;
 
 class ComponentDocumentation
 {
@@ -144,6 +148,42 @@ class ComponentDocumentation
         }
 
         return $results->values();
+    }
+
+    /** Search for CSS classes across all component customization() methods. */
+    public function classes(string $query, ?string $component = null): Collection
+    {
+        $matches = collect();
+
+        foreach (__ts_soft_customization_components() as $class) {
+            $reflect = new ReflectComponent($class);
+
+            /** @var SoftCustomization $attribute */
+            $attribute = $reflect->attribute(SoftCustomization::class)->newInstance();
+            $key = $attribute->key;
+            $name = Str::of($key)->replace('.', ' ')->title()->toString();
+
+            if ($component && ! Str::contains($name, $component, ignoreCase: true) && ! Str::contains($key, $component, ignoreCase: true)) {
+                continue;
+            }
+
+            $blocks = app($class)->customization();
+
+            foreach ($blocks as $block => $classes) {
+                if (! is_string($classes) || ! Str::contains($classes, $query, ignoreCase: true)) {
+                    continue;
+                }
+
+                $matches->push([
+                    'component' => $name,
+                    'key' => $key,
+                    'block' => $block,
+                    'classes' => $classes,
+                ]);
+            }
+        }
+
+        return $matches;
     }
 
     /** Parse index.md to extract component names, categories, and file paths. */

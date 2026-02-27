@@ -10,7 +10,7 @@
         Toast component.
     </x-slot:description>
     <x-slot:customization>
-        <livewire:customization :$customization component="Interaction\Toast" title="Toast" />
+        <livewire:customization :$customization component="Toast" />
     </x-slot:customization>
     <x-section title="Configuration" disable-copy>
         <ul class="list-decimal list-inside space-y-2">

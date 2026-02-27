@@ -179,4 +179,9 @@
         exclusively via a <a href="{{ route('documentation', ['v3', 'configuration']) }}" wire:navigate class="underline">configuration file</a>,
         with four available variables: <x-block>false</x-block>, <x-block>sm</x-block>, <x-block>md</x-block>, and <x-block>lg</x-block>. The default is <x-block>md</x-block>.
     </x-section>
+    <x-section title="Mobile Centered" disable-copy>
+        By default, the command palette is aligned to the bottom of the screen on mobile devices. You can change this behavior
+        in the <a href="{{ route('documentation', ['v3', 'configuration']) }}" wire:navigate class="underline">configuration file</a> using the <x-block>centered</x-block> configuration.
+        When set to true, the command palette will be centered on mobile devices.
+    </x-section>
 </x-layout>

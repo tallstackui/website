@@ -108,6 +108,12 @@
                         </x-custom-table.td>
                         <x-custom-table.td>Search CSS class customization options for components.</x-custom-table.td>
                     </x-custom-table.tr>
+                    <x-custom-table.tr>
+                        <x-custom-table.td first>
+                            <x-block>search_classes</x-block>
+                        </x-custom-table.td>
+                        <x-custom-table.td>Search for specific CSS classes across all components. Returns matching blocks with override code snippets for Soft Customization.</x-custom-table.td>
+                    </x-custom-table.tr>
                 </x-custom-table.tbody>
             </x-custom-table>
         </div>

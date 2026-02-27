@@ -4,6 +4,7 @@ namespace App\Mcp\Servers;
 
 use App\Mcp\Tools\GetComponentTool;
 use App\Mcp\Tools\ListComponentsTool;
+use App\Mcp\Tools\SearchClassesTool;
 use App\Mcp\Tools\SearchCustomizationTool;
 use App\Mcp\Tools\SearchDocumentationTool;
 use Laravel\Mcp\Server;
@@ -21,5 +22,6 @@ class TallStackUiServer extends Server
         GetComponentTool::class,
         SearchDocumentationTool::class,
         SearchCustomizationTool::class,
+        SearchClassesTool::class,
     ];
 }

@@ -10,7 +10,7 @@
         Dialog component.
     </x-slot:description>
     <x-slot:customization>
-        <livewire:customization :$customization component="Interaction\Dialog" title="Dialog" />
+        <livewire:customization :$customization component="Dialog" />
     </x-slot:customization>
     <x-section title="Configuration" disable-copy>
         <ul class="list-decimal list-inside space-y-2">

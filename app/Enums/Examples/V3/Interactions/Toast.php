@@ -242,19 +242,19 @@ class Toast
         <x-button color="secondary" onclick="confirm()">Confirmation</x-button>
 
         <script>
-            show = () => $interaction('toast')
+            show = () => $tsui.interaction('toast')
                 .success('Success', 'This is a success message.')
                 .send();
 
-            error = () => $interaction('toast')
+            error = () => $tsui.interaction('toast')
                 .error('Success', 'This is a error message.')
                 .send();
 
-            warning = () => $interaction('toast')
+            warning = () => $tsui.interaction('toast')
                 .warning('Success', 'This is a warning message.')
                 .send();
 
-            info = () => $interaction('toast')
+            info = () => $tsui.interaction('toast')
                 .info('Success', 'This is a info message.')
                 .send();
 
@@ -265,7 +265,7 @@ class Toast
 
             const component = Livewire.find('your-component-id-goes-here').id; // [tl! highlight]
 
-            confirm = () => $interaction('toast')
+            confirm = () => $tsui.interaction('toast')
                 .wireable(component) // [tl! highlight]
                 .question('Warning', 'Are you sure?')
                 .confirm('Confirm', 'confirmed', 'Confirmed Successfully')
@@ -275,7 +275,7 @@ class Toast
             // Alternatively, you can pass the component id as an
             // empty string to use the FIRST LIVEWIRE COMPONENT OF THE PAGE.
 
-            confirm = () => $interaction('toast')
+            confirm = () => $tsui.interaction('toast')
                 .wireable() // [tl! highlight]
                 .question('Warning', 'Are you sure?')
                 .confirm('Confirm', 'confirmed', 'Confirmed Successfully')

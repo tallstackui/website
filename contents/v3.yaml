@@ -385,6 +385,7 @@ ui:
     - Lifecycle Events
     - AlpineJS Helper
     - Background Blur
+    - Mobile Centered
   dial:
     - Concept
     - Basic Usage
