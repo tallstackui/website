@@ -22,7 +22,10 @@ Route::get('/ai/{name}.md', function (string $name) {
 
     abort_if($response->failed(), 404);
 
-    return response($response->body(), 200, ['Content-Type' => 'text/plain; charset=UTF-8']);
+    return response($response->body(), 200, [
+        'Content-Type' => 'text/plain; charset=UTF-8',
+        'Cache-Control' => 'no-cache, no-store, must-revalidate',
+    ]);
 })->where('name', '.*')->name('ai.component');
 
 Route::middleware(ShareVersionVariable::class)
