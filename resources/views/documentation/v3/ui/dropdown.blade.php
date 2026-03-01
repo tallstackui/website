@@ -10,7 +10,7 @@
         Dropdown component.
     </x-slot:description>
     <x-slot:customization>
-        <livewire:customization :$customization component="Dropdown\Dropdown" title="Dropdown" />
+        <livewire:customization :$customization component="Dropdown\Main" title="Dropdown" />
         <livewire:customization :customization="$customizationItems" component="Dropdown\Items" />
         <livewire:customization :customization="$customizationSubmenu" component="Dropdown\Submenu" />
     </x-slot:customization>
