@@ -26,6 +26,10 @@ class UpgradeGuide
     },
     HTML;
 
+    public const string OPTIMIZE_CLEAR = <<<'HTML'
+    php artisan optimize:clear
+    HTML;
+
     public const string COMMAND = <<<'HTML'
     composer install
     HTML;

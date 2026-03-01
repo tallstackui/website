@@ -242,7 +242,15 @@
                 </p>
             </div>
             <div>
-                <h2 class="text-lg tracking-tight text-pink-600 font-medium">11. Update the Composer:</h2>
+                <h2 class="text-lg tracking-tight text-pink-600 font-medium">11. Clear application cache:</h2>
+                <p>
+                    Before updating the Composer dependencies, you <b>must</b> clear all cached files. This prevents errors caused
+                    by stale cached references to classes or configurations that have changed in version 3:
+                </p>
+                <x-code language="shell" :contents="$optimizeClear" />
+            </div>
+            <div>
+                <h2 class="text-lg tracking-tight text-pink-600 font-medium">12. Update the Composer:</h2>
                 <p>
                     Finally, it's time to update your application to version 3. Edit your <x-block>composer.json</x-block> file:
                 </p>
