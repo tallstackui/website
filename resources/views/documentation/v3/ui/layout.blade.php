@@ -10,9 +10,9 @@
         Layout component.
     </x-slot:description>
     <x-slot:customization>
-        <livewire:customization :customization="$customizationLayout" component="Layout\Layout" title="Layout" />
+        <livewire:customization :customization="$customizationLayout" component="Layout\Main" title="Layout" />
         <livewire:customization :customization="$customizationLayoutHeader" component="Layout\Header" />
-        <livewire:customization :customization="$customizationSidebar" component="Layout\SideBar\SideBar" title="Sidebar" />
+        <livewire:customization :customization="$customizationSidebar" component="Layout\SideBar\Main" title="Sidebar" />
         <livewire:customization :customization="$customizationSidebarItem" component="Layout\SideBar\Item" title="Sidebar Item" />
         <livewire:customization :customization="$customizationSidebarSeparator" component="Layout\SideBar\Separator" title="Sidebar Separator" />
     </x-slot:customization>
