@@ -12,9 +12,6 @@
                 <x-layout.navigation.link :href="route('documentation', ['v1', 'troubleshooting'])" text="Troubleshooting" />
             </li>
             <li class="relative ml-4">
-                <x-layout.navigation.link :href="route('documentation', ['v1', 'updates'])" text="Updates" />
-            </li>
-            <li class="relative ml-4">
                 <x-layout.navigation.link :href="route('documentation', ['v1', 'faq'])" text="F.A.Q" />
             </li>
             <li class="relative ml-4">
