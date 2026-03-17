@@ -6,7 +6,7 @@ use Illuminate\Validation\Validator;
 use Illuminate\Support\Facades\Cookie;
 
 return new class extends Component {
-    #[Validate(['nullable', 'min:10'], onUpdate: false)]
+    #[Validate(['nullable', 'min:1'], onUpdate: false)]
     public string|null $prefix;
 
     #[Validate(['boolean'], onUpdate: false)]

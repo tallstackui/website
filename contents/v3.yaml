@@ -234,6 +234,7 @@ ui:
     - Basic Usage
     - Title
     - Close Option
+    - Auto Dismiss
     - Icon Slot
     - Footer Slot
     - Color Variations

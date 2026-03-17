@@ -58,6 +58,18 @@ class Alert
     </x-alert>
     HTML;
 
+    public const string DISMISS = <<<'HTML'
+    <!-- Dismiss after 3 seconds -->
+    <x-alert :dismiss="3"> {{-- [tl! focus] --}}
+        TallStackUi
+    </x-alert>
+
+    <!-- Dismiss after 5 seconds with close button -->
+    <x-alert :dismiss="5" close> {{-- [tl! focus] --}}
+        TallStackUi
+    </x-alert>
+    HTML;
+
     public const string COLORS = <<<'HTML'
     <x-alert title="TallStackUi" text="Primary" />
     <x-alert title="TallStackUi" text="Secondary" color="secondary" />

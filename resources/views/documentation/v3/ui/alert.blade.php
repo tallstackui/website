@@ -33,6 +33,18 @@
             </x-alert>
         </x-preview>
     </x-section>
+    <x-section title="Auto Dismiss" description="An option to automatically dismiss the alert after a given number of seconds">
+        <x-preview language="blade" :contents="$dismiss">
+            <div class="space-y-2">
+                <x-alert :dismiss="3">
+                    TallStackUI
+                </x-alert>
+                <x-alert :dismiss="5" close>
+                    TallStackUI
+                </x-alert>
+            </div>
+        </x-preview>
+    </x-section>
     <x-section title="Icon Slot">
         <x-preview language="blade" :contents="$icon">
             <div class="space-y-2">
