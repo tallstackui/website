@@ -10,7 +10,7 @@
         Button component.
     </x-slot:description>
     <x-slot:customization>
-        <livewire:customization :$customization component="Button\Button" title="Button" />
+        <livewire:customization :$customization component="Button\Normal" title="Button" />
         <livewire:customization :customization="$customizationCircle" component="Button\Circle" />
     </x-slot:customization>
     <x-section title="Basic Usage" anchor="normal-basic-usage">
