@@ -37,7 +37,7 @@ class Tooltip
     <x-tooltip text="Top" position="top" icon="exclamation-circle" />
     <x-tooltip text="Bottom" position="bottom" icon="exclamation-triangle" />
     <x-tooltip text="Left" position="left" icon="shield-exclamation" />
-    <x-tooltip text="Right" position="right" />
+    <x-tooltip text="Right" position="right" icon="shield-check" />
     HTML;
 
     public const string SIZES = <<<'HTML'

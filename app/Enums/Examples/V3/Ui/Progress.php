@@ -185,11 +185,11 @@ class Progress
     HTML;
 
     public const string CIRCLE_FOOTER_SLOT = <<<'HTML'
-    <x-progress :percent="50">
+    <x-progress.circle :percent="50">
         <x-slot:footer>
             TallStackUI
         </x-slot:footer>
-    </x-progress>
+    </x-progress.circle>
     HTML;
 
     public const string CUSTOMIZATION = <<<'HTML'

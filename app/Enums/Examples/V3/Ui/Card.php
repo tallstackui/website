@@ -82,7 +82,7 @@ class Card
     </x-card>
 
     <!-- Light Variation -->
-    <x-card header="TallStackUI" color="primary">
+    <x-card header="TallStackUI" color="primary" light>
         TallStackUI
     </x-card>
 

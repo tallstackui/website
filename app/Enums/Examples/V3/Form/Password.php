@@ -5,7 +5,7 @@ namespace App\Enums\Examples\V3\Form;
 class Password
 {
     public const string BASIC = <<<'HTML'
-    <x-password value="TallStackUi" />
+    <x-password value="TallStackUI" />
     HTML;
 
     public const string LABEL_HINT = <<<'HTML'

@@ -9,7 +9,7 @@ class Currency
     HTML;
 
     public const string LABEL_HINT = <<<'HTML'
-    <x-currency label="Salady Expectation" hint="Between 5,000 and 10,000 USD" />
+    <x-currency label="Salary Expectation" hint="Between 5,000 and 10,000 USD" />
     HTML;
 
     public const string CLEARABLE = <<<'HTML'

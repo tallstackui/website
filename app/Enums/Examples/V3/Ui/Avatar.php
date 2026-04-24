@@ -152,10 +152,10 @@ class Avatar
     HTML;
 
     public const string PRESENCE_POSITIONS = <<<'HTML'
-    <x-avatar image="https://i.pravatar.cc/300" presence presence-position="top-left" />
-    <x-avatar image="https://i.pravatar.cc/300" presence presence-position="top-right" />
-    <x-avatar image="https://i.pravatar.cc/300" presence presence-position="bottom-left" />
-    <x-avatar image="https://i.pravatar.cc/300" presence presence-position="bottom-right" />
+    <x-avatar image="https://i.pravatar.cc/300" presence presence-position="right-top" />
+    <x-avatar image="https://i.pravatar.cc/300" presence presence-position="right-bottom" />
+    <x-avatar image="https://i.pravatar.cc/300" presence presence-position="left-top" />
+    <x-avatar image="https://i.pravatar.cc/300" presence presence-position="left-bottom" />
     HTML;
 
     public const string CUSTOMIZATION = <<<'HTML'
