@@ -78,6 +78,7 @@ enum Example: string
     // endregion
 
     // region UI
+    case Accordion = 'Ui\\Accordion';
     case Alert = 'Ui\\Alert';
     case Avatar = 'Ui\\Avatar';
     case BackToTop = 'Ui\\BackToTop';
@@ -86,6 +87,7 @@ enum Example: string
     case Boolean = 'Ui\\Boolean';
     case Breadcrumbs = 'Ui\\Breadcrumbs';
     case Button = 'Ui\\Button';
+    case Calendar = 'Ui\\Calendar';
     case Card = 'Ui\\Card';
     case Carousel = 'Ui\\Carousel';
     case Clipboard = 'Ui\\Clipboard';
@@ -111,6 +113,7 @@ enum Example: string
     case Tab = 'Ui\\Tab';
     case Table = 'Ui\\Table';
     case ThemeSwitch = 'Ui\\ThemeSwitch';
+    case Timeline = 'Ui\\Timeline';
     case Tooltip = 'Ui\\Tooltip';
     // endregion
 
