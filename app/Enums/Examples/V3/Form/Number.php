@@ -21,7 +21,7 @@ class Number
     HTML;
 
     public const string MIN_MAX = <<<'HTML'
-    <x-number min="2" max="5" />
+    <x-number label="Quantity" hint="Press the plus button to increase one by one" min="1" max="10" />
     HTML;
 
     public const string CENTRALIZED = <<<'HTML'
