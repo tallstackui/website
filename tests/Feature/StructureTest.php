@@ -230,6 +230,7 @@ describe('V3', function () {
         fn () => route('documentation', ['v3', 'form', 'time']),
         fn () => route('documentation', ['v3', 'form', 'select']),
         //
+        fn () => route('documentation', ['v3', 'ui', 'accordion']),
         fn () => route('documentation', ['v3', 'ui', 'alert']),
         fn () => route('documentation', ['v3', 'ui', 'avatar']),
         fn () => route('documentation', ['v3', 'ui', 'back-to-top']),
@@ -238,6 +239,7 @@ describe('V3', function () {
         fn () => route('documentation', ['v3', 'ui', 'banner']),
         fn () => route('documentation', ['v3', 'ui', 'boolean']),
         fn () => route('documentation', ['v3', 'ui', 'button']),
+        fn () => route('documentation', ['v3', 'ui', 'calendar']),
         fn () => route('documentation', ['v3', 'ui', 'card']),
         fn () => route('documentation', ['v3', 'ui', 'carousel']),
         fn () => route('documentation', ['v3', 'ui', 'clipboard']),
@@ -263,6 +265,7 @@ describe('V3', function () {
         fn () => route('documentation', ['v3', 'ui', 'tab']),
         fn () => route('documentation', ['v3', 'ui', 'table']),
         fn () => route('documentation', ['v3', 'ui', 'theme-switch']),
+        fn () => route('documentation', ['v3', 'ui', 'timeline']),
         fn () => route('documentation', ['v3', 'ui', 'tooltip']),
         //
         fn () => route('documentation', ['v3', 'interactions', 'dialog']),

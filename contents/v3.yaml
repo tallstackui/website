@@ -230,6 +230,16 @@ form:
         - Advanced Usage
         - Recycle
 ui:
+  accordion:
+    - Basic Usage
+    - Multiple Open
+    - Flat Variation
+    - Chevron Position
+    - Default Open
+    - Custom Icon
+    - Icon Slot
+    - Trigger Slot
+    - Events
   alert:
     - Basic Usage
     - Title
@@ -341,6 +351,14 @@ ui:
     - Icon Variation
     - Color Variations
     - Livewire Click Actions
+  calendar:
+    - Basic Usage
+    - Label & Hint
+    - Range Mode
+    - Double Mode
+    - Multiple Mode
+    - Lock Month Year
+    - Other Options
   card:
     - Basic Usage
     - Header Slot
@@ -620,6 +638,18 @@ ui:
     - Basic Usage
     - Sizes
     - Only Icon
+  timeline:
+    - Basic Usage
+    - Render Modes
+    - Horizontal Orientation
+    - Alternate Layout
+    - Compact Spacing
+    - Icon Markers
+    - Custom Marker Slot
+    - Color Variations
+    - Style Variations
+    - Per-Item Color Override
+    - Current Activation State
   tooltip:
     - Basic Usage
     - Available Positions
