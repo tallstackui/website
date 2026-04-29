@@ -93,6 +93,15 @@
             ]" />
         </x-preview>
     </x-section>
+    <x-section title="Clickable" description="An option to allow the images to be expanded when clicked.">
+        <x-preview language="blade" :background="false" :contents="$clickable">
+            <x-carousel :images="[
+                ['src' => url('assets/images/wallpapers/1.jpg'), 'alt' => 'Wallpaper 1'],
+                ['src' => url('assets/images/wallpapers/2.jpg'), 'alt' => 'Wallpaper 2'],
+                ['src' => url('assets/images/wallpapers/3.jpg'), 'alt' => 'Wallpaper 3'],
+            ]" clickable />
+        </x-preview>
+    </x-section>
     <x-section title="Fixed Aspect Radio">
         <div class="space-y-4">
             <x-preview language="blade" :background="false" :contents="$aspect">

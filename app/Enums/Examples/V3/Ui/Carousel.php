@@ -110,6 +110,23 @@ class Carousel
     ]" />
     HTML;
 
+    public const string CLICKABLE = <<<'HTML'
+    <!-- When clickable is set, clicking any image opens it in a fullscreen
+         lightbox with a close button at the top-right. Esc and clicking
+         outside the image also close it. -->
+    <x-carousel :images="[
+        ['src' => url('assets/images/wallpapers/1.jpg'), 'alt' => 'Wallpaper 1'],
+        ['src' => url('assets/images/wallpapers/2.jpg'), 'alt' => 'Wallpaper 2'],
+        ['src' => url('assets/images/wallpapers/3.jpg'), 'alt' => 'Wallpaper 3'],
+    ]" clickable />
+
+    <!-- The lightbox dispatches expand/collapse events on the carousel root.
+         $event.detail will receive: {image: object|null} -->
+    <x-carousel :images="[...]" clickable
+        x-on:expand="alert('Lightbox opened: ' + $event.detail.image.alt)"
+        x-on:collapse="alert('Lightbox closed')" />
+    HTML;
+
     public const string ASPECT = <<<'HTML'
     <x-carousel :images="[
         ['src' => url('assets/images/wallpapers/1.jpg'), 'alt' => 'Wallpaper 1'],

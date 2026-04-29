@@ -378,6 +378,7 @@ ui:
     - Autoplay, Without Loop
     - Without Indicators
     - Image Title & Description
+    - Clickable
     - Fixed Aspect Radio
     - Slots
     - Events
