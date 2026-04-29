@@ -1,7 +1,6 @@
 @import "tailwindcss";
 @import './search.css';
 @import './torchlight.css';
-@import '@docsearch/css/dist/style.css';
 @import '../../vendor/tallstackui/tallstackui/css/v4.css';
 
 [x-cloak] { display: none !important; }
