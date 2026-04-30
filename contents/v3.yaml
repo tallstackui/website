@@ -54,6 +54,23 @@ ai:
   - Connecting to Cursor
   - Connecting to Gemini CLI
 form:
+  autocomplete:
+    - Concept
+    - Basic Usage
+    - Label & Hint
+    - Description
+    - Image
+    - Disabled Items
+    - Clearable
+    - Prefix & Suffix
+    - Lazy
+    - Strict Mode
+    - Remote Source
+    - Lazy with Remote Source
+    - Disabled
+    - Placeholders
+    - Slot After
+    - Events
   input:
     - Basic Usage
     - Label & Hint

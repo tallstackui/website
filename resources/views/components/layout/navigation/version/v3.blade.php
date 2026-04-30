@@ -32,6 +32,9 @@
                 <h2 class="font-medium text-pink-900 font-display dark:text-pink-500">Form</h2>
                 <ul role="list" class="mt-4 space-y-2 dark:border-slate-800 lg:space-y-4 lg:mt-4 lg:border-slate-200">
                     <li class="relative ml-4">
+                        <x-layout.navigation.link :href="route('documentation', ['v3', 'form', 'autocomplete'])" text="AutoComplete" new />
+                    </li>
+                    <li class="relative ml-4">
                         <x-layout.navigation.link :href="route('documentation', ['v3', 'form', 'checkbox'])" text="Checkbox" />
                     </li>
                     <li class="relative ml-4">
