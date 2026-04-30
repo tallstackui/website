@@ -13,6 +13,7 @@ enum Example: string
     use VersionDiscovery;
 
     // region Form
+    case Autocomplete = 'Form\\Autocomplete';
     case Checkbox = 'Form\\Checkbox';
     case Color = 'Form\\Color';
     case Currency = 'Form\\Currency';
