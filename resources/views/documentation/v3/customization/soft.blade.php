@@ -1,5 +1,7 @@
 @php
     foreach (apply_prefix($__data) as $key => $value) $$key = $value;
+
+    $scopes = app(App\Support\InternalScopes::class)->categorized();
 @endphp
 
 <x-layout :$content>
@@ -184,26 +186,15 @@
                     </x-custom-table.tr>
                 </x-custom-table.thead>
                 <x-custom-table.tbody>
-                    <x-custom-table.tr>
-                        <x-custom-table.td first>wrapper.input</x-custom-table.td>
-                        <x-custom-table.td>label</x-custom-table.td>
-                        <x-custom-table.td><x-block>wrapper.input.label</x-block></x-custom-table.td>
-                    </x-custom-table.tr>
-                    <x-custom-table.tr>
-                        <x-custom-table.td first>wrapper.input</x-custom-table.td>
-                        <x-custom-table.td>hint</x-custom-table.td>
-                        <x-custom-table.td><x-block>wrapper.input.hint</x-block></x-custom-table.td>
-                    </x-custom-table.tr>
-                    <x-custom-table.tr>
-                        <x-custom-table.td first>wrapper.input</x-custom-table.td>
-                        <x-custom-table.td>error</x-custom-table.td>
-                        <x-custom-table.td><x-block>wrapper.input.error</x-block></x-custom-table.td>
-                    </x-custom-table.tr>
-                    <x-custom-table.tr>
-                        <x-custom-table.td first>wrapper.radio</x-custom-table.td>
-                        <x-custom-table.td>error</x-custom-table.td>
-                        <x-custom-table.td><x-block>wrapper.radio.error</x-block></x-custom-table.td>
-                    </x-custom-table.tr>
+                    @foreach ($scopes['wrapper'] as $section)
+                        @foreach ($section['rows'] as $row)
+                            <x-custom-table.tr>
+                                <x-custom-table.td first>{{ $section['label'] }}</x-custom-table.td>
+                                <x-custom-table.td>{{ $row['child'] }}</x-custom-table.td>
+                                <x-custom-table.td><x-block>{{ $row['scope'] }}</x-block></x-custom-table.td>
+                            </x-custom-table.tr>
+                        @endforeach
+                    @endforeach
                 </x-custom-table.tbody>
             </x-custom-table>
             <h3 class="text-lg font-semibold dark:text-white">Form Components</h3>
@@ -216,131 +207,15 @@
                     </x-custom-table.tr>
                 </x-custom-table.thead>
                 <x-custom-table.tbody>
-                    <x-custom-table.tr>
-                        <x-custom-table.td first>Color</x-custom-table.td>
-                        <x-custom-table.td>input</x-custom-table.td>
-                        <x-custom-table.td><x-block>form.color.input</x-block></x-custom-table.td>
-                    </x-custom-table.tr>
-                    <x-custom-table.tr>
-                        <x-custom-table.td first>Color</x-custom-table.td>
-                        <x-custom-table.td>floating</x-custom-table.td>
-                        <x-custom-table.td><x-block>form.color.floating</x-block></x-custom-table.td>
-                    </x-custom-table.tr>
-                    <x-custom-table.tr>
-                        <x-custom-table.td first>Password</x-custom-table.td>
-                        <x-custom-table.td>input</x-custom-table.td>
-                        <x-custom-table.td><x-block>form.password.input</x-block></x-custom-table.td>
-                    </x-custom-table.tr>
-                    <x-custom-table.tr>
-                        <x-custom-table.td first>Password</x-custom-table.td>
-                        <x-custom-table.td>floating</x-custom-table.td>
-                        <x-custom-table.td><x-block>form.password.floating</x-block></x-custom-table.td>
-                    </x-custom-table.tr>
-                    <x-custom-table.tr>
-                        <x-custom-table.td first>Currency</x-custom-table.td>
-                        <x-custom-table.td>input</x-custom-table.td>
-                        <x-custom-table.td><x-block>form.currency.input</x-block></x-custom-table.td>
-                    </x-custom-table.tr>
-                    <x-custom-table.tr>
-                        <x-custom-table.td first>Date</x-custom-table.td>
-                        <x-custom-table.td>input</x-custom-table.td>
-                        <x-custom-table.td><x-block>form.date.input</x-block></x-custom-table.td>
-                    </x-custom-table.tr>
-                    <x-custom-table.tr>
-                        <x-custom-table.td first>Date</x-custom-table.td>
-                        <x-custom-table.td>floating</x-custom-table.td>
-                        <x-custom-table.td><x-block>form.date.floating</x-block></x-custom-table.td>
-                    </x-custom-table.tr>
-                    <x-custom-table.tr>
-                        <x-custom-table.td first>Time</x-custom-table.td>
-                        <x-custom-table.td>input</x-custom-table.td>
-                        <x-custom-table.td><x-block>form.time.input</x-block></x-custom-table.td>
-                    </x-custom-table.tr>
-                    <x-custom-table.tr>
-                        <x-custom-table.td first>Time</x-custom-table.td>
-                        <x-custom-table.td>floating</x-custom-table.td>
-                        <x-custom-table.td><x-block>form.time.floating</x-block></x-custom-table.td>
-                    </x-custom-table.tr>
-                    <x-custom-table.tr>
-                        <x-custom-table.td first>Time</x-custom-table.td>
-                        <x-custom-table.td>button</x-custom-table.td>
-                        <x-custom-table.td><x-block>form.time.button</x-block></x-custom-table.td>
-                    </x-custom-table.tr>
-                    <x-custom-table.tr>
-                        <x-custom-table.td first>Upload</x-custom-table.td>
-                        <x-custom-table.td>input</x-custom-table.td>
-                        <x-custom-table.td><x-block>form.upload.input</x-block></x-custom-table.td>
-                    </x-custom-table.tr>
-                    <x-custom-table.tr>
-                        <x-custom-table.td first>Upload</x-custom-table.td>
-                        <x-custom-table.td>label</x-custom-table.td>
-                        <x-custom-table.td><x-block>form.upload.label</x-block></x-custom-table.td>
-                    </x-custom-table.tr>
-                    <x-custom-table.tr>
-                        <x-custom-table.td first>Upload</x-custom-table.td>
-                        <x-custom-table.td>floating</x-custom-table.td>
-                        <x-custom-table.td><x-block>form.upload.floating</x-block></x-custom-table.td>
-                    </x-custom-table.tr>
-                    <x-custom-table.tr>
-                        <x-custom-table.td first>Upload</x-custom-table.td>
-                        <x-custom-table.td>error</x-custom-table.td>
-                        <x-custom-table.td><x-block>form.upload.error</x-block></x-custom-table.td>
-                    </x-custom-table.tr>
-                    <x-custom-table.tr>
-                        <x-custom-table.td first>Select Styled</x-custom-table.td>
-                        <x-custom-table.td>label</x-custom-table.td>
-                        <x-custom-table.td><x-block>form.select-styled.label</x-block></x-custom-table.td>
-                    </x-custom-table.tr>
-                    <x-custom-table.tr>
-                        <x-custom-table.td first>Select Styled</x-custom-table.td>
-                        <x-custom-table.td>input</x-custom-table.td>
-                        <x-custom-table.td><x-block>form.select-styled.input</x-block></x-custom-table.td>
-                    </x-custom-table.tr>
-                    <x-custom-table.tr>
-                        <x-custom-table.td first>Select Styled</x-custom-table.td>
-                        <x-custom-table.td>floating</x-custom-table.td>
-                        <x-custom-table.td><x-block>form.select-styled.floating</x-block></x-custom-table.td>
-                    </x-custom-table.tr>
-                    <x-custom-table.tr>
-                        <x-custom-table.td first>Select Styled</x-custom-table.td>
-                        <x-custom-table.td>hint</x-custom-table.td>
-                        <x-custom-table.td><x-block>form.select-styled.hint</x-block></x-custom-table.td>
-                    </x-custom-table.tr>
-                    <x-custom-table.tr>
-                        <x-custom-table.td first>Select Styled</x-custom-table.td>
-                        <x-custom-table.td>error</x-custom-table.td>
-                        <x-custom-table.td><x-block>form.select-styled.error</x-block></x-custom-table.td>
-                    </x-custom-table.tr>
-                    <x-custom-table.tr>
-                        <x-custom-table.td first>Select Native</x-custom-table.td>
-                        <x-custom-table.td>label</x-custom-table.td>
-                        <x-custom-table.td><x-block>form.select-native.label</x-block></x-custom-table.td>
-                    </x-custom-table.tr>
-                    <x-custom-table.tr>
-                        <x-custom-table.td first>Select Native</x-custom-table.td>
-                        <x-custom-table.td>hint</x-custom-table.td>
-                        <x-custom-table.td><x-block>form.select-native.hint</x-block></x-custom-table.td>
-                    </x-custom-table.tr>
-                    <x-custom-table.tr>
-                        <x-custom-table.td first>Select Native</x-custom-table.td>
-                        <x-custom-table.td>error</x-custom-table.td>
-                        <x-custom-table.td><x-block>form.select-native.error</x-block></x-custom-table.td>
-                    </x-custom-table.tr>
-                    <x-custom-table.tr>
-                        <x-custom-table.td first>Pin</x-custom-table.td>
-                        <x-custom-table.td>label</x-custom-table.td>
-                        <x-custom-table.td><x-block>form.pin.label</x-block></x-custom-table.td>
-                    </x-custom-table.tr>
-                    <x-custom-table.tr>
-                        <x-custom-table.td first>Pin</x-custom-table.td>
-                        <x-custom-table.td>hint</x-custom-table.td>
-                        <x-custom-table.td><x-block>form.pin.hint</x-block></x-custom-table.td>
-                    </x-custom-table.tr>
-                    <x-custom-table.tr>
-                        <x-custom-table.td first>Pin</x-custom-table.td>
-                        <x-custom-table.td>error</x-custom-table.td>
-                        <x-custom-table.td><x-block>form.pin.error</x-block></x-custom-table.td>
-                    </x-custom-table.tr>
+                    @foreach ($scopes['form'] as $section)
+                        @foreach ($section['rows'] as $row)
+                            <x-custom-table.tr>
+                                <x-custom-table.td first>{{ $section['label'] }}</x-custom-table.td>
+                                <x-custom-table.td>{{ $row['child'] }}</x-custom-table.td>
+                                <x-custom-table.td><x-block>{{ $row['scope'] }}</x-block></x-custom-table.td>
+                            </x-custom-table.tr>
+                        @endforeach
+                    @endforeach
                 </x-custom-table.tbody>
             </x-custom-table>
             <h3 class="text-lg font-semibold dark:text-white">UI Components</h3>
@@ -353,51 +228,15 @@
                     </x-custom-table.tr>
                 </x-custom-table.thead>
                 <x-custom-table.tbody>
-                    <x-custom-table.tr>
-                        <x-custom-table.td first>Table</x-custom-table.td>
-                        <x-custom-table.td>select.styled</x-custom-table.td>
-                        <x-custom-table.td><x-block>table.select-styled</x-block></x-custom-table.td>
-                    </x-custom-table.tr>
-                    <x-custom-table.tr>
-                        <x-custom-table.td first>Table</x-custom-table.td>
-                        <x-custom-table.td>input</x-custom-table.td>
-                        <x-custom-table.td><x-block>table.input</x-block></x-custom-table.td>
-                    </x-custom-table.tr>
-                    <x-custom-table.tr>
-                        <x-custom-table.td first>Table</x-custom-table.td>
-                        <x-custom-table.td>checkbox</x-custom-table.td>
-                        <x-custom-table.td><x-block>table.checkbox</x-block></x-custom-table.td>
-                    </x-custom-table.tr>
-                    <x-custom-table.tr>
-                        <x-custom-table.td first>Dialog</x-custom-table.td>
-                        <x-custom-table.td>button (cancel)</x-custom-table.td>
-                        <x-custom-table.td><x-block>dialog.button</x-block></x-custom-table.td>
-                    </x-custom-table.tr>
-                    <x-custom-table.tr>
-                        <x-custom-table.td first>Dropdown</x-custom-table.td>
-                        <x-custom-table.td>floating</x-custom-table.td>
-                        <x-custom-table.td><x-block>dropdown.floating</x-block></x-custom-table.td>
-                    </x-custom-table.tr>
-                    <x-custom-table.tr>
-                        <x-custom-table.td first>Dropdown Submenu</x-custom-table.td>
-                        <x-custom-table.td>floating</x-custom-table.td>
-                        <x-custom-table.td><x-block>dropdown.submenu.floating</x-block></x-custom-table.td>
-                    </x-custom-table.tr>
-                    <x-custom-table.tr>
-                        <x-custom-table.td first>Clipboard</x-custom-table.td>
-                        <x-custom-table.td>label</x-custom-table.td>
-                        <x-custom-table.td><x-block>clipboard.label</x-block></x-custom-table.td>
-                    </x-custom-table.tr>
-                    <x-custom-table.tr>
-                        <x-custom-table.td first>Clipboard</x-custom-table.td>
-                        <x-custom-table.td>hint</x-custom-table.td>
-                        <x-custom-table.td><x-block>clipboard.hint</x-block></x-custom-table.td>
-                    </x-custom-table.tr>
-                    <x-custom-table.tr>
-                        <x-custom-table.td first>Sidebar Item</x-custom-table.td>
-                        <x-custom-table.td>badge</x-custom-table.td>
-                        <x-custom-table.td><x-block>sidebar.item.badge</x-block></x-custom-table.td>
-                    </x-custom-table.tr>
+                    @foreach ($scopes['ui'] as $section)
+                        @foreach ($section['rows'] as $row)
+                            <x-custom-table.tr>
+                                <x-custom-table.td first>{{ $section['label'] }}</x-custom-table.td>
+                                <x-custom-table.td>{{ $row['child'] }}</x-custom-table.td>
+                                <x-custom-table.td><x-block>{{ $row['scope'] }}</x-block></x-custom-table.td>
+                            </x-custom-table.tr>
+                        @endforeach
+                    @endforeach
                 </x-custom-table.tbody>
             </x-custom-table>
         </div>
