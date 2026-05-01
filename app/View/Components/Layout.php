@@ -17,6 +17,7 @@ class Layout extends Component
         public ?string $description = null,
         public ?string $personalization = null,
         public ?string $customization = null,
+        public ?string $ai = null,
         /* on this page section */
         public array $content = [],
         public bool $right = true,

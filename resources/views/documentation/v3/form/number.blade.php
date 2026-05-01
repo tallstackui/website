@@ -2,7 +2,7 @@
     foreach (apply_prefix($__data) as $key => $value) $$key = $value;
 @endphp
 
-<x-layout :$content>
+<x-layout :$content ai="form/number">
     <x-slot:title>
         Form Number
     </x-slot:title>

@@ -2,7 +2,7 @@
     foreach (apply_prefix($__data) as $key => $value) $$key = $value;
 @endphp
 
-<x-layout :$content>
+<x-layout :$content ai="tab/main">
     <x-slot:title>
         Tab
     </x-slot:title>

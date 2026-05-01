@@ -64,6 +64,11 @@
                                             >= {!! $version !!}
                                         </x-badge>
                                     @endif
+                                    @if ($ai)
+                                        <div class="ml-auto pl-3">
+                                            <x-copy-markdown :slug="$ai" />
+                                        </div>
+                                    @endif
                                 </div>
                             @endif
                             @if ($description)

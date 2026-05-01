@@ -1,10 +1,12 @@
 import './bootstrap';
 import clipboard from "./modules/clipboard";
+import copyMarkdown from "./modules/copy-markdown";
 import docsearch from '@docsearch/js';
 
 /* clipboard */
 document.addEventListener('alpine:init', () => {
     window.Alpine.data('clipboard', clipboard)
+    window.Alpine.data('copyMarkdown', copyMarkdown)
 });
 
 /* algolia */

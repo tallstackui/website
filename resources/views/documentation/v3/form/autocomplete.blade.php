@@ -2,7 +2,7 @@
     foreach (apply_prefix($__data) as $key => $value) $$key = $value;
 @endphp
 
-<x-layout :$content>
+<x-layout :$content ai="form/autocomplete">
     <x-slot:title>
         AutoComplete
     </x-slot:title>
@@ -24,9 +24,7 @@
                 <x-block>:items</x-block> or fetched on demand with <x-block>:request</x-block>.
             </p>
             <x-warning>
-                The component does <strong>not</strong> support multiple selection. Reach for
-                <a href="{{ route('documentation', ['v3', 'form', 'select']) }}" wire:navigate class="underline">Select Styled</a>
-                when multiple selection is required.
+                The component does <strong>not</strong> support multiple selection.
             </x-warning>
         </div>
     </x-section>
