@@ -184,4 +184,18 @@
         in the <a href="{{ route('documentation', ['v3', 'configuration']) }}" wire:navigate class="underline">configuration file</a> using the <x-block>centered</x-block> configuration.
         When set to true, the command palette will be centered on mobile devices.
     </x-section>
+    <x-section title="Overlay">
+        <div class="space-y-4">
+            <p>
+                By default, the command palette renders a dimmed overlay behind itself to focus attention on the search.
+                Pass <x-block>:overlay="false"</x-block> to skip the overlay and let the palette float above the page
+                without darkening the surrounding UI:
+            </p>
+            <x-code language="blade" :contents="$overlay" />
+            <p>
+                You can also flip the default globally in the <a href="{{ route('documentation', ['v3', 'configuration']) }}" wire:navigate class="underline">configuration file</a>
+                via the <x-block>overlay</x-block> key.
+            </p>
+        </div>
+    </x-section>
 </x-layout>

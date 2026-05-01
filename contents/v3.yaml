@@ -267,6 +267,9 @@ ui:
     - Color Variations
     - Light Variations
     - Outline Variations
+    - Rounded Sizes
+    - Square Corners
+    - Side Border
   avatar:
     - Basic Usage
     - Color Variations
@@ -423,6 +426,7 @@ ui:
     - AlpineJS Helper
     - Background Blur
     - Mobile Centered
+    - Overlay
   dial:
     - Concept
     - Basic Usage

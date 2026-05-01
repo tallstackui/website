@@ -176,4 +176,39 @@
             </div>
         </x-preview>
     </x-section>
+    <x-section title="Rounded Sizes">
+        <x-preview language="blade" :contents="$rounded">
+            <div class="space-y-2">
+                <x-alert title="TallStackUI" text="Extra small" rounded="xs" />
+                <x-alert title="TallStackUI" text="Small"       rounded="sm" />
+                <x-alert title="TallStackUI" text="Medium"      rounded="md" />
+                <x-alert title="TallStackUI" text="Large"       rounded="lg" />
+                <x-alert title="TallStackUI" text="Extra large" rounded="xl" />
+            </div>
+        </x-preview>
+    </x-section>
+    <x-section title="Square Corners">
+        <x-preview language="blade" :contents="$square">
+            <x-alert title="TallStackUI" text="No rounded corners." square />
+        </x-preview>
+    </x-section>
+    <x-section title="Side Border">
+        <div class="space-y-4">
+            <x-preview language="blade" :contents="$bordered">
+                <div class="space-y-2">
+                    <x-alert title="TallStackUI" text="Inherits the red color"   color="red"   light bordered="left" />
+                    <x-alert title="TallStackUI" text="Inherits the green color" color="green" light bordered="right" />
+                    <x-alert title="TallStackUI" text="Explicit blue border"     color="primary" light bordered="left:blue" />
+                    <x-alert title="TallStackUI" text="Explicit rose border"     color="primary" light bordered="right:rose" />
+                    <x-alert title="TallStackUI" text="Outline + side border"    color="primary" outline bordered="left:amber" />
+                    <x-alert title="TallStackUI" text="Square + side border"     color="primary" light square bordered="left:violet" />
+                </div>
+            </x-preview>
+            <p>
+                Use <x-block>"left"</x-block> or <x-block>"right"</x-block> to inherit the alert's <x-block>color</x-block>,
+                or <x-block>"&lt;side&gt;:&lt;color&gt;"</x-block> (e.g., <x-block>"left:red"</x-block>) to pin an explicit
+                color independent from the rest of the alert. All 28 colors are supported.
+            </p>
+        </div>
+    </x-section>
 </x-layout>

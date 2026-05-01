@@ -109,6 +109,7 @@ class CommandPalette
         | z-index: controls the default z-index.
         | blur: enables the background blur effect (Allowed: false, sm, md, lg, xl).
         | overflow: avoids hiding the overflow, allowing the scroll of the page.
+        | overlay: when true, renders the dimmed overlay behind the palette.
         | shortcut: keyboard shortcut to toggle the palette (e.g., 'ctrl.k', 'ctrl.shift.p').
         | recycle: when true, preserves previous results when reopening the palette.
         | elements: when true, shows the keyboard hints in the footer.
@@ -121,6 +122,7 @@ class CommandPalette
             'z-index' => 'z-50',
             'blur' => false,
             'overflow' => false,
+            'overlay' => true,
             'shortcut' => 'ctrl.k',
             'recycle' => true,
             'elements' => true,
@@ -212,6 +214,14 @@ class CommandPalette
     <x-button x-on:click="$tsui.close.commandPalette('search')">
         Close
     </x-button>
+    HTML;
+
+    public const string OVERLAY = <<<'HTML'
+    <!-- Default: dimmed overlay rendered behind the palette -->
+    <x-command-palette id="default" :request="route('api.users')" />
+
+    <!-- Opt-out: palette floats with no background dimming -->
+    <x-command-palette id="floating" :request="route('api.users')" :overlay="false" />
     HTML;
 
     public const string CUSTOMIZATION = <<<'HTML'

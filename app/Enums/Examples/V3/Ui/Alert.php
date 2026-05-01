@@ -166,6 +166,34 @@ class Alert
     <x-alert title="TallStackUi" text="Black" color="black" light />
     HTML;
 
+    public const string ROUNDED = <<<'HTML'
+    <!-- xs, sm, md, lg (default), xl -->
+
+    <x-alert title="TallStackUi" text="Extra small" rounded="xs" />
+    <x-alert title="TallStackUi" text="Small" rounded="sm" />
+    <x-alert title="TallStackUi" text="Medium" rounded="md" />
+    <x-alert title="TallStackUi" text="Large" rounded="lg" />
+    <x-alert title="TallStackUi" text="Extra large" rounded="xl" />
+    HTML;
+
+    public const string SQUARE = <<<'HTML'
+    <x-alert title="TallStackUi" text="No rounded corners." square />
+    HTML;
+
+    public const string BORDERED = <<<'HTML'
+    <!-- Side only — color inherited from the alert's `color` -->
+    <x-alert title="TallStackUi" text="Inherits the red color" color="red" light bordered="left" />
+    <x-alert title="TallStackUi" text="Inherits the green color" color="green" light bordered="right" />
+
+    <!-- Explicit color via `<side>:<color>` syntax -->
+    <x-alert title="TallStackUi" text="Explicit blue border" color="primary" light bordered="left:blue" />
+    <x-alert title="TallStackUi" text="Explicit rose border" color="primary" light bordered="right:rose" />
+
+    <!-- Combinable with `outline` and `square` -->
+    <x-alert title="TallStackUi" text="Outline + side border" color="primary" outline bordered="left:amber" />
+    <x-alert title="TallStackUi" text="Square + side border"  color="primary" light square bordered="left:violet" />
+    HTML;
+
     public const string CUSTOMIZATION = <<<'HTML'
     TallStackUi::customize()
         ->alert()
