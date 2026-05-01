@@ -20,7 +20,7 @@
     foreach (apply_prefix($__data) as $key => $value) $$key = $value;
 @endphp
 
-<x-layout :$content ai="timeline/main">
+<x-layout :$content :ai="['Timeline' => 'timeline/main', 'Timeline Items' => 'timeline/items']">
     <x-slot:title>
         Timeline
     </x-slot:title>

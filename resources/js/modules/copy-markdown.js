@@ -1,11 +1,14 @@
 import ClipboardJS from "clipboard/dist/clipboard";
 
-export default (url) => ({
+export default (defaultUrl = null) => ({
+    open: false,
     loading: false,
     copied: false,
     failed: false,
-    async copy() {
-        if (this.loading) {
+    async copy(url = null) {
+        const target = url || defaultUrl
+
+        if (!target || this.loading) {
             return
         }
 
@@ -13,7 +16,7 @@ export default (url) => ({
         this.failed = false
 
         try {
-            const response = await fetch(url)
+            const response = await fetch(target)
 
             if (!response.ok) {
                 throw new Error(`Request failed: ${response.status}`)
@@ -24,12 +27,14 @@ export default (url) => ({
             ClipboardJS.copy(text)
 
             this.copied = true
+            this.open = false
 
             setTimeout(() => this.copied = false, 2000)
         } catch (error) {
             console.error('Copy as markdown failed:', error)
 
             this.failed = true
+            this.open = false
 
             setTimeout(() => this.failed = false, 2500)
         } finally {

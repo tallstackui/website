@@ -2,7 +2,7 @@
     foreach (apply_prefix($__data) as $key => $value) $$key = $value;
 @endphp
 
-<x-layout :$content ai="avatar">
+<x-layout :$content :ai="['Avatar' => 'avatar', 'Avatar Group' => 'avatar/group']">
     <x-slot:title>
         Avatar
     </x-slot:title>

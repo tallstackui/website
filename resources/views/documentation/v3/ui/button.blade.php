@@ -2,7 +2,7 @@
     foreach (apply_prefix($__data) as $key => $value) $$key = $value;
 @endphp
 
-<x-layout :$content ai="button/normal">
+<x-layout :$content :ai="['Button' => 'button/normal', 'Button Circle' => 'button/circle']">
     <x-slot:title>
         Button
     </x-slot:title>

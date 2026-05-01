@@ -2,7 +2,7 @@
     foreach (apply_prefix($__data) as $key => $value) $$key = $value;
 @endphp
 
-<x-layout :$content ai="dropdown/main">
+<x-layout :$content :ai="['Dropdown' => 'dropdown/main', 'Dropdown Items' => 'dropdown/items', 'Dropdown Submenu' => 'dropdown/submenu']">
     <x-slot:title>
         Dropdown
     </x-slot:title>

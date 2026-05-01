@@ -2,7 +2,7 @@
     foreach (apply_prefix($__data) as $key => $value) $$key = $value;
 @endphp
 
-<x-layout :$content ai="form/select/styled">
+<x-layout :$content :ai="['Select Native' => 'form/select/native', 'Select Styled' => 'form/select/styled']">
     <x-slot:title>
         Select
     </x-slot:title>
