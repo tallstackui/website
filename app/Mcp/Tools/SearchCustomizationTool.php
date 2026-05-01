@@ -12,7 +12,7 @@ use Laravel\Mcp\Server\Tools\Annotations\IsReadOnly;
 #[IsReadOnly]
 class SearchCustomizationTool extends Tool
 {
-    protected string $description = 'Searches TallStackUI soft customization options. Returns available CSS class override blocks and personalization code snippets for components.';
+    protected string $description = 'Searches TallStackUI soft customization options. Returns available CSS class override blocks and customization code snippets for components. Customization is performed via `TallStackUi::customize()` (v3+); the v2 method `TallStackUi::personalize()` no longer exists.';
 
     public function handle(Request $request): Response
     {
