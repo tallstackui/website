@@ -53,13 +53,13 @@
                     <x-code language="shell" :contents="$build" />
                 </li>
             </ul>
-            <x-alert icon="check-circle" color="green">
+            <x-warning icon="check-circle" success>
                 If you have made it this far by completing all of the steps above, you're
                 probably ready to test TallStackUI in your application, but we strongly
                 recommend that you continue reading the other pages in the Getting Started
                 section to learn more about TallStackUI rather than trying to create your
                 first components right now.
-            </x-alert>
+            </x-warning>
         </div>
     </x-section>
 </x-layout>
