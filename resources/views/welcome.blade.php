@@ -80,7 +80,7 @@
                                                     TallStackUI is a powerful
                                                     <span class="relative inline-block">
                                                         <span class="absolute bottom-0 left-0 -z-50 h-1 w-full bg-pink-500"></span>
-                                                        <span class="z-50 w-full font-semibold">suite of 30+ Blade components</span>
+                                                        <span class="z-50 w-full font-semibold">suite of <b>50+</b> Blade components</span>
                                                     </span> that elevate your workflow of <i>Livewire</i> applications.
                                                 </p>
                                                 <div class="mt-6 flex items-center gap-x-2">
@@ -177,12 +177,6 @@
                                 <a href="https://www.jetbrains.com/phpstorm/" target="_blank">
                                     <x-svg.sponsors.jb class="h-32 w-32" />
                                 </a>
-                                <a href="https://www.dothnews.com.br/" target="_blank">
-                                    <x-svg.sponsors.dothnews class="h-32 w-32" fill="#1c79e1" />
-                                </a>
-                                <a href="https://www.araxis.com/" target="_blank">
-                                    <x-svg.sponsors.araxis class="h-12 w-12" fill="#1c79e1" />
-                                </a>
                             </div>
                         </div>
                     </div>
@@ -236,7 +230,7 @@
                                         <x-modal title="TallStackUI" id="modal-example">
                                             Your form content goes here...
                                             <x-slot:footer>
-                                                <x-button color="red" x-on:click="$tsui.modal.close('modal-example')">
+                                                <x-button color="red" x-on:click="$tsui.close.modal('modal-example')">
                                                     Close
                                                 </x-button>
                                             </x-slot:footer>
@@ -244,7 +238,7 @@
                                         <x-modal title="TallStackUI" blur id="modal-blur-example">
                                             Your form content goes here...
                                             <x-slot:footer>
-                                                <x-button color="red" x-on:click="$tsui.modal.close('modal-blur-example')">
+                                                <x-button color="red" x-on:click="$tsui.close.modal('modal-blur-example')">
                                                     Close
                                                 </x-button>
                                             </x-slot:footer>
@@ -255,7 +249,7 @@
                                         <x-slide title="TallStackUI" blur id="slide-full-example" size="full">
                                             ... Can you imagine a big content here?
                                             <x-slot:footer end>
-                                                <x-button color="red" x-on:click="$tsui.slide.close('slide-full-example')">
+                                                <x-button color="red" x-on:click="$tsui.close.slide('slide-full-example')">
                                                     Close
                                                 </x-button>
                                             </x-slot:footer>
@@ -378,7 +372,7 @@
                     <div class="flex justify-center">
                         <p class="font-normal text-gray-700 dark:text-gray-300">
                             TallStackUI is a project designed, created and mainly maintained
-                            by <a href="https://github.com/devajmeireles" class="font-medium underline" target="_blank">AJ Meireles</a>, in partnership with many incredible developers.
+                            by <a href="https://linkedin.com/in/devajmeireles" class="font-medium underline" target="_blank">AJ Meireles</a>, in partnership with many incredible developers.
                         </p>
                     </div>
                 </section>

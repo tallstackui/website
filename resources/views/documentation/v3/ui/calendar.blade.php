@@ -46,9 +46,9 @@
         </x-preview>
         <x-warning class="mt-4">
             <ul class="ml-2 list-inside list-decimal text-sm">
-                <li>The <x-block pink>double</x-block> mode is only valid alongside <x-block pink>range</x-block>.</li>
-                <li>Both calendars share the same <x-block pink>month</x-block>/<x-block pink>year</x-block> state, navigating with the primary's arrows advances both.</li>
-                <li>Below the <x-block pink>sm</x-block> breakpoint the secondary panel hides automatically.</li>
+                <li>The double mode is only valid alongside range.</li>
+                <li>Both calendars share the same month/year state, navigating with the primary's arrows advances both.</li>
+                <li>Below the sm breakpoint the secondary panel hides automatically.</li>
             </ul>
         </x-warning>
     </x-section>
@@ -67,8 +67,8 @@
             <x-calendar lock-month-year />
         </x-preview>
         <x-warning class="mt-4">
-            <x-block pink>lock-month-year</x-block> and <x-block pink>month-year-only</x-block> cannot be used together,
-            <x-block pink>month-year-only</x-block> would freeze the component because the picker is the only
+            lock-month-year and month-year-only cannot be used together,
+            month-year-only would freeze the component because the picker is the only
             interaction surface.
         </x-warning>
     </x-section>

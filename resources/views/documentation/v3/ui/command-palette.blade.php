@@ -60,9 +60,9 @@
             </p>
             <x-code language="blade" :contents="$requestArray" />
             <x-warning>
-                The <x-block pink>request</x-block> attribute must be configured either as an inline attribute or
-                in the configuration file. When using an array, the <x-block pink>url</x-block> key is required and
-                <x-block pink>method</x-block> must be <x-block pink>get</x-block> or <x-block pink>post</x-block>.
+                The request attribute must be configured either as an inline attribute or
+                in the configuration file. When using an array, the url key is required and
+                method must be get or post.
             </x-warning>
         </div>
     </x-section>

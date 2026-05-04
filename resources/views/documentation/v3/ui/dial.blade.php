@@ -60,7 +60,7 @@
             </p>
             <x-code language="blade" :contents="$labels" />
             <x-warning>
-                The <x-block pink>label</x-block> is not mandatory.
+                The label is not mandatory.
             </x-warning>
         </div>
     </x-section>

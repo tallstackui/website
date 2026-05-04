@@ -20,7 +20,7 @@
                 signatures. The signature will be a base64 that you can display as an image or store in your database.
             </p>
             <x-warning>
-                You should use it inside Livewire components with <x-block pink>wire:model</x-block> to some property as a string.
+                You should use it inside Livewire components with wire:model to some property as a string.
             </x-warning>
         </div>
     </x-section>

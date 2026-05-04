@@ -11,13 +11,13 @@
     </x-section>
     <x-section class="space-y-4" title="History & Motivation" disable-copy>
         <p>
-            TallStackUI was created by <a href="https://github.com/devajmeireles" class="underline" target="_blank">AJ</a>,
+            TallStackUI was created by <a href="https://linkedin.com/in/devajmeireles" class="underline" target="_blank">AJ</a>,
             a <i>FullStack</i> PHP developer for 10 years, passionate about the Laravel and Livewire ecosystem, especially the TALL Stack,
-            a universe of possibilities with little time and effort. <a href="https://github.com/devajmeireles" class="underline" target="_blank">AJ</a> is an active developer in the community,
+            a universe of possibilities with little time and effort. <a href="https://linkedin.com/in/devajmeireles" class="underline" target="_blank">AJ</a> is an active developer in the community,
             contributing to Laravel, Livewire, PestPHP and other open-source solutions.
         </p>
         <p>
-            Because <a href="https://github.com/devajmeireles" class="underline" target="_blank">AJ</a> has several SaaS applications, the motivation for creating TallStackUI was to avoid dependencies
+            Because <a href="https://linkedin.com/in/devajmeireles" class="underline" target="_blank">AJ</a> has several SaaS applications, the motivation for creating TallStackUI was to avoid dependencies
             on libraries that over time became outdated, without improvements or new features, generating
             possible impacts on large projects that depend on everything working well.
         </p>

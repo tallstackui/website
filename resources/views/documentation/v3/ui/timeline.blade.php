@@ -86,9 +86,9 @@
             </x-timeline>
         </x-preview>
         <x-warning class="mt-4">
-            Slot-mode items need the <x-block>horizontal</x-block> prop passed explicitly because
-            Laravel's <x-block>@@aware</x-block> does not propagate from class-based parents to slot children.
-            Array mode (<x-block>:items</x-block>) auto-propagates.
+            Slot-mode items need the horizontal prop passed explicitly because
+            Laravel's @@aware does not propagate from class-based parents to slot children.
+            Array mode (:items) auto-propagates.
         </x-warning>
     </x-section>
     <x-section title="Alternate Layout">
@@ -99,7 +99,7 @@
         </x-preview>
         <x-warning class="mt-4">
             Alternate uses a 3-column grid that distributes the timeline's horizontal space. Wrap it in a
-            <x-block>max-w-*</x-block> container or apply <x-block>class="max-w-*"</x-block> to the timeline
+            max-w-* container or apply class="max-w-*" to the timeline
             so the line lands at a comfortable midpoint instead of stretching across the full parent width.
         </x-warning>
     </x-section>

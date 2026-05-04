@@ -139,7 +139,7 @@
                 </li>
             </ul>
             <x-warning>
-                The Blade component must include <x-block pink>&#123;&#123; $attributes &#125;&#125;</x-block> in the SVG tag,
+                The Blade component must include &#123;&#123; $attributes &#125;&#125; in the SVG tag,
                 otherwise component attributes like classes will not be applied.
             </x-warning>
         </div>

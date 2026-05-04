@@ -26,7 +26,7 @@
                 <x-theme-switch block />
             </x-preview>
             <x-warning>
-                This attribute is designed to allow you to use the component within the <x-block pink>header</x-block> slot of the dropdown component.
+                This attribute is designed to allow you to use the component within the header slot of the dropdown component.
             </x-warning>
         </div>
     </x-section>

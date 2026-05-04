@@ -181,7 +181,7 @@
             </p>
             <x-code language="php" :contents="$requestResponseShape" disable-copy />
             <x-warning>
-                The <x-block pink>items</x-block> and <x-block pink>request</x-block> attributes are mutually exclusive
+                The items and request attributes are mutually exclusive
                 and cannot be defined at the same time.
             </x-warning>
         </div>

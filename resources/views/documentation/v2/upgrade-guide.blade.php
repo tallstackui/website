@@ -4,13 +4,13 @@
     </x-slot:title>
     <blockquote class="p-4 my-4 border-s-4 border-gray-500 bg-gray-200/50 dark:border-gray-400 dark:bg-gray-800">
         <p class="text-md italic font-medium leading-relaxed text-gray-900 dark:text-white">
-            This page transcribes a conversation between the creator of the TallStackUI - <a href="https://github.com/devajmeireles" target="_blank" class="underline">AJ</a>, and you.
+            This page transcribes a conversation between the creator of the TallStackUI - <a href="https://linkedin.com/in/devajmeireles" target="_blank" class="underline">AJ</a>, and you.
         </p>
     </blockquote>
     <x-section title="Before Start" disable-copy>
         <div class="space-y-4">
             <p>
-                Before you start updating your application to TallStackUI 2.x, I, <a href="https://github.com/devajmeireles" target="_blank" class="underline">AJ</a>,
+                Before you start updating your application to TallStackUI 2.x, I, <a href="https://linkedin.com/in/devajmeireles" target="_blank" class="underline">AJ</a>,
                 would like to thank you for using TallStackUI. I am very happy to know that by solving my problem, I was able to help you too, because TallStackUI
                 was designed to solve my problem of not relying on other component libraries that are abandoned over time.
             </p>

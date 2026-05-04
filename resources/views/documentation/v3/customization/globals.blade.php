@@ -69,9 +69,9 @@
             <x-code language="php" :contents="$flashExcept" disable-copy />
             <x-code language="php" :contents="$squareOnly" disable-copy />
             <x-warning>
-                You cannot list the same component in both <x-block pink>only</x-block> and <x-block pink>except</x-block>
-                at the same time. Also note that the <x-block pink>colorful</x-block> global does not support
-                <x-block pink>only</x-block> or <x-block pink>except</x-block>. It targets Dialog and Toast through its
+                You cannot list the same component in both only and except
+                at the same time. Also note that the colorful global does not support
+                only or except. It targets Dialog and Toast through its
                 own boolean parameters.
             </x-warning>
         </div>

@@ -4,7 +4,7 @@
     </x-slot:title>
     <blockquote class="p-4 my-4 border-s-4 border-gray-500 bg-gray-200/50 dark:border-gray-400 dark:bg-gray-800">
         <p class="text-md italic font-medium leading-relaxed text-gray-900 dark:text-white">
-            This page transcribes a conversation between the creator of the TallStackUI - <a href="https://github.com/devajmeireles" target="_blank" class="underline">AJ</a>, and you.
+            This page transcribes a conversation between the creator of the TallStackUI - <a href="https://linkedin.com/in/devajmeireles" target="_blank" class="underline">AJ</a>, and you.
         </p>
     </blockquote>
     <x-section title="Before Start" disable-copy>
@@ -164,8 +164,8 @@
                     referencing the old tag name, make sure to update them to use <x-block>ts-ui</x-block> instead.
                 </p>
                 <x-warning class="pt-2">
-                    All publishable resources (configuration files, Blade views, etc.) now use the <x-block pink>ts-ui</x-block> tag.
-                    The old <x-block pink>tallstackui</x-block> tag will no longer work in version 3.
+                    All publishable resources (configuration files, Blade views, etc.) now use the ts-ui tag.
+                    The old tallstackui tag will no longer work in version 3.
                 </x-warning>
             </div>
             <div>
@@ -222,7 +222,7 @@
                     </x-custom-table>
                 </div>
                 <x-warning>
-                    The old JavaScript helpers (<x-block pink>$modalOpen</x-block>, <x-block pink>$focusOn</x-block>, <x-block pink>$selectOpen</x-block>, etc.)
+                    The old JavaScript helpers ($modalOpen, $focusOn, $selectOpen, etc.)
                     are no longer available in version 3. <b>You must migrate all usages to the new helper.</b>
                 </x-warning>
             </div>
