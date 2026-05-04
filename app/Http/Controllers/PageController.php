@@ -14,12 +14,11 @@ class PageController
 {
     use VersionDiscovery;
 
-    /**
-     * Bypass to the examples.
-     */
+    /** Bypass to the examples */
     protected const array EXAMPLES = [
         'Integrations\Alpine' => 'Alpine',
         'StarterKit' => 'StarterKit',
+        'Ui\List' => 'Ui\ListComponent',
     ];
 
     public function __invoke(Request $request, string $version, ?string $main = null, ?string $children = null): ViewContract|RedirectResponse

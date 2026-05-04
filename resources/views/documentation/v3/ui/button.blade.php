@@ -2,7 +2,7 @@
     foreach (apply_prefix($__data) as $key => $value) $$key = $value;
 @endphp
 
-<x-layout :$content :ai="['Button' => 'button/normal', 'Button Circle' => 'button/circle']">
+<x-layout :$content :ai="['Button' => 'button/normal', 'Button Circle' => 'button/circle', 'Button Group' => 'button/group']">
     <x-slot:title>
         Button
     </x-slot:title>
@@ -12,6 +12,7 @@
     <x-slot:customization>
         <livewire:customization :$customization component="Button\Normal" title="Button" />
         <livewire:customization :customization="$customizationCircle" component="Button\Circle" />
+        <livewire:customization :customization="$customizationGroup" component="Button\Group" />
     </x-slot:customization>
     <x-section title="Basic Usage" anchor="normal-basic-usage">
         <div class="space-y-4">
@@ -250,6 +251,16 @@
             </div>
         </x-preview>
     </x-section>
+    <x-section title="Unfocus"
+               anchor="normal-unfocus"
+               description="Suppresses the focus halo when the button is activated by mouse.">
+        <x-preview language="blade" :contents="$unfocus">
+            <div class="inline-flex items-center gap-x-2">
+                <x-button text="With Focus" />
+                <x-button text="Without Focus" unfocus />
+            </div>
+        </x-preview>
+    </x-section>
     <x-separator text="Circle" />
     <x-section title="Basic Usage" anchor="circle-basic-usage">
         <x-preview language="blade" :contents="$circle">
@@ -423,6 +434,51 @@
                 <x-button.circle icon="bookmark" color="taupe" flat />
                 <x-button.circle icon="bookmark" color="black" flat />
             </div>
+        </x-preview>
+    </x-section>
+    <x-section title="Unfocus"
+               anchor="circle-unfocus"
+               description="Same focus-suppression behaviour as on the regular button.">
+        <x-preview language="blade" :contents="$circleUnfocus">
+            <x-button.circle icon="x-mark" color="secondary" sm />
+            <x-button.circle icon="x-mark" color="secondary" sm unfocus />
+        </x-preview>
+    </x-section>
+    <x-separator text="Group" />
+    <x-section title="Concept" anchor="group-concept" disable-copy>
+        <div class="space-y-4">
+            <p>
+                <x-block>x-button.group</x-block> is a <b>purely visual</b> wrapper that segments one or more
+                <x-block>x-button</x-block> siblings into a single cohesive unit: adjacent borders collapse
+                into shared dividers, only the outer corners are rounded, and focus rings are isolated so the
+                focused child sits above its neighbours. The wrapper renders <x-block>role="group"</x-block>
+                and forwards arbitrary attributes (e.g. <x-block>aria-label</x-block>, <x-block>id</x-block>,
+                <x-block>class</x-block>) to the underlying element.
+            </p>
+            <p>
+                The group is <b>stateless</b>: there is no selected state, no <x-block>wire:model</x-block>,
+                and no propagation of <x-block>size</x-block>, <x-block>color</x-block> or
+                <x-block>style</x-block> to the children. Each grouped <x-block>x-button</x-block> keeps full
+                control over its own appearance and behaviour.
+            </p>
+        </div>
+    </x-section>
+    <x-section title="Basic Usage" anchor="group-basic-usage">
+        <x-preview language="blade" :contents="$groupBasic">
+            <x-button.group>
+                <x-button text="Years" color="secondary" />
+                <x-button text="Months" color="secondary" />
+                <x-button text="Days" color="secondary" />
+            </x-button.group>
+        </x-preview>
+    </x-section>
+    <x-section title="Vertical Orientation" anchor="group-vertical-orientation">
+        <x-preview language="blade" :contents="$groupVertical">
+            <x-button.group vertical aria-label="View options">
+                <x-button text="List" icon="bars-4" color="secondary" />
+                <x-button text="Grid" icon="squares-2x2" color="secondary" />
+                <x-button text="Map" icon="map" color="secondary" />
+            </x-button.group>
         </x-preview>
     </x-section>
 </x-layout>

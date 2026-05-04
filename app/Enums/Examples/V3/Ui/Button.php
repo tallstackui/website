@@ -377,6 +377,32 @@ class Button
     <x-button.circle icon="bookmark" color="black" flat />
     HTML;
 
+    public const string UNFOCUS = <<<'HTML'
+    <x-button text="With Focus" />
+    <x-button text="Without Focus" unfocus />
+    HTML;
+
+    public const string CIRCLE_UNFOCUS = <<<'HTML'
+    <x-button.circle icon="x-mark" color="secondary" sm />
+    <x-button.circle icon="x-mark" color="secondary" sm unfocus />
+    HTML;
+
+    public const string GROUP_BASIC = <<<'HTML'
+    <x-button.group>
+        <x-button text="Years" color="secondary" />
+        <x-button text="Months" color="secondary" />
+        <x-button text="Days" color="secondary" />
+    </x-button.group>
+    HTML;
+
+    public const string GROUP_VERTICAL = <<<'HTML'
+    <x-button.group vertical>
+        <x-button text="List" icon="bars-4" color="secondary" />
+        <x-button text="Grid" icon="squares-2x2" color="secondary" />
+        <x-button text="Map" icon="map" color="secondary" />
+    </x-button.group>
+    HTML;
+
     public const string CUSTOMIZATION = <<<'HTML'
     TallStackUi::customize()
         ->button()
@@ -387,5 +413,11 @@ class Button
     TallStackUi::customize()
         ->button('circle')
         ->block('block', 'classes');
+    HTML;
+
+    public const string CUSTOMIZATION_GROUP = <<<'HTML'
+    TallStackUi::customize()
+        ->button('group')
+        ->block('wrapper.base', 'isolate inline-flex shadow-sm rounded-lg');
     HTML;
 }

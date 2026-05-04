@@ -352,6 +352,7 @@ ui:
         - Light Variations
         - Outline Variations
         - Flat Variations
+        - Unfocus
     Circle:
       contents:
         - Basic Usage
@@ -365,6 +366,12 @@ ui:
         - Light Variations
         - Outline Variations
         - Flat Variations
+        - Unfocus
+    Group:
+      contents:
+        - Concept
+        - Basic Usage
+        - Vertical Orientation
   boolean:
     - Concept
     - Basic Usage
@@ -520,6 +527,20 @@ ui:
     - Color Variations
     - Without Color
     - Livewire SPA Navigation
+  list:
+    - Concept
+    - Basic Usage
+    - Label & Hint
+    - Searchable
+    - Search Placeholder
+    - Per-Item Menu
+    - Loop Items
+    - Data-Driven
+    - Data-Driven Menu
+    - Scrollable Height
+    - Custom Empty State
+    - Rich Inline Content
+    - Caveats
   loading:
     - Concept
     - Attributes

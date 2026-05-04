@@ -100,6 +100,7 @@ enum Example: string
     case Icon = 'Ui\\Icon';
     case Layout = 'Ui\\Layout';
     case Link = 'Ui\\Link';
+    case List = 'Ui\\ListComponent';
     case Loading = 'Ui\\Loading';
     case Kbd = 'Ui\\Kbd';
     case KeyValue = 'Ui\\KeyValue';
