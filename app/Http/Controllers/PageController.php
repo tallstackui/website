@@ -45,7 +45,7 @@ class PageController
 
         $example = str($view)->remove(["documentation.$version.", ...$this->versions()])
             ->explode('.')
-            ->map(fn ($item) => str($item)
+            ->map(fn (string $item): string => str($item)
                 ->replace('-', ' ')
                 ->title()
                 ->replace(' ', '')

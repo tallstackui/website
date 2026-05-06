@@ -17,6 +17,14 @@ Route::redirect('/docs/v2', '/docs/v2/installation');
 Route::redirect('/docs/v1', '/docs/v1/getting-started');
 Route::redirect('/issue', 'https://github.com/tallstackui/tallstackui/issues/new?template=bug_report.yml')->name('issue');
 
+Route::get('/demo/{view}', function (string $view) {
+    $template = 'demo.'.str_replace('/', '.', $view);
+
+    abort_unless(view()->exists($template), 404);
+
+    return view($template);
+})->where('view', '[a-z0-9./_-]+')->name('demo');
+
 Route::get('/ai/{name}.md', function (string $name) {
     $response = Http::get("https://raw.githubusercontent.com/tallstackui/tallstackui/refs/heads/3.x/.ai/components/{$name}.md");
 

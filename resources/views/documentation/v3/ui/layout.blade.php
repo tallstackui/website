@@ -25,12 +25,12 @@
             of the layout that makes it display.
         </p>
     </x-section>
-    <x-section title="Layout Example" disable-copy>
+    <x-section title="Layout Example">
         <div class="space-y-4">
             <p>
                 Here is a complete example of using the layout component:
             </p>
-            <x-code language="blade" :contents="$layout" disable-copy />
+            <x-preview language="blade" :contents="$layout" frame="v3/ui/layout/example" :height="720" />
             <p>
                 Before continuing, you may have noticed the following:
             </p>
@@ -76,13 +76,13 @@
         </div>
     </x-section>
     <x-separator text="Children Components" />
-    <x-section title="Layout Header" disable-copy>
+    <x-section title="Layout Header">
         <div class="space-y-4">
             <p>
                 The <x-block>layout.header</x-block> component is used to group three specific slots
                 that vary the positions of content in the top horizontal bar, called the header.
             </p>
-            <x-code language="blade" :contents="$headerSlots" disable-copy />
+            <x-preview language="blade" :contents="$headerSlots" frame="v3/ui/layout/header-slots" :height="220" />
             <ul class="list-inside list-decimal">
                 <li><x-block>left</x-block>: adds content to the left of the horizontal bar</li>
                 <li><x-block>middle</x-block>: adds content to the middle of the horizontal bar</li>
@@ -135,23 +135,23 @@
             <x-code language="blade" :contents="$sidebarOptions" disable-copy />
         </div>
     </x-section>
-    <x-section title="Brand Collapsed" disable-copy>
+    <x-section title="Brand Collapsed">
         <div class="space-y-4">
             <p>
                 When using the <x-block>collapsible</x-block> attribute, you can provide a
                 <x-block>brand-collapsed</x-block> slot to display a compact version of your branding
                 when the sidebar is collapsed. This is useful for showing an icon instead of a full logo:
             </p>
-            <x-code language="blade" :contents="$brandCollapsed" disable-copy />
+            <x-preview language="blade" :contents="$brandCollapsed" frame="v3/ui/layout/brand-collapsed" :height="720" />
         </div>
     </x-section>
-    <x-section title="Side Bar Footer" disable-copy>
+    <x-section title="Side Bar Footer">
         <div class="space-y-4">
             <p>
                 The <x-block>footer</x-block> slot allows you to pin content to the bottom of the sidebar,
                 such as version information or user profile links:
             </p>
-            <x-code language="blade" :contents="$sidebarFooter" disable-copy />
+            <x-preview language="blade" :contents="$sidebarFooter" frame="v3/ui/layout/sidebar-footer" :height="720" />
         </div>
     </x-section>
     <x-section title="Side Bar Item" disable-copy>
@@ -160,6 +160,7 @@
                 The <x-block>side-bar.item</x-block> component is used to add clickable options to the
                 <x-block>side-bar</x-block>. It can be used to add an individual item or create a group of items.
             </p>
+            <x-preview frame="v3/ui/layout/sidebar-item" :height="720" />
             <x-code language="blade" :contents="$item" disable-copy />
             <p>
                 If you don't want to use the <x-block>side-bar</x-block> component's <x-block>smart</x-block> to activate automatic route detection,
@@ -223,7 +224,7 @@
     </x-section>
     <x-section title="Disable Layout Components" disable-copy>
         If for some reason you do not want to use the layout components - the main component and its child components, you can
-        set the environment variable <x-block>TALLSTACKUI_AVOID_LAYOUT_REGISTRATION</x-block> to <x-block>true</x-block> to achieve this
+        set the environment variable <x-block>TALLSTACKUI_IGNORE_LAYOUT_REGISTRATION</x-block> to <x-block>true</x-block> to achieve this
         behavior without having to publish the configuration file and comment out the components - which would also be a valid measure, but less practical.
     </x-section>
     <x-section title="Customization" disable-copy>
