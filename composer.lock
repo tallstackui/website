@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "170acb617661d1854f64ea29e45c0dbb",
+    "content-hash": "874d04dce58765d4071f3c2269fa77c2",
     "packages": [
         {
             "name": "brick/math",
@@ -1055,16 +1055,16 @@
         },
         {
             "name": "laravel/framework",
-            "version": "v13.7.0",
+            "version": "v13.8.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "f13b85b2cce7ef5e8f3bcdf2b6c6364bbdedae0b"
+                "reference": "e7db333a025a1e93ebca7744953069d7719f4bcf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/f13b85b2cce7ef5e8f3bcdf2b6c6364bbdedae0b",
-                "reference": "f13b85b2cce7ef5e8f3bcdf2b6c6364bbdedae0b",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/e7db333a025a1e93ebca7744953069d7719f4bcf",
+                "reference": "e7db333a025a1e93ebca7744953069d7719f4bcf",
                 "shasum": ""
             },
             "require": {
@@ -1105,8 +1105,8 @@
                 "symfony/http-kernel": "^7.4.0 || ^8.0.0",
                 "symfony/mailer": "^7.4.0 || ^8.0.0",
                 "symfony/mime": "^7.4.0 || ^8.0.0",
-                "symfony/polyfill-php84": "^1.33",
-                "symfony/polyfill-php85": "^1.33",
+                "symfony/polyfill-php84": "^1.36",
+                "symfony/polyfill-php85": "^1.36",
                 "symfony/polyfill-php86": "^1.36",
                 "symfony/process": "^7.4.5 || ^8.0.5",
                 "symfony/routing": "^7.4.0 || ^8.0.0",
@@ -1275,7 +1275,7 @@
                 "issues": "https://github.com/laravel/framework/issues",
                 "source": "https://github.com/laravel/framework"
             },
-            "time": "2026-04-28T17:18:25+00:00"
+            "time": "2026-05-05T21:01:14+00:00"
         },
         {
             "name": "laravel/mcp",
@@ -5981,17 +5981,11 @@
         },
         {
             "name": "tallstackui/tallstackui",
-            "version": "v3.4.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/tallstackui/tallstackui.git",
-                "reference": "3cbadd7753716ee09f2b367ae76c0489f88b4864"
-            },
+            "version": "3.x-dev",
             "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/tallstackui/tallstackui/zipball/3cbadd7753716ee09f2b367ae76c0489f88b4864",
-                "reference": "3cbadd7753716ee09f2b367ae76c0489f88b4864",
-                "shasum": ""
+                "type": "path",
+                "url": "/Users/aj/Workspace/tallstack/tallstackui",
+                "reference": "9d987445d0e77457a5827c03ee258f9158550517"
             },
             "require": {
                 "ext-zip": "*",
@@ -6016,23 +6010,71 @@
             "type": "library",
             "extra": {
                 "laravel": {
-                    "aliases": {
-                        "TallStackUi": "TallStackUi\\Facades\\TallStackUi"
-                    },
                     "providers": [
                         "TallStackUi\\TallStackUiServiceProvider"
-                    ]
+                    ],
+                    "aliases": {
+                        "TallStackUi": "TallStackUi\\Facades\\TallStackUi"
+                    }
                 }
             },
             "autoload": {
+                "psr-4": {
+                    "TallStackUi\\": "src/"
+                },
                 "files": [
                     "src/helpers.php"
                 ],
+                "exclude-from-classmap": [
+                    "src/**/FeatureTest.php",
+                    "src/**/BrowserTest.php"
+                ]
+            },
+            "autoload-dev": {
                 "psr-4": {
-                    "TallStackUi\\": "src/"
+                    "App\\": "vendor/orchestra/testbench-core/laravel/app",
+                    "Tests\\": "tests/"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
+            "scripts": {
+                "test": [
+                    "./vendor/bin/pest"
+                ],
+                "bench": [
+                    "./vendor/bin/testbench"
+                ],
+                "type": [
+                    "./vendor/bin/pest --type-coverage"
+                ],
+                "test:browser:setup": [
+                    "./vendor/bin/dusk-updater detect --auto-update"
+                ],
+                "ci": [
+                    "composer run analyse",
+                    "composer run type",
+                    "./vendor/bin/pint --parallel --test",
+                    "@php scripts/find-unused-customization-blocks.php",
+                    "composer run test:feature",
+                    "composer run test:browser"
+                ],
+                "format": [
+                    "./vendor/bin/pint --parallel",
+                    "npm run lint:fix",
+                    "npm run format"
+                ],
+                "test:feature": [
+                    "vendor/bin/testbench view:clear",
+                    "CI=true ./vendor/bin/pest --filter=Feature --parallel"
+                ],
+                "test:browser": [
+                    "Composer\\Config::disableProcessTimeout",
+                    "./vendor/bin/testbench view:clear",
+                    "CI=true ./vendor/bin/pest --filter=Browser"
+                ],
+                "analyse": [
+                    "./vendor/bin/phpstan analyse --memory-limit=2G"
+                ]
+            },
             "license": [
                 "MIT"
             ],
@@ -6043,17 +6085,9 @@
                 }
             ],
             "description": "TallStackUI is a powerful suite of Blade components that elevate your workflow of Livewire applications.",
-            "support": {
-                "issues": "https://github.com/tallstackui/tallstackui/issues",
-                "source": "https://github.com/tallstackui/tallstackui/tree/v3.4.0"
-            },
-            "funding": [
-                {
-                    "url": "https://github.com/devajmeireles",
-                    "type": "github"
-                }
-            ],
-            "time": "2026-05-04T18:55:10+00:00"
+            "transport-options": {
+                "relative": false
+            }
         },
         {
             "name": "tijsverkoyen/css-to-inline-styles",
@@ -10696,7 +10730,9 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {},
+    "stability-flags": {
+        "tallstackui/tallstackui": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {

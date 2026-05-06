@@ -15,7 +15,6 @@
     <x-section title="Concept" anchor="static-concept" disable-copy>
         The banner component is a component intended to display text at the top of the page. It has two usage approaches: static usage
         to display fixed or random messages or Livewire integration to display messages that comes from the backend to the frontend.
-        An example of the banner component is the banner at the top of the documentation.
     </x-section>
     <x-section title="Usage" anchor="static-usage">
         <div class="space-y-4">
@@ -41,6 +40,21 @@
     </x-section>
     <x-section title="Animations" anchor="static-animations">
         <x-preview language="blade" :contents="$animated" frame="v3/ui/banner/animated" :height="280" />
+    </x-section>
+    <x-section title="Rotate" anchor="static-rotate">
+        <div class="space-y-4">
+            <p>
+                Turns the banner text into a right-to-left marquee. The animation is CSS-only (no JS/Alpine), pauses on hover, and respects <x-block>prefers-reduced-motion</x-block>. Cannot be combined with <x-block>wire</x-block> mode.
+            </p>
+            <p>
+                <x-block>rotate</x-block> accepts <x-block>true</x-block> (or just the bare attribute) for the default speed, or one of <x-block>slow</x-block>, <x-block>normal</x-block>, <x-block>fast</x-block>.
+            </p>
+            <x-preview language="blade" :contents="$rotate" frame="v3/ui/banner/rotate" :height="240" />
+            <p>
+                When <x-block>text</x-block> is an array, all items are joined into a single rolling string using the <x-block>separator</x-block> prop (default <x-block>' • '</x-block>):
+            </p>
+            <x-code language="blade" :contents="$rotateSeparator" disable-copy />
+        </div>
     </x-section>
     <x-section title="Date Limit" anchor="static-date-limit" description="An option to control the final date to display the banner.">
         <x-preview language="blade" :contents="$dates" frame="v3/ui/banner/dates" :height="240" />

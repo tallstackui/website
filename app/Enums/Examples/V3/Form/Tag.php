@@ -20,6 +20,17 @@ class Tag
     <x-tag prefix="#" />
     HTML;
 
+    public const string LAZY = <<<'HTML'
+    <!-- Reject tags shorter than the given minimum.   -->
+    <!-- The prefix character does not count toward it. -->
+
+    <x-tag :lazy="3" />
+
+    <x-tag prefix="@" :lazy="3" />
+
+    <x-tag :lazy="3" :limit="5" wire:model="tags" />
+    HTML;
+
     public const string EVENTS = <<<'HTML'
     <!--
     For the erase event the correct index is

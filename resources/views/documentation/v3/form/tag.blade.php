@@ -37,6 +37,13 @@
                    :value="['Laravel']" />
         </x-preview>
     </x-section>
+    <x-section title="Lazy" description="An option to silently reject tags whose typed content is shorter than the given minimum.">
+        <x-preview language="blade" :contents="$lazy">
+            <x-tag label="Frameworks"
+                   hint="Tags with less than 3 characters will be silently rejected"
+                   :lazy="3" />
+        </x-preview>
+    </x-section>
     <x-section title="Prefix" description="An option to set a single-character prefix.">
         <x-preview language="blade" :contents="$prefix">
             <x-tag prefix="#"

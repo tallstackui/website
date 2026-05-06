@@ -75,6 +75,33 @@ class Banner
     </html>
     HTML;
 
+    public const string ROTATE = <<<'HTML'
+    <!-- Right-to-left marquee. CSS-only — no JS or Alpine. -->
+    <!-- Pause on hover and prefers-reduced-motion are respected. -->
+
+    <x-banner rotate text="Free shipping nationwide!" color="green" />
+
+    <!-- Speeds: slow, normal (default), fast -->
+    <x-banner rotate="slow" text="Take your time reading this." />
+    <x-banner rotate="fast" text="Limited time offer!" color="red" />
+
+    <!-- Combines with animated, close, or the left slot -->
+    <x-banner animated rotate text="I slide in, then I roll." color="blue" />
+    <x-banner rotate close text="Dismissible rolling banner" color="red" />
+
+    <x-banner rotate text="Rolling content with a left tag" color="blue">
+        <x-slot:left>NEW</x-slot>
+    </x-banner>
+    HTML;
+
+    public const string ROTATE_SEPARATOR = <<<'HTML'
+    <!-- text array — joined into a single rolling string -->
+    <x-banner rotate :text="['Free shipping', '15% off', 'Use code XYZ']" color="indigo" />
+
+    <!-- custom separator (default is ' • ') -->
+    <x-banner rotate :text="['One', 'Two', 'Three']" separator=" — " />
+    HTML;
+
     public const string DATES = <<<'HTML'
     <html>
         <body>

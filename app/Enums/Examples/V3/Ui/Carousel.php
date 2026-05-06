@@ -127,6 +127,16 @@ class Carousel
         x-on:collapse="alert('Lightbox closed')" />
     HTML;
 
+    public const string CAPTION = <<<'HTML'
+    <!-- caption="overlay" — title and description on top of the image,         -->
+    <!-- anchored to its bottom edge with a fade gradient.                       -->
+    <x-carousel clickable caption="overlay" :images="$images" />
+
+    <!-- caption="footer" — title and description on a separate row             -->
+    <!-- below the image; the image is allowed to shrink to fit both.            -->
+    <x-carousel clickable caption="footer" :images="$images" />
+    HTML;
+
     public const string ASPECT = <<<'HTML'
     <x-carousel :images="[
         ['src' => url('assets/images/wallpapers/1.jpg'), 'alt' => 'Wallpaper 1'],
