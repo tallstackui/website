@@ -102,14 +102,24 @@
             ]" clickable />
         </x-preview>
     </x-section>
-    <x-section title="Clickable Caption" description="When clickable is enabled, the caption prop controls how each image's title and description appear inside the lightbox. Accepts overlay (anchored to the image with a fade gradient) or footer (rendered below the image, on a separate row). When the expanded image carries no title and no description, the figcaption block is skipped.">
-        <x-preview language="blade" :background="false" :contents="$caption">
-            <x-carousel clickable caption="overlay" :images="[
+    <x-section title="Clickable Caption" description="An option to display a title and description in the lightbox.">
+        <div class="space-y-4">
+            <x-preview language="blade" :background="false" :contents="$caption">
+                <x-carousel clickable caption="overlay" :images="[
                 ['src' => url('assets/images/wallpapers/1.jpg'), 'alt' => 'Wallpaper 1', 'title' => 'Image 1', 'description' => 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'],
                 ['src' => url('assets/images/wallpapers/2.jpg'), 'alt' => 'Wallpaper 2', 'title' => 'Image 2', 'description' => 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'],
                 ['src' => url('assets/images/wallpapers/3.jpg'), 'alt' => 'Wallpaper 3', 'title' => 'Image 3', 'description' => 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'],
             ]" />
-        </x-preview>
+            </x-preview>
+            <p>You can also set <x-block>caption="footer"</x-block> to display the title and description out of the image.</p>
+            <x-preview language="blade" :background="false" :contents="$captionFooter">
+                <x-carousel clickable caption="footer" :images="[
+                ['src' => url('assets/images/wallpapers/1.jpg'), 'alt' => 'Wallpaper 1', 'title' => 'Image 1', 'description' => 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'],
+                ['src' => url('assets/images/wallpapers/2.jpg'), 'alt' => 'Wallpaper 2', 'title' => 'Image 2', 'description' => 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'],
+                ['src' => url('assets/images/wallpapers/3.jpg'), 'alt' => 'Wallpaper 3', 'title' => 'Image 3', 'description' => 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'],
+            ]" />
+            </x-preview>
+        </div>
     </x-section>
     <x-section title="Fixed Aspect Radio">
         <div class="space-y-4">

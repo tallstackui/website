@@ -5985,7 +5985,7 @@
             "dist": {
                 "type": "path",
                 "url": "/Users/aj/Workspace/tallstack/tallstackui",
-                "reference": "9d987445d0e77457a5827c03ee258f9158550517"
+                "reference": "f9d9f7f7136474d1f881c68b20be235532cedf3d"
             },
             "require": {
                 "ext-zip": "*",
@@ -6054,6 +6054,7 @@
                     "composer run type",
                     "./vendor/bin/pint --parallel --test",
                     "@php scripts/find-unused-customization-blocks.php",
+                    "@php scripts/check-html-escaped-tailwind-variants.php",
                     "composer run test:feature",
                     "composer run test:browser"
                 ],

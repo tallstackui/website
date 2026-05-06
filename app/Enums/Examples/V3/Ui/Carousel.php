@@ -128,12 +128,10 @@ class Carousel
     HTML;
 
     public const string CAPTION = <<<'HTML'
-    <!-- caption="overlay" — title and description on top of the image,         -->
-    <!-- anchored to its bottom edge with a fade gradient.                       -->
     <x-carousel clickable caption="overlay" :images="$images" />
+    HTML;
 
-    <!-- caption="footer" — title and description on a separate row             -->
-    <!-- below the image; the image is allowed to shrink to fit both.            -->
+    public const string CAPTION_FOOTER = <<<'HTML'
     <x-carousel clickable caption="footer" :images="$images" />
     HTML;
 
