@@ -30,7 +30,8 @@
       "WebFetch(domain:cursor.com)",
       "mcp__tallstackui__list-components-tool",
       "mcp__tallstackui__get-component-tool",
-      "Bash(gh issue:*)"
+      "Bash(gh issue:*)",
+      "Bash(sort -t'#' -k2 -n)"
     ]
   }
 }
