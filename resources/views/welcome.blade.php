@@ -1,20 +1,73 @@
 @php
-    $components = [
-        'Alert', 'Avatar', 'Avatar Group', 'Back to Top', 'Badge', 'Banner',
-        'Boolean', 'Breadcrumbs', 'Calendar', 'Card', 'Carousel', 'Clipboard',
-        'Environment', 'Errors', 'Icon', 'Kbd', 'Key-Value', 'Link', 'List',
-        'Stats', 'Table', 'Timeline', 'Tooltip', 'Button', 'Button Circle',
-        'Button Group', 'Autocomplete', 'Checkbox', 'Color Picker', 'Currency',
-        'Date Picker', 'Hint', 'Input', 'Input Select', 'Label', 'Number',
-        'Password', 'Pin', 'Radio', 'Range', 'Select Native', 'Select Styled',
-        'Tag', 'Textarea', 'Time Picker', 'Toggle', 'Upload', 'Command Palette',
-        'Dialog', 'Dropdown', 'Loading', 'Modal', 'Slide', 'Toast', 'Accordion',
-        'Dial', 'Layout', 'Sidebar', 'Step', 'Tab', 'Progress Bar',
-        'Progress Circle', 'Rating', 'Reaction', 'Signature', 'Theme Switch',
+    $componentRoutes = [
+        'Alert'            => ['ui', 'alert'],
+        'Avatar'           => ['ui', 'avatar'],
+        'Avatar Group'     => ['ui', 'avatar'],
+        'Back to Top'      => ['ui', 'back-to-top'],
+        'Badge'            => ['ui', 'badge'],
+        'Banner'           => ['ui', 'banner'],
+        'Boolean'          => ['ui', 'boolean'],
+        'Breadcrumbs'      => ['ui', 'breadcrumbs'],
+        'Calendar'         => ['ui', 'calendar'],
+        'Card'             => ['ui', 'card'],
+        'Carousel'         => ['ui', 'carousel'],
+        'Clipboard'        => ['ui', 'clipboard'],
+        'Environment'      => ['ui', 'environment'],
+        'Errors'           => ['ui', 'error'],
+        'Icon'             => ['ui', 'icon'],
+        'Kbd'              => ['ui', 'kbd'],
+        'Key-Value'        => ['ui', 'key-value'],
+        'Link'             => ['ui', 'link'],
+        'List'             => ['ui', 'list'],
+        'Stats'            => ['ui', 'stats'],
+        'Table'            => ['ui', 'table'],
+        'Timeline'         => ['ui', 'timeline'],
+        'Tooltip'          => ['ui', 'tooltip'],
+        'Button'           => ['ui', 'button'],
+        'Button Circle'    => ['ui', 'button'],
+        'Button Group'     => ['ui', 'button'],
+        'Autocomplete'     => ['form', 'autocomplete'],
+        'Checkbox'         => ['form', 'checkbox'],
+        'Color Picker'     => ['form', 'color'],
+        'Currency'         => ['form', 'currency'],
+        'Date Picker'      => ['form', 'date'],
+        'Input'            => ['form', 'input'],
+        'Input Select'     => ['form', 'input-select'],
+        'Number'           => ['form', 'number'],
+        'Password'         => ['form', 'password'],
+        'Pin'              => ['form', 'pin'],
+        'Radio'            => ['form', 'radio'],
+        'Range'            => ['form', 'range'],
+        'Select Native'    => ['form', 'select'],
+        'Select Styled'    => ['form', 'select'],
+        'Tag'              => ['form', 'tag'],
+        'Textarea'         => ['form', 'textarea'],
+        'Time Picker'      => ['form', 'time'],
+        'Toggle'           => ['form', 'toggle'],
+        'Upload'           => ['form', 'upload'],
+        'Command Palette'  => ['ui', 'command-palette'],
+        'Dialog'           => ['interactions', 'dialog'],
+        'Dropdown'         => ['ui', 'dropdown'],
+        'Loading'          => ['ui', 'loading'],
+        'Modal'            => ['ui', 'modal'],
+        'Slide'            => ['ui', 'slide'],
+        'Toast'            => ['interactions', 'toast'],
+        'Accordion'        => ['ui', 'accordion'],
+        'Dial'             => ['ui', 'dial'],
+        'Layout'           => ['ui', 'layout'],
+        'Sidebar'          => ['ui', 'layout'],
+        'Step'             => ['ui', 'step'],
+        'Tab'              => ['ui', 'tab'],
+        'Progress Bar'     => ['ui', 'progress'],
+        'Progress Circle'  => ['ui', 'progress'],
+        'Rating'           => ['ui', 'rating'],
+        'Reaction'         => ['ui', 'reaction'],
+        'Signature'        => ['ui', 'signature'],
+        'Theme Switch'     => ['ui', 'theme-switch'],
     ];
 
-    $marqueeTop = array_slice($components, 0, ceil(count($components) / 2));
-    $marqueeBottom = array_slice($components, ceil(count($components) / 2));
+    $marqueeTop    = array_slice($componentRoutes, 0, ceil(count($componentRoutes) / 2), true);
+    $marqueeBottom = array_slice($componentRoutes, ceil(count($componentRoutes) / 2), null, true);
 
     $features = [
         ['icon' => 'bolt', 'title' => 'Ready-to-use', 'description' => '50+ polished components. New ones land every release.'],
@@ -129,8 +182,21 @@
                 <div class="landing-marquee-mask mt-8">
                     <div class="relative -ml-[5%] w-[110%] -rotate-2">
                         <div class="landing-marquee-track landing-marquee-track--left">
-                            @foreach (array_merge($marqueeTop, $marqueeTop) as $name)
-                                <span class="landing-marquee-pill">{{ $name }}</span>
+                            @foreach ($marqueeTop as $name => [$main, $children])
+                                <a href="{{ route('documentation', [$version, $main, $children]) }}"
+                                   wire:navigate
+                                   class="landing-marquee-pill">
+                                    {{ $name }}
+                                </a>
+                            @endforeach
+                            @foreach ($marqueeTop as $name => [$main, $children])
+                                <a href="{{ route('documentation', [$version, $main, $children]) }}"
+                                   wire:navigate
+                                   aria-hidden="true"
+                                   tabindex="-1"
+                                   class="landing-marquee-pill">
+                                    {{ $name }}
+                                </a>
                             @endforeach
                         </div>
                     </div>
@@ -139,8 +205,21 @@
                 <div class="landing-marquee-mask mt-3">
                     <div class="relative -ml-[5%] w-[110%] -rotate-2">
                         <div class="landing-marquee-track landing-marquee-track--right">
-                            @foreach (array_merge($marqueeBottom, $marqueeBottom) as $name)
-                                <span class="landing-marquee-pill">{{ $name }}</span>
+                            @foreach ($marqueeBottom as $name => [$main, $children])
+                                <a href="{{ route('documentation', [$version, $main, $children]) }}"
+                                   wire:navigate
+                                   class="landing-marquee-pill">
+                                    {{ $name }}
+                                </a>
+                            @endforeach
+                            @foreach ($marqueeBottom as $name => [$main, $children])
+                                <a href="{{ route('documentation', [$version, $main, $children]) }}"
+                                   wire:navigate
+                                   aria-hidden="true"
+                                   tabindex="-1"
+                                   class="landing-marquee-pill">
+                                    {{ $name }}
+                                </a>
                             @endforeach
                         </div>
                     </div>

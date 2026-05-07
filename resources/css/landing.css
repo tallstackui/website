@@ -319,6 +319,7 @@
     font-size: 0.85rem;
     font-weight: 500;
     white-space: nowrap;
+    text-decoration: none;
     backdrop-filter: blur(8px);
     transition: border-color 0.2s ease, color 0.2s ease, background 0.2s ease;
 }
