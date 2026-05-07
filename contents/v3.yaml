@@ -124,7 +124,6 @@ form:
     - Selectable
     - Delay Control
     - Chevron Icons
-    - Livewire Bind Concern
   textarea:
     - Basic Usage
     - Label & Hint

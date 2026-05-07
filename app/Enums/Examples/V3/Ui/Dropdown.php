@@ -58,6 +58,52 @@ class Dropdown
     </x-dropdown>
     HTML;
 
+    public const string SIZES = <<<'HTML'
+    <!-- Boolean size flags: xs, sm, md (default), lg -->
+
+    <x-dropdown text="Account" xs>
+        <x-dropdown.items text="Profile" icon="user" />
+    </x-dropdown>
+
+    <x-dropdown text="Account" sm>
+        <x-dropdown.items text="Profile" icon="user" />
+    </x-dropdown>
+
+    <x-dropdown text="Account">
+        <x-dropdown.items text="Profile" icon="user" />
+    </x-dropdown>
+
+    <x-dropdown text="Account" lg>
+        <x-dropdown.items text="Profile" icon="user" />
+    </x-dropdown>
+    HTML;
+
+    public const string WIDTHS = <<<'HTML'
+    <!-- Available widths: xxs, xs, sm, md, lg, xl, 2xl -->
+
+    <x-dropdown text="xxs" width="xxs">
+        <x-dropdown.items text="xxs" icon="user" />
+    </x-dropdown>
+    <x-dropdown text="xs" width="xs">
+        <x-dropdown.items text="xs" icon="user" />
+    </x-dropdown>
+    <x-dropdown text="sm" width="sm">
+        <x-dropdown.items text="sm" icon="user" />
+    </x-dropdown>
+    <x-dropdown text="md" width="md">
+        <x-dropdown.items text="md" icon="user" />
+    </x-dropdown>
+    <x-dropdown text="lg" width="lg">
+        <x-dropdown.items text="lg" icon="user" />
+    </x-dropdown>
+    <x-dropdown text="xl" width="xl">
+        <x-dropdown.items text="xl" icon="user" />
+    </x-dropdown>
+    <x-dropdown text="2xl" width="2xl">
+        <x-dropdown.items text="2xl" icon="user" />
+    </x-dropdown>
+    HTML;
+
     public const string HEADER_SLOTS = <<<'HTML'
     <x-dropdown text="Menu">
         <x-slot:header>

@@ -15,41 +15,55 @@
     <x-section title="Concept" anchor="static-concept" disable-copy>
         The banner component is a component intended to display text at the top of the page. It has two usage approaches: static usage
         to display fixed or random messages or Livewire integration to display messages that comes from the backend to the frontend.
-        An example of the banner component is the banner at the top of the documentation.
     </x-section>
-    <x-section title="Usage" anchor="static-usage" disable-copy>
+    <x-section title="Usage" anchor="static-usage">
         <div class="space-y-4">
             <p>To use the component you must add it to your application layout, within the <x-block>body</x-block> tag:</p>
-            <x-code language="blade" :contents="$introduction" disable-copy />
+            <x-preview language="blade" :contents="$introduction" frame="v3/ui/banner/introduction" :height="240" />
         </div>
     </x-section>
-    <x-section title="Messages" anchor="static-messages" disable-copy>
+    <x-section title="Messages" anchor="static-messages">
         <div class="space-y-4">
             All you need to do is to set the <x-block>text</x-block> attribute with the message you want to display.
-            <x-code language="blade" :contents="$text" disable-copy />
+            <x-preview language="blade" :contents="$text" frame="v3/ui/banner/text" :height="220" />
             <p>
                 You can also set random messages to be displayed:
             </p>
-            <x-code language="blade" :contents="$alternative" disable-copy />
+            <x-preview language="blade" :contents="$alternative" frame="v3/ui/banner/alternative" :height="220" />
         </div>
     </x-section>
-    <x-section title="Left Slot" anchor="static-left-slot" disable-copy>
-        <x-code language="blade" :contents="$slot" disable-copy />
+    <x-section title="Left Slot" anchor="static-left-slot">
+        <x-preview language="blade" :contents="$slot" frame="v3/ui/banner/slot" :height="220" />
     </x-section>
-    <x-section title="Close Option" anchor="static-close-option" disable-copy>
-        <x-code language="blade" :contents="$close" disable-copy />
+    <x-section title="Close Option" anchor="static-close-option">
+        <x-preview language="blade" :contents="$close" frame="v3/ui/banner/close" :height="220" />
     </x-section>
-    <x-section title="Animations" anchor="static-animations" disable-copy>
-        <x-code language="blade" :contents="$animated" disable-copy />
+    <x-section title="Animations" anchor="static-animations">
+        <x-preview language="blade" :contents="$animated" frame="v3/ui/banner/animated" :height="280" />
     </x-section>
-    <x-section title="Date Limit" anchor="static-date-limit" description="An option to control the final date to display the banner." disable-copy>
-        <x-code language="blade" :contents="$dates" disable-copy />
+    <x-section title="Rotate" anchor="static-rotate">
+        <div class="space-y-4">
+            <p>
+                Turns the banner text into a right-to-left marquee. The animation is CSS-only (no JS/Alpine), pauses on hover, and respects <x-block>prefers-reduced-motion</x-block>. Cannot be combined with <x-block>wire</x-block> mode.
+            </p>
+            <p>
+                <x-block>rotate</x-block> accepts <x-block>true</x-block> (or just the bare attribute) for the default speed, or one of <x-block>slow</x-block>, <x-block>normal</x-block>, <x-block>fast</x-block>.
+            </p>
+            <x-preview language="blade" :contents="$rotate" frame="v3/ui/banner/rotate" :height="240" />
+            <p>
+                When <x-block>text</x-block> is an array, all items are joined into a single rolling string using the <x-block>separator</x-block> prop (default <x-block>' • '</x-block>):
+            </p>
+            <x-code language="blade" :contents="$rotateSeparator" disable-copy />
+        </div>
     </x-section>
-    <x-section title="Size Variations" anchor="static-size-variations" disable-copy>
-        <x-code language="blade" :contents="$sizes" disable-copy />
+    <x-section title="Date Limit" anchor="static-date-limit" description="An option to control the final date to display the banner.">
+        <x-preview language="blade" :contents="$dates" frame="v3/ui/banner/dates" :height="240" />
     </x-section>
-    <x-section title="Color Variations & Light Option" anchor="static-color-variations-light-option" disable-copy>
-        <x-code language="blade" :contents="$colors" disable-copy />
+    <x-section title="Size Variations" anchor="static-size-variations">
+        <x-preview language="blade" :contents="$sizes" frame="v3/ui/banner/sizes" :height="220" />
+    </x-section>
+    <x-section title="Color Variations & Light Option" anchor="static-color-variations-light-option">
+        <x-preview language="blade" :contents="$colors" frame="v3/ui/banner/colors" :height="220" />
     </x-section>
     <x-section title="Dispatching via Controllers" new anchor="static-dispatching-via-controllers" disable-copy>
         <x-code :contents="$controllers" disable-copy />

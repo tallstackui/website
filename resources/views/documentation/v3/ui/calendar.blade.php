@@ -48,7 +48,7 @@
             <ul class="ml-2 list-inside list-decimal text-sm">
                 <li>The double mode is only valid alongside range.</li>
                 <li>Both calendars share the same month/year state, navigating with the primary's arrows advances both.</li>
-                <li>Below the sm breakpoint the secondary panel hides automatically.</li>
+                <li>Below the sm breakpoint, the secondary calendar goes to the bottom of the first calendar.</li>
             </ul>
         </x-warning>
     </x-section>

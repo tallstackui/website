@@ -13,7 +13,18 @@ class Badge
     HTML;
 
     public const string ROUND = <<<'HTML'
-    <x-badge text="TallStackUi" round />
+    <!-- Boolean: applies rounded-full -->
+    <x-badge text="Full" round />
+
+    <!-- Size keys: xs, sm, md, lg, xl -->
+    <x-badge text="xs" round="xs" />
+    <x-badge text="sm" round="sm" />
+    <x-badge text="md" round="md" />
+    <x-badge text="lg" round="lg" />
+    <x-badge text="xl" round="xl" />
+
+    <!-- Without the prop, the badge falls back to rounded-md -->
+    <x-badge text="default" />
     HTML;
 
     public const string LEFT_RIGHT = <<<'HTML'

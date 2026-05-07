@@ -12,7 +12,7 @@
     $multiple = count($variants) > 1;
     $single = count($variants) === 1 ? array_values($variants)[0] : null;
 
-    $triggerClass = 'group inline-flex cursor-pointer items-center gap-1.5 rounded-lg border border-gray-200 bg-white px-2.5 py-1.5 text-xs font-medium text-gray-600 shadow-sm transition hover:border-gray-300 hover:bg-gray-50 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-pink-500 disabled:cursor-not-allowed disabled:opacity-60 dark:border-white/10 dark:bg-dark-800 dark:text-slate-300 dark:hover:border-white/20 dark:hover:bg-dark-700 dark:hover:text-white';
+    $triggerClass = 'group inline-flex cursor-pointer items-center gap-1.5 rounded-lg border border-gray-200 bg-white px-2.5 py-1.5 text-xs font-medium text-gray-600 transition hover:border-gray-300 hover:bg-gray-50 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-pink-500 disabled:cursor-not-allowed disabled:opacity-60 dark:border-white/10 dark:bg-dark-800 dark:text-slate-300 dark:hover:border-white/20 dark:hover:bg-dark-700 dark:hover:text-white';
 @endphp
 
 @if ($single)

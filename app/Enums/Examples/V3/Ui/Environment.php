@@ -9,7 +9,15 @@ class Environment
     HTML;
 
     public const string ROUND = <<<'HTML'
+    <!-- Boolean: applies rounded-full -->
     <x-environment round />
+
+    <!-- Size keys: xs, sm, md, lg, xl -->
+    <x-environment round="xs" />
+    <x-environment round="sm" />
+    <x-environment round="md" />
+    <x-environment round="lg" />
+    <x-environment round="xl" />
     HTML;
 
     public const string SQUARE = <<<'HTML'

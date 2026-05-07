@@ -74,6 +74,55 @@
             </div>
         </x-preview>
     </x-section>
+    <x-section title="Size">
+        <x-preview language="blade" :contents="$sizes">
+            <div class="flex justify-end md:justify-center gap-2">
+                <x-dropdown text="XS" xs position="bottom-end">
+                    <x-dropdown.items text="Profile" icon="user" />
+                    <x-dropdown.items text="Logout" separator />
+                </x-dropdown>
+                <x-dropdown text="SM" sm position="bottom-end">
+                    <x-dropdown.items text="Profile" icon="user" />
+                    <x-dropdown.items text="Logout" separator />
+                </x-dropdown>
+                <x-dropdown text="MD" position="bottom-end">
+                    <x-dropdown.items text="Profile" icon="user" />
+                    <x-dropdown.items text="Logout" separator />
+                </x-dropdown>
+                <x-dropdown text="LG" lg position="bottom-end">
+                    <x-dropdown.items text="Profile" icon="user" />
+                    <x-dropdown.items text="Logout" separator />
+                </x-dropdown>
+            </div>
+        </x-preview>
+    </x-section>
+    <x-section title="Width">
+        <x-preview language="blade" :contents="$widths">
+            <div class="flex justify-end md:justify-center gap-2">
+                <x-dropdown text="xxs" width="xxs">
+                    <x-dropdown.items text="xxs" icon="user" />
+                </x-dropdown>
+                <x-dropdown text="xs" width="xs">
+                    <x-dropdown.items text="xs" icon="user" />
+                </x-dropdown>
+                <x-dropdown text="sm" width="sm">
+                    <x-dropdown.items text="sm" icon="user" />
+                </x-dropdown>
+                <x-dropdown text="md" width="md">
+                    <x-dropdown.items text="md" icon="user" />
+                </x-dropdown>
+                <x-dropdown text="lg" width="lg">
+                    <x-dropdown.items text="lg" icon="user" />
+                </x-dropdown>
+                <x-dropdown text="xl" width="xl">
+                    <x-dropdown.items text="xl" icon="user" />
+                </x-dropdown>
+                <x-dropdown text="2xl" width="2xl">
+                    <x-dropdown.items text="2xl" icon="user" />
+                </x-dropdown>
+            </div>
+        </x-preview>
+    </x-section>
     <x-section title="Header Slot">
         <x-preview language="blade" :contents="$headerSlots">
             <div class="flex justify-end md:justify-center">

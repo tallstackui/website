@@ -37,9 +37,16 @@
             <img src="{{ url('assets/images/env-bar.png') }}" />
         </div>
     </x-section>
-    <x-section title="Round Variation">
+    <x-section title="Round Variation" description="Boolean enables rounded-full. The prop also accepts the size keys xs, sm, md, lg, xl to apply the matching rounded-{size} utility. Without the prop, the component falls back to rounded-md. The square attribute still wins over round.">
         <x-preview language="blade" :contents="$round">
-            <x-environment round />
+            <div class="flex flex-col items-start space-y-2">
+                <x-environment round />
+                <x-environment round="xs" />
+                <x-environment round="sm" />
+                <x-environment round="md" />
+                <x-environment round="lg" />
+                <x-environment round="xl" />
+            </div>
         </x-preview>
     </x-section>
     <x-section title="Square Variation">

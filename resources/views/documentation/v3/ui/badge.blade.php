@@ -24,10 +24,16 @@
             </div>
         </x-preview>
     </x-section>
-    <x-section title="Round Variation">
+    <x-section title="Round Variation" description="Boolean enables rounded-full. The prop also accepts the size keys xs, sm, md, lg, xl to apply the matching rounded-{size} utility. Without the prop, the badge falls back to rounded-md. The square attribute still wins over round, removing the radius entirely.">
         <x-preview language="blade" :contents="$round">
             <div class="flex items-center gap-2">
-                <x-badge text="TallStackUI" round/>
+                <x-badge text="Full" round />
+                <x-badge text="xs" round="xs" />
+                <x-badge text="sm" round="sm" />
+                <x-badge text="md" round="md" />
+                <x-badge text="lg" round="lg" />
+                <x-badge text="xl" round="xl" />
+                <x-badge text="default" />
             </div>
         </x-preview>
     </x-section>

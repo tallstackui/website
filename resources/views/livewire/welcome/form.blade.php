@@ -51,7 +51,7 @@ new class extends Component {
 ?>
 
 <div>
-    <x-card>
+    <x-card scope="card-shadowless">
         <x-errors close />
         <form wire:submit.prevent="save">
             <div class="mt-2 grid grid-cols-1 gap-4 sm:grid-cols-2">

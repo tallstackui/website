@@ -37,7 +37,7 @@
     </x-section>
     <x-section title="Footer Slot">
         <x-preview language="blade" :contents="$slot">
-            <livewire:documentation.ui.errors slot/>
+            <livewire:documentation.ui.errors show-slot />
         </x-preview>
     </x-section>
     <x-section title="Color Variations">

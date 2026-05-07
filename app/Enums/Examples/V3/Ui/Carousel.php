@@ -127,6 +127,14 @@ class Carousel
         x-on:collapse="alert('Lightbox closed')" />
     HTML;
 
+    public const string CAPTION = <<<'HTML'
+    <x-carousel clickable caption="overlay" :images="$images" />
+    HTML;
+
+    public const string CAPTION_FOOTER = <<<'HTML'
+    <x-carousel clickable caption="footer" :images="$images" />
+    HTML;
+
     public const string ASPECT = <<<'HTML'
     <x-carousel :images="[
         ['src' => url('assets/images/wallpapers/1.jpg'), 'alt' => 'Wallpaper 1'],

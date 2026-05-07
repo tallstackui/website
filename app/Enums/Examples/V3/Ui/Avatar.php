@@ -138,6 +138,19 @@ class Avatar
     </x-avatar.group>
     HTML;
 
+    public const string AVATAR_GROUP_REVERSE = <<<'HTML'
+    <!-- The first avatar in markup ends on the right; the overlap progresses right-to-left. -->
+    <!-- DOM order is preserved, only the painted overlap is mirrored. -->
+
+    <x-avatar.group reverse>
+        <x-avatar text="A" color="indigo" />
+        <x-avatar text="B" color="emerald" />
+        <x-avatar text="C" color="amber" />
+        <x-avatar text="D" color="pink" />
+        <x-avatar text="E" color="sky" />
+    </x-avatar.group>
+    HTML;
+
     public const string PRESENCE = <<<'HTML'
     <x-avatar image="https://i.pravatar.cc/300" presence />
 

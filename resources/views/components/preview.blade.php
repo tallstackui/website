@@ -8,13 +8,30 @@
     'background' => true,
     'language' => 'php',
     'disableCopy' => false,
+    'frame' => null,
+    'height' => 420,
 ])
 
-@php($anchor ??= str($title)->slug()->lower())
+@php
+    $anchor ??= str($title)->slug()->lower();
+@endphp
 
 <div x-data="{ anchor : false }" @if ($id) id="{{ $id }}" @endif>
-    <div x-show="!code" @class(['rounded-lg p-6', 'bg-white shadow-md dark:bg-slate-800/50' => $background])>
-        {{ $slot }}
+    <div x-show="!code"
+         @class([
+            'landing-card'     => $frame || $background,
+            'overflow-hidden'  => $frame,
+            'p-6'              => ! $frame,
+         ])>
+        @if ($frame)
+            <iframe src="{{ url('/demo/' . ltrim($frame, '/')) }}"
+                    class="block w-full"
+                    style="height: {{ (int) $height }}px"
+                    loading="lazy"
+                    title="{{ $title ?? $frame }} live preview"></iframe>
+        @else
+            {{ $slot }}
+        @endif
     </div>
     @if ($contents)
         <div x-cloak x-show="code">

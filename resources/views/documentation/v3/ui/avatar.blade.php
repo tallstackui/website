@@ -176,6 +176,17 @@
             </x-avatar.group>
         </x-preview>
     </x-section>
+    <x-section title="Group Reverse" description="An option to invert the avatar overlap layering.">
+        <x-preview language="blade" :contents="$avatarGroupReverse">
+            <x-avatar.group reverse>
+                <x-avatar text="A" color="indigo" />
+                <x-avatar text="B" color="emerald" />
+                <x-avatar text="C" color="amber" />
+                <x-avatar text="D" color="pink" />
+                <x-avatar text="E" color="sky" />
+            </x-avatar.group>
+        </x-preview>
+    </x-section>
     <x-section title="Presence" description="An option to indicate the presence status of the avatar.">
         <x-preview language="blade" :contents="$presence">
             <x-avatar image="https://i.pravatar.cc/300" presence />

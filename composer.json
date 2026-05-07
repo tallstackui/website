@@ -1,83 +1,85 @@
 {
-    "name": "laravel/laravel",
-    "type": "project",
-    "description": "The skeleton application for the Laravel framework.",
-    "keywords": ["laravel", "framework"],
-    "license": "MIT",
-    "require": {
-        "php": "^8.4",
-        "guzzlehttp/guzzle": "^7.2",
-        "laravel/framework": "^13.0",
-        "laravel/mcp": "^0.6.0",
-        "laravel/tinker": "^3.0",
-        "livewire/livewire": "^4.0",
-        "symfony/yaml": "^7.2",
-        "tallstackui/tallstackui": "^3.0",
-        "torchlight/torchlight-laravel": "^0.6"
+  "name": "laravel/laravel",
+  "type": "project",
+  "description": "The skeleton application for the Laravel framework.",
+  "keywords": [
+    "laravel",
+    "framework"
+  ],
+  "license": "MIT",
+  "require": {
+    "php": "^8.4",
+    "guzzlehttp/guzzle": "^7.2",
+    "laravel/framework": "^13.0",
+    "laravel/mcp": "^0.6.0",
+    "laravel/tinker": "^3.0",
+    "livewire/livewire": "^4.0",
+    "symfony/yaml": "^7.2",
+    "tallstackui/tallstackui": "^3.0",
+    "torchlight/torchlight-laravel": "^0.6"
+  },
+  "require-dev": {
+    "fakerphp/faker": "^1.9.1",
+    "laravel/pint": "^1.0",
+    "mockery/mockery": "^1.4.4",
+    "nunomaduro/collision": "^8.1",
+    "pestphp/pest": "^3.0",
+    "pestphp/pest-plugin-type-coverage": "^3.0",
+    "spatie/laravel-ray": "^1.33"
+  },
+  "autoload": {
+    "psr-4": {
+      "App\\": "app/",
+      "Database\\Factories\\": "database/factories/",
+      "Database\\Seeders\\": "database/seeders/"
     },
-    "require-dev": {
-        "fakerphp/faker": "^1.9.1",
-        "laravel/pint": "^1.0",
-        "mockery/mockery": "^1.4.4",
-        "nunomaduro/collision": "^8.1",
-        "pestphp/pest": "^3.0",
-        "pestphp/pest-plugin-type-coverage": "^3.0",
-        "spatie/laravel-ignition": "^2.0",
-        "spatie/laravel-ray": "^1.33"
-    },
-    "autoload": {
-        "psr-4": {
-            "App\\": "app/",
-            "Database\\Factories\\": "database/factories/",
-            "Database\\Seeders\\": "database/seeders/"
-        },
-        "files": [
-            "app/helpers.php"
-        ]
-    },
-    "autoload-dev": {
-        "psr-4": {
-            "Tests\\": "tests/"
-        }
-    },
-    "scripts": {
-        "post-autoload-dump": [
-            "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
-            "@php artisan package:discover --ansi"
-        ],
-        "post-update-cmd": [
-            "@php artisan vendor:publish --tag=laravel-assets --ansi --force"
-        ],
-        "post-root-package-install": [
-            "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
-        ],
-        "post-create-project-cmd": [
-            "@php artisan key:generate --ansi"
-        ],
-        "test": "./vendor/bin/pest",
-        "type": "./vendor/bin/pest --type-coverage",
-        "format": "./vendor/bin/pint --parallel",
-        "ci": [
-            "./vendor/bin/pint --test",
-            "./vendor/bin/pest --type-coverage",
-            "@php artisan route:list",
-            "./vendor/bin/pest"
-        ]
-    },
-    "extra": {
-        "laravel": {
-            "dont-discover": []
-        }
-    },
-    "config": {
-        "optimize-autoloader": true,
-        "preferred-install": "dist",
-        "sort-packages": true,
-        "allow-plugins": {
-            "pestphp/pest-plugin": true,
-            "php-http/discovery": true
-        }
-    },
-    "minimum-stability": "stable",
-    "prefer-stable": true
+    "files": [
+      "app/helpers.php"
+    ]
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Tests\\": "tests/"
+    }
+  },
+  "scripts": {
+    "post-autoload-dump": [
+      "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
+      "@php artisan package:discover --ansi"
+    ],
+    "post-update-cmd": [
+      "@php artisan vendor:publish --tag=laravel-assets --ansi --force"
+    ],
+    "post-root-package-install": [
+      "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
+    ],
+    "post-create-project-cmd": [
+      "@php artisan key:generate --ansi"
+    ],
+    "test": "./vendor/bin/pest",
+    "type": "./vendor/bin/pest --type-coverage",
+    "format": "./vendor/bin/pint --parallel",
+    "ci": [
+      "./vendor/bin/pint --test",
+      "./vendor/bin/pest --type-coverage",
+      "@php artisan route:list",
+      "./vendor/bin/pest"
+    ]
+  },
+  "extra": {
+    "laravel": {
+      "dont-discover": []
+    }
+  },
+  "config": {
+    "optimize-autoloader": true,
+    "preferred-install": "dist",
+    "sort-packages": true,
+    "allow-plugins": {
+      "pestphp/pest-plugin": true,
+      "php-http/discovery": true
+    }
+  },
+  "minimum-stability": "stable",
+  "prefer-stable": true
 }

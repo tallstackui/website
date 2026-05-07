@@ -23,7 +23,7 @@
         </div>
     </x-section>
     <x-section title="Basic Usage">
-        <x-code language="blade" :contents="$basic" />
+        <x-preview language="blade" :contents="$basic" frame="v3/ui/breadcrumbs/basic" :height="200" />
     </x-section>
     <x-section title="Named Routes">
         <div class="space-y-4">
@@ -33,28 +33,28 @@
                 Any other string is treated as a named route and resolved automatically via
                 the Laravel <x-block>route()</x-block> helper.
             </p>
-            <x-code language="blade" :contents="$namedRoutes" />
+            <x-preview language="blade" :contents="$namedRoutes" frame="v3/ui/breadcrumbs/named-routes" :height="220" />
         </div>
     </x-section>
     <x-section title="Icons">
-        <x-code language="blade" :contents="$icons" />
+        <x-preview language="blade" :contents="$icons" frame="v3/ui/breadcrumbs/icons" :height="200" />
     </x-section>
     <x-section title="Tooltips">
-        <x-code language="blade" :contents="$tooltips" />
+        <x-preview language="blade" :contents="$tooltips" frame="v3/ui/breadcrumbs/tooltips" :height="240" />
     </x-section>
     <x-section title="Sizes">
-        <x-code language="blade" :contents="$sizes" />
+        <x-preview language="blade" :contents="$sizes" frame="v3/ui/breadcrumbs/sizes" :height="280" />
     </x-section>
     <x-section title="Separator">
         <div class="space-y-4">
             <p>
                 The default separator is <x-block>/</x-block>. You can customize it with any text:
             </p>
-            <x-code language="blade" :contents="$separatorText" />
+            <x-preview language="blade" :contents="$separatorText" frame="v3/ui/breadcrumbs/separator-text" :height="240" />
             <p>
                 Or use an icon as separator by prefixing the icon name with <x-block>icon:</x-block>:
             </p>
-            <x-code language="blade" :contents="$separatorIcon" />
+            <x-preview language="blade" :contents="$separatorIcon" frame="v3/ui/breadcrumbs/separator-icon" :height="200" />
         </div>
     </x-section>
     <x-section title="Separator Class">
@@ -62,7 +62,7 @@
             <p>
                 Apply additional CSS classes to all separator elements:
             </p>
-            <x-code language="blade" :contents="$separatorClass" />
+            <x-preview language="blade" :contents="$separatorClass" frame="v3/ui/breadcrumbs/separator-class" :height="200" />
         </div>
     </x-section>
     <x-section title="Slots">
@@ -71,7 +71,7 @@
                 Add custom content before or after the breadcrumb trail using the
                 <x-block>left</x-block> and <x-block>right</x-block> slots:
             </p>
-            <x-code language="blade" :contents="$slots" />
+            <x-preview language="blade" :contents="$slots" frame="v3/ui/breadcrumbs/slots" :height="200" />
         </div>
     </x-section>
     <x-section title="Route-Aware Builder" disable-copy>
