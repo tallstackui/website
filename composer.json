@@ -15,7 +15,7 @@
     "laravel/tinker": "^3.0",
     "livewire/livewire": "^4.0",
     "symfony/yaml": "^7.2",
-    "tallstackui/tallstackui": "3.x-dev",
+    "tallstackui/tallstackui": "^3.0",
     "torchlight/torchlight-laravel": "^0.6"
   },
   "require-dev": {
@@ -25,7 +25,6 @@
     "nunomaduro/collision": "^8.1",
     "pestphp/pest": "^3.0",
     "pestphp/pest-plugin-type-coverage": "^3.0",
-    "spatie/laravel-ignition": "^2.0",
     "spatie/laravel-ray": "^1.33"
   },
   "autoload": {
@@ -82,11 +81,5 @@
     }
   },
   "minimum-stability": "stable",
-  "prefer-stable": true,
-  "repositories": [
-    {
-      "type": "path",
-      "url": "/Users/aj/Workspace/tallstack/tallstackui"
-    }
-  ]
+  "prefer-stable": true
 }

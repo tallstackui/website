@@ -12,15 +12,16 @@
     'height' => 420,
 ])
 
-@php($anchor ??= str($title)->slug()->lower())
+@php
+    $anchor ??= str($title)->slug()->lower();
+@endphp
 
 <div x-data="{ anchor : false }" @if ($id) id="{{ $id }}" @endif>
     <div x-show="!code"
          @class([
-            'rounded-lg' => true,
-            'p-6' => ! $frame,
-            'overflow-hidden border border-slate-200 dark:border-white/10' => $frame,
-            'bg-white shadow-md dark:bg-slate-800/50' => $background && ! $frame,
+            'landing-card'     => $frame || $background,
+            'overflow-hidden'  => $frame,
+            'p-6'              => ! $frame,
          ])>
         @if ($frame)
             <iframe src="{{ url('/demo/' . ltrim($frame, '/')) }}"

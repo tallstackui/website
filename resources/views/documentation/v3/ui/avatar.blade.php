@@ -176,7 +176,7 @@
             </x-avatar.group>
         </x-preview>
     </x-section>
-    <x-section title="Group Reverse" description="An option to mirror the avatar stacking direction.">
+    <x-section title="Group Reverse" description="An option to invert the avatar overlap layering.">
         <x-preview language="blade" :contents="$avatarGroupReverse">
             <x-avatar.group reverse>
                 <x-avatar text="A" color="indigo" />

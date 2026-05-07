@@ -34,7 +34,8 @@
     @livewireStyles
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
-<body x-bind:class="{ 'bg-dots-white dark bg-slate-900' : darkTheme, 'bg-dots-darker bg-white' : !darkTheme }"
+<body class="landing min-h-full"
+      x-bind:class="{ 'dark text-slate-100' : darkTheme, 'text-slate-900' : !darkTheme }"
       x-data="{ mobile : false }"
       x-cloak>
     @persist('docsearch')
@@ -44,59 +45,65 @@
     <x-toast />
     <x-top-bar />
     <x-banner wire />
-    <x-layout.header />
-    <div class="flex flex-col">
-        <x-layout.banner />
-        <div class="relative mx-auto flex w-full max-w-screen-2xl flex-auto justify-center sm:px-2 lg:px-8 xl:px-12">
-            <x-layout.sidebar.left />
-            <div class="min-w-0 max-w-2xl flex-auto px-4 py-16 lg:max-w-none lg:pr-0 lg:pl-8 xl:px-16">
-                <main>
-                    @if ($title || $section)
-                        <div class="block xl:hidden">
-                            <x-on-this-page :$content mobile />
-                        </div>
-                        <header class="mb-6 space-y-1">
-                            @if ($title)
-                                <div class="flex items-start gap-x-2">
-                                    <h1 class="text-3xl font-semibold tracking-tight text-pink-900 font-display dark:text-slate-300">{{ $title }}</h1>
-                                    @if ($version)
-                                        <x-badge color="pink" light xs round>
-                                            >= {!! $version !!}
-                                        </x-badge>
-                                    @endif
-                                    @if ($ai)
-                                        <div class="ml-auto pl-3">
-                                            <x-copy-markdown :slug="$ai" />
-                                        </div>
-                                    @endif
-                                </div>
-                            @endif
-                            @if ($description)
-                                <p class="text-sm text-slate-500 dark:text-slate-400">{{ $description }}</p>
-                            @endif
-                            @if ($personalization || $customization)
-                                <div class="mt-2 inline-flex space-x-2">
-                                    {{ $personalization ?? $customization }}
-                                </div>
-                            @endif
-                        </header>
+
+    <div class="landing-shell">
+        <div class="landing-noise"></div>
+
+        <x-layout.header />
+        <div class="flex flex-col">
+            <x-layout.banner />
+            <div class="relative mx-auto flex w-full max-w-screen-2xl flex-auto justify-center sm:px-2 lg:px-8 xl:px-12">
+                <x-layout.sidebar.left />
+                <div class="min-w-0 max-w-2xl flex-auto px-4 py-16 lg:max-w-none lg:pr-0 lg:pl-8 xl:px-16">
+                    <main>
+                        @if ($title || $section)
+                            <div class="block xl:hidden">
+                                <x-on-this-page :$content mobile />
+                            </div>
+                            <header class="mb-6 space-y-1">
+                                @if ($title)
+                                    <div class="flex items-start gap-x-2">
+                                        <h1 class="text-3xl font-semibold tracking-tight text-pink-900 font-display dark:text-slate-300">{{ $title }}</h1>
+                                        @if ($version)
+                                            <x-badge color="pink" light xs round>
+                                                >= {!! $version !!}
+                                            </x-badge>
+                                        @endif
+                                        @if ($ai)
+                                            <div class="ml-auto pl-3">
+                                                <x-copy-markdown :slug="$ai" />
+                                            </div>
+                                        @endif
+                                    </div>
+                                @endif
+                                @if ($description)
+                                    <p class="text-sm text-slate-500 dark:text-slate-400">{{ $description }}</p>
+                                @endif
+                                @if ($personalization || $customization)
+                                    <div class="mt-2 inline-flex space-x-2">
+                                        {{ $personalization ?? $customization }}
+                                    </div>
+                                @endif
+                            </header>
+                        @endif
+                        @if ($current() !== LATEST_VERSION)
+                            <div class="mb-6">
+                                <x-old-version-warning />
+                            </div>
+                        @endif
+                        {{ $slot }}
+                    </main>
+                    @if ($torchlight)
+                        <p class="text-sm text-gray-600 dark:text-slate-400">Code highlighting provided by <a href="https://torchlight.dev" class="font-semibold text-pink-700 underline" target="_blank">Torchlight</a></p>
                     @endif
-                    @if ($current() !== LATEST_VERSION)
-                        <div class="mb-6">
-                            <x-old-version-warning />
-                        </div>
-                    @endif
-                    {{ $slot }}
-                </main>
-                @if ($torchlight)
-                    <p class="text-sm text-gray-600 dark:text-slate-400">Code highlighting provided by <a href="https://torchlight.dev" class="font-semibold text-pink-700 underline" target="_blank">Torchlight</a></p>
+                </div>
+                @if ($right)
+                    <x-on-this-page :$content />
                 @endif
             </div>
-            @if ($right)
-                <x-on-this-page :$content />
-            @endif
         </div>
     </div>
+
     <x-back-to-top color="pink" />
     <script>
         var version = @js($current());
