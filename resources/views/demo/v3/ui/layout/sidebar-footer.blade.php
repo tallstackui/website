@@ -12,8 +12,8 @@
                     </div>
                 </x-slot:brand>
 
-                <x-tsui-side-bar.item text="Home" icon="home" :route="'/'" current />
-                <x-tsui-side-bar.item text="Settings" icon="cog-6-tooth" :route="'/'" />
+                <x-tsui-side-bar.item text="Home" icon="home" route="#" current />
+                <x-tsui-side-bar.item text="Settings" icon="cog-6-tooth" route="#" />
 
                 <x-slot:footer>
                     <p class="text-sm text-gray-500 dark:text-gray-400">v3.0.0</p>

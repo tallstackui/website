@@ -12,26 +12,26 @@
                     </div>
                 </x-slot:brand>
 
-                <x-tsui-side-bar.item text="Dashboard" icon="home" :route="'/'" current />
+                <x-tsui-side-bar.item text="Dashboard" icon="home" route="#" current />
 
-                <x-tsui-side-bar.item text="Notifications" icon="bell" :route="'/'">
+                <x-tsui-side-bar.item text="Notifications" icon="bell" route="#">
                     <x-slot:badge>5</x-slot:badge>
                 </x-tsui-side-bar.item>
 
-                <x-tsui-side-bar.item text="Messages" icon="envelope" badge-color="blue" :route="'/'">
+                <x-tsui-side-bar.item text="Messages" icon="envelope" badge-color="blue" route="#">
                     <x-slot:badge>3</x-slot:badge>
                 </x-tsui-side-bar.item>
 
                 <x-tsui-side-bar.separator text="Configurations" line />
 
                 <x-tsui-side-bar.item text="Settings" icon="cog-6-tooth" opened>
-                    <x-tsui-side-bar.item text="General" :route="'/'" />
-                    <x-tsui-side-bar.item text="Privacy" :route="'/'" />
+                    <x-tsui-side-bar.item text="General" route="#" />
+                    <x-tsui-side-bar.item text="Privacy" route="#" />
                 </x-tsui-side-bar.item>
 
                 <x-tsui-side-bar.item text="Account" icon="user">
-                    <x-tsui-side-bar.item text="Profile" :route="'/'" />
-                    <x-tsui-side-bar.item text="API Keys" :route="'/'" />
+                    <x-tsui-side-bar.item text="Profile" route="#" />
+                    <x-tsui-side-bar.item text="API Keys" route="#" />
                 </x-tsui-side-bar.item>
 
                 <x-tsui-side-bar.separator text="Resources" line-right />

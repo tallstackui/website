@@ -79,7 +79,7 @@
 
         <div class="mx-auto w-full max-w-7xl px-6 lg:px-8">
 
-            <nav class="landing-nav" aria-label="Global">
+            <nav class="relative z-30 flex items-center justify-between py-6" aria-label="Global">
                 <div class="flex items-center gap-3">
                     <x-svg.banner class="h-8 w-10" />
                 </div>
@@ -91,7 +91,7 @@
                 </div>
             </nav>
 
-            <section class="landing-hero">
+            <section class="relative pt-[clamp(5rem,12vh,9rem)] pb-[clamp(4rem,10vh,8rem)]">
                 <div class="mx-auto max-w-4xl text-center">
                     <a href="{{ $discord }}" target="_blank" rel="noopener" class="landing-eyebrow">
                         v3.5 is out, hop on the Discord
@@ -115,32 +115,6 @@
                             Get Started
                             <x-icon name="arrow-right" class="h-4 w-4" />
                         </a>
-                        <a href="https://github.com/tallstackui/tallstackui"
-                           target="_blank"
-                           rel="noopener"
-                           class="landing-cta-secondary landing-cta-secondary--sm">
-                            <x-icon name="star" class="h-3.5 w-3.5" />
-                            Star on GitHub
-                        </a>
-                    </div>
-
-                    <div class="mt-6 flex justify-center">
-                        <button type="button"
-                                class="landing-terminal"
-                                aria-label="Copy install command"
-                                x-data="{ copied: false }"
-                                x-on:click="
-                                    navigator.clipboard.writeText('composer require tallstackui/tallstackui');
-                                    copied = true;
-                                    setTimeout(() => copied = false, 1800);
-                                ">
-                            <span class="landing-terminal-prompt">$</span>
-                            <span class="landing-terminal-command">composer require tallstackui/tallstackui</span>
-                            <span class="landing-terminal-action">
-                                <x-icon x-show="!copied" name="clipboard-document" class="h-4 w-4" />
-                                <x-icon x-show="copied"  x-cloak name="check" class="h-4 w-4 text-emerald-400" />
-                            </span>
-                        </button>
                     </div>
                 </div>
             </section>
@@ -153,7 +127,7 @@
                 </div>
 
                 <div class="landing-marquee-mask mt-8">
-                    <div class="landing-marquee-rotor">
+                    <div class="relative -ml-[5%] w-[110%] -rotate-2">
                         <div class="landing-marquee-track landing-marquee-track--left">
                             @foreach (array_merge($marqueeTop, $marqueeTop) as $name)
                                 <span class="landing-marquee-pill">{{ $name }}</span>
@@ -163,7 +137,7 @@
                 </div>
 
                 <div class="landing-marquee-mask mt-3">
-                    <div class="landing-marquee-rotor">
+                    <div class="relative -ml-[5%] w-[110%] -rotate-2">
                         <div class="landing-marquee-track landing-marquee-track--right">
                             @foreach (array_merge($marqueeBottom, $marqueeBottom) as $name)
                                 <span class="landing-marquee-pill">{{ $name }}</span>
@@ -173,8 +147,8 @@
                 </div>
             </section>
 
-            <section class="landing-section">
-                <div class="landing-section-header">
+            <section class="relative py-[clamp(4rem,8vh,7rem)]">
+                <div class="mb-[clamp(2rem,4vh,3rem)] flex flex-col items-start gap-5">
                     <span class="landing-eyebrow">The catalog</span>
                     <h2 class="landing-section-heading">Crafted with <span class="landing-handwritten">attention to every detail</span>.</h2>
                     <p class="landing-section-subheading">
@@ -182,12 +156,12 @@
                     </p>
                 </div>
 
-                <div class="landing-bento">
-                    <article class="landing-bento-cell landing-bento-cell--3x1">
+                <div class="grid auto-rows-[minmax(8rem,auto)] grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-6">
+                    <article class="landing-bento-cell col-span-2 sm:col-span-3">
                         <span class="landing-bento-cell-eyebrow">Display</span>
                         <h3 class="landing-bento-cell-title">Alerts</h3>
                         <p class="landing-bento-cell-body">Light, themed, easy to dismiss. Always on point.</p>
-                        <div class="landing-bento-stage space-y-2">
+                        <div class="mt-5 space-y-2 rounded-xl p-5">
                             <x-alert>Your text goes here...</x-alert>
                             <x-alert color="pink" icon="sparkles">With a lot of color variations</x-alert>
                             <x-alert color="emerald" icon="check-circle" light close title="Light">
@@ -196,11 +170,11 @@
                         </div>
                     </article>
 
-                    <article class="landing-bento-cell landing-bento-cell--3x1">
+                    <article class="landing-bento-cell col-span-2 sm:col-span-3">
                         <span class="landing-bento-cell-eyebrow">Interaction</span>
                         <h3 class="landing-bento-cell-title">Buttons that fit anywhere</h3>
                         <p class="landing-bento-cell-body">Solid, outline, light, flat. With icons, loading, tooltips. All out of the box.</p>
-                        <div class="landing-bento-stage flex flex-wrap items-center gap-2">
+                        <div class="mt-5 flex flex-wrap items-center gap-2 rounded-xl p-5">
                             <x-button color="pink">Save</x-button>
                             <x-button color="pink" outline>Cancel</x-button>
                             <x-button color="emerald" icon="check">Confirm</x-button>
@@ -211,69 +185,75 @@
                             <x-button.circle icon="trash" color="red" />
                             <x-button.circle icon="cog-6-tooth" color="slate" outline />
                             <x-button.circle icon="heart" color="pink" light />
+                            <x-button.group>
+                                <x-button text="TALL" color="secondary" unfocus />
+                                <x-button text="Stack" color="secondary" unfocus />
+                                <x-button text="UI" color="secondary" unfocus />
+                            </x-button.group>
                         </div>
                     </article>
 
-                    <article class="landing-bento-cell landing-bento-cell--2x1">
+                    <article class="landing-bento-cell col-span-2 sm:col-span-3 lg:col-span-2">
                         <span class="landing-bento-cell-eyebrow">Media</span>
-                        <h3 class="landing-bento-cell-title">Avatar group</h3>
-                        <div class="landing-bento-stage flex items-center">
-                            <div class="landing-avatar-stack">
+                        <h3 class="landing-bento-cell-title">Avatar Group</h3>
+                        <div class="mt-5 flex items-center rounded-xl p-5">
+                            <div class="inline-flex *:-ml-2 [&>*:first-child]:ml-0">
                                 @foreach (range(6, 10) as $idx)
                                     <img src="{{ asset('assets/images/avatar/' . $idx . '.jpg') }}"
                                          alt=""
-                                         class="landing-avatar h-10 w-10 rounded-full object-cover" />
+                                         class="border-0! shadow-none! h-10 w-10 rounded-full object-cover" />
                                 @endforeach
-                                <div class="landing-avatar flex h-10 w-10 items-center justify-center rounded-full bg-pink-500 text-xs font-bold text-white">
+                                <div class="border-0! shadow-none! flex h-10 w-10 items-center justify-center rounded-full bg-pink-500 text-xs font-bold text-white">
                                     +12
                                 </div>
                             </div>
                         </div>
                     </article>
 
-                    <article class="landing-bento-cell landing-bento-cell--2x1">
+                    <article class="landing-bento-cell col-span-2 sm:col-span-3 lg:col-span-2">
                         <span class="landing-bento-cell-eyebrow">Input</span>
-                        <h3 class="landing-bento-cell-title">Date picker</h3>
-                        <div class="landing-bento-stage">
+                        <h3 class="landing-bento-cell-title">Date Picker</h3>
+                        <div class="mt-5 rounded-xl p-5">
                             <x-date label="Pick a date" name="bento_date" :value="now()->format('Y-m-d')" format="MMMM, DD, YYYY" />
                         </div>
                     </article>
 
-                    <article class="landing-bento-cell landing-bento-cell--2x1">
+                    <article class="landing-bento-cell col-span-2 sm:col-span-3 lg:col-span-2">
                         <span class="landing-bento-cell-eyebrow">Form</span>
-                        <h3 class="landing-bento-cell-title">Toggle &amp; rating</h3>
-                        <div class="landing-bento-stage">
+                        <h3 class="landing-bento-cell-title">Toggle &amp; Rating</h3>
+                        <div class="mt-5 rounded-xl p-5">
                             <livewire:welcome.feedback />
                         </div>
                     </article>
 
-                    <article class="landing-bento-cell landing-bento-cell--3x1">
+                    <article class="landing-bento-cell col-span-2 sm:col-span-3">
                         <span class="landing-bento-cell-eyebrow">Form</span>
-                        <h3 class="landing-bento-cell-title">Tag input</h3>
+                        <h3 class="landing-bento-cell-title">Tag Input</h3>
                         <p class="landing-bento-cell-body">Multiple values, prefix support, array binding.</p>
-                        <div class="landing-bento-stage">
+                        <div class="mt-5 rounded-xl p-5">
                             <x-tag label="Frameworks"
                                    prefix="#"
-                                   hint="Press enter to add a new tag"
+                                   limit="4"
+                                   hint="Limited to 4 tags for this demo"
                                    :value="['Laravel', 'Livewire', 'Alpine.js', 'Tailwind']" />
                         </div>
                     </article>
 
-                    <article class="landing-bento-cell landing-bento-cell--3x1">
+                    <article class="landing-bento-cell col-span-2 sm:col-span-3">
                         <span class="landing-bento-cell-eyebrow">Form</span>
                         <h3 class="landing-bento-cell-title">Color picker</h3>
                         <p class="landing-bento-cell-body">Pick from a slider or a small palette. Your call.</p>
-                        <div class="landing-bento-stage">
+                        <div class="mt-5 rounded-xl p-5">
                             <x-color label="Choose a brand color" picker selectable />
                         </div>
                     </article>
 
-                    <article class="landing-bento-cell landing-bento-cell--6x1">
+                    <article class="landing-bento-cell col-span-2 sm:col-span-3 lg:col-span-6">
                         <div>
                             <span class="landing-bento-cell-eyebrow">Data</span>
                             <h3 class="landing-bento-cell-title mt-1">Tables. Paginated and live.</h3>
                         </div>
-                        <div class="landing-bento-stage">
+                        <div class="mt-5 rounded-xl p-5">
                             <livewire:welcome.table />
                         </div>
                     </article>
@@ -281,8 +261,8 @@
                 </div>
             </section>
 
-            <section class="landing-section">
-                <div class="landing-section-header landing-section-header--centered">
+            <section class="relative py-[clamp(4rem,8vh,7rem)]">
+                <div class="mb-[clamp(2rem,4vh,3rem)] flex flex-col items-center gap-5 text-center">
                     <span class="landing-eyebrow">Philosophy</span>
                     <h2 class="landing-section-heading">What makes TallStackUI different?</h2>
                     <p class="landing-section-subheading">
@@ -290,7 +270,7 @@
                     </p>
                 </div>
 
-                <div class="landing-feature-grid">
+                <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
                     @foreach ($features as $feature)
                         <article class="landing-feature-card"
                                  x-data
@@ -302,14 +282,14 @@
                             <div class="landing-feature-icon">
                                 <x-icon :name="$feature['icon']" class="h-5 w-5" />
                             </div>
-                            <h3 class="landing-feature-title">{{ $feature['title'] }}</h3>
-                            <p class="landing-feature-desc">{{ $feature['description'] }}</p>
+                            <h3 class="mt-4 text-[1.05rem] font-semibold text-slate-900 dark:text-slate-50">{{ $feature['title'] }}</h3>
+                            <p class="mt-2 text-[0.85rem] leading-[1.55] text-slate-500 dark:text-slate-400">{{ $feature['description'] }}</p>
                         </article>
                     @endforeach
                 </div>
             </section>
 
-            <section class="landing-section">
+            <section class="relative py-[clamp(4rem,8vh,7rem)]">
                 <div class="grid items-start gap-12 lg:grid-cols-12">
                     <div class="lg:col-span-5 lg:sticky lg:top-24">
                         <span class="landing-eyebrow">Showcase</span>
@@ -353,7 +333,7 @@
                 </div>
             </section>
 
-            <section class="landing-section">
+            <section class="relative py-[clamp(4rem,8vh,7rem)]">
                 <div class="grid items-center gap-12 lg:grid-cols-12">
                     <div class="lg:col-span-5">
                         <span class="landing-eyebrow">Customization</span>
@@ -384,20 +364,20 @@
                     </div>
 
                     <div class="lg:col-span-7">
-                        <div class="landing-ide">
-                            <div class="landing-ide-titlebar">
-                                <div class="landing-ide-dots">
-                                    <span class="landing-ide-dot landing-ide-dot--red"></span>
-                                    <span class="landing-ide-dot landing-ide-dot--yellow"></span>
-                                    <span class="landing-ide-dot landing-ide-dot--green"></span>
+                        <div class="relative overflow-hidden rounded-[1.125rem] border border-slate-400/18 bg-[#292D3E] font-mono text-[#d4d4d4] shadow-[0_40px_80px_-40px_rgba(236,72,153,0.4),0_30px_60px_-30px_rgba(0,0,0,0.6)]">
+                            <div class="flex items-center gap-3 border-b border-white/5 bg-[#292D3E] px-4 py-2.5">
+                                <div class="inline-flex gap-1.5">
+                                    <span class="h-2.5 w-2.5 rounded-full bg-[#ff5f57]"></span>
+                                    <span class="h-2.5 w-2.5 rounded-full bg-[#febc2e]"></span>
+                                    <span class="h-2.5 w-2.5 rounded-full bg-[#28c840]"></span>
                                 </div>
-                                <span class="landing-ide-title">euseiphp — AppServiceProvider.php</span>
+                                <span class="flex-1 text-center text-xs tracking-[0.04em] text-slate-400">euseiphp — AppServiceProvider.php</span>
                                 <span class="w-12"></span>
                             </div>
 
-                            <div class="landing-ide-tabs">
-                                <span class="landing-ide-tab landing-ide-tab--active">
-                                    <span class="landing-ide-tab-dot"></span>
+                            <div class="flex border-b border-white/5 bg-[#292D3E] text-xs">
+                                <span class="inline-flex items-center gap-2 border-r border-white/5 bg-[#292D3E] px-4 py-2 text-slate-50 shadow-[inset_0_-2px_0_#ec4899]">
+                                    <span class="h-[0.45rem] w-[0.45rem] rounded-full bg-[#ec4899]"></span>
                                     AppServiceProvider.php
                                 </span>
                             </div>
@@ -405,10 +385,10 @@
                             @php
                                 $lineCount = substr_count($customization, "\n") + 1;
                             @endphp
-                            <div class="landing-ide-source-shell">
-                                <div class="landing-ide-gutter" aria-hidden="true">
+                            <div class="flex min-h-72 bg-[#292D3E] sm:min-h-88">
+                                <div class="shrink-0 select-none bg-[#292D3E] py-3.5 pl-3 pr-2 text-right text-[0.7rem] leading-[1.55] text-[#6b7397] sm:py-4 sm:pl-4 sm:pr-3 sm:text-[0.8rem]" aria-hidden="true">
                                     @for ($line = 1; $line <= $lineCount; $line++)
-                                        <span @class(['is-cursor' => $line === 9])>{{ $line }}</span>
+                                        <span @class(['block', 'text-slate-50' => $line === 9])>{{ $line }}</span>
                                     @endfor
                                 </div>
                                 <div class="landing-ide-source">
@@ -420,13 +400,13 @@
                 </div>
             </section>
 
-            <section class="landing-section">
-                <div class="landing-section-header landing-section-header--centered">
+            <section class="relative py-[clamp(4rem,8vh,7rem)]">
+                <div class="mb-[clamp(2rem,4vh,3rem)] flex flex-col items-center gap-5 text-center">
                     <span class="landing-eyebrow">By the numbers</span>
                     <h2 class="landing-section-heading">A library that earns its weight.</h2>
                 </div>
 
-                <div class="landing-stats">
+                <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
                     @foreach ($stats as $stat)
                         <div class="landing-stat"
                              x-data
@@ -436,14 +416,14 @@
                                  $el.style.setProperty('--spot-y', ($event.clientY - r.top) + 'px');
                              ">
                             <div class="landing-stat-value">{{ $stat['value'] }}</div>
-                            <div class="landing-stat-label">{{ $stat['label'] }}</div>
+                            <div class="mt-2 text-[0.85rem] text-slate-500 dark:text-slate-400">{{ $stat['label'] }}</div>
                         </div>
                     @endforeach
                 </div>
             </section>
 
-            <section class="landing-section">
-                <div class="landing-section-header landing-section-header--centered">
+            <section class="relative py-[clamp(4rem,8vh,7rem)]">
+                <div class="mb-[clamp(2rem,4vh,3rem)] flex flex-col items-center gap-5 text-center">
                     <span class="landing-eyebrow">Sponsors</span>
                     <h2 class="landing-section-heading">Backed by the community.</h2>
                     <p class="landing-section-subheading">
@@ -452,29 +432,30 @@
                     </p>
                 </div>
 
-                <a href="https://www.jetbrains.com/phpstorm/" target="_blank" rel="noopener" class="landing-sponsor-link">
-                    <x-svg.sponsors.jb class="landing-sponsor-logo h-28 w-28" />
-                    <div class="landing-sponsor-name">JetBrains</div>
-                    <p class="landing-sponsor-tagline">
+                <a href="https://www.jetbrains.com/phpstorm/" target="_blank" rel="noopener"
+                   class="group mx-auto flex max-w-lg flex-col items-center gap-5 text-center transition-transform duration-250 hover:-translate-y-0.5">
+                    <x-svg.sponsors.jb class="h-28 w-28 border-0! shadow-none! text-slate-900 transition-[transform,filter] duration-300 group-hover:scale-[1.04] group-hover:filter-[drop-shadow(0_16px_32px_rgba(236,72,153,0.35))] dark:text-slate-50" />
+                    <div class="text-2xl font-bold -tracking-[0.01em] text-slate-900 dark:text-slate-50">JetBrains</div>
+                    <p class="mt-2 max-w-md text-[0.95rem] text-slate-500 dark:text-slate-400">
                         PhpStorm keeps TallStackUI moving.
                     </p>
-                    <div class="landing-sponsor-badges">
+                    <div class="mt-2 flex flex-wrap justify-center gap-2">
                         <x-badge icon="sparkles" color="pink" sm round>Diamond Sponsor</x-badge>
                     </div>
                 </a>
             </section>
 
-            <section class="landing-section">
+            <section class="relative py-[clamp(4rem,8vh,7rem)]">
                 <div class="landing-cta-final">
                     <h2 class="landing-cta-final-headline">
                         Ship beautiful apps.
                     </h2>
-                    <p class="landing-cta-final-sub">
+                    <p class="mx-auto mt-6 max-w-xl text-lg text-white/85">
                         Drop it in, customize it, ship. TallStackUI stays out of the way so you can build
                         what actually matters. <b class="text-white">Free, and it always will be</b>.
                         No Pro components. Everything's here for you to use.
                     </p>
-                    <div class="landing-cta-final-actions">
+                    <div class="mt-10 flex flex-wrap justify-center gap-3">
                         <a href="{{ route('documentation', ['v3', 'installation']) }}"
                            wire:navigate
                            class="landing-cta-final-primary">
@@ -485,7 +466,7 @@
                 </div>
             </section>
 
-            <section class="landing-section pt-0">
+            <section class="relative py-[clamp(4rem,8vh,7rem)] pt-0">
                 <div class="flex justify-center">
                     <p class="text-center text-sm font-normal text-slate-600 dark:text-slate-400">
                         TallStackUI is mostly designed, built, and maintained by

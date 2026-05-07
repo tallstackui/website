@@ -1,5 +1,5 @@
 @if ($version === 'v3')
-    <x-banner :color="['background' => 'bg-pink-900', 'text' => 'text-white']" rotate>
+    <x-banner :color="['background' => 'bg-pink-900', 'text' => 'text-white']" rotate="slow">
         <p><b>v3.5.0 is out!</b> Dozens of significant improvements overall! Keep your TallStackUI up to date to get the best experience.</p>
     </x-banner>
 @else

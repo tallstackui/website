@@ -1,8 +1,8 @@
 <x-demo-layout title="Breadcrumbs Named Routes">
     <div class="mx-auto max-w-3xl px-6 py-10 space-y-4">
         <x-breadcrumbs :items="[
-            ['label' => 'Home', 'link' => 'welcome'],
-            ['label' => 'Section', 'link' => '/'],
+            ['label' => 'Home', 'link' => '#'],
+            ['label' => 'Section', 'link' => '#'],
             ['label' => 'Current Page'],
         ]" />
 

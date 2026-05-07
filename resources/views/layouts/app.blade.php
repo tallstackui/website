@@ -34,7 +34,7 @@
     @livewireStyles
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
-<body class="landing min-h-full"
+<body class="landing landing--plain min-h-full"
       x-bind:class="{ 'dark text-slate-100' : darkTheme, 'text-slate-900' : !darkTheme }"
       x-data="{ mobile : false }"
       x-cloak>

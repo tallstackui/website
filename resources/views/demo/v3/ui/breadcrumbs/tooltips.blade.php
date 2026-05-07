@@ -1,8 +1,8 @@
 <x-demo-layout title="Breadcrumbs Tooltips">
     <div class="mx-auto max-w-3xl px-6 py-10 space-y-4">
         <x-breadcrumbs :items="[
-            ['label' => 'Home', 'link' => '/', 'tooltip' => 'Back to homepage'],
-            ['label' => 'Users', 'link' => '/', 'tooltip' => 'View all users'],
+            ['label' => 'Home', 'link' => '#', 'tooltip' => 'Back to homepage'],
+            ['label' => 'Users', 'link' => '#', 'tooltip' => 'View all users'],
             ['label' => 'John Doe'],
         ]" />
 

@@ -19,7 +19,7 @@
 <div x-data="{ anchor : false }" @if ($id) id="{{ $id }}" @endif>
     <div x-show="!code"
          @class([
-            'landing-card'     => $frame || $background,
+            'bg-white border border-gray-200 rounded-xl dark:bg-dark-800/50 dark:border-none' => $frame || $background,
             'overflow-hidden'  => $frame,
             'p-6'              => ! $frame,
          ])>

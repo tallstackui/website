@@ -19,9 +19,9 @@
                     </div>
                 </x-slot:brand>
 
-                <x-tsui-side-bar.item text="Home" icon="home" :route="'/'" current />
-                <x-tsui-side-bar.item text="Settings" icon="cog-6-tooth" :route="'/'" />
-                <x-tsui-side-bar.item text="Reports" icon="chart-bar" :route="'/'" />
+                <x-tsui-side-bar.item text="Home" icon="home" route="#" current />
+                <x-tsui-side-bar.item text="Settings" icon="cog-6-tooth" route="#" />
+                <x-tsui-side-bar.item text="Reports" icon="chart-bar" route="#" />
             </x-tsui-side-bar>
         </x-slot:menu>
 

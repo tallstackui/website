@@ -50,6 +50,25 @@
                     Join TallStackUI on Discord
                 </x-link>
             </div>
+            <a href="https://linkedin.com/in/devajmeireles"
+               target="_blank"
+               rel="noopener"
+               class="group relative hidden w-56 rounded-xl border border-slate-200 bg-white p-3 transition xl:block dark:border-slate-800 dark:bg-slate-800/30">
+                <div class="flex items-start gap-2.5">
+                    <img src="https://unavatar.io/github/devajmeireles"
+                         alt="AJ Meireles"
+                         loading="lazy"
+                         class="h-10 w-10 flex-none rounded-full object-cover ring-2 ring-pink-500/20" />
+                    <div class="min-w-0 pr-5">
+                        <p class="text-sm font-semibold text-slate-900  dark:text-slate-100">
+                            Hire AJ!
+                        </p>
+                        <p class="mt-0.5 text-xs leading-snug text-slate-500 dark:text-slate-400">
+                            TallStackUI's creator, bring deep TALL Stack expertise straight to your team.
+                        </p>
+                    </div>
+                </div>
+            </a>
         </div>
     </div>
 @endif
