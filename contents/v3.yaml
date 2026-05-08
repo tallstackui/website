@@ -391,6 +391,7 @@ ui:
     - Footer Slot
     - Minimizable
     - Image
+    - Round
     - Color Variations
     - Loading
     - Events

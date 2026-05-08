@@ -73,6 +73,44 @@ class Card
     </x-card>
     HTML;
 
+    public const string ROUND = <<<'HTML'
+    {{-- Default radius (rounded-lg). --}}
+    <x-card>
+        TallStackUI
+    </x-card>
+
+    {{-- Bare flag preserves the default radius. --}}
+    <x-card round>
+        TallStackUI
+    </x-card>
+
+    <!-- Accepted sizes: xs, sm, md, lg, xl, 2xl -->
+
+    <x-card round="xs">
+        TallStackUI
+    </x-card>
+
+    <x-card round="sm">
+        TallStackUI
+    </x-card>
+
+    <x-card round="md">
+        TallStackUI
+    </x-card>
+
+    <x-card round="lg">
+        TallStackUI
+    </x-card>
+
+    <x-card round="xl">
+        TallStackUI
+    </x-card>
+
+    <x-card round="2xl">
+        TallStackUI
+    </x-card>
+    HTML;
+
     public const string COLOR = <<<'HTML'
     <!-- Accepted colors: primary, secondary, and ANY other TailwindCSS color. -->
 

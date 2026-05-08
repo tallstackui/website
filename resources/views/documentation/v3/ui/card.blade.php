@@ -13,21 +13,21 @@
         <livewire:customization :$customization component="Card" />
     </x-slot:customization>
     <x-section title="Basic Usage">
-        <x-preview language="blade" :background="false" :contents="$basic">
+        <x-preview language="blade" :contents="$basic">
             <x-card>
                 TallStackUI
             </x-card>
         </x-preview>
     </x-section>
     <x-section title="Header Slot">
-        <x-preview language="blade" :background="false" :contents="$header">
+        <x-preview language="blade" :contents="$header">
             <x-card header="Header">
                 Body
             </x-card>
         </x-preview>
     </x-section>
     <x-section title="Footer Slot">
-        <x-preview language="blade" :background="false" :contents="$footer">
+        <x-preview language="blade" :contents="$footer">
             <x-card footer="Footer">
                 Body
             </x-card>
@@ -36,18 +36,18 @@
     <x-section title="Minimizable">
         <div class="space-y-4">
             <div>
-                <x-preview language="blade" :background="false" :contents="$minimize">
+                <x-preview language="blade" :contents="$minimize">
                     <x-card header="TallStackUI" minimize>
                         Minimize
                     </x-card>
                 </x-preview>
-                <x-warning>
+                <x-warning class="mt-4">
                     Since the icon is positioned in the header, you need to define a header to use minimize.
                 </x-warning>
             </div>
             <div>
                 <p>You can also mount as minimized:</p>
-                <x-preview language="blade" :background="false" :contents="$minimizeFromMount">
+                <x-preview language="blade" :contents="$minimizeFromMount">
                     <x-card header="TallStackUI" minimize initialize-minimized>
                         Initialized as minimized
                     </x-card>
@@ -56,7 +56,7 @@
         </div>
     </x-section>
     <x-section title="Image">
-        <x-preview language="blade" :background="false" :contents="$image">
+        <x-preview language="blade" :contents="$image">
             <div class="space-y-4">
                 <x-card image="{{ url('assets/images/wallpapers/1.jpg') }}">
                     Image at top
@@ -67,8 +67,31 @@
             </div>
         </x-preview>
     </x-section>
+    <x-section title="Round" description="An option to control the border radius of the card wrapper.">
+        <x-preview language="blade" :contents="$round">
+            <div class="space-y-4">
+                <x-card>
+                    Default (rounded-lg)
+                </x-card>
+                <x-card round>
+                    round flag — preserves the default
+                </x-card>
+                <x-card round="xs">round="xs"</x-card>
+                <x-card round="sm">round="sm"</x-card>
+                <x-card round="md">round="md"</x-card>
+                <x-card round="lg">round="lg"</x-card>
+                <x-card round="xl">round="xl"</x-card>
+                <x-card round="2xl">round="2xl"</x-card>
+            </div>
+        </x-preview>
+        <x-warning class="mt-4">
+            When omitted or used as a bare flag, <x-block>round</x-block> keeps the historical
+            default (<x-block>rounded-lg</x-block>). Pass a size between
+            <x-block>xs</x-block> and <x-block>2xl</x-block> to override the wrapper radius.
+        </x-warning>
+    </x-section>
     <x-section title="Color Variations">
-        <x-preview language="blade" :background="false" :contents="$color">
+        <x-preview language="blade" :contents="$color">
             <div class="space-y-4">
                 <x-card header="TallStackUI" color="primary">
                     Normal
@@ -81,7 +104,7 @@
                 </x-card>
             </div>
         </x-preview>
-        <x-warning>
+        <x-warning class="mt-4">
             Just like the minimizeable option, the colors are only applied when the Card has a header.
         </x-warning>
     </x-section>
