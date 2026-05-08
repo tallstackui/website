@@ -135,6 +135,45 @@ class Carousel
     <x-carousel clickable caption="footer" :images="$images" />
     HTML;
 
+    public const string NAVIGABLE = <<<'HTML'
+    <x-carousel :images="[
+        ['src' => url('assets/images/wallpapers/1.jpg'), 'alt' => 'Wallpaper 1'],
+        ['src' => url('assets/images/wallpapers/2.jpg'), 'alt' => 'Wallpaper 2'],
+        ['src' => url('assets/images/wallpapers/3.jpg'), 'alt' => 'Wallpaper 3'],
+    ]" clickable navigable />
+    HTML;
+
+    public const string NAVIGABLE_CAPTION = <<<'HTML'
+    <x-carousel clickable navigable caption="overlay" :images="[
+        [
+            'src' => url('assets/images/wallpapers/1.jpg'),
+            'alt' => 'Wallpaper 1',
+            'title' => 'Image 1',
+            'description' => 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
+        ],
+        [
+            'src' => url('assets/images/wallpapers/2.jpg'),
+            'alt' => 'Wallpaper 2',
+            'title' => 'Image 2',
+            'description' => 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
+        ],
+        [
+            'src' => url('assets/images/wallpapers/3.jpg'),
+            'alt' => 'Wallpaper 3',
+            'title' => 'Image 3',
+            'description' => 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
+        ],
+    ]" />
+    HTML;
+
+    public const string NAVIGABLE_WITHOUT_LOOP = <<<'HTML'
+    <x-carousel :images="[
+        ['src' => url('assets/images/wallpapers/1.jpg'), 'alt' => 'Wallpaper 1'],
+        ['src' => url('assets/images/wallpapers/2.jpg'), 'alt' => 'Wallpaper 2'],
+        ['src' => url('assets/images/wallpapers/3.jpg'), 'alt' => 'Wallpaper 3'],
+    ]" clickable navigable without-loop />
+    HTML;
+
     public const string ASPECT = <<<'HTML'
     <x-carousel :images="[
         ['src' => url('assets/images/wallpapers/1.jpg'), 'alt' => 'Wallpaper 1'],
@@ -159,7 +198,10 @@ class Carousel
     HTML;
 
     public const string EVENTS = <<<'HTML'
-    <!-- $event.detail will receive: {current: integer, image: object{current image}} -->
+    <!-- The "next" and "previous" events fire both for the main carousel view
+         and for in-lightbox navigation when "navigable" is enabled. The same
+         listeners cover both cases without changes.
+         $event.detail will receive: {current: integer, image: object{current image}} -->
 
     <x-carousel :images="[
         ['src' => url('assets/images/wallpapers/1.jpg'), 'alt' => 'Wallpaper 1'],
@@ -167,6 +209,10 @@ class Carousel
         ['src' => url('assets/images/wallpapers/3.jpg'), 'alt' => 'Wallpaper 3'],
     ]" x-on:next="alert('Navigated to the next image')"
        x-on:previous="alert('Navigated to the previous image')" />
+
+    <!-- "expand" and "collapse" fire only on the actual open/close transitions
+         of the lightbox — not on each step of the in-lightbox navigation. Use
+         "next" / "previous" to track navigation inside the lightbox. -->
     HTML;
 
     public const string CUSTOMIZATION = <<<'HTML'

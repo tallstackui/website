@@ -55,9 +55,9 @@ class AppServiceProvider extends ServiceProvider
 
     private function configurePersonalization(): void
     {
-        TallStackUi::customize()
-            ->alert('circle')
-            ->block('wrapper')
-            ->replace('rounded-lg', 'rounded-full');
+        TallStackUi::customize('form.input')
+            ->scope('input-rounded')
+            ->block('input.wrapper')
+            ->replace('rounded-md', 'rounded-full');
     }
 }

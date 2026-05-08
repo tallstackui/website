@@ -13,7 +13,7 @@
         <livewire:customization :$customization component="Tab\Main" title="Tab" />
     </x-slot:customization>
     <x-section title="Basic Usage">
-        <x-preview language="blade" :background="false" :contents="$basic">
+        <x-preview language="blade" :contents="$basic">
             <x-tab selected="Tab 1">
                 <x-tab.items tab="Tab 1">
                     Tab 1
@@ -34,7 +34,7 @@
         </x-preview>
     </x-section>
     <x-section title="Centered" description="An option to center the tab navigation items.">
-        <x-preview language="blade" :background="false" :contents="$centered">
+        <x-preview language="blade" :contents="$centered">
             <x-tab selected="Tab 1" centered>
                 <x-tab.items tab="Tab 1">
                     Tab 1
@@ -55,7 +55,7 @@
                 by using the <x-block>scroll-on-mobile</x-block> attribute, which will disable the select button and allow navigation
                 to occur by natural tab selection.
             </p>
-            <x-preview language="blade" :background="false" :contents="$mobile">
+            <x-preview language="blade" :contents="$mobile">
                 <x-tab selected="Tab 1" scroll-on-mobile>
                     <x-tab.items tab="Tab 1">
                         Tab 1
@@ -86,7 +86,7 @@
         </div>
     </x-section>
     <x-section title="Slots">
-        <x-preview language="blade" :background="false" :contents="$slots">
+        <x-preview language="blade" :contents="$slots">
             <x-tab selected="Invoices">
                 <x-tab.items tab="Invoices">
                     <x-slot:right>
@@ -126,7 +126,7 @@
         </div>
     </x-section>
     <x-section title="Events">
-        <x-preview language="blade" :background="false" :contents="$events">
+        <x-preview language="blade" :contents="$events">
             <x-tab selected="Invoices" x-on:navigate="alert($event.detail.select)">
                 <x-tab.items tab="Invoices">
                     <x-slot:right>
@@ -144,12 +144,12 @@
         </x-preview>
     </x-section>
     <x-section title="Wireable" description="An option to control the tab via Livewire.">
-        <x-preview language="blade" :background="false" :contents="$wireable">
+        <x-preview language="blade" :contents="$wireable">
             <livewire:documentation.ui.tabs />
         </x-preview>
     </x-section>
     <x-section title="Live Wireable" description="An option to control the tab via Livewire with live updates.">
-        <x-preview language="blade" :background="false" :contents="$wireableLive">
+        <x-preview language="blade" :contents="$wireableLive">
             <livewire:documentation.ui.tabs live />
         </x-preview>
     </x-section>

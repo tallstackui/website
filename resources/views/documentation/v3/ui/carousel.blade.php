@@ -121,6 +121,38 @@
             </x-preview>
         </div>
     </x-section>
+    <x-section title="Clickable Navigable" description="An option to browse the gallery from inside the lightbox. Adds prev/next buttons on the sides of the lightbox and listens for the ←/→ keyboard arrows. When the lightbox closes, the main carousel advances to whichever image was last viewed.">
+        <div class="space-y-4">
+            <x-preview language="blade" :background="false" :contents="$navigable">
+                <x-carousel :images="[
+                ['src' => url('assets/images/wallpapers/1.jpg'), 'alt' => 'Wallpaper 1'],
+                ['src' => url('assets/images/wallpapers/2.jpg'), 'alt' => 'Wallpaper 2'],
+                ['src' => url('assets/images/wallpapers/3.jpg'), 'alt' => 'Wallpaper 3'],
+            ]" clickable navigable />
+            </x-preview>
+            <x-warning>
+                The <x-block>navigable</x-block> prop requires <x-block>clickable</x-block>.
+            </x-warning>
+        </div>
+    </x-section>
+    <x-section title="Clickable Navigable, Caption">
+        <x-preview language="blade" :background="false" :contents="$navigableCaption">
+            <x-carousel clickable navigable caption="overlay" :images="[
+                ['src' => url('assets/images/wallpapers/1.jpg'), 'alt' => 'Wallpaper 1', 'title' => 'Image 1', 'description' => 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'],
+                ['src' => url('assets/images/wallpapers/2.jpg'), 'alt' => 'Wallpaper 2', 'title' => 'Image 2', 'description' => 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'],
+                ['src' => url('assets/images/wallpapers/3.jpg'), 'alt' => 'Wallpaper 3', 'title' => 'Image 3', 'description' => 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'],
+            ]" />
+        </x-preview>
+    </x-section>
+    <x-section title="Clickable Navigable, Without Loop">
+        <x-preview language="blade" :background="false" :contents="$navigableWithoutLoop">
+            <x-carousel :images="[
+                ['src' => url('assets/images/wallpapers/1.jpg'), 'alt' => 'Wallpaper 1'],
+                ['src' => url('assets/images/wallpapers/2.jpg'), 'alt' => 'Wallpaper 2'],
+                ['src' => url('assets/images/wallpapers/3.jpg'), 'alt' => 'Wallpaper 3'],
+            ]" clickable navigable without-loop />
+        </x-preview>
+    </x-section>
     <x-section title="Fixed Aspect Radio">
         <div class="space-y-4">
             <x-preview language="blade" :background="false" :contents="$aspect">
@@ -151,7 +183,8 @@
             </x-carousel>
         </x-preview>
     </x-section>
-    <x-section title="Events">
+    <x-section title="Events"
+               description="The next and previous events fire both for the main carousel view and for in-lightbox navigation when navigable is enabled. The expand and collapse events fire only on the actual open/close transitions of the lightbox — not on each step of the in-lightbox navigation.">
         <x-preview language="blade" :background="false" :contents="$events">
             <x-carousel :images="[
                 ['src' => url('assets/images/wallpapers/1.jpg'), 'alt' => 'Wallpaper 1'],

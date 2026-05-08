@@ -406,6 +406,10 @@ ui:
     - Without Indicators
     - Image Title & Description
     - Clickable
+    - Clickable Caption
+    - Clickable Navigable
+    - Clickable Navigable, Caption
+    - Clickable Navigable, Without Loop
     - Fixed Aspect Radio
     - Slots
     - Events

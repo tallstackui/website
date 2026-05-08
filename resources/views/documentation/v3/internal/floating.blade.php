@@ -25,6 +25,7 @@
             the list of components that use floating:
         </p>
         <ul class="mt-2 list-decimal list-inside">
+            <li><a href="{{ route('documentation', ['v3', 'form', 'autocomplete']) }}" wire:navigate>Form AutoComplete</a></li>
             <li><a href="{{ route('documentation', ['v3', 'form', 'input']) }}" wire:navigate>Form Date</a></li>
             <li><a href="{{ route('documentation', ['v3', 'form', 'time']) }}" wire:navigate>Form Time</a></li>
             <li><a href="{{ route('documentation', ['v3', 'form', 'password']) }}" wire:navigate>Form Password</a></li>

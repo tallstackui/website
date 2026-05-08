@@ -127,16 +127,14 @@
                 Let's take a look at an example:
             </p>
             <div class="my-4 space-y-4">
-                <x-alert>This is a normal Alert component</x-alert>
+                <x-input label="Normal Input" value="This is a normal input" readonly />
 
-                <x-alert scope="circle">
-                    This is a fully round Alert component
-                </x-alert>
+                <x-input label="Full Rounded Input" value="This is a fully round input" readonly scope="input-rounded" />
             </div>
             <p>
-                Notice how one alert is normal while the other is fully rounded? This was
-                only possible thanks to scoped soft customization, which instead of turning all alerts into
-                rounded alerts, turned only the one that was defined with the circle scope. Now let's see how
+                Notice how one input is normal while the other is fully rounded? This was
+                only possible thanks to scoped soft customization, which instead of turning all inputs into
+                rounded inputs, turned only the one that was defined with the circle scope. Now let's see how
                 to achieve the same result as in the example above:
             </p>
             <p>
@@ -152,7 +150,7 @@
             </p>
             <x-code :contents="$scopedCustomizationWays" disable-copy/>
             <p>
-                <b>Lastly and most importantly</b>, we must apply the use of the scope to the components that are <x-block>alert</x-block>
+                <b>Lastly and most importantly</b>, we must apply the use of the scope to the components that are <x-block>input</x-block>
                 and that we want to receive the effects of the defined customization:
             </p>
             <x-code language="blade" :contents="$scopedCustomizationUsage" disable-copy/>

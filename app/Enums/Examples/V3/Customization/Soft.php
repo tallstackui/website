@@ -228,16 +228,16 @@ class Soft
     {
         public function boot(): void
         {
-            TallStackUi::customize('alert')
+            TallStackUi::customize('form.input')
                 ->scope('circle') // [tl! highlight]
-                ->block('wrapper')
-                ->replace('rounded-lg', 'rounded-full');
+                ->block('input.wrapper')
+                ->replace('rounded-md', 'rounded-full');
 
             // Or ...
 
-            TallStackUi::customize(component: 'alert', scope: 'circle') // [tl! highlight]
-                ->block('wrapper')
-                ->replace('rounded-lg', 'rounded-full');
+            TallStackUi::customize(component: 'form.input', scope: 'circle') // [tl! highlight]
+                ->block('input.wrapper')
+                ->replace('rounded-md', 'rounded-full');
         }
     }
     HTML;
@@ -250,28 +250,28 @@ class Soft
         public function boot(): void
         {
             // 1
-            TallStackUi::customize('alert') // [tl! focus:1,highlight:1]
+            TallStackUi::customize('form.input') // [tl! focus:1,highlight:1]
                 ->scope('circle')
-                ->block('wrapper')
-                ->replace('rounded-lg', 'rounded-full');
+                ->block('input.wrapper')
+                ->replace('rounded-md', 'rounded-full');
 
             // Or
-            TallStackUi::customize(component: 'alert', scope: 'circle') // [tl! focus,highlight]
-                ->block('wrapper')
-                ->replace('rounded-lg', 'rounded-full');
+            TallStackUi::customize(component: 'form.input', scope: 'circle') // [tl! focus,highlight]
+                ->block('input.wrapper')
+                ->replace('rounded-md', 'rounded-full');
 
             // Or
             TallStackUi::customize()
                 ->scope('circle') // [tl! focus:1,highlight:1]
-                ->alert()
-                ->block('wrapper')
-                ->replace('rounded-lg', 'rounded-full');
+                ->form('input')
+                ->block('input.wrapper')
+                ->replace('rounded-md', 'rounded-full');
         }
     }
     HTML;
 
     public const string SCOPED_CUSTOMIZATION_USAGE = <<<'HTML'
-    <x-alert text="This is a fully round Alert component" scope="circle" />
+    <x-input ... scope="circle" />
     HTML;
 
     public const string INTERNAL_SCOPED = <<<'HTML'
