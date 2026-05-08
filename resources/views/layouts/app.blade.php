@@ -99,6 +99,7 @@
                 </div>
                 @if ($right)
                     <x-on-this-page :$content />
+                    <x-hire-aj />
                 @endif
             </div>
         </div>

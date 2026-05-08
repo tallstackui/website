@@ -50,10 +50,9 @@
                     Join TallStackUI on Discord
                 </x-link>
             </div>
-            <a href="https://linkedin.com/in/devajmeireles"
-               target="_blank"
+            <a x-on:click="$tsui.open.modal('aj')"
                rel="noopener"
-               class="group relative hidden w-56 rounded-xl border border-slate-200 bg-white p-3 transition xl:block dark:border-slate-800 dark:bg-slate-800/30">
+               class="cursor-pointer group relative hidden w-56 rounded-xl border border-slate-200 bg-white p-3 transition xl:block dark:border-slate-800 dark:bg-slate-800/30">
                 <div class="flex items-start gap-2.5">
                     <img src="https://unavatar.io/github/devajmeireles"
                          alt="AJ Meireles"

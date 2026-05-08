@@ -4,7 +4,7 @@
     </div>
 
     <x-dial>
-        <x-dial.items icon="pencil" label="Edit" href="/" />
-        <x-dial.items icon="eye" label="View" href="/" />
+        <x-dial.items icon="pencil" label="Edit" href="#" />
+        <x-dial.items icon="eye" label="View" href="#" />
     </x-dial>
 </x-demo-layout>
