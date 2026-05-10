@@ -3,7 +3,7 @@
         Installation
     </x-slot:title>
     <x-section class="mt-4" title="Meet TallStackUI" disable-copy>
-        TallStackUI is <b class="text-pink-600">a powerful suite of 30+ ready-to-use components for TALL Stack applications.</b>
+        TallStackUI is <b class="text-pink-600">a powerful suite of 50+ ready-to-use components for TALL Stack applications.</b>
         TallStackUI is unlike anything you've ever seen, from its conception to construction and general
         availability. Beforehand we want to tell you a little about our motivation.
     </x-section>
