@@ -114,6 +114,11 @@ form:
     - Clearable
     - Intl Options
     - Symbols
+    - Sync Modes
+    - Default Mode
+    - Mutate Mode
+    - Decimal Mode
+    - Global Defaults
     - Caveats
   number:
     - Basic Usage

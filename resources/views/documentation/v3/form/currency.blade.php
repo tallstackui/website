@@ -86,30 +86,205 @@
             </x-preview>
         </div>
     </x-section>
-    <x-section title="Caveats">
+    <x-section title="Sync Modes" disable-copy>
         <div class="space-y-4">
             <p>
-                There are a few important caveats to note about the currency component:
+                When bound to a Livewire property, the currency component offers three modes for sending the
+                value to the server. Pick the one that matches how the value is persisted on the backend.
             </p>
-            <ul class="list-inside list-decimal space-y-2">
-                <li>
-                    The component
-                    can be used entirely out of the Livewire context. For this type of situation, the value to be formatted
-                    should be sent to the currency component using the <x-block>value</x-block> attribute, but with the value as a string.
-                    The value will be returned to the controller formatted as a string, when the form is submitted.
-                </li>
-                <li>
-                    When using the component inside the Livewire context, however, the value can be sent to the component in different
-                    formats <i>(float, int, string)</i>, but the value returned by default will not be formatted. To format the
-                    value when emitting it to the Livewire, you must use the <x-block>mutate</x-block> attribute, which
-                    instructs the currency component to format the value before binding it to the Livewire property.
-                </li>
-            </ul>
-            <x-preview language="blade" :contents="$mutate">
+            <x-custom-table>
+                <x-custom-table.thead>
+                    <x-custom-table.tr>
+                        <x-custom-table.th first label="Mode"/>
+                        <x-custom-table.th label="Sent to Livewire"/>
+                        <x-custom-table.th label="When to use"/>
+                    </x-custom-table.tr>
+                </x-custom-table.thead>
+                <x-custom-table.tbody>
+                    <x-custom-table.tr>
+                        <x-custom-table.td first>Default <span class="text-xs text-gray-400">(no prop)</span></x-custom-table.td>
+                        <x-custom-table.td>"200000"</x-custom-table.td>
+                        <x-custom-table.td>Stored as integer cents</x-custom-table.td>
+                    </x-custom-table.tr>
+                    <x-custom-table.tr>
+                        <x-custom-table.td first>mutate</x-custom-table.td>
+                        <x-custom-table.td>"2,000.00" / "2.000,00"</x-custom-table.td>
+                        <x-custom-table.td>Persisting the user-facing string verbatim</x-custom-table.td>
+                    </x-custom-table.tr>
+                    <x-custom-table.tr>
+                        <x-custom-table.td first>decimal</x-custom-table.td>
+                        <x-custom-table.td>"2000.00"</x-custom-table.td>
+                        <x-custom-table.td>Stored as <x-block>decimal</x-block> / <x-block>float</x-block> column</x-custom-table.td>
+                    </x-custom-table.tr>
+                </x-custom-table.tbody>
+            </x-custom-table>
+            <x-warning info title="Mutually exclusive">
+                <x-block>mutate</x-block> and <x-block>decimal</x-block> cannot be used together. Setting both raises a validation exception at render time with the message <i>"The [mutate] and [decimal] cannot be used together."</i>
+            </x-warning>
+        </div>
+    </x-section>
+    <x-section title="Default Mode" disable-copy>
+        <div class="space-y-4">
+            <p>
+                Without <x-block>mutate</x-block> or <x-block>decimal</x-block>, the component sends a digits-only
+                string to the Livewire property. With <x-block>decimals="2"</x-block>, typing <x-block>1000</x-block>
+                displays <x-block>10.00</x-block> but the property receives <x-block>"1000"</x-block>. This is
+                ideal when monetary values are stored as integer cents.
+            </p>
+            <x-code language="blade" :contents="$modeDefault" />
+            <x-custom-table>
+                <x-custom-table.thead>
+                    <x-custom-table.tr>
+                        <x-custom-table.th first label="Typed digits"/>
+                        <x-custom-table.th label="Display (en-US)"/>
+                        <x-custom-table.th label="Display (pt-BR)"/>
+                        <x-custom-table.th label="Sent to Livewire"/>
+                    </x-custom-table.tr>
+                </x-custom-table.thead>
+                <x-custom-table.tbody>
+                    <x-custom-table.tr>
+                        <x-custom-table.td first>1000</x-custom-table.td>
+                        <x-custom-table.td>10.00</x-custom-table.td>
+                        <x-custom-table.td>10,00</x-custom-table.td>
+                        <x-custom-table.td>"1000"</x-custom-table.td>
+                    </x-custom-table.tr>
+                    <x-custom-table.tr>
+                        <x-custom-table.td first>200000</x-custom-table.td>
+                        <x-custom-table.td>2,000.00</x-custom-table.td>
+                        <x-custom-table.td>2.000,00</x-custom-table.td>
+                        <x-custom-table.td>"200000"</x-custom-table.td>
+                    </x-custom-table.tr>
+                    <x-custom-table.tr>
+                        <x-custom-table.td first>150055</x-custom-table.td>
+                        <x-custom-table.td>1,500.55</x-custom-table.td>
+                        <x-custom-table.td>1.500,55</x-custom-table.td>
+                        <x-custom-table.td>"150055"</x-custom-table.td>
+                    </x-custom-table.tr>
+                </x-custom-table.tbody>
+            </x-custom-table>
+        </div>
+    </x-section>
+    <x-section title="Mutate Mode" disable-copy>
+        <div class="space-y-4">
+            <p>
+                With the <x-block>mutate</x-block> attribute, the component sends the formatted string <strong>exactly as it appears in the input</strong>
+                — group separator and decimal separator included. Use it when you want to persist the user-facing representation verbatim
+                (e.g., a free-text display label).
+            </p>
+            <x-code language="blade" :contents="$modeMutate" />
+            <x-custom-table>
+                <x-custom-table.thead>
+                    <x-custom-table.tr>
+                        <x-custom-table.th first label="Typed digits"/>
+                        <x-custom-table.th label="Display (en-US)"/>
+                        <x-custom-table.th label="Display (pt-BR)"/>
+                        <x-custom-table.th label="Sent to Livewire"/>
+                    </x-custom-table.tr>
+                </x-custom-table.thead>
+                <x-custom-table.tbody>
+                    <x-custom-table.tr>
+                        <x-custom-table.td first>1000</x-custom-table.td>
+                        <x-custom-table.td>10.00</x-custom-table.td>
+                        <x-custom-table.td>10,00</x-custom-table.td>
+                        <x-custom-table.td>"10.00" / "10,00"</x-custom-table.td>
+                    </x-custom-table.tr>
+                    <x-custom-table.tr>
+                        <x-custom-table.td first>200000</x-custom-table.td>
+                        <x-custom-table.td>2,000.00</x-custom-table.td>
+                        <x-custom-table.td>2.000,00</x-custom-table.td>
+                        <x-custom-table.td>"2,000.00" / "2.000,00"</x-custom-table.td>
+                    </x-custom-table.tr>
+                    <x-custom-table.tr>
+                        <x-custom-table.td first>150055</x-custom-table.td>
+                        <x-custom-table.td>1,500.55</x-custom-table.td>
+                        <x-custom-table.td>1.500,55</x-custom-table.td>
+                        <x-custom-table.td>"1,500.55" / "1.500,55"</x-custom-table.td>
+                    </x-custom-table.tr>
+                </x-custom-table.tbody>
+            </x-custom-table>
+        </div>
+    </x-section>
+    <x-section title="Decimal Mode" disable-copy>
+        <div class="space-y-4">
+            <p>
+                The <x-block>decimal</x-block> attribute strips the locale's group separator and normalizes the decimal
+                separator to <x-block>.</x-block>, regardless of locale. The resulting string is directly castable via
+                <x-block>(float)</x-block> / <x-block>(int)</x-block> or by Eloquent <x-block>decimal:N</x-block> / <x-block>float</x-block> casts.
+            </p>
+            <x-code language="blade" :contents="$modeDecimal" />
+            <x-custom-table>
+                <x-custom-table.thead>
+                    <x-custom-table.tr>
+                        <x-custom-table.th first label="Typed digits"/>
+                        <x-custom-table.th label="Display (en-US)"/>
+                        <x-custom-table.th label="Display (pt-BR)"/>
+                        <x-custom-table.th label="Sent to Livewire"/>
+                    </x-custom-table.tr>
+                </x-custom-table.thead>
+                <x-custom-table.tbody>
+                    <x-custom-table.tr>
+                        <x-custom-table.td first>1000</x-custom-table.td>
+                        <x-custom-table.td>10.00</x-custom-table.td>
+                        <x-custom-table.td>10,00</x-custom-table.td>
+                        <x-custom-table.td>"10.00"</x-custom-table.td>
+                    </x-custom-table.tr>
+                    <x-custom-table.tr>
+                        <x-custom-table.td first>200000</x-custom-table.td>
+                        <x-custom-table.td>2,000.00</x-custom-table.td>
+                        <x-custom-table.td>2.000,00</x-custom-table.td>
+                        <x-custom-table.td>"2000.00"</x-custom-table.td>
+                    </x-custom-table.tr>
+                    <x-custom-table.tr>
+                        <x-custom-table.td first>150055</x-custom-table.td>
+                        <x-custom-table.td>1,500.55</x-custom-table.td>
+                        <x-custom-table.td>1.500,55</x-custom-table.td>
+                        <x-custom-table.td>"1500.55"</x-custom-table.td>
+                    </x-custom-table.tr>
+                </x-custom-table.tbody>
+            </x-custom-table>
+            <p>
+                A typical use case is binding to a column with an Eloquent <x-block>decimal:2</x-block> cast — the value
+                arrives at the property ready for assignment, no manual parsing required:
+            </p>
+            <x-code language="php" :contents="$decimalEloquent" />
+            <p>
+                The live preview below shows the three modes side-by-side. Type the same value in each input and
+                observe how the bound Livewire property differs:
+            </p>
+            <x-preview language="blade" :contents="$modeDecimal">
                 <div class="space-y-2">
                     <livewire:documentation.form.currency />
                 </div>
             </x-preview>
+        </div>
+    </x-section>
+    <x-section title="Global Defaults" disable-copy>
+        <div class="space-y-4">
+            <p>
+                If most components in your application need the same sync mode, set it once in <x-block>config/tallstackui.php</x-block>
+                to avoid repeating the prop on every usage. The default is <x-block>mutate = false</x-block> and
+                <x-block>decimal = false</x-block> (digits-only).
+            </p>
+            <x-code language="php" :contents="$globalDefaults" />
+            <p>
+                Per-instance props always win, so individual usages can still opt out without touching the global
+                config — for example, <x-block>&lt;x-currency :decimal="false" wire:model="price" /&gt;</x-block>
+                disables decimal mode on that single field even when the global default is <x-block>true</x-block>.
+            </p>
+            <x-warning info title="Mutually exclusive at the config level too">
+                The same constraint applies to the global defaults. Setting both <x-block>mutate</x-block> and <x-block>decimal</x-block> to <x-block>true</x-block>
+                in the config raises the same validation exception when the component renders.
+            </x-warning>
+        </div>
+    </x-section>
+    <x-section title="Caveats">
+        <div class="space-y-4">
+            <p>
+                The currency component can be used entirely out of the Livewire context. For this type of situation,
+                the value to be formatted should be sent to the currency component using the <x-block>value</x-block>
+                attribute, but with the value as a string. The value will be returned to the controller formatted as
+                a string when the form is submitted.
+            </p>
         </div>
     </x-section>
 </x-layout>

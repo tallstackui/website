@@ -48,6 +48,43 @@ class Currency
     <x-currency currency="$$" />
     HTML;
 
+    public const string MODE_DEFAULT = <<<'HTML'
+    <x-currency wire:model="price" />
+    HTML;
+
+    public const string MODE_MUTATE = <<<'HTML'
+    <x-currency mutate wire:model="price" />
+    HTML;
+
+    public const string MODE_DECIMAL = <<<'HTML'
+    <x-currency decimal wire:model="price" />
+    HTML;
+
+    public const string DECIMAL_ELOQUENT = <<<'HTML'
+    // app/Models/Product.php
+    protected $casts = [
+        'price' => 'decimal:2',
+    ];
+
+    // resources/views/livewire/product-form.blade.php
+    <x-currency decimal wire:model="product.price" />
+    HTML;
+
+    public const string GLOBAL_DEFAULTS = <<<'HTML'
+    // config/tallstackui.php
+
+    'currency' => [
+        Components\Form\Currency\Component::class,
+
+        // ...
+
+        [
+            'mutate' => false,
+            'decimal' => true, // [tl! highlight] every <x-currency /> defaults to decimal mode
+        ],
+    ],
+    HTML;
+
     public const string MUTATE = <<<'HTML'
     <x-currency mutate />
     HTML;
