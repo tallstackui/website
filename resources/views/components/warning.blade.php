@@ -1,25 +1,5 @@
-@props([
-    'type'    => null,
-    'info'    => false,
-    'success' => false,
-    'warning' => false,
-    'error'   => false,
-    'title'   => null,
-    'text'    => null,
-])
-
 @php
     $text ??= $slot->toHtml();
-
-    $type = match (true) {
-        $info    => 'info',
-        $success => 'success',
-        $error   => 'error',
-        $warning => 'warning',
-        default  => $type,
-    };
-
-    $type = in_array($type, ['info', 'success', 'warning', 'error'], true) ? $type : 'warning';
 
     $icons = [
         'info'    => 'information-circle',

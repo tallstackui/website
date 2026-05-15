@@ -62,25 +62,38 @@ class Currency
 
     public const string DECIMAL_ELOQUENT = <<<'HTML'
     // app/Models/Product.php
-    protected $casts = [
-        'price' => 'decimal:2',
-    ];
 
-    // resources/views/livewire/product-form.blade.php
+    // ...
+
+    protected $casts = [
+        'price' => 'decimal:2', // [tl! highlight]
+    ];
+    HTML;
+
+    public const string DECIMAL_BLADE = <<<'HTML'
     <x-currency decimal wire:model="product.price" />
     HTML;
 
     public const string GLOBAL_DEFAULTS = <<<'HTML'
-    // config/tallstackui.php
+    // ...
 
     'currency' => [
         Components\Form\Currency\Component::class,
-
-        // ...
-
+        /*
+        |----------------------------------------------------------------------
+        | Currency Global Settings
+        |----------------------------------------------------------------------
+        |
+        | mutate: when true, every currency component defaults to sending the
+        | formatted display string (e.g. "2,000.00") to the Livewire property.
+        | decimal: when true, every currency component defaults to sending the
+        | parsed decimal string (e.g. "2000.00") to the Livewire property.
+        | The two are mutually exclusive — setting both raises a validation
+        | exception at render time.
+        */
         [
             'mutate' => false,
-            'decimal' => true, // [tl! highlight] every <x-currency /> defaults to decimal mode
+            'decimal' => false, // [tl! highlight] every <x-currency /> defaults to decimal mode
         ],
     ],
     HTML;

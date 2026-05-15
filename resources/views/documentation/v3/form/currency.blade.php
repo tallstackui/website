@@ -118,8 +118,8 @@
                     </x-custom-table.tr>
                 </x-custom-table.tbody>
             </x-custom-table>
-            <x-warning info title="Mutually exclusive">
-                <x-block>mutate</x-block> and <x-block>decimal</x-block> cannot be used together. Setting both raises a validation exception at render time with the message <i>"The [mutate] and [decimal] cannot be used together."</i>
+            <x-warning warning title="Mutually exclusive">
+                <x-block>mutate</x-block> and <x-block>decimal</x-block> cannot be used together.
             </x-warning>
         </div>
     </x-section>
@@ -167,8 +167,8 @@
     <x-section title="Mutate Mode" disable-copy>
         <div class="space-y-4">
             <p>
-                With the <x-block>mutate</x-block> attribute, the component sends the formatted string <strong>exactly as it appears in the input</strong>
-                — group separator and decimal separator included. Use it when you want to persist the user-facing representation verbatim
+                With the <x-block>mutate</x-block> attribute, the component sends the formatted string <strong>exactly as it appears in the input</strong>,
+                group separator and decimal separator included. Use it when you want to persist the user-facing representation verbatim
                 (e.g., a free-text display label).
             </p>
             <x-code language="blade" :contents="$modeMutate" />
@@ -176,8 +176,7 @@
                 <x-custom-table.thead>
                     <x-custom-table.tr>
                         <x-custom-table.th first label="Typed digits"/>
-                        <x-custom-table.th label="Display (en-US)"/>
-                        <x-custom-table.th label="Display (pt-BR)"/>
+                        <x-custom-table.th label="Display"/>
                         <x-custom-table.th label="Sent to Livewire"/>
                     </x-custom-table.tr>
                 </x-custom-table.thead>
@@ -185,20 +184,17 @@
                     <x-custom-table.tr>
                         <x-custom-table.td first>1000</x-custom-table.td>
                         <x-custom-table.td>10.00</x-custom-table.td>
-                        <x-custom-table.td>10,00</x-custom-table.td>
-                        <x-custom-table.td>"10.00" / "10,00"</x-custom-table.td>
+                        <x-custom-table.td>"10.00"</x-custom-table.td>
                     </x-custom-table.tr>
                     <x-custom-table.tr>
                         <x-custom-table.td first>200000</x-custom-table.td>
                         <x-custom-table.td>2,000.00</x-custom-table.td>
-                        <x-custom-table.td>2.000,00</x-custom-table.td>
-                        <x-custom-table.td>"2,000.00" / "2.000,00"</x-custom-table.td>
+                        <x-custom-table.td>"2,000.00"</x-custom-table.td>
                     </x-custom-table.tr>
                     <x-custom-table.tr>
                         <x-custom-table.td first>150055</x-custom-table.td>
                         <x-custom-table.td>1,500.55</x-custom-table.td>
-                        <x-custom-table.td>1.500,55</x-custom-table.td>
-                        <x-custom-table.td>"1,500.55" / "1.500,55"</x-custom-table.td>
+                        <x-custom-table.td>"1,500.55"</x-custom-table.td>
                     </x-custom-table.tr>
                 </x-custom-table.tbody>
             </x-custom-table>
@@ -216,8 +212,7 @@
                 <x-custom-table.thead>
                     <x-custom-table.tr>
                         <x-custom-table.th first label="Typed digits"/>
-                        <x-custom-table.th label="Display (en-US)"/>
-                        <x-custom-table.th label="Display (pt-BR)"/>
+                        <x-custom-table.th label="Display"/>
                         <x-custom-table.th label="Sent to Livewire"/>
                     </x-custom-table.tr>
                 </x-custom-table.thead>
@@ -225,56 +220,35 @@
                     <x-custom-table.tr>
                         <x-custom-table.td first>1000</x-custom-table.td>
                         <x-custom-table.td>10.00</x-custom-table.td>
-                        <x-custom-table.td>10,00</x-custom-table.td>
                         <x-custom-table.td>"10.00"</x-custom-table.td>
                     </x-custom-table.tr>
                     <x-custom-table.tr>
                         <x-custom-table.td first>200000</x-custom-table.td>
                         <x-custom-table.td>2,000.00</x-custom-table.td>
-                        <x-custom-table.td>2.000,00</x-custom-table.td>
                         <x-custom-table.td>"2000.00"</x-custom-table.td>
                     </x-custom-table.tr>
                     <x-custom-table.tr>
                         <x-custom-table.td first>150055</x-custom-table.td>
                         <x-custom-table.td>1,500.55</x-custom-table.td>
-                        <x-custom-table.td>1.500,55</x-custom-table.td>
                         <x-custom-table.td>"1500.55"</x-custom-table.td>
                     </x-custom-table.tr>
                 </x-custom-table.tbody>
             </x-custom-table>
             <p>
-                A typical use case is binding to a column with an Eloquent <x-block>decimal:2</x-block> cast — the value
+                A typical use case is binding to a column with an Eloquent <x-block>decimal:2</x-block> cast, the value
                 arrives at the property ready for assignment, no manual parsing required:
             </p>
             <x-code language="php" :contents="$decimalEloquent" />
-            <p>
-                The live preview below shows the three modes side-by-side. Type the same value in each input and
-                observe how the bound Livewire property differs:
-            </p>
-            <x-preview language="blade" :contents="$modeDecimal">
-                <div class="space-y-2">
-                    <livewire:documentation.form.currency />
-                </div>
-            </x-preview>
+            <x-code language="blade" :contents="$decimalBlade" />
         </div>
     </x-section>
     <x-section title="Global Defaults" disable-copy>
         <div class="space-y-4">
             <p>
-                If most components in your application need the same sync mode, set it once in <x-block>config/tallstackui.php</x-block>
-                to avoid repeating the prop on every usage. The default is <x-block>mutate = false</x-block> and
-                <x-block>decimal = false</x-block> (digits-only).
+                If most components in your application need the same sync mode, set it once in the <a href="{{ route('documentation', ['v3', 'configuration']) }}" class="underline" wire:navigate>configuration file</a>
+                to avoid repeating the prop on every usage.
             </p>
             <x-code language="php" :contents="$globalDefaults" />
-            <p>
-                Per-instance props always win, so individual usages can still opt out without touching the global
-                config — for example, <x-block>&lt;x-currency :decimal="false" wire:model="price" /&gt;</x-block>
-                disables decimal mode on that single field even when the global default is <x-block>true</x-block>.
-            </p>
-            <x-warning info title="Mutually exclusive at the config level too">
-                The same constraint applies to the global defaults. Setting both <x-block>mutate</x-block> and <x-block>decimal</x-block> to <x-block>true</x-block>
-                in the config raises the same validation exception when the component renders.
-            </x-warning>
         </div>
     </x-section>
     <x-section title="Caveats">

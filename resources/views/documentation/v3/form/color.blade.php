@@ -50,7 +50,7 @@
             <x-color picker excluded-step="500" />
         </x-preview>
         <x-warning class="mt-4">
-            Excluded step can only be used with <b>picker mode.</b>
+            Excluded step can only be used with <x-block>picker</x-block> mode.
         </x-warning>
     </x-section>
     <x-section title="Exclude Color" description="An option to exclude a specific color from the color selector in picker mode.">
@@ -58,7 +58,7 @@
             <x-color picker excluded-color="red" />
         </x-preview>
         <x-warning class="mt-4">
-            Excluded step can only be used with <b>picker mode.</b>
+            Excluded step can only be used with <x-block>picker</x-block> mode.
         </x-warning>
     </x-section>
     <x-section title="Events">
