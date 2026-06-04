@@ -456,6 +456,7 @@ ui:
     - Links
     - Size Variations
     - Color Variations
+    - Item Colors
   dropdown:
     - Basic Usage
     - Available Positions

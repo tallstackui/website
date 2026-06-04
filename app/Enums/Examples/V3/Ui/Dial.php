@@ -106,6 +106,15 @@ class Dial
     </x-dial>
     HTML;
 
+    public const string ITEM_COLORS = <<<'HTML'
+    <x-dial>
+        <x-dial.items icon="pencil" label="Edit" color="blue" />
+        <x-dial.items icon="share" label="Share" color="green" style="light" />
+        <x-dial.items icon="trash" label="Delete" color="red" style="outline" />
+        <x-dial.items icon="star" label="Favorite" />
+    </x-dial>
+    HTML;
+
     public const string CUSTOMIZATION = <<<'HTML'
     TallStackUi::customize()
         ->dial()

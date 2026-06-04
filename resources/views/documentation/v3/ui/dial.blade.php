@@ -21,6 +21,11 @@
             inside the main <x-block>dial</x-block> tag. Because the component uses fixed positioning,
             only one dial should be used per page.
         </p>
+        <p>
+            Clicking any action item automatically closes the dial. When the dial opens, its items
+            animate in from the direction it expands toward — rising from a bottom corner, dropping
+            from a top corner, or sliding sideways when <x-block>horizontal</x-block>.
+        </p>
     </x-section>
     <x-section title="Basic Usage">
         <x-preview language="blade" :contents="$basic" frame="v3/ui/dial/basic" :height="380" />
@@ -115,6 +120,18 @@
                 All TallStackUI colors are available:
             </p>
             <x-preview language="blade" :contents="$colors" frame="v3/ui/dial/colors" :height="380" />
+        </div>
+    </x-section>
+    <x-section title="Item Colors">
+        <div class="space-y-4">
+            <p>
+                While <x-block>Color Variations</x-block> colors the main button, each
+                <x-block>dial.items</x-block> can have its own color through the <x-block>color</x-block>
+                attribute, optionally combined with a <x-block>style</x-block> (<x-block>solid</x-block>,
+                <x-block>light</x-block>, or <x-block>outline</x-block>). Items without a
+                <x-block>color</x-block> keep the default neutral appearance.
+            </p>
+            <x-preview language="blade" :contents="$itemColors" frame="v3/ui/dial/item-colors" :height="460" />
         </div>
     </x-section>
 </x-layout>
