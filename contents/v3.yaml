@@ -426,6 +426,7 @@ ui:
     - Events
     - Icon Style
     - Using Different Icons
+    - Copying Programmatically
   command-palette:
     - Concept
     - Basic Usage

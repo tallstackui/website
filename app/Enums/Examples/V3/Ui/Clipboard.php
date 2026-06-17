@@ -48,6 +48,22 @@ class Clipboard
                  :icons="['copy' => 'pencil', 'copied' => 'check']"/>
     HTML;
 
+    public const string PROGRAMMATIC = <<<'HTML'
+    <x-button x-on:click="$tsui.copy('TallStackUI')">
+        Copy
+    </x-button>
+    HTML;
+
+    public const string PROGRAMMATIC_EVENT = <<<'JS'
+    // $tsui.copy resolves to a boolean reporting whether the copy succeeded.
+    const copied = await window.$tsui.copy('TallStackUI');
+
+    // It also dispatches the `ts-ui:copy` event on window with the copied text.
+    window.addEventListener('ts-ui:copy', (event) => {
+        alert(`Copied: ${event.detail.text}`); // 'Copied: TallStackUI'
+    });
+    JS;
+
     public const string CUSTOMIZATION = <<<'HTML'
     TallStackUi::customize()
         ->clipboard()

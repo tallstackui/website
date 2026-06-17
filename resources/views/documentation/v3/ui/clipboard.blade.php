@@ -64,4 +64,14 @@
             </x-clipboard>
         </x-preview>
     </x-section>
+    <x-section title="Copying Programmatically" description="An option to copy text using a JavaScript API.">
+        <x-preview language="blade" :contents="$programmatic">
+            <x-button x-on:click="$tsui.copy('TallStackUI')">
+                Copy
+            </x-button>
+        </x-preview>
+        <div class="mt-4">
+            <x-code language="javascript" :contents="$programmaticEvent" />
+        </div>
+    </x-section>
 </x-layout>
