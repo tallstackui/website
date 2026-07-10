@@ -9,6 +9,9 @@ new class extends Component {
     public ?bool $close = false;
     public ?bool $showSlot = false;
     public ?bool $events = false;
+    public ?bool $withoutTitle = false;
+    public ?bool $listNumeric = false;
+    public ?bool $footerEnd = false;
 
     public function mount(): void
     {
@@ -22,19 +25,23 @@ new class extends Component {
 <div>
     @if ($events)
         <x-errors close x-on:close="alert('Errors Closed')" />
+    @elseif ($footerEnd)
+        <x-errors :$only :$title :$color :$close>
+            <x-slot:footer end>
+                <x-button color="red" sm round>Fix now</x-button>
+            </x-slot:footer>
+        </x-errors>
+    @elseif ($showSlot)
+        <x-errors :$only :$title :$color :$close>
+            <x-slot:footer>
+                <div class="flex justify-end">
+                    <p class="text-sm text-red-500">
+                        Footer Slot
+                    </p>
+                </div>
+            </x-slot:footer>
+        </x-errors>
     @else
-        @if (!$showSlot)
-            <x-errors :$only :$title :$color :$close />
-        @else
-            <x-errors :$only :$title :$color :$close>
-                <x-slot:footer>
-                    <div class="flex justify-end">
-                        <p class="text-sm text-red-500">
-                            Footer Slot
-                        </p>
-                    </div>
-                </x-slot:footer>
-            </x-errors>
-        @endif
+        <x-errors :$only :$title :$color :$close :without-title="$withoutTitle" :list-numeric="$listNumeric" />
     @endif
 </div>

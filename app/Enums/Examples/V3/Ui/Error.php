@@ -24,6 +24,22 @@ class Error
     <x-errors close />
     HTML;
 
+    public const string WITHOUT_TITLE = <<<'HTML'
+    <x-errors without-title />
+    HTML;
+
+    public const string LIST_NUMERIC = <<<'HTML'
+    <x-errors list-numeric />
+    HTML;
+
+    public const string FOOTER_END = <<<'HTML'
+    <x-errors>
+        <x-slot:footer end>
+            <x-button color="red" sm round>Fix now</x-button>
+        </x-slot:footer>
+    </x-errors>
+    HTML;
+
     public const string SLOT = <<<'HTML'
     <x-errors footer="Footer Slot" />
 

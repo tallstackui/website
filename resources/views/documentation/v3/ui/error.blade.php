@@ -27,6 +27,16 @@
             <livewire:documentation.ui.errors title="Ops! There are :count validation errors:"/>
         </x-preview>
     </x-section>
+    <x-section title="Without Title" description="Hides the title and the divider line between the title and the errors.">
+        <x-preview language="blade" :contents="$withoutTitle">
+            <livewire:documentation.ui.errors without-title/>
+        </x-preview>
+    </x-section>
+    <x-section title="Numeric List" description="Displays the errors as a numbered list instead of bullet points.">
+        <x-preview language="blade" :contents="$listNumeric">
+            <livewire:documentation.ui.errors list-numeric/>
+        </x-preview>
+    </x-section>
     <x-section title="Close Option" description="An option to allow the user to hide the errors">
         <x-preview language="blade" :contents="$close">
             <livewire:documentation.ui.errors close/>
@@ -38,6 +48,11 @@
     <x-section title="Footer Slot">
         <x-preview language="blade" :contents="$slot">
             <livewire:documentation.ui.errors show-slot />
+        </x-preview>
+    </x-section>
+    <x-section title="Footer Alignment" description="Use the end attribute on the footer slot to automatically align its content to the right.">
+        <x-preview language="blade" :contents="$footerEnd">
+            <livewire:documentation.ui.errors footer-end />
         </x-preview>
     </x-section>
     <x-section title="Color Variations">

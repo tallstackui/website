@@ -87,6 +87,17 @@
             <x-preview language="blade" :contents="$icon" frame="v3/ui/dial/icon" :height="320" />
         </div>
     </x-section>
+    <x-section title="Prevent Rotation">
+        <div class="space-y-4">
+            <p>
+                By default, the main button icon rotates 45 degrees when the dial opens.
+                Use the <x-block>prevent-rotate</x-block> attribute to keep the icon
+                static, which is useful when the icon is not meant to morph (for example,
+                a menu or ellipsis icon):
+            </p>
+            <x-preview language="blade" :contents="$preventRotate" frame="v3/ui/dial/prevent-rotate" :height="320" />
+        </div>
+    </x-section>
     <x-section title="Square Variation">
         <div class="space-y-4">
             <p>

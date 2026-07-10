@@ -453,6 +453,7 @@ ui:
     - Labels
     - Without Tooltip
     - Icon
+    - Prevent Rotation
     - Square Variation
     - Links
     - Size Variations
@@ -472,8 +473,11 @@ ui:
     - Basic Usage
     - Filtering Properties
     - Title Customization
+    - Without Title
+    - Numeric List
     - Close Option
     - Footer Slot
+    - Footer Alignment
     - Color Variations
     - Events
   environment:
