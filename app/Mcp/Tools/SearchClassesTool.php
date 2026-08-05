@@ -12,6 +12,8 @@ use Laravel\Mcp\Server\Tools\Annotations\IsReadOnly;
 #[IsReadOnly]
 class SearchClassesTool extends Tool
 {
+    protected string $name = 'search_classes';
+
     protected string $description = 'Searches for specific CSS classes across all TallStackUI components. Returns every component block that contains the given class, along with PHP code snippets showing how to override them via Soft Customization.';
 
     public function handle(Request $request): Response
@@ -21,7 +23,7 @@ class SearchClassesTool extends Tool
         ]);
 
         $service = app(ComponentDocumentation::class);
-        $matches = $service->searchClasses(
+        $matches = $service->classes(
             $request->get('query'),
             $request->get('component'),
         );

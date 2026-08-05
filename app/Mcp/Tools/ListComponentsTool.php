@@ -12,7 +12,9 @@ use Laravel\Mcp\Server\Tools\Annotations\IsReadOnly;
 #[IsReadOnly]
 class ListComponentsTool extends Tool
 {
-    protected string $description = 'Lists all TallStackUI components grouped by category. Optionally filter by category name.';
+    protected string $name = 'list_components';
+
+    protected string $description = 'Lists all TallStackUI components grouped by category, each with a one-line summary. Optionally filter by category name. Use this to discover which component fits a need before calling `get_component`.';
 
     public function handle(Request $request): Response
     {
@@ -20,7 +22,7 @@ class ListComponentsTool extends Tool
         $grouped = $service->list($request->get('category'));
 
         if ($grouped->isEmpty()) {
-            return Response::text('No components found matching the given category.');
+            return Response::text('No components found matching the given category. Call this tool without arguments to list every category.');
         }
 
         $output = "# TallStackUI Components\n\n";
@@ -30,11 +32,15 @@ class ListComponentsTool extends Tool
 
             foreach ($components as $component) {
                 $suffix = $component['livewire_only'] ? ' *(Livewire only)*' : '';
-                $output .= "- {$component['name']}{$suffix}\n";
+                $summary = $component['summary'] ? " — {$component['summary']}" : '';
+                $output .= "- **{$component['name']}**{$suffix}{$summary}\n";
             }
 
             $output .= "\n";
         }
+
+        $output .= "---\n\n";
+        $output .= "**Next steps:** `get_component` for the full documentation of a component, `search_documentation` for free-text search, `search_classes` to locate CSS classes for Soft Customization.\n";
 
         return Response::text($output);
     }
@@ -42,7 +48,7 @@ class ListComponentsTool extends Tool
     public function schema(JsonSchema $schema): array
     {
         return [
-            'category' => $schema->string()->description('Filter by category name (case-insensitive partial match). Examples: "Form", "Display", "Overlay"'),
+            'category' => $schema->string()->description('Filter by category name (case-insensitive partial match). Examples: "Form", "Display", "Buttons", "Guides"'),
         ];
     }
 }
