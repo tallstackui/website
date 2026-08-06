@@ -3,10 +3,14 @@ import clipboard from "./modules/clipboard";
 import copyMarkdown from "./modules/copy-markdown";
 import reveal from "./modules/reveal";
 import spotlight from "./modules/spotlight";
+import sidebarScroll from "./modules/sidebar-scroll";
 import docsearch from '@docsearch/js';
 
 /* landing entrance reveals */
 document.addEventListener('DOMContentLoaded', reveal);
+
+/* docs sidebar scroll persistence across wire:navigate */
+sidebarScroll();
 
 /* clipboard */
 document.addEventListener('alpine:init', () => {

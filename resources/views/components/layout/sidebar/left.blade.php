@@ -44,7 +44,7 @@
     </div>
 </div>
 <div class="hidden lg:relative lg:block lg:flex-none">
-    <div class="sticky top-14 -ml-0.5 h-[calc(100vh-3.5rem)] w-64 overflow-y-auto custom-scrollbar overflow-x-hidden py-6 pl-0.5 pr-8 xl:w-72 xl:pr-16">
+    <div data-sidebar-scroll class="sticky top-14 -ml-0.5 h-[calc(100vh-3.5rem)] w-64 overflow-y-auto custom-scrollbar overflow-x-hidden py-6 pl-0.5 pr-8 xl:w-72 xl:pr-16">
         <x-layout.navigation.version />
     </div>
 </div>
