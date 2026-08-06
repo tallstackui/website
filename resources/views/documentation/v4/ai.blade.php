@@ -29,33 +29,21 @@
                 of the TallStackUI package. Each file contains comprehensive documentation for AI assistants, including
                 attributes, slots, usage examples, and soft customization options.
             </p>
-            <x-custom-table>
-                <x-custom-table.thead>
-                    <x-custom-table.tr>
-                        <x-custom-table.th first label="Component"/>
-                        <x-custom-table.th label="Instructions"/>
-                    </x-custom-table.tr>
-                </x-custom-table.thead>
-                <x-custom-table.tbody>
-                    @foreach ($components as $category => $items)
-                        @foreach ($items as $item)
-                            <x-custom-table.tr>
-                                <x-custom-table.td first>{{ $item['name'] }}</x-custom-table.td>
-                                <x-custom-table.td>
-                                    <div class="flex items-center gap-2">
-                                        <a href="{{ route('ai.component', ['name' => str_replace('components/', '', str_replace('.md', '', $item['file']))]) }}"
-                                           class="underline text-pink-600 dark:text-pink-400"
-                                           target="_blank">
-                                            {{ $item['file'] }}
-                                        </a>
-                                        <x-clipboard :text="route('ai.component', ['name' => str_replace('components/', '', str_replace('.md', '', $item['file']))])" icon />
-                                    </div>
-                                </x-custom-table.td>
-                            </x-custom-table.tr>
-                        @endforeach
-                    @endforeach
-                </x-custom-table.tbody>
-            </x-custom-table>
+            <x-table :headers="[
+                ['index' => 'name', 'label' => 'Component'],
+                ['index' => 'file', 'label' => 'Instructions'],
+            ]" :rows="collect($components)->flatten(1)">
+                @interact('column_file', $row)
+                    <div class="flex items-center gap-2">
+                        <a href="{{ route('ai.component', ['name' => str_replace(['components/', '.md'], '', $row['file'])]) }}"
+                           class="underline text-pink-600 dark:text-pink-400"
+                           target="_blank">
+                            {{ $row['file'] }}
+                        </a>
+                        <x-clipboard :text="route('ai.component', ['name' => str_replace(['components/', '.md'], '', $row['file'])])" icon />
+                    </div>
+                @endinteract
+            </x-table>
         </div>
     </x-section>
     <x-section title="MCP Server" disable-copy>
@@ -75,47 +63,20 @@
             <p>
                 The MCP server provides the following tools for AI assistants:
             </p>
-            <x-custom-table>
-                <x-custom-table.thead>
-                    <x-custom-table.tr>
-                        <x-custom-table.th first label="Tool"/>
-                        <x-custom-table.th label="Description"/>
-                    </x-custom-table.tr>
-                </x-custom-table.thead>
-                <x-custom-table.tbody>
-                    <x-custom-table.tr>
-                        <x-custom-table.td first>
-                            <x-block>list_components</x-block>
-                        </x-custom-table.td>
-                        <x-custom-table.td>List all available components, optionally filtered by category.
-                        </x-custom-table.td>
-                    </x-custom-table.tr>
-                    <x-custom-table.tr>
-                        <x-custom-table.td first>
-                            <x-block>get_component</x-block>
-                        </x-custom-table.td>
-                        <x-custom-table.td>Get full documentation for a specific component.</x-custom-table.td>
-                    </x-custom-table.tr>
-                    <x-custom-table.tr>
-                        <x-custom-table.td first>
-                            <x-block>search_documentation</x-block>
-                        </x-custom-table.td>
-                        <x-custom-table.td>Full-text search across all component documentation.</x-custom-table.td>
-                    </x-custom-table.tr>
-                    <x-custom-table.tr>
-                        <x-custom-table.td first>
-                            <x-block>search_customization</x-block>
-                        </x-custom-table.td>
-                        <x-custom-table.td>Search CSS class customization options for components.</x-custom-table.td>
-                    </x-custom-table.tr>
-                    <x-custom-table.tr>
-                        <x-custom-table.td first>
-                            <x-block>search_classes</x-block>
-                        </x-custom-table.td>
-                        <x-custom-table.td>Search for specific CSS classes across all components. Returns matching blocks with override code snippets for Soft Customization.</x-custom-table.td>
-                    </x-custom-table.tr>
-                </x-custom-table.tbody>
-            </x-custom-table>
+            <x-table :headers="[
+                ['index' => 'tool', 'label' => 'Tool'],
+                ['index' => 'description', 'label' => 'Description'],
+            ]" :rows="[
+                ['tool' => 'list_components', 'description' => 'List all available components, optionally filtered by category.'],
+                ['tool' => 'get_component', 'description' => 'Get full documentation for a specific component.'],
+                ['tool' => 'search_documentation', 'description' => 'Full-text search across all component documentation.'],
+                ['tool' => 'search_customization', 'description' => 'Search CSS class customization options for components.'],
+                ['tool' => 'search_classes', 'description' => 'Search for specific CSS classes across all components. Returns matching blocks with override code snippets for Soft Customization.'],
+            ]">
+                @interact('column_tool', $row)
+                    <x-block>{{ $row['tool'] }}</x-block>
+                @endinteract
+            </x-table>
         </div>
     </x-section>
     <x-section title="Available Resources" disable-copy>
@@ -124,40 +85,31 @@
                 Beyond the tools, the MCP server also exposes read-only resources that AI assistants can load
                 to gain broader context in a single read:
             </p>
-            <x-custom-table>
-                <x-custom-table.thead>
-                    <x-custom-table.tr>
-                        <x-custom-table.th first label="Resource"/>
-                        <x-custom-table.th label="URI"/>
-                        <x-custom-table.th label="Description"/>
-                    </x-custom-table.tr>
-                </x-custom-table.thead>
-                <x-custom-table.tbody>
-                    <x-custom-table.tr>
-                        <x-custom-table.td first>
-                            <x-block>component-index</x-block>
-                        </x-custom-table.td>
-                        <x-custom-table.td>
-                            <x-block>tallstackui://docs/index</x-block>
-                        </x-custom-table.td>
-                        <x-custom-table.td>Full Markdown index of the documentation: every component grouped by
-                            category, global configuration, and customization guides.
-                        </x-custom-table.td>
-                    </x-custom-table.tr>
-                    <x-custom-table.tr>
-                        <x-custom-table.td first>
-                            <x-block>internal-scopes</x-block>
-                        </x-custom-table.td>
-                        <x-custom-table.td>
-                            <x-block>tallstackui://docs/internal-scopes</x-block>
-                        </x-custom-table.td>
-                        <x-custom-table.td>Canonical list of every internal <x-block>scope="..."</x-block> declared
-                            when a component renders nested components. Required reading before customizing nested
-                            component instances independently of their standalone versions.
-                        </x-custom-table.td>
-                    </x-custom-table.tr>
-                </x-custom-table.tbody>
-            </x-custom-table>
+            <x-table :headers="[
+                ['index' => 'resource', 'label' => 'Resource'],
+                ['index' => 'uri', 'label' => 'URI'],
+                ['index' => 'description', 'label' => 'Description'],
+            ]" :rows="[
+                ['resource' => 'component-index', 'uri' => 'tallstackui://docs/index'],
+                ['resource' => 'internal-scopes', 'uri' => 'tallstackui://docs/internal-scopes'],
+            ]">
+                @interact('column_resource', $row)
+                    <x-block>{{ $row['resource'] }}</x-block>
+                @endinteract
+                @interact('column_uri', $row)
+                    <x-block>{{ $row['uri'] }}</x-block>
+                @endinteract
+                @interact('column_description', $row)
+                    @if ($row['resource'] === 'component-index')
+                        Full Markdown index of the documentation: every component grouped by
+                        category, global configuration, and customization guides.
+                    @else
+                        Canonical list of every internal <x-block>scope="..."</x-block> declared
+                        when a component renders nested components. Required reading before customizing
+                        nested component instances independently of their standalone versions.
+                    @endif
+                @endinteract
+            </x-table>
         </div>
     </x-section>
     <x-section title="Available Prompts" disable-copy>
@@ -166,27 +118,21 @@
                 The MCP server also ships prompts: ready-made workflows that guide AI assistants step by step
                 through common tasks:
             </p>
-            <x-custom-table>
-                <x-custom-table.thead>
-                    <x-custom-table.tr>
-                        <x-custom-table.th first label="Prompt"/>
-                        <x-custom-table.th label="Description"/>
-                    </x-custom-table.tr>
-                </x-custom-table.thead>
-                <x-custom-table.tbody>
-                    <x-custom-table.tr>
-                        <x-custom-table.td first>
-                            <x-block>customize-component</x-block>
-                        </x-custom-table.td>
-                        <x-custom-table.td>Guided workflow to customize the CSS of a component through Soft
-                            Customization: it fetches the component blocks, locates the target classes, resolves
-                            nested scopes, and writes the <x-block>TallStackUi::customize()</x-block> code in a
-                            service provider. Accepts a required <x-block>component</x-block> argument and an
-                            optional <x-block>goal</x-block> describing the desired change.
-                        </x-custom-table.td>
-                    </x-custom-table.tr>
-                </x-custom-table.tbody>
-            </x-custom-table>
+            <x-table :headers="[
+                ['index' => 'prompt', 'label' => 'Prompt'],
+                ['index' => 'description', 'label' => 'Description'],
+            ]" :rows="[['prompt' => 'customize-component']]">
+                @interact('column_prompt', $row)
+                    <x-block>{{ $row['prompt'] }}</x-block>
+                @endinteract
+                @interact('column_description', $row)
+                    Guided workflow to customize the CSS of a component through Soft
+                    Customization: it fetches the component blocks, locates the target classes, resolves
+                    nested scopes, and writes the <x-block>TallStackUi::customize()</x-block> code in a
+                    service provider. Accepts a required <x-block>component</x-block> argument and an
+                    optional <x-block>goal</x-block> describing the desired change.
+                @endinteract
+            </x-table>
         </div>
     </x-section>
     <x-section title="Connecting to Claude Code">

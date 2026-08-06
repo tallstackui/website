@@ -175,68 +175,38 @@
             <p>
                 These scopes affect all form components that use the shared wrapper infrastructure.
             </p>
-            <x-custom-table>
-                <x-custom-table.thead>
-                    <x-custom-table.tr>
-                        <x-custom-table.th first label="Parent" />
-                        <x-custom-table.th label="Child" />
-                        <x-custom-table.th label="Scope" />
-                    </x-custom-table.tr>
-                </x-custom-table.thead>
-                <x-custom-table.tbody>
-                    @foreach ($scopes['wrapper'] as $section)
-                        @foreach ($section['rows'] as $row)
-                            <x-custom-table.tr>
-                                <x-custom-table.td first>{{ $section['label'] }}</x-custom-table.td>
-                                <x-custom-table.td>{{ $row['child'] }}</x-custom-table.td>
-                                <x-custom-table.td><x-block>{{ $row['scope'] }}</x-block></x-custom-table.td>
-                            </x-custom-table.tr>
-                        @endforeach
-                    @endforeach
-                </x-custom-table.tbody>
-            </x-custom-table>
+            <x-table :headers="[
+                ['index' => 'parent', 'label' => 'Parent'],
+                ['index' => 'child', 'label' => 'Child'],
+                ['index' => 'scope', 'label' => 'Scope'],
+            ]" :rows="collect($scopes['wrapper'])->flatMap(fn (array $section) => collect($section['rows'])
+                ->map(fn (array $scope) => ['parent' => $section['label'], 'child' => $scope['child'], 'scope' => $scope['scope']]))">
+                @interact('column_scope', $row)
+                    <x-block>{{ $row['scope'] }}</x-block>
+                @endinteract
+            </x-table>
             <h3 class="text-lg font-semibold dark:text-white">Form Components</h3>
-            <x-custom-table>
-                <x-custom-table.thead>
-                    <x-custom-table.tr>
-                        <x-custom-table.th first label="Component" />
-                        <x-custom-table.th label="Child" />
-                        <x-custom-table.th label="Scope" />
-                    </x-custom-table.tr>
-                </x-custom-table.thead>
-                <x-custom-table.tbody>
-                    @foreach ($scopes['form'] as $section)
-                        @foreach ($section['rows'] as $row)
-                            <x-custom-table.tr>
-                                <x-custom-table.td first>{{ $section['label'] }}</x-custom-table.td>
-                                <x-custom-table.td>{{ $row['child'] }}</x-custom-table.td>
-                                <x-custom-table.td><x-block>{{ $row['scope'] }}</x-block></x-custom-table.td>
-                            </x-custom-table.tr>
-                        @endforeach
-                    @endforeach
-                </x-custom-table.tbody>
-            </x-custom-table>
+            <x-table :headers="[
+                ['index' => 'parent', 'label' => 'Component'],
+                ['index' => 'child', 'label' => 'Child'],
+                ['index' => 'scope', 'label' => 'Scope'],
+            ]" :rows="collect($scopes['form'])->flatMap(fn (array $section) => collect($section['rows'])
+                ->map(fn (array $scope) => ['parent' => $section['label'], 'child' => $scope['child'], 'scope' => $scope['scope']]))">
+                @interact('column_scope', $row)
+                    <x-block>{{ $row['scope'] }}</x-block>
+                @endinteract
+            </x-table>
             <h3 class="text-lg font-semibold dark:text-white">UI Components</h3>
-            <x-custom-table>
-                <x-custom-table.thead>
-                    <x-custom-table.tr>
-                        <x-custom-table.th first label="Component" />
-                        <x-custom-table.th label="Child" />
-                        <x-custom-table.th label="Scope" />
-                    </x-custom-table.tr>
-                </x-custom-table.thead>
-                <x-custom-table.tbody>
-                    @foreach ($scopes['ui'] as $section)
-                        @foreach ($section['rows'] as $row)
-                            <x-custom-table.tr>
-                                <x-custom-table.td first>{{ $section['label'] }}</x-custom-table.td>
-                                <x-custom-table.td>{{ $row['child'] }}</x-custom-table.td>
-                                <x-custom-table.td><x-block>{{ $row['scope'] }}</x-block></x-custom-table.td>
-                            </x-custom-table.tr>
-                        @endforeach
-                    @endforeach
-                </x-custom-table.tbody>
-            </x-custom-table>
+            <x-table :headers="[
+                ['index' => 'parent', 'label' => 'Component'],
+                ['index' => 'child', 'label' => 'Child'],
+                ['index' => 'scope', 'label' => 'Scope'],
+            ]" :rows="collect($scopes['ui'])->flatMap(fn (array $section) => collect($section['rows'])
+                ->map(fn (array $scope) => ['parent' => $section['label'], 'child' => $scope['child'], 'scope' => $scope['scope']]))">
+                @interact('column_scope', $row)
+                    <x-block>{{ $row['scope'] }}</x-block>
+                @endinteract
+            </x-table>
         </div>
     </x-section>
 </x-layout>

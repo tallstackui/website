@@ -26,12 +26,6 @@ class AppServiceProvider extends ServiceProvider
         $this->registerDemoLayoutAliases();
     }
 
-    /**
-     * The TallStackUI layout family is unregistered globally
-     * (TALLSTACKUI_IGNORE_LAYOUT_REGISTRATION=true) to avoid clashing with this site's
-     * own <x-layout>. We re-register them under <x-tsui-*> aliases so the documentation
-     * iframe demos can render the real components without affecting the site itself.
-     */
     private function registerDemoLayoutAliases(): void
     {
         Blade::component(TsuiLayoutMain::class, 'tsui-layout');

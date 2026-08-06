@@ -182,44 +182,25 @@
                     If you use any of the old helpers in your Alpine.js expressions or Blade templates, you must update them:
                 </p>
                 <div class="my-2">
-                    <x-custom-table>
-                        <x-custom-table.thead>
-                            <x-custom-table.tr>
-                                <x-custom-table.th first label="Before (v2)"/>
-                                <x-custom-table.th label="After (v3)"/>
-                            </x-custom-table.tr>
-                        </x-custom-table.thead>
-                        <x-custom-table.tbody>
-                            <x-custom-table.tr>
-                                <x-custom-table.td first><x-block>$modalOpen('name')</x-block></x-custom-table.td>
-                                <x-custom-table.td><x-block>$tsui.open.modal('name')</x-block></x-custom-table.td>
-                            </x-custom-table.tr>
-                            <x-custom-table.tr>
-                                <x-custom-table.td first><x-block>$modalClose('name')</x-block></x-custom-table.td>
-                                <x-custom-table.td><x-block>$tsui.close.modal('name')</x-block></x-custom-table.td>
-                            </x-custom-table.tr>
-                            <x-custom-table.tr>
-                                <x-custom-table.td first><x-block>$slideOpen('name')</x-block></x-custom-table.td>
-                                <x-custom-table.td><x-block>$tsui.open.slide('name')</x-block></x-custom-table.td>
-                            </x-custom-table.tr>
-                            <x-custom-table.tr>
-                                <x-custom-table.td first><x-block>$slideClose('name')</x-block></x-custom-table.td>
-                                <x-custom-table.td><x-block>$tsui.close.slide('name')</x-block></x-custom-table.td>
-                            </x-custom-table.tr>
-                            <x-custom-table.tr>
-                                <x-custom-table.td first><x-block>$selectOpen('name')</x-block></x-custom-table.td>
-                                <x-custom-table.td><x-block>$tsui.open.select('name')</x-block></x-custom-table.td>
-                            </x-custom-table.tr>
-                            <x-custom-table.tr>
-                                <x-custom-table.td first><x-block>$selectClose('name')</x-block></x-custom-table.td>
-                                <x-custom-table.td><x-block>$tsui.close.select('name')</x-block></x-custom-table.td>
-                            </x-custom-table.tr>
-                            <x-custom-table.tr>
-                                <x-custom-table.td first><x-block>$focusOn('id')</x-block></x-custom-table.td>
-                                <x-custom-table.td><x-block>$tsui.focus('id')</x-block></x-custom-table.td>
-                            </x-custom-table.tr>
-                        </x-custom-table.tbody>
-                    </x-custom-table>
+                    <x-table :headers="[
+                        ['index' => 'before', 'label' => 'Before (v2)'],
+                        ['index' => 'after', 'label' => 'After (v3)'],
+                    ]" :rows="[
+                        ['before' => '$modalOpen(\'name\')', 'after' => '$tsui.open.modal(\'name\')'],
+                        ['before' => '$modalClose(\'name\')', 'after' => '$tsui.close.modal(\'name\')'],
+                        ['before' => '$slideOpen(\'name\')', 'after' => '$tsui.open.slide(\'name\')'],
+                        ['before' => '$slideClose(\'name\')', 'after' => '$tsui.close.slide(\'name\')'],
+                        ['before' => '$selectOpen(\'name\')', 'after' => '$tsui.open.select(\'name\')'],
+                        ['before' => '$selectClose(\'name\')', 'after' => '$tsui.close.select(\'name\')'],
+                        ['before' => '$focusOn(\'id\')', 'after' => '$tsui.focus(\'id\')'],
+                    ]">
+                        @interact('column_before', $row)
+                            <x-block>{{ $row['before'] }}</x-block>
+                        @endinteract
+                        @interact('column_after', $row)
+                            <x-block>{{ $row['after'] }}</x-block>
+                        @endinteract
+                    </x-table>
                 </div>
                 <x-warning>
                     The old JavaScript helpers ($modalOpen, $focusOn, $selectOpen, etc.)

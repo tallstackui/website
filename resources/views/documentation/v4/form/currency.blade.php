@@ -92,32 +92,30 @@
                 When bound to a Livewire property, the currency component offers three modes for sending the
                 value to the server. Pick the one that matches how the value is persisted on the backend.
             </p>
-            <x-custom-table>
-                <x-custom-table.thead>
-                    <x-custom-table.tr>
-                        <x-custom-table.th first label="Mode"/>
-                        <x-custom-table.th label="Sent to Livewire"/>
-                        <x-custom-table.th label="When to use"/>
-                    </x-custom-table.tr>
-                </x-custom-table.thead>
-                <x-custom-table.tbody>
-                    <x-custom-table.tr>
-                        <x-custom-table.td first>Default <span class="text-xs text-gray-400">(no prop)</span></x-custom-table.td>
-                        <x-custom-table.td>"200000"</x-custom-table.td>
-                        <x-custom-table.td>Stored as integer cents</x-custom-table.td>
-                    </x-custom-table.tr>
-                    <x-custom-table.tr>
-                        <x-custom-table.td first>mutate</x-custom-table.td>
-                        <x-custom-table.td>"2,000.00" / "2.000,00"</x-custom-table.td>
-                        <x-custom-table.td>Persisting the user-facing string verbatim</x-custom-table.td>
-                    </x-custom-table.tr>
-                    <x-custom-table.tr>
-                        <x-custom-table.td first>decimal</x-custom-table.td>
-                        <x-custom-table.td>"2000.00"</x-custom-table.td>
-                        <x-custom-table.td>Stored as <x-block>decimal</x-block> / <x-block>float</x-block> column</x-custom-table.td>
-                    </x-custom-table.tr>
-                </x-custom-table.tbody>
-            </x-custom-table>
+            <x-table :headers="[
+                ['index' => 'mode', 'label' => 'Mode'],
+                ['index' => 'sent', 'label' => 'Sent to Livewire'],
+                ['index' => 'usage', 'label' => 'When to use'],
+            ]" :rows='[
+                ["mode" => "default", "sent" => "\"200000\"", "usage" => "Stored as integer cents"],
+                ["mode" => "mutate", "sent" => "\"2,000.00\" / \"2.000,00\"", "usage" => "Persisting the user-facing string verbatim"],
+                ["mode" => "decimal", "sent" => "\"2000.00\"", "usage" => null],
+            ]'>
+                @interact('column_mode', $row)
+                    @if ($row['mode'] === 'default')
+                        Default <span class="text-xs text-gray-400">(no prop)</span>
+                    @else
+                        {{ $row['mode'] }}
+                    @endif
+                @endinteract
+                @interact('column_usage', $row)
+                    @if ($row['mode'] === 'decimal')
+                        Stored as <x-block>decimal</x-block> / <x-block>float</x-block> column
+                    @else
+                        {{ $row['usage'] }}
+                    @endif
+                @endinteract
+            </x-table>
             <x-warning warning title="Mutually exclusive">
                 <x-block>mutate</x-block> and <x-block>decimal</x-block> cannot be used together.
             </x-warning>
@@ -132,36 +130,16 @@
                 ideal when monetary values are stored as integer cents.
             </p>
             <x-code language="blade" :contents="$modeDefault" />
-            <x-custom-table>
-                <x-custom-table.thead>
-                    <x-custom-table.tr>
-                        <x-custom-table.th first label="Typed digits"/>
-                        <x-custom-table.th label="Display (en-US)"/>
-                        <x-custom-table.th label="Display (pt-BR)"/>
-                        <x-custom-table.th label="Sent to Livewire"/>
-                    </x-custom-table.tr>
-                </x-custom-table.thead>
-                <x-custom-table.tbody>
-                    <x-custom-table.tr>
-                        <x-custom-table.td first>1000</x-custom-table.td>
-                        <x-custom-table.td>10.00</x-custom-table.td>
-                        <x-custom-table.td>10,00</x-custom-table.td>
-                        <x-custom-table.td>"1000"</x-custom-table.td>
-                    </x-custom-table.tr>
-                    <x-custom-table.tr>
-                        <x-custom-table.td first>200000</x-custom-table.td>
-                        <x-custom-table.td>2,000.00</x-custom-table.td>
-                        <x-custom-table.td>2.000,00</x-custom-table.td>
-                        <x-custom-table.td>"200000"</x-custom-table.td>
-                    </x-custom-table.tr>
-                    <x-custom-table.tr>
-                        <x-custom-table.td first>150055</x-custom-table.td>
-                        <x-custom-table.td>1,500.55</x-custom-table.td>
-                        <x-custom-table.td>1.500,55</x-custom-table.td>
-                        <x-custom-table.td>"150055"</x-custom-table.td>
-                    </x-custom-table.tr>
-                </x-custom-table.tbody>
-            </x-custom-table>
+            <x-table :headers="[
+                ['index' => 'typed', 'label' => 'Typed digits'],
+                ['index' => 'us', 'label' => 'Display (en-US)'],
+                ['index' => 'br', 'label' => 'Display (pt-BR)'],
+                ['index' => 'sent', 'label' => 'Sent to Livewire'],
+            ]" :rows='[
+                ["typed" => "1000", "us" => "10.00", "br" => "10,00", "sent" => "\"1000\""],
+                ["typed" => "200000", "us" => "2,000.00", "br" => "2.000,00", "sent" => "\"200000\""],
+                ["typed" => "150055", "us" => "1,500.55", "br" => "1.500,55", "sent" => "\"150055\""],
+            ]' />
         </div>
     </x-section>
     <x-section title="Mutate Mode" disable-copy>
@@ -172,32 +150,15 @@
                 (e.g., a free-text display label).
             </p>
             <x-code language="blade" :contents="$modeMutate" />
-            <x-custom-table>
-                <x-custom-table.thead>
-                    <x-custom-table.tr>
-                        <x-custom-table.th first label="Typed digits"/>
-                        <x-custom-table.th label="Display"/>
-                        <x-custom-table.th label="Sent to Livewire"/>
-                    </x-custom-table.tr>
-                </x-custom-table.thead>
-                <x-custom-table.tbody>
-                    <x-custom-table.tr>
-                        <x-custom-table.td first>1000</x-custom-table.td>
-                        <x-custom-table.td>10.00</x-custom-table.td>
-                        <x-custom-table.td>"10.00"</x-custom-table.td>
-                    </x-custom-table.tr>
-                    <x-custom-table.tr>
-                        <x-custom-table.td first>200000</x-custom-table.td>
-                        <x-custom-table.td>2,000.00</x-custom-table.td>
-                        <x-custom-table.td>"2,000.00"</x-custom-table.td>
-                    </x-custom-table.tr>
-                    <x-custom-table.tr>
-                        <x-custom-table.td first>150055</x-custom-table.td>
-                        <x-custom-table.td>1,500.55</x-custom-table.td>
-                        <x-custom-table.td>"1,500.55"</x-custom-table.td>
-                    </x-custom-table.tr>
-                </x-custom-table.tbody>
-            </x-custom-table>
+            <x-table :headers="[
+                ['index' => 'typed', 'label' => 'Typed digits'],
+                ['index' => 'display', 'label' => 'Display'],
+                ['index' => 'sent', 'label' => 'Sent to Livewire'],
+            ]" :rows='[
+                ["typed" => "1000", "display" => "10.00", "sent" => "\"10.00\""],
+                ["typed" => "200000", "display" => "2,000.00", "sent" => "\"2,000.00\""],
+                ["typed" => "150055", "display" => "1,500.55", "sent" => "\"1,500.55\""],
+            ]' />
         </div>
     </x-section>
     <x-section title="Decimal Mode" disable-copy>
@@ -208,32 +169,15 @@
                 <x-block>(float)</x-block> / <x-block>(int)</x-block> or by Eloquent <x-block>decimal:N</x-block> / <x-block>float</x-block> casts.
             </p>
             <x-code language="blade" :contents="$modeDecimal" />
-            <x-custom-table>
-                <x-custom-table.thead>
-                    <x-custom-table.tr>
-                        <x-custom-table.th first label="Typed digits"/>
-                        <x-custom-table.th label="Display"/>
-                        <x-custom-table.th label="Sent to Livewire"/>
-                    </x-custom-table.tr>
-                </x-custom-table.thead>
-                <x-custom-table.tbody>
-                    <x-custom-table.tr>
-                        <x-custom-table.td first>1000</x-custom-table.td>
-                        <x-custom-table.td>10.00</x-custom-table.td>
-                        <x-custom-table.td>"10.00"</x-custom-table.td>
-                    </x-custom-table.tr>
-                    <x-custom-table.tr>
-                        <x-custom-table.td first>200000</x-custom-table.td>
-                        <x-custom-table.td>2,000.00</x-custom-table.td>
-                        <x-custom-table.td>"2000.00"</x-custom-table.td>
-                    </x-custom-table.tr>
-                    <x-custom-table.tr>
-                        <x-custom-table.td first>150055</x-custom-table.td>
-                        <x-custom-table.td>1,500.55</x-custom-table.td>
-                        <x-custom-table.td>"1500.55"</x-custom-table.td>
-                    </x-custom-table.tr>
-                </x-custom-table.tbody>
-            </x-custom-table>
+            <x-table :headers="[
+                ['index' => 'typed', 'label' => 'Typed digits'],
+                ['index' => 'display', 'label' => 'Display'],
+                ['index' => 'sent', 'label' => 'Sent to Livewire'],
+            ]" :rows='[
+                ["typed" => "1000", "display" => "10.00", "sent" => "\"10.00\""],
+                ["typed" => "200000", "display" => "2,000.00", "sent" => "\"2000.00\""],
+                ["typed" => "150055", "display" => "1,500.55", "sent" => "\"1500.55\""],
+            ]' />
             <p>
                 A typical use case is binding to a column with an Eloquent <x-block>decimal:2</x-block> cast, the value
                 arrives at the property ready for assignment, no manual parsing required:
