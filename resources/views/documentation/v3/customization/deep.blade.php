@@ -19,7 +19,7 @@
     </x-section>
     <x-section title="Publishing Configuration File" disable-copy>
         <p>
-            <a class="underline" href="{{ route('documentation', ['v3', 'configuration']) }}" wire:navigate>To start deep customization you must publish the TallStackUI configuration file.</a>
+            <a class="underline" href="{{ route('documentation', ['configuration']) }}" wire:navigate>To start deep customization you must publish the TallStackUI configuration file.</a>
         </p>
     </x-section>
     <x-section title="Override Component Class" disable-copy>
@@ -45,7 +45,7 @@
             </p>
             <x-warning>
                 Even if you prefer to use deep customization,
-                <a href="{{ route('documentation', ['v3', 'customization', 'soft']) }}" wire:navigate class="underline">soft customization</a> can still be applied to components.
+                <a href="{{ route('documentation', ['customization', 'soft']) }}" wire:navigate class="underline">soft customization</a> can still be applied to components.
             </x-warning>
         </div>
     </x-section>

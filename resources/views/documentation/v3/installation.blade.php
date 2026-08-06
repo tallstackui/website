@@ -28,7 +28,7 @@
     <x-section title="Starter Kit" disable-copy>
         Do you want to save time by using an already created base project with all you need: Laravel 12, Livewire 3,
         TallStackUI 2 and TailwindCSS 4? Discover the official <b>TallStackUI starter kit for Laravel 12</b> and save time
-        on a new project creation. <a href="{{ route('documentation', ['v3', 'starter-kit']) }}" class="underline" wire:navigate>Click here!</a>
+        on a new project creation. <a href="{{ route('documentation', ['starter-kit']) }}" class="underline" wire:navigate>Click here!</a>
     </x-section>
     <x-section title="Manual Installation" disable-copy>
         <div class="space-y-4">

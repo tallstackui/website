@@ -48,7 +48,7 @@ return new class extends Component {
                      hint="If you use TallStackUI with a prefix, you can set it here. This way, the code examples in the documentation will have the prefix defined, and when you copy a code example, the prefix will already be applied to the code, ready to use. Leave the field blank to remove the current prefix."
                      id="doc-prefix" wire:model="prefix" max-length="10">
                 <x-slot:label>
-                    <a href="{{ route('documentation', [config('documentation.version'), 'component-prefix']) }}" wire:navigate>Component
+                    <a href="{{ route('documentation', ['component-prefix']) }}" wire:navigate>Component
                         Prefix</a>
                 </x-slot:label>
             </x-input>

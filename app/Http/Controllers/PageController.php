@@ -5,8 +5,6 @@ namespace App\Http\Controllers;
 use App\Enums\Example;
 use App\Traits\VersionDiscovery;
 use Illuminate\Contracts\View\View as ViewContract;
-use Illuminate\Http\RedirectResponse;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\View as ViewFacade;
 use Symfony\Component\Yaml\Yaml;
 
@@ -21,30 +19,19 @@ class PageController
         'Ui\List' => 'Ui\ListComponent',
     ];
 
-    public function __invoke(Request $request, string $version, ?string $main = null, ?string $children = null): ViewContract|RedirectResponse
+    public function __invoke(?string $main = null, ?string $children = null): ViewContract
     {
-        $view = 'documentation.'.$version;
+        $version = $this->current();
 
-        if ($main) {
-            $view .= '.'.$main;
-        }
-
-        if ($children) {
-            $view .= '.'.$children;
-        }
-
-        if (! in_array($version, $this->versions())) {
-            return $this->elsewhere($version, $main, $children)
-                ?? redirect()->route('documentation', [$this->default(), 'installation']);
-        }
+        $view = collect(['documentation', $version, $main, $children])->filter()->join('.');
 
         if (! ViewFacade::exists($view)) {
             abort(404, headers: [
-                'Refresh' => '3;url='.route('documentation', [$this->default(), 'installation']),
+                'Refresh' => '3;url='.route('documentation', ['installation']),
             ]);
         }
 
-        $example = str($view)->remove(["documentation.$version.", ...$this->versions()])
+        $example = str($view)->remove("documentation.$version.")
             ->explode('.')
             ->map(fn (string $item): string => str($item)
                 ->replace('-', ' ')
@@ -65,21 +52,6 @@ class PageController
             'content' => $this->right($version, $main, $children),
             ...Example::tryFrom($example)?->variables() ?? [],
         ]);
-    }
-
-    /**
-     * Send a major published by another deployment to where it actually lives,
-     * keeping the requested page. Returns null when nobody publishes it.
-     */
-    private function elsewhere(string $version, ?string $main = null, ?string $children = null): ?RedirectResponse
-    {
-        if (! $site = config("documentation.sites.$version")) {
-            return null;
-        }
-
-        $path = collect([$version, $main, $children])->filter()->join('/');
-
-        return redirect()->away(rtrim($site, '/').'/docs/'.$path, 301);
     }
 
     /**

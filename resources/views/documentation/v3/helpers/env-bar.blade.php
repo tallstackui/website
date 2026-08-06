@@ -13,7 +13,7 @@
         Many applications can have different environments, such as local, staging, sandbox, and production. In this scenario, it becomes
         a bit risky to have the same application open in different browser tabs, interacting with each of the environments. The TallStackUI
         EnvBar is a sticky helper at the top of the page that allows you to easily identify the environment you are interacting with through
-        various visual information associated with different cores per environment. The EnvBar is different from the <a href="{{ route('documentation', ['v3', 'ui', 'environment']) }}" class="underline">environment component</a>,
+        various visual information associated with different cores per environment. The EnvBar is different from the <a href="{{ route('documentation', ['ui', 'environment']) }}" class="underline">environment component</a>,
         the environment component is very simple compared to the EnvBar. The EnvBar is an official TallStackUI package installed via composer.
     </x-section>
     <x-section title="Demonstration" disable-copy>

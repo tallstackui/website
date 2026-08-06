@@ -14,9 +14,9 @@ if (! function_exists('version_url')) {
     /** Absolute URL of a documentation page on the deployment that serves that major. */
     function version_url(string $version, string ...$segments): string
     {
-        $base = config("documentation.sites.$version");
+        $base = rtrim(config("documentation.sites.$version"), '/');
 
-        return rtrim($base, '/').'/docs/'.implode('/', [$version, ...$segments]);
+        return $segments ? $base.'/docs/'.implode('/', $segments) : $base.'/docs';
     }
 }
 

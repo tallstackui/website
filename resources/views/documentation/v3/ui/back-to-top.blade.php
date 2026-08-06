@@ -23,7 +23,7 @@
         </p>
     </x-section>
     <x-section title="Basic Usage">
-        <x-preview language="blade" :contents="$basic" frame="v3/ui/back-to-top" :height="420" />
+        <x-preview language="blade" :contents="$basic" frame="ui/back-to-top" :height="420" />
     </x-section>
     <x-section title="Positions" disable-copy>
         <div class="space-y-4">

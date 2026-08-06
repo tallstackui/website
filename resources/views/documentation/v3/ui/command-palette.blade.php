@@ -41,7 +41,7 @@
             <p>
                 The command palette opens when the user presses the configured keyboard shortcut. The default is
                 <x-kbd>Ctrl</x-kbd> + <x-kbd>K</x-kbd>, but you can change it inline or globally in the
-                <a href="{{ route('documentation', ['v3', 'configuration']) }}" wire:navigate class="underline">configuration file</a>
+                <a href="{{ route('documentation', ['configuration']) }}" wire:navigate class="underline">configuration file</a>
                 using dot notation: <x-block>ctrl.k</x-block>, <x-block>ctrl.shift.p</x-block>, <x-block>meta.k</x-block>, or even
                 inline using the <x-block>shortcut</x-block> attribute with the same dot notation.
             </p>
@@ -97,7 +97,7 @@
             </p>
             <x-code language="blade" :contents="$recycle" disable-copy />
             <p>
-                You can also control it globally in the <a href="{{ route('documentation', ['v3', 'configuration']) }}" wire:navigate class="underline">configuration file.</a>
+                You can also control it globally in the <a href="{{ route('documentation', ['configuration']) }}" wire:navigate class="underline">configuration file.</a>
             </p>
         </div>
     </x-section>
@@ -139,7 +139,7 @@
         <div class="space-y-4">
             <p>
                 Since you might want to use the component globally, like in a layout file, you can interact with
-                item selection in two other ways. You can configure an invocable PHP class in the <a href="{{ route('documentation', ['v3', 'configuration']) }}" wire:navigate class="underline">configuration file</a>
+                item selection in two other ways. You can configure an invocable PHP class in the <a href="{{ route('documentation', ['configuration']) }}" wire:navigate class="underline">configuration file</a>
                 to handle selections on the server side. This way, selecting an item will go through an internal
                 TallStackUI route to handle the action of creating the instance of your class and invoking it through
                 the Laravel container. The internal TallStackUI endpoint uses Laravel-signed URLs for added security.
@@ -176,12 +176,12 @@
     </x-section>
     <x-section title="Background Blur" disable-copy>
         Since you generally won't want to change this all the time, the blur setting is defined
-        exclusively via a <a href="{{ route('documentation', ['v3', 'configuration']) }}" wire:navigate class="underline">configuration file</a>,
+        exclusively via a <a href="{{ route('documentation', ['configuration']) }}" wire:navigate class="underline">configuration file</a>,
         with four available variables: <x-block>false</x-block>, <x-block>sm</x-block>, <x-block>md</x-block>, and <x-block>lg</x-block>. The default is <x-block>md</x-block>.
     </x-section>
     <x-section title="Mobile Centered" disable-copy>
         By default, the command palette is aligned to the bottom of the screen on mobile devices. You can change this behavior
-        in the <a href="{{ route('documentation', ['v3', 'configuration']) }}" wire:navigate class="underline">configuration file</a> using the <x-block>centered</x-block> configuration.
+        in the <a href="{{ route('documentation', ['configuration']) }}" wire:navigate class="underline">configuration file</a> using the <x-block>centered</x-block> configuration.
         When set to true, the command palette will be centered on mobile devices.
     </x-section>
     <x-section title="Overlay">
@@ -193,7 +193,7 @@
             </p>
             <x-code language="blade" :contents="$overlay" />
             <p>
-                You can also flip the default globally in the <a href="{{ route('documentation', ['v3', 'configuration']) }}" wire:navigate class="underline">configuration file</a>
+                You can also flip the default globally in the <a href="{{ route('documentation', ['configuration']) }}" wire:navigate class="underline">configuration file</a>
                 via the <x-block>overlay</x-block> key.
             </p>
         </div>

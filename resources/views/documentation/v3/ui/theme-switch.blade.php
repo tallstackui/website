@@ -13,7 +13,7 @@
         <livewire:customization :$customization component="ThemeSwitch" />
     </x-slot:customization>
     <x-warning class="mt-2">
-        You should only use this component if are using the <a href="{{ route('documentation', ['v3', 'helpers', 'dark-theme']) }}" wire:navigate class="underline">dark theme helper.</a>
+        You should only use this component if are using the <a href="{{ route('documentation', ['helpers', 'dark-theme']) }}" wire:navigate class="underline">dark theme helper.</a>
     </x-warning>
     <x-section class="mt-4" title="Basic Usage">
         <x-preview language="blade" :contents="$basic">

@@ -30,7 +30,7 @@
             <p>
                 Here is a complete example of using the layout component:
             </p>
-            <x-preview language="blade" :contents="$layout" frame="v3/ui/layout/example" :height="720" />
+            <x-preview language="blade" :contents="$layout" frame="ui/layout/example" :height="720" />
             <p>
                 Before continuing, you may have noticed the following:
             </p>
@@ -82,7 +82,7 @@
                 The <x-block>layout.header</x-block> component is used to group three specific slots
                 that vary the positions of content in the top horizontal bar, called the header.
             </p>
-            <x-preview language="blade" :contents="$headerSlots" frame="v3/ui/layout/header-slots" :height="220" />
+            <x-preview language="blade" :contents="$headerSlots" frame="ui/layout/header-slots" :height="220" />
             <ul class="list-inside list-decimal">
                 <li><x-block>left</x-block>: adds content to the left of the horizontal bar</li>
                 <li><x-block>middle</x-block>: adds content to the middle of the horizontal bar</li>
@@ -142,7 +142,7 @@
                 <x-block>brand-collapsed</x-block> slot to display a compact version of your branding
                 when the sidebar is collapsed. This is useful for showing an icon instead of a full logo:
             </p>
-            <x-preview language="blade" :contents="$brandCollapsed" frame="v3/ui/layout/brand-collapsed" :height="720" />
+            <x-preview language="blade" :contents="$brandCollapsed" frame="ui/layout/brand-collapsed" :height="720" />
         </div>
     </x-section>
     <x-section title="Side Bar Footer">
@@ -151,7 +151,7 @@
                 The <x-block>footer</x-block> slot allows you to pin content to the bottom of the sidebar,
                 such as version information or user profile links:
             </p>
-            <x-preview language="blade" :contents="$sidebarFooter" frame="v3/ui/layout/sidebar-footer" :height="720" />
+            <x-preview language="blade" :contents="$sidebarFooter" frame="ui/layout/sidebar-footer" :height="720" />
         </div>
     </x-section>
     <x-section title="Side Bar Item" disable-copy>
@@ -160,7 +160,7 @@
                 The <x-block>side-bar.item</x-block> component is used to add clickable options to the
                 <x-block>side-bar</x-block>. It can be used to add an individual item or create a group of items.
             </p>
-            <x-preview frame="v3/ui/layout/sidebar-item" :height="720" />
+            <x-preview frame="ui/layout/sidebar-item" :height="720" />
             <x-code language="blade" :contents="$item" disable-copy />
             <p>
                 If you don't want to use the <x-block>side-bar</x-block> component's <x-block>smart</x-block> to activate automatic route detection,
@@ -229,6 +229,6 @@
     </x-section>
     <x-section title="Customization" disable-copy>
         All the components mentioned above are available to be fully customized through one of the TallStackUI customization methods:
-        <a href="{{ route('documentation', ['v3', 'customization', 'concept']) }}" wire:navigate class="underline">soft customization or deep customization.</a>
+        <a href="{{ route('documentation', ['customization', 'concept']) }}" wire:navigate class="underline">soft customization or deep customization.</a>
     </x-section>
 </x-layout>

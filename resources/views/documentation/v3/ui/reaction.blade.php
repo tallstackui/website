@@ -17,7 +17,7 @@
             In the modern world many applications have blogs, posts or articles. This
             way they need to capture the reaction of their readers to feel how welcome
             or hated that content was. The reaction component is the combination of
-            the <a href="{{ route('documentation', ['v3', 'ui', 'tooltip']) }}" wire:navigate class="underline">Tooltip</a>
+            the <a href="{{ route('documentation', ['ui', 'tooltip']) }}" wire:navigate class="underline">Tooltip</a>
             component with emoji icons offered by the
             <a href="https://googlefonts.github.io/noto-emoji-animation/" target="_blank" class="underline">Noto Emoji Animation project.</a>
         </p>

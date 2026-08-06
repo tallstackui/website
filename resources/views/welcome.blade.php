@@ -162,7 +162,7 @@
                     </p>
 
                     <div class="mt-8 flex flex-wrap items-center justify-center gap-3">
-                        <a href="{{ route('documentation', ['v3', 'installation']) }}"
+                        <a href="{{ route('documentation', ['installation']) }}"
                            wire:navigate
                            class="landing-cta-primary">
                             Get Started
@@ -397,7 +397,7 @@
                         </ul>
 
                         <div class="mt-8 flex flex-wrap gap-3">
-                            <a href="{{ route('documentation', ['v3', 'form', 'input']) }}"
+                            <a href="{{ route('documentation', ['form', 'input']) }}"
                                wire:navigate
                                class="landing-cta-primary">
                                 Browse form components
@@ -433,7 +433,7 @@
                         </ul>
 
                         <div class="mt-8 flex items-center gap-3">
-                            <a href="{{ route('documentation', ['v3', 'customization', 'soft']) }}"
+                            <a href="{{ route('documentation', ['customization', 'soft']) }}"
                                wire:navigate
                                class="landing-cta-primary">
                                 Know more
@@ -535,7 +535,7 @@
                         No Pro components. Everything's here for you to use.
                     </p>
                     <div class="mt-10 flex flex-wrap justify-center gap-3">
-                        <a href="{{ route('documentation', ['v3', 'installation']) }}"
+                        <a href="{{ route('documentation', ['installation']) }}"
                            wire:navigate
                            class="landing-cta-final-primary">
                             Get Started
