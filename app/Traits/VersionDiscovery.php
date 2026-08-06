@@ -7,15 +7,21 @@ use Illuminate\Support\Facades\Route;
 trait VersionDiscovery
 {
     /**
-     * The available versions.
+     * The versions served by this deployment.
      */
     public function versions(): array
     {
         return [
-            'v1',
-            'v2',
-            'v3',
+            config('documentation.version'),
         ];
+    }
+
+    /**
+     * The version this deployment falls back to.
+     */
+    public function default(): string
+    {
+        return head($this->versions());
     }
 
     /**
@@ -28,7 +34,7 @@ trait VersionDiscovery
             ->before('/')
             ->value();
 
-        return $version ?: LATEST_VERSION;
+        return $version ?: $this->default();
     }
 
     /**

@@ -56,7 +56,6 @@ enum Example: string
     case Installation = 'Installation';
     case StarterKit = 'StarterKit';
     case ComponentPrefix = 'ComponentPrefix';
-    case SummerRelease = 'SummerRelease';
     case Translation = 'Translation';
     case Troubleshooting = 'Troubleshooting';
     case Updates = 'Updates';
@@ -65,13 +64,7 @@ enum Example: string
     case WithoutLivewire = 'WithoutLivewire';
     // endregion
 
-    // region Personalization (v1/v2)
-    case ColorPersonalization = 'Personalization\\Color';
-    case DeepPersonalization = 'Personalization\\Deep';
-    case SoftPersonalization = 'Personalization\\Soft';
-    // endregion
-
-    // region Customization (v3)
+    // region Customization
     case ColorCustomization = 'Customization\\Color';
     case DeepCustomization = 'Customization\\Deep';
     case GlobalsCustomization = 'Customization\\Globals';

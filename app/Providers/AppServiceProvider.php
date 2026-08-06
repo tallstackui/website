@@ -21,7 +21,7 @@ class AppServiceProvider extends ServiceProvider
 
         $this->configureSharedVariables();
 
-        $this->configurePersonalization();
+        $this->configureCustomization();
 
         $this->registerDemoLayoutAliases();
     }
@@ -53,7 +53,7 @@ class AppServiceProvider extends ServiceProvider
         URL::forceHttps($this->app->isProduction() || str_contains(config('app.url'), 'ngrok'));
     }
 
-    private function configurePersonalization(): void
+    private function configureCustomization(): void
     {
         TallStackUi::customize('form.input')
             ->scope('input-rounded')

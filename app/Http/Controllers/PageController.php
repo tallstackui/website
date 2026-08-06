@@ -34,12 +34,12 @@ class PageController
         }
 
         if (! in_array($version, $this->versions())) {
-            return redirect()->route('documentation', ['v2', 'installation']);
+            return redirect()->route('documentation', [$this->default(), 'installation']);
         }
 
         if (! ViewFacade::exists($view)) {
             abort(404, headers: [
-                'Refresh' => '3;url='.route('documentation', ['v2', 'installation']),
+                'Refresh' => '3;url='.route('documentation', [$this->default(), 'installation']),
             ]);
         }
 
@@ -62,7 +62,6 @@ class PageController
 
         return view($view, [
             'content' => $this->right($version, $main, $children),
-            'tailwindcss' => (bool) $request->cookie('tailwindcss'),
             ...Example::tryFrom($example)?->variables() ?? [],
         ]);
     }
