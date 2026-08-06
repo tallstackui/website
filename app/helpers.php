@@ -3,7 +3,17 @@
 use Illuminate\Support\Facades\Cookie;
 
 if (! defined('LATEST_VERSION')) {
-    define('LATEST_VERSION', 'v3');
+    define('LATEST_VERSION', 'v4');
+}
+
+if (! function_exists('version_url')) {
+    /** Absolute URL of a documentation page on the deployment that serves that major. */
+    function version_url(string $version, string ...$segments): string
+    {
+        $base = config("documentation.sites.$version");
+
+        return rtrim($base, '/').'/docs/'.implode('/', [$version, ...$segments]);
+    }
 }
 
 if (! function_exists('apply_prefix')) {

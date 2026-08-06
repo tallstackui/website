@@ -1,7 +1,8 @@
 <?php
 
-use Livewire\Component;
 use App\Traits\VersionDiscovery;
+use Livewire\Attributes\Computed;
+use Livewire\Component;
 
 return new class extends Component {
     use VersionDiscovery;
@@ -13,21 +14,29 @@ return new class extends Component {
         $this->version = $this->current();
     }
 
+    #[Computed]
+    public function options(): array
+    {
+        return collect(config('documentation.sites'))
+            ->map(fn (string $url, string $version): array => [
+                'label' => 'Version '.str($version)->after('v').'.x',
+                'value' => $version,
+            ])
+            ->values()
+            ->all();
+    }
+
     public function change(): void
     {
-        match ($this->version) {
-            'v3' => redirect(route('documentation', ['v3', 'installation'])),
-            'v2' => redirect(route('documentation', ['v2', 'installation'])),
-            'v1' => redirect(route('documentation', ['v1', 'installation'])),
-        };
+        if ($this->version === $this->current()) {
+            return;
+        }
+
+        redirect()->away(version_url($this->version, 'installation'));
     }
 };
 ?>
 
 <div>
-    <x-select.native :options="[
-        ['label' => 'Version 3.x', 'value' => 'v3'],
-        ['label' => 'Version 2.x', 'value' => 'v2'],
-        ['label' => 'Version 1.x', 'value' => 'v1'],
-    ]" wire:model="version" wire:change="change"/>
+    <x-select.native :options="$this->options" wire:model="version" wire:change="change" />
 </div>

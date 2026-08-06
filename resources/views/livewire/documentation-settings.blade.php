@@ -9,16 +9,9 @@ return new class extends Component {
     #[Validate(['nullable', 'min:1'], onUpdate: false)]
     public string|null $prefix;
 
-    #[Validate(['boolean'], onUpdate: false)]
-    public bool $tailwindcss;
-
-    public string|null $version;
-
     public function mount(): void
     {
         $this->prefix = Cookie::get('prefix');
-
-        $this->tailwindcss = (bool) Cookie::get('tailwindcss');
     }
 
     public function save(): void
@@ -32,7 +25,6 @@ return new class extends Component {
         })->validate();
 
         Cookie::queue(blank($this->prefix) ? Cookie::forget('prefix') : Cookie::forever('prefix', $this->prefix));
-        Cookie::queue(Cookie::forever('tailwindcss', $this->tailwindcss));
 
         $this->js(<<<JS
         location.reload();
@@ -56,13 +48,10 @@ return new class extends Component {
                      hint="If you use TallStackUI with a prefix, you can set it here. This way, the code examples in the documentation will have the prefix defined, and when you copy a code example, the prefix will already be applied to the code, ready to use. Leave the field blank to remove the current prefix."
                      id="doc-prefix" wire:model="prefix" max-length="10">
                 <x-slot:label>
-                    <a href="{{ route('documentation', ['v2', 'component-prefix']) }}" wire:navigate>Component
+                    <a href="{{ route('documentation', [config('documentation.version'), 'component-prefix']) }}" wire:navigate>Component
                         Prefix</a>
                 </x-slot:label>
             </x-input>
-            @if ($version === 'v2')
-                <x-toggle label="View TailwindCSS examples using v4" wire:model="tailwindcss"/>
-            @endif
         </form>
         <x-slot:footer>
             <x-button class="w-full" type="submit" form="form-documentation-settings" color="pink" sm>
