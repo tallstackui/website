@@ -156,7 +156,7 @@
             </x-preview>
             <p>
                 A global default is available so an entire application can opt every autocomplete into strict
-                mode at once via <a href="{{ route('documentation', ['v4', 'configuration']) }}" wire:navigate class="underline">configuration</a>:
+                mode at once via <a href="{{ route('documentation', ['configuration']) }}" wire:navigate class="underline">configuration</a>:
             </p>
             <x-code language="php" :contents="$strictGlobal" disable-copy />
         </div>

@@ -30,7 +30,7 @@
         <div class="space-y-4">
             <x-code language="shell" :contents="$prefix"/>
             <p>
-                This command is used to set up the component prefix. <a href="{{ route('documentation', ['v4', 'component-prefix']) }}" class="underline">Read more about it by clicking here.</a>
+                This command is used to set up the component prefix. <a href="{{ route('documentation', ['component-prefix']) }}" class="underline">Read more about it by clicking here.</a>
             </p>
         </div>
     </x-section>
@@ -38,7 +38,7 @@
         <div class="space-y-4">
             <x-code language="shell" :contents="$colors"/>
             <p>
-                This command is used to set up or manipulate component colors. <a href="{{ route('documentation', ['v4', 'customization', 'color']).'#create-or-manipulate-colors' }}" class="underline" wire:navigate>Read more about it by clicking here.</a>
+                This command is used to set up or manipulate component colors. <a href="{{ route('documentation', ['customization', 'color']).'#create-or-manipulate-colors' }}" class="underline" wire:navigate>Read more about it by clicking here.</a>
             </p>
         </div>
     </x-section>

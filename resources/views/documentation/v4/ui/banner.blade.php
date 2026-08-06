@@ -19,27 +19,27 @@
     <x-section title="Usage" anchor="static-usage">
         <div class="space-y-4">
             <p>To use the component you must add it to your application layout, within the <x-block>body</x-block> tag:</p>
-            <x-preview language="blade" :contents="$introduction" frame="v3/ui/banner/introduction" :height="240" />
+            <x-preview language="blade" :contents="$introduction" frame="ui/banner/introduction" :height="240" />
         </div>
     </x-section>
     <x-section title="Messages" anchor="static-messages">
         <div class="space-y-4">
             All you need to do is to set the <x-block>text</x-block> attribute with the message you want to display.
-            <x-preview language="blade" :contents="$text" frame="v3/ui/banner/text" :height="220" />
+            <x-preview language="blade" :contents="$text" frame="ui/banner/text" :height="220" />
             <p>
                 You can also set random messages to be displayed:
             </p>
-            <x-preview language="blade" :contents="$alternative" frame="v3/ui/banner/alternative" :height="220" />
+            <x-preview language="blade" :contents="$alternative" frame="ui/banner/alternative" :height="220" />
         </div>
     </x-section>
     <x-section title="Left Slot" anchor="static-left-slot">
-        <x-preview language="blade" :contents="$slot" frame="v3/ui/banner/slot" :height="220" />
+        <x-preview language="blade" :contents="$slot" frame="ui/banner/slot" :height="220" />
     </x-section>
     <x-section title="Close Option" anchor="static-close-option">
-        <x-preview language="blade" :contents="$close" frame="v3/ui/banner/close" :height="220" />
+        <x-preview language="blade" :contents="$close" frame="ui/banner/close" :height="220" />
     </x-section>
     <x-section title="Animations" anchor="static-animations">
-        <x-preview language="blade" :contents="$animated" frame="v3/ui/banner/animated" :height="280" />
+        <x-preview language="blade" :contents="$animated" frame="ui/banner/animated" :height="280" />
     </x-section>
     <x-section title="Rotate" anchor="static-rotate">
         <div class="space-y-4">
@@ -49,7 +49,7 @@
             <p>
                 <x-block>rotate</x-block> accepts <x-block>true</x-block> (or just the bare attribute) for the default speed, or one of <x-block>slow</x-block>, <x-block>normal</x-block>, <x-block>fast</x-block>.
             </p>
-            <x-preview language="blade" :contents="$rotate" frame="v3/ui/banner/rotate" :height="240" />
+            <x-preview language="blade" :contents="$rotate" frame="ui/banner/rotate" :height="240" />
             <p>
                 When <x-block>text</x-block> is an array, all items are joined into a single rolling string using the <x-block>separator</x-block> prop (default <x-block>' • '</x-block>):
             </p>
@@ -57,13 +57,13 @@
         </div>
     </x-section>
     <x-section title="Date Limit" anchor="static-date-limit" description="An option to control the final date to display the banner.">
-        <x-preview language="blade" :contents="$dates" frame="v3/ui/banner/dates" :height="240" />
+        <x-preview language="blade" :contents="$dates" frame="ui/banner/dates" :height="240" />
     </x-section>
     <x-section title="Size Variations" anchor="static-size-variations">
-        <x-preview language="blade" :contents="$sizes" frame="v3/ui/banner/sizes" :height="220" />
+        <x-preview language="blade" :contents="$sizes" frame="ui/banner/sizes" :height="220" />
     </x-section>
     <x-section title="Color Variations & Light Option" anchor="static-color-variations-light-option">
-        <x-preview language="blade" :contents="$colors" frame="v3/ui/banner/colors" :height="220" />
+        <x-preview language="blade" :contents="$colors" frame="ui/banner/colors" :height="220" />
     </x-section>
     <x-section title="Dispatching via Controllers" new anchor="static-dispatching-via-controllers" disable-copy>
         <x-code :contents="$controllers" disable-copy />

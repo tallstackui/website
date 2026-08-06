@@ -25,14 +25,14 @@
             the list of components that use floating:
         </p>
         <ul class="mt-2 list-decimal list-inside">
-            <li><a href="{{ route('documentation', ['v4', 'form', 'autocomplete']) }}" wire:navigate>Form AutoComplete</a></li>
-            <li><a href="{{ route('documentation', ['v4', 'form', 'input']) }}" wire:navigate>Form Date</a></li>
-            <li><a href="{{ route('documentation', ['v4', 'form', 'time']) }}" wire:navigate>Form Time</a></li>
-            <li><a href="{{ route('documentation', ['v4', 'form', 'password']) }}" wire:navigate>Form Password</a></li>
-            <li><a href="{{ route('documentation', ['v4', 'form', 'upload']) }}" wire:navigate>Form Upload</a></li>
-            <li><a href="{{ route('documentation', ['v4', 'form', 'color']) }}" wire:navigate>Form Color</a></li>
-            <li><a href="{{ route('documentation', ['v4', 'ui', 'dropdown']) }}" wire:navigate>Dropdown</a></li>
-            <li><a href="{{ route('documentation', ['v4', 'form', 'select']) }}" wire:navigate>Select</a></li>
+            <li><a href="{{ route('documentation', ['form', 'autocomplete']) }}" wire:navigate>Form AutoComplete</a></li>
+            <li><a href="{{ route('documentation', ['form', 'input']) }}" wire:navigate>Form Date</a></li>
+            <li><a href="{{ route('documentation', ['form', 'time']) }}" wire:navigate>Form Time</a></li>
+            <li><a href="{{ route('documentation', ['form', 'password']) }}" wire:navigate>Form Password</a></li>
+            <li><a href="{{ route('documentation', ['form', 'upload']) }}" wire:navigate>Form Upload</a></li>
+            <li><a href="{{ route('documentation', ['form', 'color']) }}" wire:navigate>Form Color</a></li>
+            <li><a href="{{ route('documentation', ['ui', 'dropdown']) }}" wire:navigate>Dropdown</a></li>
+            <li><a href="{{ route('documentation', ['form', 'select']) }}" wire:navigate>Select</a></li>
         </ul>
     </x-section>
 </x-layout>

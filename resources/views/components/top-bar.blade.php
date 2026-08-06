@@ -1,4 +1,4 @@
-@if ($version === LATEST_VERSION)
+@if ($version === latest_version())
     <x-banner :color="['background' => 'bg-dark-900 border-b border-white/10', 'text' => 'text-white']">
         <p>
             <b>TallStackUI 4.0 is here!</b> Six new components, a near-black dark mode, and

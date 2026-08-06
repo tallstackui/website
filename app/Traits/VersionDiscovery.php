@@ -7,34 +7,12 @@ use Illuminate\Support\Facades\Route;
 trait VersionDiscovery
 {
     /**
-     * The versions served by this deployment.
-     */
-    public function versions(): array
-    {
-        return [
-            config('documentation.version'),
-        ];
-    }
-
-    /**
-     * The version this deployment falls back to.
-     */
-    public function default(): string
-    {
-        return head($this->versions());
-    }
-
-    /**
-     * Discover the current selected version based
-     * on the current route or get the default.
+     * The major published by this deployment. The version no longer
+     * appears in the URL, so it comes straight from the configuration.
      */
     public function current(): string
     {
-        $version = str(Route::getCurrentRoute()?->parameter('version'))->after('docs/')
-            ->before('/')
-            ->value();
-
-        return $version ?: $this->default();
+        return config('documentation.version');
     }
 
     /**

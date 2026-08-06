@@ -74,7 +74,7 @@
     </x-section>
     <x-section title="Other Options">
         <p>
-            In addition to the methods demonstrated above, all other methods available in the <a href="{{ route('documentation', ['v4', 'form', 'date']) }}" wire:navigate class="underline">date</a> component are also available in the Calendar component.
+            In addition to the methods demonstrated above, all other methods available in the <a href="{{ route('documentation', ['form', 'date']) }}" wire:navigate class="underline">date</a> component are also available in the Calendar component.
         </p>
     </x-section>
 </x-layout>

@@ -110,7 +110,7 @@
             <x-warning class="mt-4">
                 This option is available for all components that can display form validation errors,
                 basically all form components. Additionally, you can enable the "invalidate" state
-                globally by setting it via the <a href="{{ route('documentation', ['v4', 'configuration']) }}" class="underline" wire:navigate>configuration file.</a> This way, all components that can
+                globally by setting it via the <a href="{{ route('documentation', ['configuration']) }}" class="underline" wire:navigate>configuration file.</a> This way, all components that can
                 display validation errors will no longer display them.
             </x-warning>
         </div>

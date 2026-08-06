@@ -86,7 +86,7 @@
                                 @endif
                             </header>
                         @endif
-                        @if ($current() !== LATEST_VERSION)
+                        @if ($current() !== latest_version())
                             <div class="mb-6">
                                 <x-old-version-warning />
                             </div>

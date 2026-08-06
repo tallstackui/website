@@ -48,7 +48,7 @@
             <x-preview :contents="$time">
                 <livewire:documentation.interactions.toast.timeout/>
             </x-preview>
-            <p>You can also control the default time by interacting with <a href="{{ route('documentation', ['v4', 'configuration']) }}" wire:navigate class="underline">the configuration file</a>:
+            <p>You can also control the default time by interacting with <a href="{{ route('documentation', ['configuration']) }}" wire:navigate class="underline">the configuration file</a>:
             <x-code :contents="$defaultTime" disable-copy />
             <p>Then use the <x-block>timeout</x-block> method without parameters:</p>
             <x-code :contents="$defaultTimeUsage" disable-copy />
@@ -67,7 +67,7 @@
                 <livewire:documentation.interactions.toast.expandable/>
             </x-preview>
             <p class="mt-2">
-                You can configure Toast to be extensible by default in <a href="{{ route('documentation', ['v4', 'configuration']) }}" wire:navigate class="underline">the configuration file.</a> When you
+                You can configure Toast to be extensible by default in <a href="{{ route('documentation', ['configuration']) }}" wire:navigate class="underline">the configuration file.</a> When you
                 do that, you can optionally ignore the expandable for specific Toast:
             </p>
             <x-code :contents="$ignoringExpandable" disable-copy />
@@ -76,7 +76,7 @@
     <x-section title="Position" description="An option to control the toast position at runtime.">
         <div class="space-y-4">
             <p class="mt-2">
-                By default, the Toast position is configured using <a href="{{ route('documentation', ['v4', 'configuration']) }}" wire:navigate class="underline">the configuration file.</a>.
+                By default, the Toast position is configured using <a href="{{ route('documentation', ['configuration']) }}" wire:navigate class="underline">the configuration file.</a>.
                 However, you can set the Toast position at runtime using the <x-block>position</x-block> method:
             </p>
             <x-preview :contents="$position">
@@ -155,7 +155,7 @@
         <p>
             You can invert the Toast colors using the <x-block>colorful</x-block> global so the body background
             takes the notification type color (green for success, red for error, and so on) with white text.
-            <a href="{{ route('documentation', ['v4', 'customization', 'globals']) }}" wire:navigate class="underline">
+            <a href="{{ route('documentation', ['customization', 'globals']) }}" wire:navigate class="underline">
                 Learn more about the global Colorful.
             </a>
         </p>

@@ -14,13 +14,13 @@
     </x-section>
     <x-section class="grid grid-cols-2 gap-4" disable-copy>
         <x-card>
-            <a class="inline-flex items-center gap-2" href="{{ route('documentation', ['v4', 'customization', 'soft']) }}" wire:navigate>
+            <a class="inline-flex items-center gap-2" href="{{ route('documentation', ['customization', 'soft']) }}" wire:navigate>
                 <u>Soft</u> Customization
                 <x-icon name="arrow-up-right" class="h-5 w-5 text-pink-500" />
             </a>
         </x-card>
         <x-card>
-            <a class="inline-flex items-center gap-2" href="{{ route('documentation', ['v4', 'customization', 'deep']) }}" wire:navigate>
+            <a class="inline-flex items-center gap-2" href="{{ route('documentation', ['customization', 'deep']) }}" wire:navigate>
                 <u>Deep</u> Customization
                 <x-icon name="arrow-up-right" class="h-5 w-5 text-pink-500" />
             </a>

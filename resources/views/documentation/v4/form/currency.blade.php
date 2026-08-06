@@ -63,7 +63,7 @@
         <div class="space-y-4">
             <p>
                 You can display symbols related to each supported
-                currency through <a href="{{ route('documentation', ['v4', 'translation']) }}" class="underline">TallStackUI's translation system.</a> You can control which symbol
+                currency through <a href="{{ route('documentation', ['translation']) }}" class="underline">TallStackUI's translation system.</a> You can control which symbol
                 will be displayed via arguments.
             </p>
             <x-preview language="blade" :contents="$symbols">
@@ -245,7 +245,7 @@
     <x-section title="Global Defaults" disable-copy>
         <div class="space-y-4">
             <p>
-                If most components in your application need the same sync mode, set it once in the <a href="{{ route('documentation', ['v4', 'configuration']) }}" class="underline" wire:navigate>configuration file</a>
+                If most components in your application need the same sync mode, set it once in the <a href="{{ route('documentation', ['configuration']) }}" class="underline" wire:navigate>configuration file</a>
                 to avoid repeating the prop on every usage.
             </p>
             <x-code language="php" :contents="$globalDefaults" />

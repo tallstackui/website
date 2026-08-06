@@ -6,23 +6,28 @@ use App\Http\Middleware\ShareVersionVariable;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Route;
 
-Route::redirect('/docs', '/docs/v4/installation');
-Route::redirect('/docs/v4', '/docs/v4/installation');
-Route::redirect('/docs/contribution', '/docs/v4/contribution');
-Route::redirect('/contribution', '/docs/v4/contribution');
-Route::redirect('/upgrade', '/docs/v4/upgrade-guide');
-Route::redirect('/install', '/docs/v4/installation');
+Route::redirect('/docs', '/docs/installation');
+Route::redirect('/contribution', '/docs/contribution');
+Route::redirect('/upgrade', '/docs/upgrade-guide');
+Route::redirect('/install', '/docs/installation');
+Route::redirect('/summer-release', '/docs/upgrade-guide');
 Route::redirect('/issue', 'https://github.com/tallstackui/tallstackui/issues/new?template=bug_report.yml')->name('issue');
 
-/** v3 lives on its own deployment; keep the old paths pointing at it. */
-Route::get('/docs/v3/{path?}', fn (?string $path = null) => redirect()->away(
-    rtrim(config('documentation.sites.v3'), '/').'/docs/v3'.($path ? '/'.$path : ''), 301
-))->where('path', '.*');
+/**
+ * The major used to live in the path. It now lives in the domain, so these
+ * point at whoever publishes that major, or at the upgrade guide when the
+ * major reached end of life. Declared before the documentation route so the
+ * "v<n>" segment is never mistaken for a page.
+ */
+Route::get('/docs/{version}/{path?}', function (string $version, ?string $path = null) {
+    if ($version === config('documentation.version')) {
+        return redirect('/docs/'.($path ?: 'installation'), 301);
+    }
 
-/** v1 and v2 reached end of life and are no longer published. */
-Route::permanentRedirect('/docs/v1/{path?}', '/docs/v4/upgrade-guide')->where('path', '.*');
-Route::permanentRedirect('/docs/v2/{path?}', '/docs/v4/upgrade-guide')->where('path', '.*');
-Route::permanentRedirect('/summer-release', '/docs/v4/upgrade-guide');
+    return config("documentation.sites.$version")
+        ? redirect()->away(version_url($version, ...array_filter(explode('/', (string) $path))), 301)
+        : redirect()->away(version_url(latest_version(), 'upgrade-guide'), 301);
+})->where(['version' => 'v[0-9]+', 'path' => '.*']);
 
 Route::get('/demo/{view}', function (string $view) {
     $template = 'demo.'.str_replace('/', '.', $view);
@@ -48,5 +53,5 @@ Route::get('/ai/{name}.md', function (string $name) {
 Route::middleware(ShareVersionVariable::class)
     ->group(function () {
         Route::view('/', 'welcome', Example::Welcome->variables())->name('welcome');
-        Route::get('/docs/{version}/{main?}/{children?}', PageController::class)->name('documentation');
+        Route::get('/docs/{main?}/{children?}', PageController::class)->name('documentation');
     });

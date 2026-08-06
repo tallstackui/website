@@ -95,6 +95,6 @@
         </x-preview>
     </x-section>
     <x-section title="Variations" disable-copy>
-        <p>The concept of variation follows the same patterns as <a href="{{ route('documentation', ['v4', 'ui', 'icon']).'#variations' }}" wire:navigate class="underline">icon variations.</a></p>
+        <p>The concept of variation follows the same patterns as <a href="{{ route('documentation', ['ui', 'icon']).'#variations' }}" wire:navigate class="underline">icon variations.</a></p>
     </x-section>
 </x-layout>

@@ -65,7 +65,7 @@
                     <ul>
                         <li>- <x-block>.ai/</x-block> directory with component instruction files for AI assistants (GitHub Copilot, Claude, Cursor, etc.).</li>
                         <li>- MCP server hosted on the documentation website for real-time component documentation access.</li>
-                        <li>- Learn more on the <a href="{{ route('documentation', ['v4', 'ai']) }}" wire:navigate class="font-bold underline">AI documentation page</a>.</li>
+                        <li>- Learn more on the <a href="{{ route('documentation', ['ai']) }}" wire:navigate class="font-bold underline">AI documentation page</a>.</li>
                     </ul>
                 </div>
                 <div>
@@ -74,11 +74,11 @@
                         <li>- Dozens of community feature requests addressed.</li>
                         <li>- <b>"Personalization" renamed to "Customization"</b> across the entire library.</li>
                         <li>
-                            - New <a href="{{ route('documentation', ['v4', 'customization', 'globals']) }}" wire:navigate class="underline">Globals customization</a> concept (flash, square, colorful) -
+                            - New <a href="{{ route('documentation', ['customization', 'globals']) }}" wire:navigate class="underline">Globals customization</a> concept (flash, square, colorful) -
                             <i>think of them as presets.</i>
                         </li>
-                        <li>- New <a href="{{ route('documentation', ['v4', 'configuration']) }}" wire:navigate class="underline">configuration file structure</a> documentation.</li>
-                        <li>- New <a href="{{ route('documentation', ['v4', 'customization', 'soft']) }}" wire:navigate class="underline">Internal Scoped Customization</a> concept.</li>
+                        <li>- New <a href="{{ route('documentation', ['configuration']) }}" wire:navigate class="underline">configuration file structure</a> documentation.</li>
+                        <li>- New <a href="{{ route('documentation', ['customization', 'soft']) }}" wire:navigate class="underline">Internal Scoped Customization</a> concept.</li>
                         <li>- New <x-block>$tsui</x-block> JavaScript helper.</li>
                         <li>- New TailwindCSS colors added in v4.2 of TailwindCSS</li>
                         <li>- <x-block>Avatar</x-block> Component: group and presence indicators.</li>
@@ -128,7 +128,7 @@
                 <h2 class="text-lg tracking-tight text-pink-600 font-medium">2. Check soft customization keys:</h2>
                 <p>
                     Some soft customization keys may have been renamed for better organization. Before upgrading, review the
-                    <a href="{{ route('documentation', ['v4', 'customization', 'soft']) }}" wire:navigate class="underline">Soft Customization documentation</a>
+                    <a href="{{ route('documentation', ['customization', 'soft']) }}" wire:navigate class="underline">Soft Customization documentation</a>
                     to verify your keys are up to date. <b>If you do not use Soft Customization, then just skip this step!</b>
                 </p>
             </div>
@@ -144,7 +144,7 @@
                 <h2 class="text-lg tracking-tight text-pink-600 font-medium">4. Internal Scoped Customization:</h2>
                 <p>
                     If you used to publish Blade files to customize internal components within other components, this is no longer necessary.
-                    Learn about the <a href="{{ route('documentation', ['v4', 'customization', 'soft']) }}" wire:navigate class="underline font-bold">Internal Scoped Customization</a>:
+                    Learn about the <a href="{{ route('documentation', ['customization', 'soft']) }}" wire:navigate class="underline font-bold">Internal Scoped Customization</a>:
                     a way to customize internal components without publishing Blade files or changing all components globally.
                 </p>
             </div>
