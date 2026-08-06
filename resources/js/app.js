@@ -1,6 +1,6 @@
 import './bootstrap';
 import clipboard from "./modules/clipboard";
-import copyMarkdown from "./modules/copy-markdown";
+import copy from "./modules/copy";
 import reveal from "./modules/reveal";
 import spotlight from "./modules/spotlight";
 import sidebarScroll from "./modules/sidebar-scroll";
@@ -15,7 +15,7 @@ sidebarScroll();
 /* clipboard */
 document.addEventListener('alpine:init', () => {
     window.Alpine.data('clipboard', clipboard)
-    window.Alpine.data('copyMarkdown', copyMarkdown)
+    window.Alpine.data('copy', copy)
     window.Alpine.data('spotlight', spotlight)
 });
 
