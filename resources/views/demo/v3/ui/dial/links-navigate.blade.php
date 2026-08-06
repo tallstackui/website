@@ -1,5 +1,5 @@
 <x-demo-layout title="Dial Links (Navigate)">
-    <div class="flex min-h-75 flex-col items-center justify-center px-6 py-10 text-sm text-slate-500 dark:text-slate-400">
+    <div class="flex min-h-75 flex-col items-center justify-center px-6 py-10 text-sm text-slate-500 dark:text-dark-400">
         <p>Same as Links, but using <code class="font-mono">navigate</code> / <code class="font-mono">navigate-hover</code> for Livewire SPA transitions.</p>
     </div>
 

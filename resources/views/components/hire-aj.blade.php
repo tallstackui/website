@@ -10,17 +10,17 @@
                 <img src="https://unavatar.io/github/devajmeireles"
                      alt="AJ Meireles"
                      loading="lazy"
-                     class="relative h-24 w-24 rounded-full object-cover ring-4 ring-white/90 dark:ring-slate-900/50"/>
+                     class="relative h-24 w-24 rounded-full object-cover ring-4 ring-white/90 dark:ring-dark-900/50"/>
             </div>
 
-            <h2 class="mt-5 font-display text-2xl font-semibold tracking-tight text-slate-900 dark:text-slate-100">
+            <h2 class="mt-5 font-display text-2xl font-semibold tracking-tight text-slate-900 dark:text-dark-100">
                 AJ Meireles
             </h2>
             <p class="mt-1 text-xs font-semibold tracking-[0.18em] text-pink-600 uppercase dark:text-pink-400">
                 Creator of TallStackUI
             </p>
 
-            <p class="mt-4 max-w-lg text-sm leading-relaxed text-slate-600 dark:text-slate-300">
+            <p class="mt-4 max-w-lg text-sm leading-relaxed text-slate-600 dark:text-dark-300">
                 AJ is a full-stack developer with more than 10 years of experience and deep expertise in PHP, the Laravel ecosystem overall, and the TALL Stack.
             </p>
 
@@ -42,7 +42,7 @@
                 <a href="https://www.linkedin.com/in/devajmeireles/"
                    target="_blank"
                    rel="noopener noreferrer"
-                   class="group inline-flex items-center justify-center gap-2 rounded-full border border-slate-200 bg-white/80 px-4 py-2 text-xs font-semibold text-slate-700 transition hover:-translate-y-0.5 hover:border-sky-400 hover:bg-sky-50 hover:text-sky-700 hover:shadow-md hover:shadow-sky-500/15 dark:border-slate-700 dark:bg-slate-900/60 dark:text-slate-200 dark:hover:border-sky-500/50 dark:hover:bg-sky-950/40 dark:hover:text-sky-300">
+                   class="group inline-flex items-center justify-center gap-2 rounded-full border border-slate-200 bg-white/80 px-4 py-2 text-xs font-semibold text-slate-700 transition hover:-translate-y-0.5 hover:border-sky-400 hover:bg-sky-50 hover:text-sky-700 hover:shadow-md hover:shadow-sky-500/15 dark:border-dark-700 dark:bg-dark-900/60 dark:text-dark-200 dark:hover:border-sky-500/50 dark:hover:bg-sky-950/40 dark:hover:text-sky-300">
                     <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" class="h-4 w-4">
                         <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
                     </svg>
@@ -51,7 +51,7 @@
                 <a href="https://aj.dev.br/cv"
                    target="_blank"
                    rel="noopener noreferrer"
-                   class="group inline-flex items-center justify-center gap-2 rounded-full border border-slate-200 bg-white/80 px-4 py-2 text-xs font-semibold text-slate-700 transition hover:-translate-y-0.5 hover:border-violet-400 hover:bg-violet-50 hover:text-violet-700 hover:shadow-md hover:shadow-violet-500/15 dark:border-slate-700 dark:bg-slate-900/60 dark:text-slate-200 dark:hover:border-violet-500/50 dark:hover:bg-violet-950/40 dark:hover:text-violet-300">
+                   class="group inline-flex items-center justify-center gap-2 rounded-full border border-slate-200 bg-white/80 px-4 py-2 text-xs font-semibold text-slate-700 transition hover:-translate-y-0.5 hover:border-violet-400 hover:bg-violet-50 hover:text-violet-700 hover:shadow-md hover:shadow-violet-500/15 dark:border-dark-700 dark:bg-dark-900/60 dark:text-dark-200 dark:hover:border-violet-500/50 dark:hover:bg-violet-950/40 dark:hover:text-violet-300">
                     <x-icon name="document-text" solid class="h-4 w-4 transition group-hover:rotate-3"/>
                     AJ's CV
                 </a>

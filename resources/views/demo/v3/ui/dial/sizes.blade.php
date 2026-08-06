@@ -1,5 +1,5 @@
 <x-demo-layout title="Dial Sizes">
-    <div class="flex min-h-[440px] flex-col items-center justify-center px-6 py-10 text-sm text-slate-500 dark:text-slate-400">
+    <div class="flex min-h-[440px] flex-col items-center justify-center px-6 py-10 text-sm text-slate-500 dark:text-dark-400">
         <p class="text-center">
             Four size variations, one in each corner: <br>
             <b>xs</b> (top-left) · <b>sm</b> (top-right) · <b>md</b> (bottom-left) · <b>lg</b> (bottom-right)

@@ -17,5 +17,5 @@
             <x-copy-code :$contents :$margin />
         </div>
     @endif
-    <pre {{ $attributes->class(['overflow-auto custom-scrollbar rounded-lg bg-[#292D3E]']) }}><x-torchlight-code language="{{ $language }}" :$contents /></pre>
+    <pre {{ $attributes->class(['overflow-auto custom-scrollbar rounded-lg bg-[#141414] ring-1 ring-white/5']) }}><x-torchlight-code language="{{ $language }}" :$contents /></pre>
 </div>

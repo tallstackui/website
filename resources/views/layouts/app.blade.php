@@ -27,7 +27,7 @@
     <link rel="manifest" href="{{ asset('assets/images/site.webmanifest') }}">
 
     <link rel="preconnect" href="https://fonts.bunny.net">
-    <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.bunny.net/css?family=figtree:400,500,600,700|outfit:400,500,600,700|instrument-serif:400,400i|jetbrains-mono:400,500,600&display=swap" rel="stylesheet"/>
     <x-google-analytics />
 
     <tallstackui:script />
@@ -35,7 +35,7 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 <body class="landing landing--plain min-h-full"
-      x-bind:class="{ 'dark text-slate-100' : darkTheme, 'text-slate-900' : !darkTheme }"
+      x-bind:class="{ 'dark text-dark-100' : darkTheme, 'text-gray-900' : !darkTheme }"
       x-data="{ mobile : false }"
       x-cloak>
     @persist('docsearch')
@@ -63,7 +63,7 @@
                             <header class="mb-6 space-y-1">
                                 @if ($title)
                                     <div class="flex items-start gap-x-2">
-                                        <h1 class="text-3xl font-semibold tracking-tight text-pink-900 font-display dark:text-slate-300">{{ $title }}</h1>
+                                        <h1 class="font-display text-3xl font-semibold tracking-tight text-gray-900 dark:text-dark-50">{{ $title }}</h1>
                                         @if ($version)
                                             <x-badge color="pink" light xs round>
                                                 >= {!! $version !!}
@@ -77,7 +77,7 @@
                                     </div>
                                 @endif
                                 @if ($description)
-                                    <p class="text-sm text-slate-500 dark:text-slate-400">{{ $description }}</p>
+                                    <p class="text-sm text-gray-500 dark:text-dark-400">{{ $description }}</p>
                                 @endif
                                 @if ($personalization || $customization)
                                     <div class="mt-2 inline-flex space-x-2">
@@ -94,7 +94,7 @@
                         {{ $slot }}
                     </main>
                     @if ($torchlight)
-                        <p class="text-sm text-gray-600 dark:text-slate-400">Code highlighting provided by <a href="https://torchlight.dev" class="font-semibold text-pink-700 underline" target="_blank">Torchlight</a></p>
+                        <p class="text-sm text-gray-600 dark:text-dark-400">Code highlighting provided by <a href="https://torchlight.dev" class="font-semibold text-pink-600 underline dark:text-pink-400" target="_blank">Torchlight</a></p>
                     @endif
                 </div>
                 @if ($right)

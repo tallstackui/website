@@ -118,6 +118,77 @@
             </x-custom-table>
         </div>
     </x-section>
+    <x-section title="Available Resources" disable-copy>
+        <div class="space-y-4">
+            <p>
+                Beyond the tools, the MCP server also exposes read-only resources that AI assistants can load
+                to gain broader context in a single read:
+            </p>
+            <x-custom-table>
+                <x-custom-table.thead>
+                    <x-custom-table.tr>
+                        <x-custom-table.th first label="Resource"/>
+                        <x-custom-table.th label="URI"/>
+                        <x-custom-table.th label="Description"/>
+                    </x-custom-table.tr>
+                </x-custom-table.thead>
+                <x-custom-table.tbody>
+                    <x-custom-table.tr>
+                        <x-custom-table.td first>
+                            <x-block>component-index</x-block>
+                        </x-custom-table.td>
+                        <x-custom-table.td>
+                            <x-block>tallstackui://docs/index</x-block>
+                        </x-custom-table.td>
+                        <x-custom-table.td>Full Markdown index of the documentation: every component grouped by
+                            category, global configuration, and customization guides.
+                        </x-custom-table.td>
+                    </x-custom-table.tr>
+                    <x-custom-table.tr>
+                        <x-custom-table.td first>
+                            <x-block>internal-scopes</x-block>
+                        </x-custom-table.td>
+                        <x-custom-table.td>
+                            <x-block>tallstackui://docs/internal-scopes</x-block>
+                        </x-custom-table.td>
+                        <x-custom-table.td>Canonical list of every internal <x-block>scope="..."</x-block> declared
+                            when a component renders nested components. Required reading before customizing nested
+                            component instances independently of their standalone versions.
+                        </x-custom-table.td>
+                    </x-custom-table.tr>
+                </x-custom-table.tbody>
+            </x-custom-table>
+        </div>
+    </x-section>
+    <x-section title="Available Prompts" disable-copy>
+        <div class="space-y-4">
+            <p>
+                The MCP server also ships prompts: ready-made workflows that guide AI assistants step by step
+                through common tasks:
+            </p>
+            <x-custom-table>
+                <x-custom-table.thead>
+                    <x-custom-table.tr>
+                        <x-custom-table.th first label="Prompt"/>
+                        <x-custom-table.th label="Description"/>
+                    </x-custom-table.tr>
+                </x-custom-table.thead>
+                <x-custom-table.tbody>
+                    <x-custom-table.tr>
+                        <x-custom-table.td first>
+                            <x-block>customize-component</x-block>
+                        </x-custom-table.td>
+                        <x-custom-table.td>Guided workflow to customize the CSS of a component through Soft
+                            Customization: it fetches the component blocks, locates the target classes, resolves
+                            nested scopes, and writes the <x-block>TallStackUi::customize()</x-block> code in a
+                            service provider. Accepts a required <x-block>component</x-block> argument and an
+                            optional <x-block>goal</x-block> describing the desired change.
+                        </x-custom-table.td>
+                    </x-custom-table.tr>
+                </x-custom-table.tbody>
+            </x-custom-table>
+        </div>
+    </x-section>
     <x-section title="Connecting to Claude Code">
         <div class="space-y-4">
             <p>

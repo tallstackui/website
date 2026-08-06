@@ -11,7 +11,7 @@
 
 @php($anchor ??= str($title)->slug()->lower())
 
-<section x-data="{ anchor : false, code : false }" id="{{ $anchor }}" {{ $attributes->merge(['class' => 'text-gray-600 mb-6 dark:text-slate-400']) }} @if ($id) id="{{ $id }}" @endif>
+<section x-data="{ anchor : false, code : false }" id="{{ $anchor }}" {{ $attributes->merge(['class' => 'text-gray-600 mb-6 dark:text-dark-400']) }} @if ($id) id="{{ $id }}" @endif>
     @if ($title)
         <div @class(['flex items-center justify-between', 'mb-2' => $description === null])>
             @if ($title)
@@ -33,21 +33,21 @@
                     <button class="flex items-center gap-x-1 overflow-hidden rounded-md p-1 text-sm transition focus:outline-none sm:px-2 cursor-pointer"
                             :class="{
                         'text-pink-500 font-semibold': code,
-                        'text-gray-400 dark:text-slate-300': !code
+                        'text-gray-400 dark:text-dark-300': !code
                     }" type="button" x-on:click="
                         if (!code) {
                             document.querySelectorAll('[data-floating]').forEach(el => el.style.display = 'none');
                         }
                         code = !code
                     " x-cloak>
-                        <x-icon name="code-bracket" solid class="text-gray-600 dark:text-slate-400 h-5 w-5" />
+                        <x-icon name="code-bracket" solid class="text-gray-600 dark:text-dark-400 h-5 w-5" />
                     </button>
                 </div>
             @endif
         </div>
     @endif
     @if ($description)
-        <p class="text-sm text-slate-500 dark:text-slate-400 mb-4">{{ $description }}</p>
+        <p class="text-sm text-slate-500 dark:text-dark-400 mb-4">{{ $description }}</p>
     @endif
     @if (! str($slot)->startsWith(['<p', '<code', '<div', '<h1', '<h2', '<img', '<pre', '<ul', '<ol', '<x-code']))
         <p>{!! $slot !!}</p>

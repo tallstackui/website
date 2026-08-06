@@ -44,35 +44,37 @@
         0 -3px 6px 0 rgba(15, 23, 42, 0.05);
 }
 
-/* Algolia DocSearch — Dark Mode (.dark applied on <body> by tallstackui_darkTheme) */
+/* Algolia DocSearch — Dark Mode (.dark applied on <body> by tallstackui_darkTheme).
+   Follows the 4.x near-black neutral ladder: dark-900 page, dark-800 surfaces,
+   dark-700 borders and raised elements. */
 .dark {
     --docsearch-primary-color: #ec4899;          /* pink-500 */
-    --docsearch-text-color: #f1f5f9;             /* slate-100 */
-    --docsearch-container-background: rgba(2, 6, 23, 0.8); /* slate-950 / 80 */
-    --docsearch-modal-background: #0f172a;       /* slate-900 — matches body */
+    --docsearch-text-color: #f5f5f5;             /* dark-100 */
+    --docsearch-container-background: rgba(0, 0, 0, 0.72);
+    --docsearch-modal-background: #141414;       /* dark-800 */
     --docsearch-modal-shadow:
-        inset 1px 1px 0 0 rgba(148, 163, 184, 0.10),
-        0 3px 12px 0 rgba(0, 0, 0, 0.45);
-    --docsearch-searchbox-background: #1e293b;   /* slate-800 */
-    --docsearch-searchbox-focus-background: #020617; /* slate-950 */
-    --docsearch-hit-color: #cbd5e1;              /* slate-300 */
+        inset 0 0 0 1px rgba(255, 255, 255, 0.08),
+        0 24px 64px -16px rgba(0, 0, 0, 0.8);
+    --docsearch-searchbox-background: #0a0a0a;   /* dark-900 */
+    --docsearch-searchbox-focus-background: #0a0a0a;
+    --docsearch-hit-color: #d4d4d4;              /* dark-300 */
     --docsearch-hit-shadow: none;
-    --docsearch-hit-background: #1e293b;         /* slate-800 */
-    --docsearch-key-gradient: linear-gradient(-26.5deg, #334155, #1e293b);
+    --docsearch-hit-background: #242424;         /* dark-700 */
+    --docsearch-key-gradient: linear-gradient(-26.5deg, #242424, #141414);
     --docsearch-key-shadow:
-        inset 0 -2px 0 0 #1e293b,
-        inset 0 0 1px 1px #334155,
+        inset 0 -2px 0 0 #141414,
+        inset 0 0 1px 1px #3d3d3d,
         0 2px 2px 0 rgba(0, 0, 0, 0.30);
     --docsearch-key-pressed-shadow:
-        inset 0 -2px 0 0 #1e293b,
-        inset 0 0 1px 1px #334155,
+        inset 0 -2px 0 0 #141414,
+        inset 0 0 1px 1px #3d3d3d,
         0 1px 1px 0 rgba(0, 0, 0, 0.30);
-    --docsearch-footer-background: #020617;      /* slate-950 */
+    --docsearch-footer-background: #0a0a0a;      /* dark-900 */
     --docsearch-footer-shadow:
-        inset 0 1px 0 0 rgba(148, 163, 184, 0.10),
+        inset 0 1px 0 0 rgba(255, 255, 255, 0.06),
         0 -4px 8px 0 rgba(0, 0, 0, 0.20);
     --docsearch-logo-color: #ec4899;             /* pink-500 */
-    --docsearch-muted-color: #94a3b8;            /* slate-400 */
+    --docsearch-muted-color: #999999;            /* dark-400 */
 }
 
 @layer utilities {
@@ -116,7 +118,7 @@
     }
 
     .DocSearch-Modal {
-        @apply text-slate-900 dark:text-slate-100;
+        @apply text-slate-900 dark:text-dark-100;
     }
 
     .DocSearch-Screen-Icon {
@@ -124,7 +126,7 @@
     }
 
     .DocSearch-Form {
-        @apply bg-white dark:bg-slate-800;
+        @apply bg-white dark:bg-dark-900;
         @apply border border-solid border-gray-400/50 dark:border-white/10;
         @apply rounded-lg;
         @apply w-full;

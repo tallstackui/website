@@ -1,30 +1,53 @@
+@theme {
+    --font-sans: 'Figtree', ui-sans-serif, system-ui, sans-serif;
+    --font-display: 'Outfit', 'Figtree', ui-sans-serif, system-ui, sans-serif;
+    --font-serif: 'Instrument Serif', ui-serif, Georgia, serif;
+    --font-mono: 'JetBrains Mono', ui-monospace, 'SFMono-Regular', Menlo, monospace;
+}
+
 :root {
-    --landing-bg-dark: #0f172a;
-    --landing-bg-light: #fff5f9;
+    /* The landing borrows the library's own 4.x palette: the neutral
+       near-black dark ladder, and the brand pink as the single accent. */
+    --landing-bg-dark: oklch(0.145 0 0);        /* dark-900 */
+    --landing-surface-dark: oklch(0.185 0 0);   /* dark-800 */
+    --landing-raised-dark: oklch(0.253 0 0);    /* dark-700 */
+    --landing-line-dark: rgba(255, 255, 255, 0.08);
+    --landing-line-strong-dark: rgba(255, 255, 255, 0.14);
+    --landing-text-dark: #f5f5f5;
+    --landing-muted-dark: #999999;
+
+    --landing-bg-light: #fafafa;
+    --landing-surface-light: #ffffff;
+    --landing-line-light: rgba(10, 10, 10, 0.08);
+    --landing-line-strong-light: rgba(10, 10, 10, 0.14);
+    --landing-text-light: #171717;
+    --landing-muted-light: #666666;
+
     --landing-pink: #ec4899;
-    --landing-pink-strong: #f472b6;
-    --landing-fuchsia: #d946ef;
-    --landing-rose: #f43f5e;
-    --landing-text-dark: #e2e8f0;
-    --landing-text-light: #1e293b;
-    --landing-muted-dark: #94a3b8;
-    --landing-muted-light: #64748b;
-    --landing-line-dark: rgba(148, 163, 184, 0.12);
-    --landing-line-light: rgba(15, 23, 42, 0.08);
-    --landing-radius: 1rem;
-    --landing-radius-lg: 1.5rem;
+    --landing-pink-soft: #f472b6;
+    --landing-pink-deep: #be185d;
+    --landing-violet: #8b5cf6;
+
+    --landing-radius: 0.875rem;
+    --landing-radius-lg: 1.25rem;
+
+    /* The library's Material 3 pair, reused for the site's own motion. */
+    --landing-ease-out: cubic-bezier(0.05, 0.7, 0.1, 1);
+    --landing-ease-in: cubic-bezier(0.3, 0, 0.8, 0.15);
 }
 
 /* -----------------------------------------------------------------
- | Page shell + background layers
+ | Page shell
  |
- | Light is the default. Dark adds overrides via `.dark .landing-X`.
+ | Light is the default; `.dark .landing-X` overrides. The docs reuse
+ | this shell through `landing--plain`, which flattens the backdrop.
  ----------------------------------------------------------------- */
 
 .landing {
     background: var(--landing-bg-light);
     color: var(--landing-text-light);
     min-height: 100%;
+    font-family: var(--font-sans);
 }
 
 .landing.dark {
@@ -38,42 +61,46 @@
     overflow-x: clip;
 }
 
+/* A single quiet aura behind the hero — brand pink, barely there. */
 .landing-shell::before {
     content: '';
-    position: fixed;
-    inset: 0;
+    position: absolute;
+    inset: 0 0 auto 0;
+    height: 120vh;
     z-index: -3;
     background:
-        radial-gradient(ellipse 100% 60% at 50% -10%, rgba(236, 72, 153, 0.18), transparent 60%),
-        radial-gradient(ellipse 80% 50% at 100% 30%, rgba(217, 70, 239, 0.10), transparent 60%);
+        radial-gradient(ellipse 90% 45% at 70% -12%, rgba(236, 72, 153, 0.07), transparent 62%),
+        radial-gradient(ellipse 60% 38% at 12% 8%, rgba(139, 92, 246, 0.05), transparent 60%);
     pointer-events: none;
 }
 
 .landing.dark .landing-shell::before {
     background:
-        radial-gradient(ellipse 100% 60% at 50% -10%, rgba(236, 72, 153, 0.32), transparent 60%),
-        radial-gradient(ellipse 80% 50% at 100% 30%, rgba(217, 70, 239, 0.18), transparent 60%),
-        radial-gradient(ellipse 80% 50% at 0% 70%, rgba(244, 63, 94, 0.14), transparent 60%);
+        radial-gradient(ellipse 90% 45% at 70% -12%, rgba(236, 72, 153, 0.13), transparent 62%),
+        radial-gradient(ellipse 60% 38% at 12% 8%, rgba(139, 92, 246, 0.09), transparent 60%);
 }
 
+/* Blueprint grid, faded out below the hero. */
 .landing-shell::after {
     content: '';
-    position: fixed;
-    inset: 0;
+    position: absolute;
+    inset: 0 0 auto 0;
+    height: 110vh;
     z-index: -2;
     background-image:
-        linear-gradient(to right, rgba(15, 23, 42, 0.06) 1px, transparent 1px),
-        linear-gradient(to bottom, rgba(15, 23, 42, 0.06) 1px, transparent 1px);
-    background-size: 56px 56px;
-    mask-image: radial-gradient(ellipse 100% 80% at 50% 30%, #000 30%, transparent 80%);
-    -webkit-mask-image: radial-gradient(ellipse 100% 80% at 50% 30%, #000 30%, transparent 80%);
+        linear-gradient(to right, var(--landing-line-light) 1px, transparent 1px),
+        linear-gradient(to bottom, var(--landing-line-light) 1px, transparent 1px);
+    background-size: 72px 72px;
+    mask-image: linear-gradient(to bottom, #000 0%, rgba(0, 0, 0, 0.5) 55%, transparent 95%);
+    -webkit-mask-image: linear-gradient(to bottom, #000 0%, rgba(0, 0, 0, 0.5) 55%, transparent 95%);
+    opacity: 0.5;
     pointer-events: none;
 }
 
 .landing.dark .landing-shell::after {
     background-image:
-        linear-gradient(to right, rgba(148, 163, 184, 0.08) 1px, transparent 1px),
-        linear-gradient(to bottom, rgba(148, 163, 184, 0.08) 1px, transparent 1px);
+        linear-gradient(to right, rgba(255, 255, 255, 0.045) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.045) 1px, transparent 1px);
 }
 
 .landing-noise {
@@ -81,17 +108,16 @@
     inset: 0;
     z-index: -1;
     pointer-events: none;
-    opacity: 0.2;
+    opacity: 0.14;
     mix-blend-mode: overlay;
     background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.04 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
 }
 
 .landing.dark .landing-noise {
-    opacity: 0.45;
+    opacity: 0.35;
 }
 
-/* Plain docs background — disables the radial gradients, the grid pattern
-   and the noise overlay so documentation pages render on a flat surface. */
+/* Plain docs background — flat surface, no grid, no aura, no noise. */
 .landing--plain {
     background: #ffffff;
 }
@@ -107,116 +133,143 @@
 }
 
 /* -----------------------------------------------------------------
- | Generic primitives
+ | Typography
  ----------------------------------------------------------------- */
 
 .landing-eyebrow {
     display: inline-flex;
     align-items: center;
-    gap: 0.5rem;
-    padding: 0.4rem 0.9rem;
-    border-radius: 9999px;
-    background: rgba(236, 72, 153, 0.08);
-    border: 1px solid rgba(236, 72, 153, 0.25);
-    color: #be185d;
-    font-size: 0.75rem;
-    font-weight: 600;
-    letter-spacing: 0.08em;
+    gap: 0.6rem;
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    font-weight: 500;
+    letter-spacing: 0.16em;
     text-transform: uppercase;
+    color: var(--landing-muted-light);
 }
 
 .landing.dark .landing-eyebrow {
-    background: rgba(236, 72, 153, 0.1);
-    color: var(--landing-pink-strong);
+    color: var(--landing-muted-dark);
 }
 
 .landing-eyebrow::before {
     content: '';
-    width: 0.4rem;
-    height: 0.4rem;
+    width: 0.35rem;
+    height: 0.35rem;
     border-radius: 9999px;
     background: var(--landing-pink);
-    box-shadow: 0 0 8px var(--landing-pink);
+    box-shadow: 0 0 10px rgba(236, 72, 153, 0.8);
+}
+
+.landing-eyebrow-index {
+    color: var(--landing-pink);
+    font-weight: 600;
 }
 
 .landing-headline {
-    font-family: 'Figtree', ui-sans-serif, system-ui, sans-serif;
-    font-size: clamp(2.75rem, 8vw, 5.75rem);
-    line-height: 0.98;
-    letter-spacing: -0.04em;
-    font-weight: 800;
-    color: #0f172a;
+    font-family: var(--font-display);
+    font-size: clamp(2.7rem, 6vw, 4.7rem);
+    line-height: 1.02;
+    letter-spacing: -0.035em;
+    font-weight: 700;
+    color: #0a0a0a;
+    text-wrap: balance;
 }
 
 .landing.dark .landing-headline {
-    color: #f8fafc;
+    color: #fafafa;
 }
 
-.landing-headline-accent {
-    display: inline-block;
-    white-space: nowrap;
-    background-image: linear-gradient(120deg, var(--landing-pink) 0%, var(--landing-fuchsia) 50%, var(--landing-rose) 100%);
-    -webkit-background-clip: text;
-            background-clip: text;
-    -webkit-text-fill-color: transparent;
-            color: transparent;
+/* Serif italic accent — the editorial counterpoint inside headlines. */
+.landing-serif {
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-weight: 400;
+    letter-spacing: -0.01em;
+    color: var(--landing-pink);
+}
+
+/* Marker highlight — a thick brand stroke behind key phrases. */
+.landing-mark {
+    position: relative;
+    display: inline;
+    font-weight: 600;
+    color: var(--landing-text-light);
+    background-image: linear-gradient(120deg, rgba(236, 72, 153, 0.28), rgba(139, 92, 246, 0.22));
+    background-repeat: no-repeat;
+    background-size: 100% 0.5em;
+    background-position: 0 88%;
+    padding: 0 0.15em;
+    border-radius: 0.2em;
+}
+
+.landing.dark .landing-mark {
+    color: #fafafa;
+    background-image: linear-gradient(120deg, rgba(236, 72, 153, 0.35), rgba(139, 92, 246, 0.28));
 }
 
 .landing-section-heading {
-    font-family: 'Figtree', ui-sans-serif, system-ui, sans-serif;
-    font-size: clamp(2rem, 4vw, 3rem);
-    line-height: 1.05;
+    font-family: var(--font-display);
+    font-size: clamp(1.9rem, 3.6vw, 2.9rem);
+    line-height: 1.08;
     letter-spacing: -0.03em;
-    font-weight: 700;
-    color: #0f172a;
+    font-weight: 600;
+    color: #0a0a0a;
+    text-wrap: balance;
 }
 
 .landing.dark .landing-section-heading {
-    color: #f8fafc;
+    color: #fafafa;
 }
 
 .landing-section-subheading {
     font-size: 1rem;
-    line-height: 1.6;
+    line-height: 1.65;
     color: var(--landing-muted-light);
+    max-width: 44rem;
 }
 
 .landing.dark .landing-section-subheading {
     color: var(--landing-muted-dark);
 }
 
-/* Handwritten underline (for "never seen before" etc.) */
+/* -----------------------------------------------------------------
+ | Section scaffolding — hairline top rule fading out at both ends.
+ ----------------------------------------------------------------- */
 
-.landing-handwritten {
+.landing-section {
     position: relative;
-    display: inline-block;
-    white-space: nowrap;
+    padding: clamp(4.5rem, 9vh, 7.5rem) 0;
 }
 
-.landing-handwritten::after {
+.landing-section--ruled::before {
     content: '';
     position: absolute;
-    left: -2%;
-    right: -2%;
-    bottom: 0.08em;
-    height: 0.14em;
-    background: linear-gradient(90deg, var(--landing-pink), var(--landing-fuchsia) 60%, var(--landing-rose));
-    transform: skew(-14deg) rotate(-2deg);
-    border-radius: 9999px;
-    opacity: 0.9;
-    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        var(--landing-line-light) 18%,
+        var(--landing-line-light) 82%,
+        transparent
+    );
 }
 
-/* On the hero headline the strokes need to feel chunkier
- * to balance the massive type. */
-.landing-headline .landing-handwritten::after {
-    height: 0.1em;
-    bottom: 0.06em;
-    opacity: 1;
+.landing.dark .landing-section--ruled::before {
+    background: linear-gradient(
+        90deg,
+        transparent,
+        var(--landing-line-dark) 18%,
+        var(--landing-line-dark) 82%,
+        transparent
+    );
 }
 
 /* -----------------------------------------------------------------
- | Hero CTA — shine sweep on hover
+ | Buttons
  ----------------------------------------------------------------- */
 
 .landing-cta-primary {
@@ -224,295 +277,455 @@
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
-    padding: 0.9rem 1.4rem;
+    padding: 0.8rem 1.35rem;
     border-radius: 0.75rem;
-    background: linear-gradient(135deg, var(--landing-pink) 0%, var(--landing-fuchsia) 100%);
+    background: var(--landing-pink);
     color: #ffffff;
     font-weight: 600;
-    font-size: 0.95rem;
-    box-shadow: 0 12px 32px -12px rgba(236, 72, 153, 0.6);
-    transition: transform 0.15s ease, box-shadow 0.15s ease;
-    overflow: hidden;
-    isolation: isolate;
-}
-
-.landing-cta-primary::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -120%;
-    width: 60%;
-    height: 100%;
-    background: linear-gradient(120deg,
-        transparent 0%,
-        rgba(255, 255, 255, 0.45) 50%,
-        transparent 100%);
-    transform: skewX(-20deg);
-    transition: left 0.55s cubic-bezier(0.4, 0, 0.2, 1);
-    pointer-events: none;
-    z-index: 0;
-}
-
-.landing-cta-primary:hover::before {
-    left: 120%;
-}
-
-.landing-cta-primary > * {
-    position: relative;
-    z-index: 1;
+    font-size: 0.9rem;
+    letter-spacing: -0.01em;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.2) inset, 0 10px 28px -14px rgba(236, 72, 153, 0.9);
+    transition: transform 0.35s var(--landing-ease-out), box-shadow 0.35s var(--landing-ease-out), background 0.2s ease;
 }
 
 .landing-cta-primary:hover {
     transform: translateY(-1px);
-    box-shadow: 0 16px 40px -12px rgba(236, 72, 153, 0.75);
+    background: #db2777;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.2) inset, 0 16px 36px -14px rgba(236, 72, 153, 0.95);
 }
 
-/* -----------------------------------------------------------------
- | 3D-tilted marquee — outer mask wrapper, inner rotated track
- ----------------------------------------------------------------- */
-
-.landing-marquee-mask {
-    position: relative;
-    overflow: hidden;
-    padding: 1.25rem 0;
-    -webkit-mask-image: linear-gradient(to right, transparent 0, #000 14%, #000 86%, transparent 100%);
-            mask-image: linear-gradient(to right, transparent 0, #000 14%, #000 86%, transparent 100%);
+.landing-cta-primary:active {
+    transform: translateY(0);
 }
 
-.landing-marquee-track {
-    display: flex;
-    width: max-content;
-    gap: 0.75rem;
-}
-
-.landing-marquee-track--left {
-    animation: landing-marquee-left 120s linear infinite;
-}
-
-.landing-marquee-track--right {
-    animation: landing-marquee-right 150s linear infinite;
-}
-
-.landing-marquee-mask:hover .landing-marquee-track {
-    animation-play-state: paused;
-}
-
-@keyframes landing-marquee-left {
-    from { transform: translateX(0); }
-    to   { transform: translateX(-50%); }
-}
-
-@keyframes landing-marquee-right {
-    from { transform: translateX(-50%); }
-    to   { transform: translateX(0); }
-}
-
-.landing-marquee-pill {
+.landing-cta-ghost {
     display: inline-flex;
     align-items: center;
-    gap: 0.6rem;
-    padding: 0.65rem 1.1rem;
-    border-radius: 9999px;
-    border: 1px solid rgba(15, 23, 42, 0.08);
-    background: rgba(255, 255, 255, 0.9);
-    color: #1e293b;
-    font-size: 0.85rem;
+    gap: 0.5rem;
+    padding: 0.8rem 1.35rem;
+    border-radius: 0.75rem;
+    border: 1px solid var(--landing-line-strong-light);
+    color: var(--landing-text-light);
     font-weight: 500;
-    white-space: nowrap;
-    text-decoration: none;
-    backdrop-filter: blur(8px);
-    transition: border-color 0.2s ease, color 0.2s ease, background 0.2s ease;
+    font-size: 0.9rem;
+    letter-spacing: -0.01em;
+    transition: border-color 0.2s ease, background 0.2s ease, transform 0.35s var(--landing-ease-out);
 }
 
-.landing.dark .landing-marquee-pill {
-    border-color: rgba(148, 163, 184, 0.15);
-    background: linear-gradient(180deg, rgba(15, 23, 42, 0.6), rgba(15, 23, 42, 0.35));
-    color: #e2e8f0;
+.landing.dark .landing-cta-ghost {
+    border-color: var(--landing-line-strong-dark);
+    color: var(--landing-text-dark);
 }
 
-.landing-marquee-pill:hover {
+.landing-cta-ghost:hover {
+    transform: translateY(-1px);
     border-color: rgba(236, 72, 153, 0.5);
-    color: #be185d;
-    background: rgba(236, 72, 153, 0.08);
-}
-
-.landing.dark .landing-marquee-pill:hover {
-    color: var(--landing-pink-strong);
-}
-
-.landing-marquee-pill::before {
-    content: '';
-    width: 0.4rem;
-    height: 0.4rem;
-    border-radius: 9999px;
-    background: var(--landing-pink);
-    box-shadow: 0 0 8px var(--landing-pink);
+    background: rgba(236, 72, 153, 0.05);
 }
 
 /* -----------------------------------------------------------------
- | Bento grid
+ | Install command — a terminal pill with a copy affordance.
  ----------------------------------------------------------------- */
 
-.landing-bento-cell {
-    position: relative;
-    border-radius: var(--landing-radius);
-    background: rgba(255, 255, 255, 0.9);
-    border: 1px solid rgba(15, 23, 42, 0.06);
-    backdrop-filter: blur(16px);
-    padding: 1.5rem;
-    overflow: hidden;
-    transition: border-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+.landing-install {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.7rem 1rem;
+    border-radius: 0.75rem;
+    border: 1px solid var(--landing-line-light);
+    background: var(--landing-surface-light);
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    color: var(--landing-text-light);
+    cursor: pointer;
+    max-width: 100%;
+    transition: border-color 0.2s ease, background 0.2s ease;
 }
 
-.landing.dark .landing-bento-cell {
-    background:
-        radial-gradient(circle at top right, rgba(236, 72, 153, 0.10), transparent 100%),
-        #0f172a;
-    border-color: rgba(255, 255, 255, 0.08);
+@media (max-width: 640px) {
+    .landing-install {
+        gap: 0.5rem;
+        padding: 0.65rem 0.8rem;
+        font-size: 0.66rem;
+    }
 }
 
-.landing-bento-cell:hover {
-    border-color: rgba(236, 72, 153, 0.4);
-    transform: translateY(-3px);
-    box-shadow: 0 24px 48px -24px rgba(236, 72, 153, 0.4);
+.landing.dark .landing-install {
+    border-color: var(--landing-line-dark);
+    background: var(--landing-surface-dark);
+    color: var(--landing-text-dark);
 }
 
-.landing-bento-cell-eyebrow {
-    font-size: 0.7rem;
-    font-weight: 700;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: #be185d;
+.landing-install:hover {
+    border-color: rgba(236, 72, 153, 0.45);
 }
 
-.landing.dark .landing-bento-cell-eyebrow {
-    color: var(--landing-pink-strong);
+.landing-install-prompt {
+    color: var(--landing-pink);
+    user-select: none;
 }
 
-.landing-bento-cell-title {
-    margin-top: 0.5rem;
-    font-size: 1.125rem;
-    font-weight: 600;
-    color: #0f172a;
-    letter-spacing: -0.01em;
-}
-
-.landing.dark .landing-bento-cell-title {
-    color: #f8fafc;
-}
-
-.landing-bento-cell-body {
-    margin-top: 0.5rem;
-    font-size: 0.85rem;
+.landing-install-icon {
     color: var(--landing-muted-light);
-    line-height: 1.55;
+    transition: color 0.2s ease;
 }
 
-.landing.dark .landing-bento-cell-body {
+.landing.dark .landing-install-icon {
     color: var(--landing-muted-dark);
 }
 
+.landing-install:hover .landing-install-icon {
+    color: var(--landing-pink);
+}
+
 /* -----------------------------------------------------------------
- | Feature cards — cursor-tracking spotlight + gradient border ring
+ | Panels — the hairline surface every demo sits on. `frame` adds the
+ | app chrome bar; `quiet` mutes the surface for text-only cells.
  ----------------------------------------------------------------- */
 
-.landing-feature-card {
-    --spot-x: 50%;
-    --spot-y: 50%;
-    --spot-size: 18rem;
-    --spot-color: rgba(236, 72, 153, 0.18);
-
+.landing-panel {
     position: relative;
     border-radius: var(--landing-radius);
-    padding: 1.75rem;
-    background: rgba(255, 255, 255, 0.92);
-    border: 1px solid rgba(15, 23, 42, 0.06);
-    backdrop-filter: blur(16px);
-    overflow: hidden;
-    transition: border-color 0.2s ease, transform 0.25s ease;
+    border: 1px solid var(--landing-line-light);
+    background: var(--landing-surface-light);
+    overflow: clip;
 }
 
-.landing.dark .landing-feature-card {
-    --spot-color: rgba(236, 72, 153, 0.28);
-    background: #1e293b;
-    border-color: rgba(148, 163, 184, 0.12);
+.landing.dark .landing-panel {
+    border-color: var(--landing-line-dark);
+    background: var(--landing-surface-dark);
 }
 
-.landing-feature-card::before {
+/* Hover: a cursor-tracking spotlight inside the panel plus a gradient ring
+   drawn on the border at the same point. The `spotlight` Alpine helper in
+   app.js feeds --spot-x/--spot-y as the pointer moves. */
+.landing-panel--hover {
+    --spot-x: 50%;
+    --spot-y: 50%;
+    transition: transform 0.5s var(--landing-ease-out), box-shadow 0.5s var(--landing-ease-out);
+}
+
+.landing-panel--hover::before {
     content: '';
     position: absolute;
     inset: 0;
+    z-index: 0;
     pointer-events: none;
     background: radial-gradient(
-        var(--spot-size) circle at var(--spot-x) var(--spot-y),
-        var(--spot-color),
-        transparent 60%
+        22rem circle at var(--spot-x) var(--spot-y),
+        rgba(236, 72, 153, 0.07),
+        transparent 65%
     );
     opacity: 0;
-    transition: opacity 0.25s ease;
+    transition: opacity 0.35s ease;
 }
 
-.landing-feature-card::after {
+.landing.dark .landing-panel--hover::before {
+    background: radial-gradient(
+        22rem circle at var(--spot-x) var(--spot-y),
+        rgba(236, 72, 153, 0.1),
+        transparent 65%
+    );
+}
+
+.landing-panel--hover::after {
     content: '';
     position: absolute;
     inset: 0;
+    z-index: 0;
     border-radius: inherit;
     padding: 1px;
     background: radial-gradient(
-        var(--spot-size) circle at var(--spot-x) var(--spot-y),
-        rgba(236, 72, 153, 0.6),
-        transparent 60%
+        18rem circle at var(--spot-x) var(--spot-y),
+        rgba(236, 72, 153, 0.65),
+        rgba(139, 92, 246, 0.25) 45%,
+        transparent 70%
     );
     -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
             mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
     -webkit-mask-composite: xor;
             mask-composite: exclude;
     opacity: 0;
-    transition: opacity 0.25s ease;
+    transition: opacity 0.35s ease;
     pointer-events: none;
 }
 
-.landing-feature-card:hover {
+.landing-panel--hover:hover {
     transform: translateY(-3px);
-    border-color: rgba(236, 72, 153, 0.35);
+    box-shadow: 0 30px 60px -30px rgba(236, 72, 153, 0.25);
 }
 
-.landing-feature-card:hover::before,
-.landing-feature-card:hover::after {
+.landing-panel--hover:hover::before,
+.landing-panel--hover:hover::after {
     opacity: 1;
 }
 
-.landing-feature-card > * {
+.landing-panel--hover > * {
     position: relative;
     z-index: 1;
 }
 
-.landing-feature-icon {
-    display: inline-flex;
+.landing-panel-chrome {
+    display: flex;
     align-items: center;
-    justify-content: center;
-    width: 2.75rem;
-    height: 2.75rem;
-    border-radius: 0.75rem;
-    background: linear-gradient(135deg, rgba(236, 72, 153, 0.18), rgba(217, 70, 239, 0.06));
-    color: #be185d;
-    transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease;
+    gap: 0.75rem;
+    padding: 0.65rem 1rem;
+    border-bottom: 1px solid var(--landing-line-light);
+    background: color-mix(in oklab, var(--landing-surface-light) 65%, var(--landing-bg-light));
 }
 
-.landing.dark .landing-feature-icon {
-    color: var(--landing-pink-strong);
+.landing.dark .landing-panel-chrome {
+    border-bottom-color: var(--landing-line-dark);
+    background: color-mix(in oklab, var(--landing-surface-dark) 55%, var(--landing-bg-dark));
 }
 
-.landing-feature-card:hover .landing-feature-icon {
-    transform: scale(1.1) rotate(-6deg);
-    box-shadow: 0 12px 24px -12px rgba(236, 72, 153, 0.5);
+.landing-panel-chrome-dots {
+    display: inline-flex;
+    gap: 0.4rem;
+}
+
+.landing-panel-chrome-dots span {
+    width: 0.55rem;
+    height: 0.55rem;
+    border-radius: 9999px;
+    background: var(--landing-line-strong-light);
+}
+
+.landing.dark .landing-panel-chrome-dots span {
+    background: var(--landing-raised-dark);
+}
+
+.landing-panel-chrome-title {
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    letter-spacing: 0.08em;
+    color: var(--landing-muted-light);
+    text-transform: uppercase;
+}
+
+.landing.dark .landing-panel-chrome-title {
+    color: var(--landing-muted-dark);
+}
+
+.landing-panel-kicker {
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--landing-pink);
+}
+
+.landing-panel-title {
+    margin-top: 0.4rem;
+    font-family: var(--font-display);
+    font-size: 1.15rem;
+    font-weight: 600;
+    letter-spacing: -0.015em;
+    color: #0a0a0a;
+}
+
+.landing.dark .landing-panel-title {
+    color: #fafafa;
+}
+
+.landing-panel-body {
+    margin-top: 0.4rem;
+    font-size: 0.85rem;
+    line-height: 1.6;
+    color: var(--landing-muted-light);
+}
+
+.landing.dark .landing-panel-body {
+    color: var(--landing-muted-dark);
 }
 
 /* -----------------------------------------------------------------
- | VS Code IDE source — keeps the custom scrollbar and the Torchlight
- | <pre> overrides; the rest of the IDE chrome lives as utilities in
- | the markup.
+ | Component ticker — a mono type ruler, two rows, opposite drifts.
  ----------------------------------------------------------------- */
+
+.landing-ticker {
+    position: relative;
+    overflow: hidden;
+    padding: 0.4rem 0;
+    -webkit-mask-image: linear-gradient(to right, transparent 0, #000 12%, #000 88%, transparent 100%);
+            mask-image: linear-gradient(to right, transparent 0, #000 12%, #000 88%, transparent 100%);
+}
+
+.landing-ticker-track {
+    display: flex;
+    align-items: center;
+    width: max-content;
+    gap: 0;
+}
+
+.landing-ticker-track--left {
+    animation: landing-ticker-left 140s linear infinite;
+}
+
+.landing-ticker-track--right {
+    animation: landing-ticker-right 170s linear infinite;
+}
+
+.landing-ticker:hover .landing-ticker-track {
+    animation-play-state: paused;
+}
+
+@keyframes landing-ticker-left {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-50%); }
+}
+
+@keyframes landing-ticker-right {
+    from { transform: translateX(-50%); }
+    to   { transform: translateX(0); }
+}
+
+.landing-ticker-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 1.1rem;
+    padding: 0.45rem 1.1rem 0.45rem 0;
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    letter-spacing: 0.04em;
+    white-space: nowrap;
+    color: var(--landing-muted-light);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.landing.dark .landing-ticker-item {
+    color: var(--landing-muted-dark);
+}
+
+a.landing-ticker-item:hover {
+    color: var(--landing-pink);
+}
+
+.landing-ticker-item::after {
+    content: '/';
+    color: var(--landing-line-strong-light);
+    font-size: 0.7rem;
+}
+
+.landing.dark .landing-ticker-item::after {
+    color: var(--landing-raised-dark);
+}
+
+.landing-ticker-new {
+    font-size: 0.58rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    color: var(--landing-violet);
+    border: 1px solid color-mix(in oklab, var(--landing-violet) 45%, transparent);
+    border-radius: 9999px;
+    padding: 0.1rem 0.45rem;
+}
+
+/* -----------------------------------------------------------------
+ | Changelog details — the numbered editorial list.
+ ----------------------------------------------------------------- */
+
+.landing-detail {
+    position: relative;
+    display: grid;
+    grid-template-columns: 3rem 1fr;
+    gap: 1.25rem;
+    padding: 1.15rem 0.25rem;
+    border-top: 1px solid var(--landing-line-light);
+    transition: background 0.25s ease;
+}
+
+.landing.dark .landing-detail {
+    border-top-color: var(--landing-line-dark);
+}
+
+.landing-detail:hover {
+    background: linear-gradient(90deg, rgba(236, 72, 153, 0.045), transparent 55%);
+}
+
+.landing-detail-index {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    color: var(--landing-pink);
+    padding-top: 0.28rem;
+}
+
+.landing-detail-title {
+    font-family: var(--font-display);
+    font-size: 1.02rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    color: var(--landing-text-light);
+}
+
+.landing.dark .landing-detail-title {
+    color: var(--landing-text-dark);
+}
+
+.landing-detail-body {
+    margin-top: 0.3rem;
+    font-size: 0.85rem;
+    line-height: 1.6;
+    color: var(--landing-muted-light);
+}
+
+.landing.dark .landing-detail-body {
+    color: var(--landing-muted-dark);
+}
+
+/* -----------------------------------------------------------------
+ | The dark ladder — surface tokens rendered as an artifact.
+ ----------------------------------------------------------------- */
+
+.landing-ladder {
+    border-radius: var(--landing-radius);
+    border: 1px solid var(--landing-line-dark);
+    overflow: clip;
+    background: #050505;
+}
+
+.landing-ladder-step {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1.05rem 1.25rem;
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.05em;
+    color: #999999;
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.landing-ladder-step:first-child {
+    border-top: 0;
+}
+
+.landing-ladder-step b {
+    color: #f5f5f5;
+    font-weight: 500;
+}
+
+/* -----------------------------------------------------------------
+ | IDE / code panel — near-black, matching the 4.x surfaces. Keeps
+ | the custom scrollbar and the Torchlight <pre> overrides.
+ ----------------------------------------------------------------- */
+
+.landing-ide {
+    position: relative;
+    border-radius: var(--landing-radius);
+    border: 1px solid var(--landing-line-dark);
+    background: #141414;
+    overflow: clip;
+    font-family: var(--font-mono);
+    color: #d4d4d4;
+    box-shadow: 0 40px 80px -48px rgba(0, 0, 0, 0.8);
+}
 
 .landing-ide-source {
     flex: 1;
@@ -540,7 +753,7 @@
 .landing-ide-source pre {
     margin: 0 !important;
     border-radius: 0 !important;
-    background: #292D3E !important;
+    background: #141414 !important;
     padding: 1rem 1.25rem !important;
     line-height: 1.55 !important;
     font-size: 0.8rem !important;
@@ -554,182 +767,190 @@
 }
 
 /* -----------------------------------------------------------------
- | Stats (big numbers) — cursor-tracking spotlight + gradient text value
+ | Upload demo — a progress bar that keeps filling, like a real
+ | chunked upload would.
  ----------------------------------------------------------------- */
 
-.landing-stat {
-    --spot-x: 50%;
-    --spot-y: 50%;
-    --spot-size: 16rem;
-    --spot-color: rgba(236, 72, 153, 0.18);
-
-    position: relative;
-    border-radius: var(--landing-radius);
-    padding: 2rem 1.5rem;
-    background: rgba(255, 255, 255, 0.92);
-    border: 1px solid rgba(15, 23, 42, 0.06);
-    backdrop-filter: blur(16px);
-    overflow: hidden;
-    transition: transform 0.25s ease, border-color 0.25s ease;
+@keyframes landing-upload {
+    0% { width: 6%; }
+    30% { width: 38%; }
+    45% { width: 44%; }
+    75% { width: 82%; }
+    92% { width: 96%; }
+    100% { width: 96%; }
 }
 
-.landing.dark .landing-stat {
-    --spot-color: rgba(236, 72, 153, 0.28);
-    background: #1e293b;
-    border-color: rgba(148, 163, 184, 0.12);
-}
-
-.landing-stat::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    pointer-events: none;
-    background: radial-gradient(
-        var(--spot-size) circle at var(--spot-x) var(--spot-y),
-        var(--spot-color),
-        transparent 60%
-    );
-    opacity: 0;
-    transition: opacity 0.25s ease;
-}
-
-.landing-stat::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    border-radius: inherit;
-    padding: 1px;
-    background: radial-gradient(
-        var(--spot-size) circle at var(--spot-x) var(--spot-y),
-        rgba(236, 72, 153, 0.6),
-        transparent 60%
-    );
-    -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
-            mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
-    -webkit-mask-composite: xor;
-            mask-composite: exclude;
-    opacity: 0;
-    transition: opacity 0.25s ease;
-    pointer-events: none;
-}
-
-.landing-stat:hover {
-    transform: translateY(-3px);
-    border-color: rgba(236, 72, 153, 0.35);
-}
-
-.landing-stat:hover::before,
-.landing-stat:hover::after {
-    opacity: 1;
-}
-
-.landing-stat > * {
-    position: relative;
-    z-index: 1;
-}
-
-.landing-stat-value {
-    font-size: clamp(2.25rem, 4.5vw, 3.5rem);
-    line-height: 1;
-    font-weight: 800;
-    letter-spacing: -0.04em;
-    background: linear-gradient(180deg, #1f2937 30%, rgba(31, 41, 55, 0.55));
-    -webkit-background-clip: text;
-            background-clip: text;
-    -webkit-text-fill-color: transparent;
-            color: transparent;
-}
-
-.landing.dark .landing-stat-value {
-    background: linear-gradient(180deg, #fff 30%, rgba(255, 255, 255, 0.55));
-    -webkit-background-clip: text;
-            background-clip: text;
-    -webkit-text-fill-color: transparent;
-            color: transparent;
+.landing-upload-bar {
+    height: 100%;
+    border-radius: 9999px;
+    background: linear-gradient(90deg, var(--landing-pink), var(--landing-violet));
+    animation: landing-upload 3.2s var(--landing-ease-out) infinite;
 }
 
 /* -----------------------------------------------------------------
- | Final CTA — monumental
+ | Big numbers
+ ----------------------------------------------------------------- */
+
+.landing-stat-value {
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-size: clamp(2.6rem, 5vw, 4rem);
+    line-height: 1;
+    letter-spacing: -0.02em;
+    color: var(--landing-text-light);
+}
+
+.landing.dark .landing-stat-value {
+    color: #fafafa;
+}
+
+.landing-stat-label {
+    margin-top: 0.6rem;
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--landing-muted-light);
+}
+
+.landing.dark .landing-stat-label {
+    color: var(--landing-muted-dark);
+}
+
+/* -----------------------------------------------------------------
+ | Final CTA — near-black monument with a contained aura.
  ----------------------------------------------------------------- */
 
 .landing-cta-final {
     position: relative;
     border-radius: var(--landing-radius-lg);
-    padding: clamp(3rem, 6vw, 5rem) clamp(1.5rem, 4vw, 4rem);
+    border: 1px solid var(--landing-line-dark);
+    padding: clamp(3.5rem, 7vw, 6rem) clamp(1.5rem, 4vw, 4rem);
     text-align: center;
-    overflow: hidden;
-    background:
-        radial-gradient(ellipse at top, rgba(217, 70, 239, 0.4), transparent 50%),
-        linear-gradient(135deg, #831943 0%, #500724 60%, #1e293b 100%);
-    color: #fff;
+    overflow: clip;
+    background: #0a0a0a;
+    color: #fafafa;
     isolation: isolate;
 }
 
+/* Aurora: two soft blobs drifting behind the content. */
 .landing-cta-final::before {
     content: '';
     position: absolute;
-    inset: 0;
-    background-image:
-        linear-gradient(to right, rgba(255, 255, 255, 0.06) 1px, transparent 1px),
-        linear-gradient(to bottom, rgba(255, 255, 255, 0.06) 1px, transparent 1px);
-    background-size: 48px 48px;
-    -webkit-mask-image: radial-gradient(ellipse at center, #000 30%, transparent 75%);
-            mask-image: radial-gradient(ellipse at center, #000 30%, transparent 75%);
-    pointer-events: none;
+    inset: -40%;
     z-index: -1;
+    background:
+        radial-gradient(ellipse 30% 40% at 30% 70%, rgba(236, 72, 153, 0.3), transparent 60%),
+        radial-gradient(ellipse 26% 38% at 70% 75%, rgba(139, 92, 246, 0.26), transparent 60%),
+        radial-gradient(ellipse 22% 30% at 52% 88%, rgba(99, 102, 241, 0.2), transparent 60%);
+    filter: blur(48px);
+    animation: landing-aurora 14s ease-in-out infinite alternate;
 }
 
-.landing-cta-final-headline {
-    font-family: 'Figtree', ui-sans-serif, system-ui, sans-serif;
-    font-size: clamp(2.75rem, 7vw, 5rem);
-    line-height: 1;
-    letter-spacing: -0.04em;
-    font-weight: 800;
+@keyframes landing-aurora {
+    0% { transform: translate3d(-4%, 2%, 0) rotate(-4deg) scale(1); }
+    50% { transform: translate3d(3%, -2%, 0) rotate(3deg) scale(1.08); }
+    100% { transform: translate3d(-2%, 3%, 0) rotate(-2deg) scale(1.02); }
 }
 
-.landing-cta-final-primary {
-    position: relative;
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 1rem 1.75rem;
-    border-radius: 0.75rem;
-    background: #fff;
-    color: #831943;
-    font-weight: 700;
-    font-size: 1rem;
-    transition: transform 0.15s ease, box-shadow 0.15s ease;
-    overflow: hidden;
-    isolation: isolate;
-}
-
-.landing-cta-final-primary::before {
+.landing-cta-final::after {
     content: '';
     position: absolute;
-    top: 0;
-    left: -120%;
-    width: 60%;
-    height: 100%;
-    background: linear-gradient(120deg,
-        transparent 0%,
-        rgba(236, 72, 153, 0.35) 50%,
-        transparent 100%);
-    transform: skewX(-20deg);
-    transition: left 0.55s cubic-bezier(0.4, 0, 0.2, 1);
-    pointer-events: none;
-    z-index: 0;
+    inset: 0;
+    z-index: -1;
+    background-image:
+        linear-gradient(to right, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+    background-size: 56px 56px;
+    -webkit-mask-image: radial-gradient(ellipse at 50% 100%, #000 25%, transparent 75%);
+            mask-image: radial-gradient(ellipse at 50% 100%, #000 25%, transparent 75%);
 }
 
-.landing-cta-final-primary:hover::before {
-    left: 120%;
+/* The headline is liquid: a gradient flowing through the glyphs. The serif
+   accent keeps its own pink and gains a soft glow. */
+.landing-cta-final-headline {
+    font-family: var(--font-display);
+    font-size: clamp(2.6rem, 6.5vw, 4.75rem);
+    line-height: 1.02;
+    letter-spacing: -0.035em;
+    font-weight: 700;
+    background-image: linear-gradient(100deg, #fafafa 20%, #f9a8d4 40%, #c4b5fd 55%, #fafafa 75%);
+    background-size: 220% 100%;
+    -webkit-background-clip: text;
+            background-clip: text;
+    -webkit-text-fill-color: transparent;
+            color: transparent;
+    animation: landing-gradient-flow 7s linear infinite;
 }
 
-.landing-cta-final-primary > * {
-    position: relative;
-    z-index: 1;
+@keyframes landing-gradient-flow {
+    from { background-position: 220% 0; }
+    to { background-position: -220% 0; }
 }
 
-.landing-cta-final-primary:hover {
-    transform: translateY(-1px);
-    box-shadow: 0 16px 32px -8px rgba(255, 255, 255, 0.3);
+.landing-cta-final-headline .landing-serif {
+    -webkit-text-fill-color: var(--landing-pink);
+    text-shadow: 0 0 32px rgba(236, 72, 153, 0.55);
+}
+
+.landing-cta-final .landing-install {
+    border-color: rgba(255, 255, 255, 0.14);
+    background: rgba(255, 255, 255, 0.04);
+    color: #f5f5f5;
+}
+
+/* -----------------------------------------------------------------
+ | Entrance motion — staggered reveal driven by the library's own
+ | emphasized-decelerate curve. Applied on load inside the hero and
+ | on scroll elsewhere (via the `data-reveal` observer in app.js).
+ ----------------------------------------------------------------- */
+
+@keyframes landing-rise {
+    from {
+        opacity: 0;
+        transform: translateY(18px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.landing-rise {
+    animation: landing-rise 0.9s var(--landing-ease-out) backwards;
+}
+
+.landing-rise--1 { animation-delay: 0.05s; }
+.landing-rise--2 { animation-delay: 0.14s; }
+.landing-rise--3 { animation-delay: 0.23s; }
+.landing-rise--4 { animation-delay: 0.32s; }
+.landing-rise--5 { animation-delay: 0.45s; }
+
+[data-reveal] {
+    opacity: 0;
+    transform: translateY(22px);
+    transition: opacity 0.8s var(--landing-ease-out), transform 0.8s var(--landing-ease-out);
+    transition-delay: var(--reveal-delay, 0s);
+}
+
+[data-reveal].landing-revealed {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .landing-rise,
+    .landing-ticker-track--left,
+    .landing-ticker-track--right,
+    .landing-upload-bar,
+    .landing-cta-final::before,
+    .landing-cta-final-headline {
+        animation: none;
+    }
+
+    [data-reveal] {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
 }

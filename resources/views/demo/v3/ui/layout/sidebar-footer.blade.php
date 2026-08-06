@@ -21,7 +21,7 @@
             </x-tsui-side-bar>
         </x-slot:menu>
 
-        <p class="text-sm text-slate-500 dark:text-slate-400">
+        <p class="text-sm text-slate-500 dark:text-dark-400">
             The version label is pinned at the bottom of the sidebar — that's the <code class="font-mono">footer</code> slot of <code class="font-mono">&lt;x-side-bar&gt;</code>.
         </p>
     </x-tsui-layout>

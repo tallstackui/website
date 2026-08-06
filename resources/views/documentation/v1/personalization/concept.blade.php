@@ -19,7 +19,7 @@
     </x-section>
     <x-section class="grid grid-cols-2 gap-4" disable-copy>
         <div class="col-span-full md:col-span-1">
-            <div class="bg-white dark:bg-slate-800 p-6 rounded-lg">
+            <div class="bg-white dark:bg-dark-800 p-6 rounded-lg">
                 <a class="inline-flex items-center gap-2" href="{{ route('documentation', ['v1', 'personalization', 'soft']) }}" wire:navigate>
                     <u>Soft</u> Personalization
                     <x-icon name="arrow-up-right" class="h-5 w-5 text-pink-500" />
@@ -27,7 +27,7 @@
             </div>
         </div>
         <div class="col-span-full md:col-span-1">
-            <div class="bg-white dark:bg-slate-800 p-6 rounded-lg">
+            <div class="bg-white dark:bg-dark-800 p-6 rounded-lg">
                 <a class="inline-flex items-center gap-2" href="{{ route('documentation', ['v1', 'personalization', 'deep']) }}" wire:navigate>
                     <u>Deep</u> Personalization
                     <x-icon name="arrow-up-right" class="h-5 w-5 text-pink-500" />

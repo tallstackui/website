@@ -1,12 +1,18 @@
 import './bootstrap';
 import clipboard from "./modules/clipboard";
 import copyMarkdown from "./modules/copy-markdown";
+import reveal from "./modules/reveal";
+import spotlight from "./modules/spotlight";
 import docsearch from '@docsearch/js';
+
+/* landing entrance reveals */
+document.addEventListener('DOMContentLoaded', reveal);
 
 /* clipboard */
 document.addEventListener('alpine:init', () => {
     window.Alpine.data('clipboard', clipboard)
     window.Alpine.data('copyMarkdown', copyMarkdown)
+    window.Alpine.data('spotlight', spotlight)
 });
 
 /* algolia */

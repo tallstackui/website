@@ -35,4 +35,4 @@ Every response teaches the next step: `list_components` points to `get_component
 
 ## Pending
 
-- [ ] Document the new primitives (`component-index` and `internal-scopes` resources, `customize-component` prompt) on the v3 AI documentation page (`resources/views/documentation/v3/ai.blade.php`) — it currently lists only the five tools.
+- [x] Document the new primitives (`component-index` and `internal-scopes` resources, `customize-component` prompt) on the v3 AI documentation page (`resources/views/documentation/v3/ai.blade.php`) — done: "Available Resources" and "Available Prompts" sections.

@@ -26,7 +26,7 @@
         </x-slot:menu>
 
         <h1 class="font-display text-3xl font-bold tracking-tight text-slate-900 dark:text-white">Welcome back, AJ</h1>
-        <p class="mt-3 text-base text-slate-600 dark:text-slate-300">
+        <p class="mt-3 text-base text-slate-600 dark:text-dark-300">
             This is a real <code class="font-mono">&lt;x-layout&gt;</code> rendered inside the iframe — sidebar, header, and main content all wired together.
         </p>
     </x-tsui-layout>

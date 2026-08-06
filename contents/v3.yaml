@@ -50,6 +50,8 @@ ai:
   - Component Instructions
   - MCP Server
   - Available Tools
+  - Available Resources
+  - Available Prompts
   - Connecting to Claude Code
   - Connecting to Cursor
   - Connecting to Gemini CLI

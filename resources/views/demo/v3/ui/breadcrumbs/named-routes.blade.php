@@ -6,7 +6,7 @@
             ['label' => 'Current Page'],
         ]" />
 
-        <p class="text-xs text-slate-500 dark:text-slate-400">
+        <p class="text-xs text-slate-500 dark:text-dark-400">
             <code class="font-mono">welcome</code> is a named route resolved via Laravel's <code class="font-mono">route()</code> helper. <code class="font-mono">/</code> is kept as-is.
         </p>
     </div>

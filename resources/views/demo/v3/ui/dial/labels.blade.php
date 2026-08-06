@@ -1,5 +1,5 @@
 <x-demo-layout title="Dial Labels">
-    <div class="flex min-h-[420px] flex-col items-center justify-center px-6 py-10 text-sm text-slate-500 dark:text-slate-400">
+    <div class="flex min-h-[420px] flex-col items-center justify-center px-6 py-10 text-sm text-slate-500 dark:text-dark-400">
         <p>Each action shows a tooltip-style label next to its icon.</p>
     </div>
 

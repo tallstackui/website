@@ -6,6 +6,6 @@
             ['label' => 'John Doe'],
         ]" />
 
-        <p class="text-xs text-slate-500 dark:text-slate-400">Hover any item with a tooltip to see it pop up.</p>
+        <p class="text-xs text-slate-500 dark:text-dark-400">Hover any item with a tooltip to see it pop up.</p>
     </div>
 </x-demo-layout>

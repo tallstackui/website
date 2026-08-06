@@ -1,5 +1,5 @@
 <x-demo-layout title="Dial Basic">
-    <div class="flex min-h-[340px] flex-col items-center justify-center px-6 py-10 text-sm text-slate-500 dark:text-slate-400">
+    <div class="flex min-h-[340px] flex-col items-center justify-center px-6 py-10 text-sm text-slate-500 dark:text-dark-400">
         <p>Click the floating button at the bottom-right to expand the actions.</p>
     </div>
 

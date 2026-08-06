@@ -1,7 +1,7 @@
 <ul role="list" class="space-y-9">
     <li>
-        <h2 class="font-medium text-pink-900 font-display dark:text-pink-500">Getting Started</h2>
-        <ul role="list" class="mt-4 space-y-2 dark:border-slate-800 lg:space-y-4 lg:mt-4 lg:border-slate-200">
+        <h2 class="font-mono text-[0.65rem] font-semibold uppercase tracking-[0.16em] text-gray-400 dark:text-dark-500">Getting Started</h2>
+        <ul role="list" class="mt-3 space-y-1">
             <li class="relative ml-4">
                 <x-layout.navigation.link :href="route('documentation', ['v3', 'installation'])" text="Installation" />
             </li>
@@ -26,11 +26,11 @@
         </ul>
     </li>
     <li>
-        <h2 class="font-medium text-pink-900 font-display dark:text-pink-500">Components</h2>
-        <ul role="list" class="mt-4 space-y-2 dark:border-slate-800 lg:space-y-4 lg:mt-4 lg:border-slate-200">
+        <h2 class="font-mono text-[0.65rem] font-semibold uppercase tracking-[0.16em] text-gray-400 dark:text-dark-500">Components</h2>
+        <ul role="list" class="mt-3 space-y-1">
             <li class="relative ml-4">
-                <h2 class="font-medium text-pink-900 font-display dark:text-pink-500">Form</h2>
-                <ul role="list" class="mt-4 space-y-2 dark:border-slate-800 lg:space-y-4 lg:mt-4 lg:border-slate-200">
+                <h2 class="mt-6 font-mono text-[0.65rem] font-semibold uppercase tracking-[0.16em] text-gray-400 dark:text-dark-500">Form</h2>
+                <ul role="list" class="mt-3 space-y-1">
                     <li class="relative ml-4">
                         <x-layout.navigation.link :href="route('documentation', ['v3', 'form', 'autocomplete'])" text="AutoComplete" new />
                     </li>
@@ -88,8 +88,8 @@
                 </ul>
             </li>
             <li class="relative ml-4">
-                <h2 class="font-medium text-pink-900 font-display dark:text-pink-500">UI</h2>
-                <ul role="list" class="mt-4 space-y-2 dark:border-slate-800 lg:space-y-4 lg:mt-4 lg:border-slate-200">
+                <h2 class="mt-6 font-mono text-[0.65rem] font-semibold uppercase tracking-[0.16em] text-gray-400 dark:text-dark-500">UI</h2>
+                <ul role="list" class="mt-3 space-y-1">
                     <li class="relative ml-4">
                         <x-layout.navigation.link :href="route('documentation', ['v3', 'ui', 'accordion'])" text="Accordion" new />
                     </li>
@@ -207,8 +207,8 @@
                 </ul>
             </li>
             <li class="relative ml-4">
-                <h2 class="font-medium text-pink-900 font-display dark:text-pink-500">Interactions</h2>
-                <ul role="list" class="mt-4 space-y-2 dark:border-slate-800 lg:space-y-4 lg:mt-4 lg:border-slate-200">
+                <h2 class="mt-6 font-mono text-[0.65rem] font-semibold uppercase tracking-[0.16em] text-gray-400 dark:text-dark-500">Interactions</h2>
+                <ul role="list" class="mt-3 space-y-1">
                     <li class="relative ml-4">
                         <x-layout.navigation.link :href="route('documentation', ['v3', 'interactions', 'dialog'])" text="Dialog" />
                     </li>
@@ -218,8 +218,8 @@
                 </ul>
             </li>
             <li class="relative ml-4">
-                <h2 class="font-medium text-pink-900 font-display dark:text-pink-500">Internals</h2>
-                <ul role="list" class="mt-4 space-y-2 dark:border-slate-800 lg:space-y-4 lg:mt-4 lg:border-slate-200">
+                <h2 class="mt-6 font-mono text-[0.65rem] font-semibold uppercase tracking-[0.16em] text-gray-400 dark:text-dark-500">Internals</h2>
+                <ul role="list" class="mt-3 space-y-1">
                     <li class="relative ml-4">
                         <x-layout.navigation.link :href="route('documentation', ['v3', 'internal', 'error'])" text="Error" />
                     </li>
@@ -240,8 +240,8 @@
         </ul>
     </li>
     <li>
-        <h2 class="font-medium text-pink-900 font-display dark:text-pink-500">Digging Deeper</h2>
-        <ul role="list" class="mt-4 space-y-2 dark:border-slate-800 lg:space-y-4 lg:mt-4 lg:border-slate-200">
+        <h2 class="font-mono text-[0.65rem] font-semibold uppercase tracking-[0.16em] text-gray-400 dark:text-dark-500">Digging Deeper</h2>
+        <ul role="list" class="mt-3 space-y-1">
             <li class="relative ml-4">
                 <x-layout.navigation.link :href="route('documentation', ['v3', 'configuration'])" text="Configurations" />
             </li>
@@ -255,13 +255,11 @@
                 <x-layout.navigation.link :href="route('documentation', ['v3', 'without-livewire'])" text="Without Livewire" />
             </li>
             <li class="relative ml-4">
-                <h2 class="font-medium text-pink-900 font-display dark:text-pink-500">Customization</h2>
-                <ul role="list" class="mt-4 space-y-2 dark:border-slate-800 lg:space-y-4 lg:mt-4 lg:border-slate-200">
+                <h2 class="mt-6 font-mono text-[0.65rem] font-semibold uppercase tracking-[0.16em] text-gray-400 dark:text-dark-500">Customization</h2>
+                <ul role="list" class="mt-3 space-y-1">
                     <li class="relative ml-4">
                         <x-layout.navigation.link :href="route('documentation', ['v3', 'customization', 'concept'])" text="Concept" />
                     </li>
-                </ul>
-                <ul role="list" class="mt-4 space-y-2 dark:border-slate-800 lg:space-y-4 lg:mt-4 lg:border-slate-200">
                     <li class="relative ml-4">
                         <x-layout.navigation.link :href="route('documentation', ['v3', 'customization', 'soft'])" text="Soft Customization" />
                     </li>
@@ -277,8 +275,8 @@
                 </ul>
             </li>
             <li class="relative ml-4">
-                <h2 class="font-medium text-pink-900 font-display dark:text-pink-500">Helpers</h2>
-                <ul role="list" class="mt-4 space-y-2 dark:border-slate-800 lg:space-y-4 lg:mt-4 lg:border-slate-200">
+                <h2 class="mt-6 font-mono text-[0.65rem] font-semibold uppercase tracking-[0.16em] text-gray-400 dark:text-dark-500">Helpers</h2>
+                <ul role="list" class="mt-3 space-y-1">
                     <li class="relative ml-4">
                         <x-layout.navigation.link :href="route('documentation', ['v3', 'helpers', 'env-bar'])" text="EnvBar" />
                     </li>
@@ -291,14 +289,14 @@
                 </ul>
             </li>
             <li class="relative ml-4">
-                <h2 class="font-medium text-pink-900 font-display dark:text-pink-500">Integrations</h2>
-                <ul role="list" class="mt-4 space-y-2 dark:border-slate-800 lg:space-y-4 lg:mt-4 lg:border-slate-200">
+                <h2 class="mt-6 font-mono text-[0.65rem] font-semibold uppercase tracking-[0.16em] text-gray-400 dark:text-dark-500">Integrations</h2>
+                <ul role="list" class="mt-3 space-y-1">
                     <li class="relative ml-4">
                         <x-layout.navigation.link :href="route('documentation', ['v3', 'integrations', 'alpine'])" text="AlpineJS" />
                     </li>
                 </ul>
             </li>
-            <li class="relative ml-4">
+            <li class="relative ml-4 mt-5">
                 <x-layout.navigation.link :href="route('documentation', ['v3', 'contribution'])" text="Contribution Guide" />
             </li>
         </ul>

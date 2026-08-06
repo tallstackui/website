@@ -5,8 +5,10 @@
         @apply my-2 overflow-x-auto;
     }
 
+    /* The theme ships its own background inline; the site's near-black wins. */
     pre code.torchlight {
         @apply block p-4 min-w-max;
+        background-color: #141414 !important;
     }
 
     pre code.torchlight .line {

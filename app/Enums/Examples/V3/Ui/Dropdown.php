@@ -107,7 +107,7 @@ class Dropdown
     public const string HEADER_SLOTS = <<<'HTML'
     <x-dropdown text="Menu">
         <x-slot:header>
-            <p>Welcome!</p>
+            <x-theme-switch block />
         </x-slot:header>
         <x-dropdown.items icon="cog" text="Settings" />
         <x-dropdown.items icon="arrow-left-on-rectangle" text="Logout" separator />

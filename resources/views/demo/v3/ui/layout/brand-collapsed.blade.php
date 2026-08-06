@@ -23,7 +23,7 @@
             </x-tsui-side-bar>
         </x-slot:menu>
 
-        <p class="text-sm text-slate-500 dark:text-slate-400">
+        <p class="text-sm text-slate-500 dark:text-dark-400">
             Click the toggle button on the header (top-left of the bar) to collapse the sidebar. The full <b>TallStackUI</b> brand swaps to the compact <b>T</b> mark.
         </p>
     </x-tsui-layout>

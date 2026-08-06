@@ -4,6 +4,21 @@ namespace App\Enums\Examples\V3;
 
 class Welcome
 {
+    public const string FORM = <<<'HTML'
+    <form method="POST">
+        @csrf
+
+        <x-currency name="price" />
+        <x-date name="published_at" />
+    </form>
+    HTML;
+
+    public const string INTERACTIONS = <<<'JS'
+    $tsui.interaction('toast').success('Shipped!').send();
+
+    $tsui.interaction('dialog').info('One line.').send();
+    JS;
+
     public const string CUSTOMIZATION = <<<'HTML'
     use TallStackUi\Facades\TallStackUi;
 
