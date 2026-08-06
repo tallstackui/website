@@ -15,18 +15,7 @@ Route::redirect('/upgrade', '/docs/v3/upgrade-guide');
 Route::redirect('/install', '/docs/v3/installation');
 Route::redirect('/issue', 'https://github.com/tallstackui/tallstackui/issues/new?template=bug_report.yml')->name('issue');
 
-/** v4 is served by the apex deployment. */
-Route::get('/docs/v4/{path?}', fn (?string $path = null) => redirect()->away(
-    rtrim(config('documentation.sites.v4'), '/').'/docs/v4'.($path ? '/'.$path : ''), 301
-))->where('path', '.*');
-
-/** v1 and v2 reached end of life and are no longer published. */
-Route::get('/docs/{version}/{path?}', fn () => redirect()->away(
-    rtrim(config('documentation.sites.v4'), '/').'/docs/v4/upgrade-guide', 301
-))->where(['version' => 'v1|v2', 'path' => '.*']);
-Route::get('/summer-release', fn () => redirect()->away(
-    rtrim(config('documentation.sites.v4'), '/').'/docs/v4/upgrade-guide', 301
-));
+Route::redirect('/summer-release', '/docs/v3/upgrade-guide', 301);
 
 Route::get('/demo/{view}', function (string $view) {
     $template = 'demo.'.str_replace('/', '.', $view);

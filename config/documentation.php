@@ -19,14 +19,15 @@ return [
     | Documentation Sites
     |--------------------------------------------------------------------------
     |
-    | Every major still online, newest first. The first entry is the latest.
-    | When a new major ships, it takes over the apex domain and the previous
-    | one moves to its own subdomain.
+    | Every major still online, newest first. The first entry is the latest:
+    | it drives the version picker, the outdated-version warnings and the
+    | cross-deployment redirects. A single entry hides the picker entirely.
+    |
+    | When v4 ships, add it on top and everything else follows.
     |
     */
 
     'sites' => [
-        'v4' => env('DOCS_V4_URL', 'https://tallstackui.com'),
         'v3' => env('DOCS_V3_URL', 'https://v3.tallstackui.com'),
     ],
 

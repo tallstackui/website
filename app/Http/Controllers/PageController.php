@@ -34,7 +34,8 @@ class PageController
         }
 
         if (! in_array($version, $this->versions())) {
-            return redirect()->route('documentation', [$this->default(), 'installation']);
+            return $this->elsewhere($version, $main, $children)
+                ?? redirect()->route('documentation', [$this->default(), 'installation']);
         }
 
         if (! ViewFacade::exists($view)) {
@@ -64,6 +65,21 @@ class PageController
             'content' => $this->right($version, $main, $children),
             ...Example::tryFrom($example)?->variables() ?? [],
         ]);
+    }
+
+    /**
+     * Send a major published by another deployment to where it actually lives,
+     * keeping the requested page. Returns null when nobody publishes it.
+     */
+    private function elsewhere(string $version, ?string $main = null, ?string $children = null): ?RedirectResponse
+    {
+        if (! $site = config("documentation.sites.$version")) {
+            return null;
+        }
+
+        $path = collect([$version, $main, $children])->filter()->join('/');
+
+        return redirect()->away(rtrim($site, '/').'/docs/'.$path, 301);
     }
 
     /**
