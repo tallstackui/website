@@ -1,6 +1,6 @@
 @theme {
     --font-sans: 'Figtree', ui-sans-serif, system-ui, sans-serif;
-    --font-display: 'Outfit', 'Figtree', ui-sans-serif, system-ui, sans-serif;
+    --font-display: 'Sora', 'Figtree', ui-sans-serif, system-ui, sans-serif;
     --font-serif: 'Instrument Serif', ui-serif, Georgia, serif;
     --font-mono: 'JetBrains Mono', ui-monospace, 'SFMono-Regular', Menlo, monospace;
 }
@@ -189,6 +189,11 @@
     color: var(--landing-pink);
 }
 
+/* Same accent, upright — for headlines that already carry another emphasis. */
+.landing-serif--upright {
+    font-style: normal;
+}
+
 /* Marker highlight — a thick brand stroke behind key phrases. */
 .landing-mark {
     position: relative;
@@ -259,6 +264,37 @@
 }
 
 .landing.dark .landing-section--ruled::before {
+    background: linear-gradient(
+        90deg,
+        transparent,
+        var(--landing-line-dark) 18%,
+        var(--landing-line-dark) 82%,
+        transparent
+    );
+}
+
+/* The footer closes the page on the same hairline the sections open on. */
+.landing-footer {
+    position: relative;
+}
+
+.landing-footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        var(--landing-line-light) 18%,
+        var(--landing-line-light) 82%,
+        transparent
+    );
+}
+
+.landing.dark .landing-footer::before {
     background: linear-gradient(
         90deg,
         transparent,

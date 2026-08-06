@@ -29,7 +29,7 @@
     <link rel="manifest" href="{{ asset('assets/images/site.webmanifest') }}">
 
     <link rel="preconnect" href="https://fonts.bunny.net">
-    <link href="https://fonts.bunny.net/css?family=figtree:400,500,600,700|outfit:400,500,600,700|instrument-serif:400,400i|jetbrains-mono:400,500,600&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.bunny.net/css?family=figtree:400,500,600,700|sora:400,500,600,700|instrument-serif:400,400i|jetbrains-mono:400,500,600&display=swap" rel="stylesheet"/>
     <x-google-analytics />
 
     <tallstackui:script />

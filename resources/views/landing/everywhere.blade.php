@@ -5,7 +5,7 @@
             Everywhere
         </p>
         <h2 class="landing-section-heading mt-5">
-            Built for Livewire. Works with <span class="landing-serif">vanilla Blade</span>.
+            Built for Livewire. Works with <span class="landing-serif">vanilla Blade.</span>
         </h2>
     </div>
 
@@ -34,9 +34,9 @@
             <div class="mt-5">
                 <x-code language="js" :contents="$interactions" disable-copy />
             </div>
-            <div class="mt-4 flex flex-wrap gap-2" x-data>
-                <x-button color="emerald" icon="bell" x-on:click="$tsui.interaction('toast').success('Shipped!', 'That toast came from one line of JavaScript.').send()">Toast</x-button>
-                <x-button color="violet" icon="chat-bubble-left-right" x-on:click="$tsui.interaction('dialog').info('One line.', 'Dialogs work the same way, from PHP or JavaScript.').send()">Dialog</x-button>
+            <div class="mt-4 grid grid-cols-1 gap-2 sm:grid-cols-2" x-data>
+                <x-button color="emerald" icon="bell" block x-on:click="$tsui.interaction('toast').stacked().success('Shipped!', 'That toast came from JavaScript.').send()">Dispatch a Toast notification</x-button>
+                <x-button color="violet" icon="chat-bubble-left-right" block x-on:click="$tsui.interaction('dialog').info('One line.', 'Dialogs work the same way!').send()">Dispatch a Dialog notification</x-button>
             </div>
         </article>
     </div>

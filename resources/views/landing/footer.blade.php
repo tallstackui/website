@@ -1,4 +1,4 @@
-<footer class="border-t border-gray-200 pb-12 pt-10 dark:border-dark-700/60">
+<footer class="landing-footer pb-12 pt-10">
     <div class="flex flex-col items-center justify-between gap-6 md:flex-row">
         <div class="flex items-center gap-3">
             <x-svg.banner class="h-6 w-8" />

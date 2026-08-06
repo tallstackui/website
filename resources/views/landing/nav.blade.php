@@ -10,7 +10,7 @@
         <a href="#theme" class="transition hover:text-pink-500">Theme</a>
         <a href="#customize" class="transition hover:text-pink-500">Customize</a>
         <a href="#ai" class="transition hover:text-pink-500">AI</a>
-        <a href="{{ route('documentation', [$version, 'installation']) }}" wire:navigate class="transition hover:text-pink-500">Docs</a>
+        <a href="{{ route('documentation', ['installation']) }}" wire:navigate class="transition hover:text-pink-500">Docs</a>
     </div>
 
     <div class="flex items-center gap-4">

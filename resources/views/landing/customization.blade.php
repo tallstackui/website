@@ -31,7 +31,7 @@
                 </li>
             </ul>
 
-            <a href="{{ route('documentation', [$version, 'customization', 'soft']) }}"
+            <a href="{{ route('documentation', ['customization', 'soft']) }}"
                wire:navigate
                class="landing-cta-primary mt-8">
                 Learn soft customization

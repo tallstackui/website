@@ -4,13 +4,13 @@
             <span class="landing-eyebrow-index">TallStackUI</span>
         </p>
         <h2 class="landing-cta-final-headline mt-6">
-            Ship something <span class="landing-serif">beautiful</span>.
+            Ship something <span class="landing-serif">beautiful.</span>
         </h2>
         <p class="mx-auto mt-6 max-w-xl text-base leading-relaxed text-neutral-400">
             Drop it in, make it yours, ship it.
         </p>
         <div class="mt-10 flex flex-wrap items-center justify-center gap-3">
-            <a href="{{ route('documentation', [$version, 'installation']) }}"
+            <a href="{{ route('documentation', ['installation']) }}"
                wire:navigate
                class="landing-cta-primary">
                 Get started

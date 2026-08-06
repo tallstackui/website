@@ -7,7 +7,7 @@
                     Developer experience
                 </p>
                 <h2 class="landing-section-heading mt-5">
-                    Write Blade. <span class="landing-serif">Ship</span> UI.
+                    Nothing here is a <span class="landing-serif">screenshot.</span>
                 </h2>
                 <p class="landing-section-subheading mt-5">
                     The form on the right is a single Livewire component built entirely
@@ -31,7 +31,7 @@
                     </li>
                 </ul>
 
-                <a href="{{ route('documentation', [$version, 'form', 'input']) }}"
+                <a href="{{ route('documentation', ['form', 'input']) }}"
                    wire:navigate
                    class="landing-cta-primary mt-8">
                     Browse the form components

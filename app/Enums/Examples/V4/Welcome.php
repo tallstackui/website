@@ -14,9 +14,13 @@ class Welcome
     HTML;
 
     public const string INTERACTIONS = <<<'JS'
-    $tsui.interaction('toast').success('Shipped!').send();
+    $tsui.interaction('toast')
+        .success('Shipped!')
+        .send();
 
-    $tsui.interaction('dialog').info('One line.').send();
+    $tsui.interaction('dialog')
+        .info('One line.')
+        .send();
     JS;
 
     public const string CUSTOMIZATION = <<<'HTML'

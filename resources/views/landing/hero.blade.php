@@ -6,7 +6,7 @@
             </p>
 
             <h1 class="landing-headline mt-6 landing-rise landing-rise--2">
-                Beautifully <span class="landing-serif">crafted</span> components for your next <span class="text-pink-500">TALL Stack</span> idea.
+                Beautifully <span class="landing-serif landing-serif--upright">crafted</span> components for your next <span class="text-pink-500">TALL Stack</span> idea.
             </h1>
 
             <p class="landing-section-subheading mt-6 text-[1.05rem] landing-rise landing-rise--3">
@@ -17,7 +17,7 @@
             </p>
 
             <div class="mt-9 flex flex-wrap items-center gap-3 landing-rise landing-rise--4">
-                <a href="{{ route('documentation', [$version, 'installation']) }}"
+                <a href="{{ route('documentation', ['installation']) }}"
                    wire:navigate
                    class="landing-cta-primary">
                     Start building

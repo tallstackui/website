@@ -15,7 +15,7 @@
                 every component's docs are also served as plain Markdown.
             </p>
 
-            <a href="{{ route('documentation', [$version, 'ai']) }}"
+            <a href="{{ route('documentation', ['ai']) }}"
                wire:navigate
                class="landing-cta-primary mt-8">
                 Set up your editor

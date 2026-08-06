@@ -71,7 +71,7 @@
         <div class="landing-ticker-track landing-ticker-track--left">
             @foreach ([false, true] as $clone)
                 @foreach ($tickerTop as $name => [$main, $children])
-                    <a href="{{ route('documentation', [$version, $main, $children]) }}"
+                    <a href="{{ route('documentation', [$main, $children]) }}"
                        wire:navigate
                        @if ($clone) aria-hidden="true" tabindex="-1" @endif
                        class="landing-ticker-item">
@@ -92,7 +92,7 @@
         <div class="landing-ticker-track landing-ticker-track--right">
             @foreach ([false, true] as $clone)
                 @foreach ($tickerBottom as $name => [$main, $children])
-                    <a href="{{ route('documentation', [$version, $main, $children]) }}"
+                    <a href="{{ route('documentation', [$main, $children]) }}"
                        wire:navigate
                        @if ($clone) aria-hidden="true" tabindex="-1" @endif
                        class="landing-ticker-item">
