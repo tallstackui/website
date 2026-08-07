@@ -1,6 +1,9 @@
 @php
     use App\Support\ComponentDocumentation;
-    $components = app(ComponentDocumentation::class)->list();
+    $documentation = app(ComponentDocumentation::class);
+    $components = $documentation->list()
+        ->flatten(1)
+        ->map(fn (array $component) => [...$component, 'url' => route('ai.component', ['name' => $documentation->slug($component['file'])])]);
 @endphp
 
 <x-layout :$content>
@@ -32,15 +35,15 @@
             <x-table :headers="[
                 ['index' => 'name', 'label' => 'Component'],
                 ['index' => 'file', 'label' => 'Instructions'],
-            ]" :rows="collect($components)->flatten(1)">
+            ]" :rows="$components">
                 @interact('column_file', $row)
                     <div class="flex items-center gap-2">
-                        <a href="{{ route('ai.component', ['name' => str_replace(['components/', '.md'], '', $row['file'])]) }}"
+                        <a href="{{ $row['url'] }}"
                            class="underline text-pink-600 dark:text-pink-400"
                            target="_blank">
                             {{ $row['file'] }}
                         </a>
-                        <x-clipboard :text="route('ai.component', ['name' => str_replace(['components/', '.md'], '', $row['file'])])" icon />
+                        <x-clipboard :text="$row['url']" icon />
                     </div>
                 @endinteract
             </x-table>

@@ -3,6 +3,8 @@
 use App\Enums\Example;
 use App\Http\Controllers\PageController;
 use App\Http\Middleware\ShareVersionVariable;
+use App\Support\ComponentDocumentation;
+use App\Support\Llms;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Route;
 
@@ -37,10 +39,19 @@ Route::get('/demo/{view}', function (string $view) {
     return view($template);
 })->where('view', '[a-z0-9./_-]+')->name('demo');
 
-Route::get('/ai/{name}.md', function (string $name) {
+Route::get('/llms.txt', fn (Llms $llms) => response($llms->build(), 200, [
+    'Content-Type' => 'text/plain; charset=UTF-8',
+]))->name('llms');
+
+Route::get('/ai/{name}.md', function (string $name, ComponentDocumentation $documentation) {
+    // The slug is matched against the shipped index, so the path never comes from the URL.
+    $file = $documentation->file($name);
+
+    abort_if($file === null, 404);
+
     $branch = str(config('documentation.version'))->after('v')->append('.x')->value();
 
-    $response = Http::get("https://raw.githubusercontent.com/tallstackui/tallstackui/refs/heads/{$branch}/.ai/components/{$name}.md");
+    $response = Http::get("https://raw.githubusercontent.com/tallstackui/tallstackui/refs/heads/{$branch}/.ai/{$file}");
 
     abort_if($response->failed(), 404);
 

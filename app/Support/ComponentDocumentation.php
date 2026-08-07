@@ -217,6 +217,20 @@ class ComponentDocumentation
         return file_exists($path) ? file_get_contents($path) : null;
     }
 
+    /** Public slug of a documentation file, as used by the AI documentation route. */
+    public function slug(string $file): string
+    {
+        return str_replace(['components/', '.md'], '', $file);
+    }
+
+    /** Documentation file behind a public slug. */
+    public function file(string $slug): ?string
+    {
+        return collect(['index.md'])
+            ->concat($this->documents()->pluck('file'))
+            ->first(fn (string $file): bool => $this->slug($file) === $slug);
+    }
+
     /**
      * Customization blocks of a component, tolerating constructors the container cannot resolve.
      *
@@ -245,17 +259,19 @@ class ComponentDocumentation
         return $this->parse()->concat($this->guides());
     }
 
-    /** Supplementary guide documents living outside the component index. */
+    /** Supplementary guides living at the root of the .ai directory, outside the component index. */
     private function guides(): Collection
     {
-        return collect([
-            [
-                'name' => 'Soft Customization Internal Scopes',
-                'file' => 'soft-customization-internal-scopes.md',
+        return collect(glob($this->base.'/*.md') ?: [])
+            ->map(fn (string $path): string => basename($path))
+            ->reject(fn (string $file): bool => $file === 'index.md')
+            ->map(fn (string $file): array => [
+                'name' => Str::headline(Str::before($file, '.md')),
+                'file' => $file,
                 'category' => 'Guides',
                 'livewire_only' => false,
-            ],
-        ])->filter(fn (array $guide): bool => file_exists($this->base.'/'.$guide['file']))->values();
+            ])
+            ->values();
     }
 
     /** Parse index.md to extract component names, categories, and file paths. */
@@ -304,8 +320,15 @@ class ComponentDocumentation
             return null;
         }
 
+        $paragraph = [];
+
         foreach (explode("\n", $content) as $line) {
             $line = trim($line);
+
+            // The intro paragraph is hard wrapped, so it ends at the first blank line.
+            if ($paragraph !== [] && $line === '') {
+                break;
+            }
 
             if ($line === '' || str_starts_with($line, '#') || str_starts_with($line, '>')) {
                 continue;
@@ -313,13 +336,13 @@ class ComponentDocumentation
 
             // Documents without an intro paragraph start straight into code or tables.
             if (str_starts_with($line, '```') || str_starts_with($line, '|')) {
-                return null;
+                break;
             }
 
-            return Str::limit($line, 180);
+            $paragraph[] = $line;
         }
 
-        return null;
+        return $paragraph === [] ? null : Str::limit(implode(' ', $paragraph), 180);
     }
 
     /**
