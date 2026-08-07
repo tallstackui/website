@@ -21,5 +21,5 @@
             {{ __('CONFIGURE DOCUMENTATION') }}
         </x-button>
     </div>
-    @include('components.layout.navigation.version.'.$version)
+    @include('components.layout.navigation.sidebar')
 </nav>

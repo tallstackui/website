@@ -2,7 +2,6 @@
 
 namespace App\Enums;
 
-use App\Traits\VersionDiscovery;
 use Exception;
 use ReflectionClass;
 use ReflectionException;
@@ -10,8 +9,6 @@ use Throwable;
 
 enum Example: string
 {
-    use VersionDiscovery;
-
     // region Form
     case Autocomplete = 'Form\\Autocomplete';
     case Checkbox = 'Form\\Checkbox';
@@ -115,8 +112,7 @@ enum Example: string
     /** @throws ReflectionException|Throwable */
     public function variables(): array
     {
-        $version = strtoupper($this->current());
-        $class = "App\\Enums\\Examples\\$version\\$this->value";
+        $class = "App\\Enums\\Examples\\$this->value";
 
         throw_if(! class_exists($class), new Exception('Invalid code example'));
 

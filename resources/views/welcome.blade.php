@@ -183,14 +183,14 @@
                     <div class="relative -ml-[5%] w-[110%] -rotate-2">
                         <div class="landing-marquee-track landing-marquee-track--left">
                             @foreach ($marqueeTop as $name => [$main, $children])
-                                <a href="{{ route('documentation', [$version, $main, $children]) }}"
+                                <a href="{{ route('documentation', [$main, $children]) }}"
                                    wire:navigate
                                    class="landing-marquee-pill">
                                     {{ $name }}
                                 </a>
                             @endforeach
                             @foreach ($marqueeTop as $name => [$main, $children])
-                                <a href="{{ route('documentation', [$version, $main, $children]) }}"
+                                <a href="{{ route('documentation', [$main, $children]) }}"
                                    wire:navigate
                                    aria-hidden="true"
                                    tabindex="-1"
@@ -206,14 +206,14 @@
                     <div class="relative -ml-[5%] w-[110%] -rotate-2">
                         <div class="landing-marquee-track landing-marquee-track--right">
                             @foreach ($marqueeBottom as $name => [$main, $children])
-                                <a href="{{ route('documentation', [$version, $main, $children]) }}"
+                                <a href="{{ route('documentation', [$main, $children]) }}"
                                    wire:navigate
                                    class="landing-marquee-pill">
                                     {{ $name }}
                                 </a>
                             @endforeach
                             @foreach ($marqueeBottom as $name => [$main, $children])
-                                <a href="{{ route('documentation', [$version, $main, $children]) }}"
+                                <a href="{{ route('documentation', [$main, $children]) }}"
                                    wire:navigate
                                    aria-hidden="true"
                                    tabindex="-1"

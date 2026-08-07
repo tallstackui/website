@@ -16,7 +16,6 @@ npm run build            # Production build
 
 # Testing
 ./vendor/bin/pest                  # Run all tests
-./vendor/bin/pest --filter="V3"    # Run tests for a specific version
 ./vendor/bin/pest --type-coverage  # Type coverage report
 
 # CI (lint check + type coverage + route list + tests)
@@ -42,31 +41,37 @@ php artisan migrate:fresh --seed
 
 ## Architecture
 
-### Versioned Documentation Routing
+### Single Major Per Deployment
 
-Single invokable controller handles all docs: `GET /docs/{version}/{main?}/{children?}` → `PageController`.
+This deployment publishes one major only (`config('documentation.version')`, default `v3`). Other majors live on their own domains (`config('documentation.sites')`). The major no longer appears in the URL or in filesystem paths for docs/examples/contents.
 
-**Flow:** URL → validate version against `VersionDiscovery::versions()` → construct view path (`documentation.{version}.{main}.{children}`) → load "On This Page" sidebar from YAML (`contents/{version}.yaml`) → resolve `Example` enum → render Blade view.
+### Documentation Routing
+
+Single invokable controller handles all docs: `GET /docs/{main?}/{children?}` → `PageController`.
+
+**Flow:** URL → construct view path (`documentation.{main}.{children}`) → load "On This Page" from `contents.yaml` → resolve `Example` enum → render Blade view.
+
+Legacy `/docs/v{n}/...` URLs 301 to the clean path (same major) or away to the deployment that serves that major.
 
 ### Code Examples System
 
 Code snippets shown in documentation are defined as PHP class constants, not inline in Blade templates:
 
 1. `App\Enums\Example` enum maps component names to namespaced class paths (e.g., `Form\\Input`)
-2. `App\Enums\Examples\V{1,2,3}\{Category}\{Component}.php` classes hold `const` heredoc strings with example HTML
+2. `App\Enums\Examples\{Category}\{Component}.php` classes hold `const` heredoc strings with example HTML
 3. `Example::variables()` uses reflection to extract all constants, converts keys to camelCase, and passes them to the view
 4. The `apply_prefix()` helper (`app/helpers.php`) dynamically rewrites `<x-` prefixes in examples based on a user cookie
 
 **Adding a new component's documentation:**
-- Create Blade view at `resources/views/documentation/v{X}/{category}/{component}.blade.php`
-- Create example class at `app/Enums/Examples/V{X}/{Category}/{Component}.php` with `const` heredoc strings
+- Create Blade view at `resources/views/documentation/{category}/{component}.blade.php`
+- Create example class at `app/Enums/Examples/{Category}/{Component}.php` with `const` heredoc strings
 - Add case to `App\Enums\Example` enum
-- Add navigation entry to `contents/v{X}.yaml`
+- Add navigation entry to `contents.yaml` and `resources/views/components/layout/navigation/sidebar.blade.php`
 - Add route test case to `tests/Feature/StructureTest.php`
 
 ### Version Discovery
 
-The `VersionDiscovery` trait (used by `PageController`, `Example` enum, `ShareVersionVariable` middleware) detects the current documentation version from the route parameter. The latest version is defined as `LATEST_VERSION` constant in `app/helpers.php`.
+The `VersionDiscovery` trait (used by layout, version selector, `ShareVersionVariable` middleware) reads the served major from `config('documentation.version')`. Cross-deployment links use `version_url()` / `latest_version()` from `app/helpers.php`.
 
 ### View Components
 
@@ -77,11 +82,11 @@ Reusable Blade components in `resources/views/components/`:
 
 ### Content Structure (YAML)
 
-`contents/v{1,2,3}.yaml` files define the "On This Page" sidebar navigation. Structure is hierarchical: top-level keys are categories, values are either arrays of section names or nested category → component → sections.
+`contents.yaml` defines the "On This Page" sidebar navigation. Structure is hierarchical: top-level keys are categories, values are either arrays of section names or nested category → component → sections.
 
 ## Testing Policy
 
-Do NOT write tests for v3 routes/pages unless explicitly requested.
+Do NOT write tests for documentation routes/pages unless explicitly requested.
 
 ## Key Patterns
 
