@@ -249,4 +249,20 @@
             </x-preview>
         </div>
     </x-section>
+    <x-section title="Metadata" new description="Items accept a metadata key carrying arbitrary consumer data. The component never reads, filters or renders it: it only keeps it reachable from the AlpineJS selected state and from the select event payload.">
+        <x-code language="php" :contents="$metadata" />
+        <x-code class="mt-4" language="blade" :contents="$metadataUsage" />
+        <p class="mt-4">Works identically for local items and remote results, since both go through the same normalization step. What it does <b>not</b> do:</p>
+        <ul class="mt-2 list-inside list-disc">
+            <li>it is not matched by the search filter, only <x-block>value</x-block> and <x-block>description</x-block> are;</li>
+            <li>it is not rendered in the dropdown row;</li>
+            <li>it is not sent to <x-block>wire:model</x-block>, which still receives <x-block>value</x-block>.</li>
+        </ul>
+        <x-warning warning title="The 3.x docs described a passthrough that never worked" class="mt-4">
+            Normalization rebuilt each item from the four known keys and dropped everything else, so any extra field
+            arrived as <x-block>undefined</x-block>. <x-block>metadata</x-block> is the supported way to attach custom
+            data, and it is a namespaced bucket on purpose: flattening would let a future internal key silently
+            overwrite yours.
+        </x-warning>
+    </x-section>
 </x-layout>

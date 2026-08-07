@@ -73,4 +73,21 @@
             <livewire:documentation.ui.reaction :model="7" />
         </x-preview>
     </x-section>
+    <x-section title="Panel" new disable-copy>
+        <div class="space-y-4">
+            <p>
+                The emoji panel used to be tippy's default theme, which is a black box. It is a real panel now, and
+                like the tooltip balloon it is built by JavaScript and therefore outside
+                <x-block>customize()</x-block>. It is styled through <x-block>[data-tsui-popover]</x-block>.
+            </p>
+            <x-warning warning title="The markup changed shape">
+                It used to be tippy's root, box and content wrappers in <x-block>body</x-block>; it is now a single
+                element next to the trigger. Anything selecting into the old structure, a browser test walking an XPath
+                most of all, has to be repointed. The panel carries
+                <x-block>dusk="tallstackui_reaction_popover"</x-block> and every emoji button carries
+                <x-block>dusk="tallstackui_reaction_&lt;name&gt;"</x-block>, so a test names the reaction it clicks
+                instead of counting nodes.
+            </x-warning>
+        </div>
+    </x-section>
 </x-layout>

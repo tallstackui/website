@@ -22,6 +22,68 @@
             </div>
         </x-preview>
     </x-section>
+    <x-section title="Size Shorthands" new description="Eleven steps, one bare attribute each. A bare x-icon now falls back to md (20px) instead of reaching the browser with no dimension at all.">
+        <x-preview language="blade" :contents="$sizes">
+            <div class="inline-flex items-end space-x-3">
+                <x-icon name="users" xs />
+                <x-icon name="users" sm />
+                <x-icon name="users" md />
+                <x-icon name="users" lg />
+                <x-icon name="users" xl />
+                <x-icon name="users" 2xl />
+                <x-icon name="users" 3xl />
+                <x-icon name="users" 4xl />
+            </div>
+        </x-preview>
+        <x-table class="mt-4" :headers="[
+            ['index' => 'shorthand', 'label' => 'Shorthand'],
+            ['index' => 'classes', 'label' => 'Classes'],
+            ['index' => 'size', 'label' => 'Size'],
+        ]" :rows="[
+            ['shorthand' => 'xs', 'classes' => 'h-3 w-3', 'size' => '12px'],
+            ['shorthand' => 'sm', 'classes' => 'h-4 w-4', 'size' => '16px'],
+            ['shorthand' => 'md', 'classes' => 'h-5 w-5', 'size' => '20px'],
+            ['shorthand' => 'lg', 'classes' => 'h-6 w-6', 'size' => '24px'],
+            ['shorthand' => 'xl', 'classes' => 'h-7 w-7', 'size' => '28px'],
+            ['shorthand' => '2xl', 'classes' => 'h-8 w-8', 'size' => '32px'],
+            ['shorthand' => '3xl', 'classes' => 'h-10 w-10', 'size' => '40px'],
+            ['shorthand' => '4xl', 'classes' => 'h-12 w-12', 'size' => '48px'],
+            ['shorthand' => '5xl', 'classes' => 'h-14 w-14', 'size' => '56px'],
+            ['shorthand' => '6xl', 'classes' => 'h-16 w-16', 'size' => '64px'],
+            ['shorthand' => '7xl', 'classes' => 'h-20 w-20', 'size' => '80px'],
+        ]" />
+    </x-section>
+    <x-section title="Color Shorthands" new description="One text-* class on the svg, painting the icon through currentColor. The same 29 keys every other component uses.">
+        <x-preview language="blade" :contents="$shorthandColors">
+            <div class="inline-flex space-x-3">
+                <x-icon name="users" 2xl red />
+                <x-icon name="users" 2xl emerald />
+                <x-icon name="users" 2xl blue />
+                <x-icon name="users" 2xl secondary />
+                <x-icon name="exclamation-circle" 2xl error blue />
+            </div>
+        </x-preview>
+    </x-section>
+    <x-section title="Shorthand Caveats" new description="Two sizes or two colors at once throws, because a mistyped shorthand is a different icon and silence would hide it.">
+        <div class="space-y-4">
+            <x-code language="blade" :contents="$shorthandException" />
+            <p>
+                The shorthands are read from the attribute bag rather than from constructor properties, because
+                <x-block>2xl</x-block> is not a valid PHP variable name. Two consequences follow:
+            </p>
+            <x-code language="blade" :contents="$shorthandClass" />
+            <x-warning class="mt-4">
+                Forty attribute names are reserved on <x-block>x-icon</x-block>, eleven sizes and 29 colors. They are
+                consumed and stripped, so they cannot be forwarded to the <x-block>svg</x-block> for any other purpose,
+                and IDE autocompletion does not know them.
+            </x-warning>
+        </div>
+    </x-section>
+    <x-section title="Shorthand Configuration" new description="The fallback size of a bare icon. An invalid value throws.">
+        <x-code language="php" :contents="$shorthandConfiguration" />
+        <p class="mt-4">The scale itself is soft customizable, with a <x-block>sizes.*</x-block> block per step:</p>
+        <x-code class="mt-4" language="php" :contents="$shorthandCustomization" />
+    </x-section>
     <x-section title="Left & Right Slots">
         <x-preview language="blade" :contents="$leftRight">
             <div class="inline-flex space-x-2">

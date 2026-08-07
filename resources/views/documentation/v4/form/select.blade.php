@@ -139,6 +139,26 @@
             </p>
         </div>
     </x-section>
+    <x-section title="Qualified Selection Labels" new anchor="styled-qualified-selection-labels" description="Inside the open dropdown an item sits under its group header. Once the dropdown closes that context disappears, so selected items are now qualified with their group.">
+        <x-code language="text" :contents="$styledGroupedQualified" />
+        <x-warning class="mt-4">
+            Only the display changes. <x-block>wire:model</x-block> still receives the item's raw
+            <x-block>value</x-block>, and the rows inside the open dropdown keep showing their plain label under the
+            group header. The separator is fixed and there is no attribute to opt out, so a test asserting the exact
+            text of a selected grouped item has to expect the qualified form.
+        </x-warning>
+    </x-section>
+    <x-section title="Groups and Loose Options" new anchor="styled-groups-and-loose-options" description="Groups and plain options render side by side, the way optgroup and option coexist in a native select. Loose rows render without the group indent and are selectable like any other item.">
+        <x-preview language="blade" :contents="$styledGroupedLoose">
+            <x-select.styled :options="[
+                ['label' => 'Brazil', 'value' => [
+                    ['label' => 'São Paulo', 'value' => 4],
+                    ['label' => 'Rio de Janeiro', 'value' => 5],
+                ]],
+                ['label' => 'Uncategorized', 'value' => 99],
+            ]" select="label:label|value:value" />
+        </x-preview>
+    </x-section>
     <x-section title="Limit Selection" description="An option to limit the number of selections." anchor="styled-limit-selection">
         <x-preview language="blade" :contents="$styledLimit">
             <x-select.styled :limit="2" :options="[

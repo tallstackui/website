@@ -125,6 +125,32 @@ class Stats
     </x-stats>
     HTML;
 
+    public const string CHART = <<<'HTML'
+    {{-- The array shorthand renders the chart internally and inherits the card's color --}}
+    <x-stats :number="45231" title="Revenue" increase :chart="[10, 40, 25, 60, 30, 80]" />
+
+    {{-- The slot takes over completely --}}
+    <x-stats :number="45231" title="Revenue">
+        <x-slot:chart>
+            <x-chart :series="$revenue" color="emerald" class="h-full w-full" />
+        </x-slot:chart>
+    </x-stats>
+    HTML;
+
+    public const string DURATION = <<<'HTML'
+    <x-stats :number="45231" animated :duration="3" />
+    HTML;
+
+    public const string FLAT = <<<'HTML'
+    <x-stats :number="100" shadowless />
+    <x-stats :number="100" bordered />
+    <x-stats :number="100" shadowless bordered />
+    HTML;
+
+    public const string SKELETON = <<<'HTML'
+    <x-stats skeleton />
+    HTML;
+
     public const string CUSTOMIZATION = <<<'HTML'
     TallStackUi::customize()
         ->stats()

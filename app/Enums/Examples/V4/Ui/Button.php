@@ -33,7 +33,10 @@ class Button
     HTML;
 
     public const string ROUND = <<<'HTML'
-    <x-button round>TallStackUi</x-button>
+    <x-button round>Pill</x-button>
+
+    <!-- Accepted sizes: xs, sm, md, lg, xl, full -->
+    <x-button round="lg">Large radius</x-button>
     HTML;
 
     public const string LEFT_RIGHT = <<<'HTML'

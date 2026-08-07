@@ -74,9 +74,76 @@ class Radio
     <x-radio color="black" label="Black" />
     HTML;
 
+    public const string LABEL_LEFT = <<<'HTML'
+    <x-radio>
+        <x-slot:label left>
+            I agree to the <a href="#">terms and conditions</a>
+        </x-slot:label>
+    </x-radio>
+    HTML;
+
+    public const string GROUP_BASIC = <<<'HTML'
+    <x-radio.group wire:model="plan" label="Plan" :options="[
+        ['label' => 'Startup', 'value' => 'startup', 'description' => 'Up to 5 job postings', 'aside' => '$29 / mo'],
+        ['label' => 'Business', 'value' => 'business', 'description' => 'Up to 25 job postings', 'aside' => '$99 / mo'],
+        ['label' => 'Enterprise', 'value' => 'enterprise', 'description' => 'Unlimited', 'aside' => '$249 / mo'],
+    ]" />
+    HTML;
+
+    public const string GROUP_VARIATIONS = <<<'HTML'
+    <x-radio.group wire:model="plan" list :options="$plans" />
+    <x-radio.group wire:model="plan" card :options="$plans" />
+    <x-radio.group wire:model="plan" panel :options="$plans" />
+    <x-radio.group wire:model="period" inline :options="$periods" />
+    HTML;
+
+    public const string GROUP_COLUMNS = <<<'HTML'
+    <x-radio.group wire:model="plan" card :columns="2" :options="$plans" />
+    HTML;
+
+    public const string GROUP_POSITION = <<<'HTML'
+    <x-radio.group wire:model="plan" position="right" :options="$plans" />
+    HTML;
+
+    public const string GROUP_SIZES = <<<'HTML'
+    <x-radio.group wire:model="plan" xs :options="$plans" />
+    <x-radio.group wire:model="plan" sm :options="$plans" />
+    <x-radio.group wire:model="plan" md :options="$plans" />
+    <x-radio.group wire:model="plan" lg :options="$plans" />
+    HTML;
+
+    public const string GROUP_COLORS = <<<'HTML'
+    <x-radio.group wire:model="plan" color="green" :options="$plans" />
+    HTML;
+
+    public const string GROUP_SELECT = <<<'HTML'
+    <x-radio.group wire:model="plan" select="label:name|value:id|description:note" :options="$plans" />
+    HTML;
+
+    public const string GROUP_INTERACT = <<<'HTML'
+    <x-radio.group wire:model="plan" card :options="$plans">
+        @interact('option', $option)
+            <div class="flex items-center justify-between">
+                <span class="font-medium">{{ $option['label'] }}</span>
+                <x-badge :text="$option['tag']" color="green" sm />
+            </div>
+        @endinteract
+    </x-radio.group>
+    HTML;
+
+    public const string GROUP_NATIVE = <<<'HTML'
+    <x-radio.group name="plan" value="business" :options="$plans" />
+    HTML;
+
     public const string CUSTOMIZATION = <<<'HTML'
     TallStackUi::customize()
         ->form('radio')
+        ->block('block', 'classes');
+    HTML;
+
+    public const string GROUP_CUSTOMIZATION = <<<'HTML'
+    TallStackUi::customize()
+        ->form('radio.group')
         ->block('block', 'classes');
     HTML;
 }

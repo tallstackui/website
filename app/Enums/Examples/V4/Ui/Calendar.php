@@ -67,6 +67,12 @@ class Calendar
                 max-date="2026-04-30" />
     HTML;
 
+    public const string FLAT = <<<'HTML'
+    <x-calendar shadowless />
+    <x-calendar bordered />
+    <x-calendar shadowless bordered />
+    HTML;
+
     public const string CUSTOMIZATION = <<<'HTML'
     TallStackUi::customize()
         ->calendar()

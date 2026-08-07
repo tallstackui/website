@@ -40,4 +40,19 @@
             </x-input.select>
         </x-preview>
     </x-section>
+    <x-section title="Panel Width" new description="A styled select in the slot follows its trigger through the width sync, and a min-w-72 floor keeps a narrow trigger from collapsing the panel. floating replaces that floor.">
+        <x-preview language="blade" :contents="$floating">
+            <x-input.select label="E-mail Provider" floating="min-w-40">
+                <x-slot:right>
+                    <x-select.styled :options="['@gmail.com', '@yahoo.com', '@outlook.com']" />
+                </x-slot:right>
+            </x-input.select>
+        </x-preview>
+        <x-warning class="mt-4">
+            The value is a class string, so it can carry more than one class
+            (<x-block>min-w-40 max-w-56</x-block>). The width sync stays on and the panel never sits below the trigger's
+            width, which makes the value a floor or a cap, not an exact width. A <x-block>x-select.native</x-block> in
+            the slot opens the browser's own list and has no panel, so the attribute is a no-op there.
+        </x-warning>
+    </x-section>
 </x-layout>

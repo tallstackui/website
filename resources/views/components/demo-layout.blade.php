@@ -22,7 +22,7 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 <body class="font-sans antialiased min-h-full custom-scrollbar"
-      x-bind:class="{ 'dark bg-gray-800': darkTheme, 'bg-gray-100': !darkTheme }"
+      x-bind:class="{ 'dark bg-dark-800': darkTheme, 'bg-white': !darkTheme }"
       x-cloak>
     <x-toast />
     <x-dialog />

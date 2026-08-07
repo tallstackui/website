@@ -5,7 +5,7 @@
         </x-slot:header>
 
         <x-slot:menu>
-            <x-tsui-side-bar>
+            <x-tsui-side-bar collapsible>
                 <x-slot:brand>
                     <div class="flex justify-center py-4">
                         <img src="{{ asset('assets/images/android-chrome-512x512.png') }}" alt="Brand" class="h-10 w-10" />
@@ -13,6 +13,8 @@
                 </x-slot:brand>
 
                 <x-tsui-side-bar.item text="Dashboard" icon="home" route="#" current />
+
+                <x-tsui-side-bar.separator text="Features" />
 
                 <x-tsui-side-bar.item text="Notifications" icon="bell" route="#">
                     <x-slot:badge>5</x-slot:badge>

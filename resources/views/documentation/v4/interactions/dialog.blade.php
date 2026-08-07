@@ -110,4 +110,13 @@
         </p>
     </x-section>
     <x-available-configuration />
+    <x-section title="Confirming with Enter" new description="A dialog could be dismissed from the keyboard but never accepted: Escape closed it, and the confirm button answered only to the mouse.">
+        <x-code language="php" :contents="$enter" />
+        <x-warning class="mt-4">
+            It fires only while the focus is <b>outside</b> the dialog. A <x-block>button</x-block> already activates on
+            Enter while focused, so without that guard a dialog whose cancel button had been reached with Tab would
+            cancel <i>and</i> confirm on a single keystroke. It also works on a <x-block>persistent()</x-block> dialog,
+            where Escape does not: pressing the confirm button is the answer it is waiting for, not a way around it.
+        </x-warning>
+    </x-section>
 </x-layout>

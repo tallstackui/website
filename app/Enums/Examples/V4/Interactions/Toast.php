@@ -337,6 +337,32 @@ class Toast
     }
     HTML;
 
+    public const string CENTERED_POSITIONS = <<<'PHP'
+    $this->toast()->position('top-center')->success('Saved!')->send();
+    $this->toast()->position('bottom-center')->success('Saved!')->send();
+    PHP;
+
+    public const string STACKED_CONFIG = <<<'PHP'
+    // config/tallstackui.php
+
+    'toast' => [
+        Components\Toast\Component::class,
+        [
+            'stacked' => true,
+            'top-on-mobile' => true,
+        ],
+    ],
+    PHP;
+
+    public const string STACKED_FLUENT = <<<'PHP'
+    $this->toast()->stacked()->success('Saved!')->send();
+    PHP;
+
+    public const string STACKED_JS = <<<'JS'
+    $tsui.interaction('toast').stacked().success('Saved!').send();
+    $tsui.interaction('toast').position('top-center').sole().warning('Careful').send();
+    JS;
+
     public const string CUSTOMIZATION = <<<'HTML'
     TallStackUi::customize()
         ->toast()

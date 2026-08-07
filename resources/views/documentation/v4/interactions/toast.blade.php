@@ -161,4 +161,39 @@
         </p>
     </x-section>
     <x-available-configuration />
+    <x-section title="Centered Positions" new description="The toast accepted four positions, all of them cornered. top-center and bottom-center join them, in the fluent method and in the global default alike.">
+        <x-code language="php" :contents="$centeredPositions" />
+        <x-warning class="mt-4">
+            The enter transition no longer slides horizontally when the position is centered: a toast in the middle of
+            the screen has no edge to come from.
+        </x-warning>
+    </x-section>
+    <x-section title="Stacked" new description="Off by default. The toasts overlap into a pile instead of growing an endless list, and the pile expands back into the list while the pointer is over it.">
+        <div class="space-y-4">
+            <p>
+                The most recent toast is the front of the pile. Three layers peek out; deeper toasts wait at
+                <x-block>opacity: 0</x-block> and reappear as the ones in front leave. In the closed pile only the front
+                card renders content. Hovering expands the pile and freezes every timer and progress bar in it.
+            </p>
+            <x-code language="php" :contents="$stackedConfig" />
+            <p>Both fluent APIs also carry it per toast:</p>
+            <x-code language="php" :contents="$stackedFluent" />
+            <x-code language="js" :contents="$stackedJs" />
+            <x-warning class="mt-4">
+                Because the front of the pile is always the newest toast, turning it on reverses the reading order of
+                the <x-block>top-*</x-block> positions. The <x-block>bottom-*</x-block> positions read the same either
+                way. The geometry is fixed, not configurable, and there is no cap on how many toasts the expanded pile
+                shows.
+            </x-warning>
+        </div>
+    </x-section>
+    <x-section title="Top on Mobile" new description="Off by default. Below the md breakpoint the toast never honoured its position, always landing at the bottom of a phone screen. This pins them to the top instead, whatever the position says.">
+        <div class="space-y-4">
+            <p>
+                The enter transition follows the edge the toast comes from, so with the flag on it enters downward
+                rather than upward.
+            </p>
+            <x-code language="php" :contents="$stackedConfig" />
+        </div>
+    </x-section>
 </x-layout>

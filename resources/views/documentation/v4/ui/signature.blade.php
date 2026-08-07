@@ -69,4 +69,12 @@
             <livewire:documentation.ui.signature :model="9" />
         </x-preview>
     </x-section>
+    <x-section title="Persistent" new description="A long form that reflows while it is being filled has no business throwing away a signature the person already drew.">
+        <x-code language="blade" :contents="$persistent" />
+        <x-warning class="mt-4">
+            The strokes are stored as points and redrawn at the new width, so nothing is resampled and the signature
+            stays as sharp as it was drawn. Only the width reflows, so the drawing is stretched horizontally in
+            proportion to the new width, which is the trade this attribute accepts.
+        </x-warning>
+    </x-section>
 </x-layout>

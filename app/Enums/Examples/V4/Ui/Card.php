@@ -124,8 +124,8 @@ class Card
         TallStackUI
     </x-card>
 
-    <!-- Border Only -->
-    <x-card header="TallStackUI" color="primary" bordered>
+    <!-- Colored top border instead of a filled header -->
+    <x-card header="TallStackUI" color="primary" accent>
         TallStackUI
     </x-card>
     HTML;
@@ -150,6 +150,64 @@ class Card
         TallStackUI
     </x-card>
     HTML;
+
+    public const string FLAT = <<<'HTML'
+    {{-- shadowless alone drops the shadow --}}
+    <x-card shadowless>
+        TallStackUI
+    </x-card>
+
+    {{-- bordered alone draws a border and keeps the shadow --}}
+    <x-card bordered>
+        TallStackUI
+    </x-card>
+
+    {{-- Together they are the flat look --}}
+    <x-card shadowless bordered>
+        TallStackUI
+    </x-card>
+    HTML;
+
+    public const string PADDINGLESS = <<<'HTML'
+    <x-card paddingless>
+        <x-table :$headers :$rows />
+    </x-card>
+    HTML;
+
+    public const string FOOTER_ALIGNMENT = <<<'HTML'
+    <x-card>
+        TallStackUI
+        <x-slot:footer between>
+            <x-button color="red">Delete</x-button>
+            <x-button>Save</x-button>
+        </x-slot:footer>
+    </x-card>
+
+    <!-- Accepted: start, center, end, between, unwrapped -->
+    HTML;
+
+    public const string SKELETON = <<<'HTML'
+    {{-- Bare flag: 3 body lines --}}
+    <x-card skeleton />
+
+    {{-- An integer sets the count --}}
+    <x-card skeleton="5" header="TallStackUI" footer image round="xl" />
+    HTML;
+
+    public const string SKELETON_LAZY = <<<'PHP'
+    #[Lazy]
+    class Metrics extends Component
+    {
+        public function placeholder(): string
+        {
+            return <<<'HTML'
+            <div>
+                <x-card skeleton="5" />
+            </div>
+            HTML;
+        }
+    }
+    PHP;
 
     public const string CUSTOMIZATION = <<<'HTML'
     TallStackUi::customize()

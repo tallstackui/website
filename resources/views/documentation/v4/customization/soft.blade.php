@@ -159,6 +159,79 @@
             </x-warning>
         </div>
     </x-section>
+    <x-section title="Extending a Scope" new disable-copy>
+        <div class="space-y-4">
+            <p>
+                Scopes could only be created, never touched, which made the ones the package ships
+                (<x-block>card-shadowless</x-block>, <x-block>stats-shadowless</x-block>,
+                <x-block>calendar-shadowless</x-block>, <x-block>tab-shadowless</x-block>) read only from an
+                application's point of view. Calling <x-block>scope()</x-block> with the same name did not extend the
+                existing one, it started over from the component's original classes.
+            </p>
+            <x-code language="php" :contents="$extend" />
+            <p>
+                The block keeps everything the original definition did to it and the new classes go on top. Requiring
+                the scope to exist is the point of having a separate verb: <x-block>scope()</x-block> creates and
+                silently accepts a typo, <x-block>extend()</x-block> refuses one.
+            </p>
+            <x-warning>
+                The package's own scopes are registered in the service provider's <x-block>boot()</x-block>, which runs
+                before the application's providers under Laravel's default discovery. Applications that disable
+                discovery have to make sure their provider boots afterwards.
+            </x-warning>
+        </div>
+    </x-section>
+    <x-section title="Customizations Stack" new disable-copy>
+        <div class="space-y-4">
+            <p>
+                Two chains touching one block did not stack: the second silently discarded the first. Inside a single
+                chain it already stacked, which is what made the behaviour hard to spot.
+            </p>
+            <x-code language="php" :contents="$stacking" />
+            <p>
+                It resumes from the compiled state now, so a package and an application can each customize the same
+                block without one erasing the other. This is also what makes <x-block>extend()</x-block> work.
+            </p>
+            <x-warning warning title="Anything relying on the last chain winning has to change">
+                The practical case to watch is a customization that runs more than once in the same process: it now
+                accumulates rather than settling on a fixed result.
+            </x-warning>
+        </div>
+    </x-section>
+    <x-section title="Remove Matches Whole Classes" new disable-copy>
+        <div class="space-y-4">
+            <p>
+                <x-block>remove()</x-block> ran a plain <x-block>str_replace</x-block>, so removing a class also chewed
+                through every longer class that contained its name. It works on whitespace-separated tokens now and
+                drops only whole classes.
+            </p>
+            <x-code language="php" :contents="$removeTokens" />
+            <x-warning>
+                <x-block>replace()</x-block> deliberately stays a substring operation &mdash; swapping a palette with
+                <x-block>replace('gray-', 'zinc-')</x-block> depends on it. Which means
+                <x-block>replace('rounded', 'rounded-full')</x-block> still turns <x-block>rounded-md</x-block> into
+                <x-block>rounded-full-md</x-block>; target the full class name when that is not what you want.
+            </x-warning>
+        </div>
+    </x-section>
+    <x-section title="Scopes Layer Over the Global Customization" new disable-copy>
+        <div class="space-y-4">
+            <p>
+                A scope only overrides the blocks it names. Every other block keeps whatever the global customization
+                did to it, so a scoped instance is the global look plus the scope's changes, not a reset.
+            </p>
+            <x-code language="php" :contents="$scopeLayering" />
+            <p>
+                This applies to the scopes the package ships as well, so
+                <x-block>&lt;x-card scope="card-shadowless"&gt;</x-block> no longer discards every global customization
+                of Card.
+            </p>
+            <x-warning>
+                Block names containing a dot are keys, not paths. A scope can set <x-block>body</x-block> and
+                <x-block>body.paddingless</x-block> in the same call without one replacing the other.
+            </x-warning>
+        </div>
+    </x-section>
     <x-section title="Internal Scoped Customization" disable-copy>
         <div class="space-y-4">
             <p>

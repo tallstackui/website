@@ -109,6 +109,31 @@
             </div>
         </x-preview>
     </x-section>
+    <x-section title="Background Chart" new description="A chart behind the content, full-bleed and dimmed. The array shorthand and the slot are mutually exclusive and throw when combined.">
+        <x-preview language="blade" :contents="$chart" :background="false">
+            <div class="grid grid-cols-2 gap-2">
+                <x-stats :number="45231" title="Revenue" increase :chart="[10, 40, 25, 60, 30, 80]" />
+                <x-stats :number="45231" title="Revenue">
+                    <x-slot:chart>
+                        <x-chart :series="[10, 40, 25, 60, 30, 80]" color="emerald" class="h-full w-full" />
+                    </x-slot:chart>
+                </x-stats>
+            </div>
+        </x-preview>
+        <x-warning class="mt-4">
+            An absent chart, an empty array and an empty slot are all treated as no chart. In
+            <x-block>solid</x-block> style the icon tile is opaque and covers the watermark behind it.
+        </x-warning>
+    </x-section>
+    <x-section title="Flat Look" new description="shadowless drops the shadow, bordered draws a border around the wrapper while keeping it. Both reach the skeleton view too.">
+        <x-preview language="blade" :contents="$flat" :background="false">
+            <div class="grid grid-cols-3 gap-2">
+                <x-stats :number="100" shadowless />
+                <x-stats :number="100" bordered />
+                <x-stats :number="100" shadowless bordered />
+            </div>
+        </x-preview>
+    </x-section>
     <x-section title="Animated Effect">
         <x-preview language="blade" :contents="$animated" :background="false">
             <div class="grid grid-cols-4 gap-2">
@@ -120,6 +145,11 @@
             <x-warning class="mt-4">
                 The animation will happen every time the component enters the viewport.
             </x-warning>
+        </x-preview>
+    </x-section>
+    <x-section title="Animation Duration" new description="Controls the count-up length. Defaults to 1 and is clamped to a non-negative integer.">
+        <x-preview language="blade" :contents="$duration" :background="false">
+            <x-stats :number="45231" animated :duration="3" />
         </x-preview>
     </x-section>
     <x-section title="Number Format">
@@ -142,6 +172,15 @@
                     <x-icon name="wrench-screwdriver" class="w-6 h-6 text-pink-500" />
                 </x-slot:right>
             </x-stats>
+        </x-preview>
+    </x-section>
+    <x-section title="Skeleton" new description="A flag only: passing an integer throws, because there is nothing to count. The background chart layer is omitted, and it takes no space in the flow.">
+        <x-preview language="blade" :contents="$skeleton" :background="false">
+            <div class="grid grid-cols-3 gap-2">
+                <x-stats skeleton />
+                <x-stats skeleton />
+                <x-stats skeleton />
+            </div>
         </x-preview>
     </x-section>
 </x-layout>

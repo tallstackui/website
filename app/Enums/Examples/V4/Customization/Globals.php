@@ -69,4 +69,16 @@ class Globals
         ->square()
         ->colorful();
     HTML;
+
+    public const string COLORFUL_COLORS = <<<'PHP'
+    // php artisan tallstackui:setup-color, then override colorfulColors()
+
+    public function colorfulColors(Component $component): array
+    {
+        return [
+            'cancel' => null,                             // keeps the default
+            'confirm' => ['success' => 'text-lime-900!'], // the other types stay
+        ];
+    }
+    PHP;
 }

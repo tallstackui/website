@@ -54,6 +54,10 @@ class Time
             x-on:interval="alert(`Interval Changed: ${$event.detail.interval}`)"/>
     HTML;
 
+    public const string GESTURES = <<<'HTML'
+    <x-time wire:model="time" />
+    HTML;
+
     public const string CUSTOMIZATION = <<<'HTML'
     TallStackUi::customize()
         ->form('time')

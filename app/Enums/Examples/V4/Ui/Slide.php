@@ -171,6 +171,24 @@ class Slide
     </x-slide>
     HTML;
 
+    public const string PADDINGLESS = <<<'HTML'
+    <x-slide paddingless>
+        <x-table :$headers :$rows />
+    </x-slide>
+    HTML;
+
+    public const string FOOTER_ALIGNMENT = <<<'HTML'
+    <x-slide>
+        TallStackUI
+        <x-slot:footer between>
+            <x-button color="red">Delete</x-button>
+            <x-button>Save</x-button>
+        </x-slot:footer>
+    </x-slide>
+
+    <!-- Accepted: start, center, end, between, unwrapped -->
+    HTML;
+
     public const string CUSTOMIZATION = <<<'HTML'
     TallStackUi::customize()
         ->slide()

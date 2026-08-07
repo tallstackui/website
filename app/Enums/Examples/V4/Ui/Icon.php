@@ -126,4 +126,47 @@ class Icon
         ],
     ],
     HTML;
+
+    public const string SIZES = <<<'HTML'
+    <!-- Accepted: xs, sm, md, lg, xl, 2xl, 3xl, 4xl, 5xl, 6xl, 7xl -->
+    <x-icon name="users" xs />
+    <x-icon name="users" md />
+    <x-icon name="users" 2xl />
+    <x-icon name="users" 4xl />
+    HTML;
+
+    public const string SHORTHAND_COLORS = <<<'HTML'
+    <x-icon name="users" red />
+    <x-icon name="users" emerald />
+    <x-icon name="users" 2xl secondary />
+
+    <!-- error still wins over any color -->
+    <x-icon name="exclamation-circle" error blue />
+    HTML;
+
+    public const string SHORTHAND_EXCEPTION = <<<'HTML'
+    <x-icon name="users" xs 2xl />    {{-- throws --}}
+    <x-icon name="users" red blue />  {{-- throws --}}
+    HTML;
+
+    public const string SHORTHAND_CLASS = <<<'HTML'
+    {{-- Declaring class turns both shorthands off, including an empty class="" --}}
+    <x-icon name="users" 2xl red class="size-4" />
+    HTML;
+
+    public const string SHORTHAND_CONFIGURATION = <<<'PHP'
+    // config/tallstackui.php
+
+    'icon' => [
+        Components\Icon\Component::class,
+        [
+            'size' => 'md',
+        ],
+    ],
+    PHP;
+
+    public const string SHORTHAND_CUSTOMIZATION = <<<'PHP'
+    TallStackUi::customize()->icon()->block('sizes.md', 'h-9 w-9');
+    TallStackUi::customize('icon', scope: 'hero')->block('sizes.md', 'h-12 w-12');
+    PHP;
 }

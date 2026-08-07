@@ -97,6 +97,18 @@ class KeyValue
     <x-key-value x-on:add="alert('Added')" x-on:remove="alert('Removed')" />
     HTML;
 
+    public const string COMPACT = <<<'HTML'
+    <x-key-value wire:model="metadata" compact />
+    HTML;
+
+    public const string COLOR = <<<'HTML'
+    <x-key-value wire:model="metadata" color="green" />
+    HTML;
+
+    public const string COLORLESS = <<<'HTML'
+    <x-key-value wire:model="metadata" colorless />
+    HTML;
+
     public const string CUSTOMIZATION = <<<'HTML'
     TallStackUi::customize()
         ->keyValue()

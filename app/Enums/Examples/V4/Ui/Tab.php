@@ -169,6 +169,21 @@ class Tab
     </x-tab>
     HTML;
 
+    public const string FLAT = <<<'HTML'
+    <x-tab selected="Tab 1" shadowless bordered>
+        <x-tab.items tab="Tab 1">Content 1</x-tab.items>
+        <x-tab.items tab="Tab 2">Content 2</x-tab.items>
+    </x-tab>
+    HTML;
+
+    public const string PADDINGLESS = <<<'HTML'
+    <x-tab selected="Tab 1" paddingless>
+        <x-tab.items tab="Tab 1">
+            <x-table :$headers :$rows />
+        </x-tab.items>
+    </x-tab>
+    HTML;
+
     public const string CUSTOMIZATION = <<<'HTML'
     TallStackUi::customize()
         ->tab()

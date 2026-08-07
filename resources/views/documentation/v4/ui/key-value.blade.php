@@ -88,4 +88,22 @@
             <livewire:documentation.ui.key-value :model="9" />
         </x-preview>
     </x-section>
+    <x-section title="Compact" new description="Tightens the vertical padding of the header, the rows, the empty message and the add button, leaving the horizontal padding, the type scale and the colors alone.">
+        <x-code language="blade" :contents="$compact" />
+        <x-warning class="mt-4">
+            A compact row carries the same <x-block>py-2.5</x-block> as a compact <x-block>x-table</x-block> data cell,
+            so a page holding both reads as one rhythm. <x-block>deletable</x-block> is the exception: those rows
+            already carry no vertical padding, so there is nothing left for <x-block>compact</x-block> to take.
+        </x-warning>
+    </x-section>
+    <x-section title="Color" new description="Tints the header text and the add button, keeping the flat treatment. Accepts every TallStackUI color plus black.">
+        <x-code language="blade" :contents="$color" />
+        <x-warning class="mt-4">
+            The header and the button do not default alike. The header is a caption, so it stays neutral until a color
+            is asked for; the button is an action, so it carries <x-block>primary</x-block> unasked.
+        </x-warning>
+    </x-section>
+    <x-section title="Colorless" new description="color has no off value: leaving it out is what gives the button its primary. colorless is that way, in light and dark, and it wins over an explicit color.">
+        <x-code language="blade" :contents="$colorless" />
+    </x-section>
 </x-layout>

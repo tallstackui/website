@@ -43,10 +43,35 @@
             <x-button square>TallStackUI</x-button>
         </x-preview>
     </x-section>
-    <x-section title="Round Variation" anchor="normal-round-variation">
+    <x-section title="Round Variation" new anchor="normal-round-variation" description="A bare round is the pill it always was. It now also takes a size. square still wins, which is what makes the square() global work while a button asks for a radius of its own.">
         <x-preview language="blade" :contents="$round">
-            <x-button round>TallStackUI</x-button>
+            <div class="flex flex-wrap items-center gap-2">
+                <x-button>Default</x-button>
+                <x-button round>round</x-button>
+                <x-button round="xs">round="xs"</x-button>
+                <x-button round="sm">round="sm"</x-button>
+                <x-button round="md">round="md"</x-button>
+                <x-button round="lg">round="lg"</x-button>
+                <x-button round="xl">round="xl"</x-button>
+                <x-button round="full">round="full"</x-button>
+            </div>
         </x-preview>
+        <x-table class="mt-4" :headers="[
+            ['index' => 'value', 'label' => 'Value'],
+            ['index' => 'class', 'label' => 'Class'],
+        ]" :rows="[
+            ['value' => '(none)', 'class' => 'rounded-md'],
+            ['value' => 'round', 'class' => 'rounded-full'],
+            ['value' => 'round=\'xs\'', 'class' => 'rounded-xs'],
+            ['value' => 'round=\'sm\'', 'class' => 'rounded-sm'],
+            ['value' => 'round=\'md\'', 'class' => 'rounded-md'],
+            ['value' => 'round=\'lg\'', 'class' => 'rounded-lg'],
+            ['value' => 'round=\'xl\'', 'class' => 'rounded-xl'],
+            ['value' => 'round=\'full\'', 'class' => 'rounded-full'],
+        ]" />
+        <x-warning class="mt-4">
+            Anything outside the six sizes throws at render time.
+        </x-warning>
     </x-section>
     <x-section title="Left & Right Slots" anchor="normal-left-right-slots">
         <x-preview language="blade" :contents="$leftRight">

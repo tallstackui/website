@@ -269,6 +269,14 @@ class Dialog
         ->send();
     HTML;
 
+    public const string ENTER = <<<'PHP'
+    // Enter closes it, like clicking OK
+    $this->dialog()->success('Saved!')->send();
+
+    // Enter runs the method, like clicking Yes
+    $this->dialog()->question('Delete?')->confirm('Yes', 'delete')->cancel()->send();
+    PHP;
+
     public const string CUSTOMIZATION = <<<'HTML'
     TallStackUi::customize()
         ->dialog()

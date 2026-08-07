@@ -378,4 +378,11 @@ class Color
     public const string USE_NEW_CUSTOM_COLOR = <<<'HTML'
     <x-alert text="My custom color is foo-bar" color="malibu" />
     HTML;
+
+    public const string DARK_PALETTE = <<<'CSS'
+    /* was (Slate) */              /* now (neutral) */
+    --color-dark-700: #334155;     --color-dark-700: oklch(0.253 0 0); /* #242424 */
+    --color-dark-800: #1e293b;     --color-dark-800: oklch(0.185 0 0); /* #141414 */
+    --color-dark-900: #0f172a;     --color-dark-900: oklch(0.145 0 0); /* #0a0a0a */
+    CSS;
 }

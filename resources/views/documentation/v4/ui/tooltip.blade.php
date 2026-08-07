@@ -19,7 +19,8 @@
     </x-section>
     <x-section title="Available Positions">
         <x-slot:description>
-            You can use all the <a href="https://atomiks.github.io/tippyjs/v6/all-props/#placement" class="underline" target="_blank">tippy.js available placements.</a>
+            Fifteen Popper-style placements. The balloon flips to the opposite side when the requested one does not fit,
+            and shifts along the cross axis to stay inside the viewport.
         </x-slot:description>
         <x-preview language="blade" :contents="$positions">
             <div class="inline-flex space-x-2">
@@ -93,6 +94,61 @@
                 <x-tooltip text="black" color="black" />
             </div>
         </x-preview>
+    </x-section>
+    <x-section title="Delay" new description="Four named steps, because a number in a Blade attribute invites values nobody wants. It applies to the pointer only: keyboard focus and taps open immediately.">
+        <x-preview language="blade" :contents="$delay">
+            <div class="inline-flex space-x-4">
+                <x-tooltip text="slow" delay="slow" />
+                <x-tooltip text="fast" delay="fast" />
+                <x-tooltip text="faster" delay="faster" />
+                <x-tooltip text="flash" delay="flash" />
+            </div>
+        </x-preview>
+    </x-section>
+    <x-section title="Balloon Color" new description="color paints the icon; balloon paints the balloon. The directive holds no color map: it writes --tsui-tooltip-bg, so any palette added to @theme works with no list to keep in sync.">
+        <x-preview language="blade" :contents="$balloon">
+            <div class="inline-flex space-x-4">
+                <x-tooltip text="red" balloon="red" />
+                <x-tooltip text="emerald" balloon="emerald" />
+                <x-tooltip text="amber" balloon="amber" />
+                <x-tooltip text="black" balloon="black" />
+            </div>
+        </x-preview>
+        <x-warning class="mt-4">
+            A colored balloon keeps its color in both themes, and so does the default one. Opt into a light balloon on
+            a dark theme through the <x-block>invert</x-block> setting.
+        </x-warning>
+    </x-section>
+    <x-section title="Balloon Scale" new description="balloon colors the balloon; scale sizes it. Each step grows the padding and keeps its viewport guard, so a long text still wraps instead of running off a narrow phone.">
+        <x-preview language="blade" :contents="$scale">
+            <div class="inline-flex space-x-4">
+                <x-tooltip text="A hint holding a whole sentence reads cramped at text-xs." scale="sm" />
+                <x-tooltip text="A hint holding a whole sentence reads cramped at text-xs." scale="md" />
+                <x-tooltip text="A hint holding a whole sentence reads cramped at text-xs." scale="lg" />
+            </div>
+        </x-preview>
+        <x-table class="mt-4" :headers="[
+            ['index' => 'name', 'label' => 'Name'],
+            ['index' => 'type', 'label' => 'Type scale'],
+            ['index' => 'width', 'label' => 'Max width'],
+        ]" :rows="[
+            ['name' => 'sm', 'type' => 'text-xs', 'width' => '20rem'],
+            ['name' => 'md', 'type' => 'text-sm', 'width' => '24rem'],
+            ['name' => 'lg', 'type' => 'text-base', 'width' => '28rem'],
+        ]" />
+    </x-section>
+    <x-section title="Disabled" new description="Turns a tooltip off without removing the directive. The flag is watched, not only read when the balloon opens.">
+        <x-code language="blade" :contents="$disabled" />
+    </x-section>
+    <x-section title="Global Settings" new description="They reach every x-tooltip on the page, including the ones rendered by Button, Kbd, Breadcrumbs, Editor and the sidebar. delay, color and size are defaults: the inline prop always wins.">
+        <x-code language="php" :contents="$settings" />
+        <x-warning class="mt-4">
+            <x-block>invert</x-block> flips the default balloon in dark mode. It is off unasked, so the balloon keeps
+            its dark look in both themes. A colored balloon never inverts, whatever the setting says.
+        </x-warning>
+    </x-section>
+    <x-section title="Styling the Balloon" new description="The balloon is created by JavaScript and shared by anchors that have no component behind them, so it cannot go through customize().">
+        <x-code language="css" :contents="$styling" />
     </x-section>
     <x-section title="Variations" disable-copy>
         <p>The concept of variation follows the same patterns as <a href="{{ route('documentation', ['ui', 'icon']).'#variations' }}" wire:navigate class="underline">icon variations.</a></p>

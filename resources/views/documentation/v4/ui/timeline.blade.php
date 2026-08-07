@@ -79,16 +79,17 @@
     <x-section title="Horizontal Orientation">
         <x-preview language="blade" :contents="$horizontal">
             <x-timeline horizontal>
-                <x-timeline.items title="Step A" description="Initial setup" horizontal />
-                <x-timeline.items title="Step B" description="Configuration" horizontal />
-                <x-timeline.items title="Step C" description="Deployment" horizontal />
-                <x-timeline.items title="Step D" description="Production" horizontal />
+                <x-timeline.items title="Step A" description="Initial setup" />
+                <x-timeline.items title="Step B" description="Configuration" />
+                <x-timeline.items title="Step C" description="Deployment" />
+                <x-timeline.items title="Step D" description="Production" />
             </x-timeline>
         </x-preview>
-        <x-warning class="mt-4">
-            Slot-mode items need the horizontal prop passed explicitly because
-            Laravel's @@aware does not propagate from class-based parents to slot children.
-            Array mode (:items) auto-propagates.
+        <x-warning warning title="Slot items inherit from the container on 4.x" class="mt-4">
+            <x-block>horizontal</x-block>, <x-block>alternate</x-block>, <x-block>compact</x-block>,
+            <x-block>color</x-block> and <x-block>style</x-block> no longer have to be repeated on every
+            <x-block>x-timeline.items</x-block>. An item can still override its own <x-block>color</x-block> and
+            <x-block>style</x-block>.
         </x-warning>
     </x-section>
     <x-section title="Alternate Layout">
@@ -106,9 +107,9 @@
     <x-section title="Compact Spacing">
         <x-preview language="blade" :contents="$compact">
             <x-timeline compact>
-                <x-timeline.items title="Step A" description="First." date="Jan" compact />
-                <x-timeline.items title="Step B" description="Second." date="Feb" compact />
-                <x-timeline.items title="Step C" description="Third." date="Mar" compact />
+                <x-timeline.items title="Step A" description="First." date="Jan" />
+                <x-timeline.items title="Step B" description="Second." date="Feb" />
+                <x-timeline.items title="Step C" description="Third." date="Mar" />
             </x-timeline>
         </x-preview>
     </x-section>

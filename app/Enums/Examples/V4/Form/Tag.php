@@ -43,6 +43,18 @@ class Tag
            x-on:erase="alert(`Erased: ${$event.detail.tags}`)" />
     HTML;
 
+    public const string OPTIONS = <<<'HTML'
+    <x-tag wire:model="tags" :options="Tag::pluck('name')" />
+    HTML;
+
+    public const string AFTER_SLOT = <<<'HTML'
+    <x-tag wire:model="tags" :options="$existing">
+        <x-slot:after>
+            <x-button sm x-on:click="$tsui.open.modal('create-tag')">New tag</x-button>
+        </x-slot:after>
+    </x-tag>
+    HTML;
+
     public const string CUSTOMIZATION = <<<'HTML'
     TallStackUi::customize()
         ->form('tag')

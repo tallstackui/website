@@ -117,6 +117,53 @@ class Tooltip
     <x-tooltip text="black" color="black" outline />
     HTML;
 
+    public const string DELAY = <<<'HTML'
+    <!-- Accepted: slow (400ms), fast (150ms), faster (75ms), flash (0) -->
+    <x-tooltip text="TallStackUI" delay="flash" />
+    <x-button tooltip="TallStackUI" data-tooltip-delay="slow" />
+    <span x-data x-tooltip="TallStackUI" data-tooltip-delay="faster"></span>
+    HTML;
+
+    public const string BALLOON = <<<'HTML'
+    <!-- color paints the icon, balloon paints the balloon -->
+    <x-tooltip text="TallStackUI" balloon="red" />
+    <x-button tooltip="TallStackUI" data-tooltip-color="emerald" />
+    <x-kbd tooltip="TallStackUI" data-tooltip-color="amber" />
+    HTML;
+
+    public const string SCALE = <<<'HTML'
+    <!-- Accepted: sm (default), md, lg -->
+    <x-tooltip text="TallStackUI" scale="lg" />
+    <x-button tooltip="TallStackUI" data-tooltip-size="lg" />
+    <span x-data x-tooltip="TallStackUI" data-tooltip-size="md"></span>
+    HTML;
+
+    public const string DISABLED = <<<'HTML'
+    <span x-tooltip="TallStackUI" x-bind:data-tooltip-disabled="condition"></span>
+    HTML;
+
+    public const string SETTINGS = <<<'PHP'
+    // config/tallstackui.php
+
+    'tooltip' => [
+        Components\Tooltip\Component::class,
+        [
+            'delay' => null,
+            'color' => null,
+            'size' => null,
+            'invert' => false,
+        ],
+    ],
+    PHP;
+
+    public const string STYLING = <<<'CSS'
+    /* The balloon is built by JavaScript and shared by every anchor,
+       so it is styled through a stable selector instead of customize() */
+
+    [data-tsui-tooltip] { border-radius: 0; }
+    [data-tsui-tooltip] > [data-arrow] { display: none; }
+    CSS;
+
     public const string CUSTOMIZATION = <<<'HTML'
     TallStackUi::customize()
         ->tooltip()

@@ -238,6 +238,55 @@ class Step
     </x-step>
     HTML;
 
+    public const string HELPERS_VARIATIONS = <<<'HTML'
+    {{-- default: individual bordered buttons --}}
+    <x-step selected="1" helpers>
+
+    {{-- minimal: the same layout with borderless text buttons --}}
+    <x-step selected="1" helpers="minimal">
+
+    {{-- compact: a grouped shell with icon-only buttons and a current/total indicator --}}
+    <x-step selected="1" helpers="compact">
+
+    {{-- A value containing a dot is treated as a view path --}}
+    <x-step selected="1" helpers="app.steps.custom">
+    HTML;
+
+    public const string HELPERS_CONFIGURATION = <<<'PHP'
+    // config/tallstackui.php
+
+    'step' => [
+        Components\Step\Main::class,
+        [
+            'helpers' => 'compact',
+        ],
+    ],
+    PHP;
+
+    public const string NAVIGATION_SLOTS = <<<'HTML'
+    <x-step selected="1" helpers>
+        <x-step.items step="1" title="Account">...</x-step.items>
+        <x-step.items step="2" title="Review">...</x-step.items>
+        <x-slot:previous>
+            <x-button color="secondary" outline icon="arrow-left" x-on:click="previous()">Back</x-button>
+        </x-slot:previous>
+        <x-slot:next>
+            <x-button icon="arrow-right" position="right" x-on:click="next()">Continue</x-button>
+        </x-slot:next>
+    </x-step>
+    HTML;
+
+    public const string NAVIGATION_GUARD = <<<'HTML'
+    <x-slot:next>
+        <x-button x-on:click="if (valid()) next()">Continue</x-button>
+    </x-slot:next>
+    HTML;
+
+    public const string SKELETON = <<<'HTML'
+    <x-step skeleton />
+    <x-step skeleton="4" circles />
+    HTML;
+
     public const string CUSTOMIZATION = <<<'HTML'
     TallStackUi::customize()
         ->step()

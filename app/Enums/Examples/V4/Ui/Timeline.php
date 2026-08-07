@@ -50,10 +50,10 @@ class Timeline
 
     public const string HORIZONTAL = <<<'HTML'
     <x-timeline horizontal>
-        <x-timeline.items title="Step A" description="Initial setup" horizontal />
-        <x-timeline.items title="Step B" description="Configuration" horizontal />
-        <x-timeline.items title="Step C" description="Deployment" horizontal />
-        <x-timeline.items title="Step D" description="Production" horizontal />
+        <x-timeline.items title="Step A" description="Initial setup" />
+        <x-timeline.items title="Step B" description="Configuration" />
+        <x-timeline.items title="Step C" description="Deployment" />
+        <x-timeline.items title="Step D" description="Production" />
     </x-timeline>
 
     <!-- or -->
@@ -99,9 +99,9 @@ class Timeline
 
     <!-- Compact: continuous line, no gap between items -->
     <x-timeline compact> {{-- [tl! highlight] --}}
-        <x-timeline.items title="Step A" description="First." date="Jan" compact />
-        <x-timeline.items title="Step B" description="Second." date="Feb" compact />
-        <x-timeline.items title="Step C" description="Third." date="Mar" compact />
+        <x-timeline.items title="Step A" description="First." date="Jan" />
+        <x-timeline.items title="Step B" description="Second." date="Feb" />
+        <x-timeline.items title="Step C" description="Third." date="Mar" />
     </x-timeline>
     HTML;
 

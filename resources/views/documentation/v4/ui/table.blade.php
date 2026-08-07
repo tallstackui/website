@@ -119,4 +119,110 @@
             <x-code language="blade" :contents="$expandableNested" />
         </div>
     </x-section>
+    <x-section title="Compact" new description="Tightens the vertical padding of the header cells, the data cells, the empty message and the expandable content. Unrelated to paginator=&quot;compact&quot;, which names a pagination look. The two combine.">
+        <x-preview language="blade" :contents="$compact" :background="false">
+            <x-table compact :headers="[
+                ['index' => 'id', 'label' => '#'],
+                ['index' => 'name', 'label' => 'Name'],
+                ['index' => 'email', 'label' => 'E-mail'],
+            ]" :rows="[
+                ['id' => 1, 'name' => 'AJ Meireles', 'email' => 'aj@tallstackui.com'],
+                ['id' => 2, 'name' => 'Bob Doe', 'email' => 'bob@tallstackui.com'],
+                ['id' => 3, 'name' => 'Carol Fox', 'email' => 'carol@tallstackui.com'],
+            ]" />
+        </x-preview>
+        <x-warning class="mt-4">
+            Each affected block gained a <x-block>-compact</x-block> twin, and the flag swaps the whole string. An
+            application customizing <x-block>table.td</x-block> has to customize <x-block>table.td-compact</x-block>
+            too if it uses both modes.
+        </x-warning>
+    </x-section>
+    <x-section title="Outside Livewire" new description="The three features that depended on a round trip now travel through the query string. The search and quantity parameter names come from filter, so the application still owns them.">
+        <x-preview language="blade" :contents="$outsideLivewire" :background="false">
+            <x-table filter :headers="[
+                ['index' => 'id', 'label' => '#'],
+                ['index' => 'name', 'label' => 'Name'],
+                ['index' => 'email', 'label' => 'E-mail'],
+            ]" :rows="[
+                ['id' => 1, 'name' => 'AJ Meireles', 'email' => 'aj@tallstackui.com'],
+                ['id' => 2, 'name' => 'Bob Doe', 'email' => 'bob@tallstackui.com'],
+                ['id' => 3, 'name' => 'Carol Fox', 'email' => 'carol@tallstackui.com'],
+            ]" />
+        </x-preview>
+        <x-code class="mt-4" language="text" :contents="$outsideLivewireQuery" />
+        <x-table class="mt-4" :headers="[
+            ['index' => 'feature', 'label' => 'Feature'],
+            ['index' => 'inside', 'label' => 'Inside Livewire'],
+            ['index' => 'outside', 'label' => 'Outside'],
+        ]" :rows="[
+            ['feature' => 'pagination', 'inside' => 'wire:click=\'gotoPage\'', 'outside' => '<a href>, built from the URLs the paginator already exposes'],
+            ['feature' => 'sorting', 'inside' => 'wire:click=\'$set\'', 'outside' => '<a href> with the inverted direction'],
+            ['feature' => 'filter', 'inside' => 'wire:model.live', 'outside' => 'AlpineJS rewriting location'],
+            ['feature' => 'loading', 'inside' => 'wire:loading', 'outside' => 'not rendered'],
+            ['feature' => 'selectable', 'inside' => 'entangled array', 'outside' => 'plain array, reported through events'],
+        ]" />
+        <x-warning class="mt-4">
+            Filtering or sorting drops <x-block>page</x-block>; every other parameter survives. Outside Livewire the
+            paginator is also passed through <x-block>withQueryString()</x-block>, or paginating would silently drop
+            the active filter and sort.
+        </x-warning>
+    </x-section>
+    <x-section title="Paginator Variations" new description="paginator names a look now, and the same name styles both the numbered mode and simple-pagination. A dotted value is still treated as a view path; anything else throws.">
+        <x-code language="blade" :contents="$paginators" />
+        <x-table class="mt-4" :headers="[
+            ['index' => 'variant', 'label' => 'Variant'],
+            ['index' => 'numbered', 'label' => 'Numbered'],
+            ['index' => 'simple', 'label' => 'simple-pagination'],
+        ]" :rows="[
+            ['variant' => 'simple', 'numbered' => 'Rail with a floating pill, chevrons outside it', 'simple' => 'Two tinted rounded-full buttons'],
+            ['variant' => 'minimal', 'numbered' => 'No surfaces at all, current page ruled underneath', 'simple' => 'Two underline-on-hover text links'],
+            ['variant' => 'compact', 'numbered' => 'One bordered shell holding the page indicator', 'simple' => 'The same shell, page number only'],
+        ]" />
+    </x-section>
+    <x-section title="Simple Pagination" new description="simple-pagination now implies paginate. An explicit :paginate=&quot;false&quot; still wins, and passing both is merely redundant.">
+        <x-code language="blade" :contents="$simplePagination" />
+    </x-section>
+    <x-section title="Persistent" new description="Scrolls back to the table after paginating. Inside Livewire that is a scrollIntoView; outside, every link is a full page load, so the fragment does the work.">
+        <x-code language="blade" :contents="$persistent" />
+        <x-table class="mt-4" :headers="[
+            ['index' => 'value', 'label' => 'Value'],
+            ['index' => 'anchor', 'label' => 'Anchor'],
+        ]" :rows="[
+            ['value' => 'false', 'anchor' => 'Nothing'],
+            ['value' => 'persistent', 'anchor' => 'The table itself'],
+            ['value' => 'persistent=\'users\'', 'anchor' => 'The given element'],
+        ]" />
+        <x-warning class="mt-4">
+            An empty string is rejected: it would render <x-block>href="...#"</x-block>, which scrolls to the top, and
+            the failure would be silent.
+        </x-warning>
+    </x-section>
+    <x-section title="Selected Event" new description="select fires from the row checkbox with the full row, and never fired for select all. selected carries the whole selection and covers both paths.">
+        <x-code language="blade" :contents="$selected" />
+        <x-warning class="mt-4">
+            It comes from a <x-block>$watch</x-block>, which also picks up changes pushed from the server into the
+            entangled property. Inside Livewire <x-block>selected</x-block> can therefore fire on a re-render and not
+            only on a click.
+        </x-warning>
+    </x-section>
+    <x-section title="Global Defaults" new description="Four props that were repeated on every table can now be set once. Each is a default, not a lock: an explicit value always wins, including turning one back off.">
+        <x-code language="php" :contents="$globalDefaults" />
+        <x-code class="mt-4" language="blade" :contents="$globalDefaultsOff" />
+    </x-section>
+    <x-section title="Skeleton" new description="A structural placeholder shaped like the table itself. The real header labels stay legible; only the unknown becomes a bar.">
+        <x-preview language="blade" :contents="$skeleton" :background="false">
+            <x-table skeleton="4" :headers="[
+                ['index' => 'id', 'label' => '#'],
+                ['index' => 'name', 'label' => 'Name'],
+                ['index' => 'email', 'label' => 'E-mail'],
+            ]" />
+        </x-preview>
+        <p class="mt-4">It belongs in the <x-block>placeholder()</x-block> of a <x-block>#[Lazy]</x-block> component:</p>
+        <x-code class="mt-4" language="php" :contents="$skeletonLazy" />
+        <x-warning class="mt-4">
+            Livewire skips <x-block>mount()</x-block> when rendering a placeholder but does hand over the class-level
+            property defaults, so headers declared as a class default survive and the skeleton draws the real column
+            count. Headers assigned inside <x-block>mount()</x-block> do not, and it falls back to four generic columns.
+        </x-warning>
+    </x-section>
 </x-layout>

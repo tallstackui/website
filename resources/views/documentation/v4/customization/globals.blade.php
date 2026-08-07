@@ -55,6 +55,32 @@
                 enable or disable each one through boolean parameters:
             </p>
             <x-code language="php" :contents="$colorfulSelective" disable-copy />
+            <x-warning warning title="Three changes on 4.x">
+                <x-block>colorful()</x-block> assigns instead of appending, so calling it twice no longer registers
+                duplicate entries and narrowing it actually takes effect. The <x-block>question</x-block> type follows
+                <x-block>primary</x-block> instead of a grayscale palette, which is what made the most common way to
+                see the global also the only one that produced no color. And the two buttons stopped sharing the same
+                translucent background: confirm is solid white with the type color as its text, cancel carries none
+                until it is hovered.
+            </x-warning>
+        </div>
+    </x-section>
+    <x-section title="Colorful Button Colors" new disable-copy>
+        <div class="space-y-4">
+            <p>
+                The colors of the <x-block>colorful</x-block> buttons used to live in the components' customization
+                blocks. They moved into the published color classes, next to everything else that varies by type.
+                <x-block>dialog.colorful.confirm</x-block>, <x-block>toast.colorful.confirm</x-block> and
+                <x-block>toast.colorful.cancel</x-block> no longer exist, so
+                <x-block>customize()-&gt;block()</x-block> on them throws.
+            </p>
+            <x-code language="php" :contents="$colorfulColors" />
+            <p>
+                Partial overrides are merged over the defaults, so naming a single key leaves the rest untouched. The
+                blocks that do not depend on the type &mdash; <x-block>colorful.icon</x-block>,
+                <x-block>colorful.title</x-block>, <x-block>colorful.description</x-block> and friends &mdash; stay
+                where they are and remain reachable through <x-block>customize()</x-block>.
+            </p>
         </div>
     </x-section>
     <x-section title="Selective Application" disable-copy>

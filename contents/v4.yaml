@@ -14,11 +14,14 @@ starter-kit:
   - Caveats
 documentation:
   - Searches
-  - Prefixing Example
+  - Configure Documentation
   - Examples Without Binding
 configuration:
   - Concept
   - Configuration File Structure
+  - Global Keys
+  - How the Published File Is Merged
+  - Scrollbar Offset
 component-prefix:
   - Configuration File
   - Environment Variable
@@ -27,6 +30,8 @@ component-prefix:
 without-livewire:
   - Concept
   - Example
+  - Supported Form Components
+  - Table
   - Parse Request Value
 command:
   - Introduction
@@ -44,6 +49,7 @@ contribution:
 upgrade-guide:
   - Before Start
   - Whats New
+  - Breaking Changes
   - How to Upgrade
 ai:
   - AI-Powered Development
@@ -73,6 +79,7 @@ form:
     - Placeholders
     - Slot After
     - Events
+    - Metadata
   input:
     - Basic Usage
     - Label & Hint
@@ -87,6 +94,7 @@ form:
     - Concept
     - Select Native
     - Select Styled
+    - Panel Width
   password:
     - Basic Usage
     - Label & Hint
@@ -107,13 +115,12 @@ form:
     - Exclude Step
     - Exclude Color
     - Events
-    - Configurations
   currency:
     - Concept
     - Basic Usage
-    - Different Currencies
     - Label & Hint
     - Clearable
+    - Different Currencies
     - Intl Options
     - Symbols
     - Sync Modes
@@ -142,22 +149,49 @@ form:
     - Basic Usage
     - Label
     - Label Slot
+    - Label Slot at Left
     - Label Alignment
     - Size Variations
     - Color Variations
+    - Group Concept
+    - Group Basic Usage
+    - Group Variations
+    - Group Columns
+    - Group Control Position
+    - Group Size Variations
+    - Group Colors
+    - Group Option Keys
+    - Group Select
+    - Group Interact
+    - Group Without Livewire
   radio:
     - Basic Usage
     - Label
     - Label Slot
+    - Label Slot at Left
     - Label Alignment
     - Size Variations
     - Color Variations
+    - Group Concept
+    - Group Basic Usage
+    - Group Variations
+    - Group Columns
+    - Group Control Position
+    - Group Size Variations
+    - Group Colors
+    - Group Option Keys
+    - Group Select
+    - Group Interact
+    - Group Without Livewire
   tag:
     - Basic Usage
     - Label & Hint
     - Limit Options
+    - Lazy
     - Prefix
     - Events
+    - Options
+    - Slot After
   toggle:
     - Basic Usage
     - Label
@@ -167,7 +201,7 @@ form:
     - Color Variations
   range:
     - Basic Usage
-    - Label
+    - Label & Hint
     - Size Variations
     - Color Variations
   pin:
@@ -197,6 +231,22 @@ form:
         - Concept
         - Prepare the Usage
         - Demonstration
+    Async:
+      contents:
+        - Concept
+        - Basic Usage
+        - Multiple
+        - Manual
+        - Without Livewire
+        - Bound Value
+        - Backend
+        - Backend Options
+        - Taking Over Persistence
+        - Guards
+        - Cleaning Up
+        - AlpineJS Events
+        - Laravel Events
+        - Configuration
   date:
     - Basic Usage
     - Label & Hint
@@ -221,6 +271,7 @@ form:
     - Step Hour & Minute
     - Footer Slot
     - Events
+    - Scroll & Drag
   select:
     Native:
       contents:
@@ -237,6 +288,8 @@ form:
         - Multi-dimensional Array
         - Disable Options
         - Grouped Options
+        - Qualified Selection Labels
+        - Groups and Loose Options
         - Limit Selection
         - Image Preview
         - Description
@@ -284,8 +337,13 @@ ui:
     - Placeholder
     - Borderless
     - Modelable
+    - Custom Property
+    - Customizing Colors
+    - Other Options
     - Image
+    - Default Alt Text
     - Group
+    - Group Reverse
     - Presence
     - Presence Color
     - Presence Positions
@@ -381,7 +439,7 @@ ui:
   boolean:
     - Concept
     - Basic Usage
-    - Icon Variation
+    - Icon Variations
     - Color Variations
     - Livewire Click Actions
   calendar:
@@ -392,6 +450,7 @@ ui:
     - Multiple Mode
     - Lock Month Year
     - Other Options
+    - Flat Look
   card:
     - Basic Usage
     - Header Slot
@@ -400,6 +459,10 @@ ui:
     - Image
     - Round
     - Color Variations
+    - Flat Look
+    - Paddingless
+    - Footer Alignment
+    - Skeleton
     - Loading
     - Events
   carousel:
@@ -408,7 +471,7 @@ ui:
     - Different Cover Image
     - Shuffle
     - Autoplay
-    - Autoplay, Stop on hover
+    - Autoplay, Stop on Hover
     - Autoplay, Without Loop
     - Without Indicators
     - Image Title & Description
@@ -420,6 +483,22 @@ ui:
     - Fixed Aspect Radio
     - Slots
     - Events
+  chart:
+    - Concept
+    - Basic Usage
+    - Types
+    - Multiple Series
+    - Stacked
+    - Combining Types
+    - Secondary Axis
+    - Colors
+    - Chrome
+    - Formatting
+    - Slots
+    - Inside a Card
+    - Skeleton
+    - Configuration
+    - Degenerate Input
   clipboard:
     - Basic Usage
     - Button at Left
@@ -467,10 +546,31 @@ ui:
     - Links
     - Icon
     - Static Icon
+    - Size
+    - Width
     - Header Slot
     - Dropdown Submenu
     - Action Slot
     - Events
+  editor:
+    - Concept
+    - Basic Usage
+    - Label & Hint
+    - Toolbar
+    - Heights
+    - Readonly & Disabled
+    - Counters
+    - Markdown
+    - Markdown Mapping
+    - Markdown Autoformat
+    - Image Upload
+    - Without Livewire
+    - Events
+    - Keyboard
+    - Livewire
+    - Security
+    - Configuration
+    - Scoped Customization
   error:
     - Basic Usage
     - Filtering Properties
@@ -483,6 +583,7 @@ ui:
     - Color Variations
     - Events
   environment:
+    - Concept
     - Basic Usage
     - Beyond Basic, EnvBar
     - Round Variation
@@ -491,9 +592,30 @@ ui:
     - Without Branch
     - Branch Detection Algorithm
     - Color Scheme
+  gallery:
+    - Concept
+    - Basic Usage
+    - Grid
+    - Masonry
+    - Feature
+    - Thumbnail Position
+    - Round
+    - Height
+    - Clickable
+    - Caption
+    - Navigable
+    - Slots
+    - Events
+    - Image Object
+    - Performance
+    - Validation
   icon:
     - Concept
     - Basic Usage
+    - Size Shorthands
+    - Color Shorthands
+    - Shorthand Caveats
+    - Shorthand Configuration
     - Left & Right Slots
     - Custom Icons
     - Avoid Component Conflict
@@ -516,7 +638,10 @@ ui:
     - AlpineJS Helper
     - Events
     - Focus Helper
-    - Configurations
+    - Centered on a Breakpoint
+    - Mobile Sheet Motion
+    - Paddingless
+    - Footer Alignment
   layout:
     - Concept
     - Layout Example
@@ -532,6 +657,8 @@ ui:
     - Href Attribute
     - Match Attribute
     - Badge
+    - Collapsed Sidebar Flyout
+    - Badge on the Collapsed Rail
     - Side Bar Separator
     - Disable Layout Components
     - Customization
@@ -558,6 +685,11 @@ ui:
     - Custom Empty State
     - Rich Inline Content
     - Caveats
+    - Compact
+    - Lazy
+    - Action Slot
+    - Caption Slot
+    - Skeleton
   loading:
     - Concept
     - Attributes
@@ -565,12 +697,11 @@ ui:
     - Basic Usage
     - Text Slot
     - Target & Delay Options
-    - Configurations
   kbd:
     - Basic Usage
     - Key Combination
     - Size Variations
-    - Borderless
+    - Borderless & Shadowless
     - Tooltip
     - Slot
   key-value:
@@ -582,7 +713,11 @@ ui:
     - Static
     - Deletable
     - Change Delete Icon
+    - Slots
     - Events
+    - Compact
+    - Color
+    - Colorless
   progress:
     Normal:
       contents:
@@ -601,6 +736,16 @@ ui:
         - Color Variations
         - Light Variations
         - Footer Slot
+  qr-code:
+    - Concept
+    - Basic Usage
+    - Colors
+    - Size Variations
+    - Watermark
+    - Copy & Download
+    - Skeleton
+    - Configuration
+    - Scannability
   reaction:
     - Concept
     - Persist Reaction
@@ -611,6 +756,7 @@ ui:
     - Using Less Icons
     - Slot
     - Events
+    - Panel
   rating:
     - Concept
     - Persist Rating
@@ -631,6 +777,7 @@ ui:
     - Clearable
     - Exportable
     - Events
+    - Persistent
   slide:
     - Basic Usage
     - Positions
@@ -645,7 +792,20 @@ ui:
     - AlpineJS Helper
     - Events
     - Focus Helper
-    - Configurations
+    - Paddingless
+    - Footer Alignment
+  spinner:
+    - Concept
+    - Basic Usage
+    - Variations
+    - Textual Variations
+    - Size Variations
+    - Colors
+    - Label
+    - Thinking
+    - Inside a Button
+    - Configuration
+    - Spinner, Loading & Skeleton
   stats:
     - Basic Usage
     - Title
@@ -653,9 +813,13 @@ ui:
     - Icons
     - Color Variations
     - Indicators
+    - Background Chart
+    - Flat Look
     - Animated Effect
+    - Animation Duration
     - Number Format
     - Slots
+    - Skeleton
   step:
     - Basic Usage
     - Title & Description
@@ -666,7 +830,10 @@ ui:
     - Finish Slot
     - Wireable
     - Live Wireable
-    - Event
+    - Events
+    - Helper Variations
+    - Navigation Slots
+    - Skeleton
   tab:
     - Basic Usage
     - Centered
@@ -676,6 +843,8 @@ ui:
     - Events
     - Wireable
     - Live Wireable
+    - Flat Look
+    - Paddingless
   table:
     - Concept
     - Data for Table
@@ -693,11 +862,20 @@ ui:
     - Highlight
     - Interacting With Data
     - Expandable
+    - Compact
+    - Outside Livewire
+    - Paginator Variations
+    - Simple Pagination
+    - Persistent
+    - Selected Event
+    - Global Defaults
+    - Skeleton
   theme-switch:
-    - Concept
     - Basic Usage
+    - Block
     - Sizes
-    - Only Icon
+    - Simple
+    - Only Icons
   timeline:
     - Basic Usage
     - Render Modes
@@ -717,6 +895,12 @@ ui:
     - Size Variations
     - HTML Content
     - Color Variations
+    - Delay
+    - Balloon Color
+    - Balloon Scale
+    - Disabled
+    - Global Settings
+    - Styling the Balloon
     - Variations
 interactions:
   dialog:
@@ -730,7 +914,7 @@ interactions:
     - Dispatching via Controllers
     - Persistent
     - Colorful
-    - Configurations
+    - Confirming with Enter
   toast:
     - Configuration
     - Basic Usage
@@ -746,7 +930,9 @@ interactions:
     - Display After Redirects
     - Dispatching via Controllers
     - Colorful
-    - Configurations
+    - Centered Positions
+    - Stacked
+    - Top on Mobile
 customization:
   soft:
     - Concept
@@ -759,6 +945,10 @@ customization:
     - Component Data Parameters
     - Interacting with Default Classes
     - Scoped Soft Customization
+    - Extending a Scope
+    - Customizations Stack
+    - Remove Matches Whole Classes
+    - Scopes Layer Over the Global Customization
     - Internal Scoped Customization
   deep:
     - Concept
@@ -768,6 +958,7 @@ customization:
     - Publish Blade Files
   color:
     - Concept
+    - The 4.x Palette
     - Change Colors Definitions
     - Create or Manipulate Colors
     - Change the Default Namespace
@@ -777,6 +968,7 @@ customization:
     - Flash
     - Square
     - Colorful
+    - Colorful Button Colors
     - Selective Application
     - Chaining
 helpers:
@@ -789,7 +981,7 @@ helpers:
     - Concept
     - Demonstration
     - Installation
-    - Available Configuration
+    - Available Configurations
     - Production Environment
     - Configure Color Scheme
     - Ignores

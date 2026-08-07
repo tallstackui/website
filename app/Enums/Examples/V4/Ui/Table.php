@@ -494,6 +494,109 @@ class Table
     </x-table>
     HTML;
 
+    public const string COMPACT = <<<'HTML'
+    <x-table :$headers :$rows compact />
+    HTML;
+
+    public const string OUTSIDE_LIVEWIRE = <<<'HTML'
+    {{-- routes/web.php -> a plain controller, no Livewire anywhere --}}
+    <x-table :$headers
+             :rows="$users"
+             :sort="request('sort', ['column' => 'id', 'direction' => 'desc'])"
+             filter
+             paginate />
+    HTML;
+
+    public const string OUTSIDE_LIVEWIRE_QUERY = <<<'TEXT'
+    ?search=foo&quantity=25&sort[column]=name&sort[direction]=asc&page=2
+    TEXT;
+
+    public const string PERSISTENT = <<<'HTML'
+    {{-- Anchors on the table itself --}}
+    <x-table :$headers :$rows paginate persistent />
+
+    {{-- Anchors on an element of your own, so the card header stays in frame --}}
+    <div id="users">
+        <x-card>
+            <x-table :$headers :$rows paginate persistent="users" />
+        </x-card>
+    </div>
+    HTML;
+
+    public const string SELECTED = <<<'HTML'
+    <div x-data="{ rows: [] }" x-on:selected="rows = $event.detail.rows">
+        <x-table :$headers :$rows selectable />
+    </div>
+    HTML;
+
+    public const string PAGINATORS = <<<'HTML'
+    {{-- The configured default --}}
+    <x-table :$headers :$rows paginate />
+
+    {{-- This table only. Accepted: simple, minimal, compact --}}
+    <x-table :$headers :$rows paginate paginator="compact" />
+
+    {{-- A dotted value is still treated as a view path --}}
+    <x-table :$headers :$rows paginate paginator="components.my-paginator" />
+    HTML;
+
+    public const string SIMPLE_PAGINATION = <<<'HTML'
+    {{-- 3.x --}}
+    <x-table :rows="$rows" paginate simple-pagination />
+
+    {{-- 4.x: simple-pagination implies paginate --}}
+    <x-table :rows="$rows" simple-pagination />
+    HTML;
+
+    public const string GLOBAL_DEFAULTS = <<<'PHP'
+    // config/tallstackui.php
+
+    'table' => [
+        Components\Table\Component::class,
+        [
+            'paginate' => true,
+            'filter' => true,
+            'quantity' => [5, 10, 25],
+            'simple-pagination' => false,
+            'paginator' => 'minimal',
+        ],
+    ],
+    PHP;
+
+    public const string GLOBAL_DEFAULTS_OFF = <<<'HTML'
+    {{-- Each is a default, not a lock --}}
+    <x-table :$headers :$rows :paginate="false" />
+    <x-table :$headers :$rows :filter="false" />
+    HTML;
+
+    public const string SKELETON = <<<'HTML'
+    {{-- Bare flag: 5 rows --}}
+    <x-table :$headers skeleton />
+
+    {{-- An integer sets the count --}}
+    <x-table :$headers skeleton="8" selectable paginate />
+    HTML;
+
+    public const string SKELETON_LAZY = <<<'PHP'
+    #[Lazy]
+    class UsersTable extends Component
+    {
+        public array $headers = [
+            ['index' => 'name', 'label' => 'Name'],
+            ['index' => 'email', 'label' => 'E-mail'],
+        ];
+
+        public function placeholder(): string
+        {
+            return <<<'HTML'
+            <div>
+                <x-table :$headers skeleton="5" />
+            </div>
+            HTML;
+        }
+    }
+    PHP;
+
     public const string CUSTOMIZATION = <<<'HTML'
     TallStackUi::customize()
         ->table()

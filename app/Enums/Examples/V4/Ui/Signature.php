@@ -45,6 +45,10 @@ class Signature
     <x-signature exportable x-on:export="alert('Exported!')" />
     HTML;
 
+    public const string PERSISTENT = <<<'HTML'
+    <x-signature wire:model="signature" persistent />
+    HTML;
+
     public const string CUSTOMIZATION = <<<'HTML'
     TallStackUi::customize()
         ->signature()

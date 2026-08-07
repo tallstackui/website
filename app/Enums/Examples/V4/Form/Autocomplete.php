@@ -208,6 +208,20 @@ class Autocomplete
         x-on:close="console.log('closed')" />
     HTML;
 
+    public const string METADATA = <<<'PHP'
+    [
+        'value' => 'Alice',
+        'description' => 'admin',
+        'metadata' => ['id' => 42, 'role' => 'admin', 'team_id' => 7],
+    ]
+    PHP;
+
+    public const string METADATA_USAGE = <<<'HTML'
+    <x-autocomplete wire:model="user"
+                    :request="route('api.users')"
+                    x-on:select="$wire.userPicked($event.detail.item.metadata)" />
+    HTML;
+
     public const string CUSTOMIZATION = <<<'HTML'
     TallStackUi::customize()
         ->form('autocomplete')

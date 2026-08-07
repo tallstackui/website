@@ -270,4 +270,49 @@
         </div>
     </x-section>
     <x-available-configuration />
+    <x-section title="Centered on a Breakpoint" new description="center was a boolean: centered on every viewport or on none. It now also takes a Tailwind breakpoint, which is the bottom-sheet-on-phone, centered-dialog-on-desktop layout most applications want.">
+        <x-code language="blade" :contents="$centerBreakpoint" />
+        <x-table class="mt-4" :headers="[
+            ['index' => 'value', 'label' => 'Value'],
+            ['index' => 'classes', 'label' => 'Classes'],
+        ]" :rows="[
+            ['value' => 'false', 'classes' => 'items-end sm:items-start'],
+            ['value' => 'true', 'classes' => 'items-center'],
+            ['value' => 'sm', 'classes' => 'items-end sm:items-center'],
+            ['value' => 'md', 'classes' => 'items-end sm:items-start md:items-center'],
+            ['value' => 'lg', 'classes' => 'items-end sm:items-start lg:items-center'],
+            ['value' => 'xl', 'classes' => 'items-end sm:items-start xl:items-center'],
+            ['value' => '2xl', 'classes' => 'items-end sm:items-start 2xl:items-center'],
+        ]" />
+        <p class="mt-4">The same values work as a global default:</p>
+        <x-code class="mt-4" language="php" :contents="$centerConfiguration" />
+        <x-warning class="mt-4">
+            A breakpoint means "not centered below it". Below <x-block>md</x-block> the modal behaves exactly like a
+            modal with no <x-block>center</x-block> at all, which includes the <x-block>sm:items-start</x-block> step.
+            Anything outside the five breakpoints throws at render time, including <x-block>center="true"</x-block>.
+        </x-warning>
+    </x-section>
+    <x-section title="Mobile Sheet Motion" new disable-copy>
+        Below <x-block>sm</x-block> the modal is a bottom sheet, and it now opens like one: it travels opaque from off
+        screen over 400ms instead of the 16px lift plus fade it used to do. The backdrop still fades. From
+        <x-block>sm</x-block> up nothing changed. A boolean <x-block>center</x-block> opts out entirely; a breakpoint
+        does not, since the phone is still a sheet.
+    </x-section>
+    <x-section title="Paddingless" new description="Strips the padding of the main slot, leaving it flush against the edges. Header and footer keep theirs.">
+        <x-code language="blade" :contents="$paddingless" />
+    </x-section>
+    <x-section title="Footer Alignment" new description="Read from the slot itself. Combining alignments, or mixing one with unwrapped, throws.">
+        <x-code language="blade" :contents="$footerAlignment" />
+        <x-table class="mt-4" :headers="[
+            ['index' => 'attribute', 'label' => 'Attribute'],
+            ['index' => 'result', 'label' => 'Result'],
+        ]" :rows="[
+            ['attribute' => '(none)', 'result' => 'justify-end, the previous default'],
+            ['attribute' => 'start', 'result' => 'justify-start'],
+            ['attribute' => 'center', 'result' => 'justify-center'],
+            ['attribute' => 'end', 'result' => 'justify-end, written out'],
+            ['attribute' => 'between', 'result' => 'justify-between'],
+            ['attribute' => 'unwrapped', 'result' => 'no aligning wrapper at all'],
+        ]" />
+    </x-section>
 </x-layout>

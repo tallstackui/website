@@ -168,6 +168,42 @@ class Modal
     </x-modal>
     HTML;
 
+    public const string CENTER_BREAKPOINT = <<<'HTML'
+    {{-- Bottom sheet below 768px, centered dialog from there upwards --}}
+    <x-modal center="md">
+        TallStackUI
+    </x-modal>
+    HTML;
+
+    public const string CENTER_CONFIGURATION = <<<'PHP'
+    // config/tallstackui.php
+
+    'modal' => [
+        Components\Modal\Component::class,
+        [
+            'center' => 'md',
+        ],
+    ],
+    PHP;
+
+    public const string PADDINGLESS = <<<'HTML'
+    <x-modal paddingless>
+        <x-table :$headers :$rows />
+    </x-modal>
+    HTML;
+
+    public const string FOOTER_ALIGNMENT = <<<'HTML'
+    <x-modal>
+        TallStackUI
+        <x-slot:footer between>
+            <x-button color="red">Delete</x-button>
+            <x-button>Save</x-button>
+        </x-slot:footer>
+    </x-modal>
+
+    <!-- Accepted: start, center, end, between, unwrapped -->
+    HTML;
+
     public const string CUSTOMIZATION = <<<'HTML'
     TallStackUi::customize()
         ->modal()

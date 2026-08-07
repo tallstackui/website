@@ -240,4 +240,26 @@
         </div>
     </x-section>
     <x-available-configuration />
+    <x-section title="Paddingless" new description="Strips the horizontal padding of the main slot. Vertical bleed lives on the outer panel, shared with the header and the footer, so it stays a soft customization of wrapper.fifth.">
+        <x-code language="blade" :contents="$paddingless" />
+    </x-section>
+    <x-section title="Footer Alignment" new description="Read from the slot itself. Combining alignments, or mixing one with unwrapped, throws.">
+        <x-code language="blade" :contents="$footerAlignment" />
+        <x-table class="mt-4" :headers="[
+            ['index' => 'attribute', 'label' => 'Attribute'],
+            ['index' => 'result', 'label' => 'Result'],
+        ]" :rows="[
+            ['attribute' => '(none)', 'result' => 'justify-end'],
+            ['attribute' => 'start', 'result' => 'justify-start'],
+            ['attribute' => 'center', 'result' => 'justify-center'],
+            ['attribute' => 'end', 'result' => 'justify-end, written out'],
+            ['attribute' => 'between', 'result' => 'justify-between'],
+            ['attribute' => 'unwrapped', 'result' => 'no aligning wrapper at all'],
+        ]" />
+        <x-warning warning title="The default moved" class="mt-4">
+            A slide footer with no attribute used to sit at the start, since the base block carried
+            <x-block>flex</x-block> with no <x-block>justify-*</x-block>. It defaults to the end now, and
+            <x-block>start</x-block> restores the old look.
+        </x-warning>
+    </x-section>
 </x-layout>

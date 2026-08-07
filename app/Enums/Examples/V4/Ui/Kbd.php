@@ -20,7 +20,14 @@ class Kbd
     HTML;
 
     public const string BORDERLESS = <<<'HTML'
+    {{-- No border, still raised --}}
     <x-kbd text="Ctrl" borderless />
+
+    {{-- Bordered, flat --}}
+    <x-kbd text="Ctrl" shadowless />
+
+    {{-- What borderless alone used to do on 3.x --}}
+    <x-kbd text="Ctrl" borderless shadowless />
     HTML;
 
     public const string TOOLTIP = <<<'HTML'

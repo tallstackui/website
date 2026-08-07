@@ -149,6 +149,42 @@ class ListComponent
     </x-list>
     HTML;
 
+    public const string COMPACT = <<<'HTML'
+    <x-list compact :items="$tags" />
+    HTML;
+
+    public const string LAZY = <<<'HTML'
+    {{-- First slice of 20 --}}
+    <x-list :items="$tags" height="60" lazy />
+
+    {{-- First slice of 10 --}}
+    <x-list :items="$tags" height="60" lazy="10" />
+    HTML;
+
+    public const string ACTION_SLOT = <<<'HTML'
+    <x-list.items name="general" caption="1 server">
+        <x-slot:action>
+            <x-button sm wire:click="deploy('general')">Deploy</x-button>
+        </x-slot:action>
+        <x-slot:menu>
+            <x-dropdown.items text="Edit" wire:click="edit('general')" />
+        </x-slot:menu>
+    </x-list.items>
+    HTML;
+
+    public const string CAPTION_SLOT = <<<'HTML'
+    <x-list.items name="production">
+        <x-slot:caption>
+            <x-badge text="12 servers" color="red" sm />
+        </x-slot:caption>
+    </x-list.items>
+    HTML;
+
+    public const string SKELETON = <<<'HTML'
+    <x-list skeleton />
+    <x-list skeleton="6" searchable label="Tags" />
+    HTML;
+
     public const string CUSTOMIZATION = <<<'HTML'
     TallStackUi::customize()
         ->list()

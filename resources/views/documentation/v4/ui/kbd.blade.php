@@ -32,9 +32,13 @@
             </div>
         </x-preview>
     </x-section>
-    <x-section title="Borderless" description="An option to remove the border and shadow for a minimal appearance.">
+    <x-section title="Borderless & Shadowless" new description="borderless removes only the border, shadowless removes only the shadow. Passing both reproduces what borderless alone did on 3.x.">
         <x-preview language="blade" :contents="$borderless">
-            <x-kbd text="Ctrl" borderless />
+            <div class="flex items-center gap-3">
+                <x-kbd text="Ctrl" borderless />
+                <x-kbd text="Ctrl" shadowless />
+                <x-kbd text="Ctrl" borderless shadowless />
+            </div>
         </x-preview>
     </x-section>
     <x-section title="Tooltip" description="An option to display a tooltip on hover.">

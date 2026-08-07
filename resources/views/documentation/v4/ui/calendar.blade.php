@@ -77,4 +77,13 @@
             In addition to the methods demonstrated above, all other methods available in the <a href="{{ route('documentation', ['form', 'date']) }}" wire:navigate class="underline">date</a> component are also available in the Calendar component.
         </p>
     </x-section>
+    <x-section title="Flat Look" new description="shadowless drops the shadow, bordered draws a border around the wrapper while keeping it. The predefined calendar-shadowless scope keeps working unchanged.">
+        <x-preview language="blade" :contents="$flat">
+            <div class="space-y-4">
+                <x-calendar shadowless />
+                <x-calendar bordered />
+                <x-calendar shadowless bordered />
+            </div>
+        </x-preview>
+    </x-section>
 </x-layout>

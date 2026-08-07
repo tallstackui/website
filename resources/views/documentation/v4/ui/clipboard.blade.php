@@ -73,5 +73,12 @@
         <div class="mt-4">
             <x-code language="javascript" :contents="$programmaticEvent" />
         </div>
+        <x-warning warning title="Both paths require a user gesture" class="mt-4">
+            The write goes through <x-block>navigator.clipboard.writeText()</x-block>, with
+            <x-block>execCommand</x-block> underneath as a fallback for the setups that are not a secure context
+            &mdash; an application served over <x-block>http://myapp.test</x-block> by Valet or Herd, or reached at an
+            IP from a phone on the same network. A browser only allows a clipboard write while a real interaction is
+            being handled, so calling it from a timer or after an API response fails in every browser, and always did.
+        </x-warning>
     </x-section>
 </x-layout>

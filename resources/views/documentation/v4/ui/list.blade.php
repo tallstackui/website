@@ -180,4 +180,36 @@
             </li>
         </ul>
     </x-section>
+    <x-section title="Compact" new description="Tightens the vertical padding of the rows, the search bar and the empty message. The flag lives on x-list alone and reaches the rows through @aware, so it holds for :items, lazy and slot rows alike.">
+        <x-code language="blade" :contents="$compact" />
+    </x-section>
+    <x-section title="Lazy" new description="Moves the rows to the client. The server serializes :items into a single JSON array and AlpineJS renders a slice of it, growing it as a sentinel at the bottom of the scroll container comes into view.">
+        <x-code language="blade" :contents="$lazy" />
+        <p class="mt-4">
+            The row markup is still the same component, so every soft customization of <x-block>list.items</x-block>
+            reaches the lazy rows unchanged. Search still sees the whole dataset: the filter runs over the JSON array,
+            not over the rendered rows.
+        </p>
+        <x-warning warning title="height is required, and the interact slots are refused" class="mt-4">
+            The sentinel needs a scroll container to intersect with. And
+            <x-block>@verbatim @interact('item_caption') @endverbatim</x-block>,
+            <x-block>@verbatim @interact('item_action') @endverbatim</x-block> and
+            <x-block>@verbatim @interact('item_menu') @endverbatim</x-block> are closures the server resolves while
+            rendering each row, and there is no per-row server render left to resolve them, so the combination throws.
+        </x-warning>
+    </x-section>
+    <x-section title="Action Slot" new description="Renders controls on the right of the row without the ellipsis dropdown chrome, and coexists with the menu slot.">
+        <x-code language="blade" :contents="$actionSlot" />
+        <x-warning class="mt-4">
+            When <x-block>action</x-block> and/or <x-block>menu</x-block> are present, both are grouped inside a new
+            <x-block>content.aside</x-block> wrapper. Rows that previously rendered only a menu now carry one extra
+            <x-block>div</x-block>.
+        </x-warning>
+    </x-section>
+    <x-section title="Caption Slot" new description="caption keeps working as a plain string attribute and additionally accepts a slot for arbitrary markup. Search still matches its visible text, through a plain-text projection of the slot.">
+        <x-code language="blade" :contents="$captionSlot" />
+    </x-section>
+    <x-section title="Skeleton" new description="A structural placeholder shaped like the list itself. A bare flag draws 4 items; an integer sets the count. It follows compact, so a list that opens as a placeholder does not change height when the rows arrive.">
+        <x-code language="blade" :contents="$skeleton" />
+    </x-section>
 </x-layout>

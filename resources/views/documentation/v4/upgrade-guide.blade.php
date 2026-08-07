@@ -10,236 +10,316 @@
     <x-section title="Before Start" disable-copy>
         <div class="space-y-4">
             <p>
-                First, I owe you an apology. Version 3 took longer than expected, and the main reason is simple: I
-                maintain this library solo. If TallStackUI brings value to your work, please consider
+                <b>Welcome to the TallStackUI 4 upgrade guide!</b> Version 4 is a smaller jump than version 3 was: there
+                is no framework requirement to change and no rename sweeping the whole library. Most applications
+                upgrade by bumping the constraint and reading the two or three notes that touch what they actually use.
+            </p>
+            <p>
+                What did change is concentrated in three places: the default palette, a handful of attribute names that
+                collided with new ones, and the soft customization blocks of the components that were restyled. All of
+                them are listed below.
+            </p>
+            <p>
+                I maintain this library solo. If TallStackUI brings value to your work, please consider
                 <a href="https://github.com/sponsors/devajmeireles" target="_blank" class="underline text-pink-500">sponsoring the project</a>,
                 it makes a real difference in keeping development going.
-            </p>
-            <p>
-                That said, I love TallStackUI and have no intention of abandoning it. I use it in every Tall Stack
-                project I build, and that's exactly what drove version 3 forward: real needs from real projects shaped
-                into new features.
-            </p>
-            <p>
-                Now, to the good stuff. <b>Welcome to the TallStackUI 3 upgrade guide!</b> I'm excited to share this major
-                release with you. Version 3 is a significant milestone that brings TailwindCSS v4 support, Laravel 13
-                compatibility, brand new components, AI-powered development tools, and dozens of enhancements across the
-                board.
-            </p>
-            <p>
-                Thank you for being part of the TallStackUI community. Your feedback and contributions have been invaluable in shaping this release.
             </p>
         </div>
     </x-section>
     <x-section title="Whats New" disable-copy>
         <div class="space-y-4">
-            <p>
-                TallStackUI 3 is a big release. Beyond new components, it introduces AI integration, a revamped customization
-                system, and broad compatibility upgrades. Here's what you can expect 👇
-            </p>
             <div class="pl-4 space-y-4">
-                <div>
-                    <h2 class="text-lg tracking-tight text-pink-600 font-medium">👀 Internal:</h2>
-                    <ul>
-                        <li>- TailwindCSS v4 support (TailwindCSS v3 dropped).</li>
-                        <li>- Laravel 13 support.</li>
-                        <li>- Performance improvements across multiple components.</li>
-                        <li>- Isolated JS bundles.</li>
-                        <li>- Refactored asset controller.</li>
-                        <li>- New vendor publishable name: <x-block>ts-ui</x-block>.</li>
-                        <li>- AI-ready <x-block>.ai/</x-block> documentation directory for AI assistants.</li>
-                    </ul>
-                </div>
                 <div>
                     <h2 class="text-lg tracking-tight text-pink-600 font-medium">🥳 New Components:</h2>
                     <ul>
-                        <li>- Back to Top</li>
-                        <li>- Breadcrumbs</li>
-                        <li>- Command Palette</li>
-                        <li>- Dial</li>
-                        <li>- Kbd</li>
+                        <li>- <a href="{{ route('documentation', ['ui', 'chart']) }}" wire:navigate class="underline">Chart</a>: five types rendered as inline SVG, with no charting library involved.</li>
+                        <li>- <a href="{{ route('documentation', ['ui', 'editor']) }}" wire:navigate class="underline">Editor</a>: a WYSIWYG editor with no external JavaScript dependency, outputting HTML or Markdown.</li>
+                        <li>- <a href="{{ route('documentation', ['ui', 'gallery']) }}" wire:navigate class="underline">Gallery</a>: three layouts and a shared lightbox.</li>
+                        <li>- <a href="{{ route('documentation', ['ui', 'qr-code']) }}" wire:navigate class="underline">QrCode</a>: the whole of ISO/IEC 18004, dependency free.</li>
+                        <li>- <a href="{{ route('documentation', ['ui', 'spinner']) }}" wire:navigate class="underline">Spinner</a>: thirteen animated variations.</li>
+                        <li>- <a href="{{ route('documentation', ['form', 'radio']) }}" wire:navigate class="underline">Radio Group</a> and <a href="{{ route('documentation', ['form', 'checkbox']) }}" wire:navigate class="underline">Checkbox Group</a>: a whole set of options from one array, in four presentations.</li>
+                        <li>- <a href="{{ route('documentation', ['form', 'upload']) }}" wire:navigate class="underline">Upload Async</a>: chunked uploads straight to your own controller, so a file no longer has to fit inside the PHP request limits.</li>
                     </ul>
                 </div>
                 <div>
-                    <h2 class="text-lg tracking-tight text-pink-600 font-medium">🤖 AI Integration:</h2>
+                    <h2 class="text-lg tracking-tight text-pink-600 font-medium">👀 Cross-cutting:</h2>
                     <ul>
-                        <li>- <x-block>.ai/</x-block> directory with component instruction files for AI assistants (GitHub Copilot, Claude, Cursor, etc.).</li>
-                        <li>- MCP server hosted on the documentation website for real-time component documentation access.</li>
-                        <li>- Learn more on the <a href="{{ route('documentation', ['ai']) }}" wire:navigate class="font-bold underline">AI documentation page</a>.</li>
-                    </ul>
-                </div>
-                <div>
-                    <h2 class="text-lg tracking-tight text-pink-600 font-medium">🌐 Others:</h2>
-                    <ul>
-                        <li>- Dozens of community feature requests addressed.</li>
-                        <li>- <b>"Personalization" renamed to "Customization"</b> across the entire library.</li>
-                        <li>
-                            - New <a href="{{ route('documentation', ['customization', 'globals']) }}" wire:navigate class="underline">Globals customization</a> concept (flash, square, colorful) -
-                            <i>think of them as presets.</i>
-                        </li>
-                        <li>- New <a href="{{ route('documentation', ['configuration']) }}" wire:navigate class="underline">configuration file structure</a> documentation.</li>
-                        <li>- New <a href="{{ route('documentation', ['customization', 'soft']) }}" wire:navigate class="underline">Internal Scoped Customization</a> concept.</li>
-                        <li>- New <x-block>$tsui</x-block> JavaScript helper.</li>
-                        <li>- New TailwindCSS colors added in v4.2 of TailwindCSS</li>
-                        <li>- <x-block>Avatar</x-block> Component: group and presence indicators.</li>
-                        <li>- <x-block>Button</x-block> Component: block style.</li>
-                        <li>- <x-block>Card</x-block> Component: loading effect and events.</li>
-                        <li>- <x-block>Table</x-block> Component: empty state, highlight, and expandable rows.</li>
-                        <li>- <x-block>Tab</x-block> Component: centered and route-based tabs.</li>
-                        <li>- <x-block>Layout</x-block> Component: brand collapsed, sidebar footer, new attributes, and dozens of general improvements.</li>
-                        <li>- <x-block>Dialog</x-block> and <x-block>Toast</x-block>: persistent and colorful modes.</li>
-                        <li>- <x-block>Modal</x-block> Component: mobile device adaptations.</li>
-                        <li>- <x-block>Form Input</x-block> Component: better button positioning.</li>
-                        <li>- <x-block>Form Select Styled</x-block> Component: grouped options, AlpineJS helper, and recycle option.</li>
-                        <li>- <x-block>Form Color</x-block> Component: exclude specific colors or color steps.</li>
-                        <li>- <x-block>Radio</x-block>, <x-block>Checkbox</x-block> and <x-block>Toggle</x-block>: custom color customization individually.</li>
-                        <li>- <x-block>Radio</x-block> Component: no longer requires explicit value/id.</li>
-                        <li>- <x-block>Pin</x-block> Component: smart mode with auto-submit.</li>
-                        <li>- <x-block>ThemeSwitch</x-block> Component: redesigned with <x-block>simple</x-block> and <x-block>only-icons</x-block> modes, block style for dropdown usage.</li>
-                        <li>- <x-block>Icon</x-block> Component: custom local icons, raw icons in all icon slots, and fully customized SVG as Blade component.</li>
-                        <li>- <x-block>$tsui.focus()</x-block> helper: now supports focusing elements based on <x-block>x-ref</x-block>.</li>
+                        <li>- <x-block>skeleton</x-block> on Card, Stats, Table, List, Step, Chart and QrCode: a structural placeholder for the first paint.</li>
+                        <li>- <x-block>compact</x-block> on Table, List and KeyValue: a denser row rhythm.</li>
+                        <li>- <x-block>paddingless</x-block> on Modal, Slide, Card and Tab.</li>
+                        <li>- <x-block>shadowless</x-block> and <x-block>bordered</x-block> on Card, Stats, Calendar and Tab.</li>
+                        <li>- Footer slot alignment through <x-block>start</x-block>, <x-block>center</x-block>, <x-block>end</x-block>, <x-block>between</x-block> and <x-block>unwrapped</x-block> on Modal, Slide, Card and Errors.</li>
+                        <li>- A neutral <x-block>oklch()</x-block> dark palette and a violet <x-block>secondary</x-block>.</li>
+                        <li>- <x-block>floating_scroll_lock</x-block>, locking the page scroll while any popup is open.</li>
+                        <li>- Three dependencies dropped: <x-block>tippy.js</x-block>, <x-block>clipboard.js</x-block> and <x-block>qs</x-block>.</li>
+                        <li>- <x-block>x-table</x-block> renders outside Livewire, and so do Autocomplete, Calendar and Upload Async.</li>
                     </ul>
                 </div>
             </div>
             <p>
-                With the exception of the "Internal" section, all details are described on the respective pages for each component.
+                Everything else is described on the respective page for each component.
             </p>
         </div>
     </x-section>
+    <x-section title="Breaking Changes" disable-copy>
+        <div class="space-y-4">
+            <p>
+                Read the rows that touch what you use. Everything else renders exactly as it did on
+                <x-block>3.x</x-block>.
+            </p>
+            <div>
+                <h2 class="text-lg tracking-tight text-pink-600 font-medium">1. Card: <x-block>bordered</x-block> became <x-block>accent</x-block></h2>
+                <p>
+                    <x-block>bordered</x-block> on Card never drew a border around the card: combined with
+                    <x-block>color</x-block>, it switched the header from a filled background to a colored top border.
+                    That name now belongs to the wrapper border, so the header variation moved to
+                    <x-block>accent</x-block>. A <x-block>bordered</x-block> left behind stops coloring the header and
+                    draws the neutral wrapper border instead.
+                </p>
+                <x-code language="blade" :contents="$cardAccent" />
+            </div>
+            <div>
+                <h2 class="text-lg tracking-tight text-pink-600 font-medium">2. Kbd: <x-block>borderless</x-block> keeps the shadow</h2>
+                <p>
+                    It stripped the border <b>and</b> the shadow, which left no way to drop one without the other. It
+                    removes only the border now, and a new <x-block>shadowless</x-block> removes only the shadow.
+                </p>
+                <x-code language="blade" :contents="$kbdShadowless" />
+            </div>
+            <div>
+                <h2 class="text-lg tracking-tight text-pink-600 font-medium">3. Theme: secondary is violet, dark is neutral</h2>
+                <p>
+                    <x-block>--color-secondary-*</x-block> is Tailwind Violet now, and component chrome no longer
+                    references it at all. <x-block>--color-dark-*</x-block> dropped Slate for a neutral
+                    <x-block>oklch()</x-block> scale. Applications that override either in their own
+                    <x-block>@@theme</x-block> keep winning and see no difference.
+                </p>
+                <x-code language="blade" :contents="$secondaryColor" />
+                <p>
+                    A customization that <x-block>replace()</x-block>s one of the old <x-block>dark-700</x-block> /
+                    <x-block>dark-600</x-block> values, or a <x-block>*-secondary-*</x-block> class inside a component
+                    block, should target the new step and the <x-block>gray-*</x-block> equivalent. Full detail on the
+                    <a href="{{ route('documentation', ['customization', 'color']) }}" wire:navigate class="underline">color page</a>.
+                </p>
+            </div>
+            <div>
+                <h2 class="text-lg tracking-tight text-pink-600 font-medium">4. Icon: a bare icon has a size, and 40 attribute names are reserved</h2>
+                <p>
+                    <x-block>&lt;x-icon name="users" /&gt;</x-block> used to reach the browser with no width and no
+                    height. It falls back to <x-block>md</x-block> (20px) now. Only calls that pass no
+                    <x-block>class</x-block> at all are affected, and those were rendering at an unusable default size
+                    before. Eleven sizes and 29 colors are consumed and stripped from the attribute bag, so they cannot
+                    be forwarded to the <x-block>svg</x-block> for any other purpose.
+                </p>
+            </div>
+            <div>
+                <h2 class="text-lg tracking-tight text-pink-600 font-medium">5. Tooltip: tippy.js is gone</h2>
+                <p>
+                    The directive is built by the package now. <x-block>$el._tippy</x-block> no longer exists, so
+                    anything reaching for the instance to enable or disable a tooltip has to move to the attribute.
+                </p>
+                <x-code language="blade" :contents="$tooltipDisabled" />
+                <p>
+                    <x-block>tippy.js</x-block> left <x-block>package.json</x-block> along with the
+                    <x-block>tippy.css</x-block> the package used to serve, and
+                    <x-block>js/tallstackui-tooltip.js</x-block> is gone. Loading is driven by the manifest, so
+                    <x-block>@@tallStackUiScript</x-block> needs no change. A balloon styled through tippy's theme
+                    classes has to be restyled through <x-block>[data-tsui-tooltip]</x-block>.
+                </p>
+            </div>
+            <div>
+                <h2 class="text-lg tracking-tight text-pink-600 font-medium">6. Two more dependencies left package.json</h2>
+                <p>
+                    <x-block>clipboard</x-block> and <x-block>qs</x-block> are gone. An application importing either
+                    directly has to install it on its own. The public surface of both consumers is unchanged: the
+                    Clipboard component still resolves to a boolean and still dispatches
+                    <x-block>ts-ui:copy</x-block>, and the parameters Select Styled puts on the wire are identical.
+                </p>
+            </div>
+            <div>
+                <h2 class="text-lg tracking-tight text-pink-600 font-medium">7. Soft customization: chains stack, and remove() matches whole classes</h2>
+                <p>
+                    Two chains touching one block did not stack: the second silently discarded the first. They
+                    accumulate now, which is what lets a package and an application customize the same block. Anything
+                    relying on the last chain winning has to be collapsed into one chain.
+                </p>
+                <x-code language="php" :contents="$customizationStacking" />
+                <p>
+                    <x-block>remove()</x-block> ran a plain <x-block>str_replace</x-block>, so it chewed through every
+                    longer class containing the name it was given.
+                </p>
+                <x-code language="php" :contents="$customizationRemove" />
+            </div>
+            <div>
+                <h2 class="text-lg tracking-tight text-pink-600 font-medium">8. Button: the radius blocks moved</h2>
+                <p>
+                    <x-block>wrapper.border.radius.rounded</x-block> and
+                    <x-block>wrapper.border.radius.circle</x-block> were a two-entry map for a two-state prop. The
+                    radius blocks are a size map now, sitting where Badge and Environment keep theirs.
+                </p>
+                <x-code language="php" :contents="$buttonBlocks" />
+            </div>
+            <div>
+                <h2 class="text-lg tracking-tight text-pink-600 font-medium">9. Table: the paginator view split, and the scope is gone</h2>
+                <p>
+                    <x-block>components/table/paginators.blade.php</x-block> no longer exists. It became
+                    <x-block>paginators/simple.blade.php</x-block>, and the directory holds one file per variation.
+                </p>
+                <x-code language="blade" :contents="$tablePaginator" />
+                <p>
+                    The data a custom paginator view receives also changed shape: <x-block>scrollTo</x-block> and
+                    <x-block>simplePagination</x-block> became <x-block>scroll</x-block>, <x-block>simple</x-block>,
+                    <x-block>name</x-block>, <x-block>dusk</x-block> and <x-block>fragment</x-block>. The paginator
+                    markup changed class by class, so application CSS aimed at the old classes needs re-pointing.
+                </p>
+                <p>
+                    The <x-block>table-shadowless</x-block> scope had nothing left to remove and was dropped. Drop
+                    <x-block>scope="table-shadowless"</x-block> from tables &mdash; the rendering does not change, but
+                    extending it now throws.
+                </p>
+            </div>
+            <div>
+                <h2 class="text-lg tracking-tight text-pink-600 font-medium">10. Step: previous and next are slot names</h2>
+                <p>
+                    A stray bare <x-block>previous</x-block> or <x-block>next</x-block> attribute used to fall through
+                    to the attribute bag. It now lands on a slot prop and throws.
+                </p>
+                <x-code language="blade" :contents="$stepSlots" />
+                <p>
+                    The navigation buttons also left soft customization: <x-block>button.base</x-block>,
+                    <x-block>button.icon</x-block> and <x-block>button.icon-spacing.*</x-block> are gone. Restyle the
+                    bar by picking a variation, replacing the buttons through the slots, or pointing
+                    <x-block>helpers</x-block> at your own view.
+                </p>
+            </div>
+            <div>
+                <h2 class="text-lg tracking-tight text-pink-600 font-medium">11. List: dividers are keyed on a visibility marker</h2>
+                <p>
+                    Hidden rows still participate in CSS sibling matching, which painted a phantom divider above the
+                    first visible row after a search. Applications overriding the <x-block>items.wrapper</x-block>
+                    block must key their dividers on <x-block>data-list-on</x-block> rather than
+                    <x-block>data-list-row</x-block>, or the artifact comes back.
+                </p>
+                <x-code language="php" :contents="$listDivider" />
+            </div>
+            <div>
+                <h2 class="text-lg tracking-tight text-pink-600 font-medium">12. Colorful: three blocks became color classes</h2>
+                <p>
+                    Everything that varies by notification type lives in the color classes now.
+                </p>
+                <x-code language="php" :contents="$colorfulBlocks" />
+                <p>
+                    The <x-block>question</x-block> type also follows <x-block>primary</x-block> instead of a grayscale
+                    palette, and the two buttons no longer share the same translucent background.
+                </p>
+            </div>
+            <div>
+                <h2 class="text-lg tracking-tight text-pink-600 font-medium">13. Footer slots gained a wrapper</h2>
+                <p>
+                    Modal, Slide, Card and Errors read their footer alignment from the slot now, which split their
+                    blocks and nested one extra <x-block>div</x-block>.
+                </p>
+                <x-table :headers="[
+                    ['index' => 'component', 'label' => 'Component'],
+                    ['index' => 'before', 'label' => '3.x'],
+                    ['index' => 'after', 'label' => '4.x'],
+                ]" :rows="[
+                    ['component' => 'Modal', 'before' => 'footer', 'after' => 'footer.wrapper + footer.base'],
+                    ['component' => 'Slide', 'before' => 'footer.base', 'after' => 'footer.wrapper + footer.base'],
+                    ['component' => 'Card', 'before' => 'footer.text', 'after' => 'footer.base'],
+                    ['component' => 'Errors', 'before' => 'slots.footer', 'after' => 'slots.footer.wrapper + slots.footer.base'],
+                ]" />
+                <p class="mt-2">
+                    Two behaviours moved with them: a Slide footer with no attribute now defaults to the end instead of
+                    the start, and a Card footer passed as a slot is aligned instead of falling through raw. A Card
+                    relying on that raw fall-through wants <x-block>unwrapped</x-block>.
+                </p>
+            </div>
+            <div>
+                <h2 class="text-lg tracking-tight text-pink-600 font-medium">14. Blocks that changed shape</h2>
+                <p>
+                    These kept their names but hold something different now, so a customization written against them
+                    has to be revisited.
+                </p>
+                <x-table :headers="[
+                    ['index' => 'component', 'label' => 'Component'],
+                    ['index' => 'blocks', 'label' => 'Blocks'],
+                ]" :rows="[
+                    ['component' => 'KeyValue', 'blocks' => 'wrapper, header.wrapper, button.add and list.divider changed; header.neutral and button.neutral are new'],
+                    ['component' => 'Layout', 'blocks' => 'the padding transition left wrapper.second.expanded / .collapsed for wrapper.second.transition; wrapper.second.footer and main.grow are new'],
+                    ['component' => 'SideBar', 'blocks' => 'item.state.base and group.button lost their gap; item.badge and group.badge now style the wrapper around the badge; simple.wrapper lost its padding'],
+                    ['component' => 'Step', 'blocks' => 'panels-shape carries the frame, wrapper.panels carries the scroll only'],
+                    ['component' => 'Stats', 'blocks' => 'wrapper.second-no-slot folded into wrapper.second; header and footer split into .text and .wrapper'],
+                    ['component' => 'Toast', 'blocks' => 'wrapper.position gained x-center and top-on-mobile; a stack.* group is new'],
+                ]" />
+            </div>
+            <div>
+                <h2 class="text-lg tracking-tight text-pink-600 font-medium">15. Smaller behaviour changes</h2>
+                <ul class="list-inside list-disc">
+                    <li>Currency is 12px tighter on each side, since the slot paddings became <x-block>!important</x-block> and now actually apply.</li>
+                    <li>Currency no longer re-emits <x-block>name</x-block> on the visible input, so a native form receives the raw value instead of the formatted one.</li>
+                    <li>Radio, Checkbox and Toggle suffix their generated id with the option value, so a group renders <x-block>plan-basic</x-block> rather than three inputs sharing one id.</li>
+                    <li>Timeline items in the slot inherit <x-block>horizontal</x-block>, <x-block>alternate</x-block>, <x-block>compact</x-block>, <x-block>color</x-block> and <x-block>style</x-block> from the container. Repeating them is no longer necessary.</li>
+                    <li>Select Styled qualifies a selected grouped item with its group name. A test asserting the exact text has to expect the qualified form.</li>
+                    <li><x-block>simple-pagination</x-block> implies <x-block>paginate</x-block>. Passing both is merely redundant.</li>
+                    <li>A published config list of scalars is taken as published rather than merged entry by entry, which is what lets it be shorter than the default.</li>
+                    <li>A nested <x-block>wire:model</x-block> reads correctly on the server now. <x-block>wire:model="form.files"</x-block> and any other dotted binding used to resolve to <x-block>null</x-block>, which is what made KeyValue throw and Upload list nothing.</li>
+                    <li>Reaction's panel markup changed shape. Anything selecting into the old structure, a browser test walking an XPath most of all, has to be repointed.</li>
+                </ul>
+            </div>
+        </div>
+    </x-section>
     <x-section class="space-y-4" title="How to Upgrade" disable-copy>
-        <p>
-            Now let's talk about how to upgrade your application from version 2.x to 3. The amount of work will depend on
-            how much customization you've done. If you use TallStackUI "in a basic way", the upgrade should be straightforward.
-        </p>
         <div class="pl-4 space-y-4">
             <div>
-                <h2 class="text-lg tracking-tight text-pink-600 font-medium">1. Rename "personalization" to "customization":</h2>
+                <h2 class="text-lg tracking-tight text-pink-600 font-medium">1. Read the breaking changes above</h2>
                 <p>
-                    The terminology has changed across the entire library: "Soft Personalization" is now "Soft Customization", "Deep Personalization"
-                    is now "Deep Customization", and so on. The main facade method has also changed from <x-block>personalize()</x-block> to
-                    <x-block>customize()</x-block>. Update any references in your code accordingly:
-                </p>
-                <x-code language="php" :contents="$personalization" />
-                <p>
-                    <b>If you do not use any personalization/customization features, then just skip this step!</b>
+                    Only the rows that touch what you use. If you write no soft customization and pass none of the
+                    renamed attributes, there is nothing to do here.
                 </p>
             </div>
             <div>
-                <h2 class="text-lg tracking-tight text-pink-600 font-medium">2. Check soft customization keys:</h2>
+                <h2 class="text-lg tracking-tight text-pink-600 font-medium">2. Republish the configuration file</h2>
                 <p>
-                    Some soft customization keys may have been renamed for better organization. Before upgrading, review the
-                    <a href="{{ route('documentation', ['customization', 'soft']) }}" wire:navigate class="underline">Soft Customization documentation</a>
-                    to verify your keys are up to date. <b>If you do not use Soft Customization, then just skip this step!</b>
+                    <x-block>config/tallstackui.php</x-block> gained the <x-block>floating_scroll_lock</x-block> key and
+                    per-component settings for the new components. Compare your file with the new one and synchronize.
+                    Keys your file does not mention keep their default, so nothing is lost by leaving it alone.
                 </p>
             </div>
             <div>
-                <h2 class="text-lg tracking-tight text-pink-600 font-medium">3. Redo deep customization:</h2>
+                <h2 class="text-lg tracking-tight text-pink-600 font-medium">3. Redo deep customization</h2>
                 <p>
-                    If you have published TallStackUI Blade files or extended component classes, we recommend that you back up your files,
-                    republish the new ones, and reapply your adjustments. Internal changes require fresh files to work properly.
-                    <b>If you do not use Deep Customization, then just skip this step!</b>
+                    If you have published TallStackUI Blade files or extended component classes, back up your files,
+                    republish the new ones and reapply your adjustments. <b>If you do not use Deep Customization, skip
+                    this step.</b>
                 </p>
             </div>
             <div>
-                <h2 class="text-lg tracking-tight text-pink-600 font-medium">4. Internal Scoped Customization:</h2>
+                <h2 class="text-lg tracking-tight text-pink-600 font-medium">4. Clear the application cache</h2>
                 <p>
-                    If you used to publish Blade files to customize internal components within other components, this is no longer necessary.
-                    Learn about the <a href="{{ route('documentation', ['customization', 'soft']) }}" wire:navigate class="underline font-bold">Internal Scoped Customization</a>:
-                    a way to customize internal components without publishing Blade files or changing all components globally.
-                </p>
-            </div>
-            <div>
-                <h2 class="text-lg tracking-tight text-pink-600 font-medium">5. Update TailwindCSS to v4:</h2>
-                <p>
-                    <b>TallStackUI 3 requires TailwindCSS v4. Support for TailwindCSS v3 has been discontinued.</b> Follow the
-                    <a href="https://tailwindcss.com/docs/upgrade-guide" target="_blank" class="underline">official TailwindCSS v4 migration guide</a>
-                    to update your project. <b>This is an important step for all users.</b>
-                </p>
-            </div>
-            <div>
-                <h2 class="text-lg tracking-tight text-pink-600 font-medium">6. Update vendor publishable tag:</h2>
-                <p>
-                    <b>Important:</b> The vendor publishable tag has been renamed from <x-block>tallstackui</x-block> to <x-block>ts-ui</x-block>.
-                    This affects all <x-block>php artisan vendor:publish</x-block> commands. If you have any scripts, CI pipelines, or documentation
-                    referencing the old tag name, make sure to update them to use <x-block>ts-ui</x-block> instead.
-                </p>
-                <x-warning class="pt-2">
-                    All publishable resources (configuration files, Blade views, etc.) now use the ts-ui tag.
-                    The old tallstackui tag will no longer work in version 3.
-                </x-warning>
-            </div>
-            <div>
-                <h2 class="text-lg tracking-tight text-pink-600 font-medium">7. Republish the configuration file:</h2>
-                <p>
-                    The TallStackUI configuration file - <x-block>config/tallstackui.php</x-block>, contains changes and additions in version 3.
-                    <b>Be sure to compare your changes with the new file and synchronize accordingly so that your file has the necessary modifications and additions.</b>
-                </p>
-            </div>
-            <div>
-                <h2 class="text-lg tracking-tight text-pink-600 font-medium">8. Migrate to the <x-block>$tsui</x-block> JavaScript helper:</h2>
-                <p>
-                    In version 3, all individual JavaScript helpers have been unified into a single global <x-block>$tsui</x-block> object.
-                    If you use any of the old helpers in your Alpine.js expressions or Blade templates, you must update them:
-                </p>
-                <div class="my-2">
-                    <x-table :headers="[
-                        ['index' => 'before', 'label' => 'Before (v2)'],
-                        ['index' => 'after', 'label' => 'After (v3)'],
-                    ]" :rows="[
-                        ['before' => '$modalOpen(\'name\')', 'after' => '$tsui.open.modal(\'name\')'],
-                        ['before' => '$modalClose(\'name\')', 'after' => '$tsui.close.modal(\'name\')'],
-                        ['before' => '$slideOpen(\'name\')', 'after' => '$tsui.open.slide(\'name\')'],
-                        ['before' => '$slideClose(\'name\')', 'after' => '$tsui.close.slide(\'name\')'],
-                        ['before' => '$selectOpen(\'name\')', 'after' => '$tsui.open.select(\'name\')'],
-                        ['before' => '$selectClose(\'name\')', 'after' => '$tsui.close.select(\'name\')'],
-                        ['before' => '$focusOn(\'id\')', 'after' => '$tsui.focus(\'id\')'],
-                    ]">
-                        @interact('column_before', $row)
-                            <x-block>{{ $row['before'] }}</x-block>
-                        @endinteract
-                        @interact('column_after', $row)
-                            <x-block>{{ $row['after'] }}</x-block>
-                        @endinteract
-                    </x-table>
-                </div>
-                <x-warning>
-                    The old JavaScript helpers ($modalOpen, $focusOn, $selectOpen, etc.)
-                    are no longer available in version 3. <b>You must migrate all usages to the new helper.</b>
-                </x-warning>
-            </div>
-            <div>
-                <h2 class="text-lg tracking-tight text-pink-600 font-medium">9. Rename environment variable:</h2>
-                <p>
-                    The environment variable <x-block>TALLSTACKUI_AVOID_LAYOUT_REGISTRATION</x-block> has been renamed to
-                    <x-block>TALLSTACKUI_IGNORE_LAYOUT_REGISTRATION</x-block>. If you use this variable in your <x-block>.env</x-block>
-                    file or CI/CD pipelines, make sure to update it. <b>The old variable name will not be recognized in version 3.</b>
-                </p>
-            </div>
-            <div>
-                <h2 class="text-lg tracking-tight text-pink-600 font-medium">10. Component attributes:</h2>
-                <p>
-                    Most component attributes remain the same. New attributes have been added to several components (check individual component
-                    documentation pages for details). In this regard, you should not have any breaking changes.
-                </p>
-            </div>
-            <div>
-                <h2 class="text-lg tracking-tight text-pink-600 font-medium">11. Clear application cache:</h2>
-                <p>
-                    Before updating the Composer dependencies, you <b>must</b> clear all cached files. This prevents errors caused
-                    by stale cached references to classes or configurations that have changed in version 3:
+                    Before updating the Composer dependencies, clear all cached files. This prevents errors caused by
+                    stale cached references to classes or configurations that have changed:
                 </p>
                 <x-code language="shell" :contents="$optimizeClear" />
             </div>
             <div>
-                <h2 class="text-lg tracking-tight text-pink-600 font-medium">12. Update the Composer:</h2>
+                <h2 class="text-lg tracking-tight text-pink-600 font-medium">5. Update Composer</h2>
                 <p>
-                    Finally, it's time to update your application to version 3. Edit your <x-block>composer.json</x-block> file:
+                    Edit your <x-block>composer.json</x-block> file:
                 </p>
                 <x-code language="json" :contents="$composer" disable-copy />
                 <p>
-                    After that, remove the <x-block>vendor</x-block> folder and then run this command to reinstall all your dependencies:
+                    After that, remove the <x-block>vendor</x-block> folder and run:
                 </p>
                 <x-code language="shell" :contents="$command" />
+            </div>
+            <div>
+                <h2 class="text-lg tracking-tight text-pink-600 font-medium">6. Rebuild your assets</h2>
+                <p>
+                    The palette moved, so the CSS has to be regenerated. If you override
+                    <x-block>--color-secondary-*</x-block> or <x-block>--color-dark-*</x-block> in your own
+                    <x-block>@@theme</x-block>, this is also where you confirm your values still win.
+                </p>
             </div>
         </div>
         <x-warning>

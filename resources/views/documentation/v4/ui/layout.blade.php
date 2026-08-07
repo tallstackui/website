@@ -73,6 +73,12 @@
                 Same as <x-block>top</x-block>, but positioned in the bottom of the layout component:
             </p>
             <x-code language="blade" :contents="$footer" disable-copy />
+            <x-warning warning title="The footer moved on 4.x">
+                It used to render as a sibling of the padded column, so on desktop it started at x=0, under the fixed
+                sidebar. It now renders inside the same column as <x-block>main</x-block>, which puts it past the
+                sidebar, and the column becomes a full-height flex when the slot is filled, which pins the footer to
+                the bottom of the page rather than leaving it floating mid-screen on short pages.
+            </x-warning>
         </div>
     </x-section>
     <x-separator text="Children Components" />
@@ -208,6 +214,33 @@
                 You can customize the badge color using the <x-block>badge-color</x-block> attribute:
             </p>
             <x-code language="blade" :contents="$badge" disable-copy />
+        </div>
+    </x-section>
+    <x-section title="Collapsed Sidebar Flyout" new disable-copy>
+        <div class="space-y-4">
+            <p>
+                A group has nothing to show on a collapsed sidebar: its items live in a list that only opens inline, and
+                the rail has no room for it. Hovering &mdash; or clicking, for touch &mdash; a collapsed group now opens
+                its items in a panel anchored beside the icon, headed by the group name.
+            </p>
+            <p>
+                It closes on leave, on click outside, on Escape, and when the sidebar is expanded again. Single items
+                keep their tooltip; groups no longer show one, since the panel names itself.
+            </p>
+            <x-warning>
+                The panel is an <x-block>x-floating</x-block>, so it is teleported out of the sidebar and is not clipped
+                by the scroll container. It is capped at <x-block>min(24rem, 100dvh - 2rem)</x-block> with its own
+                scroll, so a group of thirty items neither runs off the screen nor stretches the page.
+            </x-warning>
+        </div>
+    </x-section>
+    <x-section title="Badge on the Collapsed Rail" new disable-copy>
+        <div class="space-y-4">
+            <p>
+                A badge is the one thing on an item that carries information the icon cannot: a count of things waiting.
+                Collapsing the sidebar used to drop it, so the compact mode was also the mode that hid what needed
+                attention. It now degrades to a dot on the corner of the icon, in the color the badge was given.
+            </p>
         </div>
     </x-section>
     <x-section title="Side Bar Separator" disable-copy>

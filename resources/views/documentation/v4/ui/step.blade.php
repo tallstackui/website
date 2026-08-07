@@ -213,4 +213,43 @@
             </x-step>
         </x-preview>
     </x-section>
+    <x-section title="Helper Variations" new description="helpers was a flag that produced one fixed pair of buttons. It behaves like the Table paginator now: a bare flag renders default, a string picks another look, and a dotted value is a view path. Anything else throws.">
+        <x-code language="blade" :contents="$helpersVariations" />
+        <x-table class="mt-4" :headers="[
+            ['index' => 'variant', 'label' => 'Variant'],
+            ['index' => 'look', 'label' => 'Look'],
+        ]" :rows="[
+            ['variant' => 'default', 'look' => 'Individual bordered buttons with hover fill and focus ring, label plus chevron'],
+            ['variant' => 'minimal', 'look' => 'The same layout with borderless text buttons'],
+            ['variant' => 'compact', 'look' => 'A single shell anchored right, icon-only buttons and a current/total indicator'],
+        ]" />
+        <p class="mt-4">The variant behind a bare <x-block>helpers</x-block> comes from the config, so every wizard switches at once:</p>
+        <x-code class="mt-4" language="php" :contents="$helpersConfiguration" />
+        <x-warning class="mt-4">
+            In <x-block>compact</x-block> the buttons disable at the edges instead of hiding, so the shell never changes
+            width, and the finish button renders to the left of it.
+        </x-warning>
+    </x-section>
+    <x-section title="Navigation Slots" new description="Each slot replaces its built-in button entirely. The component keeps only the visibility wrapper; the click behavior belongs to the application.">
+        <x-code language="blade" :contents="$navigationSlots" />
+        <p class="mt-4">
+            Two AlpineJS methods, <x-block>next()</x-block> and <x-block>previous()</x-block>, are exposed in the
+            component scope: they move <x-block>selected</x-block> and dispatch the <x-block>change</x-block> event, so
+            a custom button behaves exactly like the built-in one. Guarding is one expression away:
+        </p>
+        <x-code class="mt-4" language="blade" :contents="$navigationGuard" />
+        <x-warning class="mt-4">
+            A custom <x-block>previous</x-block> slot shows without requiring <x-block>navigate-previous</x-block>.
+            Since they are slot names now, a stray bare <x-block>previous</x-block> or <x-block>next</x-block>
+            attribute throws.
+        </x-warning>
+    </x-section>
+    <x-section title="Skeleton" new description="A structural placeholder shaped like the step indicators. A bare flag draws 3; an integer sets the count.">
+        <x-preview language="blade" :contents="$skeleton">
+            <div class="space-y-6">
+                <x-step skeleton />
+                <x-step skeleton="4" circles />
+            </div>
+        </x-preview>
+    </x-section>
 </x-layout>
