@@ -2,14 +2,11 @@
 
 namespace App\View\Components;
 
-use App\Traits\VersionDiscovery;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
 
 class Layout extends Component
 {
-    use VersionDiscovery;
-
     public function __construct(
         public ?string $title = null,
         public ?string $version = null,
@@ -24,6 +21,15 @@ class Layout extends Component
         public bool $torchlight = true,
     ) {
         //
+    }
+
+    /**
+     * The major this deployment publishes. Read here rather than from the shared
+     * `$version` variable, which the component's own prop shadows inside its view.
+     */
+    public function current(): string
+    {
+        return config('documentation.version');
     }
 
     public function render(): View

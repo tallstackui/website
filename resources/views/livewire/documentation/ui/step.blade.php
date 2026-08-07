@@ -12,7 +12,7 @@ new class extends Component {
 
 <div>
     @if ($live)
-        <x-step wire:model.live="step" helpers previous>
+        <x-step wire:model.live="step" helpers navigate-previous>
             <x-step.items step="1"
                           title="Starting"
                           description="Step One">
@@ -30,7 +30,7 @@ new class extends Component {
             </x-step.items>
         </x-step>
     @else
-        <x-step wire:model="step" helpers previous>
+        <x-step wire:model="step" helpers navigate-previous>
             <x-step.items step="1"
                           title="Starting"
                           description="Step One">

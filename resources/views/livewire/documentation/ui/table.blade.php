@@ -10,6 +10,8 @@ new class extends Component {
 
     public int $mode = 1;
 
+    public ?string $paginator = null;
+
     public ?int $quantity = 2;
 
     public ?string $search = null;
@@ -23,7 +25,7 @@ new class extends Component {
 
     public function boot(): void
     {
-        $this->quantity = in_array($this->mode, [4, 5, 7, 8]) ? 2 : 11;
+        $this->quantity = in_array($this->mode, [4, 5, 7, 8, 14, 15, 16]) ? 2 : 11;
     }
 
     public function updatingQuantity(): void
@@ -104,5 +106,18 @@ new class extends Component {
         </x-table>
     @elseif ($mode === 13)
         <x-table :$headers :$rows empty="No records found." />
+    @elseif ($mode === 14)
+        <x-table :$headers :$rows paginate :$paginator />
+    @elseif ($mode === 15)
+        <x-table :$headers :$rows simple-pagination :$paginator />
+    @elseif ($mode === 16)
+        <x-table :$headers :$rows paginate persistent="users-table" />
+    @elseif ($mode === 17)
+        <div x-data="{ rows: [] }" x-on:selected="rows = $event.detail.rows">
+            <x-table :$headers :$rows selectable wire:model="selected" />
+            <p class="mt-2 text-sm text-gray-500 dark:text-dark-400">
+                Selected: <b x-text="rows.join(', ') || 'none'"></b>
+            </p>
+        </div>
     @endif
 </div>

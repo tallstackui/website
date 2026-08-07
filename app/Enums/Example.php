@@ -2,7 +2,6 @@
 
 namespace App\Enums;
 
-use App\Traits\VersionDiscovery;
 use Exception;
 use ReflectionClass;
 use ReflectionException;
@@ -10,8 +9,6 @@ use Throwable;
 
 enum Example: string
 {
-    use VersionDiscovery;
-
     // region Form
     case Autocomplete = 'Form\\Autocomplete';
     case Checkbox = 'Form\\Checkbox';
@@ -31,6 +28,7 @@ enum Example: string
     case Time = 'Form\\Time';
     case Toggle = 'Form\\Toggle';
     case Upload = 'Form\\Upload';
+    case UploadAsync = 'Form\\UploadAsync';
     // endregion
 
     // region Helpers
@@ -110,6 +108,7 @@ enum Example: string
     case Spinner = 'Ui\\Spinner';
     case Stats = 'Ui\\Stats';
     case Step = 'Ui\\Step';
+    case Swap = 'Ui\\Swap';
     case Tab = 'Ui\\Tab';
     case Table = 'Ui\\Table';
     case ThemeSwitch = 'Ui\\ThemeSwitch';
@@ -120,8 +119,7 @@ enum Example: string
     /** @throws ReflectionException|Throwable */
     public function variables(): array
     {
-        $version = strtoupper($this->current());
-        $class = "App\\Enums\\Examples\\$version\\$this->value";
+        $class = "App\\Enums\\Examples\\$this->value";
 
         throw_if(! class_exists($class), new Exception('Invalid code example'));
 

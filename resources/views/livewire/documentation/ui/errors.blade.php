@@ -12,6 +12,9 @@ new class extends Component {
     public ?bool $withoutTitle = false;
     public ?bool $listNumeric = false;
     public ?bool $footerEnd = false;
+    public ?bool $paddingless = false;
+    public ?bool $shadowless = false;
+    public ?bool $bordered = false;
 
     public function mount(): void
     {
@@ -42,6 +45,14 @@ new class extends Component {
             </x-slot:footer>
         </x-errors>
     @else
-        <x-errors :$only :$title :$color :$close :without-title="$withoutTitle" :list-numeric="$listNumeric" />
+        <x-errors :$only
+                  :$title
+                  :$color
+                  :$close
+                  :$paddingless
+                  :$shadowless
+                  :$bordered
+                  :without-title="$withoutTitle"
+                  :list-numeric="$listNumeric" />
     @endif
 </div>

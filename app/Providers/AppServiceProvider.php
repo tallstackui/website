@@ -23,7 +23,24 @@ class AppServiceProvider extends ServiceProvider
 
         $this->configureCustomization();
 
+        $this->configureDemoDisk();
+
         $this->registerDemoLayoutAliases();
+    }
+
+    /**
+     * Destination of the async upload live preview. Kept apart from every other
+     * disk so `tallstackui:demo:clear` can wipe it without touching anything else.
+     */
+    private function configureDemoDisk(): void
+    {
+        config([
+            'filesystems.disks.demo' => [
+                'driver' => 'local',
+                'root' => storage_path('app/demo'),
+                'throw' => false,
+            ],
+        ]);
     }
 
     private function registerDemoLayoutAliases(): void

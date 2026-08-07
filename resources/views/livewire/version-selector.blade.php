@@ -1,17 +1,14 @@
 <?php
 
-use App\Traits\VersionDiscovery;
 use Livewire\Attributes\Computed;
 use Livewire\Component;
 
 return new class extends Component {
-    use VersionDiscovery;
-
     public string $version;
 
     public function mount(): void
     {
-        $this->version = $this->current();
+        $this->version = config('documentation.version');
     }
 
     #[Computed]
@@ -28,7 +25,7 @@ return new class extends Component {
 
     public function change(): void
     {
-        if ($this->version === $this->current()) {
+        if ($this->version === config('documentation.version')) {
             return;
         }
 

@@ -3,15 +3,12 @@
 namespace App\Http\Controllers;
 
 use App\Enums\Example;
-use App\Traits\VersionDiscovery;
 use Illuminate\Contracts\View\View as ViewContract;
 use Illuminate\Support\Facades\View as ViewFacade;
 use Symfony\Component\Yaml\Yaml;
 
 class PageController
 {
-    use VersionDiscovery;
-
     /** Bypass to the examples */
     protected const array EXAMPLES = [
         'Integrations\Alpine' => 'Alpine',
@@ -21,9 +18,7 @@ class PageController
 
     public function __invoke(?string $main = null, ?string $children = null): ViewContract
     {
-        $version = $this->current();
-
-        $view = collect(['documentation', $version, $main, $children])->filter()->join('.');
+        $view = collect(['documentation', $main, $children])->filter()->join('.');
 
         if (! ViewFacade::exists($view)) {
             abort(404, headers: [
@@ -31,7 +26,7 @@ class PageController
             ]);
         }
 
-        $example = str($view)->remove("documentation.$version.")
+        $example = str($view)->remove('documentation.')
             ->explode('.')
             ->map(fn (string $item): string => str($item)
                 ->replace('-', ' ')
@@ -49,7 +44,7 @@ class PageController
         }
 
         return view($view, [
-            'content' => $this->right($version, $main, $children),
+            'content' => $this->right($main, $children),
             ...Example::tryFrom($example)?->variables() ?? [],
         ]);
     }
@@ -57,9 +52,9 @@ class PageController
     /**
      * Build the "ON THIS PAGE" contents.
      */
-    private function right(string $version, ?string $main = null, ?string $children = null): array
+    private function right(?string $main = null, ?string $children = null): array
     {
-        $yaml = Yaml::parseFile(base_path("contents/$version.yaml"));
+        $yaml = Yaml::parseFile(base_path('contents/documentation.yaml'));
 
         return $children ? $yaml[$main][$children] ?? [] : ($main ? $yaml[$main] ?? [] : []);
     }

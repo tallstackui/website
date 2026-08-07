@@ -38,13 +38,13 @@
                 <div class="flex justify-center items-center mb-6">
                     <x-svg.banner class="w-14 h-14" />
                 </div>
-                <x-layout.navigation.version class="ml-8" />
+                <x-layout.navigation.main class="ml-8" />
             </div>
         </div>
     </div>
 </div>
 <div class="hidden lg:relative lg:block lg:flex-none">
     <div data-sidebar-scroll class="sticky top-14 -ml-0.5 h-[calc(100vh-3.5rem)] w-64 overflow-y-auto custom-scrollbar overflow-x-hidden py-6 pl-0.5 pr-8 xl:w-72 xl:pr-16">
-        <x-layout.navigation.version />
+        <x-layout.navigation.main />
     </div>
 </div>

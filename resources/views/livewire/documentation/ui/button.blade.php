@@ -6,6 +6,8 @@ new class extends Component {
     public int $model = 1;
     public int $type = 1;
 
+    public ?string $spinner = null;
+
     public function basic(): void
     {
         sleep(1);
@@ -39,7 +41,7 @@ new class extends Component {
                 Delay Control
             </x-button>
         @endif
-    @else
+    @elseif ($model === 2)
         @if ($type === 1)
             <x-button.circle wire:click="basic" icon="pencil" loading />
         @elseif ($type === 2)
@@ -47,5 +49,11 @@ new class extends Component {
         @else
             <x-button.circle wire:click="delay" icon="pencil" loading delay="longest" />
         @endif
+    @elseif ($model === 3)
+        <x-button wire:click="target" loading="target" :spinner="$spinner">
+            {{ $spinner ?? 'default' }}
+        </x-button>
+    @elseif ($model === 4)
+        <x-button.circle wire:click="target" icon="trash" color="red" loading="target" :spinner="$spinner" />
     @endif
 </div>

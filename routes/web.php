@@ -1,6 +1,7 @@
 <?php
 
 use App\Enums\Example;
+use App\Http\Controllers\AsyncUploadDemoController;
 use App\Http\Controllers\PageController;
 use App\Http\Middleware\ShareVersionVariable;
 use App\Support\ComponentDocumentation;
@@ -38,6 +39,14 @@ Route::get('/demo/{view}', function (string $view) {
 
     return view($template);
 })->where('view', '[a-z0-9./_-]+')->name('demo');
+
+/**
+ * Backs the async upload live preview. Throttled and capped, writing to a
+ * throwaway disk the scheduler wipes; it persists nothing anyone can read back.
+ */
+Route::post('/demo/async-upload', AsyncUploadDemoController::class)
+    ->middleware('throttle:60,1')
+    ->name('demo.async-upload');
 
 Route::get('/llms.txt', fn (Llms $llms) => response($llms->build(), 200, [
     'Content-Type' => 'text/plain; charset=UTF-8',

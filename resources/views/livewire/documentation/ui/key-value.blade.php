@@ -62,5 +62,11 @@ new class extends Component {
                      x-on:add="alert('Added')"
                      x-on:remove="alert('Removed')"
                      deletable />
+    @elseif ($model === 10)
+        <x-key-value wire:model="metadata" compact />
+    @elseif ($model === 11)
+        <x-key-value wire:model="metadata" color="green" />
+    @elseif ($model === 12)
+        <x-key-value wire:model="metadata" colorless />
     @endif
 </div>

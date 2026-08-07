@@ -27,5 +27,7 @@ new class extends Component {
         <x-signature exportable />
     @elseif ($model === 9)
         <x-signature exportable x-on:export="alert('Exported!')" />
+    @elseif ($model === 10)
+        <x-signature persistent />
     @endif
 </div>
