@@ -23,7 +23,7 @@
     ])></span>
     {!! $text ?? $slot !!}
     @if ($new)
-        <span class="rounded-full border border-violet-500/40 px-1.5 py-px font-mono text-[0.55rem] font-semibold tracking-[0.1em] text-violet-500">
+        <span class="rounded-full border border-violet-500/40 px-1.5 py-px font-mono text-[0.55rem] font-semibold tracking-widest text-violet-500">
             NEW
         </span>
     @endif

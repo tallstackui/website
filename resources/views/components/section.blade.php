@@ -24,7 +24,9 @@
                     @endif
                 </a>
                 @if ($new)
-                    <x-badge xs color="pink" light>NEW</x-badge>
+                    <span class="rounded-full border border-violet-500/40 px-2 py-px font-mono text-sm font-semibold tracking-widest text-violet-500">
+                        NEW
+                    </span>
                 @endif
             </h2>
             @endif

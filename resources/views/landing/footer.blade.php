@@ -15,6 +15,7 @@
         <div class="flex items-center gap-5">
             <a href="{{ $discord }}" target="_blank" rel="noopener" class="font-mono text-[0.7rem] uppercase tracking-[0.12em] text-gray-500 transition hover:text-pink-500 dark:text-dark-400">Discord</a>
             <a href="https://github.com/sponsors/devajmeireles" target="_blank" rel="noopener" class="font-mono text-[0.7rem] uppercase tracking-[0.12em] text-gray-500 transition hover:text-pink-500 dark:text-dark-400">Sponsor</a>
+            <a href="/llms.txt" target="_blank" rel="noopener" class="font-mono text-[0.7rem] uppercase tracking-[0.12em] text-gray-500 transition hover:text-pink-500 dark:text-dark-400">/llms.txt</a>
             <x-github />
         </div>
     </div>

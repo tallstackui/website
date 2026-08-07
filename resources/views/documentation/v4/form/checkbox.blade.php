@@ -36,16 +36,16 @@
         <x-preview language="blade" :contents="$html">
             <x-checkbox>
                 <x-slot:label>
-                    I agree to the <a href="#">terms and conditions</a>
+                    I agree to the terms and conditions
                 </x-slot:label>
             </x-checkbox>
         </x-preview>
     </x-section>
-    <x-section title="Label Slot at Left" new description="left places the label before the input.">
+    <x-section title="Label Slot at Left">
         <x-preview language="blade" :contents="$labelLeft">
             <x-checkbox>
                 <x-slot:label left>
-                    I agree to the <a href="#">terms and conditions</a>
+                    I agree to the terms and conditions
                 </x-slot:label>
             </x-checkbox>
         </x-preview>
@@ -111,19 +111,19 @@
             </div>
         </x-preview>
     </x-section>
-    <x-section title="Group Concept" new disable-copy>
+    <x-section title="Group Concept" disable-copy>
         <x-block>&lt;x-checkbox.group&gt;</x-block> renders a whole set of options from an array, in one of four
         presentations. The selected state is pure CSS, through the <x-block>has-checked</x-block> and
         <x-block>group-has-checked</x-block> variants, so no AlpineJS is involved and a round trip cannot desynchronize
         the highlight from the checked input. The bound property must be an array.
     </x-section>
-    <x-section title="Group Basic Usage" new>
+    <x-section title="Group Basic Usage">
         <x-preview language="blade" :contents="$groupBasic">
             <x-checkbox.group name="features-basic[]" label="Features" :options="$features" />
         </x-preview>
         <x-code class="mt-4" language="php" :contents="$groupProperty" />
     </x-section>
-    <x-section title="Group Variations" new description="Each presentation is a flag, not a value. Passing none renders list; passing more than one resolves to the first of card, panel, inline.">
+    <x-section title="Group Variations" description="Each presentation is a flag, not a value. Passing none renders list; passing more than one resolves to the first of card, panel, inline.">
         <x-preview language="blade" :contents="$groupVariations">
             <div class="space-y-6">
                 <x-checkbox.group name="features-list[]" list :options="$features" />
@@ -133,17 +133,17 @@
             </div>
         </x-preview>
     </x-section>
-    <x-section title="Group Columns" new description="Between 1 and 4, on card and panel only.">
+    <x-section title="Group Columns" description="Between 1 and 4, on card and panel only.">
         <x-preview language="blade" :contents="$groupColumns">
             <x-checkbox.group name="features-columns[]" card :columns="2" :options="$features" />
         </x-preview>
     </x-section>
-    <x-section title="Group Control Position" new description="Control side on list and card: left or right.">
+    <x-section title="Group Control Position" description="Control side on list and card: left or right.">
         <x-preview language="blade" :contents="$groupPosition">
             <x-checkbox.group name="features-position[]" position="right" :options="$features" />
         </x-preview>
     </x-section>
-    <x-section title="Group Size Variations" new>
+    <x-section title="Group Size Variations">
         <x-preview language="blade" :contents="$groupSizes">
             <div class="space-y-6">
                 <x-checkbox.group name="features-xs[]" xs :options="$features" />
