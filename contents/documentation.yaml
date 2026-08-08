@@ -68,6 +68,7 @@ form:
     - Label & Hint
     - Description
     - Image
+    - Metadata
     - Disabled Items
     - Clearable
     - Prefix & Suffix
@@ -79,7 +80,6 @@ form:
     - Placeholders
     - Slot After
     - Events
-    - Metadata
   input:
     - Basic Usage
     - Label & Hint
@@ -147,43 +147,51 @@ form:
     - Resize Auto
     - Character Count
   checkbox:
-    - Basic Usage
-    - Label
-    - Label Slot
-    - Label Slot at Left
-    - Label Alignment
-    - Size Variations
-    - Color Variations
-    - Group Concept
-    - Group Basic Usage
-    - Group Variations
-    - Group Columns
-    - Group Control Position
-    - Group Size Variations
-    - Group Colors
-    - Group Option Keys
-    - Group Select
-    - Group Interact
-    - Group Without Livewire
+    Checkbox:
+      contents:
+        - Basic Usage
+        - Label
+        - Label Slot
+        - Label Slot at Left
+        - Label Alignment
+        - Size Variations
+        - Color Variations
+    Group:
+      contents:
+        - Concept
+        - Basic Usage
+        - Variations
+        - Columns
+        - Control Position
+        - Size Variations
+        - Colors
+        - Option Keys
+        - Select
+        - Interact
+        - Without Livewire
   radio:
-    - Basic Usage
-    - Label
-    - Label Slot
-    - Label Slot at Left
-    - Label Alignment
-    - Size Variations
-    - Color Variations
-    - Group Concept
-    - Group Basic Usage
-    - Group Variations
-    - Group Columns
-    - Group Control Position
-    - Group Size Variations
-    - Group Colors
-    - Group Option Keys
-    - Group Select
-    - Group Interact
-    - Group Without Livewire
+    Radio:
+      contents:
+        - Basic Usage
+        - Label
+        - Label Slot
+        - Label Slot at Left
+        - Label Alignment
+        - Size Variations
+        - Color Variations
+    Group:
+      contents:
+        - Concept
+        - Basic Usage
+        - Variations
+        - Columns
+        - Control Position
+        - Size Variations
+        - Colors
+        - Option Keys
+        - Select
+        - Interact
+        - Without Livewire
   tag:
     - Basic Usage
     - Label & Hint
@@ -272,7 +280,6 @@ form:
     - Step Hour & Minute
     - Footer Slot
     - Events
-    - Scroll & Drag
   select:
     Native:
       contents:
@@ -289,8 +296,6 @@ form:
         - Multi-dimensional Array
         - Disable Options
         - Grouped Options
-        - Qualified Selection Labels
-        - Groups and Loose Options
         - Limit Selection
         - Image Preview
         - Description
@@ -328,7 +333,6 @@ ui:
     - Light Variations
     - Outline Variations
     - Rounded Sizes
-    - Square Corners
     - Shadowless
     - Side Border
   avatar:

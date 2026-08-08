@@ -21,7 +21,6 @@
          @class([
             'bg-white border border-gray-200 rounded-xl dark:bg-dark-900 dark:border-none' => $frame || $background,
             'overflow-hidden'  => $frame,
-            'p-6'              => ! $frame,
          ])>
         @if ($frame)
             <iframe src="{{ url('/demo/' . ltrim($frame, '/')) }}"

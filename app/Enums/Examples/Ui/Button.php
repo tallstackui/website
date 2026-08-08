@@ -268,22 +268,10 @@ class Button
     <x-button wire:click="save" loading="save" spinner="wave">Save</x-button>
 
     {{-- The four textual variations throw, as does any unknown value --}}
-    <x-button wire:click="save" loading="save" spinner="shimmer">Save</x-button>
+    <x-button wire:click="save" loading="save" loading spinner="shimmer">Save</x-button>
     HTML;
 
-    public const string SPINNER_CONFIGURATION = <<<'PHP'
-    // config/tallstackui.php
-
-    'button' => [
-        Components\Button\Normal\Component::class,
-        [
-            'spinner' => null,
-        ],
-    ],
-    PHP;
-
     public const string CIRCLE_SPINNER = <<<'HTML'
-    <x-button.circle wire:click="delete" icon="trash" color="red" loading="delete" />
     <x-button.circle wire:click="delete" icon="trash" color="red" loading="delete" spinner="ring" />
     <x-button.circle wire:click="delete" icon="trash" color="red" loading="delete" spinner="throbber" />
     <x-button.circle wire:click="delete" icon="trash" color="red" loading="delete" spinner="ping" />

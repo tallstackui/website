@@ -24,12 +24,12 @@
         <livewire:customization :$customization component="Form\Radio" title="Radio" />
         <livewire:customization :customization="$groupCustomization" component="Form\Radio\Group" title="Radio Group" />
     </x-slot:customization>
-    <x-section title="Basic Usage">
+    <x-section title="Basic Usage" anchor="radio-basic-usage">
         <x-preview language="blade" :contents="$basic">
             <x-radio />
         </x-preview>
     </x-section>
-    <x-section title="Label">
+    <x-section title="Label" anchor="radio-label">
         <x-preview language="blade" :contents="$label">
             <div class="space-y-2">
                 <x-radio label="Receive Alert" />
@@ -37,7 +37,7 @@
             </div>
         </x-preview>
     </x-section>
-    <x-section title="Label Slot">
+    <x-section title="Label Slot" anchor="radio-label-slot">
         <x-preview language="blade" :contents="$html">
             <x-radio>
                 <x-slot:label>
@@ -46,7 +46,7 @@
             </x-radio>
         </x-preview>
     </x-section>
-    <x-section title="Label Slot at Left" new description="left places the label before the input.">
+    <x-section title="Label Slot at Left" anchor="radio-label-slot-at-left" new description="left places the label before the input.">
         <x-preview language="blade" :contents="$labelLeft">
             <x-radio>
                 <x-slot:label left>
@@ -55,7 +55,7 @@
             </x-radio>
         </x-preview>
     </x-section>
-    <x-section title="Label Alignment">
+    <x-section title="Label Alignment" anchor="radio-label-alignment">
         <x-preview language="blade" :contents="$alignment">
             <div class="space-y-4">
                 <x-radio>
@@ -71,7 +71,7 @@
             </div>
         </x-preview>
     </x-section>
-    <x-section title="Size Variations">
+    <x-section title="Size Variations" anchor="radio-size-variations">
         <x-preview language="blade" :contents="$sizes">
             <div class="inline-flex space-x-2">
                 <x-radio xs />
@@ -81,7 +81,7 @@
             </div>
         </x-preview>
     </x-section>
-    <x-section title="Color Variations">
+    <x-section title="Color Variations" anchor="radio-color-variations">
         <x-preview language="blade" :contents="$colors">
             <div class="space-y-2">
                 <x-radio label="Primary" checked />
@@ -116,18 +116,13 @@
             </div>
         </x-preview>
     </x-section>
-    <x-section title="Group Concept" new disable-copy>
-        <x-block>&lt;x-radio.group&gt;</x-block> renders a whole set of options from an array, in one of four
-        presentations. The selected state is pure CSS, through the <x-block>has-checked</x-block> and
-        <x-block>group-has-checked</x-block> variants, so no AlpineJS is involved and a round trip cannot desynchronize
-        the highlight from the checked input.
-    </x-section>
-    <x-section title="Group Basic Usage" new>
+    <x-separator text="Radio Group" />
+    <x-section title="Basic Usage" anchor="group-basic-usage" new>
         <x-preview language="blade" :contents="$groupBasic">
             <x-radio.group name="plan-basic" label="Plan" :options="$plans" />
         </x-preview>
     </x-section>
-    <x-section title="Group Variations" new description="Each presentation is a flag, not a value. Passing none renders list; passing more than one resolves to the first of card, panel, inline.">
+    <x-section title="Variations" anchor="group-variations" description="An option to display the group in different formats.">
         <x-preview language="blade" :contents="$groupVariations">
             <div class="space-y-6">
                 <x-radio.group name="plan-list" list :options="$plans" />
@@ -137,17 +132,17 @@
             </div>
         </x-preview>
     </x-section>
-    <x-section title="Group Columns" new description="Between 1 and 4, on card and panel only.">
+    <x-section title="Columns" anchor="group-columns">
         <x-preview language="blade" :contents="$groupColumns">
-            <x-radio.group name="plan-columns" card :columns="2" :options="$plans" />
+            <x-radio.group name="plan-columns" card :columns="3" :options="$plans" />
         </x-preview>
     </x-section>
-    <x-section title="Group Control Position" new description="Control side on list and card: left or right.">
+    <x-section title="Control Position" anchor="group-control-position">
         <x-preview language="blade" :contents="$groupPosition">
             <x-radio.group name="plan-position" position="right" :options="$plans" />
         </x-preview>
     </x-section>
-    <x-section title="Group Size Variations" new>
+    <x-section title="Size Variations" anchor="group-size-variations">
         <x-preview language="blade" :contents="$groupSizes">
             <div class="space-y-6">
                 <x-radio.group name="plan-xs" xs :options="$periods" />
@@ -157,12 +152,12 @@
             </div>
         </x-preview>
     </x-section>
-    <x-section title="Group Colors" new description="The color drives the border, background and text of the selected option, the fill of a selected inline segment, and the control itself.">
+    <x-section title="Colors" anchor="group-colors">
         <x-preview language="blade" :contents="$groupColors">
             <x-radio.group name="plan-color" color="green" value="business" :options="$plans" />
         </x-preview>
     </x-section>
-    <x-section title="Group Option Keys" new description="image wins over icon when both are present. A missing label or value throws.">
+    <x-section title="Option Keys" anchor="group-option-keys">
         <x-table :headers="[
             ['index' => 'key', 'label' => 'Key'],
             ['index' => 'type', 'label' => 'Type'],
@@ -183,7 +178,7 @@
             @endinteract
         </x-table>
     </x-section>
-    <x-section title="Group Select" new description="Remaps the source keys with the same syntax used by select.styled. Anything left out falls back to the key of the same name.">
+    <x-section title="Select" anchor="group-select" description="An option to remaps the source keys with the same syntax used by select styled.">
         <x-preview language="blade" :contents="$groupSelect">
             <x-radio.group name="plan-select" select="label:name|value:id|description:note" :options="[
                 ['name' => 'Startup', 'id' => 'startup', 'note' => 'Up to 5 job postings'],
@@ -192,9 +187,9 @@
             ]" />
         </x-preview>
     </x-section>
-    <x-section title="Group Interact" new description="Replaces the body of every item. The label, the input and the selected-state classes stay owned by the component, and the closure still sees the original keys.">
+    <x-section title="Interact" anchor="group-interact" description="An option to replaces the body of every item.">
         <x-preview language="blade" :contents="$groupInteract">
-            <x-radio.group name="plan-interact" card :options="[
+            <x-radio.group name="plan-interact" card :columns="2" :options="[
                 ['label' => 'Startup', 'value' => 'startup', 'tag' => 'popular'],
                 ['label' => 'Business', 'value' => 'business', 'tag' => 'best value'],
             ]">
@@ -205,11 +200,6 @@
                     </div>
                 @endinteract
             </x-radio.group>
-        </x-preview>
-    </x-section>
-    <x-section title="Group Without Livewire" new description="Every input shares the same name. Without it, the name falls back to id and then to the bound property.">
-        <x-preview language="blade" :contents="$groupNative">
-            <x-radio.group name="plan-native" value="business" :options="$plans" />
         </x-preview>
     </x-section>
 </x-layout>

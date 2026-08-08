@@ -169,6 +169,7 @@ class Alert
     public const string ROUNDED = <<<'HTML'
     <!-- xs, sm, md, lg (default), xl -->
 
+    <x-alert title="TallStackUI" text="No rounded corners." square />
     <x-alert title="TallStackUi" text="Extra small" rounded="xs" />
     <x-alert title="TallStackUi" text="Small" rounded="sm" />
     <x-alert title="TallStackUi" text="Medium" rounded="md" />

@@ -83,7 +83,7 @@ class Radio
     HTML;
 
     public const string GROUP_BASIC = <<<'HTML'
-    <x-radio.group wire:model="plan" label="Plan" :options="[
+    <x-radio.group label="Plan" :options="[
         ['label' => 'Startup', 'value' => 'startup', 'description' => 'Up to 5 job postings', 'aside' => '$29 / mo'],
         ['label' => 'Business', 'value' => 'business', 'description' => 'Up to 25 job postings', 'aside' => '$99 / mo'],
         ['label' => 'Enterprise', 'value' => 'enterprise', 'description' => 'Unlimited', 'aside' => '$249 / mo'],
@@ -91,37 +91,37 @@ class Radio
     HTML;
 
     public const string GROUP_VARIATIONS = <<<'HTML'
-    <x-radio.group wire:model="plan" list :options="$plans" />
-    <x-radio.group wire:model="plan" card :options="$plans" />
-    <x-radio.group wire:model="plan" panel :options="$plans" />
-    <x-radio.group wire:model="period" inline :options="$periods" />
+    <x-radio.group list :options="$plans" />
+    <x-radio.group card :options="$plans" />
+    <x-radio.group panel :options="$plans" />
+    <x-radio.group inline :options="$periods" />
     HTML;
 
     public const string GROUP_COLUMNS = <<<'HTML'
-    <x-radio.group wire:model="plan" card :columns="2" :options="$plans" />
+    <x-radio.group card :columns="3" :options="$plans" />
     HTML;
 
     public const string GROUP_POSITION = <<<'HTML'
-    <x-radio.group wire:model="plan" position="right" :options="$plans" />
+    <x-radio.group position="right" :options="$plans" />
     HTML;
 
     public const string GROUP_SIZES = <<<'HTML'
-    <x-radio.group wire:model="plan" xs :options="$plans" />
-    <x-radio.group wire:model="plan" sm :options="$plans" />
-    <x-radio.group wire:model="plan" md :options="$plans" />
-    <x-radio.group wire:model="plan" lg :options="$plans" />
+    <x-radio.group xs :options="$plans" />
+    <x-radio.group sm :options="$plans" />
+    <x-radio.group md :options="$plans" />
+    <x-radio.group lg :options="$plans" />
     HTML;
 
     public const string GROUP_COLORS = <<<'HTML'
-    <x-radio.group wire:model="plan" color="green" :options="$plans" />
+    <x-radio.group color="green" :options="$plans" />
     HTML;
 
     public const string GROUP_SELECT = <<<'HTML'
-    <x-radio.group wire:model="plan" select="label:name|value:id|description:note" :options="$plans" />
+    <x-radio.group select="label:name|value:id|description:note" :options="$plans" />
     HTML;
 
     public const string GROUP_INTERACT = <<<'HTML'
-    <x-radio.group wire:model="plan" card :options="$plans">
+    <x-radio.group card :columns="2" :options="$plans">
         @interact('option', $option)
             <div class="flex items-center justify-between">
                 <span class="font-medium">{{ $option['label'] }}</span>
@@ -129,10 +129,6 @@ class Radio
             </div>
         @endinteract
     </x-radio.group>
-    HTML;
-
-    public const string GROUP_NATIVE = <<<'HTML'
-    <x-radio.group name="plan" value="business" :options="$plans" />
     HTML;
 
     public const string CUSTOMIZATION = <<<'HTML'

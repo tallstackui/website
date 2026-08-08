@@ -19,12 +19,12 @@
         <livewire:customization :$customization component="Form\Checkbox" title="Checkbox" />
         <livewire:customization :customization="$groupCustomization" component="Form\Checkbox\Group" title="Checkbox Group" />
     </x-slot:customization>
-    <x-section title="Basic Usage">
+    <x-section title="Basic Usage" anchor="checkbox-basic-usage">
         <x-preview language="blade" :contents="$basic">
             <x-checkbox />
         </x-preview>
     </x-section>
-    <x-section title="Label">
+    <x-section title="Label" anchor="checkbox-label">
         <x-preview language="blade" :contents="$label">
             <div class="space-y-2">
                 <x-checkbox label="Receive Alert" />
@@ -32,7 +32,7 @@
             </div>
         </x-preview>
     </x-section>
-    <x-section title="Label Slot">
+    <x-section title="Label Slot" anchor="checkbox-label-slot">
         <x-preview language="blade" :contents="$html">
             <x-checkbox>
                 <x-slot:label>
@@ -41,7 +41,7 @@
             </x-checkbox>
         </x-preview>
     </x-section>
-    <x-section title="Label Slot at Left">
+    <x-section title="Label Slot at Left" anchor="checkbox-label-slot-at-left">
         <x-preview language="blade" :contents="$labelLeft">
             <x-checkbox>
                 <x-slot:label left>
@@ -50,7 +50,7 @@
             </x-checkbox>
         </x-preview>
     </x-section>
-    <x-section title="Label Alignment">
+    <x-section title="Label Alignment" anchor="checkbox-label-alignment">
         <x-preview language="blade" :contents="$alignment">
             <div class="space-y-4">
                 <x-checkbox>
@@ -66,7 +66,7 @@
             </div>
         </x-preview>
     </x-section>
-    <x-section title="Size Variations">
+    <x-section title="Size Variations" anchor="checkbox-size-variations">
         <x-preview language="blade" :contents="$sizes">
             <div class="inline-flex space-x-2">
                 <x-checkbox xs />
@@ -76,7 +76,7 @@
             </div>
         </x-preview>
     </x-section>
-    <x-section title="Color Variations">
+    <x-section title="Color Variations" anchor="checkbox-color-variations">
         <x-preview language="blade" :contents="$colors">
             <div class="space-y-2">
                 <x-checkbox label="Primary" checked />
@@ -111,19 +111,17 @@
             </div>
         </x-preview>
     </x-section>
-    <x-section title="Group Concept" disable-copy>
-        <x-block>&lt;x-checkbox.group&gt;</x-block> renders a whole set of options from an array, in one of four
-        presentations. The selected state is pure CSS, through the <x-block>has-checked</x-block> and
-        <x-block>group-has-checked</x-block> variants, so no AlpineJS is involved and a round trip cannot desynchronize
-        the highlight from the checked input. The bound property must be an array.
-    </x-section>
-    <x-section title="Group Basic Usage">
+    <x-separator text="Checkbox Group" />
+    <x-section title="Basic Usage" anchor="group-basic-usage">
         <x-preview language="blade" :contents="$groupBasic">
             <x-checkbox.group name="features-basic[]" label="Features" :options="$features" />
         </x-preview>
-        <x-code class="mt-4" language="php" :contents="$groupProperty" />
+        <p>
+            You should bind a property that is an array:
+        </p>
+        <x-code language="php" :contents="$groupProperty" />
     </x-section>
-    <x-section title="Group Variations" description="Each presentation is a flag, not a value. Passing none renders list; passing more than one resolves to the first of card, panel, inline.">
+    <x-section title="Variations" anchor="group-variations" description="An option to display the group in different formats.">
         <x-preview language="blade" :contents="$groupVariations">
             <div class="space-y-6">
                 <x-checkbox.group name="features-list[]" list :options="$features" />
@@ -133,17 +131,17 @@
             </div>
         </x-preview>
     </x-section>
-    <x-section title="Group Columns" description="Between 1 and 4, on card and panel only.">
+    <x-section title="Columns" anchor="group-columns">
         <x-preview language="blade" :contents="$groupColumns">
-            <x-checkbox.group name="features-columns[]" card :columns="2" :options="$features" />
+            <x-checkbox.group name="features-columns[]" card :columns="3" :options="$features" />
         </x-preview>
     </x-section>
-    <x-section title="Group Control Position" description="Control side on list and card: left or right.">
+    <x-section title="Control Position" anchor="group-control-position">
         <x-preview language="blade" :contents="$groupPosition">
             <x-checkbox.group name="features-position[]" position="right" :options="$features" />
         </x-preview>
     </x-section>
-    <x-section title="Group Size Variations">
+    <x-section title="Size Variations" anchor="group-size-variations">
         <x-preview language="blade" :contents="$groupSizes">
             <div class="space-y-6">
                 <x-checkbox.group name="features-xs[]" xs :options="$features" />
@@ -153,12 +151,12 @@
             </div>
         </x-preview>
     </x-section>
-    <x-section title="Group Colors" new description="The color drives the border, background and text of the selected option, the fill of a selected inline segment, and the control itself.">
+    <x-section title="Colors" anchor="group-colors">
         <x-preview language="blade" :contents="$groupColors">
             <x-checkbox.group name="features-color[]" color="green" :value="['alerts']" :options="$features" />
         </x-preview>
     </x-section>
-    <x-section title="Group Option Keys" new description="image wins over icon when both are present. A missing label or value throws.">
+    <x-section title="Option Keys" anchor="group-option-keys">
         <x-table :headers="[
             ['index' => 'key', 'label' => 'Key'],
             ['index' => 'type', 'label' => 'Type'],
@@ -179,7 +177,7 @@
             @endinteract
         </x-table>
     </x-section>
-    <x-section title="Group Select" new description="Remaps the source keys with the same syntax used by select.styled. Anything left out falls back to the key of the same name.">
+    <x-section title="Select" anchor="group-select" description="An option to remaps the source keys with the same syntax used by select styled.">
         <x-preview language="blade" :contents="$groupSelect">
             <x-checkbox.group name="features-select[]" select="label:name|value:id|description:note" :options="[
                 ['name' => 'Newsletter', 'id' => 'newsletter', 'note' => 'Product updates once a month'],
@@ -188,7 +186,7 @@
             ]" />
         </x-preview>
     </x-section>
-    <x-section title="Group Interact" new description="Replaces the body of every item. The label, the input and the selected-state classes stay owned by the component, and the closure still sees the original keys.">
+    <x-section title="Interact" anchor="group-interact" description="An option to replaces the body of every item.">
         <x-preview language="blade" :contents="$groupInteract">
             <x-checkbox.group name="addons-interact[]" card :columns="2" :options="[
                 ['label' => 'Extra storage', 'value' => 'storage', 'name' => 'Extra storage', 'price' => 9],
@@ -200,14 +198,5 @@
                 @endinteract
             </x-checkbox.group>
         </x-preview>
-    </x-section>
-    <x-section title="Group Without Livewire" new description="Every input shares the same name, always suffixed with [] so a plain form collects the options as an array.">
-        <x-preview language="blade" :contents="$groupNative">
-            <x-checkbox.group name="features-native[]" :value="['newsletter', 'reports']" :options="$features" />
-        </x-preview>
-        <x-warning warning title="required behaves differently here" class="mt-4">
-            On the checkbox group it only marks the legend. The native attribute is never set on the inputs, since the
-            browser would then demand every box be ticked.
-        </x-warning>
     </x-section>
 </x-layout>

@@ -179,6 +179,7 @@
     <x-section title="Rounded Sizes">
         <x-preview language="blade" :contents="$rounded">
             <div class="space-y-2">
+                <x-alert title="TallStackUI" text="No rounded corners." square />
                 <x-alert title="TallStackUI" text="Extra small" rounded="xs" />
                 <x-alert title="TallStackUI" text="Small"       rounded="sm" />
                 <x-alert title="TallStackUI" text="Medium"      rounded="md" />
@@ -187,12 +188,7 @@
             </div>
         </x-preview>
     </x-section>
-    <x-section title="Square Corners">
-        <x-preview language="blade" :contents="$square">
-            <x-alert title="TallStackUI" text="No rounded corners." square />
-        </x-preview>
-    </x-section>
-    <x-section title="Shadowless" new description="The light style carries a soft shadow in every palette entry. shadowless drops it: whole shadow tokens are stripped from the resolved background, so published palettes with a different shadow are covered too.">
+    <x-section title="Shadowless" description="An option to remove the shadow when using light variation.">
         <x-preview language="blade" :contents="$shadowless">
             <div class="space-y-2">
                 <x-alert title="TallStackUI" text="Light, with the shadow it ships with" light />

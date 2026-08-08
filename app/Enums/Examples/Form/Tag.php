@@ -37,8 +37,7 @@ class Tag
     $event.detail.tags instead of $event.detail.tag
     -->
 
-    <x-tag ...
-           x-on:add="alert(`Introduced: ${$event.detail.tag}`)"
+    <x-tag x-on:add="alert(`Introduced: ${$event.detail.tag}`)"
            x-on:remove="alert(`Removed: ${$event.detail.tag}`)"
            x-on:erase="alert(`Erased: ${$event.detail.tags}`)" />
     HTML;

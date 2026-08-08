@@ -61,17 +61,12 @@
                    x-on:erase="alert(`Erased: ${$event.detail.tags}`)" />
         </x-preview>
     </x-section>
-    <x-section title="Options" new description="Free typing still works; the list is an extra way in, for tags that get reused rather than invented each time. Options already added drop out of it.">
+    <x-section title="Options" description="An option to display a pre-existing list of tags">
         <x-preview language="blade" :contents="$options">
             <x-tag :options="['laravel', 'livewire', 'alpine', 'tailwind']" />
         </x-preview>
-        <x-warning class="mt-4">
-            Arrow keys move through the list, Enter takes the highlighted option and Escape closes it. With nothing
-            highlighted, Enter falls through to the typed value, so the two ways of adding never fight over the key. A
-            <x-block>prefix</x-block> is ignored while matching, and reaching <x-block>limit</x-block> closes the list.
-        </x-warning>
     </x-section>
-    <x-section title="Slot After" new description="Rendered under the list and always reachable, including when nothing matches. The slot alone is enough to make the list open.">
+    <x-section title="Slot After" description="An option to display content when dealing with a search that returns no results.">
         <x-preview language="blade" :contents="$afterSlot">
             <x-tag :options="['laravel', 'livewire', 'alpine', 'tailwind']">
                 <x-slot:after>
@@ -79,7 +74,7 @@
                 </x-slot:after>
             </x-tag>
         </x-preview>
-        <x-warning class="mt-4">
+        <x-warning info class="mt-4">
             On <x-block>x-select.styled</x-block> and <x-block>x-autocomplete</x-block> the slot of the same name
             <b>replaces</b> the empty message and appears only when nothing matches. Here it sits below the list at all
             times, because it exists to reach an action rather than to explain an empty result.

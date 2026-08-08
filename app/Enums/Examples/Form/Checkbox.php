@@ -96,46 +96,42 @@ class Checkbox
     PHP;
 
     public const string GROUP_VARIATIONS = <<<'HTML'
-    <x-checkbox.group wire:model="features" list :options="$features" />
-    <x-checkbox.group wire:model="features" card :options="$features" />
-    <x-checkbox.group wire:model="features" panel :options="$features" />
-    <x-checkbox.group wire:model="features" inline :options="$features" />
+    <x-checkbox.group list :options="$features" />
+    <x-checkbox.group card :options="$features" />
+    <x-checkbox.group panel :options="$features" />
+    <x-checkbox.group inline :options="$features" />
     HTML;
 
     public const string GROUP_COLUMNS = <<<'HTML'
-    <x-checkbox.group wire:model="features" card :columns="2" :options="$features" />
+    <x-checkbox.group card :columns="3" :options="$features" />
     HTML;
 
     public const string GROUP_POSITION = <<<'HTML'
-    <x-checkbox.group wire:model="features" position="right" :options="$features" />
+    <x-checkbox.group position="right" :options="$features" />
     HTML;
 
     public const string GROUP_SIZES = <<<'HTML'
-    <x-checkbox.group wire:model="features" xs :options="$features" />
-    <x-checkbox.group wire:model="features" sm :options="$features" />
-    <x-checkbox.group wire:model="features" md :options="$features" />
-    <x-checkbox.group wire:model="features" lg :options="$features" />
+    <x-checkbox.group xs :options="$features" />
+    <x-checkbox.group sm :options="$features" />
+    <x-checkbox.group md :options="$features" />
+    <x-checkbox.group lg :options="$features" />
     HTML;
 
     public const string GROUP_COLORS = <<<'HTML'
-    <x-checkbox.group wire:model="features" color="green" :options="$features" />
+    <x-checkbox.group color="green" :options="$features" />
     HTML;
 
     public const string GROUP_SELECT = <<<'HTML'
-    <x-checkbox.group wire:model="features" select="label:name|value:id|description:note" :options="$features" />
+    <x-checkbox.group select="label:name|value:id|description:note" :options="$features" />
     HTML;
 
     public const string GROUP_INTERACT = <<<'HTML'
-    <x-checkbox.group wire:model="features" card :options="$addons">
+    <x-checkbox.group card :options="$addons">
         @interact('option', $option)
             <span class="font-semibold">{{ $option['name'] }}</span>
             <span class="font-mono">${{ $option['price'] }}</span>
         @endinteract
     </x-checkbox.group>
-    HTML;
-
-    public const string GROUP_NATIVE = <<<'HTML'
-    <x-checkbox.group name="features[]" :value="['newsletter', 'reports']" :options="$features" />
     HTML;
 
     public const string GROUP_CUSTOMIZATION = <<<'HTML'

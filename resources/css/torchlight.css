@@ -7,12 +7,26 @@
 
     /* The theme ships its own background inline; the site's near-black wins. */
     pre code.torchlight {
+        --code-background: #141414;
+
         @apply block p-4 min-w-max;
-        background-color: #141414 !important;
+        background-color: var(--code-background) !important;
     }
 
     pre code.torchlight .line {
         @apply px-2;
+    }
+
+    /*
+     * Torchlight paints the highlight inline, in a colour the theme picked for
+     * its own background rather than for the near-black forced above, which
+     * left the band all but invisible. Hence the !important.
+     *
+     * A translucent white composites over whatever the block's background is,
+     * so it reads as a lift of that colour rather than as a tint of its own.
+     */
+    pre code.torchlight .line-highlight {
+        background-color: rgb(255 255 255 / 0.1) !important;
     }
 
     pre code.torchlight .line-number,

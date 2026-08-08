@@ -21,9 +21,9 @@ class InputSelect
     HTML;
 
     public const string FLOATING = <<<'HTML'
-    <x-input.select label="E-mail Provider" wire:model="email" floating="min-w-40">
+    <x-input.select label="E-mail Provider" floating="min-w-40">
         <x-slot:right>
-            <x-select.styled :options="['@gmail.com', '@yahoo.com']" wire:model="provider" />
+            <x-select.styled :options="['@gmail.com', '@yahoo.com']" />
         </x-slot:right>
     </x-input.select>
     HTML;

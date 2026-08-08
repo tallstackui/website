@@ -75,21 +75,4 @@
                     x-on:interval="alert(`Interval Changed: ${$event.detail.interval}`)"/>
         </x-preview>
     </x-section>
-    <x-section title="Scroll & Drag" new description="Adjusting the time meant working the two sliders. They still work, but the panel now answers the two gestures people try first: the wheel and the finger.">
-        <x-preview language="blade" :contents="$gestures">
-            <x-time />
-        </x-preview>
-        <p class="mt-4">
-            Scrolling over either slider, or over the hour and minute numbers themselves, moves the value one step per
-            wheel tick. Pressing the numbers and dragging up or down does the same, one step every ten pixels, which is
-            the gesture that works on a phone.
-        </p>
-        <x-warning class="mt-4">
-            Both paths drive the slider through <x-block>stepUp()</x-block> and <x-block>stepDown()</x-block>, so
-            <x-block>step-hour</x-block>, <x-block>step-minute</x-block> and the min/max bounds are respected exactly as
-            if the slider had been moved, and <x-block>x-on:hour</x-block> and <x-block>x-on:minute</x-block> fire as
-            usual. A trackpad emits pixel deltas rather than ticks, so those are accumulated and step once per hundred
-            pixels.
-        </x-warning>
-    </x-section>
 </x-layout>

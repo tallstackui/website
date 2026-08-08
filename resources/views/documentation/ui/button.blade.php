@@ -131,31 +131,22 @@
                 </div>
             </div>
         </x-preview>
-        <p class="mt-2">
+        <p class="mt-4">
             You can use the <x-block>position</x-block> attribute to define the position of the loading
             icon: <x-block>left</x-block> or <x-block>right</x-block>.
         </p>
     </x-section>
-    <x-section title="Loading Spinner" new anchor="normal-loading-spinner" description="The loading indicator was one hardcoded SVG. It now renders any of the nine visual x-spinner variations in its place.">
+    <x-section title="Loading Spinner" anchor="normal-loading-spinner" description="An option to use a different loading indicator based on the new spinner component variation.">
         <x-preview language="blade" :contents="$spinner">
             <div class="flex flex-wrap items-center gap-2">
-                @foreach ([null, 'ring', 'throbber', 'gradient', 'ping', 'dots', 'pulse', 'typing', 'bars', 'wave'] as $variation)
+                @foreach (['ring', 'throbber', 'gradient', 'ping', 'dots', 'pulse', 'typing', 'bars', 'wave'] as $variation)
                     <livewire:documentation.ui.button :model="3" :spinner="$variation" :key="'spinner-' . ($variation ?? 'default')" />
                 @endforeach
             </div>
         </x-preview>
         <p class="mt-4">
-            Resolution is prop, then config, then default. The config key lives on <x-block>button</x-block> and drives
-            <x-block>button.circle</x-block> too, so one setting covers both:
+            You can set this configuration globally in the <x-refer doc="configuration">configuration file.</x-refer>
         </p>
-        <x-code class="mt-4" language="php" :contents="$spinnerConfiguration" />
-        <x-warning class="mt-4">
-            <x-block>null</x-block>, the shipped value, keeps the default effect: the old SVG was byte-identical to the
-            <x-block>gradient</x-block> variation, so an application that never touches the prop renders exactly what it
-            always rendered. The four textual variations &mdash; <x-block>shimmer</x-block>, <x-block>caret</x-block>,
-            <x-block>terminal</x-block> and <x-block>thinking</x-block> &mdash; animate their own text and make no sense
-            inside a button, so they throw, as does any unknown value.
-        </x-warning>
     </x-section>
     <x-section title="Color Variations" anchor="normal-color-variations">
         <x-preview language="blade" :contents="$color">
@@ -345,10 +336,13 @@
     <x-section title="Loading Spinner" new anchor="circle-loading-spinner" description="The circle button reads the same prop and the same config key as the normal one.">
         <x-preview language="blade" :contents="$circleSpinner">
             <div class="flex flex-wrap items-center gap-2">
-                @foreach ([null, 'ring', 'throbber', 'ping', 'dots', 'pulse', 'typing', 'bars', 'wave'] as $variation)
+                @foreach (['ring', 'throbber', 'ping', 'dots', 'pulse', 'typing', 'bars', 'wave'] as $variation)
                     <livewire:documentation.ui.button :model="4" :spinner="$variation" :key="'circle-spinner-' . ($variation ?? 'default')" />
                 @endforeach
             </div>
+            <p class="mt-4">
+                You can set this configuration globally in the <x-refer doc="configuration">configuration file.</x-refer>
+            </p>
         </x-preview>
     </x-section>
     <x-section title="Color Variations" anchor="circle-color-variations">

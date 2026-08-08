@@ -103,26 +103,6 @@ class Autocomplete
     ]" />
     HTML;
 
-    public const string STRICT_GLOBAL = <<<'HTML'
-    // config/tallstackui.php
-
-    'autocomplete' => [
-        Components\Form\Autocomplete\Component::class,
-        [
-            /*
-            |----------------------------------------------------------------------
-            | Autocomplete Global Settings
-            |----------------------------------------------------------------------
-            | strict: when true, all autocomplete components will, by default, only
-            | accept values that exist in their items list. The wire:model is only
-            | updated when a row is picked from the dropdown, and the input reverts
-            | to the last selected value on blur with an unmatched query.
-            */
-            'strict' => false, // [tl! highlight]
-        ],
-    ],
-    HTML;
-
     public const string REQUEST_STRING = <<<'HTML'
     <!-- Using a route as a string -->
     <x-autocomplete label="User" request="/api/users" />
@@ -144,11 +124,13 @@ class Autocomplete
     use Illuminate\Http\Request;
     use Illuminate\Support\Facades\Route;
 
+    // ...
+
     Route::get('/users', function (Request $request) {
-        $search = $request->get('search');
+        $search = $request->input('search');
 
         return User::query()
-            ->when($search, fn ($query) => $query->where('name', 'like', "%{$search}%"))
+            ->when(! empty($search), fn ($query) => $query->where('name', 'like', "%{$search}%"))
             ->limit(10)
             ->get()
             ->map(fn (User $user): array => [
@@ -160,7 +142,7 @@ class Autocomplete
     HTML;
 
     public const string REQUEST_LAZY = <<<'HTML'
-    <x-autocomplete label="User" request="/api/users" lazy="2" clearable />
+    <x-autocomplete label="User" :request="route('api.users')" lazy="2" />
     HTML;
 
     public const string DISABLED = <<<'HTML'
@@ -187,7 +169,7 @@ class Autocomplete
     ]">
         <x-slot:after>
             <div class="my-2 flex items-center justify-center px-2">
-                <x-button xs x-on:click="$tsui.interaction('dialog').success('Done!', `Term: ${search}`).send()">
+                <x-button block x-on:click="$tsui.interaction('dialog').success('Done!', `Term: ${search}`).send()">
                     <span x-html="`Create city <b>${search}</b>`"></span>
                 </x-button>
             </div>
@@ -196,12 +178,16 @@ class Autocomplete
     HTML;
 
     public const string EVENTS = <<<'HTML'
-    <!-- $event.detail.item: the picked row, including any extra keys you put on it. -->
+    <!--
+    $event.detail.item: the picked row, including any extra keys you put on it.
+    -->
 
-    <x-autocomplete label="User" :items="[
-        ['value' => 'Alice', 'description' => 'admin'],
-        ['value' => 'Bob',   'description' => 'editor'],
-    ]"
+    <x-autocomplete
+        label="User"
+        :items="[
+            ['value' => 'Alice', 'description' => 'admin'],
+            ['value' => 'Bob', 'description' => 'editor'],
+        ]"
         x-on:select="alert(`Selected: ${$event.detail.item.value}`)"
         x-on:clear="alert('Cleared')"
         x-on:open="console.log('opened')"
@@ -212,7 +198,7 @@ class Autocomplete
     [
         'value' => 'Alice',
         'description' => 'admin',
-        'metadata' => ['id' => 42, 'role' => 'admin', 'team_id' => 7],
+        'metadata' => ['id' => 42, 'role' => 'admin', 'team_id' => 7], // [tl! highlight]
     ]
     PHP;
 
