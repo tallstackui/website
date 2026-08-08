@@ -175,37 +175,15 @@ class Modal
     </x-modal>
     HTML;
 
-    public const string CENTER_CONFIGURATION = <<<'PHP'
-    // config/tallstackui.php
-
-    'modal' => [
-        Components\Modal\Component::class,
-        [
-            'center' => 'md',
-        ],
-    ],
-    PHP;
-
     public const string HANDLE = <<<'HTML'
     <x-modal handle>
         TallStackUI
     </x-modal>
     HTML;
 
-    public const string HANDLE_CONFIGURATION = <<<'PHP'
-    // config/tallstackui.php
-
-    'modal' => [
-        Components\Modal\Component::class,
-        [
-            'handle' => false,
-        ],
-    ],
-    PHP;
-
     public const string PADDINGLESS = <<<'HTML'
-    <x-modal paddingless>
-        <x-table :$headers :$rows />
+    <x-modal title="TallStackUI" paddingless>
+        TallStackUI modal with no padding in the body.
     </x-modal>
     HTML;
 

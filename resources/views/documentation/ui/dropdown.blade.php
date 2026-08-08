@@ -24,6 +24,16 @@
             </div>
         </x-preview>
     </x-section>
+    <x-section title="Open when hover" new>
+        <x-preview language="blade" :contents="$hover">
+            <div class="flex justify-end md:justify-center">
+                <x-dropdown text="Open when hover" position="bottom-end" hover>
+                    <x-dropdown.items text="Settings" />
+                    <x-dropdown.items text="Logout" separator />
+                </x-dropdown>
+            </div>
+        </x-preview>
+    </x-section>
     <x-section title="Available Positions">
         <x-slot:description>
             All available positions based on the <a href="https://alpinejs.dev/plugins/anchor" target="_blank" class="underline">AlpineJS anchor plugin.</a>
@@ -128,7 +138,7 @@
             <div class="flex justify-end md:justify-center">
                 <x-dropdown text="Menu" position="bottom-end">
                     <x-slot:header>
-                        <p class="text-sm">Welcome!</p>
+                        <x-theme-switch block />
                     </x-slot:header>
                     <x-dropdown.items icon="cog" text="Settings" />
                     <x-dropdown.items icon="arrow-left-on-rectangle" text="Logout" separator />

@@ -269,35 +269,42 @@
             <x-code language="blade" :contents="$focusUsingDataAttribute"/>
         </div>
     </x-section>
-    <x-available-configuration />
-    <x-section title="Centered on a Breakpoint" new description="center was a boolean: centered on every viewport or on none. It now also takes a Tailwind breakpoint, which is the bottom-sheet-on-phone, centered-dialog-on-desktop layout most applications want.">
-        <x-preview language="blade" :contents="$centerBreakpoint">
-            <x-modal id="center-breakpoint-modal" title="TallStackUI" center="md">
-                Resize the window across 768px: a bottom sheet below it, a centered dialog from there upwards.
-            </x-modal>
-            <x-button x-on:click="$tsui.open.modal('center-breakpoint-modal')">
-                Open Modal
-            </x-button>
-        </x-preview>
-        <x-table class="mt-4" :headers="[
-            ['index' => 'value', 'label' => 'Value'],
-            ['index' => 'classes', 'label' => 'Classes'],
-        ]" :rows="[
-            ['value' => 'false', 'classes' => 'items-end sm:items-start'],
-            ['value' => 'true', 'classes' => 'items-center'],
-            ['value' => 'sm', 'classes' => 'items-end sm:items-center'],
-            ['value' => 'md', 'classes' => 'items-end sm:items-start md:items-center'],
-            ['value' => 'lg', 'classes' => 'items-end sm:items-start lg:items-center'],
-            ['value' => 'xl', 'classes' => 'items-end sm:items-start xl:items-center'],
-            ['value' => '2xl', 'classes' => 'items-end sm:items-start 2xl:items-center'],
-        ]" />
-        <p class="mt-4">The same values work as a global default:</p>
-        <x-code class="mt-4" language="php" :contents="$centerConfiguration" />
-        <x-warning class="mt-4">
-            A breakpoint means "not centered below it". Below <x-block>md</x-block> the modal behaves exactly like a
-            modal with no <x-block>center</x-block> at all, which includes the <x-block>sm:items-start</x-block> step.
-            Anything outside the five breakpoints throws at render time, including <x-block>center="true"</x-block>.
-        </x-warning>
+    <x-section title="Centered on a Breakpoint" new description="An option to center the modal from the breakpoint or above.">
+        <div class="space-y-4">
+            <x-preview language="blade" :contents="$centerBreakpoint">
+                <x-modal id="center-breakpoint-modal" title="TallStackUI" center="md">
+                    Resize the window across 768px: a bottom sheet below it, a centered dialog from there upwards.
+                </x-modal>
+                <x-button x-on:click="$tsui.open.modal('center-breakpoint-modal')">
+                    Open Modal
+                </x-button>
+            </x-preview>
+            <x-table class="mt-4" :headers="[
+                ['index' => 'value', 'label' => 'Value'],
+                ['index' => 'classes', 'label' => 'Classes'],
+            ]" :rows="[
+                ['value' => 'false', 'classes' => 'items-end sm:items-start'],
+                ['value' => 'true', 'classes' => 'items-center'],
+                ['value' => 'sm', 'classes' => 'items-end sm:items-center'],
+                ['value' => 'md', 'classes' => 'items-end sm:items-start md:items-center'],
+                ['value' => 'lg', 'classes' => 'items-end sm:items-start lg:items-center'],
+                ['value' => 'xl', 'classes' => 'items-end sm:items-start xl:items-center'],
+                ['value' => '2xl', 'classes' => 'items-end sm:items-start 2xl:items-center'],
+            ]"/>
+            <x-warning class="mt-4">
+                A breakpoint means "not centered below it". Below
+                <x-block>md</x-block>
+                the modal behaves exactly like a
+                modal with no
+                <x-block>center</x-block>
+                at all, which includes the
+                <x-block>sm:items-start</x-block>
+                step.
+                Anything outside the five breakpoints throws at render time, including
+                <x-block>center="true"</x-block>
+                .
+            </x-warning>
+        </div>
     </x-section>
     <x-section title="Mobile Sheet Motion" new disable-copy>
         Below <x-block>sm</x-block> the modal is a bottom sheet, and it now opens like one: it travels opaque from off
@@ -305,7 +312,7 @@
         <x-block>sm</x-block> up nothing changed. A boolean <x-block>center</x-block> opts out entirely; a breakpoint
         does not, since the phone is still a sheet.
     </x-section>
-    <x-section title="Mobile Handle" new description="Below sm the modal already behaves as a bottom sheet. handle completes the idiom: a grabber bar on top of the panel, visible only on mobile, that follows the finger and closes the modal when released beyond a quarter of the panel height.">
+    <x-section title="Mobile Handle" new>
         <x-preview language="blade" :contents="$handle">
             <x-modal id="handle-modal" title="TallStackUI" handle>
                 Open this on a phone, or narrow the window below 640px, and drag the grabber bar down to close.
@@ -314,81 +321,76 @@
                 Open Modal
             </x-button>
         </x-preview>
-        <p class="mt-4">The flag also exists as a global default, the inline prop always winning:</p>
-        <x-code class="mt-4" language="php" :contents="$handleConfiguration" />
         <x-warning class="mt-4">
             Below the drag threshold the panel snaps back through its own transition; beyond it the panel keeps sliding
             down and the modal only really closes once it is off-screen. Pulling upwards meets rubber band resistance. A
-            fully centered modal &mdash; <x-block>center</x-block> as <x-block>true</x-block>, not a breakpoint &mdash;
-            never behaves as a bottom sheet, so combining it with <x-block>handle</x-block> throws.
+            fully centered modal, <x-block>center</x-block> as <x-block>true</x-block>, not a breakpoint, never behaves
+            as a bottom sheet, so combining it with <x-block>handle</x-block> throws.
         </x-warning>
     </x-section>
-    <x-section title="Paddingless" new description="Strips the padding of the main slot, leaving it flush against the edges. Header and footer keep theirs.">
+    <x-section title="Paddingless" new>
         <x-preview language="blade" :contents="$paddingless">
             <x-modal id="paddingless-modal" title="TallStackUI" paddingless>
-                <x-table :headers="[
-                    ['index' => 'name', 'label' => 'Name'],
-                    ['index' => 'email', 'label' => 'E-mail'],
-                ]" :rows="[
-                    ['name' => 'Taylor', 'email' => 'taylor@laravel.com'],
-                    ['name' => 'Caleb', 'email' => 'caleb@laravel.com'],
-                ]" />
+                TallStackUI modal with no padding in the body.
             </x-modal>
             <x-button x-on:click="$tsui.open.modal('paddingless-modal')">
                 Open Modal
             </x-button>
         </x-preview>
     </x-section>
-    <x-section title="Footer Alignment" new description="Read from the slot itself. Combining alignments, or mixing one with unwrapped, throws.">
-        <x-preview language="blade" :contents="$footerAlignment">
-            <div class="flex flex-wrap gap-2">
-                <x-modal id="footer-alignment-start" title="TallStackUI">
-                    The footer below is aligned with <b>start</b>.
-                    <x-slot:footer start>
-                        <x-button color="red">Delete</x-button>
-                        <x-button>Save</x-button>
-                    </x-slot:footer>
-                </x-modal>
-                <x-button x-on:click="$tsui.open.modal('footer-alignment-start')">Start</x-button>
+    <x-section title="Footer Alignment" new>
+        <div class="space-y-4">
+            <x-preview language="blade" :contents="$footerAlignment">
+                <div class="flex flex-wrap gap-2">
+                    <x-modal id="footer-alignment-start" title="TallStackUI">
+                        The footer below is aligned with <b>start</b>.
+                        <x-slot:footer start>
+                            <x-button color="red">Delete</x-button>
+                            <x-button>Save</x-button>
+                        </x-slot:footer>
+                    </x-modal>
+                    <x-button x-on:click="$tsui.open.modal('footer-alignment-start')">Start</x-button>
 
-                <x-modal id="footer-alignment-center" title="TallStackUI">
-                    The footer below is aligned with <b>center</b>.
-                    <x-slot:footer center>
-                        <x-button color="red">Delete</x-button>
-                        <x-button>Save</x-button>
-                    </x-slot:footer>
-                </x-modal>
-                <x-button x-on:click="$tsui.open.modal('footer-alignment-center')">Center</x-button>
+                    <x-modal id="footer-alignment-center" title="TallStackUI">
+                        The footer below is aligned with <b>center</b>.
+                        <x-slot:footer center>
+                            <x-button color="red">Delete</x-button>
+                            <x-button>Save</x-button>
+                        </x-slot:footer>
+                    </x-modal>
+                    <x-button x-on:click="$tsui.open.modal('footer-alignment-center')">Center</x-button>
 
-                <x-modal id="footer-alignment-end" title="TallStackUI">
-                    The footer below is aligned with <b>end</b>.
-                    <x-slot:footer end>
-                        <x-button color="red">Delete</x-button>
-                        <x-button>Save</x-button>
-                    </x-slot:footer>
-                </x-modal>
-                <x-button x-on:click="$tsui.open.modal('footer-alignment-end')">End</x-button>
+                    <x-modal id="footer-alignment-end" title="TallStackUI">
+                        The footer below is aligned with <b>end</b>.
+                        <x-slot:footer end>
+                            <x-button color="red">Delete</x-button>
+                            <x-button>Save</x-button>
+                        </x-slot:footer>
+                    </x-modal>
+                    <x-button x-on:click="$tsui.open.modal('footer-alignment-end')">End</x-button>
 
-                <x-modal id="footer-alignment-between" title="TallStackUI">
-                    The footer below is aligned with <b>between</b>.
-                    <x-slot:footer between>
-                        <x-button color="red">Delete</x-button>
-                        <x-button>Save</x-button>
-                    </x-slot:footer>
-                </x-modal>
-                <x-button x-on:click="$tsui.open.modal('footer-alignment-between')">Between</x-button>
-            </div>
-        </x-preview>
-        <x-table class="mt-4" :headers="[
-            ['index' => 'attribute', 'label' => 'Attribute'],
-            ['index' => 'result', 'label' => 'Result'],
-        ]" :rows="[
-            ['attribute' => '(none)', 'result' => 'justify-end, the previous default'],
-            ['attribute' => 'start', 'result' => 'justify-start'],
-            ['attribute' => 'center', 'result' => 'justify-center'],
-            ['attribute' => 'end', 'result' => 'justify-end, written out'],
-            ['attribute' => 'between', 'result' => 'justify-between'],
-            ['attribute' => 'unwrapped', 'result' => 'no aligning wrapper at all'],
-        ]" />
+                    <x-modal id="footer-alignment-between" title="TallStackUI">
+                        The footer below is aligned with <b>between</b>.
+                        <x-slot:footer between>
+                            <x-button color="red">Delete</x-button>
+                            <x-button>Save</x-button>
+                        </x-slot:footer>
+                    </x-modal>
+                    <x-button x-on:click="$tsui.open.modal('footer-alignment-between')">Between</x-button>
+                </div>
+            </x-preview>
+            <x-table class="mt-4" :headers="[
+                ['index' => 'attribute', 'label' => 'Attribute'],
+                ['index' => 'result', 'label' => 'Result'],
+            ]" :rows="[
+                ['attribute' => '(none)', 'result' => 'justify-end, the previous default'],
+                ['attribute' => 'start', 'result' => 'justify-start'],
+                ['attribute' => 'center', 'result' => 'justify-center'],
+                ['attribute' => 'end', 'result' => 'justify-end, written out'],
+                ['attribute' => 'between', 'result' => 'justify-between'],
+                ['attribute' => 'unwrapped', 'result' => 'no aligning wrapper at all'],
+            ]"/>
+        </div>
     </x-section>
+    <x-available-configuration />
 </x-layout>

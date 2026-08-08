@@ -11,6 +11,13 @@ class Dropdown
     </x-dropdown>
     HTML;
 
+    public const string HOVER = <<<'HTML'
+    <x-dropdown text="Open when hover" position="bottom-end" hover>
+        <x-dropdown.items text="Settings" />
+        <x-dropdown.items text="Logout" separator />
+    </x-dropdown>
+    HTML;
+
     public const string POSITIONS = <<<'HTML'
     <!-- Available Positions:
          bottom,

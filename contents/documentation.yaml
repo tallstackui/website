@@ -115,7 +115,6 @@ form:
     - Exclude Step
     - Exclude Color
     - Events
-    - Configuration
   currency:
     - Concept
     - Basic Usage
@@ -458,8 +457,8 @@ ui:
     - Double Mode
     - Multiple Mode
     - Lock Month Year
-    - Other Options
     - Flat Look
+    - Other Options
   card:
     - Basic Usage
     - Header Slot
@@ -625,8 +624,6 @@ ui:
     - Basic Usage
     - Size Shorthands
     - Color Shorthands
-    - Shorthand Caveats
-    - Shorthand Configuration
     - Left & Right Slots
     - Custom Icons
     - Avoid Component Conflict

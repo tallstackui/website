@@ -55,12 +55,12 @@
             <livewire:documentation.ui.errors footer-end />
         </x-preview>
     </x-section>
-    <x-section title="Paddingless" new description="Removes the horizontal padding of the wrapper so the divider between the header and the body runs edge to edge. The title, list and footer recover their own inset, so only the line touches the extremity.">
+    <x-section title="Paddingless" new description="An option to remove the padding of the separator of the header with the body.">
         <x-preview language="blade" :contents="$paddingless">
             <livewire:documentation.ui.errors paddingless />
         </x-preview>
     </x-section>
-    <x-section title="Shadowless & Bordered" new description="shadowless drops the shadow. bordered draws a border following the component color, through the bordered palette of ErrorsColors, so published color classes can override it like any other palette.">
+    <x-section title="Shadowless & Bordered" new>
         <x-preview language="blade" :contents="$shadowlessAndBordered">
             <div class="space-y-2">
                 <livewire:documentation.ui.errors shadowless />

@@ -152,25 +152,22 @@ class Card
     HTML;
 
     public const string FLAT = <<<'HTML'
-    {{-- shadowless alone drops the shadow --}}
     <x-card shadowless>
         TallStackUI
     </x-card>
 
-    {{-- bordered alone draws a border and keeps the shadow --}}
     <x-card bordered>
         TallStackUI
     </x-card>
 
-    {{-- Together they are the flat look --}}
     <x-card shadowless bordered>
         TallStackUI
     </x-card>
     HTML;
 
     public const string PADDINGLESS = <<<'HTML'
-    <x-card paddingless>
-        <x-table :$headers :$rows />
+    <x-card header="Card without padding in the body" paddingless>
+        TallStackUI
     </x-card>
     HTML;
 
