@@ -5,31 +5,25 @@
                 <span class="landing-eyebrow-index">02</span>
                 Theme
             </p>
-            <h2 class="landing-section-heading mt-5">
-                Dark mode, <span class="landing-serif">actually</span> dark.
-            </h2>
+            <h2 class="landing-section-heading mt-5">Dark mode, <span class="landing-serif">actually</span> dark.</h2>
             <p class="landing-section-subheading mt-5">
-                The old dark palette leaned cold and blue. 4.0 ships a pure neutral
-                scale anchored near black, with a visible step between page, surface
-                and border. Secondary is now a true Violet accent next to the Indigo
-                primary, so overriding your brand colors repaints accents, never
-                the chrome.
+                The old dark palette leaned cold and blue. 4.0 ships a pure neutral scale anchored near black, with a
+                visible step between page, surface and border. Secondary is now a true Violet accent next to the Indigo
+                primary, so overriding your brand colors repaints accents, never the chrome.
             </p>
 
             <div class="mt-8 flex flex-wrap items-center gap-3">
-                <span class="inline-flex items-center gap-2 rounded-full border border-gray-200 py-1 pl-1.5 pr-3 font-mono text-[0.68rem] text-gray-600 dark:border-dark-700 dark:text-dark-300">
+                <span class="dark:border-dark-700 dark:text-dark-300 inline-flex items-center gap-2 rounded-full border border-gray-200 py-1 pr-3 pl-1.5 font-mono text-[0.68rem] text-gray-600">
                     <span class="h-4 w-4 rounded-full bg-indigo-500"></span> primary · indigo
                 </span>
-                <span class="inline-flex items-center gap-2 rounded-full border border-gray-200 py-1 pl-1.5 pr-3 font-mono text-[0.68rem] text-gray-600 dark:border-dark-700 dark:text-dark-300">
+                <span class="dark:border-dark-700 dark:text-dark-300 inline-flex items-center gap-2 rounded-full border border-gray-200 py-1 pr-3 pl-1.5 font-mono text-[0.68rem] text-gray-600">
                     <span class="h-4 w-4 rounded-full bg-violet-500"></span> secondary · violet
                 </span>
             </div>
 
-            <div class="mt-8 flex items-center gap-4 rounded-xl border border-gray-200 p-4 dark:border-dark-700">
+            <div class="dark:border-dark-700 mt-8 flex items-center gap-4 rounded-xl border border-gray-200 p-4">
                 <x-theme-switch simple />
-                <p class="text-sm text-gray-500 dark:text-dark-400">
-                    This page runs on the 4.0 palette. Flip it.
-                </p>
+                <p class="dark:text-dark-400 text-sm text-gray-500">This page runs on the 4.0 palette. Flip it.</p>
             </div>
         </div>
 

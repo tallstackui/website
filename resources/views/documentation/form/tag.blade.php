@@ -1,21 +1,19 @@
 @php
-    foreach (apply_prefix($__data) as $key => $value) $$key = $value;
+    foreach (apply_prefix($__data) as $key => $value) {
+        $$key = $value;
+    }
 @endphp
 
 <x-layout :$content ai="form/tag">
-    <x-slot:title>
-        Form Tag
-    </x-slot:title>
-    <x-slot:description>
-        Form tag component.
-    </x-slot:description>
+    <x-slot:title>Form Tag</x-slot:title>
+    <x-slot:description>Form tag component.</x-slot:description>
     <x-slot:customization>
         <livewire:customization :$customization component="Form\Tag" />
     </x-slot:customization>
     <x-warning class="mb-4">
-        In desktop devices the tags can be inserted by pressing the <b>enter</b> or <b>comma</b> keys,
-        and can be removed by pressing the <b>backspace</b> key. In mobile devices the tags can only be inserted
-        using <b>enter</b> key.
+        In desktop devices the tags can be inserted by pressing the <b>enter</b> or <b>comma</b> keys, and can be
+        removed by pressing the <b>backspace</b> key. In mobile devices the tags can only be inserted using
+        <b>enter</b> key.
     </x-warning>
     <x-section title="Basic Usage">
         <x-preview language="blade" :contents="$basic">
@@ -24,41 +22,40 @@
     </x-section>
     <x-section title="Label & Hint">
         <x-preview language="blade" :contents="$labelHint">
-            <x-tag label="Frameworks"
-                   hint="Select your preferred frameworks"
-                   :value="['Laravel', 'Symfony', 'CodeIgniter']" />
+            <x-tag
+                label="Frameworks"
+                hint="Select your preferred frameworks"
+                :value="['Laravel', 'Symfony', 'CodeIgniter']"
+            />
         </x-preview>
     </x-section>
     <x-section title="Limit Options" description="An option to limit the number of tags that can be added.">
         <x-preview language="blade" :contents="$limit">
-            <x-tag label="Frameworks"
-                   hint="Select your preferred frameworks"
-                   :limit="2"
-                   :value="['Laravel']" />
+            <x-tag label="Frameworks" hint="Select your preferred frameworks" :limit="2" :value="['Laravel']" />
         </x-preview>
     </x-section>
-    <x-section title="Lazy" description="An option to silently reject tags whose typed content is shorter than the given minimum.">
+    <x-section
+        title="Lazy"
+        description="An option to silently reject tags whose typed content is shorter than the given minimum."
+    >
         <x-preview language="blade" :contents="$lazy">
-            <x-tag label="Frameworks"
-                   hint="Tags with less than 3 characters will be silently rejected"
-                   :lazy="3" />
+            <x-tag label="Frameworks" hint="Tags with less than 3 characters will be silently rejected" :lazy="3" />
         </x-preview>
     </x-section>
     <x-section title="Prefix" description="An option to set a single-character prefix.">
         <x-preview language="blade" :contents="$prefix">
-            <x-tag prefix="#"
-                   :value="['Laravel', 'Symfony', 'CodeIgniter']" />
+            <x-tag prefix="#" :value="['Laravel', 'Symfony', 'CodeIgniter']" />
         </x-preview>
-        <x-warning class="mt-4">
-            The prefix must be a single character.
-        </x-warning>
+        <x-warning class="mt-4"> The prefix must be a single character. </x-warning>
     </x-section>
     <x-section title="Events">
         <x-preview language="blade" :contents="$events">
-            <x-tag :value="['Laravel', 'Symfony', 'CodeIgniter']"
-                   x-on:add="alert(`Introduced: ${$event.detail.tag}`)"
-                   x-on:remove="alert(`Removed: ${$event.detail.tag}`)"
-                   x-on:erase="alert(`Erased: ${$event.detail.tags}`)" />
+            <x-tag
+                :value="['Laravel', 'Symfony', 'CodeIgniter']"
+                x-on:add="alert(`Introduced: ${$event.detail.tag}`)"
+                x-on:remove="alert(`Removed: ${$event.detail.tag}`)"
+                x-on:erase="alert(`Erased: ${$event.detail.tags}`)"
+            />
         </x-preview>
     </x-section>
     <x-section title="Options" description="An option to display a pre-existing list of tags">
@@ -66,7 +63,10 @@
             <x-tag :options="['laravel', 'livewire', 'alpine', 'tailwind']" />
         </x-preview>
     </x-section>
-    <x-section title="Slot After" description="An option to display content when dealing with a search that returns no results.">
+    <x-section
+        title="Slot After"
+        description="An option to display content when dealing with a search that returns no results."
+    >
         <x-preview language="blade" :contents="$afterSlot">
             <x-tag :options="['laravel', 'livewire', 'alpine', 'tailwind']">
                 <x-slot:after>

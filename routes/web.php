@@ -1,13 +1,15 @@
 <?php
 
-use App\Enums\Example;
-use App\Http\Controllers\AsyncUploadDemoController;
-use App\Http\Controllers\PageController;
-use App\Http\Middleware\ShareVersionVariable;
-use App\Support\ComponentDocumentation;
+declare(strict_types=1);
+
 use App\Support\Llms;
+use App\Enums\Example;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Route;
+use App\Support\ComponentDocumentation;
+use App\Http\Controllers\PageController;
+use App\Http\Middleware\ShareVersionVariable;
+use App\Http\Controllers\AsyncUploadDemoController;
 
 Route::redirect('/docs', '/docs/installation');
 Route::redirect('/contribution', '/docs/contribution');
@@ -65,7 +67,7 @@ Route::get('/ai/{name}.md', function (string $name, ComponentDocumentation $docu
     abort_if($response->failed(), 404);
 
     return response($response->body(), 200, [
-        'Content-Type' => 'text/plain; charset=UTF-8',
+        'Content-Type'  => 'text/plain; charset=UTF-8',
         'Cache-Control' => 'no-cache, no-store, must-revalidate',
     ]);
 })->where('name', '.*')->name('ai.component');

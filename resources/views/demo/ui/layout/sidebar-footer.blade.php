@@ -8,7 +8,11 @@
             <x-tsui-side-bar>
                 <x-slot:brand>
                     <div class="flex justify-center py-4">
-                        <img src="{{ asset('assets/images/android-chrome-512x512.png') }}" alt="Brand" class="h-10 w-10" />
+                        <img
+                            src="{{ asset('assets/images/android-chrome-512x512.png') }}"
+                            alt="Brand"
+                            class="h-10 w-10"
+                        />
                     </div>
                 </x-slot:brand>
 
@@ -21,8 +25,9 @@
             </x-tsui-side-bar>
         </x-slot:menu>
 
-        <p class="text-sm text-slate-500 dark:text-dark-400">
-            The version label is pinned at the bottom of the sidebar — that's the <code class="font-mono">footer</code> slot of <code class="font-mono">&lt;x-side-bar&gt;</code>.
+        <p class="dark:text-dark-400 text-sm text-slate-500">
+            The version label is pinned at the bottom of the sidebar — that's the
+            <code class="font-mono">footer</code> slot of <code class="font-mono">&lt;x-side-bar&gt;</code>.
         </p>
     </x-tsui-layout>
 </x-demo-layout>

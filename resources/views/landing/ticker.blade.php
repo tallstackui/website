@@ -58,12 +58,12 @@
 
     $tickerNew = ['Chart', 'Editor', 'Gallery', 'QR Code', 'Spinner', 'Upload Async'];
 
-    $tickerTop = collect($tickerLinked)->take(28);
+    $tickerTop    = collect($tickerLinked)->take(28);
     $tickerBottom = collect($tickerLinked)->skip(28);
 @endphp
 
 <section class="landing-section" aria-label="Component index">
-    <p class="mb-6 text-center font-mono text-[0.65rem] font-medium uppercase tracking-[0.18em] text-gray-400 dark:text-dark-500">
+    <p class="dark:text-dark-500 mb-6 text-center font-mono text-[0.65rem] font-medium tracking-[0.18em] text-gray-400 uppercase">
         The whole catalog, one install
     </p>
 
@@ -71,10 +71,12 @@
         <div class="landing-ticker-track landing-ticker-track--left">
             @foreach ([false, true] as $clone)
                 @foreach ($tickerTop as $name => [$main, $children])
-                    <a href="{{ route('documentation', [$main, $children]) }}"
-                       wire:navigate
-                       @if ($clone) aria-hidden="true" tabindex="-1" @endif
-                       class="landing-ticker-item">
+                    <a
+                        href="{{ route('documentation', [$main, $children]) }}"
+                        wire:navigate
+                        @if ($clone) aria-hidden="true" tabindex="-1" @endif
+                        class="landing-ticker-item"
+                    >
                         {{ $name }}
                     </a>
                 @endforeach
@@ -92,10 +94,12 @@
         <div class="landing-ticker-track landing-ticker-track--right">
             @foreach ([false, true] as $clone)
                 @foreach ($tickerBottom as $name => [$main, $children])
-                    <a href="{{ route('documentation', [$main, $children]) }}"
-                       wire:navigate
-                       @if ($clone) aria-hidden="true" tabindex="-1" @endif
-                       class="landing-ticker-item">
+                    <a
+                        href="{{ route('documentation', [$main, $children]) }}"
+                        wire:navigate
+                        @if ($clone) aria-hidden="true" tabindex="-1" @endif
+                        class="landing-ticker-item"
+                    >
                         {{ $name }}
                     </a>
                 @endforeach

@@ -1,14 +1,12 @@
 @php
-    foreach (apply_prefix($__data) as $key => $value) $$key = $value;
+    foreach (apply_prefix($__data) as $key => $value) {
+        $$key = $value;
+    }
 @endphp
 
 <x-layout :$content ai="form/input">
-    <x-slot:title>
-        Form Input
-    </x-slot:title>
-    <x-slot:description>
-        Form input component.
-    </x-slot:description>
+    <x-slot:title>Form Input</x-slot:title>
+    <x-slot:description>Form input component.</x-slot:description>
     <x-slot:customization>
         <livewire:customization :$customization component="Form\Input" />
     </x-slot:customization>
@@ -16,22 +14,21 @@
         <x-preview language="blade" :contents="$basic">
             <x-input />
         </x-preview>
-        <x-warning class="mt-4">
-            The input type will be set to <b>text</b> when not specified.
-        </x-warning>
+        <x-warning class="mt-4"> The input type will be set to <b>text</b> when not specified. </x-warning>
     </x-section>
     <x-section title="Label & Hint">
         <div class="space-y-4">
             <x-preview language="blade" :contents="$labelHint">
                 <x-input label="Name" hint="Insert your name" />
             </x-preview>
-            <p>
-                You can also set raw HTML in the <x-block>label</x-block> attribute:
-            </p>
+            <p>You can also set raw HTML in the <x-block>label</x-block> attribute:</p>
             <x-code language="blade" :contents="$labelRawHtml" />
         </div>
     </x-section>
-    <x-section title="Required Label Indicator" description="An option to display an asterisk indicating that the field is required.">
+    <x-section
+        title="Required Label Indicator"
+        description="An option to display an asterisk indicating that the field is required."
+    >
         <x-preview language="blade" :contents="$asterisk">
             <x-input label="Name *" hint="Insert your name" />
         </x-preview>
@@ -58,9 +55,9 @@
     <x-section title="Button Support">
         <div class="space-y-4">
             <p>
-                You can place buttons inside the <x-block>prefix</x-block> and <x-block>suffix</x-block> slots
-                by adding the <x-block>button</x-block> attribute. This activates addon mode, where the button
-                sits flush against the input with a unified ring and focus style:
+                You can place buttons inside the <x-block>prefix</x-block> and <x-block>suffix</x-block> slots by adding
+                the <x-block>button</x-block> attribute. This activates addon mode, where the button sits flush against
+                the input with a unified ring and focus style:
             </p>
             <x-preview language="blade" :contents="$buttonAddonSuffix">
                 <x-input label="Search">
@@ -108,10 +105,11 @@
                 <x-input label="Name" invalidate />
             </x-preview>
             <x-warning class="mt-4">
-                This option is available for all components that can display form validation errors,
-                basically all form components. Additionally, you can enable the "invalidate" state
-                globally by setting it via the <a href="{{ route('documentation', ['configuration']) }}" class="underline" wire:navigate>configuration file.</a> This way, all components that can
-                display validation errors will no longer display them.
+                This option is available for all components that can display form validation errors, basically all form
+                components. Additionally, you can enable the "invalidate" state globally by setting it via the
+                <a href="{{ route('documentation', ['configuration']) }}" class="underline" wire:navigate
+                    >configuration file.</a>
+                This way, all components that can display validation errors will no longer display them.
             </x-warning>
         </div>
     </x-section>

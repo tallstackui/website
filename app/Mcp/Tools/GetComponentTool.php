@@ -1,12 +1,14 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Mcp\Tools;
 
-use App\Support\ComponentDocumentation;
-use Illuminate\Contracts\JsonSchema\JsonSchema;
 use Laravel\Mcp\Request;
 use Laravel\Mcp\Response;
 use Laravel\Mcp\Server\Tool;
+use App\Support\ComponentDocumentation;
+use Illuminate\Contracts\JsonSchema\JsonSchema;
 use Laravel\Mcp\Server\Tools\Annotations\IsReadOnly;
 
 #[IsReadOnly]
@@ -20,12 +22,12 @@ class GetComponentTool extends Tool
     {
         $request->validate([
             'component' => ['required', 'string', 'min:2'],
-            'section' => ['nullable', 'string', 'min:2'],
+            'section'   => ['nullable', 'string', 'min:2'],
         ]);
 
         $service = app(ComponentDocumentation::class);
         $section = $request->get('section');
-        $result = $service->get($request->get('component'), $section);
+        $result  = $service->get($request->get('component'), $section);
 
         if (! $result) {
             $suggestions = $service->suggestions($request->get('component'))->implode('`, `');
@@ -58,7 +60,7 @@ class GetComponentTool extends Tool
     {
         return [
             'component' => $schema->string()->required()->description('Component name (e.g., "Alert", "Modal", "Select Styled", "Input")'),
-            'section' => $schema->string()->description('Optional section heading to fetch only that part of the documentation (case-insensitive partial match). Examples: "Attributes", "Soft Customization", "Basic Usage"'),
+            'section'   => $schema->string()->description('Optional section heading to fetch only that part of the documentation (case-insensitive partial match). Examples: "Attributes", "Soft Customization", "Basic Usage"'),
         ];
     }
 }

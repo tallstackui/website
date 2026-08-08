@@ -1,29 +1,23 @@
 @php
-    foreach (apply_prefix($__data) as $key => $value) $$key = $value;
+    foreach (apply_prefix($__data) as $key => $value) {
+        $$key = $value;
+    }
 @endphp
 
 <x-layout :$content ai="link">
-    <x-slot:title>
-        Link
-    </x-slot:title>
-    <x-slot:description>
-        Link component.
-    </x-slot:description>
+    <x-slot:title>Link</x-slot:title>
+    <x-slot:description>Link component.</x-slot:description>
     <x-slot:customization>
         <livewire:customization :$customization component="Link" />
     </x-slot:customization>
     <x-section title="Basic Usage">
         <x-preview language="blade" :contents="$basic">
             <div class="flex flex-col">
-                <x-link :href="route('documentation', ['ui', 'link'])">
-                    TallStackUI
-                </x-link>
+                <x-link :href="route('documentation', ['ui', 'link'])"> TallStackUI </x-link>
                 <x-link :href="route('documentation', ['ui', 'link'])" />
             </div>
         </x-preview>
-        <x-warning class="mt-4">
-            The href attribute will be mandatory unless the fragment is defined.
-        </x-warning>
+        <x-warning class="mt-4"> The href attribute will be mandatory unless the fragment is defined. </x-warning>
     </x-section>
     <x-section title="Size Variations">
         <x-preview language="blade" :contents="$sizes">
@@ -36,13 +30,13 @@
     <x-section title="Icon Slot">
         <x-preview language="blade" :contents="$icons">
             <div class="flex items-center gap-x-2">
-                <x-link :href="route('documentation', ['ui', 'link'])"
-                        text="TallStackUI"
-                        icon="link" />
-                <x-link :href="route('documentation', ['ui', 'link'])"
-                        text="TallStackUI"
-                        icon="arrow-up-right"
-                        position="right" />
+                <x-link :href="route('documentation', ['ui', 'link'])" text="TallStackUI" icon="link" />
+                <x-link
+                    :href="route('documentation', ['ui', 'link'])"
+                    text="TallStackUI"
+                    icon="arrow-up-right"
+                    position="right"
+                />
             </div>
         </x-preview>
     </x-section>
@@ -56,15 +50,22 @@
             </div>
         </x-preview>
     </x-section>
-    <x-section title="Query String & Fragment Options" description="Hover the mouse to see the options in the browser link preview.">
+    <x-section
+        title="Query String & Fragment Options"
+        description="Hover the mouse to see the options in the browser link preview."
+    >
         <x-preview language="blade" :contents="$queryFragment">
             <div class="flex items-center gap-x-2">
-                <x-link :href="route('documentation', ['ui', 'link'])"
-                        text="TallStackUI"
-                        :query="['status' => 'active']" />
-                <x-link :href="route('documentation', ['ui', 'link'])"
-                        text="TallStackUI"
-                        fragment="query-string-fragment-options" />
+                <x-link
+                    :href="route('documentation', ['ui', 'link'])"
+                    text="TallStackUI"
+                    :query="['status' => 'active']"
+                />
+                <x-link
+                    :href="route('documentation', ['ui', 'link'])"
+                    text="TallStackUI"
+                    fragment="query-string-fragment-options"
+                />
             </div>
         </x-preview>
     </x-section>
@@ -110,7 +111,10 @@
             </div>
         </x-preview>
     </x-section>
-    <x-section title="Livewire SPA Navigation" description="An option to easily add Livewire 3 navigation effects in SPA mode.">
+    <x-section
+        title="Livewire SPA Navigation"
+        description="An option to easily add Livewire 3 navigation effects in SPA mode."
+    >
         <x-preview language="blade" :contents="$navigate">
             <div class="flex flex-col gap-x-2">
                 <x-link :href="route('documentation', ['ui', 'link'])" text="Navigate" navigate />

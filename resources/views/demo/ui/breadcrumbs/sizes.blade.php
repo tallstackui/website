@@ -7,7 +7,7 @@
 @endphp
 
 <x-demo-layout title="Breadcrumbs Sizes">
-    <div class="mx-auto max-w-3xl px-6 py-10 space-y-4">
+    <div class="mx-auto max-w-3xl space-y-4 px-6 py-10">
         <x-breadcrumbs xs :items="$items" />
         <x-breadcrumbs sm :items="$items" />
         <x-breadcrumbs :items="$items" />

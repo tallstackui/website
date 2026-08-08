@@ -1,36 +1,38 @@
 @php
-    foreach (apply_prefix($__data) as $key => $value) $$key = $value;
+    foreach (apply_prefix($__data) as $key => $value) {
+        $$key = $value;
+    }
 @endphp
 
 <x-layout :$content ai="reaction">
-    <x-slot:title>
-        Reaction
-    </x-slot:title>
-    <x-slot:description>
-        Reaction component.
-    </x-slot:description>
+    <x-slot:title>Reaction</x-slot:title>
+    <x-slot:description>Reaction component.</x-slot:description>
     <x-slot:customization>
         <livewire:customization :$customization component="Reaction" />
     </x-slot:customization>
     <x-section title="Concept" disable-copy>
         <p>
-            In the modern world many applications have blogs, posts or articles. This
-            way they need to capture the reaction of their readers to feel how welcome
-            or hated that content was. The reaction component is the combination of
-            the <a href="{{ route('documentation', ['ui', 'tooltip']) }}" wire:navigate class="underline">Tooltip</a>
+            In the modern world many applications have blogs, posts or articles. This way they need to capture the
+            reaction of their readers to feel how welcome or hated that content was. The reaction component is the
+            combination of the
+            <a href="{{ route('documentation', ['ui', 'tooltip']) }}" wire:navigate class="underline">Tooltip</a>
             component with emoji icons offered by the
-            <a href="https://googlefonts.github.io/noto-emoji-animation/" target="_blank" class="underline">Noto Emoji Animation project.</a>
+            <a href="https://googlefonts.github.io/noto-emoji-animation/" target="_blank" class="underline"
+                >Noto Emoji Animation project.</a>
         </p>
     </x-section>
     <x-section title="Persist Reaction" disable-copy>
         <p>
-            The logic for persisting the reaction in a database, such as SQL, SQLite or Redis (cache)
-            is up to its own algorithm. When an emoji is pressed, the <x-block>react</x-block> method
-            is triggered, receiving the name of the reaction as a parameter.
+            The logic for persisting the reaction in a database, such as SQL, SQLite or Redis (cache) is up to its own
+            algorithm. When an emoji is pressed, the <x-block>react</x-block> method is triggered, receiving the name of
+            the reaction as a parameter.
         </p>
         <div class="mt-4">
             <x-code :contents="$method" />
-            <p>You can change the method that will receive the reaction using the <x-block>react-method</x-block> parameter directly in the component:</p>
+            <p>
+                You can change the method that will receive the reaction using the
+                <x-block>react-method</x-block> parameter directly in the component:
+            </p>
             <x-code language="blade" :contents="$usingOtherMethodName" />
         </div>
     </x-section>
@@ -76,8 +78,8 @@
     <x-section title="Panel" new disable-copy>
         <div class="space-y-4">
             <p>
-                The emoji panel used to be tippy's default theme, which is a black box. It is a real panel now, and
-                like the tooltip balloon it is built by JavaScript and therefore outside
+                The emoji panel used to be tippy's default theme, which is a black box. It is a real panel now, and like
+                the tooltip balloon it is built by JavaScript and therefore outside
                 <x-block>customize()</x-block>. It is styled through <x-block>[data-tsui-popover]</x-block>.
             </p>
             <x-warning warning title="The markup changed shape">

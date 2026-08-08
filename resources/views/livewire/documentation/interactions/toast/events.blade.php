@@ -1,10 +1,13 @@
 <?php
 
+declare(strict_types=1);
+
 use Livewire\Component;
 use Livewire\Attributes\On;
 use TallStackUi\Traits\Interactions;
 
-new class extends Component {
+new class extends Component
+{
     use Interactions;
 
     public function confirm(): void
@@ -29,19 +32,21 @@ new class extends Component {
 
 ?>
 
-<div x-on:toast:accepted.window="show($event.detail)"
-     x-on:toast:rejected.window="show($event.detail)"
-     x-on:toast:timeout.window="show($event.detail)">
+<div
+    x-on:toast:accepted.window="show($event.detail)"
+    x-on:toast:rejected.window="show($event.detail)"
+    x-on:toast:timeout.window="show($event.detail)"
+>
     <x-button color="red" wire:click="confirm">Confirm</x-button>
 </div>
 
 @script
-<script>
-    show = (toast) => {
-        // This approach was used to avoid show alerts for other toasts.
-        if (toast.reference !== @js($__livewire->__id)) return;
+    <script>
+        show = (toast) => {
+            // This approach was used to avoid show alerts for other toasts.
+            if (toast.reference !== @js($__livewire->__id)) return;
 
-        alert(toast.description);
-    }
-</script>
+            alert(toast.description);
+        };
+    </script>
 @endscript

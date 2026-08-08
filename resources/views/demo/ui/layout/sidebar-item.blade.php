@@ -8,7 +8,11 @@
             <x-tsui-side-bar collapsible>
                 <x-slot:brand>
                     <div class="flex justify-center py-4">
-                        <img src="{{ asset('assets/images/android-chrome-512x512.png') }}" alt="Brand" class="h-10 w-10" />
+                        <img
+                            src="{{ asset('assets/images/android-chrome-512x512.png') }}"
+                            alt="Brand"
+                            class="h-10 w-10"
+                        />
                     </div>
                 </x-slot:brand>
 
@@ -42,8 +46,11 @@
             </x-tsui-side-bar>
         </x-slot:menu>
 
-        <p class="text-sm text-slate-500 dark:text-dark-400">
-            The sidebar showcases item types in one go: a <b>current</b> item, items with <b>badges</b> (counts) using two badge colors, two <b>separator</b> styles (<code class="font-mono">line</code> and <code class="font-mono">line-right</code>), grouped items (<i>Settings</i> opened, <i>Account</i> closed), and an item using a raw <code class="font-mono">href</code>.
+        <p class="dark:text-dark-400 text-sm text-slate-500">
+            The sidebar showcases item types in one go: a <b>current</b> item, items with <b>badges</b> (counts) using
+            two badge colors, two <b>separator</b> styles (<code class="font-mono">line</code> and
+            <code class="font-mono">line-right</code>), grouped items (<i>Settings</i> opened, <i>Account</i> closed),
+            and an item using a raw <code class="font-mono">href</code>.
         </p>
     </x-tsui-layout>
 </x-demo-layout>

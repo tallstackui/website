@@ -1,14 +1,12 @@
 @php
-    foreach (apply_prefix($__data) as $key => $value) $$key = $value;
+    foreach (apply_prefix($__data) as $key => $value) {
+        $$key = $value;
+    }
 @endphp
 
 <x-layout :$content ai="spinner">
-    <x-slot:title>
-        Spinner
-    </x-slot:title>
-    <x-slot:description>
-        Spinner component.
-    </x-slot:description>
+    <x-slot:title>Spinner</x-slot:title>
+    <x-slot:description>Spinner component.</x-slot:description>
     <x-slot:customization>
         <livewire:customization :$customization component="Spinner" />
     </x-slot:customization>
@@ -36,7 +34,11 @@
             </div>
         </x-preview>
     </x-section>
-    <x-section title="Textual Variations" new description="shimmer and caret animate the text, so text or the default slot is required. terminal and thinking draw their own.">
+    <x-section
+        title="Textual Variations"
+        new
+        description="shimmer and caret animate the text, so text or the default slot is required. terminal and thinking draw their own."
+    >
         <x-preview language="blade" :contents="$textual">
             <div class="flex flex-col gap-4">
                 <x-spinner shimmer text="Loading the report" />
@@ -56,7 +58,11 @@
             </div>
         </x-preview>
     </x-section>
-    <x-section title="Colors" new description="Every variation paints from currentColor, so one text-* class drives borders, dots, bars and gradients at once.">
+    <x-section
+        title="Colors"
+        new
+        description="Every variation paints from currentColor, so one text-* class drives borders, dots, bars and gradients at once."
+    >
         <x-preview language="blade" :contents="$colors">
             <div class="flex flex-wrap items-center gap-8">
                 <x-spinner color="red" />
@@ -67,7 +73,11 @@
             </div>
         </x-preview>
     </x-section>
-    <x-section title="Label" new description="The root carries role=&quot;status&quot;. Without a label a sr-only fallback is emitted.">
+    <x-section
+        title="Label"
+        new
+        description='The root carries role="status". Without a label a sr-only fallback is emitted.'
+    >
         <x-preview language="blade" :contents="$label">
             <div class="flex flex-col gap-4">
                 <x-spinner />
@@ -76,7 +86,11 @@
             </div>
         </x-preview>
     </x-section>
-    <x-section title="Thinking" new description="The first frame renders server-side, so there is no gap before AlpineJS boots.">
+    <x-section
+        title="Thinking"
+        new
+        description="The first frame renders server-side, so there is no gap before AlpineJS boots."
+    >
         <x-preview language="blade" :contents="$thinking">
             <div class="flex flex-col gap-4">
                 <x-spinner thinking />
@@ -100,15 +114,18 @@
         <x-code language="php" :contents="$configuration" />
     </x-section>
     <x-section title="Spinner, Loading & Skeleton" new description="Three different moments. None replaces another.">
-        <x-table :headers="[
+        <x-table
+            :headers="[
             ['index' => 'state', 'label' => 'State'],
             ['index' => 'tool', 'label' => 'Tool'],
             ['index' => 'situation', 'label' => 'Situation'],
-        ]" :rows="[
+        ]"
+            :rows="[
             ['state' => 'First paint, no data yet', 'tool' => 'skeleton', 'situation' => '#[Lazy] placeholder, initial load'],
             ['state' => 'Refetch, data already on screen', 'tool' => 'loading', 'situation' => 'Sort, paginate, search, save'],
             ['state' => 'Anything else that has to spin', 'tool' => 'spinner', 'situation' => 'Inline, in a button, in an empty state'],
-        ]">
+        ]"
+        >
             @interact('column_tool', $row)
                 <x-block>{{ $row['tool'] }}</x-block>
             @endinteract

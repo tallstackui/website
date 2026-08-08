@@ -1,7 +1,9 @@
 <?php
 
-use App\Console\Commands\DeleteLivewireTemporaryUpload;
+declare(strict_types=1);
+
 use Illuminate\Support\Facades\Schedule;
+use App\Console\Commands\DeleteLivewireTemporaryUpload;
 
 Schedule::command(DeleteLivewireTemporaryUpload::class)->hourly();
 

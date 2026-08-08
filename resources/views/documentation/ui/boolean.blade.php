@@ -1,21 +1,19 @@
 @php
-    foreach (apply_prefix($__data) as $key => $value) $$key = $value;
+    foreach (apply_prefix($__data) as $key => $value) {
+        $$key = $value;
+    }
 @endphp
 
 <x-layout :$content ai="boolean">
-    <x-slot:title>
-        Boolean
-    </x-slot:title>
-    <x-slot:description>
-        Boolean component.
-    </x-slot:description>
+    <x-slot:title>Boolean</x-slot:title>
+    <x-slot:description>Boolean component.</x-slot:description>
     <x-slot:customization>
         <livewire:customization :$customization component="Boolean" />
     </x-slot:customization>
     <x-section title="Concept" disable-copy>
         <p>
-            In many cases when we are building the UI of an application, we need to
-            display icons according to the boolean status of something.
+            In many cases when we are building the UI of an application, we need to display icons according to the
+            boolean status of something.
         </p>
     </x-section>
     <x-section title="Basic Usage">

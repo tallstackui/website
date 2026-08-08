@@ -1,12 +1,14 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Mcp\Tools;
 
-use App\Support\ComponentDocumentation;
-use Illuminate\Contracts\JsonSchema\JsonSchema;
 use Laravel\Mcp\Request;
 use Laravel\Mcp\Response;
 use Laravel\Mcp\Server\Tool;
+use App\Support\ComponentDocumentation;
+use Illuminate\Contracts\JsonSchema\JsonSchema;
 use Laravel\Mcp\Server\Tools\Annotations\IsReadOnly;
 
 #[IsReadOnly]
@@ -20,10 +22,10 @@ class SearchCustomizationTool extends Tool
     {
         $request->validate([
             'component' => ['required_without:query', 'nullable', 'string', 'min:2'],
-            'query' => ['required_without:component', 'nullable', 'string', 'min:2'],
+            'query'     => ['required_without:component', 'nullable', 'string', 'min:2'],
         ], [
             'component.required_without' => 'Provide at least one argument: `component` or `query`. Calling without filters would dump the customization blocks of every component.',
-            'query.required_without' => 'Provide at least one argument: `component` or `query`. Calling without filters would dump the customization blocks of every component.',
+            'query.required_without'     => 'Provide at least one argument: `component` or `query`. Calling without filters would dump the customization blocks of every component.',
         ]);
 
         $service = app(ComponentDocumentation::class);
@@ -52,7 +54,7 @@ class SearchCustomizationTool extends Tool
     {
         return [
             'component' => $schema->string()->description('Filter to a specific component (e.g., "Alert", "Modal")'),
-            'query' => $schema->string()->description('Search within customization blocks by name or purpose (e.g., "wrapper", "icon")'),
+            'query'     => $schema->string()->description('Search within customization blocks by name or purpose (e.g., "wrapper", "icon")'),
         ];
     }
 }

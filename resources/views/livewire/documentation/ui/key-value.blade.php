@@ -1,27 +1,30 @@
 <?php
 
+declare(strict_types=1);
+
 use Livewire\Component;
 use TallStackUi\Traits\Interactions;
 
-new class extends Component {
+new class extends Component
+{
     use Interactions;
 
     public ?int $model = 1;
 
     public array $metadata = [
         [
-            'key' => 'php',
+            'key'   => 'php',
             'value' => 'Laravel',
         ],
         [
-            'key' => 'vuejs',
+            'key'   => 'vuejs',
             'value' => 'NuxtJS',
         ],
     ];
 
     public array $empty = [
         [
-            'key' => '',
+            'key'   => '',
             'value' => '',
         ],
     ];
@@ -53,15 +56,10 @@ new class extends Component {
         <x-key-value wire:model="metadata" icon="x-mark" deletable delete-method="deleted" />
     @elseif ($model === 8)
         <x-key-value wire:model="metadata">
-            <x-slot:header>
-                Header Slot
-            </x-slot:header>
+            <x-slot:header>Header Slot</x-slot:header>
         </x-key-value>
     @elseif ($model === 9)
-        <x-key-value wire:model="metadata"
-                     x-on:add="alert('Added')"
-                     x-on:remove="alert('Removed')"
-                     deletable />
+        <x-key-value wire:model="metadata" x-on:add="alert('Added')" x-on:remove="alert('Removed')" deletable />
     @elseif ($model === 10)
         <x-key-value wire:model="metadata" compact />
     @elseif ($model === 11)

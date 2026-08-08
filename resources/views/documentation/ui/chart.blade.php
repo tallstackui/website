@@ -1,14 +1,12 @@
 @php
-    foreach (apply_prefix($__data) as $key => $value) $$key = $value;
+    foreach (apply_prefix($__data) as $key => $value) {
+        $$key = $value;
+    }
 @endphp
 
 <x-layout :$content ai="chart">
-    <x-slot:title>
-        Chart
-    </x-slot:title>
-    <x-slot:description>
-        Chart component.
-    </x-slot:description>
+    <x-slot:title>Chart</x-slot:title>
+    <x-slot:description>Chart component.</x-slot:description>
     <x-slot:customization>
         <livewire:customization :$customization component="Chart" />
     </x-slot:customization>
@@ -27,107 +25,153 @@
                 <x-chart :series="[10, 40, 25, 60, 30, 80]" type="area" />
                 <x-chart :series="[10, 40, 25, 60, 30, 80]" type="line" />
                 <x-chart :series="[10, 40, 25, 60, 30, 80]" type="bar" />
-                <x-chart :series="[35, 25, 20, 20]" :labels="['Direct', 'Organic', 'Social', 'Referral']" type="pie" legend />
-                <x-chart :series="[35, 25, 20, 20]" :labels="['Direct', 'Organic', 'Social', 'Referral']" type="donut" legend />
+                <x-chart
+                    :series="[35, 25, 20, 20]"
+                    :labels="['Direct', 'Organic', 'Social', 'Referral']"
+                    type="pie"
+                    legend
+                />
+                <x-chart
+                    :series="[35, 25, 20, 20]"
+                    :labels="['Direct', 'Organic', 'Social', 'Referral']"
+                    type="donut"
+                    legend
+                />
             </div>
         </x-preview>
     </x-section>
     <x-section title="Multiple Series" new description="Named series share one scale, so they compare at a glance.">
         <x-preview language="blade" :contents="$multiple">
-            <x-chart :labels="['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun']"
-                     :series="[
+            <x-chart
+                :labels="['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun']"
+                :series="[
                          ['name' => '2026', 'data' => [10, 40, 25, 60, 30, 80]],
                          ['name' => '2025', 'data' => [8, 30, 33, 41, 22, 55]],
                      ]"
-                     grid
-                     legend
-                     tooltip
-                     markers />
+                grid
+                legend
+                tooltip
+                markers
+            />
         </x-preview>
     </x-section>
     <x-section title="Stacked" new description="Area and bar only. Accumulates within each type and within each sign.">
         <x-preview language="blade" :contents="$stacked">
-            <x-chart :labels="['Jan', 'Feb', 'Mar', 'Apr']"
-                     type="bar"
-                     stacked
-                     :series="[
+            <x-chart
+                :labels="['Jan', 'Feb', 'Mar', 'Apr']"
+                type="bar"
+                stacked
+                :series="[
                          ['name' => 'New', 'data' => [12, 18, 15, 22]],
                          ['name' => 'Returning', 'data' => [30, 26, 34, 28]],
                      ]"
-                     grid
-                     legend />
+                grid
+                legend
+            />
         </x-preview>
     </x-section>
-    <x-section title="Combining Types" new description="A series can declare a type of its own, which is what puts a trend line over a stack of bars.">
+    <x-section
+        title="Combining Types"
+        new
+        description="A series can declare a type of its own, which is what puts a trend line over a stack of bars."
+    >
         <x-preview language="blade" :contents="$combining">
-            <x-chart :labels="['Jan', 'Feb', 'Mar', 'Apr']"
-                     type="bar"
-                     stacked
-                     :series="[
+            <x-chart
+                :labels="['Jan', 'Feb', 'Mar', 'Apr']"
+                type="bar"
+                stacked
+                :series="[
                          ['name' => 'New', 'data' => [12, 18, 15, 22]],
                          ['name' => 'Returning', 'data' => [30, 26, 34, 28]],
                          ['name' => 'Total', 'data' => [42, 44, 49, 50], 'type' => 'line'],
                      ]"
-                     grid
-                     legend
-                     tooltip />
+                grid
+                legend
+                tooltip
+            />
         </x-preview>
     </x-section>
-    <x-section title="Secondary Axis" new description="Both axes share the tick count, so one set of gridlines serves either side.">
+    <x-section
+        title="Secondary Axis"
+        new
+        description="Both axes share the tick count, so one set of gridlines serves either side."
+    >
         <x-preview language="blade" :contents="$secondaryAxis">
-            <x-chart :labels="['Jan', 'Feb', 'Mar', 'Apr']"
-                     :series="[
+            <x-chart
+                :labels="['Jan', 'Feb', 'Mar', 'Apr']"
+                :series="[
                          ['name' => 'Revenue', 'data' => [1200, 1900, 1500, 2100]],
                          ['name' => 'Orders', 'data' => [8, 14, 11, 16], 'axis' => 'right'],
                      ]"
-                     grid
-                     legend
-                     :prefix="['left' => '$']"
-                     :suffix="['right' => ' un']" />
+                grid
+                legend
+                :prefix="['left' => '$']"
+                :suffix="['right' => ' un']"
+            />
         </x-preview>
     </x-section>
-    <x-section title="Colors" new description="Without colors, a single series uses color and several cycle a built-in sequence starting from it.">
+    <x-section
+        title="Colors"
+        new
+        description="Without colors, a single series uses color and several cycle a built-in sequence starting from it."
+    >
         <x-preview language="blade" :contents="$colors">
             <div class="space-y-6">
                 <x-chart :series="[10, 40, 25, 60, 30, 80]" color="emerald" />
-                <x-chart :labels="['Jan', 'Feb', 'Mar', 'Apr']"
-                         :colors="['red', 'blue', 'amber']"
-                         :series="[
+                <x-chart
+                    :labels="['Jan', 'Feb', 'Mar', 'Apr']"
+                    :colors="['red', 'blue', 'amber']"
+                    :series="[
                              ['name' => 'A', 'data' => [10, 40, 25, 60]],
                              ['name' => 'B', 'data' => [22, 18, 40, 30]],
                              ['name' => 'C', 'data' => [5, 30, 15, 45]],
                          ]"
-                         legend />
+                    legend
+                />
             </div>
         </x-preview>
     </x-section>
-    <x-section title="Chrome" new description="grid, legend, tooltip and markers are opt-in. Clicking a legend entry toggles its series.">
+    <x-section
+        title="Chrome"
+        new
+        description="grid, legend, tooltip and markers are opt-in. Clicking a legend entry toggles its series."
+    >
         <x-preview language="blade" :contents="$chrome">
-            <x-chart :series="[10, 40, 25, 60, 30, 80]"
-                     :labels="['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun']"
-                     grid
-                     legend
-                     tooltip
-                     markers />
+            <x-chart
+                :series="[10, 40, 25, 60, 30, 80]"
+                :labels="['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun']"
+                grid
+                legend
+                tooltip
+                markers
+            />
         </x-preview>
     </x-section>
-    <x-section title="Formatting" new description="prefix, suffix and decimals cover the common case. A closure wins over all three and receives the axis as a second argument.">
+    <x-section
+        title="Formatting"
+        new
+        description="prefix, suffix and decimals cover the common case. A closure wins over all three and receives the axis as a second argument."
+    >
         <x-preview language="blade" :contents="$formatting">
             <div class="space-y-8">
                 <x-chart :series="[1250.5, 3400.75, 2100, 4800.25, 3900, 6200.8]" grid prefix="$" :decimals="2" />
-                <x-chart :series="[1250.5, 3400.75, 2100, 4800.25, 3900, 6200.8]"
-                         grid
-                         :formatter="fn (float $value) => \Illuminate\Support\Number::currency($value, 'BRL', 'pt_BR')" />
-                <x-chart grid
-                         legend
-                         tooltip
-                         :formatter="fn (float $value, string $axis) => $axis === 'right'
+                <x-chart
+                    :series="[1250.5, 3400.75, 2100, 4800.25, 3900, 6200.8]"
+                    grid
+                    :formatter="fn (float $value) => \Illuminate\Support\Number::currency($value, 'BRL', 'pt_BR')"
+                />
+                <x-chart
+                    grid
+                    legend
+                    tooltip
+                    :formatter="fn (float $value, string $axis) => $axis === 'right'
                              ? $value . ' un'
                              : \Illuminate\Support\Number::currency($value, 'BRL', 'pt_BR')"
-                         :series="[
+                    :series="[
                              ['name' => 'Revenue', 'data' => [1250, 3400, 2100, 4800, 3900, 6200]],
                              ['name' => 'Orders', 'data' => [12, 30, 21, 48, 39, 62], 'axis' => 'right'],
-                         ]" />
+                         ]"
+                />
             </div>
         </x-preview>
     </x-section>
@@ -139,7 +183,11 @@
             </x-chart>
         </x-preview>
     </x-section>
-    <x-section title="Inside a Card" new description="The component ships no card of its own, so paddingless lets the plot bleed to the edges.">
+    <x-section
+        title="Inside a Card"
+        new
+        description="The component ships no card of its own, so paddingless lets the plot bleed to the edges."
+    >
         <x-preview language="blade" :contents="$card">
             <x-card paddingless>
                 <x-slot:header>Monthly Balance</x-slot:header>
@@ -147,7 +195,11 @@
             </x-card>
         </x-preview>
     </x-section>
-    <x-section title="Skeleton" new description="series stops being required. Neutral fills, no axis labels, no legend, no tooltip: a shape, never a reading.">
+    <x-section
+        title="Skeleton"
+        new
+        description="series stops being required. Neutral fills, no axis labels, no legend, no tooltip: a shape, never a reading."
+    >
         <x-preview language="blade" :contents="$skeleton">
             <div class="space-y-6">
                 <x-chart skeleton />
@@ -156,14 +208,24 @@
             </div>
         </x-preview>
     </x-section>
-    <x-section title="Configuration" new description="Presentation only, each consulted when the matching attribute is absent. type is deliberately absent.">
+    <x-section
+        title="Configuration"
+        new
+        description="Presentation only, each consulted when the matching attribute is absent. type is deliberately absent."
+    >
         <x-code language="php" :contents="$configuration" />
     </x-section>
-    <x-section title="Degenerate Input" new description="Everything that cannot be drawn fails loudly instead of degrading.">
-        <x-table :headers="[
+    <x-section
+        title="Degenerate Input"
+        new
+        description="Everything that cannot be drawn fails loudly instead of degrading."
+    >
+        <x-table
+            :headers="[
             ['index' => 'input', 'label' => 'Input'],
             ['index' => 'result', 'label' => 'Result'],
-        ]" :rows="[
+        ]"
+            :rows="[
             ['input' => 'Absent series', 'result' => 'Throws, unless skeleton is set'],
             ['input' => 'Empty array', 'result' => 'Full height, no path'],
             ['input' => 'Single value', 'result' => 'Spans the plot as a constant series'],
@@ -176,6 +238,7 @@
             ['input' => 'grid on pie or donut', 'result' => 'Throws'],
             ['input' => 'Negative or non-integer decimals', 'result' => 'Throws'],
             ['input' => 'Formatting array keyed other than left/right', 'result' => 'Throws'],
-        ]" />
+        ]"
+        />
     </x-section>
 </x-layout>

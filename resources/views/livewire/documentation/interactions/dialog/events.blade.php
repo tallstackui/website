@@ -1,10 +1,13 @@
 <?php
 
+declare(strict_types=1);
+
 use Livewire\Component;
 use Livewire\Attributes\On;
 use TallStackUi\Traits\Interactions;
 
-new class extends Component {
+new class extends Component
+{
     use Interactions;
 
     public bool $events = false;
@@ -37,9 +40,11 @@ new class extends Component {
 
 ?>
 
-<div x-on:dialog:accepted.window="show($event.detail)"
-     x-on:dialog:rejected.window="show($event.detail)"
-     x-on:dialog:dismissed.window="show($event.detail)">
+<div
+    x-on:dialog:accepted.window="show($event.detail)"
+    x-on:dialog:rejected.window="show($event.detail)"
+    x-on:dialog:dismissed.window="show($event.detail)"
+>
     <x-button color="red" wire:click="confirm">Confirm</x-button>
 </div>
 
@@ -49,5 +54,5 @@ new class extends Component {
         if (dialog.reference !== @js($__livewire->__id)) return;
 
         alert(dialog.description);
-    }
+    };
 </script>

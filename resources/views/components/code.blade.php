@@ -1,9 +1,9 @@
 @props([
-    'contents' => null,
-    'language' => 'php',
-    'disableCopy' => null,
+    'contents'        => null,
+    'language'        => 'php',
+    'disableCopy'     => null,
     'personalization' => false,
-    'customization' => false,
+    'customization'   => false,
 ])
 
 @php
@@ -12,8 +12,8 @@
 @endphp
 
 <div class="relative">
-    @if (!$disableCopy)
-        <div class="absolute right-0 top-0">
+    @if (! $disableCopy)
+        <div class="absolute top-0 right-0">
             <x-copy-code :$contents :$margin />
         </div>
     @endif

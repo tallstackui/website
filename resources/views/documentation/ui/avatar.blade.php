@@ -1,14 +1,12 @@
 @php
-    foreach (apply_prefix($__data) as $key => $value) $$key = $value;
+    foreach (apply_prefix($__data) as $key => $value) {
+        $$key = $value;
+    }
 @endphp
 
 <x-layout :$content :ai="['Avatar' => 'avatar', 'Avatar Group' => 'avatar/group']">
-    <x-slot:title>
-        Avatar
-    </x-slot:title>
-    <x-slot:description>
-        Avatar component.
-    </x-slot:description>
+    <x-slot:title>Avatar</x-slot:title>
+    <x-slot:description>Avatar component.</x-slot:description>
     <x-slot:customization>
         <livewire:customization :$customization component="Avatar" />
     </x-slot:customization>
@@ -19,7 +17,7 @@
     </x-section>
     <x-section title="Color Variations">
         <x-preview language="blade" :contents="$colors">
-            <div class="space-y-2 gap-2">
+            <div class="gap-2 space-y-2">
                 <x-avatar text="TS" color="primary" />
                 <x-avatar text="TS" color="secondary" />
                 <x-avatar text="TS" color="slate" />
@@ -67,7 +65,7 @@
     </x-section>
     <x-section title="Placeholder" description="An option generate avatar with a svg placeholder.">
         <x-preview language="blade" :contents="$placeholder">
-            <div class="space-y-2 gap-2">
+            <div class="gap-2 space-y-2">
                 <x-avatar color="primary" />
                 <x-avatar color="secondary" />
                 <x-avatar color="slate" />
@@ -108,7 +106,9 @@
     <x-separator text="Modelable" />
     <x-section title="Modelable">
         <x-slot:description>
-            An option to generate a <a href="https://ui-avatars.com/" class="underline" target="_blank">UI Avatar</a> from a model based on name property.
+            An option to generate a
+            <a href="https://ui-avatars.com/" class="underline" target="_blank">UI Avatar</a> from a model based on name
+            property.
         </x-slot:description>
         <x-preview language="blade" :contents="$modelable">
             <x-avatar :model="auth()->user()" color="fff" />
@@ -116,7 +116,8 @@
     </x-section>
     <x-section title="Custom Property">
         <x-slot:description>
-            Generate a <a href="https://ui-avatars.com/" class="underline" target="_blank">UI Avatar</a> from a model based on a property different from name.
+            Generate a <a href="https://ui-avatars.com/" class="underline" target="_blank">UI Avatar</a> from a model
+            based on a property different from name.
         </x-slot:description>
         <x-preview language="blade" :contents="$modelableCustomized">
             <x-avatar :model="auth()->user()" property="email" color="fff" />
@@ -124,7 +125,8 @@
     </x-section>
     <x-section title="Customizing Colors">
         <x-slot:description>
-            Generate a <a href="https://ui-avatars.com/" class="underline" target="_blank">UI Avatar</a> from a model based customizing the colors.
+            Generate a <a href="https://ui-avatars.com/" class="underline" target="_blank">UI Avatar</a> from a model
+            based customizing the colors.
         </x-slot:description>
         <x-preview language="blade" :contents="$modelableCustomizedColors">
             <x-avatar :model="auth()->user()" property="email" background="ff0000" color="fff" />
@@ -132,14 +134,16 @@
     </x-section>
     <x-section title="Other Options">
         <x-slot:description>
-            Interact with all other <a href="https://ui-avatars.com/" class="underline" target="_blank">UI Avatar</a> configuration options.
+            Interact with all other
+            <a href="https://ui-avatars.com/" class="underline" target="_blank">UI Avatar</a> configuration options.
         </x-slot:description>
         <x-preview language="blade" :contents="$modelableOptions">
-            <x-avatar :model="auth()->user()"
-                      property="email"
-                      background="ff0000"
-                      color="fff"
-                      :options="[
+            <x-avatar
+                :model="auth()->user()"
+                property="email"
+                background="ff0000"
+                color="fff"
+                :options="[
                           'uppercase' => false,
                           'rounded' => true,
                       ]"
@@ -155,16 +159,13 @@
                 <x-avatar image="https://i.pravatar.cc/300" md />
                 <x-avatar image="https://i.pravatar.cc/300" lg />
             </x-preview>
-            <p>
-                You can also set the image via <x-block>x-bind:src</x-block> from AlpineJS:
-            </p>
+            <p>You can also set the image via <x-block>x-bind:src</x-block> from AlpineJS:</p>
             <x-code language="blade" :contents="$imageBindSrc" />
         </div>
     </x-section>
     <x-section title="Default Alt Text">
         <x-preview language="blade" :contents="$imageAlt">
-            <x-avatar image="https://i.pravatar.cc/300"
-                      text="Taylor Otwell, Creator of Laravel" />
+            <x-avatar image="https://i.pravatar.cc/300" text="Taylor Otwell, Creator of Laravel" />
         </x-preview>
     </x-section>
     <x-section title="Group">

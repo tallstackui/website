@@ -1,14 +1,12 @@
 @php
-    foreach (apply_prefix($__data) as $key => $value) $$key = $value;
+    foreach (apply_prefix($__data) as $key => $value) {
+        $$key = $value;
+    }
 @endphp
 
 <x-layout :$content ai="swap">
-    <x-slot:title>
-        Swap
-    </x-slot:title>
-    <x-slot:description>
-        Swap component.
-    </x-slot:description>
+    <x-slot:title>Swap</x-slot:title>
+    <x-slot:description>Swap component.</x-slot:description>
     <x-slot:customization>
         <livewire:customization :$customization component="Swap" />
     </x-slot:customization>
@@ -28,37 +26,58 @@
             <x-swap label="Size" hint="Drag the value or use the arrows" :options="['Small', 'Medium', 'Large']" />
         </x-preview>
     </x-section>
-    <x-section title="Options" new description="Flat arrays, Collections and dimensional arrays are all accepted. The model always carries the option value, never the index.">
+    <x-section
+        title="Options"
+        new
+        description="Flat arrays, Collections and dimensional arrays are all accepted. The model always carries the option value, never the index."
+    >
         <x-preview language="blade" :contents="$options">
             <div class="flex flex-wrap items-center gap-6">
                 <x-swap :options="['Apple', 'Banana', 'Cherry']" />
                 <x-swap :options="collect(['Apple', 'Banana', 'Cherry'])" />
-                <x-swap :options="[
+                <x-swap
+                    :options="[
                     ['label' => 'Small', 'value' => 1],
                     ['label' => 'Medium', 'value' => 2],
                     ['label' => 'Large', 'value' => 3],
-                ]" />
+                ]"
+                />
             </div>
         </x-preview>
     </x-section>
-    <x-section title="Different Indexes" new description="Dimensional keys are remapped through the same select string the styled select uses.">
+    <x-section
+        title="Different Indexes"
+        new
+        description="Dimensional keys are remapped through the same select string the styled select uses."
+    >
         <x-preview language="blade" :contents="$select">
-            <x-swap :options="[
+            <x-swap
+                :options="[
                 ['name' => 'Small', 'id' => 1],
                 ['name' => 'Medium', 'id' => 2],
                 ['name' => 'Large', 'id' => 3],
-            ]" select="label:name|value:id" />
+            ]"
+                select="label:name|value:id"
+            />
         </x-preview>
         <x-warning class="mt-4">
             A dimensional option missing the resolved <x-block>label</x-block> or <x-block>value</x-block> key throws.
         </x-warning>
     </x-section>
-    <x-section title="Preview" new description="Widens the component and splits the viewport in thirds: the previous and next options stay visible whole at reduced opacity, fading toward the edges through a CSS mask.">
+    <x-section
+        title="Preview"
+        new
+        description="Widens the component and splits the viewport in thirds: the previous and next options stay visible whole at reduced opacity, fading toward the edges through a CSS mask."
+    >
         <x-preview language="blade" :contents="$preview">
             <x-swap preview :options="['January', 'February', 'March', 'April', 'May']" />
         </x-preview>
     </x-section>
-    <x-section title="Vertical" new description="Rolls the value top-to-bottom instead. The chevrons become up and down, and the drag axis follows.">
+    <x-section
+        title="Vertical"
+        new
+        description="Rolls the value top-to-bottom instead. The chevrons become up and down, and the drag axis follows."
+    >
         <x-preview language="blade" :contents="$vertical">
             <x-swap vertical :options="['Monday', 'Tuesday', 'Wednesday', 'Thursday']" />
         </x-preview>
@@ -72,7 +91,11 @@
             <x-swap block :options="['Daily', 'Weekly', 'Monthly', 'Yearly']" />
         </x-preview>
     </x-section>
-    <x-section title="Loop" new description="Navigation loops by default: crossing an edge animates into a clone of the opposite end and silently teleports to the real option, so the cycle reads as continuous.">
+    <x-section
+        title="Loop"
+        new
+        description="Navigation loops by default: crossing an edge animates into a clone of the opposite end and silently teleports to the real option, so the cycle reads as continuous."
+    >
         <x-preview language="blade" :contents="$loop">
             <div class="flex flex-wrap items-center gap-6">
                 <x-swap :options="['One', 'Two', 'Three']" />
@@ -84,7 +107,11 @@
             band resistance past them.
         </x-warning>
     </x-section>
-    <x-section title="Readonly & Disabled" new description="Both freeze the buttons, the drag and the keyboard. disabled also dims the control, while readonly keeps the resting look.">
+    <x-section
+        title="Readonly & Disabled"
+        new
+        description="Both freeze the buttons, the drag and the keyboard. disabled also dims the control, while readonly keeps the resting look."
+    >
         <x-preview language="blade" :contents="$readonlyAndDisabled">
             <div class="flex flex-wrap items-center gap-6">
                 <x-swap readonly :options="['Apple', 'Banana', 'Cherry']" />
@@ -97,13 +124,23 @@
             <x-swap tooltip="Pick the plan billing cycle" :options="['Monthly', 'Quarterly', 'Yearly']" />
         </x-preview>
     </x-section>
-    <x-section title="Events" new description="Every navigation dispatches a swap CustomEvent carrying value, label, index and direction, where direction is next or prev.">
+    <x-section
+        title="Events"
+        new
+        description="Every navigation dispatches a swap CustomEvent carrying value, label, index and direction, where direction is next or prev."
+    >
         <x-preview language="blade" :contents="$events">
-            <x-swap :options="['Apple', 'Banana', 'Cherry']"
-                    x-on:swap="alert(`Swapped: ${JSON.stringify($event.detail)}`)" />
+            <x-swap
+                :options="['Apple', 'Banana', 'Cherry']"
+                x-on:swap="alert(`Swapped: ${JSON.stringify($event.detail)}`)"
+            />
         </x-preview>
     </x-section>
-    <x-section title="Livewire Integration" new description="wire:model carries the option value. A null model shows the first option without writing anything back until the user navigates.">
+    <x-section
+        title="Livewire Integration"
+        new
+        description="wire:model carries the option value. A null model shows the first option without writing anything back until the user navigates."
+    >
         <x-preview language="blade" :contents="$livewire">
             <livewire:documentation.ui.swap :mode="1" />
         </x-preview>
@@ -113,23 +150,35 @@
             <livewire:documentation.ui.swap :mode="2" />
         </x-preview>
     </x-section>
-    <x-section title="Livewire Integration, wire:change" new description="Compiles the same way as the other form components: the method is called with the new value.">
+    <x-section
+        title="Livewire Integration, wire:change"
+        new
+        description="Compiles the same way as the other form components: the method is called with the new value."
+    >
         <x-preview>
             <livewire:documentation.ui.swap :mode="3" />
         </x-preview>
     </x-section>
-    <x-section title="Without Livewire" new description="Outside Livewire the component keeps a hidden input in sync through name, so a plain form submit carries the value.">
+    <x-section
+        title="Without Livewire"
+        new
+        description="Outside Livewire the component keeps a hidden input in sync through name, so a plain form submit carries the value."
+    >
         <x-code language="blade" :contents="$withoutLivewire" />
     </x-section>
     <x-section title="AlpineJS Helper" new description="The component pairs with x-model through x-modelable.">
         <x-preview language="blade" :contents="$alpine">
             <div x-data="{ cycle: 'Monthly' }" class="flex items-center gap-4">
                 <x-swap x-model="cycle" :options="['Monthly', 'Quarterly', 'Yearly']" />
-                <span class="text-sm text-gray-500 dark:text-dark-400" x-text="cycle"></span>
+                <span class="dark:text-dark-400 text-sm text-gray-500" x-text="cycle"></span>
             </div>
         </x-preview>
     </x-section>
-    <x-section title="Configuration" new description="The three flags also exist as global defaults. The inline prop always wins.">
+    <x-section
+        title="Configuration"
+        new
+        description="The three flags also exist as global defaults. The inline prop always wins."
+    >
         <x-code language="php" :contents="$configuration" />
     </x-section>
     <x-section title="Motion" new disable-copy>

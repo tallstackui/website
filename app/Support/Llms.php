@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Support;
 
 use Illuminate\Support\Collection;
@@ -100,8 +102,8 @@ class Llms
 
     private function link(string $name, string $file, ?string $summary, bool $livewire = false): string
     {
-        $url = route('ai.component', ['name' => $this->documentation->slug($file)]);
-        $description = trim(($livewire ? 'Livewire only. ' : '').($summary ?? ''));
+        $url         = route('ai.component', ['name' => $this->documentation->slug($file)]);
+        $description = mb_trim(($livewire ? 'Livewire only. ' : '').($summary ?? ''));
 
         return $description === '' ? "- [{$name}]({$url})" : "- [{$name}]({$url}): {$description}";
     }

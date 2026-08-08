@@ -1,17 +1,19 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Providers;
 
-use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\Facades\URL;
 use Illuminate\Support\Facades\View;
+use TallStackUi\Facades\TallStackUi;
+use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\ServiceProvider;
-use TallStackUi\Components\Layout\Header\Component as TsuiLayoutHeader;
 use TallStackUi\Components\Layout\Main\Component as TsuiLayoutMain;
+use TallStackUi\Components\Layout\Header\Component as TsuiLayoutHeader;
 use TallStackUi\Components\Layout\SideBar\Item\Component as TsuiSideBarItem;
 use TallStackUi\Components\Layout\SideBar\Main\Component as TsuiSideBarMain;
 use TallStackUi\Components\Layout\SideBar\Separator\Component as TsuiSideBarSeparator;
-use TallStackUi\Facades\TallStackUi;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -37,8 +39,8 @@ class AppServiceProvider extends ServiceProvider
         config([
             'filesystems.disks.demo' => [
                 'driver' => 'local',
-                'root' => storage_path('app/demo'),
-                'throw' => false,
+                'root'   => storage_path('app/demo'),
+                'throw'  => false,
             ],
         ]);
     }

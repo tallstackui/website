@@ -1,5 +1,5 @@
 <x-demo-layout title="Dial Links">
-    <div class="flex min-h-[300px] flex-col items-center justify-center px-6 py-10 text-sm text-slate-500 dark:text-dark-400">
+    <div class="dark:text-dark-400 flex min-h-[300px] flex-col items-center justify-center px-6 py-10 text-sm text-slate-500">
         <p>Each action renders as an anchor when given an <code class="font-mono">href</code>.</p>
     </div>
 

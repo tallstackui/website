@@ -1,5 +1,7 @@
 @php
-    foreach (apply_prefix($__data) as $key => $value) $$key = $value;
+    foreach (apply_prefix($__data) as $key => $value) {
+        $$key = $value;
+    }
 
     $preview = [
         ['id' => 1, 'name' => 'general',    'caption' => '1 server'],
@@ -22,12 +24,8 @@
 @endphp
 
 <x-layout :$content :ai="['List' => 'list/main', 'List Items' => 'list/items']">
-    <x-slot:title>
-        List
-    </x-slot:title>
-    <x-slot:description>
-        List component.
-    </x-slot:description>
+    <x-slot:title>List</x-slot:title>
+    <x-slot:description>List component.</x-slot:description>
     <x-slot:customization>
         <livewire:customization :$customization component="List\Main" title="List" />
         <livewire:customization :customization="$customizationItems" component="List\Items" title="List Items" />
@@ -35,17 +33,17 @@
     <x-section title="Concept" disable-copy>
         <div class="space-y-4">
             <p>
-                The list component is a card-shaped, action-oriented list for browsing or managing
-                collections of items. Each row displays a bold <x-block>name</x-block>, an optional
-                inline <x-block>caption</x-block> (or arbitrary Blade content), and an optional
-                ellipsis-vertical menu trigger that opens a per-row dropdown. Optional client-side
-                search filters rows by name and caption.
+                The list component is a card-shaped, action-oriented list for browsing or managing collections of items.
+                Each row displays a bold <x-block>name</x-block>, an optional inline <x-block>caption</x-block> (or
+                arbitrary Blade content), and an optional ellipsis-vertical menu trigger that opens a per-row dropdown.
+                Optional client-side search filters rows by name and caption.
             </p>
-            <p>
-                The component can be populated in two ways:
-            </p>
-            <ul class="list list-decimal list-inside">
-                <li>slot composition (recommended for static lists or <x-block>@verbatim @foreach @endverbatim</x-block>with rich per-row Blade)</li>
+            <p>The component can be populated in two ways:</p>
+            <ul class="list list-inside list-decimal">
+                <li>
+                    slot composition (recommended for static lists or
+                    <x-block>@verbatim @foreach @endverbatim</x-block>with rich per-row Blade)
+                </li>
                 <li>data-driven via the <x-block>:items</x-block> attribute</li>
             </ul>
         </div>
@@ -78,8 +76,7 @@
     </x-section>
     <x-section title="Search Placeholder">
         <x-preview language="blade" :contents="$searchPlaceholder">
-            <x-list label="Tags" searchable
-                    search-placeholder="Filter tags by name or caption">
+            <x-list label="Tags" searchable search-placeholder="Filter tags by name or caption">
                 <x-list.items name="general" caption="1 server" />
                 <x-list.items name="production" caption="12 servers" />
             </x-list>
@@ -131,7 +128,7 @@
             <x-list label="Tags" searchable>
                 <x-slot:empty>
                     <div class="flex flex-col items-center gap-2 py-4">
-                        <p class="text-sm text-secondary-700 dark:text-dark-100">No tags configured yet.</p>
+                        <p class="text-secondary-700 dark:text-dark-100 text-sm">No tags configured yet.</p>
                         <x-button text="Create tag" />
                     </div>
                 </x-slot:empty>
@@ -155,32 +152,33 @@
         </x-preview>
     </x-section>
     <x-section title="Caveats" disable-copy>
-        <ul class="list-disc list-inside space-y-2">
+        <ul class="list-inside list-disc space-y-2">
             <li>
-                <x-block>x-list.items</x-block> is an internal child component, it expects the
-                parent <x-block>x-list</x-block> Alpine scope to be present. Using it standalone
-                will fail with Alpine errors. Always wrap inside <x-block>x-list</x-block>.
+                <x-block>x-list.items</x-block> is an internal child component, it expects the parent
+                <x-block>x-list</x-block> Alpine scope to be present. Using it standalone will fail with Alpine errors.
+                Always wrap inside <x-block>x-list</x-block>.
             </li>
             <li>
-                <x-block>name</x-block> is <b>required</b> on every row (slot or data-driven). An
-                empty or missing <x-block>name</x-block> throws an
-                <x-block>InvalidArgumentException</x-block> at render time.
+                <x-block>name</x-block> is <b>required</b> on every row (slot or data-driven). An empty or missing
+                <x-block>name</x-block> throws an <x-block>InvalidArgumentException</x-block> at render time.
             </li>
             <li>
-                <x-block>height</x-block> is restricted to the tokens
-                <x-block>40</x-block>, <x-block>60</x-block>,
+                <x-block>height</x-block> is restricted to the tokens <x-block>40</x-block>, <x-block>60</x-block>,
                 <x-block>80</x-block> and <x-block>96</x-block>, anything else throws.
             </li>
             <li>
                 The per-row menu is rendered through an internal
-                <x-block>x-floating</x-block> at <x-block>z-40</x-block> so it sits below
-                Dialog/Modal/Slide/Toast overlays at <x-block>z-50</x-block>. Customize the panel
-                via the <x-block>menu.floating</x-block> block on
-                <x-block>x-list.items</x-block>, not via floating's own customization.
+                <x-block>x-floating</x-block> at <x-block>z-40</x-block> so it sits below Dialog/Modal/Slide/Toast
+                overlays at <x-block>z-50</x-block>. Customize the panel via the <x-block>menu.floating</x-block> block
+                on <x-block>x-list.items</x-block>, not via floating's own customization.
             </li>
         </ul>
     </x-section>
-    <x-section title="Compact" new description="Tightens the vertical padding of the rows, the search bar and the empty message. The flag lives on x-list alone and reaches the rows through @aware, so it holds for :items, lazy and slot rows alike.">
+    <x-section
+        title="Compact"
+        new
+        description="Tightens the vertical padding of the rows, the search bar and the empty message. The flag lives on x-list alone and reaches the rows through @aware, so it holds for :items, lazy and slot rows alike."
+    >
         <x-preview language="blade" :contents="$compact">
             <div class="grid gap-4 md:grid-cols-2">
                 <x-list label="Default" :items="$preview" searchable />
@@ -188,7 +186,11 @@
             </div>
         </x-preview>
     </x-section>
-    <x-section title="Lazy" new description="Moves the rows to the client. The server serializes :items into a single JSON array and AlpineJS renders a slice of it, growing it as a sentinel at the bottom of the scroll container comes into view.">
+    <x-section
+        title="Lazy"
+        new
+        description="Moves the rows to the client. The server serializes :items into a single JSON array and AlpineJS renders a slice of it, growing it as a sentinel at the bottom of the scroll container comes into view."
+    >
         <x-preview language="blade" :contents="$lazy">
             <x-list label="Tags" :items="$long" searchable height="60" lazy="4" />
         </x-preview>
@@ -205,7 +207,11 @@
             rendering each row, and there is no per-row server render left to resolve them, so the combination throws.
         </x-warning>
     </x-section>
-    <x-section title="Action Slot" new description="Renders controls on the right of the row without the ellipsis dropdown chrome, and coexists with the menu slot.">
+    <x-section
+        title="Action Slot"
+        new
+        description="Renders controls on the right of the row without the ellipsis dropdown chrome, and coexists with the menu slot."
+    >
         <x-preview language="blade" :contents="$actionSlot">
             <x-list label="Environments">
                 <x-list.items name="general" caption="1 server">
@@ -230,7 +236,11 @@
             <x-block>div</x-block>.
         </x-warning>
     </x-section>
-    <x-section title="Caption Slot" new description="caption keeps working as a plain string attribute and additionally accepts a slot for arbitrary markup. Search still matches its visible text, through a plain-text projection of the slot.">
+    <x-section
+        title="Caption Slot"
+        new
+        description="caption keeps working as a plain string attribute and additionally accepts a slot for arbitrary markup. Search still matches its visible text, through a plain-text projection of the slot."
+    >
         <x-preview language="blade" :contents="$captionSlot">
             <x-list label="Environments" searchable>
                 <x-list.items name="production">
@@ -246,7 +256,11 @@
             </x-list>
         </x-preview>
     </x-section>
-    <x-section title="Skeleton" new description="A structural placeholder shaped like the list itself. A bare flag draws 4 items; an integer sets the count. It follows compact, so a list that opens as a placeholder does not change height when the rows arrive.">
+    <x-section
+        title="Skeleton"
+        new
+        description="A structural placeholder shaped like the list itself. A bare flag draws 4 items; an integer sets the count. It follows compact, so a list that opens as a placeholder does not change height when the rows arrive."
+    >
         <x-preview language="blade" :contents="$skeleton">
             <div class="grid gap-4 md:grid-cols-2">
                 <x-list skeleton />

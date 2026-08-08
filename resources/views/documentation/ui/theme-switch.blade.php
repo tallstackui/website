@@ -1,19 +1,19 @@
 @php
-    foreach (apply_prefix($__data) as $key => $value) $$key = $value;
+    foreach (apply_prefix($__data) as $key => $value) {
+        $$key = $value;
+    }
 @endphp
 
 <x-layout :$content ai="theme-switch">
-    <x-slot:title>
-        Theme Switch
-    </x-slot:title>
-    <x-slot:description>
-        Theme switch component.
-    </x-slot:description>
+    <x-slot:title>Theme Switch</x-slot:title>
+    <x-slot:description>Theme switch component.</x-slot:description>
     <x-slot:customization>
         <livewire:customization :$customization component="ThemeSwitch" />
     </x-slot:customization>
     <x-warning class="mt-2">
-        You should only use this component if are using the <a href="{{ route('documentation', ['helpers', 'dark-theme']) }}" wire:navigate class="underline">dark theme helper.</a>
+        You should only use this component if are using the
+        <a href="{{ route('documentation', ['helpers', 'dark-theme']) }}" wire:navigate class="underline"
+            >dark theme helper.</a>
     </x-warning>
     <x-section class="mt-4" title="Basic Usage">
         <x-preview language="blade" :contents="$basic">
@@ -26,7 +26,8 @@
                 <x-theme-switch block />
             </x-preview>
             <x-warning>
-                This attribute is designed to allow you to use the component within the header slot of the dropdown component.
+                This attribute is designed to allow you to use the component within the header slot of the dropdown
+                component.
             </x-warning>
         </div>
     </x-section>

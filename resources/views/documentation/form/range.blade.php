@@ -1,14 +1,12 @@
 @php
-    foreach (apply_prefix($__data) as $key => $value) $$key = $value;
+    foreach (apply_prefix($__data) as $key => $value) {
+        $$key = $value;
+    }
 @endphp
 
 <x-layout :$content ai="form/range">
-    <x-slot:title>
-        Form Range
-    </x-slot:title>
-    <x-slot:description>
-        Form range component.
-    </x-slot:description>
+    <x-slot:title>Form Range</x-slot:title>
+    <x-slot:description>Form range component.</x-slot:description>
     <x-slot:customization>
         <livewire:customization :$customization component="Form\Range" />
     </x-slot:customization>

@@ -1,14 +1,12 @@
 @php
-    foreach (apply_prefix($__data) as $key => $value) $$key = $value;
+    foreach (apply_prefix($__data) as $key => $value) {
+        $$key = $value;
+    }
 @endphp
 
 <x-layout :$content ai="stats">
-    <x-slot:title>
-        Stats
-    </x-slot:title>
-    <x-slot:description>
-        Stats components.
-    </x-slot:description>
+    <x-slot:title>Stats</x-slot:title>
+    <x-slot:description>Stats components.</x-slot:description>
     <x-slot:customization>
         <livewire:customization :$customization component="Stats" />
     </x-slot:customization>
@@ -29,23 +27,12 @@
     <x-section title="Link" description="An option to allow the navigation when clicking on the card.">
         <x-preview language="blade" :contents="$link" :background="false">
             <div class="grid grid-cols-3 gap-2">
-                <x-stats href="https://tallstackui.com"
-                         target="_blank"
-                         title="Components"
-                         :number="50" />
-                <x-stats href="https://tallstackui.com"
-                         target="_blank"
-                         title="Users"
-                         :number="500" />
-                <x-stats href="https://tallstackui.com"
-                         target="_blank"
-                         title="Downloads"
-                         :number="10.000" />
+                <x-stats href="https://tallstackui.com" target="_blank" title="Components" :number="50" />
+                <x-stats href="https://tallstackui.com" target="_blank" title="Users" :number="500" />
+                <x-stats href="https://tallstackui.com" target="_blank" title="Downloads" :number="10.000" />
             </div>
         </x-preview>
-        <p>
-            You can also set <x-block>wire:navigate</x-block> or <x-block>wire:navigate.hover</x-block>:
-        </p>
+        <p>You can also set <x-block>wire:navigate</x-block> or <x-block>wire:navigate.hover</x-block>:</p>
         <x-code language="blade" :contents="$navigate" disable-copy />
     </x-section>
     <x-section title="Icons">
@@ -57,10 +44,8 @@
                     <x-stats icon="swatch" :number="100" outline />
                 </div>
             </x-preview>
-            <p>
-                Starting from v2.4.0 you can pass a raw HTML in the <x-block>icon</x-block> slot:
-            </p>
-            <x-code language="blade" :contents="$iconSlot"/>
+            <p>Starting from v2.4.0 you can pass a raw HTML in the <x-block>icon</x-block> slot:</p>
+            <x-code language="blade" :contents="$iconSlot" />
         </div>
     </x-section>
     <x-section title="Color Variations">
@@ -96,9 +81,7 @@
                 <x-stats title="Components" icon="swatch" :number="100" color="taupe" outline />
                 <x-stats title="Components" icon="swatch" :number="100" color="black" outline />
             </div>
-            <x-warning class="mt-4">
-                The color is only applied to the icon and its style.
-            </x-warning>
+            <x-warning class="mt-4"> The color is only applied to the icon and its style. </x-warning>
         </x-preview>
     </x-section>
     <x-section title="Indicators">
@@ -109,7 +92,11 @@
             </div>
         </x-preview>
     </x-section>
-    <x-section title="Background Chart" new description="A chart behind the content, full-bleed and dimmed. The array shorthand and the slot are mutually exclusive and throw when combined.">
+    <x-section
+        title="Background Chart"
+        new
+        description="A chart behind the content, full-bleed and dimmed. The array shorthand and the slot are mutually exclusive and throw when combined."
+    >
         <x-preview language="blade" :contents="$chart" :background="false">
             <div class="grid grid-cols-2 gap-2">
                 <x-stats :number="45231" title="Revenue" increase :chart="[10, 40, 25, 60, 30, 80]" />
@@ -125,7 +112,11 @@
             <x-block>solid</x-block> style the icon tile is opaque and covers the watermark behind it.
         </x-warning>
     </x-section>
-    <x-section title="Flat Look" new description="shadowless drops the shadow, bordered draws a border around the wrapper while keeping it. Both reach the skeleton view too.">
+    <x-section
+        title="Flat Look"
+        new
+        description="shadowless drops the shadow, bordered draws a border around the wrapper while keeping it. Both reach the skeleton view too."
+    >
         <x-preview language="blade" :contents="$flat" :background="false">
             <div class="grid grid-cols-3 gap-2">
                 <x-stats :number="100" shadowless />
@@ -147,7 +138,11 @@
             </x-warning>
         </x-preview>
     </x-section>
-    <x-section title="Animation Duration" new description="Controls the count-up length. Defaults to 1 and is clamped to a non-negative integer.">
+    <x-section
+        title="Animation Duration"
+        new
+        description="Controls the count-up length. Defaults to 1 and is clamped to a non-negative integer."
+    >
         <x-preview language="blade" :contents="$duration" :background="false">
             <x-stats :number="45231" animated :duration="3" />
         </x-preview>
@@ -169,12 +164,16 @@
         <x-preview language="blade" :contents="$slots" :background="false">
             <x-stats :number="50" header="TallStackUI" footer="The best TALL Stack component library">
                 <x-slot:right>
-                    <x-icon name="wrench-screwdriver" class="w-6 h-6 text-pink-500" />
+                    <x-icon name="wrench-screwdriver" class="h-6 w-6 text-pink-500" />
                 </x-slot:right>
             </x-stats>
         </x-preview>
     </x-section>
-    <x-section title="Skeleton" new description="A flag only: passing an integer throws, because there is nothing to count. The background chart layer is omitted, and it takes no space in the flow.">
+    <x-section
+        title="Skeleton"
+        new
+        description="A flag only: passing an integer throws, because there is nothing to count. The background chart layer is omitted, and it takes no space in the flow."
+    >
         <x-preview language="blade" :contents="$skeleton" :background="false">
             <div class="grid grid-cols-3 gap-2">
                 <x-stats skeleton />

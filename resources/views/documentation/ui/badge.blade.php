@@ -1,30 +1,31 @@
 @php
-    foreach (apply_prefix($__data) as $key => $value) $$key = $value;
+    foreach (apply_prefix($__data) as $key => $value) {
+        $$key = $value;
+    }
 @endphp
 
 <x-layout :$content ai="badge">
-    <x-slot:title>
-        Badge
-    </x-slot:title>
-    <x-slot:description>
-        Badge component.
-    </x-slot:description>
+    <x-slot:title>Badge</x-slot:title>
+    <x-slot:description>Badge component.</x-slot:description>
     <x-slot:customization>
         <livewire:customization :$customization component="Badge" />
     </x-slot:customization>
     <x-section title="Basic Usage">
         <x-preview language="blade" :contents="$basic">
-            <x-badge text="TallStackUI"/>
+            <x-badge text="TallStackUI" />
         </x-preview>
     </x-section>
     <x-section title="Square Variation">
         <x-preview language="blade" :contents="$square">
             <div class="flex items-center gap-2">
-                <x-badge text="TallStackUI" square/>
+                <x-badge text="TallStackUI" square />
             </div>
         </x-preview>
     </x-section>
-    <x-section title="Round Variation" description="Boolean enables rounded-full. The prop also accepts the size keys xs, sm, md, lg, xl to apply the matching rounded-{size} utility. Without the prop, the badge falls back to rounded-md. The square attribute still wins over round, removing the radius entirely.">
+    <x-section
+        title="Round Variation"
+        description="Boolean enables rounded-full. The prop also accepts the size keys xs, sm, md, lg, xl to apply the matching rounded-{size} utility. Without the prop, the badge falls back to rounded-md. The square attribute still wins over round, removing the radius entirely."
+    >
         <x-preview language="blade" :contents="$round">
             <div class="flex items-center gap-2">
                 <x-badge text="Full" round />
@@ -42,13 +43,13 @@
             <div class="flex items-center gap-2">
                 <x-badge lg>
                     <x-slot:left>
-                        <p class="text-yellow-300 text-xs mr-2">+99</p>
+                        <p class="mr-2 text-xs text-yellow-300">+99</p>
                     </x-slot:left>
                     TallStackUI
                 </x-badge>
                 <x-badge lg>
                     <x-slot:right>
-                        <p class="text-yellow-300 text-xs ml-2">+99</p>
+                        <p class="ml-2 text-xs text-yellow-300">+99</p>
                     </x-slot:right>
                     TallStackUI
                 </x-badge>
@@ -58,18 +59,18 @@
     <x-section title="Icon Slot">
         <x-preview language="blade" :contents="$icons">
             <div class="flex items-center gap-2">
-                <x-badge text="TallStackUI" icon="users" position="left"/>
-                <x-badge text="TallStackUI" icon="cog" position="right"/>
+                <x-badge text="TallStackUI" icon="users" position="left" />
+                <x-badge text="TallStackUI" icon="cog" position="right" />
             </div>
         </x-preview>
     </x-section>
     <x-section title="Size Variations">
         <x-preview language="blade" :contents="$sizes">
             <div class="flex items-center gap-2">
-                <x-badge text="XS" xs/>
-                <x-badge text="SM" sm/>
-                <x-badge text="MD" md/>
-                <x-badge text="LG" lg/>
+                <x-badge text="XS" xs />
+                <x-badge text="SM" sm />
+                <x-badge text="MD" md />
+                <x-badge text="LG" lg />
             </div>
         </x-preview>
     </x-section>

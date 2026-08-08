@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "644223086597eda0769438ccacd1e210",
+    "content-hash": "76fcaa4433c6886f4e1991d66c1ab443",
     "packages": [
         {
             "name": "brick/math",
@@ -6017,7 +6017,7 @@
             "dist": {
                 "type": "path",
                 "url": "/Users/aj/Workspace/tallstack/tallstackui",
-                "reference": "d2ba6ea206cd9daed4440146674fd17ab8df7a1a"
+                "reference": "f651ef91a7b30823bf35f8e8ab52601a35093e8b"
             },
             "require": {
                 "ext-zip": "*",

@@ -1,5 +1,7 @@
 @php
-    foreach (apply_prefix($__data) as $key => $value) $$key = $value;
+    foreach (apply_prefix($__data) as $key => $value) {
+        $$key = $value;
+    }
 
     $features = [
         ['label' => 'Newsletter', 'value' => 'newsletter', 'description' => 'Weekly digest'],
@@ -9,15 +11,15 @@
 @endphp
 
 <x-layout :$content :ai="['Checkbox' => 'form/checkbox', 'Checkbox Group' => 'form/checkbox/group']">
-    <x-slot:title>
-        Form Checkbox
-    </x-slot:title>
-    <x-slot:description>
-        Form checkbox component.
-    </x-slot:description>
+    <x-slot:title>Form Checkbox</x-slot:title>
+    <x-slot:description>Form checkbox component.</x-slot:description>
     <x-slot:customization>
         <livewire:customization :$customization component="Form\Checkbox" title="Checkbox" />
-        <livewire:customization :customization="$groupCustomization" component="Form\Checkbox\Group" title="Checkbox Group" />
+        <livewire:customization
+            :customization="$groupCustomization"
+            component="Form\Checkbox\Group"
+            title="Checkbox Group"
+        />
     </x-slot:customization>
     <x-section title="Basic Usage" anchor="checkbox-basic-usage">
         <x-preview language="blade" :contents="$basic">
@@ -35,18 +37,14 @@
     <x-section title="Label Slot" anchor="checkbox-label-slot">
         <x-preview language="blade" :contents="$html">
             <x-checkbox>
-                <x-slot:label>
-                    I agree to the terms and conditions
-                </x-slot:label>
+                <x-slot:label>I agree to the terms and conditions</x-slot:label>
             </x-checkbox>
         </x-preview>
     </x-section>
     <x-section title="Label Slot at Left" anchor="checkbox-label-slot-at-left">
         <x-preview language="blade" :contents="$labelLeft">
             <x-checkbox>
-                <x-slot:label left>
-                    I agree to the terms and conditions
-                </x-slot:label>
+                <x-slot:label left>I agree to the terms and conditions</x-slot:label>
             </x-checkbox>
         </x-preview>
     </x-section>
@@ -55,12 +53,18 @@
             <div class="space-y-4">
                 <x-checkbox>
                     <x-slot:label>
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+                        the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
+                        of type and scrambled it to make a type specimen book. It has survived not only five centuries,
+                        but also the leap into electronic typesetting, remaining essentially unchanged.
                     </x-slot:label>
                 </x-checkbox>
                 <x-checkbox>
                     <x-slot:label start>
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+                        the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
+                        of type and scrambled it to make a type specimen book. It has survived not only five centuries,
+                        but also the leap into electronic typesetting, remaining essentially unchanged.
                     </x-slot:label>
                 </x-checkbox>
             </div>
@@ -116,12 +120,14 @@
         <x-preview language="blade" :contents="$groupBasic">
             <x-checkbox.group name="features-basic[]" label="Features" :options="$features" />
         </x-preview>
-        <p>
-            You should bind a property that is an array:
-        </p>
+        <p>You should bind a property that is an array:</p>
         <x-code language="php" :contents="$groupProperty" />
     </x-section>
-    <x-section title="Variations" anchor="group-variations" description="An option to display the group in different formats.">
+    <x-section
+        title="Variations"
+        anchor="group-variations"
+        description="An option to display the group in different formats."
+    >
         <x-preview language="blade" :contents="$groupVariations">
             <div class="space-y-6">
                 <x-checkbox.group name="features-list[]" list :options="$features" />
@@ -157,12 +163,14 @@
         </x-preview>
     </x-section>
     <x-section title="Option Keys" anchor="group-option-keys">
-        <x-table :headers="[
+        <x-table
+            :headers="[
             ['index' => 'key', 'label' => 'Key'],
             ['index' => 'type', 'label' => 'Type'],
             ['index' => 'required', 'label' => 'Required'],
             ['index' => 'ignored', 'label' => 'Ignored by'],
-        ]" :rows="[
+        ]"
+            :rows="[
             ['key' => 'label', 'type' => 'string', 'required' => 'Yes', 'ignored' => '—'],
             ['key' => 'value', 'type' => 'scalar', 'required' => 'Yes', 'ignored' => '—'],
             ['key' => 'description', 'type' => 'string', 'required' => 'No', 'ignored' => 'inline'],
@@ -171,27 +179,41 @@
             ['key' => 'image', 'type' => 'string', 'required' => 'No', 'ignored' => 'inline'],
             ['key' => 'badge', 'type' => 'string', 'required' => 'No', 'ignored' => 'inline'],
             ['key' => 'disabled', 'type' => 'bool', 'required' => 'No', 'ignored' => '—'],
-        ]">
+        ]"
+        >
             @interact('column_key', $row)
                 <x-block>{{ $row['key'] }}</x-block>
             @endinteract
         </x-table>
     </x-section>
-    <x-section title="Select" anchor="group-select" description="An option to remaps the source keys with the same syntax used by select styled.">
+    <x-section
+        title="Select"
+        anchor="group-select"
+        description="An option to remaps the source keys with the same syntax used by select styled."
+    >
         <x-preview language="blade" :contents="$groupSelect">
-            <x-checkbox.group name="features-select[]" select="label:name|value:id|description:note" :options="[
+            <x-checkbox.group
+                name="features-select[]"
+                select="label:name|value:id|description:note"
+                :options="[
                 ['name' => 'Newsletter', 'id' => 'newsletter', 'note' => 'Product updates once a month'],
                 ['name' => 'Reports', 'id' => 'reports', 'note' => 'A weekly digest of your metrics'],
                 ['name' => 'Alerts', 'id' => 'alerts', 'note' => 'Only when something breaks'],
-            ]" />
+            ]"
+            />
         </x-preview>
     </x-section>
     <x-section title="Interact" anchor="group-interact" description="An option to replaces the body of every item.">
         <x-preview language="blade" :contents="$groupInteract">
-            <x-checkbox.group name="addons-interact[]" card :columns="2" :options="[
+            <x-checkbox.group
+                name="addons-interact[]"
+                card
+                :columns="2"
+                :options="[
                 ['label' => 'Extra storage', 'value' => 'storage', 'name' => 'Extra storage', 'price' => 9],
                 ['label' => 'Priority support', 'value' => 'support', 'name' => 'Priority support', 'price' => 29],
-            ]">
+            ]"
+            >
                 @interact('option', $option)
                     <span class="font-semibold">{{ $option['name'] }}</span>
                     <span class="font-mono">${{ $option['price'] }}</span>

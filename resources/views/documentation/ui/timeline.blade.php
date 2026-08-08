@@ -17,47 +17,43 @@
         ['title' => 'Red override',   'date' => 'Q3', 'color' => 'red'],
     ];
 
-    foreach (apply_prefix($__data) as $key => $value) $$key = $value;
+    foreach (apply_prefix($__data) as $key => $value) {
+        $$key = $value;
+    }
 @endphp
 
 <x-layout :$content :ai="['Timeline' => 'timeline/main', 'Timeline Items' => 'timeline/items']">
-    <x-slot:title>
-        Timeline
-    </x-slot:title>
-    <x-slot:description>
-        Timeline component.
-    </x-slot:description>
+    <x-slot:title>Timeline</x-slot:title>
+    <x-slot:description>Timeline component.</x-slot:description>
     <x-slot:customization>
         <livewire:customization :$customization component="Timeline\Main" title="Timeline" />
-        <livewire:customization :customization="$customizationItems" component="Timeline\Items" title="Timeline Items" />
+        <livewire:customization
+            :customization="$customizationItems"
+            component="Timeline\Items"
+            title="Timeline Items"
+        />
     </x-slot:customization>
     <x-section title="Basic Usage">
         <x-preview language="blade" :contents="$basic">
             <x-timeline>
-                <x-timeline.items title="v1.0 shipped"
-                                  description="Initial release."
-                                  date="Jan 2026" />
-                <x-timeline.items title="v1.1 patch"
-                                  description="Bugfixes and refinements."
-                                  date="Feb 2026" />
-                <x-timeline.items title="v2.0 released"
-                                  description="Major rewrite of the suite."
-                                  date="Mar 2026" />
+                <x-timeline.items title="v1.0 shipped" description="Initial release." date="Jan 2026" />
+                <x-timeline.items title="v1.1 patch" description="Bugfixes and refinements." date="Feb 2026" />
+                <x-timeline.items title="v2.0 released" description="Major rewrite of the suite." date="Mar 2026" />
             </x-timeline>
         </x-preview>
     </x-section>
     <x-section title="Render Modes">
         <div class="space-y-4">
             <p>
-                Timeline supports two render modes: passing items via the <x-block>:items</x-block> prop
-                (array or Collection) <b>or</b> declaring children as <x-block>&lt;x-timeline.items&gt;</x-block>
-                in a slot. Combining both raises <x-block>InvalidArgumentException</x-block> at render time.
+                Timeline supports two render modes: passing items via the <x-block>:items</x-block> prop (array or
+                Collection) <b>or</b> declaring children as <x-block>&lt;x-timeline.items&gt;</x-block> in a slot.
+                Combining both raises <x-block>InvalidArgumentException</x-block> at render time.
             </p>
             <p>
-                <b>Array mode</b> auto-propagates container props (<x-block>horizontal</x-block>, <x-block>compact</x-block>,
-                <x-block>style</x-block>, <x-block>alternate</x-block>) to each item. <b>Slot mode</b> requires those props
-                to be passed explicitly per item — Laravel's <x-block>@@aware</x-block> directive does not propagate from
-                class-based parents to slot children.
+                <b>Array mode</b> auto-propagates container props (<x-block>horizontal</x-block>,
+                <x-block>compact</x-block>, <x-block>style</x-block>, <x-block>alternate</x-block>) to each item.
+                <b>Slot mode</b> requires those props to be passed explicitly per item — Laravel's
+                <x-block>@@aware</x-block> directive does not propagate from class-based parents to slot children.
             </p>
             <x-preview language="blade" :contents="$arrayMode">
                 <x-timeline :items="$releases" />
@@ -99,9 +95,9 @@
             </div>
         </x-preview>
         <x-warning class="mt-4">
-            Alternate uses a 3-column grid that distributes the timeline's horizontal space. Wrap it in a
-            max-w-* container or apply class="max-w-*" to the timeline
-            so the line lands at a comfortable midpoint instead of stretching across the full parent width.
+            Alternate uses a 3-column grid that distributes the timeline's horizontal space. Wrap it in a max-w-*
+            container or apply class="max-w-*" to the timeline so the line lands at a comfortable midpoint instead of
+            stretching across the full parent width.
         </x-warning>
     </x-section>
     <x-section title="Compact Spacing">
@@ -116,18 +112,10 @@
     <x-section title="Icon Markers">
         <x-preview language="blade" :contents="$icon">
             <x-timeline>
-                <x-timeline.items title="Planning"
-                                  description="Research and spec."
-                                  icon="pencil-square" />
-                <x-timeline.items title="Building"
-                                  description="Implementation."
-                                  icon="wrench-screwdriver" />
-                <x-timeline.items title="Testing"
-                                  description="Feature + browser tests."
-                                  icon="beaker" />
-                <x-timeline.items title="Release"
-                                  description="Tagged and published."
-                                  icon="rocket-launch" />
+                <x-timeline.items title="Planning" description="Research and spec." icon="pencil-square" />
+                <x-timeline.items title="Building" description="Implementation." icon="wrench-screwdriver" />
+                <x-timeline.items title="Testing" description="Feature + browser tests." icon="beaker" />
+                <x-timeline.items title="Release" description="Tagged and published." icon="rocket-launch" />
             </x-timeline>
         </x-preview>
     </x-section>
@@ -156,12 +144,36 @@
         <x-preview language="blade" :contents="$colors">
             <div class="grid gap-6 sm:grid-cols-2">
                 <x-timeline>
-                    <x-timeline.items title="Primary" description="Brand color" date="Q1" icon="rocket-launch" color="primary" />
-                    <x-timeline.items title="Primary" description="Brand color" date="Q2" icon="rocket-launch" color="primary" />
+                    <x-timeline.items
+                        title="Primary"
+                        description="Brand color"
+                        date="Q1"
+                        icon="rocket-launch"
+                        color="primary"
+                    />
+                    <x-timeline.items
+                        title="Primary"
+                        description="Brand color"
+                        date="Q2"
+                        icon="rocket-launch"
+                        color="primary"
+                    />
                 </x-timeline>
                 <x-timeline>
-                    <x-timeline.items title="Emerald" description="Calm green" date="Q1" icon="check-circle" color="emerald" />
-                    <x-timeline.items title="Emerald" description="Calm green" date="Q2" icon="check-circle" color="emerald" />
+                    <x-timeline.items
+                        title="Emerald"
+                        description="Calm green"
+                        date="Q1"
+                        icon="check-circle"
+                        color="emerald"
+                    />
+                    <x-timeline.items
+                        title="Emerald"
+                        description="Calm green"
+                        date="Q2"
+                        icon="check-circle"
+                        color="emerald"
+                    />
                 </x-timeline>
                 <x-timeline>
                     <x-timeline.items title="Rose" description="Soft red" date="Q1" icon="heart" color="rose" />
@@ -204,12 +216,15 @@
             ['title' => 'Received', 'description' => 'The package has been delivered to the recipient.', 'date' => '04/04/2026', 'icon' => 'clock', 'color' => 'yellow'],
         ]);
     @endphp
-    <x-section title="Current Activation State" description="An option to visually distinguish the current/active item in the timeline.">
+    <x-section
+        title="Current Activation State"
+        description="An option to visually distinguish the current/active item in the timeline."
+    >
         <div class="space-y-4">
             <p>
-                Although there isn't a property to define a state as active, you can use the properties
-                expected by each item to create a visual effect that indicates the current state in progress.
-                Let's say you are creating a timeline of an online purchase. You can assemble the component as follows:
+                Although there isn't a property to define a state as active, you can use the properties expected by each
+                item to create a visual effect that indicates the current state in progress. Let's say you are creating
+                a timeline of an online purchase. You can assemble the component as follows:
             </p>
             <x-preview language="blade" :contents="$currentActivation">
                 <x-timeline :items="$state" horizontal class="pt-2" />

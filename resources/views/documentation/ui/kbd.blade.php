@@ -1,14 +1,12 @@
 @php
-    foreach (apply_prefix($__data) as $key => $value) $$key = $value;
+    foreach (apply_prefix($__data) as $key => $value) {
+        $$key = $value;
+    }
 @endphp
 
 <x-layout :$content ai="kbd">
-    <x-slot:title>
-        Kbd
-    </x-slot:title>
-    <x-slot:description>
-        Kbd component.
-    </x-slot:description>
+    <x-slot:title>Kbd</x-slot:title>
+    <x-slot:description>Kbd component.</x-slot:description>
     <x-slot:customization>
         <livewire:customization :$customization component="Kbd" />
     </x-slot:customization>
@@ -18,9 +16,7 @@
         </x-preview>
     </x-section>
     <x-section title="Key Combination">
-        <x-preview language="blade" :contents="$combination">
-            <x-kbd text="Ctrl" /> + <x-kbd text="C" />
-        </x-preview>
+        <x-preview language="blade" :contents="$combination"> <x-kbd text="Ctrl" /> + <x-kbd text="C" /> </x-preview>
     </x-section>
     <x-section title="Size Variations">
         <x-preview language="blade" :contents="$sizes">
@@ -32,7 +28,11 @@
             </div>
         </x-preview>
     </x-section>
-    <x-section title="Borderless & Shadowless" new description="borderless removes only the border, shadowless removes only the shadow. Passing both reproduces what borderless alone did on 3.x.">
+    <x-section
+        title="Borderless & Shadowless"
+        new
+        description="borderless removes only the border, shadowless removes only the shadow. Passing both reproduces what borderless alone did on 3.x."
+    >
         <x-preview language="blade" :contents="$borderless">
             <div class="flex items-center gap-3">
                 <x-kbd text="Ctrl" borderless />

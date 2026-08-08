@@ -1,9 +1,11 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Support;
 
-use Illuminate\Support\Collection;
 use Illuminate\Support\Str;
+use Illuminate\Support\Collection;
 
 class InternalScopes
 {
@@ -27,8 +29,8 @@ class InternalScopes
 
         return collect([
             'wrapper' => $sections->filter(fn (array $section): bool => str_starts_with($section['parent'], 'wrapper/'))->values(),
-            'form' => $sections->filter(fn (array $section): bool => str_starts_with($section['parent'], 'form/'))->values(),
-            'ui' => $sections->reject(fn (array $section): bool => str_starts_with($section['parent'], 'wrapper/') || str_starts_with($section['parent'], 'form/'))->values(),
+            'form'    => $sections->filter(fn (array $section): bool => str_starts_with($section['parent'], 'form/'))->values(),
+            'ui'      => $sections->reject(fn (array $section): bool => str_starts_with($section['parent'], 'wrapper/') || str_starts_with($section['parent'], 'form/'))->values(),
         ]);
     }
 
@@ -43,7 +45,7 @@ class InternalScopes
         }
 
         $sections = collect();
-        $blocks = preg_split('/^### /m', file_get_contents($this->path));
+        $blocks   = preg_split('/^### /m', file_get_contents($this->path));
 
         foreach ($blocks as $block) {
             if (! preg_match('/^`([^`]+)`/', $block, $matches)) {
@@ -51,7 +53,7 @@ class InternalScopes
             }
 
             $parent = $matches[1];
-            $rows = [];
+            $rows   = [];
 
             foreach (explode("\n", $block) as $line) {
                 if (! preg_match('/^\|\s*`([^`]+)`\s*\|\s*`([^`]+)`/', $line, $cells)) {
@@ -70,8 +72,8 @@ class InternalScopes
 
             $sections->push([
                 'parent' => $parent,
-                'label' => $this->label($parent),
-                'rows' => $rows,
+                'label'  => $this->label($parent),
+                'rows'   => $rows,
             ]);
         }
 

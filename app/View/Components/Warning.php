@@ -1,9 +1,11 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\View\Components;
 
-use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
+use Illuminate\Contracts\View\View;
 
 class Warning extends Component
 {
@@ -19,11 +21,11 @@ class Warning extends Component
         public ?string $text = null,
     ) {
         $resolved = match (true) {
-            $info => 'info',
+            $info    => 'info',
             $success => 'success',
-            $error => 'error',
+            $error   => 'error',
             $warning => 'warning',
-            default => $type,
+            default  => $type,
         };
 
         $this->type = in_array($resolved, ['info', 'success', 'warning', 'error'], true) ? $resolved : 'warning';

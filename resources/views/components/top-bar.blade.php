@@ -1,8 +1,8 @@
 @if ($version === latest_version())
     <x-banner :color="['background' => 'bg-dark-900 border-b border-white/10', 'text' => 'text-white']">
         <p>
-            <b>TallStackUI 4.0 is here!</b> Six new components, a near-black dark mode, and
-            dozens of improvements. <a href="/" class="font-semibold underline decoration-pink-500 underline-offset-2">See what's new</a>.
+            <b>TallStackUI 4.0 is here!</b> Six new components, a near-black dark mode, and dozens of improvements.
+            <a href="/" class="font-semibold underline decoration-pink-500 underline-offset-2">See what's new</a>.
         </p>
     </x-banner>
 @else

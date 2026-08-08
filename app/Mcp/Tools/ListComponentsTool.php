@@ -1,12 +1,14 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Mcp\Tools;
 
-use App\Support\ComponentDocumentation;
-use Illuminate\Contracts\JsonSchema\JsonSchema;
 use Laravel\Mcp\Request;
 use Laravel\Mcp\Response;
 use Laravel\Mcp\Server\Tool;
+use App\Support\ComponentDocumentation;
+use Illuminate\Contracts\JsonSchema\JsonSchema;
 use Laravel\Mcp\Server\Tools\Annotations\IsReadOnly;
 
 #[IsReadOnly]
@@ -31,7 +33,7 @@ class ListComponentsTool extends Tool
             $output .= "## {$category}\n\n";
 
             foreach ($components as $component) {
-                $suffix = $component['livewire_only'] ? ' *(Livewire only)*' : '';
+                $suffix  = $component['livewire_only'] ? ' *(Livewire only)*' : '';
                 $summary = $component['summary'] ? " — {$component['summary']}" : '';
                 $output .= "- **{$component['name']}**{$suffix}{$summary}\n";
             }

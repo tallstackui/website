@@ -1,8 +1,10 @@
 <?php
 
-use Database\Seeders\CreateUserSeeder;
+declare(strict_types=1);
+
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Http;
+use Database\Seeders\CreateUserSeeder;
 
 beforeEach(function () {
     Http::fake(['api.torchlight.dev/*' => []]);

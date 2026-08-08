@@ -1,13 +1,15 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Support;
 
-use Illuminate\Support\Collection;
-use Illuminate\Support\Str;
+use Throwable;
 use ReflectionClass;
+use Illuminate\Support\Str;
+use Illuminate\Support\Collection;
 use TallStackUi\Attributes\SoftCustomization;
 use TallStackUi\Support\Miscellaneous\ReflectComponent;
-use Throwable;
 
 use function __ts_soft_customization_components;
 
@@ -64,12 +66,12 @@ class ComponentDocumentation
         }
 
         return [
-            'name' => $match['name'],
-            'category' => $match['category'],
+            'name'          => $match['name'],
+            'category'      => $match['category'],
             'livewire_only' => $match['livewire_only'],
-            'content' => $content,
-            'sections' => $this->sections($content),
-            'section' => $section ? $this->section($content, $section) : null,
+            'content'       => $content,
+            'sections'      => $this->sections($content),
+            'section'       => $section ? $this->section($content, $section) : null,
         ];
     }
 
@@ -80,7 +82,7 @@ class ComponentDocumentation
 
         return $this->documents()
             ->map(fn (array $item): array => [
-                'name' => $item['name'],
+                'name'     => $item['name'],
                 'distance' => levenshtein($needle, Str::lower($item['name'])),
             ])
             ->sortBy('distance')
@@ -92,7 +94,7 @@ class ComponentDocumentation
     /** Multi-term search across all documents, returning heading-labelled excerpts. */
     public function search(string $query, int $maxResults = 10): Collection
     {
-        $terms = collect(preg_split('/\s+/', trim($query)) ?: [])
+        $terms = collect(preg_split('/\s+/', mb_trim($query)) ?: [])
             ->filter(fn (string $term): bool => mb_strlen($term) >= 2)
             ->map(fn (string $term): string => Str::lower($term))
             ->unique()
@@ -127,10 +129,10 @@ class ComponentDocumentation
                 [$score, $excerpts] = $this->excerpts($document['content'], $terms);
 
                 return [
-                    'name' => $document['name'],
-                    'category' => $document['category'],
+                    'name'        => $document['name'],
+                    'category'    => $document['category'],
                     'match_count' => $score,
-                    'excerpts' => $excerpts,
+                    'excerpts'    => $excerpts,
                 ];
             })
             ->sortByDesc('match_count')
@@ -142,7 +144,7 @@ class ComponentDocumentation
     public function customization(?string $component = null, ?string $query = null): Collection
     {
         $components = $this->parse();
-        $results = collect();
+        $results    = collect();
 
         if ($component) {
             $components = $components->filter(fn (array $item): bool => Str::contains($item['name'], $component, ignoreCase: true));
@@ -161,13 +163,13 @@ class ComponentDocumentation
                 continue;
             }
 
-            if ($query && stripos($section, $query) === false) {
+            if ($query && mb_stripos($section, $query) === false) {
                 continue;
             }
 
             $results->push([
-                'name' => $comp['name'],
-                'category' => $comp['category'],
+                'name'          => $comp['name'],
+                'category'      => $comp['category'],
                 'customization' => $section,
             ]);
         }
@@ -185,8 +187,8 @@ class ComponentDocumentation
 
             /** @var SoftCustomization $attribute */
             $attribute = $reflect->attribute(SoftCustomization::class)->newInstance();
-            $key = $attribute->key;
-            $name = Str::of($key)->replace('.', ' ')->title()->toString();
+            $key       = $attribute->key;
+            $name      = Str::of($key)->replace('.', ' ')->title()->toString();
 
             if ($component && ! Str::contains($name, $component, ignoreCase: true) && ! Str::contains($key, $component, ignoreCase: true)) {
                 continue;
@@ -199,9 +201,9 @@ class ComponentDocumentation
 
                 $matches->push([
                     'component' => $name,
-                    'key' => $key,
-                    'block' => $block,
-                    'classes' => $classes,
+                    'key'       => $key,
+                    'block'     => $block,
+                    'classes'   => $classes,
                 ]);
             }
         }
@@ -266,9 +268,9 @@ class ComponentDocumentation
             ->map(fn (string $path): string => basename($path))
             ->reject(fn (string $file): bool => $file === 'index.md')
             ->map(fn (string $file): array => [
-                'name' => Str::headline(Str::before($file, '.md')),
-                'file' => $file,
-                'category' => 'Guides',
+                'name'          => Str::headline(Str::before($file, '.md')),
+                'file'          => $file,
+                'category'      => 'Guides',
                 'livewire_only' => false,
             ])
             ->values();
@@ -287,22 +289,22 @@ class ComponentDocumentation
             return $this->components = collect();
         }
 
-        $lines = explode("\n", $content);
-        $current = '';
+        $lines      = explode("\n", $content);
+        $current    = '';
         $components = [];
 
         foreach ($lines as $line) {
             if (preg_match('/^### (.+)$/', $line, $matches)) {
-                $current = trim($matches[1]);
+                $current = mb_trim($matches[1]);
 
                 continue;
             }
 
             if (preg_match('/^- \[(.+?)]\((.+?)\)(\s*\*\((.+?)\)\*)?/', $line, $matches)) {
                 $components[] = [
-                    'name' => $matches[1],
-                    'file' => $matches[2],
-                    'category' => $current,
+                    'name'          => $matches[1],
+                    'file'          => $matches[2],
+                    'category'      => $current,
                     'livewire_only' => isset($matches[4]) && Str::contains($matches[4], 'Livewire'),
                 ];
             }
@@ -323,7 +325,7 @@ class ComponentDocumentation
         $paragraph = [];
 
         foreach (explode("\n", $content) as $line) {
-            $line = trim($line);
+            $line = mb_trim($line);
 
             // The intro paragraph is hard wrapped, so it ends at the first blank line.
             if ($paragraph !== [] && $line === '') {
@@ -369,18 +371,18 @@ class ComponentDocumentation
                 continue;
             }
 
-            $position = strpos($content, "\n## {$heading}");
+            $position = mb_strpos($content, "\n## {$heading}");
 
             if ($position === false) {
                 continue;
             }
 
-            $slice = substr($content, $position + 1);
-            $next = strpos($slice, "\n## ", strlen("## {$heading}"));
+            $slice = mb_substr($content, $position + 1);
+            $next  = mb_strpos($slice, "\n## ", mb_strlen("## {$heading}"));
 
             return [
                 'heading' => $heading,
-                'content' => trim($next === false ? $slice : substr($slice, 0, $next)),
+                'content' => mb_trim($next === false ? $slice : mb_substr($slice, 0, $next)),
             ];
         }
 
@@ -395,21 +397,21 @@ class ComponentDocumentation
      */
     private function excerpts(string $content, Collection $terms): array
     {
-        $lines = explode("\n", $content);
-        $section = 'Introduction';
-        $score = 0;
+        $lines    = explode("\n", $content);
+        $section  = 'Introduction';
+        $score    = 0;
         $excerpts = [];
 
         foreach ($lines as $index => $line) {
             if (preg_match('/^#{2,3}\s+(.+)$/', $line, $matches)) {
-                $section = trim($matches[1]);
+                $section = mb_trim($matches[1]);
             }
 
-            $lower = Str::lower($line);
+            $lower   = Str::lower($line);
             $matched = false;
 
             foreach ($terms as $term) {
-                $occurrences = substr_count($lower, $term);
+                $occurrences = mb_substr_count($lower, $term);
 
                 if ($occurrences === 0) {
                     continue;
@@ -423,11 +425,11 @@ class ComponentDocumentation
 
             if ($matched && count($excerpts) < 3) {
                 $start = max(0, $index - 1);
-                $end = min(count($lines) - 1, $index + 1);
+                $end   = min(count($lines) - 1, $index + 1);
 
                 $excerpts[] = [
                     'section' => $section,
-                    'text' => implode("\n", array_slice($lines, $start, $end - $start + 1)),
+                    'text'    => implode("\n", array_slice($lines, $start, $end - $start + 1)),
                 ];
             }
         }
@@ -438,20 +440,20 @@ class ComponentDocumentation
     /** Extract the "Soft Customization" section from a component's Markdown. */
     private function extract(string $content): ?string
     {
-        $marker = '## Soft Customization';
-        $position = strpos($content, $marker);
+        $marker   = '## Soft Customization';
+        $position = mb_strpos($content, $marker);
 
         if ($position === false) {
             return null;
         }
 
-        $section = substr($content, $position);
-        $nextSection = strpos($section, "\n## ", strlen($marker));
+        $section     = mb_substr($content, $position);
+        $nextSection = mb_strpos($section, "\n## ", mb_strlen($marker));
 
         if ($nextSection !== false) {
-            $section = substr($section, 0, $nextSection);
+            $section = mb_substr($section, 0, $nextSection);
         }
 
-        return trim($section);
+        return mb_trim($section);
     }
 }

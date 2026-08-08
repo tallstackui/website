@@ -1,19 +1,21 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Mcp\Servers;
 
+use Laravel\Mcp\Server;
+use App\Mcp\Tools\GetComponentTool;
+use App\Mcp\Tools\SearchClassesTool;
+use App\Mcp\Tools\ListComponentsTool;
+use Laravel\Mcp\Server\Attributes\Name;
+use App\Mcp\Tools\SearchCustomizationTool;
+use App\Mcp\Tools\SearchDocumentationTool;
+use Laravel\Mcp\Server\Attributes\Version;
 use App\Mcp\Prompts\CustomizeComponentPrompt;
 use App\Mcp\Resources\ComponentIndexResource;
 use App\Mcp\Resources\InternalScopesResource;
-use App\Mcp\Tools\GetComponentTool;
-use App\Mcp\Tools\ListComponentsTool;
-use App\Mcp\Tools\SearchClassesTool;
-use App\Mcp\Tools\SearchCustomizationTool;
-use App\Mcp\Tools\SearchDocumentationTool;
-use Laravel\Mcp\Server;
 use Laravel\Mcp\Server\Attributes\Instructions;
-use Laravel\Mcp\Server\Attributes\Name;
-use Laravel\Mcp\Server\Attributes\Version;
 
 #[Name('TallStackUI Documentation')]
 #[Version('1.1.0')]

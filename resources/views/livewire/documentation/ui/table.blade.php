@@ -1,11 +1,14 @@
 <?php
 
+declare(strict_types=1);
+
 use App\Models\User;
-use Illuminate\Database\Eloquent\Builder;
 use Livewire\Component;
 use Livewire\WithPagination;
+use Illuminate\Database\Eloquent\Builder;
 
-new class extends Component {
+new class extends Component
+{
     use WithPagination;
 
     public int $mode = 1;
@@ -19,7 +22,7 @@ new class extends Component {
     public array $selected = [1, 2, 3, 4, 5];
 
     public array $sort = [
-        'column' => 'id',
+        'column'    => 'id',
         'direction' => 'desc',
     ];
 
@@ -50,9 +53,9 @@ new class extends Component {
 
         if ($this->mode === 11) {
             $rows->through(fn (User $user) => $user->setAttribute('highlight', match ($user->id) {
-                1, 5 => 'green',
-                3, 8 => 'red',
-                2 => 'yellow',
+                1, 5    => 'green',
+                3, 8    => 'red',
+                2       => 'yellow',
                 default => null,
             }));
         }
@@ -71,17 +74,17 @@ new class extends Component {
 
 <div>
     @if ($mode === 1)
-        <x-table :$headers :$rows/>
-    @elseif($mode === 2)
-        <x-table :$headers :$rows headerless/>
+        <x-table :$headers :$rows />
+    @elseif ($mode === 2)
+        <x-table :$headers :$rows headerless />
     @elseif ($mode === 3)
-        <x-table :$headers :$rows striped/>
+        <x-table :$headers :$rows striped />
     @elseif ($mode === 4)
-        <x-table :$headers :$rows filter :quantity="[2,5,10]"/>
+        <x-table :$headers :$rows filter :quantity="[2, 5, 10]" />
     @elseif ($mode === 5)
-        <x-table :$headers :$rows filter :quantity="[2,5,10]" loading/>
+        <x-table :$headers :$rows filter :quantity="[2, 5, 10]" loading />
     @elseif ($mode === 6)
-        <x-table :$headers :$rows :$sort/>
+        <x-table :$headers :$rows :$sort />
     @elseif ($mode === 7)
         <x-table :$headers :$rows paginate persistent />
     @elseif ($mode === 8)
@@ -95,13 +98,16 @@ new class extends Component {
     @elseif ($mode === 12)
         <x-table :$headers :$rows expandable>
             @interact('sub_table', $row)
-                <x-table :headers="[
+                <x-table
+                    :headers="[
                     ['index' => 'property', 'label' => 'Property'],
                     ['index' => 'value', 'label' => 'Value'],
-                ]" :rows="[
+                ]"
+                    :rows="[
                     ['property' => 'Email', 'value' => $row->email],
                     ['property' => 'Created', 'value' => $row->created_at->format('Y-m-d')],
-                ]" />
+                ]"
+                />
             @endinteract
         </x-table>
     @elseif ($mode === 13)
@@ -115,7 +121,7 @@ new class extends Component {
     @elseif ($mode === 17)
         <div x-data="{ rows: [] }" x-on:selected="rows = $event.detail.rows">
             <x-table :$headers :$rows selectable wire:model="selected" />
-            <p class="mt-2 text-sm text-gray-500 dark:text-dark-400">
+            <p class="dark:text-dark-400 mt-2 text-sm text-gray-500">
                 Selected: <b x-text="rows.join(', ') || 'none'"></b>
             </p>
         </div>

@@ -1,12 +1,14 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Mcp\Tools;
 
-use App\Support\ComponentDocumentation;
-use Illuminate\Contracts\JsonSchema\JsonSchema;
 use Laravel\Mcp\Request;
 use Laravel\Mcp\Response;
 use Laravel\Mcp\Server\Tool;
+use App\Support\ComponentDocumentation;
+use Illuminate\Contracts\JsonSchema\JsonSchema;
 use Laravel\Mcp\Server\Tools\Annotations\IsReadOnly;
 
 #[IsReadOnly]
@@ -33,7 +35,7 @@ class SearchClassesTool extends Tool
         }
 
         $grouped = $matches->groupBy('key');
-        $query = $request->get('query');
+        $query   = $request->get('query');
 
         $output = "# CSS Class Search Results for \"{$query}\"\n\n";
         $output .= "Found {$matches->count()} blocks across {$grouped->count()} components.\n\n";
@@ -60,7 +62,7 @@ class SearchClassesTool extends Tool
     public function schema(JsonSchema $schema): array
     {
         return [
-            'query' => $schema->string()->required()->description('CSS class or fragment to search for (e.g., "rounded", "p-4", "dark:bg", "border")'),
+            'query'     => $schema->string()->required()->description('CSS class or fragment to search for (e.g., "rounded", "p-4", "dark:bg", "border")'),
             'component' => $schema->string()->description('Optional filter by component name or key (e.g., "input", "alert", "select.styled")'),
         ];
     }

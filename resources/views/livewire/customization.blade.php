@@ -1,8 +1,11 @@
 <?php
 
+declare(strict_types=1);
+
 use Livewire\Component;
 
-new class extends Component {
+new class extends Component
+{
     public string $component;
 
     public string $id = '';
@@ -52,9 +55,7 @@ new class extends Component {
 <div>
     <x-modal id="{{ $id }}">
         <x-slot:title>
-            <p class="flex items-center justify-start gap-2">
-                {{ $title }}, Customization Blocks
-            </p>
+            <p class="flex items-center justify-start gap-2">{{ $title }}, Customization Blocks</p>
         </x-slot:title>
         @if ($customization)
             <div wire:ignore>
@@ -68,10 +69,11 @@ new class extends Component {
                 <div class="flex items-center justify-start gap-1">
                     <div>
                         @foreach ($blocks as $name => $class)
-                            <x-button wire:click="$call('content', '{{ $name }}', '{{ $class }}')"
-                                      :text="$name"
-                                      color="pink"
-                                      xs
+                            <x-button
+                                wire:click="$call('content', '{{ $name }}', '{{ $class }}')"
+                                :text="$name"
+                                color="pink"
+                                xs
                             />
                         @endforeach
                     </div>
@@ -82,7 +84,9 @@ new class extends Component {
                             <x-clipboard :id="uniqid()" label="Name" :text="$original['block']" />
                         </div>
                         <div wire:key="{{ uniqid() }}">
-                            <p class="block text-sm font-semibold text-gray-600 dark:text-dark-400">Original Content:</p>
+                            <p class="dark:text-dark-400 block text-sm font-semibold text-gray-600">
+                                Original Content:
+                            </p>
                             <x-code language="text" :contents="$original['class']" />
                         </div>
                     @endif
@@ -90,8 +94,10 @@ new class extends Component {
             </div>
         @endif
     </x-modal>
-    <x-button x-on:click="$tsui.open.modal('{{ $id }}'); $wire.call('open');"
-              text="Customize: {{ $title }}"
-              color="pink"
-              xs/>
+    <x-button
+        x-on:click="$tsui.open.modal('{{ $id }}'); $wire.call('open');"
+        text="Customize: {{ $title }}"
+        color="pink"
+        xs
+    />
 </div>

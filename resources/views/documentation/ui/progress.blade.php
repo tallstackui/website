@@ -1,14 +1,12 @@
 @php
-    foreach (apply_prefix($__data) as $key => $value) $$key = $value;
+    foreach (apply_prefix($__data) as $key => $value) {
+        $$key = $value;
+    }
 @endphp
 
 <x-layout :$content :ai="['Progress' => 'progress/bar', 'Progress Circle' => 'progress/circle']">
-    <x-slot:title>
-        Progress
-    </x-slot:title>
-    <x-slot:description>
-        Progress component.
-    </x-slot:description>
+    <x-slot:title>Progress</x-slot:title>
+    <x-slot:description>Progress component.</x-slot:description>
     <x-slot:customization>
         <livewire:customization :$customization component="Progress\Progress" title="Progress" />
         <livewire:customization :customization="$customizationCircle" component="Progress\Circle" />
@@ -120,9 +118,7 @@
     <x-section title="Footer Slot" anchor="normal-footer-slot">
         <x-preview language="blade" :contents="$footerSlot">
             <x-progress :percent="50">
-                <x-slot:footer>
-                    TallStackUI
-                </x-slot:footer>
+                <x-slot:footer>TallStackUI</x-slot:footer>
             </x-progress>
         </x-preview>
     </x-section>
@@ -138,9 +134,7 @@
     <x-section title="Strokes" anchor="circle-strokes">
         <x-preview language="blade" :contents="$circleStrokes">
             <div class="my-4">
-                <x-progress.circle :percent="50"
-                                   :stroke-circle="1"
-                                   :stroke-percent="2" />
+                <x-progress.circle :percent="50" :stroke-circle="1" :stroke-percent="2" />
             </div>
         </x-preview>
     </x-section>
@@ -156,7 +150,7 @@
     </x-section>
     <x-section title="Color Variations" anchor="circle-color-variations">
         <x-preview language="blade" :contents="$circleColors">
-            <div class="grid grid-cols-3 sm:grid-cols-5 gap-2">
+            <div class="grid grid-cols-3 gap-2 sm:grid-cols-5">
                 <x-progress.circle :percent="50" />
                 <x-progress.circle :percent="50" color="secondary" />
                 <x-progress.circle :percent="50" color="slate" />
@@ -191,7 +185,7 @@
     </x-section>
     <x-section title="Light Variations" anchor="circle-light-variations">
         <x-preview language="blade" :contents="$circleLights">
-            <div class="grid grid-cols-3 sm:grid-cols-5 gap-2">
+            <div class="grid grid-cols-3 gap-2 sm:grid-cols-5">
                 <x-progress.circle :percent="50" light />
                 <x-progress.circle :percent="50" color="secondary" light />
                 <x-progress.circle :percent="50" color="slate" light />
@@ -227,9 +221,7 @@
     <x-section title="Footer Slot" anchor="circle-footer-slot">
         <x-preview language="blade" :contents="$circleFooterSlot">
             <x-progress.circle :percent="50">
-                <x-slot:footer>
-                    TallStackUI
-                </x-slot:footer>
+                <x-slot:footer>TallStackUI</x-slot:footer>
             </x-progress.circle>
         </x-preview>
     </x-section>

@@ -1,14 +1,15 @@
 @php
-    foreach (apply_prefix($__data) as $key => $value) $$key = $value;
+    foreach (apply_prefix($__data) as $key => $value) {
+        $$key = $value;
+    }
 @endphp
 
-<x-layout :$content :ai="['Button' => 'button/normal', 'Button Circle' => 'button/circle', 'Button Group' => 'button/group']">
-    <x-slot:title>
-        Button
-    </x-slot:title>
-    <x-slot:description>
-        Button component.
-    </x-slot:description>
+<x-layout
+    :$content
+    :ai="['Button' => 'button/normal', 'Button Circle' => 'button/circle', 'Button Group' => 'button/group']"
+>
+    <x-slot:title>Button</x-slot:title>
+    <x-slot:description>Button component.</x-slot:description>
     <x-slot:customization>
         <livewire:customization :$customization component="Button\Normal" title="Button" />
         <livewire:customization :customization="$customizationCircle" component="Button\Circle" />
@@ -20,9 +21,9 @@
                 <x-button>TallStackUI</x-button>
             </x-preview>
             <p>
-                By default, the button <x-block>type</x-block> is <x-block>button</x-block>, but you
-                can set this as <x-block>submit</x-block> by using the <x-block>submit</x-block> attribute.
-                The same attribute is also valid for the <x-block>button.circle</x-block> component mentioned below.
+                By default, the button <x-block>type</x-block> is <x-block>button</x-block>, but you can set this as
+                <x-block>submit</x-block> by using the <x-block>submit</x-block> attribute. The same attribute is also
+                valid for the <x-block>button.circle</x-block> component mentioned below.
             </p>
             <x-code :contents="$submit" language="blade" disable-copy />
         </div>
@@ -37,13 +38,17 @@
             <x-button href="https://google.com.br" target="_blank">TallStackUI</x-button>
         </x-preview>
     </x-section>
-    <x-section title="Square Variation"
-               anchor="normal-square-variation">
+    <x-section title="Square Variation" anchor="normal-square-variation">
         <x-preview language="blade" :contents="$square">
             <x-button square>TallStackUI</x-button>
         </x-preview>
     </x-section>
-    <x-section title="Round Variation" new anchor="normal-round-variation" description="A bare round is the pill it always was. It now also takes a size. square still wins, which is what makes the square() global work while a button asks for a radius of its own.">
+    <x-section
+        title="Round Variation"
+        new
+        anchor="normal-round-variation"
+        description="A bare round is the pill it always was. It now also takes a size. square still wins, which is what makes the square() global work while a button asks for a radius of its own."
+    >
         <x-preview language="blade" :contents="$round">
             <div class="flex flex-wrap items-center gap-2">
                 <x-button>Default</x-button>
@@ -56,10 +61,13 @@
                 <x-button round="full">round="full"</x-button>
             </div>
         </x-preview>
-        <x-table class="mt-4" :headers="[
+        <x-table
+            class="mt-4"
+            :headers="[
             ['index' => 'value', 'label' => 'Value'],
             ['index' => 'class', 'label' => 'Class'],
-        ]" :rows="[
+        ]"
+            :rows="[
             ['value' => '(none)', 'class' => 'rounded-md'],
             ['value' => 'round', 'class' => 'rounded-full'],
             ['value' => 'round=\'xs\'', 'class' => 'rounded-xs'],
@@ -68,10 +76,9 @@
             ['value' => 'round=\'lg\'', 'class' => 'rounded-lg'],
             ['value' => 'round=\'xl\'', 'class' => 'rounded-xl'],
             ['value' => 'round=\'full\'', 'class' => 'rounded-full'],
-        ]" />
-        <x-warning class="mt-4">
-            Anything outside the six sizes throws at render time.
-        </x-warning>
+        ]"
+        />
+        <x-warning class="mt-4"> Anything outside the six sizes throws at render time. </x-warning>
     </x-section>
     <x-section title="Left & Right Slots" anchor="normal-left-right-slots">
         <x-preview language="blade" :contents="$leftRight">
@@ -101,7 +108,7 @@
     </x-section>
     <x-section title="Size Variations" anchor="normal-size-variations">
         <x-preview language="blade" :contents="$size">
-            <div class="flex flex-col items-center justify-center space-y-2 sm:space-x-2 sm:space-y-0 sm:flex-row sm:justify-start">
+            <div class="flex flex-col items-center justify-center space-y-2 sm:flex-row sm:justify-start sm:space-y-0 sm:space-x-2">
                 <div>
                     <x-button xs>TallStackUI</x-button>
                 </div>
@@ -119,7 +126,7 @@
     </x-section>
     <x-section title="Loading Effect" anchor="normal-loading-effect">
         <x-preview language="blade" :contents="$loading">
-            <div class="flex flex-col items-center justify-center space-y-2 sm:space-x-2 sm:space-y-0 sm:flex-row sm:justify-start">
+            <div class="flex flex-col items-center justify-center space-y-2 sm:flex-row sm:justify-start sm:space-y-0 sm:space-x-2">
                 <div>
                     <livewire:documentation.ui.button :model="1" />
                 </div>
@@ -132,15 +139,23 @@
             </div>
         </x-preview>
         <p class="mt-4">
-            You can use the <x-block>position</x-block> attribute to define the position of the loading
-            icon: <x-block>left</x-block> or <x-block>right</x-block>.
+            You can use the <x-block>position</x-block> attribute to define the position of the loading icon:
+            <x-block>left</x-block> or <x-block>right</x-block>.
         </p>
     </x-section>
-    <x-section title="Loading Spinner" anchor="normal-loading-spinner" description="An option to use a different loading indicator based on the new spinner component variation.">
+    <x-section
+        title="Loading Spinner"
+        anchor="normal-loading-spinner"
+        description="An option to use a different loading indicator based on the new spinner component variation."
+    >
         <x-preview language="blade" :contents="$spinner">
             <div class="flex flex-wrap items-center gap-2">
                 @foreach (['ring', 'throbber', 'gradient', 'ping', 'dots', 'pulse', 'typing', 'bars', 'wave'] as $variation)
-                    <livewire:documentation.ui.button :model="3" :spinner="$variation" :key="'spinner-' . ($variation ?? 'default')" />
+                    <livewire:documentation.ui.button
+                        :model="3"
+                        :spinner="$variation"
+                        :key="'spinner-'.($variation ?? 'default')"
+                    />
                 @endforeach
             </div>
         </x-preview>
@@ -288,9 +303,11 @@
             </div>
         </x-preview>
     </x-section>
-    <x-section title="Unfocus"
-               anchor="normal-unfocus"
-               description="Suppresses the focus halo when the button is activated by mouse.">
+    <x-section
+        title="Unfocus"
+        anchor="normal-unfocus"
+        description="Suppresses the focus halo when the button is activated by mouse."
+    >
         <x-preview language="blade" :contents="$unfocus">
             <div class="inline-flex items-center gap-x-2">
                 <x-button text="With Focus" />
@@ -311,17 +328,15 @@
     </x-section>
     <x-section title="Icon Slot" anchor="circle-icon-slot" description="An option to use any Heroicon.">
         <x-preview language="blade" :contents="$circleIcon">
-            <x-button.circle icon="pencil"/>
+            <x-button.circle icon="pencil" />
         </x-preview>
     </x-section>
-    <x-section title="Size Variations"
-               anchor="circle-size-variations"
-               description="An option to use any Heroicon.">
+    <x-section title="Size Variations" anchor="circle-size-variations" description="An option to use any Heroicon.">
         <x-preview language="blade" :contents="$circleSize">
-            <x-button.circle icon="pencil" xs/>
-            <x-button.circle icon="pencil" sm/>
+            <x-button.circle icon="pencil" xs />
+            <x-button.circle icon="pencil" sm />
             <x-button.circle icon="pencil" />
-            <x-button.circle icon="pencil" lg/>
+            <x-button.circle icon="pencil" lg />
         </x-preview>
     </x-section>
     <x-section title="Loading Effect" anchor="circle-loading-effect">
@@ -333,15 +348,25 @@
             </div>
         </x-preview>
     </x-section>
-    <x-section title="Loading Spinner" new anchor="circle-loading-spinner" description="The circle button reads the same prop and the same config key as the normal one.">
+    <x-section
+        title="Loading Spinner"
+        new
+        anchor="circle-loading-spinner"
+        description="The circle button reads the same prop and the same config key as the normal one."
+    >
         <x-preview language="blade" :contents="$circleSpinner">
             <div class="flex flex-wrap items-center gap-2">
                 @foreach (['ring', 'throbber', 'ping', 'dots', 'pulse', 'typing', 'bars', 'wave'] as $variation)
-                    <livewire:documentation.ui.button :model="4" :spinner="$variation" :key="'circle-spinner-' . ($variation ?? 'default')" />
+                    <livewire:documentation.ui.button
+                        :model="4"
+                        :spinner="$variation"
+                        :key="'circle-spinner-'.($variation ?? 'default')"
+                    />
                 @endforeach
             </div>
             <p class="mt-4">
-                You can set this configuration globally in the <x-refer doc="configuration">configuration file.</x-refer>
+                You can set this configuration globally in the
+                <x-refer doc="configuration">configuration file.</x-refer>
             </p>
         </x-preview>
     </x-section>
@@ -485,9 +510,11 @@
             </div>
         </x-preview>
     </x-section>
-    <x-section title="Unfocus"
-               anchor="circle-unfocus"
-               description="Same focus-suppression behaviour as on the regular button.">
+    <x-section
+        title="Unfocus"
+        anchor="circle-unfocus"
+        description="Same focus-suppression behaviour as on the regular button."
+    >
         <x-preview language="blade" :contents="$circleUnfocus">
             <x-button.circle icon="x-mark" color="secondary" sm />
             <x-button.circle icon="x-mark" color="secondary" sm unfocus />
@@ -498,17 +525,17 @@
         <div class="space-y-4">
             <p>
                 <x-block>x-button.group</x-block> is a <b>purely visual</b> wrapper that segments one or more
-                <x-block>x-button</x-block> siblings into a single cohesive unit: adjacent borders collapse
-                into shared dividers, only the outer corners are rounded, and focus rings are isolated so the
-                focused child sits above its neighbours. The wrapper renders <x-block>role="group"</x-block>
-                and forwards arbitrary attributes (e.g. <x-block>aria-label</x-block>, <x-block>id</x-block>,
-                <x-block>class</x-block>) to the underlying element.
+                <x-block>x-button</x-block> siblings into a single cohesive unit: adjacent borders collapse into shared
+                dividers, only the outer corners are rounded, and focus rings are isolated so the focused child sits
+                above its neighbours. The wrapper renders <x-block>role="group"</x-block> and forwards arbitrary
+                attributes (e.g. <x-block>aria-label</x-block>, <x-block>id</x-block>, <x-block>class</x-block>) to the
+                underlying element.
             </p>
             <p>
-                The group is <b>stateless</b>: there is no selected state, no <x-block>wire:model</x-block>,
-                and no propagation of <x-block>size</x-block>, <x-block>color</x-block> or
-                <x-block>style</x-block> to the children. Each grouped <x-block>x-button</x-block> keeps full
-                control over its own appearance and behaviour.
+                The group is <b>stateless</b>: there is no selected state, no <x-block>wire:model</x-block>, and no
+                propagation of <x-block>size</x-block>, <x-block>color</x-block> or <x-block>style</x-block> to the
+                children. Each grouped <x-block>x-button</x-block> keeps full control over its own appearance and
+                behaviour.
             </p>
         </div>
     </x-section>

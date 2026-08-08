@@ -1,25 +1,27 @@
 @php
-    foreach (apply_prefix($__data) as $key => $value) $$key = $value;
+    foreach (apply_prefix($__data) as $key => $value) {
+        $$key = $value;
+    }
 @endphp
 
 <x-layout :$content ai="back-to-top">
-    <x-slot:title>
-        Back to Top
-    </x-slot:title>
-    <x-slot:description>
-        Back to Top component.
-    </x-slot:description>
+    <x-slot:title>Back to Top</x-slot:title>
+    <x-slot:description>Back to Top component.</x-slot:description>
     <x-slot:customization>
         <livewire:customization :$customization component="BackToTop" title="Back to Top" />
     </x-slot:customization>
     <x-section title="Concept" disable-copy>
         <p>
-            The <x-block>back-to-top</x-block> component renders a fixed-position floating button that
-            appears when the user scrolls down the page. Clicking it smoothly scrolls back to the top.
-            By default, the button appears after scrolling 200px and uses a smooth scroll animation.
-            You can also configure it to observe a specific element using the
-            <a href="https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API" target="_blank" class="underline">IntersectionObserver API</a>,
-            showing the button when that element leaves the viewport.
+            The <x-block>back-to-top</x-block> component renders a fixed-position floating button that appears when the
+            user scrolls down the page. Clicking it smoothly scrolls back to the top. By default, the button appears
+            after scrolling 200px and uses a smooth scroll animation. You can also configure it to observe a specific
+            element using the
+            <a
+                href="https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API"
+                target="_blank"
+                class="underline"
+                >IntersectionObserver API</a
+            >, showing the button when that element leaves the viewport.
         </p>
     </x-section>
     <x-section title="Basic Usage">
@@ -37,8 +39,8 @@
     <x-section title="Icon" disable-copy>
         <div class="space-y-4">
             <p>
-                The button displays a <x-block>chevron-up</x-block> icon by default. You can change it
-                using the <x-block>icon</x-block> attribute with any Heroicon name:
+                The button displays a <x-block>chevron-up</x-block> icon by default. You can change it using the
+                <x-block>icon</x-block> attribute with any Heroicon name:
             </p>
             <x-code language="blade" :contents="$icon" />
         </div>
@@ -46,8 +48,8 @@
     <x-section title="Square Variation" disable-copy>
         <div class="space-y-4">
             <p>
-                Use the <x-block>square</x-block> attribute to render the button with rounded corners
-                instead of a full circle:
+                Use the <x-block>square</x-block> attribute to render the button with rounded corners instead of a full
+                circle:
             </p>
             <x-code language="blade" :contents="$square" />
         </div>
@@ -67,8 +69,8 @@
         <div class="space-y-4">
             <p>
                 Instead of relying on scroll position, you can pass a CSS selector to the
-                <x-block>anchor</x-block> attribute. The component uses the IntersectionObserver API
-                to detect when the observed element leaves the viewport, then shows the button:
+                <x-block>anchor</x-block> attribute. The component uses the IntersectionObserver API to detect when the
+                observed element leaves the viewport, then shows the button:
             </p>
             <x-code language="blade" :contents="$anchor" />
         </div>
@@ -76,8 +78,8 @@
     <x-section title="Immediate" disable-copy>
         <div class="space-y-4">
             <p>
-                Use the <x-block>immediate</x-block> attribute to scroll back to the top instantly
-                instead of using a smooth animation:
+                Use the <x-block>immediate</x-block> attribute to scroll back to the top instantly instead of using a
+                smooth animation:
             </p>
             <x-code language="blade" :contents="$immediate" />
         </div>

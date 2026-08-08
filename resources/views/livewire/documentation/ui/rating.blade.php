@@ -1,8 +1,11 @@
 <?php
 
+declare(strict_types=1);
+
 use Livewire\Component;
 
-new class extends Component {
+new class extends Component
+{
     public int $model = 1;
 
     public int $rate = 3;

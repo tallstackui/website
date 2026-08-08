@@ -1,30 +1,28 @@
 @php
-    foreach (apply_prefix($__data) as $key => $value) $$key = $value;
+    foreach (apply_prefix($__data) as $key => $value) {
+        $$key = $value;
+    }
 @endphp
 
 <x-layout :$content :ai="['Dial' => 'dial/main', 'Dial Items' => 'dial/items']">
-    <x-slot:title>
-        Dial
-    </x-slot:title>
-    <x-slot:description>
-        Dial component.
-    </x-slot:description>
+    <x-slot:title>Dial</x-slot:title>
+    <x-slot:description>Dial component.</x-slot:description>
     <x-slot:customization>
         <livewire:customization :$customization component="Dial\Main" title="Dial" />
         <livewire:customization :customization="$customizationItems" component="Dial\Items" title="Dial Items" />
     </x-slot:customization>
     <x-section title="Concept" disable-copy>
         <p>
-            The <x-block>dial</x-block> component is a speed dial, also known as a Floating Action Button (FAB).
-            It renders a fixed-position button in one of the screen corners that, when activated, reveals
-            a set of action items. Each action item is defined using the <x-block>dial.items</x-block> component
-            inside the main <x-block>dial</x-block> tag. Because the component uses fixed positioning,
-            only one dial should be used per page.
+            The <x-block>dial</x-block> component is a speed dial, also known as a Floating Action Button (FAB). It
+            renders a fixed-position button in one of the screen corners that, when activated, reveals a set of action
+            items. Each action item is defined using the <x-block>dial.items</x-block> component inside the main
+            <x-block>dial</x-block> tag. Because the component uses fixed positioning, only one dial should be used per
+            page.
         </p>
         <p>
-            Clicking any action item automatically closes the dial. When the dial opens, its items
-            animate in from the direction it expands toward — rising from a bottom corner, dropping
-            from a top corner, or sliding sideways when <x-block>horizontal</x-block>.
+            Clicking any action item automatically closes the dial. When the dial opens, its items animate in from the
+            direction it expands toward — rising from a bottom corner, dropping from a top corner, or sliding sideways
+            when <x-block>horizontal</x-block>.
         </p>
     </x-section>
     <x-section title="Basic Usage">
@@ -33,8 +31,8 @@
     <x-section title="Positions">
         <div class="space-y-4">
             <p>
-                You can control which corner of the screen the dial appears in using the <x-block>position</x-block> attribute.
-                The default position is <x-block>bottom-right</x-block>.
+                You can control which corner of the screen the dial appears in using the
+                <x-block>position</x-block> attribute. The default position is <x-block>bottom-right</x-block>.
             </p>
             <x-preview language="blade" :contents="$positions" frame="ui/dial/positions" :height="380" />
         </div>
@@ -51,8 +49,8 @@
     <x-section title="Hover Mode">
         <div class="space-y-4">
             <p>
-                By default, the dial opens on click. Use the <x-block>hover</x-block> attribute
-                to reveal items when the user hovers over the main button:
+                By default, the dial opens on click. Use the <x-block>hover</x-block> attribute to reveal items when the
+                user hovers over the main button:
             </p>
             <x-preview language="blade" :contents="$hover" frame="ui/dial/hover" :height="380" />
         </div>
@@ -60,20 +58,18 @@
     <x-section title="Labels">
         <div class="space-y-4">
             <p>
-                Each <x-block>dial.items</x-block> accepts a <x-block>label</x-block> attribute
-                that displays a tooltip-style text next to the item, helping users identify each action.
+                Each <x-block>dial.items</x-block> accepts a <x-block>label</x-block> attribute that displays a
+                tooltip-style text next to the item, helping users identify each action.
             </p>
             <x-preview language="blade" :contents="$labels" frame="ui/dial/labels" :height="460" />
-            <x-warning>
-                The label is not mandatory.
-            </x-warning>
+            <x-warning> The label is not mandatory. </x-warning>
         </div>
     </x-section>
     <x-section title="Without Tooltip">
         <div class="space-y-4">
             <p>
-                If you prefer to hide all labels at once, use the <x-block>without-tooltip</x-block>
-                attribute on the main <x-block>dial</x-block> component:
+                If you prefer to hide all labels at once, use the <x-block>without-tooltip</x-block> attribute on the
+                main <x-block>dial</x-block> component:
             </p>
             <x-preview language="blade" :contents="$withoutTooltip" frame="ui/dial/without-tooltip" :height="380" />
         </div>
@@ -81,8 +77,8 @@
     <x-section title="Icon">
         <div class="space-y-4">
             <p>
-                The main button displays a <x-block>plus</x-block> icon by default, which rotates 45 degrees
-                when the dial is open. You can change it using the <x-block>icon</x-block> attribute:
+                The main button displays a <x-block>plus</x-block> icon by default, which rotates 45 degrees when the
+                dial is open. You can change it using the <x-block>icon</x-block> attribute:
             </p>
             <x-preview language="blade" :contents="$icon" frame="ui/dial/icon" :height="320" />
         </div>
@@ -90,10 +86,9 @@
     <x-section title="Prevent Rotation">
         <div class="space-y-4">
             <p>
-                By default, the main button icon rotates 45 degrees when the dial opens.
-                Use the <x-block>prevent-rotate</x-block> attribute to keep the icon
-                static, which is useful when the icon is not meant to morph (for example,
-                a menu or ellipsis icon):
+                By default, the main button icon rotates 45 degrees when the dial opens. Use the
+                <x-block>prevent-rotate</x-block> attribute to keep the icon static, which is useful when the icon is
+                not meant to morph (for example, a menu or ellipsis icon):
             </p>
             <x-preview language="blade" :contents="$preventRotate" frame="ui/dial/prevent-rotate" :height="320" />
         </div>
@@ -101,8 +96,8 @@
     <x-section title="Square Variation">
         <div class="space-y-4">
             <p>
-                Use the <x-block>square</x-block> attribute to render the main
-                button and items with square corners instead of a full circle.
+                Use the <x-block>square</x-block> attribute to render the main button and items with square corners
+                instead of a full circle.
             </p>
             <x-preview language="blade" :contents="$square" frame="ui/dial/square" :height="380" />
         </div>
@@ -115,8 +110,10 @@
             </p>
             <x-preview language="blade" :contents="$links" frame="ui/dial/links" :height="320" />
             <p>
-                You can also use the <x-block>navigate</x-block> or <x-block>navigate-hover</x-block>
-                attributes for <a href="https://livewire.laravel.com/docs/navigate" target="_blank" class="underline">Livewire SPA navigation</a>:
+                You can also use the <x-block>navigate</x-block> or <x-block>navigate-hover</x-block> attributes for
+                <a href="https://livewire.laravel.com/docs/navigate" target="_blank" class="underline"
+                    >Livewire SPA navigation</a
+                >:
             </p>
             <x-preview language="blade" :contents="$linksNavigate" frame="ui/dial/links-navigate" :height="320" />
         </div>
@@ -127,8 +124,8 @@
     <x-section title="Color Variations">
         <div class="space-y-4">
             <p>
-                The <x-block>color</x-block> attribute changes the main button color.
-                All TallStackUI colors are available:
+                The <x-block>color</x-block> attribute changes the main button color. All TallStackUI colors are
+                available:
             </p>
             <x-preview language="blade" :contents="$colors" frame="ui/dial/colors" :height="380" />
         </div>
@@ -136,11 +133,11 @@
     <x-section title="Item Colors">
         <div class="space-y-4">
             <p>
-                While <x-block>Color Variations</x-block> colors the main button, each
-                <x-block>dial.items</x-block> can have its own color through the <x-block>color</x-block>
-                attribute, optionally combined with a <x-block>style</x-block> (<x-block>solid</x-block>,
-                <x-block>light</x-block>, or <x-block>outline</x-block>). Items without a
-                <x-block>color</x-block> keep the default neutral appearance.
+                While <x-block>Color Variations</x-block> colors the main button, each <x-block>dial.items</x-block> can
+                have its own color through the <x-block>color</x-block> attribute, optionally combined with a
+                <x-block>style</x-block> (<x-block>solid</x-block>, <x-block>light</x-block>, or
+                <x-block>outline</x-block>). Items without a <x-block>color</x-block> keep the default neutral
+                appearance.
             </p>
             <x-preview language="blade" :contents="$itemColors" frame="ui/dial/item-colors" :height="460" />
         </div>

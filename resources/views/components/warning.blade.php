@@ -49,25 +49,26 @@
         'relative overflow-hidden rounded-2xl border shadow-sm shadow-slate-900/5 dark:shadow-none',
         $surfaces[$type],
     ])>
-        <span aria-hidden="true" @class([
-            'pointer-events-none absolute inset-y-0 left-0 w-1 bg-gradient-to-b',
-            $accents[$type],
-        ])></span>
+        <span
+            aria-hidden="true"
+            @class([
+                'pointer-events-none absolute inset-y-0 left-0 w-1 bg-gradient-to-b',
+                $accents[$type],
+            ])
+        ></span>
 
         <div class="absolute top-4 right-4">
             <span @class([
                 'inline-flex h-7 w-7 items-center justify-center rounded-full ring-1',
                 $chips[$type],
             ])>
-                <x-icon :name="$icons[$type]" class="h-4 w-4" solid/>
+                <x-icon :name="$icons[$type]" class="h-4 w-4" solid />
             </span>
         </div>
 
-        <div class="px-6 py-5 pl-7 pr-14">
+        <div class="px-6 py-5 pr-14 pl-7">
             @if ($title)
-                <h3 @class([ 'mb-1 text-base font-semibold tracking-tight', $titles[$type] ])>
-                    {{ $title }}
-                </h3>
+                <h3 @class(['mb-1 text-base font-semibold tracking-tight', $titles[$type]])>{{ $title }}</h3>
             @endif
             <div @class([
                 'text-sm leading-relaxed',

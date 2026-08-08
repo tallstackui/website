@@ -1,9 +1,12 @@
 <?php
 
-use Livewire\Attributes\Computed;
-use Livewire\Component;
+declare(strict_types=1);
 
-return new class extends Component {
+use Livewire\Component;
+use Livewire\Attributes\Computed;
+
+return new class extends Component
+{
     public string $version;
 
     public function mount(): void

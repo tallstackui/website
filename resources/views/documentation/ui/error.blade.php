@@ -1,48 +1,50 @@
 @php
-    foreach (apply_prefix($__data) as $key => $value) $$key = $value;
+    foreach (apply_prefix($__data) as $key => $value) {
+        $$key = $value;
+    }
 @endphp
 
 <x-layout :$content ai="errors">
-    <x-slot:title>
-        Errors
-    </x-slot:title>
-    <x-slot:description>
-        Errors component.
-    </x-slot:description>
+    <x-slot:title>Errors</x-slot:title>
+    <x-slot:description>Errors component.</x-slot:description>
     <x-slot:customization>
         <livewire:customization :$customization component="Errors" />
     </x-slot:customization>
     <x-section title="Basic Usage">
         <x-preview language="blade" :contents="$basic">
-            <livewire:documentation.ui.errors/>
+            <livewire:documentation.ui.errors />
         </x-preview>
     </x-section>
     <x-section title="Filtering Properties" description="An option to show validation errors for specific properties.">
         <x-preview language="blade" :contents="$specific">
-            <livewire:documentation.ui.errors :only="['name']"/>
+            <livewire:documentation.ui.errors :only="['name']" />
         </x-preview>
     </x-section>
     <x-section title="Title Customization">
         <x-preview language="blade" :contents="$customized">
-            <livewire:documentation.ui.errors title="Ops! There are :count validation errors:"/>
+            <livewire:documentation.ui.errors title="Ops! There are :count validation errors:" />
         </x-preview>
     </x-section>
-    <x-section title="Without Title" description="Hides the title and the divider line between the title and the errors.">
+    <x-section
+        title="Without Title"
+        description="Hides the title and the divider line between the title and the errors."
+    >
         <x-preview language="blade" :contents="$withoutTitle">
-            <livewire:documentation.ui.errors without-title/>
+            <livewire:documentation.ui.errors without-title />
         </x-preview>
     </x-section>
     <x-section title="Numeric List" description="Displays the errors as a numbered list instead of bullet points.">
         <x-preview language="blade" :contents="$listNumeric">
-            <livewire:documentation.ui.errors list-numeric/>
+            <livewire:documentation.ui.errors list-numeric />
         </x-preview>
     </x-section>
     <x-section title="Close Option" description="An option to allow the user to hide the errors">
         <x-preview language="blade" :contents="$close">
-            <livewire:documentation.ui.errors close/>
+            <livewire:documentation.ui.errors close />
         </x-preview>
         <x-warning class="mt-4">
-            If the user closes the error component and a new validation error subsequently occurs, the component will be displayed again with the new errors.
+            If the user closes the error component and a new validation error subsequently occurs, the component will be
+            displayed again with the new errors.
         </x-warning>
     </x-section>
     <x-section title="Footer Slot">
@@ -50,12 +52,19 @@
             <livewire:documentation.ui.errors show-slot />
         </x-preview>
     </x-section>
-    <x-section title="Footer Alignment" description="Use the end attribute on the footer slot to automatically align its content to the right.">
+    <x-section
+        title="Footer Alignment"
+        description="Use the end attribute on the footer slot to automatically align its content to the right."
+    >
         <x-preview language="blade" :contents="$footerEnd">
             <livewire:documentation.ui.errors footer-end />
         </x-preview>
     </x-section>
-    <x-section title="Paddingless" new description="An option to remove the padding of the separator of the header with the body.">
+    <x-section
+        title="Paddingless"
+        new
+        description="An option to remove the padding of the separator of the header with the body."
+    >
         <x-preview language="blade" :contents="$paddingless">
             <livewire:documentation.ui.errors paddingless />
         </x-preview>

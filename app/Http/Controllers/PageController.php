@@ -1,19 +1,21 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Http\Controllers;
 
 use App\Enums\Example;
-use Illuminate\Contracts\View\View as ViewContract;
-use Illuminate\Support\Facades\View as ViewFacade;
 use Symfony\Component\Yaml\Yaml;
+use Illuminate\Support\Facades\View as ViewFacade;
+use Illuminate\Contracts\View\View as ViewContract;
 
 class PageController
 {
     /** Bypass to the examples */
     protected const array EXAMPLES = [
         'Integrations\Alpine' => 'Alpine',
-        'StarterKit' => 'StarterKit',
-        'Ui\List' => 'Ui\ListComponent',
+        'StarterKit'          => 'StarterKit',
+        'Ui\List'             => 'Ui\ListComponent',
     ];
 
     public function __invoke(?string $main = null, ?string $children = null): ViewContract

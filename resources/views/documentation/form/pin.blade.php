@@ -1,30 +1,25 @@
 @php
-    foreach (apply_prefix($__data) as $key => $value) $$key = $value;
+    foreach (apply_prefix($__data) as $key => $value) {
+        $$key = $value;
+    }
 @endphp
 
 <x-layout :$content ai="form/pin">
-    <x-slot:title>
-        Form Pin
-    </x-slot:title>
-    <x-slot:description>
-        Form pin component.
-    </x-slot:description>
+    <x-slot:title>Form Pin</x-slot:title>
+    <x-slot:description>Form pin component.</x-slot:description>
     <x-slot:customization>
         <livewire:customization :$customization component="Form\Pin" />
     </x-slot:customization>
     <x-section title="Concept" disable-copy>
-        Many modern applications need to validate and authorize things such
-        as user registration or even login, through mechanisms such as 2FA.
-        Pin input is an ideal component for situations where you need to
-        request a pin (short code) from the user.
+        Many modern applications need to validate and authorize things such as user registration or even login, through
+        mechanisms such as 2FA. Pin input is an ideal component for situations where you need to request a pin (short
+        code) from the user.
     </x-section>
     <x-section title="Basic Usage">
         <x-preview language="blade" :contents="$basic">
             <x-pin length="5" />
         </x-preview>
-        <x-warning class="mt-4">
-            The length is mandatory in any use case.
-        </x-warning>
+        <x-warning class="mt-4"> The length is mandatory in any use case. </x-warning>
     </x-section>
     <x-section title="Label & Hint">
         <x-preview language="blade" :contents="$labelHint">
@@ -40,9 +35,7 @@
         <x-preview language="blade" :contents="$clear">
             <livewire:documentation.form.pin :mode="1" />
         </x-preview>
-        <x-warning class="mt-4">
-            The clear button will only be displayed when the input is not empty.
-        </x-warning>
+        <x-warning class="mt-4"> The clear button will only be displayed when the input is not empty. </x-warning>
     </x-section>
     <x-section title="Masks" description="An option to limit the input types.">
         <x-preview language="blade" :contents="$masks">
@@ -59,20 +52,20 @@
                 <x-pin length="5" label="Clear Event" clear x-on:clear="alert(`Cleared: ${$event.detail.model}`)" />
             </div>
         </x-preview>
-        <x-warning class="mt-4">
-            The clear event needs the clear option to be enabled.
-        </x-warning>
+        <x-warning class="mt-4"> The clear event needs the clear option to be enabled. </x-warning>
     </x-section>
     <x-section title="Smart" description="An option to automatically submit the form when all pin boxes are filled.">
         <div class="space-y-4">
             <p>
-                The <x-block>smart</x-block> attribute automatically submits the parent form when all pin boxes are filled.
+                The <x-block>smart</x-block> attribute automatically submits the parent form when all pin boxes are
+                filled.
             </p>
             <x-preview language="blade" :contents="$smart">
                 <livewire:documentation.form.pin :mode="2" />
             </x-preview>
             <x-warning>
-                The form will only be submitted once. After submission, the user must clear and re-fill the pin to submit again.
+                The form will only be submitted once. After submission, the user must clear and re-fill the pin to
+                submit again.
             </x-warning>
         </div>
     </x-section>

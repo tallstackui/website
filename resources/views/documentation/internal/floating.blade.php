@@ -13,9 +13,7 @@
 @endphp
 
 <x-layout :$content :torchlight="false">
-    <x-slot:title>
-        Floating Component
-    </x-slot:title>
+    <x-slot:title>Floating Component</x-slot:title>
     <x-slot:description>
         The generic floating component used in: form date, form time, form
         password, form upload, form color, dropdown, and select styled.

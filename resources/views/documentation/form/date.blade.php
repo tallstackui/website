@@ -1,16 +1,15 @@
 @php
-    $now = now();
+    $now     = now();
     $current = $now->format('Y-m-d');
-    foreach (apply_prefix($__data) as $key => $value) $$key = $value;
+
+    foreach (apply_prefix($__data) as $key => $value) {
+        $$key = $value;
+    }
 @endphp
 
 <x-layout :$content ai="form/date">
-    <x-slot:title>
-        Form Date
-    </x-slot:title>
-    <x-slot:description>
-        Form date component.
-    </x-slot:description>
+    <x-slot:title>Form Date</x-slot:title>
+    <x-slot:description>Form date component.</x-slot:description>
     <x-slot:customization>
         <livewire:customization :$customization component="Form\Date" />
     </x-slot:customization>
@@ -35,24 +34,30 @@
             </x-preview>
             <x-warning class="mt-4">
                 <ul class="ml-2 list-inside list-decimal text-sm">
-                    <li>You can use <a href="https://day.js.org/docs/en/display/format" target="_blank" class="underline">all Day.js formats.</a></li>
-                    <li><b>The formats are applicable only visually.</b> The default backend format will always be <b>YYYY-MM-DD</b></li>
+                    <li>
+                        You can use
+                        <a href="https://day.js.org/docs/en/display/format" target="_blank" class="underline"
+                            >all Day.js formats.</a>
+                    </li>
+                    <li>
+                        <b>The formats are applicable only visually.</b> The default backend format will always be
+                        <b>YYYY-MM-DD</b>
+                    </li>
                     <li>The default date format sent to the component should be <b>YYYY-MM-DD</b></li>
                 </ul>
             </x-warning>
             <p class="mt-2">
-                Regardless of the format of the date, to send the date to the component you
-                must follow the pattern <x-block>YYYY-MM-DD</x-block>. If the date are using a format different
-                than <x-block>YYYY-MM-DD</x-block>, the correct thing to do is to use Carbon's <x-block>createFromFormat</x-block>.
-                Let's take a look at an example considering the Brazilian date format:
+                Regardless of the format of the date, to send the date to the component you must follow the pattern
+                <x-block>YYYY-MM-DD</x-block>. If the date are using a format different than
+                <x-block>YYYY-MM-DD</x-block>, the correct thing to do is to use Carbon's
+                <x-block>createFromFormat</x-block>. Let's take a look at an example considering the Brazilian date
+                format:
             </p>
             <x-code :contents="$createFromFormat" />
             <p>
-                If you are using the component inside Livewire components, you
-                can use the <x-block>mount</x-block> method to convert the date.
-                If you are using the component out of Livewire, you can to the
-                same logic in the controller methods before send the variable
-                to the Blade file.
+                If you are using the component inside Livewire components, you can use the
+                <x-block>mount</x-block> method to convert the date. If you are using the component out of Livewire, you
+                can to the same logic in the controller methods before send the variable to the Blade file.
             </p>
         </div>
     </x-section>
@@ -63,8 +68,7 @@
     </x-section>
     <x-section title="Min & Max Dates">
         <x-preview language="blade" :contents="$minMaxDates">
-            <x-date :min-date="now()->subWeek()"
-                    :max-date="now()->addWeek()" />
+            <x-date :min-date="now()->subWeek()" :max-date="now()->addWeek()" />
         </x-preview>
     </x-section>
     <x-section title="Min & Max Years">
@@ -74,7 +78,10 @@
     </x-section>
     <x-section title="Disable Dates">
         <x-preview language="blade" :contents="$disabled">
-            <x-date :value="$current" :disable="collect([now()->subDay()->format('Y-m-d'), now()->addDay()->format('Y-m-d')])" />
+            <x-date
+                :value="$current"
+                :disable="collect([now()->subDay()->format('Y-m-d'), now()->addDay()->format('Y-m-d')])"
+            />
         </x-preview>
     </x-section>
     <x-section title="Disable Specific Days">
@@ -86,9 +93,7 @@
                     <x-date label="Only Weekends" hint="Disable Weekdays" weekends />
                 </div>
             </x-preview>
-            <x-warning>
-                This feature does not validate the date you pass to the component.
-            </x-warning>
+            <x-warning> This feature does not validate the date you pass to the component. </x-warning>
         </div>
     </x-section>
     <x-section title="Range Mode">
@@ -101,14 +106,17 @@
     </x-section>
     <x-section title="Multiple Mode">
         <x-preview language="blade" :contents="$multiple">
-            <x-date multiple :value="[
+            <x-date
+                multiple
+                :value="[
                 $now->format('Y-m-d'),
                 $now->addDays(1)->format('Y-m-d'),
                 $now->addDays(2)->format('Y-m-d'),
                 $now->addDays(3)->format('Y-m-d'),
                 $now->addDays(4)->format('Y-m-d'),
                 $now->addDays(5)->format('Y-m-d'),
-            ]" />
+            ]"
+            />
         </x-preview>
     </x-section>
     <x-section title="Start Day" description="An option to set the first day of week, starting from v2.5.0" new>

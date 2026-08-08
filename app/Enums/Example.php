@@ -1,40 +1,42 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Enums;
 
 use Exception;
+use Throwable;
 use ReflectionClass;
 use ReflectionException;
-use Throwable;
 
 enum Example: string
 {
     // region Form
     case Autocomplete = 'Form\\Autocomplete';
-    case Checkbox = 'Form\\Checkbox';
-    case Color = 'Form\\Color';
-    case Currency = 'Form\\Currency';
-    case Date = 'Form\\Date';
-    case Input = 'Form\\Input';
-    case InputSelect = 'Form\\InputSelect';
-    case Number = 'Form\\Number';
-    case Password = 'Form\\Password';
-    case Pin = 'Form\\Pin';
-    case Radio = 'Form\\Radio';
-    case Range = 'Form\\Range';
-    case Select = 'Form\\Select';
-    case Tag = 'Form\\Tag';
-    case Textarea = 'Form\\Textarea';
-    case Time = 'Form\\Time';
-    case Toggle = 'Form\\Toggle';
-    case Upload = 'Form\\Upload';
-    case UploadAsync = 'Form\\UploadAsync';
+    case Checkbox     = 'Form\\Checkbox';
+    case Color        = 'Form\\Color';
+    case Currency     = 'Form\\Currency';
+    case Date         = 'Form\\Date';
+    case Input        = 'Form\\Input';
+    case InputSelect  = 'Form\\InputSelect';
+    case Number       = 'Form\\Number';
+    case Password     = 'Form\\Password';
+    case Pin          = 'Form\\Pin';
+    case Radio        = 'Form\\Radio';
+    case Range        = 'Form\\Range';
+    case Select       = 'Form\\Select';
+    case Tag          = 'Form\\Tag';
+    case Textarea     = 'Form\\Textarea';
+    case Time         = 'Form\\Time';
+    case Toggle       = 'Form\\Toggle';
+    case Upload       = 'Form\\Upload';
+    case UploadAsync  = 'Form\\UploadAsync';
     // endregion
 
     // region Helpers
     case DarkTheme = 'Helpers\\DarkTheme';
     case DebugMode = 'Helpers\\DebugMode';
-    case EnvBar = 'Helpers\\EnvBar';
+    case EnvBar    = 'Helpers\\EnvBar';
     // endregion
 
     // region Integrations
@@ -43,77 +45,77 @@ enum Example: string
 
     // region Interactions
     case Dialog = 'Interactions\\Dialog';
-    case Toast = 'Interactions\\Toast';
+    case Toast  = 'Interactions\\Toast';
     // endregion
 
     // region Miscellaneous
-    case Ai = 'Ai';
-    case Configuration = 'Configuration';
-    case Contribution = 'Contribution';
-    case Command = 'Command';
-    case Installation = 'Installation';
-    case StarterKit = 'StarterKit';
+    case Ai              = 'Ai';
+    case Configuration   = 'Configuration';
+    case Contribution    = 'Contribution';
+    case Command         = 'Command';
+    case Installation    = 'Installation';
+    case StarterKit      = 'StarterKit';
     case ComponentPrefix = 'ComponentPrefix';
-    case Translation = 'Translation';
+    case Translation     = 'Translation';
     case Troubleshooting = 'Troubleshooting';
-    case Updates = 'Updates';
-    case UpgradeGuide = 'UpgradeGuide';
-    case Welcome = 'Welcome';
+    case Updates         = 'Updates';
+    case UpgradeGuide    = 'UpgradeGuide';
+    case Welcome         = 'Welcome';
     case WithoutLivewire = 'WithoutLivewire';
     // endregion
 
     // region Customization
-    case ColorCustomization = 'Customization\\Color';
-    case DeepCustomization = 'Customization\\Deep';
+    case ColorCustomization   = 'Customization\\Color';
+    case DeepCustomization    = 'Customization\\Deep';
     case GlobalsCustomization = 'Customization\\Globals';
-    case SoftCustomization = 'Customization\\Soft';
+    case SoftCustomization    = 'Customization\\Soft';
     // endregion
 
     // region UI
-    case Accordion = 'Ui\\Accordion';
-    case Alert = 'Ui\\Alert';
-    case Avatar = 'Ui\\Avatar';
-    case BackToTop = 'Ui\\BackToTop';
-    case Badge = 'Ui\\Badge';
-    case Banner = 'Ui\\Banner';
-    case Boolean = 'Ui\\Boolean';
-    case Breadcrumbs = 'Ui\\Breadcrumbs';
-    case Button = 'Ui\\Button';
-    case Calendar = 'Ui\\Calendar';
-    case Card = 'Ui\\Card';
-    case Carousel = 'Ui\\Carousel';
-    case Chart = 'Ui\\Chart';
-    case Clipboard = 'Ui\\Clipboard';
+    case Accordion      = 'Ui\\Accordion';
+    case Alert          = 'Ui\\Alert';
+    case Avatar         = 'Ui\\Avatar';
+    case BackToTop      = 'Ui\\BackToTop';
+    case Badge          = 'Ui\\Badge';
+    case Banner         = 'Ui\\Banner';
+    case Boolean        = 'Ui\\Boolean';
+    case Breadcrumbs    = 'Ui\\Breadcrumbs';
+    case Button         = 'Ui\\Button';
+    case Calendar       = 'Ui\\Calendar';
+    case Card           = 'Ui\\Card';
+    case Carousel       = 'Ui\\Carousel';
+    case Chart          = 'Ui\\Chart';
+    case Clipboard      = 'Ui\\Clipboard';
     case CommandPalette = 'Ui\\CommandPalette';
-    case Dial = 'Ui\\Dial';
-    case Dropdown = 'Ui\\Dropdown';
-    case Editor = 'Ui\\Editor';
-    case Error = 'Ui\\Error';
-    case Environment = 'Ui\\Environment';
-    case Gallery = 'Ui\\Gallery';
-    case Icon = 'Ui\\Icon';
-    case Layout = 'Ui\\Layout';
-    case Link = 'Ui\\Link';
-    case List = 'Ui\\ListComponent';
-    case Loading = 'Ui\\Loading';
-    case Kbd = 'Ui\\Kbd';
-    case KeyValue = 'Ui\\KeyValue';
-    case Modal = 'Ui\\Modal';
-    case Progress = 'Ui\\Progress';
-    case QrCode = 'Ui\\QrCode';
-    case Reaction = 'Ui\\Reaction';
-    case Rating = 'Ui\\Rating';
-    case Signature = 'Ui\\Signature';
-    case Slide = 'Ui\\Slide';
-    case Spinner = 'Ui\\Spinner';
-    case Stats = 'Ui\\Stats';
-    case Step = 'Ui\\Step';
-    case Swap = 'Ui\\Swap';
-    case Tab = 'Ui\\Tab';
-    case Table = 'Ui\\Table';
-    case ThemeSwitch = 'Ui\\ThemeSwitch';
-    case Timeline = 'Ui\\Timeline';
-    case Tooltip = 'Ui\\Tooltip';
+    case Dial           = 'Ui\\Dial';
+    case Dropdown       = 'Ui\\Dropdown';
+    case Editor         = 'Ui\\Editor';
+    case Error          = 'Ui\\Error';
+    case Environment    = 'Ui\\Environment';
+    case Gallery        = 'Ui\\Gallery';
+    case Icon           = 'Ui\\Icon';
+    case Layout         = 'Ui\\Layout';
+    case Link           = 'Ui\\Link';
+    case List           = 'Ui\\ListComponent';
+    case Loading        = 'Ui\\Loading';
+    case Kbd            = 'Ui\\Kbd';
+    case KeyValue       = 'Ui\\KeyValue';
+    case Modal          = 'Ui\\Modal';
+    case Progress       = 'Ui\\Progress';
+    case QrCode         = 'Ui\\QrCode';
+    case Reaction       = 'Ui\\Reaction';
+    case Rating         = 'Ui\\Rating';
+    case Signature      = 'Ui\\Signature';
+    case Slide          = 'Ui\\Slide';
+    case Spinner        = 'Ui\\Spinner';
+    case Stats          = 'Ui\\Stats';
+    case Step           = 'Ui\\Step';
+    case Swap           = 'Ui\\Swap';
+    case Tab            = 'Ui\\Tab';
+    case Table          = 'Ui\\Table';
+    case ThemeSwitch    = 'Ui\\ThemeSwitch';
+    case Timeline       = 'Ui\\Timeline';
+    case Tooltip        = 'Ui\\Tooltip';
     // endregion
 
     /** @throws ReflectionException|Throwable */

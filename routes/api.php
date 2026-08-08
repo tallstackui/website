@@ -1,9 +1,11 @@
 <?php
 
+declare(strict_types=1);
+
 use App\Models\User;
-use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Database\Eloquent\Builder;
 
 Route::withoutMiddleware('throttle:api')
     ->get('/users', function (Request $request) {
@@ -24,9 +26,9 @@ Route::withoutMiddleware('throttle:api')
             ->limit(10)
             ->get()
             ->map(fn (User $user): array => [
-                'label' => $user->name,
-                'value' => $user->id,
-                'image' => asset('assets/images/avatar/'.random_int(1, 20).'.jpg'),
+                'label'       => $user->name,
+                'value'       => $user->id,
+                'image'       => asset('assets/images/avatar/'.random_int(1, 20).'.jpg'),
                 'description' => sprintf('The user e-mail is %s', $user->email),
             ]);
     })->name('api.users');

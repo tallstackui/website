@@ -1,9 +1,12 @@
 <?php
 
+declare(strict_types=1);
+
 use Livewire\Component;
 use TallStackUi\Traits\Interactions;
 
-new class extends Component {
+new class extends Component
+{
     use Interactions;
 
     public function multiples(): void

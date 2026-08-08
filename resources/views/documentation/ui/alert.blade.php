@@ -1,59 +1,46 @@
 @php
-    foreach (apply_prefix($__data) as $key => $value) $$key = $value;
+    foreach (apply_prefix($__data) as $key => $value) {
+        $$key = $value;
+    }
 @endphp
 
 <x-layout :$content ai="alert">
-    <x-slot:title>
-        Alert
-    </x-slot:title>
-    <x-slot:description>
-        Alert components.
-    </x-slot:description>
+    <x-slot:title>Alert</x-slot:title>
+    <x-slot:description>Alert components.</x-slot:description>
     <x-slot:customization>
         <livewire:customization :$customization component="Alert" />
     </x-slot:customization>
     <x-section title="Basic Usage">
         <x-preview language="blade" :contents="$basic">
-            <x-alert>
-                TallStackUI
-            </x-alert>
+            <x-alert> TallStackUI </x-alert>
         </x-preview>
     </x-section>
     <x-section title="Title">
         <x-preview language="blade" :contents="$title">
-            <x-alert title="TallStackUI">
-                TallStackUI
-            </x-alert>
+            <x-alert title="TallStackUI"> TallStackUI </x-alert>
         </x-preview>
     </x-section>
     <x-section title="Close Option" description="An option to allow the user to hide the alert">
         <x-preview language="blade" :contents="$close">
-            <x-alert title="TallStackUI" close>
-                TallStackUI
-            </x-alert>
+            <x-alert title="TallStackUI" close> TallStackUI </x-alert>
         </x-preview>
     </x-section>
-    <x-section title="Auto Dismiss" description="An option to automatically dismiss the alert after a given number of seconds">
+    <x-section
+        title="Auto Dismiss"
+        description="An option to automatically dismiss the alert after a given number of seconds"
+    >
         <x-preview language="blade" :contents="$dismiss">
             <div class="space-y-2">
-                <x-alert :dismiss="3">
-                    TallStackUI
-                </x-alert>
-                <x-alert :dismiss="5" close>
-                    TallStackUI
-                </x-alert>
+                <x-alert :dismiss="3"> TallStackUI </x-alert>
+                <x-alert :dismiss="5" close> TallStackUI </x-alert>
             </div>
         </x-preview>
     </x-section>
     <x-section title="Icon Slot">
         <x-preview language="blade" :contents="$icon">
             <div class="space-y-2">
-                <x-alert icon="cog">
-                    TallStackUI
-                </x-alert>
-                <x-alert title="TallStackUI" icon="cog">
-                    TallStackUI
-                </x-alert>
+                <x-alert icon="cog"> TallStackUI </x-alert>
+                <x-alert title="TallStackUI" icon="cog"> TallStackUI </x-alert>
             </div>
         </x-preview>
     </x-section>
@@ -181,9 +168,9 @@
             <div class="space-y-2">
                 <x-alert title="TallStackUI" text="No rounded corners." square />
                 <x-alert title="TallStackUI" text="Extra small" rounded="xs" />
-                <x-alert title="TallStackUI" text="Small"       rounded="sm" />
-                <x-alert title="TallStackUI" text="Medium"      rounded="md" />
-                <x-alert title="TallStackUI" text="Large"       rounded="lg" />
+                <x-alert title="TallStackUI" text="Small" rounded="sm" />
+                <x-alert title="TallStackUI" text="Medium" rounded="md" />
+                <x-alert title="TallStackUI" text="Large" rounded="lg" />
                 <x-alert title="TallStackUI" text="Extra large" rounded="xl" />
             </div>
         </x-preview>
@@ -200,18 +187,44 @@
         <div class="space-y-4">
             <x-preview language="blade" :contents="$bordered">
                 <div class="space-y-2">
-                    <x-alert title="TallStackUI" text="Inherits the red color"   color="red"   light bordered="left" />
+                    <x-alert title="TallStackUI" text="Inherits the red color" color="red" light bordered="left" />
                     <x-alert title="TallStackUI" text="Inherits the green color" color="green" light bordered="right" />
-                    <x-alert title="TallStackUI" text="Explicit blue border"     color="primary" light bordered="left:blue" />
-                    <x-alert title="TallStackUI" text="Explicit rose border"     color="primary" light bordered="right:rose" />
-                    <x-alert title="TallStackUI" text="Outline + side border"    color="primary" outline bordered="left:amber" />
-                    <x-alert title="TallStackUI" text="Square + side border"     color="primary" light square bordered="left:violet" />
+                    <x-alert
+                        title="TallStackUI"
+                        text="Explicit blue border"
+                        color="primary"
+                        light
+                        bordered="left:blue"
+                    />
+                    <x-alert
+                        title="TallStackUI"
+                        text="Explicit rose border"
+                        color="primary"
+                        light
+                        bordered="right:rose"
+                    />
+                    <x-alert
+                        title="TallStackUI"
+                        text="Outline + side border"
+                        color="primary"
+                        outline
+                        bordered="left:amber"
+                    />
+                    <x-alert
+                        title="TallStackUI"
+                        text="Square + side border"
+                        color="primary"
+                        light
+                        square
+                        bordered="left:violet"
+                    />
                 </div>
             </x-preview>
             <p>
-                Use <x-block>"left"</x-block> or <x-block>"right"</x-block> to inherit the alert's <x-block>color</x-block>,
-                or <x-block>"&lt;side&gt;:&lt;color&gt;"</x-block> (e.g., <x-block>"left:red"</x-block>) to pin an explicit
-                color independent from the rest of the alert. All 28 colors are supported.
+                Use <x-block>"left"</x-block> or <x-block>"right"</x-block> to inherit the alert's
+                <x-block>color</x-block>, or <x-block>"&lt;side&gt;:&lt;color&gt;"</x-block> (e.g.,
+                <x-block>"left:red"</x-block>) to pin an explicit color independent from the rest of the alert. All 28
+                colors are supported.
             </p>
         </div>
     </x-section>

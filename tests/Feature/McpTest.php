@@ -1,14 +1,16 @@
 <?php
 
+declare(strict_types=1);
+
+use App\Mcp\Tools\GetComponentTool;
+use App\Mcp\Tools\SearchClassesTool;
+use App\Mcp\Tools\ListComponentsTool;
+use App\Mcp\Servers\TallStackUiServer;
+use App\Mcp\Tools\SearchCustomizationTool;
+use App\Mcp\Tools\SearchDocumentationTool;
 use App\Mcp\Prompts\CustomizeComponentPrompt;
 use App\Mcp\Resources\ComponentIndexResource;
 use App\Mcp\Resources\InternalScopesResource;
-use App\Mcp\Servers\TallStackUiServer;
-use App\Mcp\Tools\GetComponentTool;
-use App\Mcp\Tools\ListComponentsTool;
-use App\Mcp\Tools\SearchClassesTool;
-use App\Mcp\Tools\SearchCustomizationTool;
-use App\Mcp\Tools\SearchDocumentationTool;
 
 test('list components returns categorized components with summaries', function () {
     TallStackUiServer::tool(ListComponentsTool::class)

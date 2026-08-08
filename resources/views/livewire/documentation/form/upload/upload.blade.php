@@ -1,20 +1,29 @@
 <?php
 
-use Livewire\Attributes\Validate;
-use Livewire\Component;
-use Livewire\WithFileUploads;
-use Illuminate\Support\Arr;
-use Illuminate\Http\UploadedFile;
+declare(strict_types=1);
 
-new class extends Component {
+use Livewire\Component;
+use Illuminate\Support\Arr;
+use Livewire\WithFileUploads;
+use Illuminate\Http\UploadedFile;
+use Livewire\Attributes\Validate;
+
+new class extends Component
+{
     use WithFileUploads;
 
     public $photo1;
+
     public $photo2;
+
     public $photo3;
+
     public $photo4 = [];
+
     public $photo5;
+
     public $photo6;
+
     public $photo7;
 
     #[Validate(['file', 'extensions:dat'])]
@@ -47,24 +56,24 @@ new class extends Component {
 
 <div>
     @if ($model === 1)
-        <x-upload wire:model="photo1"/>
+        <x-upload wire:model="photo1" />
     @elseif ($model === 2)
-        <x-upload label="Screenshot"
-                  hint="We need to analyze your screenshot"
-                  tip="Drag and drop your screenshot here"
-                  wire:model="photo2"/>
+        <x-upload
+            label="Screenshot"
+            hint="We need to analyze your screenshot"
+            tip="Drag and drop your screenshot here"
+            wire:model="photo2"
+        />
     @elseif ($model === 3)
-        <x-upload wire:model="photo3" delete/>
+        <x-upload wire:model="photo3" delete />
     @elseif ($model === 4)
-        <x-upload wire:model="photo4" multiple/>
+        <x-upload wire:model="photo4" multiple />
     @elseif ($model === 5)
-        <x-upload wire:model="photo5" tip="Accepting only pdf" accept="application/pdf"/>
+        <x-upload wire:model="photo5" tip="Accepting only pdf" accept="application/pdf" />
     @elseif ($model === 6)
         <x-upload wire:model="photo6" multiple>
             <x-slot:footer>
-                <x-button class="w-full">
-                    Save
-                </x-button>
+                <x-button class="w-full"> Save </x-button>
             </x-slot:footer>
         </x-upload>
     @elseif ($model === 7)

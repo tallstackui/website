@@ -1,12 +1,14 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Mcp\Tools;
 
-use App\Support\ComponentDocumentation;
-use Illuminate\Contracts\JsonSchema\JsonSchema;
 use Laravel\Mcp\Request;
 use Laravel\Mcp\Response;
 use Laravel\Mcp\Server\Tool;
+use App\Support\ComponentDocumentation;
+use Illuminate\Contracts\JsonSchema\JsonSchema;
 use Laravel\Mcp\Server\Tools\Annotations\IsReadOnly;
 
 #[IsReadOnly]
@@ -19,7 +21,7 @@ class SearchDocumentationTool extends Tool
     public function handle(Request $request): Response
     {
         $request->validate([
-            'query' => ['required', 'string', 'min:2'],
+            'query'       => ['required', 'string', 'min:2'],
             'max_results' => ['integer', 'min:1', 'max:20'],
         ]);
 
@@ -55,7 +57,7 @@ class SearchDocumentationTool extends Tool
     public function schema(JsonSchema $schema): array
     {
         return [
-            'query' => $schema->string()->required()->description('Search query (minimum 2 characters). Multiple words narrow the results. Examples: "wire:model", "input mask", "dark mode"'),
+            'query'       => $schema->string()->required()->description('Search query (minimum 2 characters). Multiple words narrow the results. Examples: "wire:model", "input mask", "dark mode"'),
             'max_results' => $schema->integer()->description('Maximum number of results to return (1-20, default 10)'),
         ];
     }

@@ -1,8 +1,11 @@
 <?php
 
+declare(strict_types=1);
+
 use Livewire\Component;
 
-new class extends Component {
+new class extends Component
+{
     public bool $live = false;
 
     public string $tab = 'Tab 1';
@@ -12,40 +15,20 @@ new class extends Component {
 
 <div>
     @if ($live)
-    <x-tab wire:model.live="tab">
-        <x-tab.items tab="Tab 1">
-            Tab 1
-        </x-tab.items>
-        <x-tab.items tab="Tab 2">
-            Tab 2
-        </x-tab.items>
-        <x-tab.items tab="Tab 3">
-            Tab 3
-        </x-tab.items>
-        <x-tab.items tab="Tab 4">
-            Tab 4
-        </x-tab.items>
-        <x-tab.items tab="Tab 5">
-            Tab 5
-        </x-tab.items>
-    </x-tab>
+        <x-tab wire:model.live="tab">
+            <x-tab.items tab="Tab 1"> Tab 1 </x-tab.items>
+            <x-tab.items tab="Tab 2"> Tab 2 </x-tab.items>
+            <x-tab.items tab="Tab 3"> Tab 3 </x-tab.items>
+            <x-tab.items tab="Tab 4"> Tab 4 </x-tab.items>
+            <x-tab.items tab="Tab 5"> Tab 5 </x-tab.items>
+        </x-tab>
     @else
         <x-tab wire:model="tab">
-            <x-tab.items tab="Tab 1">
-                Tab 1
-            </x-tab.items>
-            <x-tab.items tab="Tab 2">
-                Tab 2
-            </x-tab.items>
-            <x-tab.items tab="Tab 3">
-                Tab 3
-            </x-tab.items>
-            <x-tab.items tab="Tab 4">
-                Tab 4
-            </x-tab.items>
-            <x-tab.items tab="Tab 5">
-                Tab 5
-            </x-tab.items>
+            <x-tab.items tab="Tab 1"> Tab 1 </x-tab.items>
+            <x-tab.items tab="Tab 2"> Tab 2 </x-tab.items>
+            <x-tab.items tab="Tab 3"> Tab 3 </x-tab.items>
+            <x-tab.items tab="Tab 4"> Tab 4 </x-tab.items>
+            <x-tab.items tab="Tab 5"> Tab 5 </x-tab.items>
         </x-tab>
     @endif
 
@@ -53,7 +36,7 @@ new class extends Component {
         <p class="mt-4 font-semibold text-pink-500">Selected: <u>{{ $tab }}</u></p>
     </div>
 
-    @if (!$live)
+    @if (! $live)
         <x-button class="mt-2" wire:click="$set('tab', 'Tab 5')">Change to Tab 5</x-button>
     @endif
 </div>

@@ -1,10 +1,13 @@
 <?php
 
+declare(strict_types=1);
+
 use Livewire\Component;
 use Livewire\Attributes\On;
 use TallStackUi\Traits\Interactions;
 
-new class extends Component {
+new class extends Component
+{
     use Interactions;
 
     public function confirm(): void

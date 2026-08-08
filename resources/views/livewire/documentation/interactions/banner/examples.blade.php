@@ -1,9 +1,12 @@
 <?php
 
+declare(strict_types=1);
+
 use Livewire\Component;
 use TallStackUi\Traits\Interactions;
 
-new class extends Component {
+new class extends Component
+{
     use Interactions;
 
     public function success(): void
@@ -18,6 +21,6 @@ new class extends Component {
 
 ?>
 
-<div class="flex flex-col space-y-2 md:space-x-2 md:space-y-0 md:flex-row">
+<div class="flex flex-col space-y-2 md:flex-row md:space-y-0 md:space-x-2">
     <x-button color="green" wire:click="success">Send</x-button>
 </div>

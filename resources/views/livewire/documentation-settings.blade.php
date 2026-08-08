@@ -1,13 +1,16 @@
 <?php
 
+declare(strict_types=1);
+
 use Livewire\Component;
 use Livewire\Attributes\Validate;
 use Illuminate\Validation\Validator;
 use Illuminate\Support\Facades\Cookie;
 
-return new class extends Component {
+return new class extends Component
+{
     #[Validate(['nullable', 'min:1'], onUpdate: false)]
-    public string|null $prefix;
+    public ?string $prefix;
 
     public function mount(): void
     {
@@ -18,7 +21,7 @@ return new class extends Component {
     {
         $this->withValidator(function (Validator $validator) {
             $validator->after(function ($validator) {
-                if ($this->prefix && !preg_match('/^[A-Za-z-]+$/', $this->prefix)) {
+                if ($this->prefix && ! preg_match('/^[A-Za-z-]+$/', $this->prefix)) {
                     return $validator->errors()->add('prefix', 'The prefix must contain only letters and dashes.');
                 }
             });
@@ -26,7 +29,7 @@ return new class extends Component {
 
         Cookie::queue(blank($this->prefix) ? Cookie::forget('prefix') : Cookie::forever('prefix', $this->prefix));
 
-        $this->js(<<<JS
+        $this->js(<<<'JS'
         location.reload();
         JS
         );

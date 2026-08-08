@@ -20,7 +20,7 @@
   },
   "require-dev": {
     "fakerphp/faker": "^1.9.1",
-    "laravel/pint": "^1.0",
+    "laravel/pint": "^1.30",
     "mockery/mockery": "^1.4.4",
     "nunomaduro/collision": "^8.1",
     "pestphp/pest": "^3.0",
@@ -58,7 +58,10 @@
     ],
     "test": "./vendor/bin/pest",
     "type": "./vendor/bin/pest --type-coverage",
-    "format": "./vendor/bin/pint --parallel",
+    "format": [
+      "./vendor/bin/pint --parallel",
+      "./vendor/bin/pint --parallel --blade"
+    ],
     "ci": [
       "./vendor/bin/pint --test",
       "./vendor/bin/pest --type-coverage",

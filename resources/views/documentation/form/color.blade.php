@@ -1,14 +1,12 @@
 @php
-    foreach (apply_prefix($__data) as $key => $value) $$key = $value;
+    foreach (apply_prefix($__data) as $key => $value) {
+        $$key = $value;
+    }
 @endphp
 
 <x-layout :$content ai="form/color">
-    <x-slot:title>
-        Form Color
-    </x-slot:title>
-    <x-slot:description>
-        Form color component.
-    </x-slot:description>
+    <x-slot:title>Form Color</x-slot:title>
+    <x-slot:description>Form color component.</x-slot:description>
     <x-slot:customization>
         <livewire:customization :$customization component="Form\Color" />
     </x-slot:customization>
@@ -49,30 +47,33 @@
         <x-preview language="blade" :contents="$excludeStep">
             <x-color picker excluded-step="500" />
         </x-preview>
-        <x-warning class="mt-4">
-            Excluded step can only be used with <x-block>picker</x-block> mode.
-        </x-warning>
+        <x-warning class="mt-4"> Excluded step can only be used with <x-block>picker</x-block> mode. </x-warning>
     </x-section>
-    <x-section title="Exclude Color" description="An option to exclude a specific color from the color selector in picker mode.">
+    <x-section
+        title="Exclude Color"
+        description="An option to exclude a specific color from the color selector in picker mode."
+    >
         <x-preview language="blade" :contents="$excludeColor">
             <x-color picker excluded-color="red" />
         </x-preview>
-        <x-warning class="mt-4">
-            Excluded step can only be used with <x-block>picker</x-block> mode.
-        </x-warning>
+        <x-warning class="mt-4"> Excluded step can only be used with <x-block>picker</x-block> mode. </x-warning>
     </x-section>
     <x-section title="Events">
         <x-preview language="blade" :contents="$events">
             <x-color picker x-on:set="alert(`Selected Color: ${$event.detail.color}`)" />
         </x-preview>
     </x-section>
-    <x-section title="Configuration" new description="picker, selectable and clearable exist as global defaults, resolved through the usual rule: the inline prop always wins. excluded-step keeps requiring the picker, whichever side enables it.">
+    <x-section
+        title="Configuration"
+        new
+        description="picker, selectable and clearable exist as global defaults, resolved through the usual rule: the inline prop always wins. excluded-step keeps requiring the picker, whichever side enables it."
+    >
         <x-code language="php" :contents="$configuration" />
         <x-warning warning title="The custom colors key was renamed" class="mt-4">
-            The configuration documented <x-block>custom</x-block> while the resolution read
-            <x-block>colors</x-block>, so the global palette silently did nothing. The key is now
-            <x-block>colors</x-block>, matching the prop it feeds. Applications that guessed
-            <x-block>colors</x-block> keep working; anything set under <x-block>custom</x-block> must be renamed.
+            The configuration documented <x-block>custom</x-block> while the resolution read <x-block>colors</x-block>,
+            so the global palette silently did nothing. The key is now <x-block>colors</x-block>, matching the prop it
+            feeds. Applications that guessed <x-block>colors</x-block> keep working; anything set under
+            <x-block>custom</x-block> must be renamed.
         </x-warning>
     </x-section>
     <x-available-configuration />

@@ -1,10 +1,12 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Mcp\Resources;
 
-use App\Support\ComponentDocumentation;
 use Laravel\Mcp\Response;
 use Laravel\Mcp\Server\Resource;
+use App\Support\ComponentDocumentation;
 
 class ComponentIndexResource extends Resource
 {

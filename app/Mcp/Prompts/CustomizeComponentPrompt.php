@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Mcp\Prompts;
 
 use Laravel\Mcp\Request;
@@ -30,7 +32,7 @@ class CustomizeComponentPrompt extends Prompt
         ]);
 
         $component = $request->get('component');
-        $goal = $request->get('goal') ?: 'adjust its appearance';
+        $goal      = $request->get('goal') ?: 'adjust its appearance';
 
         return Response::text(<<<MARKDOWN
         I want to customize the TallStackUI "{$component}" component to {$goal}.

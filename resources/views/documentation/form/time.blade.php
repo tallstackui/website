@@ -1,15 +1,14 @@
 @php
     $current = now()->format('h:i A');
-    foreach (apply_prefix($__data) as $key => $value) $$key = $value;
+
+    foreach (apply_prefix($__data) as $key => $value) {
+        $$key = $value;
+    }
 @endphp
 
 <x-layout :$content ai="form/time">
-    <x-slot:title>
-        Form Time
-    </x-slot:title>
-    <x-slot:description>
-        Form time component.
-    </x-slot:description>
+    <x-slot:title>Form Time</x-slot:title>
+    <x-slot:description>Form time component.</x-slot:description>
     <x-slot:customization>
         <livewire:customization :$customization component="Form\Time" />
     </x-slot:customization>
@@ -40,11 +39,13 @@
         </x-preview>
         <x-warning class="mt-4">
             Due to the way the component works, the <b>min</b> and <b>max</b>
-            hours/minutes do not limit the range, but rather the post-selected
-            value when time is selected.
+            hours/minutes do not limit the range, but rather the post-selected value when time is selected.
         </x-warning>
     </x-section>
-    <x-section title="Required" description="An option to adjust the time to the current one without the possibility of clearing the input.">
+    <x-section
+        title="Required"
+        description="An option to adjust the time to the current one without the possibility of clearing the input."
+    >
         <x-preview language="blade" :contents="$required">
             <x-time format="24" required />
         </x-preview>
@@ -62,17 +63,17 @@
     <x-section title="Footer Slot">
         <x-preview language="blade" :contents="$footerSlot">
             <x-time>
-                <x-slot:footer>
-                    Footer Slot
-                </x-slot:footer>
+                <x-slot:footer>Footer Slot</x-slot:footer>
             </x-time>
         </x-preview>
     </x-section>
     <x-section title="Events">
         <x-preview language="blade" :contents="$events">
-            <x-time x-on:hour="alert(`Hour Selected: ${$event.detail.hour}`)"
-                    x-on:minute="alert(`Minute Selected: ${$event.detail.minute}`)"
-                    x-on:interval="alert(`Interval Changed: ${$event.detail.interval}`)"/>
+            <x-time
+                x-on:hour="alert(`Hour Selected: ${$event.detail.hour}`)"
+                x-on:minute="alert(`Minute Selected: ${$event.detail.minute}`)"
+                x-on:interval="alert(`Interval Changed: ${$event.detail.interval}`)"
+            />
         </x-preview>
     </x-section>
 </x-layout>

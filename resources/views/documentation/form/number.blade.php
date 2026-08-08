@@ -1,14 +1,12 @@
 @php
-    foreach (apply_prefix($__data) as $key => $value) $$key = $value;
+    foreach (apply_prefix($__data) as $key => $value) {
+        $$key = $value;
+    }
 @endphp
 
 <x-layout :$content ai="form/number">
-    <x-slot:title>
-        Form Number
-    </x-slot:title>
-    <x-slot:description>
-        Form number component.
-    </x-slot:description>
+    <x-slot:title>Form Number</x-slot:title>
+    <x-slot:description>Form number component.</x-slot:description>
     <x-slot:customization>
         <livewire:customization :$customization component="Form\Number" />
     </x-slot:customization>
@@ -50,13 +48,14 @@
             <x-number selectable />
         </x-preview>
     </x-section>
-    <x-section title="Delay Control" description="An option to control the velocity to increase/decrease when pressing buttons">
+    <x-section
+        title="Delay Control"
+        description="An option to control the velocity to increase/decrease when pressing buttons"
+    >
         <x-preview language="blade" :contents="$delay">
             <x-number delay="1" min="1" max="10" />
         </x-preview>
-        <x-warning class="mt-4">
-            The delay calculation happens as delay * 100.
-        </x-warning>
+        <x-warning class="mt-4"> The delay calculation happens as delay * 100. </x-warning>
     </x-section>
     <x-section title="Chevron Icons" description="An option to use other icons instead of defaults.">
         <x-preview language="blade" :contents="$icon">
