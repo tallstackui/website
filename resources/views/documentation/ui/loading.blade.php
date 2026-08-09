@@ -63,4 +63,10 @@
             <livewire:documentation.ui.loading :model="2" />
         </x-preview>
     </x-section>
+    <x-section title="Using Spinners" new description="An option to use the new spinners component.">
+        <x-preview language="blade" :contents="$usingSpinners">
+            <livewire:documentation.ui.loading :model="3" />
+        </x-preview>
+        <p class="mt-4">You can read more about the new spinners component <x-refer :doc="['ui', 'spinner']">by click here.</x-refer></p>
+    </x-section>
 </x-layout>

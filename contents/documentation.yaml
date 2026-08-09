@@ -686,12 +686,12 @@ ui:
     - Scrollable Height
     - Custom Empty State
     - Rich Inline Content
-    - Caveats
     - Compact
     - Lazy
     - Action Slot
     - Caption Slot
     - Skeleton
+    - Caveats
   loading:
     - Concept
     - Attributes
@@ -699,6 +699,7 @@ ui:
     - Basic Usage
     - Text Slot
     - Target & Delay Options
+    - Using Spinners
   kbd:
     - Basic Usage
     - Key Combination

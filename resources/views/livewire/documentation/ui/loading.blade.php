@@ -19,7 +19,7 @@ new class extends Component {
     @if ($model === 0)
         <x-loading />
 
-        <x-button wire:click="save(1)">Show Loading</x-button>
+        <x-button wire:click="save(3)">Show Loading</x-button>
     @elseif ($model === 1)
         <x-loading>
             <div class="text-primary-500 flex items-center dark:text-white">
@@ -28,10 +28,16 @@ new class extends Component {
             </div>
         </x-loading>
 
-        <x-button wire:click="save(1)">Show Loading</x-button>
+        <x-button wire:click="save(3)">Show Loading</x-button>
     @elseif ($model === 2)
         <x-loading loading="save" delay="longest" />
 
-        <x-button wire:click="save(4)">Show Loading</x-button>
+        <x-button wire:click="save(6)">Show Loading (Click and wait!)</x-button>
+    @elseif ($model === 3)
+        <x-loading>
+            <x-spinner typing text="Waiting..." />
+        </x-loading>
+
+        <x-button wire:click="save(3)">Show Loading</x-button>
     @endif
 </div>

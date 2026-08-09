@@ -12,25 +12,6 @@
     </x-slot>
     <x-section title="Concept" disable-copy>
         <div class="space-y-4">
-            <p>
-                Built on top of Filament's
-                <x-block>KeyValue</x-block>
-                form component with features like Stripe's Product and Price
-                <x-block>metadata</x-block>
-                in mind, the
-                <x-block>KeyValue</x-block>
-                component was ideally designed to handle json values where you
-                have a value associated with a key. You must make sure to use
-                the
-                <x-block>KeyValue</x-block>
-                inside a Livewire component to bind a
-                <x-block>wire:model</x-block>
-                that has an array of arrays containing
-                <x-block>key</x-block>
-                and
-                <x-block>value</x-block>
-                :
-            </p>
             <x-code :contents="$basicPhp" disable-copy />
             <x-code :contents="$basicBlade" language="blade" />
         </div>

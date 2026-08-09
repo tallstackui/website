@@ -9,18 +9,15 @@
         ["id" => 3, "name" => "staging", "caption" => "3 servers"],
     ];
 
-    $long = [
-        ["id" => 1, "name" => "general", "caption" => "1 server"],
-        ["id" => 2, "name" => "production", "caption" => "12 servers"],
-        ["id" => 3, "name" => "staging", "caption" => "3 servers"],
-        ["id" => 4, "name" => "monitoring", "caption" => "4 servers"],
-        ["id" => 5, "name" => "database", "caption" => "6 servers"],
-        ["id" => 6, "name" => "cache", "caption" => "2 servers"],
-        ["id" => 7, "name" => "queue", "caption" => "3 servers"],
-        ["id" => 8, "name" => "analytics", "caption" => "5 servers"],
-        ["id" => 9, "name" => "mailer", "caption" => "1 server"],
-        ["id" => 10, "name" => "logging", "caption" => "4 servers"],
-    ];
+    $long = collect(range(1, 50))
+        ->map(
+            fn (int $id): array => [
+                "id" => $id,
+                "name" => "tag-{$id}",
+                "caption" => $id === 1 ? "1 server" : "{$id} servers",
+            ],
+        )
+        ->all();
 @endphp
 
 <x-layout
@@ -44,17 +41,17 @@
     <x-section title="Basic Usage">
         <x-preview language="blade" :contents="$basic">
             <x-list>
-                <x-list.items name="general" caption="1 server" />
-                <x-list.items name="production" caption="12 servers" />
-                <x-list.items name="staging" caption="3 servers" />
+                <x-list.items name="general" caption="1 server"/>
+                <x-list.items name="production" caption="12 servers"/>
+                <x-list.items name="staging" caption="3 servers"/>
             </x-list>
         </x-preview>
     </x-section>
     <x-section title="Label & Hint">
         <x-preview language="blade" :contents="$labelHint">
             <x-list label="Tags" hint="Manage your tags here.">
-                <x-list.items name="general" caption="1 server" />
-                <x-list.items name="production" caption="12 servers" />
+                <x-list.items name="general" caption="1 server"/>
+                <x-list.items name="production" caption="12 servers"/>
             </x-list>
         </x-preview>
     </x-section>
@@ -64,9 +61,9 @@
     >
         <x-preview language="blade" :contents="$searchable">
             <x-list label="Tags" searchable>
-                <x-list.items name="general" caption="1 server" />
-                <x-list.items name="production" caption="12 servers" />
-                <x-list.items name="staging" caption="3 servers" />
+                <x-list.items name="general" caption="1 server"/>
+                <x-list.items name="production" caption="12 servers"/>
+                <x-list.items name="staging" caption="3 servers"/>
             </x-list>
         </x-preview>
     </x-section>
@@ -77,8 +74,8 @@
                 searchable
                 search-placeholder="Filter tags by name or caption"
             >
-                <x-list.items name="general" caption="1 server" />
-                <x-list.items name="production" caption="12 servers" />
+                <x-list.items name="general" caption="1 server"/>
+                <x-list.items name="production" caption="12 servers"/>
             </x-list>
         </x-preview>
     </x-section>
@@ -87,40 +84,40 @@
             <x-list label="Tags" hint="Click an ellipsis to act on a tag.">
                 <x-list.items name="general" caption="1 server">
                     <x-slot:menu>
-                        <x-dropdown.items text="Edit" />
-                        <x-dropdown.items text="Delete" />
+                        <x-dropdown.items text="Edit"/>
+                        <x-dropdown.items text="Delete"/>
                     </x-slot>
                 </x-list.items>
                 <x-list.items name="production" caption="12 servers">
                     <x-slot:menu>
-                        <x-dropdown.items text="Edit" />
-                        <x-dropdown.items text="Delete" />
+                        <x-dropdown.items text="Edit"/>
+                        <x-dropdown.items text="Delete"/>
                     </x-slot>
                 </x-list.items>
             </x-list>
         </x-preview>
     </x-section>
     <x-section title="Loop Items" disable-copy>
-        <x-code language="blade" :contents="$loopItems" disable-copy />
+        <x-code language="blade" :contents="$loopItems" disable-copy/>
     </x-section>
     <x-section title="Data-Driven">
         <x-preview language="blade" :contents="$dataDriven">
-            <x-list label="Tags" :items="$preview" searchable />
+            <x-list label="Tags" :items="$preview" searchable/>
         </x-preview>
     </x-section>
     <x-section title="Data-Driven Menu">
         <x-preview language="blade" :contents="$dataDrivenMenu">
             <x-list label="Tags" :items="$preview" searchable>
                 @interact("item_menu", $item)
-                    <x-dropdown.items text="Edit" />
-                    <x-dropdown.items text="Delete" />
+                <x-dropdown.items text="Edit"/>
+                <x-dropdown.items text="Delete"/>
                 @endinteract
             </x-list>
         </x-preview>
     </x-section>
     <x-section title="Scrollable Height">
         <x-preview language="blade" :contents="$height">
-            <x-list label="Tags" :items="$long" searchable height="60" />
+            <x-list label="Tags" :items="$long" searchable height="60"/>
         </x-preview>
     </x-section>
     <x-section title="Custom Empty State">
@@ -133,10 +130,10 @@
                         >
                             No tags configured yet.
                         </p>
-                        <x-button text="Create tag" />
+                        <x-button text="Create tag"/>
                     </div>
                 </x-slot>
-                <x-list.items name="general" caption="1 server" />
+                <x-list.items name="general" caption="1 server"/>
             </x-list>
         </x-preview>
     </x-section>
@@ -153,6 +150,106 @@
                     <x-badge color="red" round xs>retired</x-badge>
                 </x-list.items>
             </x-list>
+        </x-preview>
+    </x-section>
+    <x-section
+        title="Compact"
+        new
+        description="Tightens the vertical padding of the rows, the search bar and the empty message. The flag lives on x-list alone and reaches the rows through @aware, so it holds for :items, lazy and slot rows alike."
+    >
+        <x-preview language="blade" :contents="$compact">
+            <div class="grid gap-4 md:grid-cols-2">
+                <x-list label="Default" :items="$preview" searchable/>
+                <x-list label="Compact" :items="$preview" searchable compact/>
+            </div>
+        </x-preview>
+    </x-section>
+    <x-section
+        title="Lazy"
+        new
+        description="An option to renders rows on the client."
+    >
+        <x-preview language="blade" :contents="$lazy">
+            <x-list
+                label="Tags"
+                :items="$long"
+                searchable
+                height="60"
+                lazy="4"
+            />
+        </x-preview>
+        <p class="mt-4">
+            The row markup is still the same component, so every soft
+            customization of
+            <x-block>list.items</x-block>
+            reaches the lazy rows unchanged. Search still sees the whole
+            dataset: the filter runs over the JSON array, not over the rendered
+            rows.
+        </p>
+        <x-warning
+            warning
+            title="height is required, and the interact slots are refused"
+            class="mt-4"
+        >
+            A scroll container is required for the sentinel to intersect. The server resolves the
+            <x-block>
+                @verbatim
+                    @interact('item_caption')
+                @endverbatim
+
+            </x-block>
+            ,
+            <x-block>
+                @verbatim
+                    @interact('item_action')
+                @endverbatim
+
+            </x-block>
+            , and
+            <x-block>
+                @verbatim
+                    @interact('item_menu')
+                @endverbatim
+
+            </x-block>
+            interactions during row rendering. Without a server render for each row, these
+            interactions cannot be resolved, so the combination throws.
+        </x-warning>
+    </x-section>
+    <x-section
+        title="Action Slot"
+        new
+        description="An option to renders controls on the right of the row."
+    >
+        <x-preview language="blade" :contents="$actionSlot">
+            <x-list label="Environments">
+                <x-list.items name="general" caption="1 server">
+                    <x-slot:action>
+                        <x-button sm>Deploy</x-button>
+                    </x-slot>
+                    <x-slot:menu>
+                        <x-dropdown.items text="Edit"/>
+                        <x-dropdown.items text="Delete"/>
+                    </x-slot>
+                </x-list.items>
+                <x-list.items name="production" caption="12 servers">
+                    <x-slot:action>
+                        <x-button sm color="red">Deploy</x-button>
+                    </x-slot>
+                </x-list.items>
+            </x-list>
+        </x-preview>
+    </x-section>
+    <x-section
+        title="Skeleton"
+        new
+        description="An option to render a lazy loading state."
+    >
+        <x-preview language="blade" :contents="$skeleton">
+            <div class="grid gap-4 md:grid-cols-2">
+                <x-list skeleton/>
+                <x-list skeleton="6" searchable label="Tags"/>
+            </div>
         </x-preview>
     </x-section>
     <x-section title="Caveats" disable-copy>
@@ -202,100 +299,5 @@
                 , not via floating's own customization.
             </li>
         </ul>
-    </x-section>
-    <x-section
-        title="Compact"
-        new
-        description="Tightens the vertical padding of the rows, the search bar and the empty message. The flag lives on x-list alone and reaches the rows through @aware, so it holds for :items, lazy and slot rows alike."
-    >
-        <x-preview language="blade" :contents="$compact">
-            <div class="grid gap-4 md:grid-cols-2">
-                <x-list label="Default" :items="$preview" searchable />
-                <x-list label="Compact" :items="$preview" searchable compact />
-            </div>
-        </x-preview>
-    </x-section>
-    <x-section
-        title="Lazy"
-        new
-        description="Moves the rows to the client. The server serializes :items into a single JSON array and AlpineJS renders a slice of it, growing it as a sentinel at the bottom of the scroll container comes into view."
-    >
-        <x-preview language="blade" :contents="$lazy">
-            <x-list
-                label="Tags"
-                :items="$long"
-                searchable
-                height="60"
-                lazy="4"
-            />
-        </x-preview>
-        <p class="mt-4">
-            The row markup is still the same component, so every soft
-            customization of
-            <x-block>list.items</x-block>
-            reaches the lazy rows unchanged. Search still sees the whole
-            dataset: the filter runs over the JSON array, not over the rendered
-            rows.
-        </p>
-        <x-warning
-            warning
-            title="height is required, and the interact slots are refused"
-            class="mt-4"
-        >
-            The sentinel needs a scroll container to intersect with. And
-            <x-block>
-                @verbatim @interact('item_caption') @endverbatim
-
-            </x-block>
-            ,
-            <x-block>
-                @verbatim @interact('item_action') @endverbatim
-
-            </x-block>
-            and
-            <x-block>
-                @verbatim @interact('item_menu') @endverbatim
-
-            </x-block>
-            are closures the server resolves while rendering each row, and there
-            is no per-row server render left to resolve them, so the combination
-            throws.
-        </x-warning>
-    </x-section>
-    <x-section
-        title="Action Slot"
-        new
-        description="An option to renders controls on the right of the row."
-    >
-        <x-preview language="blade" :contents="$actionSlot">
-            <x-list label="Environments">
-                <x-list.items name="general" caption="1 server">
-                    <x-slot:action>
-                        <x-button sm>Deploy</x-button>
-                    </x-slot>
-                    <x-slot:menu>
-                        <x-dropdown.items text="Edit" />
-                        <x-dropdown.items text="Delete" />
-                    </x-slot>
-                </x-list.items>
-                <x-list.items name="production" caption="12 servers">
-                    <x-slot:action>
-                        <x-button sm color="red">Deploy</x-button>
-                    </x-slot>
-                </x-list.items>
-            </x-list>
-        </x-preview>
-    </x-section>
-    <x-section
-        title="Skeleton"
-        new
-        description="An option to render a lazy loading state."
-    >
-        <x-preview language="blade" :contents="$skeleton">
-            <div class="grid gap-4 md:grid-cols-2">
-                <x-list skeleton />
-                <x-list skeleton="6" searchable label="Tags" />
-            </div>
-        </x-preview>
     </x-section>
 </x-layout>

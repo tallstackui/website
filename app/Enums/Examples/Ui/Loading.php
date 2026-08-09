@@ -49,6 +49,12 @@ class Loading
     <x-loading loading="save" delay="longest" />
     HTML;
 
+    public const string USING_SPINNERS = <<<'HTML'
+    <x-loading>
+        <x-spinner typing text="Waiting..." />
+    </x-loading>
+    HTML;
+
     public const string CUSTOMIZATION = <<<'HTML'
     TallStackUi::customize()
         ->loading()

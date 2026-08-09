@@ -35,7 +35,7 @@
     <x-section
         title="Borderless & Shadowless"
         new
-        description="borderless removes only the border, shadowless removes only the shadow. Passing both reproduces what borderless alone did on 3.x."
+        description="An option to remove shadow and borders."
     >
         <x-preview language="blade" :contents="$borderless">
             <div class="flex items-center gap-3">
