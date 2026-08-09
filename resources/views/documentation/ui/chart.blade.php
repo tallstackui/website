@@ -228,7 +228,7 @@
     <x-section
         title="Skeleton"
         new
-        description="series stops being required. Neutral fills, no axis labels, no legend, no tooltip: a shape, never a reading."
+        description="An option to display a lazy loading skeleton indicator."
     >
         <x-preview language="blade" :contents="$skeleton">
             <div class="space-y-6">

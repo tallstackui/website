@@ -87,7 +87,7 @@
     <x-section
         title="Skeleton"
         new
-        description="Renders a placeholder and stops requiring a link, which is what a placeholder stands in for."
+        description="An option to display a lazy loading skeleton indicator."
     >
         <x-preview language="blade" :contents="$skeleton">
             <x-qr-code skeleton size="lg" />

@@ -105,7 +105,7 @@
                     >
                         <p class="mt-2 text-sm text-gray-600">
                             See the
-                            <a href="/changelog" class="underline">
+                            <a href="{{ url("/") }}" class="underline">
                                 full changelog
                             </a>
                             .
@@ -134,28 +134,6 @@
                 <x-timeline.items title="Step D" description="Production" />
             </x-timeline>
         </x-preview>
-        <x-warning
-            warning
-            title="Slot items inherit from the container on 4.x"
-            class="mt-4"
-        >
-            <x-block>horizontal</x-block>
-            ,
-            <x-block>alternate</x-block>
-            ,
-            <x-block>compact</x-block>
-            ,
-            <x-block>color</x-block>
-            and
-            <x-block>style</x-block>
-            no longer have to be repeated on every
-            <x-block>x-timeline.items</x-block>
-            . An item can still override its own
-            <x-block>color</x-block>
-            and
-            <x-block>style</x-block>
-            .
-        </x-warning>
     </x-section>
     <x-section title="Alternate Layout">
         <x-preview language="blade" :contents="$alternate">
@@ -390,21 +368,9 @@
         ]);
     @endphp
 
-    <x-section
-        title="Current Activation State"
-        description="An option to visually distinguish the current/active item in the timeline."
-    >
-        <div class="space-y-4">
-            <p>
-                Although there isn't a property to define a state as active, you
-                can use the properties expected by each item to create a visual
-                effect that indicates the current state in progress. Let's say
-                you are creating a timeline of an online purchase. You can
-                assemble the component as follows:
-            </p>
-            <x-preview language="blade" :contents="$currentActivation">
-                <x-timeline :items="$state" horizontal class="pt-2" />
-            </x-preview>
-        </div>
+    <x-section title="Current Activation State">
+        <x-preview language="blade" :contents="$currentActivation">
+            <x-timeline :items="$state" horizontal class="pt-2" />
+        </x-preview>
     </x-section>
 </x-layout>

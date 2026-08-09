@@ -158,7 +158,7 @@
     <x-section
         title="Flat Look"
         new
-        description="shadowless drops the shadow, bordered draws a border around the wrapper while keeping it. The predefined tab-shadowless scope keeps working unchanged."
+        description="An option to display the component without shadows."
     >
         <x-preview language="blade" :contents="$flat">
             <x-tab selected="Tab 1" shadowless bordered>
@@ -170,17 +170,13 @@
     <x-section
         title="Paddingless"
         new
-        description="Strips the padding of the content area, leaving it flush against the edges."
+        description="An option to display the component without any padding."
     >
         <x-preview language="blade" :contents="$paddingless">
             <x-tab selected="Tab 1" paddingless>
-                <x-tab.items tab="Tab 1">
-                    <x-table
-                        :headers="[['index' => 'name', 'label' => 'Name'], ['index' => 'email', 'label' => 'E-mail']]"
-                        :rows="[['name' => 'AJ', 'email' => 'aj@tallstackui.com'], ['name' => 'Bob', 'email' => 'bob@tallstackui.com']]"
-                    />
-                </x-tab.items>
-                <x-tab.items tab="Tab 2">Content 2</x-tab.items>
+                <x-tab.items tab="Tab 1">Tall</x-tab.items>
+                <x-tab.items tab="Tab 2">Stack</x-tab.items>
+                <x-tab.items tab="Tab 3">UI 🥰</x-tab.items>
             </x-tab>
         </x-preview>
     </x-section>

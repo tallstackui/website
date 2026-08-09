@@ -31,20 +31,27 @@
         </x-preview>
     </x-section>
     <x-section title="Min & Max Hours and Minutes">
-        <x-preview language="blade" :contents="$minMax">
-            <div class="space-y-2">
-                <x-time
-                    label="Min Hour: 5, Max Hour: 10"
-                    :min-hour="5"
-                    :max-hour="10"
-                />
-                <x-time
-                    label="Min Minute: 30, Max Minute: 45"
-                    :min-minute="30"
-                    :max-minute="45"
-                />
-            </div>
-        </x-preview>
+        <div class="space-y-4">
+            <x-preview language="blade" :contents="$minMax">
+                <div class="space-y-2">
+                    <x-time
+                        label="Min Hour: 5, Max Hour: 10"
+                        :min-hour="5"
+                        :max-hour="10"
+                    />
+                    <x-time
+                        label="Min Minute: 30, Max Minute: 45"
+                        :min-minute="30"
+                        :max-minute="45"
+                    />
+                </div>
+            </x-preview>
+            <x-warning info>
+                Starting from v4, the
+                <x-block>min/max</x-block>
+                hour and minute will control how long the range are.
+            </x-warning>
+        </div>
     </x-section>
     <x-section
         title="Required"

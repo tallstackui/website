@@ -244,7 +244,7 @@
     <x-section
         title="Helper Variations"
         new
-        description="helpers was a flag that produced one fixed pair of buttons. It behaves like the Table paginator now: a bare flag renders default, a string picks another look, and a dotted value is a view path. Anything else throws."
+        description="An option to use alternative buttons to navigate."
     >
         <x-preview language="blade" :contents="$helpersVariations">
             <div class="space-y-8">
@@ -276,40 +276,17 @@
                 @endforeach
             </div>
         </x-preview>
-        <x-table
-            class="mt-4"
-            :headers="[
-                ['index' => 'variant', 'label' => 'Variant'],
-                ['index' => 'look', 'label' => 'Look'],
-            ]"
-            :rows="[
-                ['variant' => 'default', 'look' => 'Individual bordered buttons with hover fill and focus ring, label plus chevron'],
-                ['variant' => 'minimal', 'look' => 'The same layout with borderless text buttons'],
-                ['variant' => 'compact', 'look' => 'A single shell anchored right, icon-only buttons and a current/total indicator'],
-            ]"
-        />
-        <p class="mt-4">
-            The variant behind a bare
-            <x-block>helpers</x-block>
-            comes from the config, so every wizard switches at once:
-        </p>
-        <x-code
-            class="mt-4"
-            language="php"
-            :contents="$helpersConfiguration"
-        />
         <x-warning class="mt-4">
-            In
             <x-block>compact</x-block>
-            the buttons disable at the edges instead of hiding, so the shell
-            never changes width, and the finish button renders to the left of
-            it.
+            mode keeps its width unchanged by disabling edge buttons rather than
+            hiding them. The finish button is displayed to the left of the
+            controls.
         </x-warning>
     </x-section>
     <x-section
         title="Navigation Slots"
         new
-        description="Each slot replaces its built-in button entirely. The component keeps only the visibility wrapper; the click behavior belongs to the application."
+        description="An option to use raw HTML content inside the navigation button as a slot."
     >
         <x-preview language="blade" :contents="$navigationSlots">
             <x-step selected="1" helpers>
@@ -341,7 +318,7 @@
             </x-step>
         </x-preview>
         <p class="mt-4">
-            Two AlpineJS methods,
+            Two JS methods,
             <x-block>next()</x-block>
             and
             <x-block>previous()</x-block>
@@ -368,7 +345,7 @@
     <x-section
         title="Skeleton"
         new
-        description="A structural placeholder shaped like the step indicators. A bare flag draws 3; an integer sets the count."
+        description="An option to display a lazy loading skeleton indicator."
     >
         <x-preview language="blade" :contents="$skeleton">
             <div class="space-y-6">

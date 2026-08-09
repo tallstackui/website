@@ -274,7 +274,9 @@
                             <x-button>Save</x-button>
                         </x-slot>
                     </x-slide>
-                    <x-button x-on:click="$tsui.open.slide('slide-footer-start')">
+                    <x-button
+                        x-on:click="$tsui.open.slide('slide-footer-start')"
+                    >
                         Start
                     </x-button>
 
@@ -287,7 +289,9 @@
                             <x-button>Save</x-button>
                         </x-slot>
                     </x-slide>
-                    <x-button x-on:click="$tsui.open.slide('slide-footer-between')">
+                    <x-button
+                        x-on:click="$tsui.open.slide('slide-footer-between')"
+                    >
                         Between
                     </x-button>
 
@@ -300,7 +304,9 @@
                             <x-button>Save</x-button>
                         </x-slot>
                     </x-slide>
-                    <x-button x-on:click="$tsui.open.slide('slide-footer-default')">
+                    <x-button
+                        x-on:click="$tsui.open.slide('slide-footer-default')"
+                    >
                         Default
                     </x-button>
                 </div>
@@ -308,20 +314,25 @@
             <x-table
                 class="mt-4"
                 :headers="[
-                ['index' => 'attribute', 'label' => 'Attribute'],
-                ['index' => 'result', 'label' => 'Result'],
-            ]"
+                    ['index' => 'attribute', 'label' => 'Attribute'],
+                    ['index' => 'result', 'label' => 'Result'],
+                ]"
                 :rows="[
-                ['attribute' => '(none)', 'result' => 'justify-end'],
-                ['attribute' => 'start', 'result' => 'justify-start'],
-                ['attribute' => 'center', 'result' => 'justify-center'],
-                ['attribute' => 'end', 'result' => 'justify-end, written out'],
-                ['attribute' => 'between', 'result' => 'justify-between'],
-                ['attribute' => 'unwrapped', 'result' => 'no aligning wrapper at all'],
-            ]"
+                    ['attribute' => '(none)', 'result' => 'justify-end'],
+                    ['attribute' => 'start', 'result' => 'justify-start'],
+                    ['attribute' => 'center', 'result' => 'justify-center'],
+                    ['attribute' => 'end', 'result' => 'justify-end, written out'],
+                    ['attribute' => 'between', 'result' => 'justify-between'],
+                    ['attribute' => 'unwrapped', 'result' => 'no aligning wrapper at all'],
+                ]"
             />
             <x-warning warning title="The default moved">
-                Slide footers now align to the end by default. Previously, omitting the attribute left them at the start because the base <x-block>flex</x-block> block had no justify class. Set <x-block>start</x-block> to keep the old layout.
+                Slide footers now align to the end by default. Previously,
+                omitting the attribute left them at the start because the base
+                <x-block>flex</x-block>
+                block had no justify class. Set
+                <x-block>start</x-block>
+                to keep the old layout.
             </x-warning>
         </div>
     </x-section>

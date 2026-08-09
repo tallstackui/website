@@ -556,27 +556,6 @@ class Table
     <x-table :$headers :$rows simple-pagination paginator="compact" />
     HTML;
 
-    public const string GLOBAL_DEFAULTS = <<<'PHP'
-    // config/tallstackui.php
-
-    'table' => [
-        Components\Table\Component::class,
-        [
-            'paginate' => true,
-            'filter' => true,
-            'quantity' => [5, 10, 25],
-            'simple-pagination' => false,
-            'paginator' => 'minimal',
-        ],
-    ],
-    PHP;
-
-    public const string GLOBAL_DEFAULTS_OFF = <<<'HTML'
-    {{-- Each is a default, not a lock --}}
-    <x-table :$headers :$rows :paginate="false" />
-    <x-table :$headers :$rows :filter="false" />
-    HTML;
-
     public const string SKELETON = <<<'HTML'
     {{-- Bare flag: 5 rows --}}
     <x-table :$headers skeleton />

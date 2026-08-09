@@ -302,7 +302,7 @@
     <x-section
         title="Background Chart"
         new
-        description="A chart behind the content, full-bleed and dimmed. The array shorthand and the slot are mutually exclusive and throw when combined."
+        description="An option to render a chart inside the stats."
     >
         <x-preview language="blade" :contents="$chart" :background="false">
             <div class="grid grid-cols-2 gap-2">
@@ -324,16 +324,16 @@
             </div>
         </x-preview>
         <x-warning class="mt-4">
-            An absent chart, an empty array and an empty slot are all treated as
-            no chart. In
+            The component treats a missing chart, an empty array, and an empty
+            slot as no chart. With the solid
             <x-block>solid</x-block>
-            style the icon tile is opaque and covers the watermark behind it.
+            , the icon tile is opaque and hides the watermark behind it.
         </x-warning>
     </x-section>
     <x-section
         title="Flat Look"
         new
-        description="shadowless drops the shadow, bordered draws a border around the wrapper while keeping it. Both reach the skeleton view too."
+        description="An option to remove shadow or border of the stats."
     >
         <x-preview language="blade" :contents="$flat" :background="false">
             <div class="grid grid-cols-3 gap-2">
@@ -404,7 +404,7 @@
     <x-section
         title="Skeleton"
         new
-        description="A flag only: passing an integer throws, because there is nothing to count. The background chart layer is omitted, and it takes no space in the flow."
+        description="An option to display a lazy loading skeleton indicator."
     >
         <x-preview language="blade" :contents="$skeleton" :background="false">
             <div class="grid grid-cols-3 gap-2">

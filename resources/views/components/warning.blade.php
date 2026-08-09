@@ -47,7 +47,7 @@
 <div {{ $attributes }}>
     <div
         @class([
-            "relative overflow-hidden rounded-2xl border shadow-sm shadow-slate-900/5 dark:shadow-none",
+            "relative overflow-hidden rounded-lg border shadow-sm shadow-slate-900/5 dark:shadow-none",
             $surfaces[$type] => true,
         ])
     >

@@ -181,7 +181,13 @@ class Tab
     public const string PADDINGLESS = <<<'HTML'
     <x-tab selected="Tab 1" paddingless>
         <x-tab.items tab="Tab 1">
-            <x-table :$headers :$rows />
+            Tall
+        </x-tab.items>
+        <x-tab.items tab="Tab 2">
+            Stack
+        </x-tab.items>
+        <x-tab.items tab="Tab 3">
+            UI 🥰
         </x-tab.items>
     </x-tab>
     HTML;

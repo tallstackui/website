@@ -392,7 +392,7 @@
                     ['index' => 'scope', 'label' => 'Scope'],
                 ]"
                 :rows="collect($scopes['wrapper'])->flatMap(fn (array $section) => collect($section['rows'])
-                                                                                                                                                ->map(fn (array $scope) => ['parent' => $section['label'], 'child' => $scope['child'], 'scope' => $scope['scope']]))"
+                                                                                                                                                                                                ->map(fn (array $scope) => ['parent' => $section['label'], 'child' => $scope['child'], 'scope' => $scope['scope']]))"
             >
                 @interact("column_scope", $row)
                     <x-block>{{ $row["scope"] }}</x-block>
@@ -408,7 +408,7 @@
                     ['index' => 'scope', 'label' => 'Scope'],
                 ]"
                 :rows="collect($scopes['form'])->flatMap(fn (array $section) => collect($section['rows'])
-                                                                                                                                                ->map(fn (array $scope) => ['parent' => $section['label'], 'child' => $scope['child'], 'scope' => $scope['scope']]))"
+                                                                                                                                                                                                ->map(fn (array $scope) => ['parent' => $section['label'], 'child' => $scope['child'], 'scope' => $scope['scope']]))"
             >
                 @interact("column_scope", $row)
                     <x-block>{{ $row["scope"] }}</x-block>
@@ -422,7 +422,7 @@
                     ['index' => 'scope', 'label' => 'Scope'],
                 ]"
                 :rows="collect($scopes['ui'])->flatMap(fn (array $section) => collect($section['rows'])
-                                                                                                                                                ->map(fn (array $scope) => ['parent' => $section['label'], 'child' => $scope['child'], 'scope' => $scope['scope']]))"
+                                                                                                                                                                                                ->map(fn (array $scope) => ['parent' => $section['label'], 'child' => $scope['child'], 'scope' => $scope['scope']]))"
             >
                 @interact("column_scope", $row)
                     <x-block>{{ $row["scope"] }}</x-block>

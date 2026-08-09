@@ -535,6 +535,7 @@ ui:
     - Item Colors
   dropdown:
     - Basic Usage
+    - Open when hover
     - Available Positions
     - Links
     - Icon
@@ -821,7 +822,6 @@ ui:
     - Concept
     - Basic Usage
     - Label & Hint
-    - Options
     - Different Indexes
     - Preview
     - Vertical
@@ -830,14 +830,8 @@ ui:
     - Readonly & Disabled
     - Tooltip
     - Events
-    - Livewire Integration
-    - Livewire Integration, Different Indexes
-    - "Livewire Integration, wire:change"
     - Without Livewire
     - AlpineJS Helper
-    - Configuration
-    - Motion
-    - Exceptions
   tab:
     - Basic Usage
     - Centered
@@ -872,7 +866,6 @@ ui:
     - Simple Pagination
     - Persistent
     - Selected Event
-    - Global Defaults
     - Skeleton
   theme-switch:
     - Basic Usage

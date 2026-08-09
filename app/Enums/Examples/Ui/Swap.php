@@ -7,16 +7,6 @@ namespace App\Enums\Examples\Ui;
 class Swap
 {
     public const string BASIC = <<<'HTML'
-    <x-swap wire:model="fruit" :options="['Apple', 'Banana', 'Cherry']" />
-    HTML;
-
-    public const string LABEL_AND_HINT = <<<'HTML'
-    <x-swap label="Size"
-            hint="Drag the value or use the arrows"
-            :options="['Small', 'Medium', 'Large']" />
-    HTML;
-
-    public const string OPTIONS = <<<'HTML'
     {{-- Flat array --}}
     <x-swap :options="['Apple', 'Banana', 'Cherry']" />
 
@@ -29,6 +19,12 @@ class Swap
         ['label' => 'Medium', 'value' => 2],
         ['label' => 'Large', 'value' => 3],
     ]" />
+    HTML;
+
+    public const string LABEL_AND_HINT = <<<'HTML'
+    <x-swap label="Size"
+            hint="Drag the value or use the arrows"
+            :options="['Small', 'Medium', 'Large']" />
     HTML;
 
     public const string SELECT = <<<'HTML'
@@ -74,17 +70,6 @@ class Swap
             x-on:swap="console.log($event.detail)" />
     HTML;
 
-    public const string LIVEWIRE = <<<'HTML'
-    {{-- Deferred, the value reaches the server on the next request --}}
-    <x-swap wire:model="fruit" :options="$fruits" />
-
-    {{-- Immediate --}}
-    <x-swap wire:model.live="fruit" :options="$fruits" />
-
-    {{-- Calls the method with the new value --}}
-    <x-swap wire:model="fruit" wire:change="fruitChanged" :options="$fruits" />
-    HTML;
-
     public const string WITHOUT_LIVEWIRE = <<<'HTML'
     <form method="POST" action="/preferences">
         @csrf
@@ -99,27 +84,6 @@ class Swap
 
         <span x-text="cycle"></span>
     </div>
-    HTML;
-
-    public const string CONFIGURATION = <<<'PHP'
-    // config/tallstackui.php
-
-    'swap' => [
-        Components\Swap\Component::class,
-        [
-            'preview' => false,
-            'vertical' => false,
-            'loop' => true,
-        ],
-    ],
-    PHP;
-
-    public const string EXCEPTION = <<<'HTML'
-    {{-- Sideways slices make no sense on a vertical roll, so this throws --}}
-    <x-swap preview vertical :options="$options" />
-
-    {{-- A dimensional option missing the resolved label or value key throws --}}
-    <x-swap :options="[['name' => 'Small']]" select="label:name|value:id" />
     HTML;
 
     public const string CUSTOMIZATION = <<<'HTML'

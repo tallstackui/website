@@ -155,7 +155,7 @@
     <x-section
         title="Compact"
         new
-        description="Tightens the vertical padding of the rows, the search bar and the empty message. The flag lives on x-list alone and reaches the rows through @aware, so it holds for :items, lazy and slot rows alike."
+        description="An option to compress the padding and display the component compacted."
     >
         <x-preview language="blade" :contents="$compact">
             <div class="grid gap-4 md:grid-cols-2">
@@ -195,19 +195,19 @@
             server resolves the
             <x-block>
                 @verbatim
-                                @interact('item_caption')
+                                            @interact('item_caption')
                 @endverbatim
             </x-block>
             ,
             <x-block>
                 @verbatim
-                                @interact('item_action')
+                                            @interact('item_action')
                 @endverbatim
             </x-block>
             , and
             <x-block>
                 @verbatim
-                                @interact('item_menu')
+                                            @interact('item_menu')
                 @endverbatim
             </x-block>
             interactions during row rendering. Without a server render for each
@@ -242,7 +242,7 @@
     <x-section
         title="Skeleton"
         new
-        description="An option to render a lazy loading state."
+        description="An option to display a lazy loading skeleton indicator."
     >
         <x-preview language="blade" :contents="$skeleton">
             <div class="grid gap-4 md:grid-cols-2">

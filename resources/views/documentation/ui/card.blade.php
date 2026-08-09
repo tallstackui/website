@@ -153,7 +153,7 @@
     <x-section
         title="Skeleton"
         new
-        description="An option to display loading skeleton in the card."
+        description="An option to display a lazy loading skeleton indicator."
     >
         <x-preview language="blade" :contents="$skeleton">
             <div class="space-y-4">
