@@ -7,14 +7,18 @@
             </p>
         </div>
 
-        <p class="dark:text-dark-400 max-w-md text-center text-xs leading-5 text-gray-500 md:text-right">
+        <p
+            class="dark:text-dark-400 max-w-md text-center text-xs leading-5 text-gray-500 md:text-right"
+        >
             Designed, built and maintained by
             <a
                 href="https://linkedin.com/in/devajmeireles"
                 class="font-medium text-pink-500 underline decoration-pink-500/40 underline-offset-2"
                 target="_blank"
                 rel="noopener"
-            >AJ Meireles</a>
+            >
+                AJ Meireles
+            </a>
         </p>
 
         <div class="flex items-center gap-5">
@@ -23,19 +27,25 @@
                 target="_blank"
                 rel="noopener"
                 class="dark:text-dark-400 font-mono text-[0.7rem] tracking-[0.12em] text-gray-500 uppercase transition hover:text-pink-500"
-            >Discord</a>
+            >
+                Discord
+            </a>
             <a
                 href="https://github.com/sponsors/devajmeireles"
                 target="_blank"
                 rel="noopener"
                 class="dark:text-dark-400 font-mono text-[0.7rem] tracking-[0.12em] text-gray-500 uppercase transition hover:text-pink-500"
-            >Sponsor</a>
+            >
+                Sponsor
+            </a>
             <a
                 href="/llms.txt"
                 target="_blank"
                 rel="noopener"
                 class="dark:text-dark-400 font-mono text-[0.7rem] tracking-[0.12em] text-gray-500 uppercase transition hover:text-pink-500"
-            >/llms.txt</a>
+            >
+                /llms.txt
+            </a>
             <x-github />
         </div>
     </div>

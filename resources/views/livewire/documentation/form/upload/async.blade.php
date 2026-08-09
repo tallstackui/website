@@ -4,8 +4,7 @@ declare(strict_types=1);
 
 use Livewire\Component;
 
-new class extends Component
-{
+new class extends Component {
     public int $mode = 1;
 
     public mixed $document = null;
@@ -28,7 +27,8 @@ new class extends Component
                 :max-size="50"
             />
             <p class="dark:text-dark-400 text-sm text-gray-500">
-                Bound value: <b>{{ $document['real_name'] ?? 'null' }}</b>
+                Bound value:
+                <b>{{ $document["real_name"] ?? "null" }}</b>
             </p>
         </div>
     @elseif ($mode === 2)

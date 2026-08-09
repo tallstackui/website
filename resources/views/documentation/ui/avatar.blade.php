@@ -4,12 +4,15 @@
     }
 @endphp
 
-<x-layout :$content :ai="['Avatar' => 'avatar', 'Avatar Group' => 'avatar/group']">
-    <x-slot:title>Avatar</x-slot:title>
-    <x-slot:description>Avatar component.</x-slot:description>
+<x-layout
+    :$content
+    :ai="['Avatar' => 'avatar', 'Avatar Group' => 'avatar/group']"
+>
+    <x-slot:title>Avatar</x-slot>
+    <x-slot:description>Avatar component.</x-slot>
     <x-slot:customization>
         <livewire:customization :$customization component="Avatar" />
-    </x-slot:customization>
+    </x-slot>
     <x-section title="Basic Usage">
         <x-preview language="blade" :contents="$basic">
             <x-avatar text="TS" />
@@ -63,7 +66,10 @@
             <x-avatar text="TS" square />
         </x-preview>
     </x-section>
-    <x-section title="Placeholder" description="An option generate avatar with a svg placeholder.">
+    <x-section
+        title="Placeholder"
+        description="An option generate avatar with a svg placeholder."
+    >
         <x-preview language="blade" :contents="$placeholder">
             <div class="gap-2 space-y-2">
                 <x-avatar color="primary" />
@@ -98,7 +104,10 @@
             </div>
         </x-preview>
     </x-section>
-    <x-section title="Borderless" description="An option to remove the default border.">
+    <x-section
+        title="Borderless"
+        description="An option to remove the default border."
+    >
         <x-preview language="blade" :contents="$borderless">
             <x-avatar color="primary" borderless />
         </x-preview>
@@ -107,36 +116,52 @@
     <x-section title="Modelable">
         <x-slot:description>
             An option to generate a
-            <a href="https://ui-avatars.com/" class="underline" target="_blank">UI Avatar</a> from a model based on name
-            property.
-        </x-slot:description>
+            <a href="https://ui-avatars.com/" class="underline" target="_blank">
+                UI Avatar
+            </a>
+            from a model based on name property.
+        </x-slot>
         <x-preview language="blade" :contents="$modelable">
             <x-avatar :model="auth()->user()" color="fff" />
         </x-preview>
     </x-section>
     <x-section title="Custom Property">
         <x-slot:description>
-            Generate a <a href="https://ui-avatars.com/" class="underline" target="_blank">UI Avatar</a> from a model
-            based on a property different from name.
-        </x-slot:description>
+            Generate a
+            <a href="https://ui-avatars.com/" class="underline" target="_blank">
+                UI Avatar
+            </a>
+            from a model based on a property different from name.
+        </x-slot>
         <x-preview language="blade" :contents="$modelableCustomized">
             <x-avatar :model="auth()->user()" property="email" color="fff" />
         </x-preview>
     </x-section>
     <x-section title="Customizing Colors">
         <x-slot:description>
-            Generate a <a href="https://ui-avatars.com/" class="underline" target="_blank">UI Avatar</a> from a model
-            based customizing the colors.
-        </x-slot:description>
+            Generate a
+            <a href="https://ui-avatars.com/" class="underline" target="_blank">
+                UI Avatar
+            </a>
+            from a model based customizing the colors.
+        </x-slot>
         <x-preview language="blade" :contents="$modelableCustomizedColors">
-            <x-avatar :model="auth()->user()" property="email" background="ff0000" color="fff" />
+            <x-avatar
+                :model="auth()->user()"
+                property="email"
+                background="ff0000"
+                color="fff"
+            />
         </x-preview>
     </x-section>
     <x-section title="Other Options">
         <x-slot:description>
             Interact with all other
-            <a href="https://ui-avatars.com/" class="underline" target="_blank">UI Avatar</a> configuration options.
-        </x-slot:description>
+            <a href="https://ui-avatars.com/" class="underline" target="_blank">
+                UI Avatar
+            </a>
+            configuration options.
+        </x-slot>
         <x-preview language="blade" :contents="$modelableOptions">
             <x-avatar
                 :model="auth()->user()"
@@ -144,9 +169,9 @@
                 background="ff0000"
                 color="fff"
                 :options="[
-                          'uppercase' => false,
-                          'rounded' => true,
-                      ]"
+                    'uppercase' => false,
+                    'rounded' => true,
+                ]"
             />
         </x-preview>
     </x-section>
@@ -159,13 +184,20 @@
                 <x-avatar image="https://i.pravatar.cc/300" md />
                 <x-avatar image="https://i.pravatar.cc/300" lg />
             </x-preview>
-            <p>You can also set the image via <x-block>x-bind:src</x-block> from AlpineJS:</p>
+            <p>
+                You can also set the image via
+                <x-block>x-bind:src</x-block>
+                from AlpineJS:
+            </p>
             <x-code language="blade" :contents="$imageBindSrc" />
         </div>
     </x-section>
     <x-section title="Default Alt Text">
         <x-preview language="blade" :contents="$imageAlt">
-            <x-avatar image="https://i.pravatar.cc/300" text="Taylor Otwell, Creator of Laravel" />
+            <x-avatar
+                image="https://i.pravatar.cc/300"
+                text="Taylor Otwell, Creator of Laravel"
+            />
         </x-preview>
     </x-section>
     <x-section title="Group">
@@ -177,7 +209,10 @@
             </x-avatar.group>
         </x-preview>
     </x-section>
-    <x-section title="Group Reverse" description="An option to invert the avatar overlap layering.">
+    <x-section
+        title="Group Reverse"
+        description="An option to invert the avatar overlap layering."
+    >
         <x-preview language="blade" :contents="$avatarGroupReverse">
             <x-avatar.group reverse>
                 <x-avatar text="A" color="indigo" />
@@ -188,7 +223,10 @@
             </x-avatar.group>
         </x-preview>
     </x-section>
-    <x-section title="Presence" description="An option to indicate the presence status of the avatar.">
+    <x-section
+        title="Presence"
+        description="An option to indicate the presence status of the avatar."
+    >
         <x-preview language="blade" :contents="$presence">
             <x-avatar image="https://i.pravatar.cc/300" presence />
             <x-avatar image="https://i.pravatar.cc/300" presence pulse />
@@ -196,16 +234,40 @@
     </x-section>
     <x-section title="Presence Color">
         <x-preview language="blade" :contents="$presenceColors">
-            <x-avatar image="https://i.pravatar.cc/30" presence presence-color="green" />
-            <x-avatar image="https://i.pravatar.cc/50" presence presence-color="red" />
+            <x-avatar
+                image="https://i.pravatar.cc/30"
+                presence
+                presence-color="green"
+            />
+            <x-avatar
+                image="https://i.pravatar.cc/50"
+                presence
+                presence-color="red"
+            />
         </x-preview>
     </x-section>
     <x-section title="Presence Positions">
         <x-preview language="blade" :contents="$presencePositions">
-            <x-avatar image="https://i.pravatar.cc/500" presence presence-position="right-top" />
-            <x-avatar image="https://i.pravatar.cc/500" presence presence-position="right-bottom" />
-            <x-avatar image="https://i.pravatar.cc/500" presence presence-position="left-top" />
-            <x-avatar image="https://i.pravatar.cc/500" presence presence-position="left-bottom" />
+            <x-avatar
+                image="https://i.pravatar.cc/500"
+                presence
+                presence-position="right-top"
+            />
+            <x-avatar
+                image="https://i.pravatar.cc/500"
+                presence
+                presence-position="right-bottom"
+            />
+            <x-avatar
+                image="https://i.pravatar.cc/500"
+                presence
+                presence-position="left-top"
+            />
+            <x-avatar
+                image="https://i.pravatar.cc/500"
+                presence
+                presence-position="left-bottom"
+            />
         </x-preview>
     </x-section>
 </x-layout>

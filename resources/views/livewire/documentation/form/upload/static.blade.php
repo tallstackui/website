@@ -9,27 +9,30 @@ use TallStackUi\Traits\Interactions;
 use Illuminate\Support\Facades\Storage;
 use Symfony\Component\Finder\SplFileInfo;
 
-new class extends Component
-{
+new class extends Component {
     use Interactions;
 
     public array $photos = [];
 
     public function mount(): void
     {
-        $this->photos = collect(File::allFiles(public_path('assets/demo')))->map(fn (SplFileInfo $file) => [
-            'name'      => $file->getFilename(),
-            'extension' => $file->getExtension(),
-            'size'      => $file->getSize(),
-            'path'      => $file->getPath(),
-            'url'       => '/assets/demo/'.$file->getFilename(),
-        ])->toArray();
+        $this->photos = collect(File::allFiles(public_path("assets/demo")))
+            ->map(
+                fn (SplFileInfo $file) => [
+                    "name" => $file->getFilename(),
+                    "extension" => $file->getExtension(),
+                    "size" => $file->getSize(),
+                    "path" => $file->getPath(),
+                    "url" => "/assets/demo/" . $file->getFilename(),
+                ],
+            )
+            ->toArray();
     }
 
     public function deleteUpload(array $contents): void
     {
         $this->dialog()
-            ->error('Ooops!', 'This is a demonstration only 😜')
+            ->error("Ooops!", "This is a demonstration only 😜")
             ->send();
     }
 };

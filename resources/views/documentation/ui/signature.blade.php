@@ -5,20 +5,23 @@
 @endphp
 
 <x-layout :$content ai="signature">
-    <x-slot:title>Signature</x-slot:title>
-    <x-slot:description>Signature component.</x-slot:description>
+    <x-slot:title>Signature</x-slot>
+    <x-slot:description>Signature component.</x-slot>
     <x-slot:customization>
         <livewire:customization :$customization component="Signature" />
-    </x-slot:customization>
+    </x-slot>
     <x-section title="Concept" disable-copy>
         <div class="space-y-4">
             <p>
-                Many modern applications need to capture a user's signature, and the signature component is ideal for
-                this. The signature component capturing and exporting signatures. The signature will be a base64 that
-                you can display as an image or store in your database.
+                Many modern applications need to capture a user's signature, and
+                the signature component is ideal for this. The signature
+                component capturing and exporting signatures. The signature will
+                be a base64 that you can display as an image or store in your
+                database.
             </p>
             <x-warning>
-                You should use it inside Livewire components with wire:model to some property as a string.
+                You should use it inside Livewire components with wire:model to
+                some property as a string.
             </x-warning>
         </div>
     </x-section>
@@ -76,9 +79,11 @@
             <livewire:documentation.ui.signature :model="10" />
         </x-preview>
         <x-warning class="mt-4">
-            The strokes are stored as points and redrawn at the new width, so nothing is resampled and the signature
-            stays as sharp as it was drawn. Only the width reflows, so the drawing is stretched horizontally in
-            proportion to the new width, which is the trade this attribute accepts.
+            The strokes are stored as points and redrawn at the new width, so
+            nothing is resampled and the signature stays as sharp as it was
+            drawn. Only the width reflows, so the drawing is stretched
+            horizontally in proportion to the new width, which is the trade this
+            attribute accepts.
         </x-warning>
     </x-section>
 </x-layout>

@@ -184,21 +184,6 @@ class ListComponent
     </x-list>
     HTML;
 
-    public const string CAPTION_SLOT = <<<'HTML'
-    <x-list label="Environments" searchable>
-        <x-list.items name="production">
-            <x-slot:caption>
-                <x-badge text="12 servers" color="red" sm />
-            </x-slot:caption>
-        </x-list.items>
-        <x-list.items name="staging">
-            <x-slot:caption>
-                <x-badge text="3 servers" color="amber" sm />
-            </x-slot:caption>
-        </x-list.items>
-    </x-list>
-    HTML;
-
     public const string SKELETON = <<<'HTML'
     {{-- 4 items, the default --}}
     <x-list skeleton />

@@ -5,21 +5,27 @@
 @endphp
 
 <x-layout :$content ai="chart">
-    <x-slot:title>Chart</x-slot:title>
-    <x-slot:description>Chart component.</x-slot:description>
+    <x-slot:title>Chart</x-slot>
+    <x-slot:description>Chart component.</x-slot>
     <x-slot:customization>
         <livewire:customization :$customization component="Chart" />
-    </x-slot:customization>
+    </x-slot>
     <x-section title="Concept" disable-copy>
-        A dependency-free chart rendered as inline SVG. Every path, rectangle and arc is computed server-side, so there
-        is no charting library and nothing to hydrate. AlpineJS is attached only when the chart is interactive.
+        A dependency-free chart rendered as inline SVG. Every path, rectangle
+        and arc is computed server-side, so there is no charting library and
+        nothing to hydrate. AlpineJS is attached only when the chart is
+        interactive.
     </x-section>
     <x-section title="Basic Usage" new>
         <x-preview language="blade" :contents="$basic">
             <x-chart :series="[10, 40, 25, 60, 30, 80]" />
         </x-preview>
     </x-section>
-    <x-section title="Types" new description="area (default), line, bar, pie and donut.">
+    <x-section
+        title="Types"
+        new
+        description="area (default), line, bar, pie and donut."
+    >
         <x-preview language="blade" :contents="$types">
             <div class="space-y-6">
                 <x-chart :series="[10, 40, 25, 60, 30, 80]" type="area" />
@@ -40,14 +46,18 @@
             </div>
         </x-preview>
     </x-section>
-    <x-section title="Multiple Series" new description="Named series share one scale, so they compare at a glance.">
+    <x-section
+        title="Multiple Series"
+        new
+        description="Named series share one scale, so they compare at a glance."
+    >
         <x-preview language="blade" :contents="$multiple">
             <x-chart
                 :labels="['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun']"
                 :series="[
-                         ['name' => '2026', 'data' => [10, 40, 25, 60, 30, 80]],
-                         ['name' => '2025', 'data' => [8, 30, 33, 41, 22, 55]],
-                     ]"
+                    ['name' => '2026', 'data' => [10, 40, 25, 60, 30, 80]],
+                    ['name' => '2025', 'data' => [8, 30, 33, 41, 22, 55]],
+                ]"
                 grid
                 legend
                 tooltip
@@ -55,16 +65,20 @@
             />
         </x-preview>
     </x-section>
-    <x-section title="Stacked" new description="Area and bar only. Accumulates within each type and within each sign.">
+    <x-section
+        title="Stacked"
+        new
+        description="Area and bar only. Accumulates within each type and within each sign."
+    >
         <x-preview language="blade" :contents="$stacked">
             <x-chart
                 :labels="['Jan', 'Feb', 'Mar', 'Apr']"
                 type="bar"
                 stacked
                 :series="[
-                         ['name' => 'New', 'data' => [12, 18, 15, 22]],
-                         ['name' => 'Returning', 'data' => [30, 26, 34, 28]],
-                     ]"
+                    ['name' => 'New', 'data' => [12, 18, 15, 22]],
+                    ['name' => 'Returning', 'data' => [30, 26, 34, 28]],
+                ]"
                 grid
                 legend
             />
@@ -81,10 +95,10 @@
                 type="bar"
                 stacked
                 :series="[
-                         ['name' => 'New', 'data' => [12, 18, 15, 22]],
-                         ['name' => 'Returning', 'data' => [30, 26, 34, 28]],
-                         ['name' => 'Total', 'data' => [42, 44, 49, 50], 'type' => 'line'],
-                     ]"
+                    ['name' => 'New', 'data' => [12, 18, 15, 22]],
+                    ['name' => 'Returning', 'data' => [30, 26, 34, 28]],
+                    ['name' => 'Total', 'data' => [42, 44, 49, 50], 'type' => 'line'],
+                ]"
                 grid
                 legend
                 tooltip
@@ -100,9 +114,9 @@
             <x-chart
                 :labels="['Jan', 'Feb', 'Mar', 'Apr']"
                 :series="[
-                         ['name' => 'Revenue', 'data' => [1200, 1900, 1500, 2100]],
-                         ['name' => 'Orders', 'data' => [8, 14, 11, 16], 'axis' => 'right'],
-                     ]"
+                    ['name' => 'Revenue', 'data' => [1200, 1900, 1500, 2100]],
+                    ['name' => 'Orders', 'data' => [8, 14, 11, 16], 'axis' => 'right'],
+                ]"
                 grid
                 legend
                 :prefix="['left' => '$']"
@@ -122,10 +136,10 @@
                     :labels="['Jan', 'Feb', 'Mar', 'Apr']"
                     :colors="['red', 'blue', 'amber']"
                     :series="[
-                             ['name' => 'A', 'data' => [10, 40, 25, 60]],
-                             ['name' => 'B', 'data' => [22, 18, 40, 30]],
-                             ['name' => 'C', 'data' => [5, 30, 15, 45]],
-                         ]"
+                        ['name' => 'A', 'data' => [10, 40, 25, 60]],
+                        ['name' => 'B', 'data' => [22, 18, 40, 30]],
+                        ['name' => 'C', 'data' => [5, 30, 15, 45]],
+                    ]"
                     legend
                 />
             </div>
@@ -154,7 +168,12 @@
     >
         <x-preview language="blade" :contents="$formatting">
             <div class="space-y-8">
-                <x-chart :series="[1250.5, 3400.75, 2100, 4800.25, 3900, 6200.8]" grid prefix="$" :decimals="2" />
+                <x-chart
+                    :series="[1250.5, 3400.75, 2100, 4800.25, 3900, 6200.8]"
+                    grid
+                    prefix="$"
+                    :decimals="2"
+                />
                 <x-chart
                     :series="[1250.5, 3400.75, 2100, 4800.25, 3900, 6200.8]"
                     grid
@@ -165,12 +184,12 @@
                     legend
                     tooltip
                     :formatter="fn (float $value, string $axis) => $axis === 'right'
-                             ? $value . ' un'
-                             : \Illuminate\Support\Number::currency($value, 'BRL', 'pt_BR')"
+                        ? $value . ' un'
+                    : \Illuminate\Support\Number::currency($value, 'BRL', 'pt_BR')"
                     :series="[
-                             ['name' => 'Revenue', 'data' => [1250, 3400, 2100, 4800, 3900, 6200]],
-                             ['name' => 'Orders', 'data' => [12, 30, 21, 48, 39, 62], 'axis' => 'right'],
-                         ]"
+                        ['name' => 'Revenue', 'data' => [1250, 3400, 2100, 4800, 3900, 6200]],
+                        ['name' => 'Orders', 'data' => [12, 30, 21, 48, 39, 62], 'axis' => 'right'],
+                    ]"
                 />
             </div>
         </x-preview>
@@ -178,8 +197,12 @@
     <x-section title="Slots" new>
         <x-preview language="blade" :contents="$slots">
             <x-chart :series="[10, 40, 25, 60, 30, 80]" grid>
-                <x-slot:header>Monthly Balance</x-slot:header>
-                <x-slot:footer>Updated 2 minutes ago</x-slot:footer>
+                <x-slot:header>
+                    Monthly Balance
+                </x-slot>
+                <x-slot:footer>
+                    Updated 2 minutes ago
+                </x-slot>
             </x-chart>
         </x-preview>
     </x-section>
@@ -190,8 +213,15 @@
     >
         <x-preview language="blade" :contents="$card">
             <x-card paddingless>
-                <x-slot:header>Monthly Balance</x-slot:header>
-                <x-chart :series="[10, 40, 25, 60, 30, 80]" grid prefix="$" class="p-4" />
+                <x-slot:header>
+                    Monthly Balance
+                </x-slot>
+                <x-chart
+                    :series="[10, 40, 25, 60, 30, 80]"
+                    grid
+                    prefix="$"
+                    class="p-4"
+                />
             </x-card>
         </x-preview>
     </x-section>
@@ -222,23 +252,23 @@
     >
         <x-table
             :headers="[
-            ['index' => 'input', 'label' => 'Input'],
-            ['index' => 'result', 'label' => 'Result'],
-        ]"
+                ['index' => 'input', 'label' => 'Input'],
+                ['index' => 'result', 'label' => 'Result'],
+            ]"
             :rows="[
-            ['input' => 'Absent series', 'result' => 'Throws, unless skeleton is set'],
-            ['input' => 'Empty array', 'result' => 'Full height, no path'],
-            ['input' => 'Single value', 'result' => 'Spans the plot as a constant series'],
-            ['input' => 'Negative values on pie or donut', 'result' => 'Clamped to zero'],
-            ['input' => 'More than one series on pie or donut', 'result' => 'Throws'],
-            ['input' => 'Non-numeric, NAN, INF', 'result' => 'Throws'],
-            ['input' => 'Unknown type or axis', 'result' => 'Throws'],
-            ['input' => 'stacked on line or radial type', 'result' => 'Throws'],
-            ['input' => 'stacked with a secondary axis', 'result' => 'Throws'],
-            ['input' => 'grid on pie or donut', 'result' => 'Throws'],
-            ['input' => 'Negative or non-integer decimals', 'result' => 'Throws'],
-            ['input' => 'Formatting array keyed other than left/right', 'result' => 'Throws'],
-        ]"
+                ['input' => 'Absent series', 'result' => 'Throws, unless skeleton is set'],
+                ['input' => 'Empty array', 'result' => 'Full height, no path'],
+                ['input' => 'Single value', 'result' => 'Spans the plot as a constant series'],
+                ['input' => 'Negative values on pie or donut', 'result' => 'Clamped to zero'],
+                ['input' => 'More than one series on pie or donut', 'result' => 'Throws'],
+                ['input' => 'Non-numeric, NAN, INF', 'result' => 'Throws'],
+                ['input' => 'Unknown type or axis', 'result' => 'Throws'],
+                ['input' => 'stacked on line or radial type', 'result' => 'Throws'],
+                ['input' => 'stacked with a secondary axis', 'result' => 'Throws'],
+                ['input' => 'grid on pie or donut', 'result' => 'Throws'],
+                ['input' => 'Negative or non-integer decimals', 'result' => 'Throws'],
+                ['input' => 'Formatting array keyed other than left/right', 'result' => 'Throws'],
+            ]"
         />
     </x-section>
 </x-layout>

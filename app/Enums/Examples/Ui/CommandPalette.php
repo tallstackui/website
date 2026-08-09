@@ -88,8 +88,7 @@ class CommandPalette
     public const string INLINE_EVENT = <<<'HTML'
     <x-command-palette id="search"
                        request="/api/users"
-                       select="label:name|value:id"
-                       x-on:select="alert('Selected: ' + $event.detail.label)" />
+                       x-on:select="console($event.detail.label)" />
 
     <x-button x-on:click="$tsui.open.commandPalette('search')">
         Open Command Palette
@@ -108,28 +107,30 @@ class CommandPalette
         |
         | actionable: the callable class for handling item selection (e.g., App\Support\GlobalSearch::class).
         | request: the data source for the command palette.
+        | select: the default field mapping of the results (e.g., 'label:name|value:id|description:email|image:avatar').
         | z-index: controls the default z-index.
         | blur: enables the background blur effect (Allowed: false, sm, md, lg, xl).
         | overflow: avoids hiding the overflow, allowing the scroll of the page.
-        | overlay: when true, renders the dimmed overlay behind the palette.
         | shortcut: keyboard shortcut to toggle the palette (e.g., 'ctrl.k', 'ctrl.shift.p').
         | recycle: when true, preserves previous results when reopening the palette.
         | elements: when true, shows the keyboard hints in the footer.
         | scrollbar: when true, applies a custom minimal scrollbar to the results list.
         | centered: when true, centers the palette vertically on mobile with fully rounded corners.
+        | overlay: when false, hides the dimmed background overlay rendered behind the palette.
         */
         [
             'actionable' => App\Actions\CommandPaletteAction::class, // [tl! highlight]
             'request' => null,
+            'select' => null,
             'z-index' => 'z-50',
             'blur' => false,
             'overflow' => false,
-            'overlay' => true,
             'shortcut' => 'ctrl.k',
             'recycle' => true,
             'elements' => true,
             'scrollbar' => true,
             'centered' => false,
+            'overlay' => true,
         ],
     ],
 

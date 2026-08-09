@@ -5,21 +5,27 @@
 @endphp
 
 <x-layout :$content ai="spinner">
-    <x-slot:title>Spinner</x-slot:title>
-    <x-slot:description>Spinner component.</x-slot:description>
+    <x-slot:title>Spinner</x-slot>
+    <x-slot:description>Spinner component.</x-slot>
     <x-slot:customization>
         <livewire:customization :$customization component="Spinner" />
-    </x-slot:customization>
+    </x-slot>
     <x-section title="Concept" disable-copy>
-        A purely visual loading indicator. It binds nothing to Livewire and holds no state, so it works anywhere,
-        including outside Livewire. Only <x-block>thinking</x-block> needs AlpineJS, to cycle its glyphs.
+        A purely visual loading indicator. It binds nothing to Livewire and
+        holds no state, so it works anywhere, including outside Livewire. Only
+        <x-block>thinking</x-block>
+        needs AlpineJS, to cycle its glyphs.
     </x-section>
     <x-section title="Basic Usage" new>
         <x-preview language="blade" :contents="$basic">
             <x-spinner />
         </x-preview>
     </x-section>
-    <x-section title="Variations" new description="Thirteen variations, one boolean flag each. Two at once throws.">
+    <x-section
+        title="Variations"
+        new
+        description="Thirteen variations, one boolean flag each. Two at once throws."
+    >
         <x-preview language="blade" :contents="$variations">
             <div class="flex flex-wrap items-center gap-8">
                 <x-spinner ring />
@@ -48,7 +54,11 @@
             </div>
         </x-preview>
     </x-section>
-    <x-section title="Size Variations" new description="Two flags resolve by precedence: lg, md, sm, xs.">
+    <x-section
+        title="Size Variations"
+        new
+        description="Two flags resolve by precedence: lg, md, sm, xs."
+    >
         <x-preview language="blade" :contents="$sizes">
             <div class="flex items-center gap-6">
                 <x-spinner xs />
@@ -82,7 +92,11 @@
             <div class="flex flex-col gap-4">
                 <x-spinner />
                 <x-spinner text="Sending the file" />
-                <x-spinner>Sending <b>3</b> files</x-spinner>
+                <x-spinner>
+                    Sending
+                    <b>3</b>
+                    files
+                </x-spinner>
             </div>
         </x-preview>
     </x-section>
@@ -105,29 +119,37 @@
             <x-button color="primary">
                 <x-slot:left>
                     <x-spinner xs class="text-white" />
-                </x-slot:left>
+                </x-slot>
                 Saving
             </x-button>
         </x-preview>
     </x-section>
-    <x-section title="Configuration" new description="An unknown type or size throws instead of falling back.">
+    <x-section
+        title="Configuration"
+        new
+        description="An unknown type or size throws instead of falling back."
+    >
         <x-code language="php" :contents="$configuration" />
     </x-section>
-    <x-section title="Spinner, Loading & Skeleton" new description="Three different moments. None replaces another.">
+    <x-section
+        title="Spinner, Loading & Skeleton"
+        new
+        description="Three different moments. None replaces another."
+    >
         <x-table
             :headers="[
-            ['index' => 'state', 'label' => 'State'],
-            ['index' => 'tool', 'label' => 'Tool'],
-            ['index' => 'situation', 'label' => 'Situation'],
-        ]"
+                ['index' => 'state', 'label' => 'State'],
+                ['index' => 'tool', 'label' => 'Tool'],
+                ['index' => 'situation', 'label' => 'Situation'],
+            ]"
             :rows="[
-            ['state' => 'First paint, no data yet', 'tool' => 'skeleton', 'situation' => '#[Lazy] placeholder, initial load'],
-            ['state' => 'Refetch, data already on screen', 'tool' => 'loading', 'situation' => 'Sort, paginate, search, save'],
-            ['state' => 'Anything else that has to spin', 'tool' => 'spinner', 'situation' => 'Inline, in a button, in an empty state'],
-        ]"
+                ['state' => 'First paint, no data yet', 'tool' => 'skeleton', 'situation' => '#[Lazy] placeholder, initial load'],
+                ['state' => 'Refetch, data already on screen', 'tool' => 'loading', 'situation' => 'Sort, paginate, search, save'],
+                ['state' => 'Anything else that has to spin', 'tool' => 'spinner', 'situation' => 'Inline, in a button, in an empty state'],
+            ]"
         >
-            @interact('column_tool', $row)
-                <x-block>{{ $row['tool'] }}</x-block>
+            @interact("column_tool", $row)
+                <x-block>{{ $row["tool"] }}</x-block>
             @endinteract
         </x-table>
     </x-section>

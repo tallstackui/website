@@ -5,24 +5,29 @@
 @endphp
 
 <x-layout :$content ai="errors">
-    <x-slot:title>Errors</x-slot:title>
-    <x-slot:description>Errors component.</x-slot:description>
+    <x-slot:title>Errors</x-slot>
+    <x-slot:description>Errors component.</x-slot>
     <x-slot:customization>
         <livewire:customization :$customization component="Errors" />
-    </x-slot:customization>
+    </x-slot>
     <x-section title="Basic Usage">
         <x-preview language="blade" :contents="$basic">
             <livewire:documentation.ui.errors />
         </x-preview>
     </x-section>
-    <x-section title="Filtering Properties" description="An option to show validation errors for specific properties.">
+    <x-section
+        title="Filtering Properties"
+        description="An option to show validation errors for specific properties."
+    >
         <x-preview language="blade" :contents="$specific">
             <livewire:documentation.ui.errors :only="['name']" />
         </x-preview>
     </x-section>
     <x-section title="Title Customization">
         <x-preview language="blade" :contents="$customized">
-            <livewire:documentation.ui.errors title="Ops! There are :count validation errors:" />
+            <livewire:documentation.ui.errors
+                title="Ops! There are :count validation errors:"
+            />
         </x-preview>
     </x-section>
     <x-section
@@ -33,18 +38,23 @@
             <livewire:documentation.ui.errors without-title />
         </x-preview>
     </x-section>
-    <x-section title="Numeric List" description="Displays the errors as a numbered list instead of bullet points.">
+    <x-section
+        title="Numeric List"
+        description="Displays the errors as a numbered list instead of bullet points."
+    >
         <x-preview language="blade" :contents="$listNumeric">
             <livewire:documentation.ui.errors list-numeric />
         </x-preview>
     </x-section>
-    <x-section title="Close Option" description="An option to allow the user to hide the errors">
+    <x-section
+        title="Close Option"
+        description="An option to allow the user to hide the errors"
+    >
         <x-preview language="blade" :contents="$close">
             <livewire:documentation.ui.errors close />
         </x-preview>
         <x-warning class="mt-4">
-            If the user closes the error component and a new validation error subsequently occurs, the component will be
-            displayed again with the new errors.
+            After being dismissed, the error component reopens when new validation errors are added.
         </x-warning>
     </x-section>
     <x-section title="Footer Slot">
@@ -75,7 +85,11 @@
                 <livewire:documentation.ui.errors shadowless />
                 <livewire:documentation.ui.errors bordered />
                 <livewire:documentation.ui.errors shadowless bordered />
-                <livewire:documentation.ui.errors color="amber" shadowless bordered />
+                <livewire:documentation.ui.errors
+                    color="amber"
+                    shadowless
+                    bordered
+                />
             </div>
         </x-preview>
     </x-section>

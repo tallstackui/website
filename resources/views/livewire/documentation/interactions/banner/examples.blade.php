@@ -5,15 +5,16 @@ declare(strict_types=1);
 use Livewire\Component;
 use TallStackUi\Traits\Interactions;
 
-new class extends Component
-{
+new class extends Component {
     use Interactions;
 
     public function success(): void
     {
         $this->banner()
             ->close()
-            ->success('This is a banner dispatched through Livewire. Will disappear in 5 seconds.')
+            ->success(
+                "This is a banner dispatched through Livewire. Will disappear in 5 seconds.",
+            )
             ->leave(5)
             ->send();
     }

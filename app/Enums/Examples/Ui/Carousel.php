@@ -28,6 +28,21 @@ class Carousel
         ['src' => url('assets/images/wallpapers/2.jpg'), 'alt' => 'Wallpaper 2'],
         ['src' => url('assets/images/wallpapers/3.jpg'), 'alt' => 'Wallpaper 3'],
     ]" round />
+
+    <!--
+    also accept other types of "round":
+
+    default => rounded-xl,
+    xs      => rounded-xs,
+    sm      => rounded-sm,
+    md      => rounded-md,
+    lg      => rounded-lg,
+    xl      => rounded-xl,
+    2xl     => rounded-2xl,
+    3xl     => rounded-3xl,
+    full    => rounded-full,
+    -->
+    <x-carousel ... round="xl" />
     HTML;
 
     public const string COVER = <<<'HTML'
@@ -200,10 +215,12 @@ class Carousel
     HTML;
 
     public const string EVENTS = <<<'HTML'
-    <!-- The "next" and "previous" events fire both for the main carousel view
-         and for in-lightbox navigation when "navigable" is enabled. The same
-         listeners cover both cases without changes.
-         $event.detail will receive: {current: integer, image: object{current image}} -->
+    <!--
+    The "next" and "previous" events fire both for the main carousel view
+    and for in-lightbox navigation when "navigable" is enabled. The same
+    listeners cover both cases without changes.
+    $event.detail will receive: {current: integer, image: object{current image}}
+     -->
 
     <x-carousel :images="[
         ['src' => url('assets/images/wallpapers/1.jpg'), 'alt' => 'Wallpaper 1'],
@@ -212,9 +229,11 @@ class Carousel
     ]" x-on:next="alert('Navigated to the next image')"
        x-on:previous="alert('Navigated to the previous image')" />
 
-    <!-- "expand" and "collapse" fire only on the actual open/close transitions
-         of the lightbox — not on each step of the in-lightbox navigation. Use
-         "next" / "previous" to track navigation inside the lightbox. -->
+    <!--
+    "expand" and "collapse" fire only on the actual open/close transitions
+    of the lightbox — not on each step of the in-lightbox navigation. Use
+    "next" / "previous" to track navigation inside the lightbox.
+     -->
     HTML;
 
     public const string CUSTOMIZATION = <<<'HTML'

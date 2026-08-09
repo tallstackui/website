@@ -1,14 +1,14 @@
-@props(['slug' => null])
+@props(["slug" => null])
 
 @php
     $variants = match (true) {
-        is_array($slug)                  => $slug,
-        is_string($slug) && $slug !== '' => [$slug],
-        default                          => [],
+        is_array($slug) => $slug,
+        is_string($slug) && $slug !== "" => [$slug],
+        default => [],
     };
 
     $multiple = count($variants) > 1;
-    $urls     = collect($variants)->map(fn (string $variant): string => url('ai/'.$variant.'.md'));
+    $urls = collect($variants)->map(fn (string $variant): string => url("ai/" . $variant . ".md"));
 @endphp
 
 @if ($variants)
@@ -34,9 +34,9 @@
                             x-bind:class="{ 'rotate-180': show }"
                             solid
                         />
-                    </x-slot:right>
+                    </x-slot>
                 </x-button>
-            </x-slot:action>
+            </x-slot>
 
             @foreach ($variants as $label => $variant)
                 <x-dropdown.items

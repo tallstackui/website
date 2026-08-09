@@ -1,7 +1,13 @@
 <x-demo-layout title="Banner Text">
     <x-banner text="Welcome to the TallStackUI!" />
 
-    <div class="dark:text-dark-300 mx-auto max-w-2xl px-6 py-20 text-sm text-slate-600">
-        <p>Set the <code class="font-mono">text</code> attribute and the banner displays it.</p>
+    <div
+        class="dark:text-dark-300 mx-auto max-w-2xl px-6 py-20 text-sm text-slate-600"
+    >
+        <p>
+            Set the
+            <code class="font-mono">text</code>
+            attribute and the banner displays it.
+        </p>
     </div>
 </x-demo-layout>

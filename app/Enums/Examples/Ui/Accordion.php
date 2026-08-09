@@ -45,6 +45,17 @@ class Accordion
     </x-accordion>
     HTML;
 
+    public const string SHADOWLESS = <<<'HTML'
+    <x-accordion shadowless> {{-- [tl! highlight] --}}
+        <x-accordion.items title="First" id="flat-1">
+            Without the shadow, 1
+        </x-accordion.items>
+        <x-accordion.items title="Second" id="flat-2">
+            Without the shadow, 2
+        </x-accordion.items>
+    </x-accordion>
+    HTML;
+
     public const string CHEVRON = <<<'HTML'
     <!-- Default: chevron on the right -->
     <x-accordion>

@@ -2,10 +2,16 @@
     <x-banner text="Welcome to the TallStackUI!">
         <x-slot:left>
             <x-icon name="check" />
-        </x-slot:left>
+        </x-slot>
     </x-banner>
 
-    <div class="dark:text-dark-300 mx-auto max-w-2xl px-6 py-20 text-sm text-slate-600">
-        <p>Use the <code class="font-mono">left</code> slot to inject an icon (or anything else) before the message.</p>
+    <div
+        class="dark:text-dark-300 mx-auto max-w-2xl px-6 py-20 text-sm text-slate-600"
+    >
+        <p>
+            Use the
+            <code class="font-mono">left</code>
+            slot to inject an icon (or anything else) before the message.
+        </p>
     </div>
 </x-demo-layout>

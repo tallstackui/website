@@ -5,8 +5,7 @@ declare(strict_types=1);
 use Livewire\Component;
 use TallStackUi\Traits\Interactions;
 
-new class extends Component
-{
+new class extends Component {
     use Interactions;
 
     public ?string $name = null;
@@ -31,14 +30,17 @@ new class extends Component
     {
         $this->withValidator(function ($validator) {
             $validator->after(function ($validator) {
-                if ($this->secret === '12345') {
+                if ($this->secret === "12345") {
                     $this->secret_accepted = true;
                 }
             });
         })->validate();
 
         $this->dialog()
-            ->success('Success!', 'You have completed the example form successfully. Welcome to the TallStackUI community!')
+            ->success(
+                "Success!",
+                "You have completed the example form successfully. Welcome to the TallStackUI community!",
+            )
             ->send();
 
         $this->reset();
@@ -47,14 +49,14 @@ new class extends Component
     protected function rules(): array
     {
         return [
-            'name'      => ['required', 'min:6'],
-            'email'     => ['required'],
-            'age'       => ['required', 'numeric', 'gte:10'],
-            'country'   => ['required'],
-            'color'     => ['required'],
-            'developer' => ['required'],
-            'secret'    => ['required'],
-            'terms'     => ['required', 'boolean'],
+            "name" => ["required", "min:6"],
+            "email" => ["required"],
+            "age" => ["required", "numeric", "gte:10"],
+            "country" => ["required"],
+            "color" => ["required"],
+            "developer" => ["required"],
+            "secret" => ["required"],
+            "terms" => ["required", "boolean"],
         ];
     }
 };
@@ -67,10 +69,20 @@ new class extends Component
         <form wire:submit.prevent="save">
             <div class="mt-2 grid grid-cols-1 gap-4 sm:grid-cols-2">
                 <div class="col-span-1">
-                    <x-input label="Name *" hint="Your full name" icon="user" wire:model="name" />
+                    <x-input
+                        label="Name *"
+                        hint="Your full name"
+                        icon="user"
+                        wire:model="name"
+                    />
                 </div>
                 <div class="col-span-1">
-                    <x-input label="E-mail *" hint="Use your Gmail" suffix="@gmail.com" wire:model="email" />
+                    <x-input
+                        label="E-mail *"
+                        hint="Use your Gmail"
+                        suffix="@gmail.com"
+                        wire:model="email"
+                    />
                 </div>
                 <div class="col-span-1">
                     <x-number
@@ -92,7 +104,13 @@ new class extends Component
                     />
                 </div>
                 <div class="col-span-1">
-                    <x-color label="Color *" hint="Select the theme color" selectable picker wire:model="color" />
+                    <x-color
+                        label="Color *"
+                        hint="Select the theme color"
+                        selectable
+                        picker
+                        wire:model="color"
+                    />
                 </div>
                 <div class="col-span-1">
                     <x-select.styled
@@ -116,7 +134,12 @@ new class extends Component
                     </div>
                     @if ($secret_accepted)
                         <div class="my-4">
-                            <x-alert color="green" icon="check-circle" close light>
+                            <x-alert
+                                color="green"
+                                icon="check-circle"
+                                close
+                                light
+                            >
                                 You have inserted the correct code!
                             </x-alert>
                         </div>
@@ -131,9 +154,11 @@ new class extends Component
                 </div>
             </div>
             <div class="flex justify-end">
-                <x-button type="submit"> Submit </x-button>
+                <x-button type="submit">Submit</x-button>
             </div>
-            <p class="text-dark-800/30 dark:text-dark-100/50 text-xs leading-6 font-medium">
+            <p
+                class="text-dark-800/30 dark:text-dark-100/50 text-xs leading-6 font-medium"
+            >
                 * This form is an example
             </p>
         </form>

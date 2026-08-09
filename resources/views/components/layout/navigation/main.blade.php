@@ -1,4 +1,4 @@
-<nav {{ $attributes->merge(['class' => 'text-base lg:text-sm']) }}>
+<nav {{ $attributes->merge(["class" => "text-base lg:text-sm"]) }}>
     <div class="mb-6 space-y-2 pr-4 sm:flex-1 sm:pr-0">
         <livewire:version-selector />
         <x-button
@@ -13,5 +13,5 @@
             Configure Documentation
         </x-button>
     </div>
-    @include('components.layout.navigation.tree')
+    @include("components.layout.navigation.tree")
 </nav>

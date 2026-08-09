@@ -4,13 +4,23 @@
     }
 @endphp
 
-<x-layout :$content :ai="['Progress' => 'progress/bar', 'Progress Circle' => 'progress/circle']">
-    <x-slot:title>Progress</x-slot:title>
-    <x-slot:description>Progress component.</x-slot:description>
+<x-layout
+    :$content
+    :ai="['Progress' => 'progress/bar', 'Progress Circle' => 'progress/circle']"
+>
+    <x-slot:title>Progress</x-slot>
+    <x-slot:description>Progress component.</x-slot>
     <x-slot:customization>
-        <livewire:customization :$customization component="Progress\Progress" title="Progress" />
-        <livewire:customization :customization="$customizationCircle" component="Progress\Circle" />
-    </x-slot:customization>
+        <livewire:customization
+            :$customization
+            component="Progress\Progress"
+            title="Progress"
+        />
+        <livewire:customization
+            :customization="$customizationCircle"
+            component="Progress\Circle"
+        />
+    </x-slot>
     <x-section title="Basic Usage" anchor="normal-basic-usage">
         <x-preview language="blade" :contents="$basic">
             <div class="space-y-2">
@@ -28,7 +38,11 @@
             </div>
         </x-preview>
     </x-section>
-    <x-section title="Without Text" anchor="normal-without-text" description="An option to do not display any text.">
+    <x-section
+        title="Without Text"
+        anchor="normal-without-text"
+        description="An option to do not display any text."
+    >
         <x-preview language="blade" :contents="$withoutText">
             <div class="space-y-2">
                 <x-progress :percent="50" without-text />
@@ -118,7 +132,7 @@
     <x-section title="Footer Slot" anchor="normal-footer-slot">
         <x-preview language="blade" :contents="$footerSlot">
             <x-progress :percent="50">
-                <x-slot:footer>TallStackUI</x-slot:footer>
+                <x-slot:footer>TallStackUI</x-slot>
             </x-progress>
         </x-preview>
     </x-section>
@@ -134,7 +148,11 @@
     <x-section title="Strokes" anchor="circle-strokes">
         <x-preview language="blade" :contents="$circleStrokes">
             <div class="my-4">
-                <x-progress.circle :percent="50" :stroke-circle="1" :stroke-percent="2" />
+                <x-progress.circle
+                    :percent="50"
+                    :stroke-circle="1"
+                    :stroke-percent="2"
+                />
             </div>
         </x-preview>
     </x-section>
@@ -221,7 +239,7 @@
     <x-section title="Footer Slot" anchor="circle-footer-slot">
         <x-preview language="blade" :contents="$circleFooterSlot">
             <x-progress.circle :percent="50">
-                <x-slot:footer>TallStackUI</x-slot:footer>
+                <x-slot:footer>TallStackUI</x-slot>
             </x-progress.circle>
         </x-preview>
     </x-section>

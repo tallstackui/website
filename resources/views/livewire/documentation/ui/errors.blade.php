@@ -4,13 +4,12 @@ declare(strict_types=1);
 
 use Livewire\Component;
 
-new class extends Component
-{
+new class extends Component {
     public array $only = [];
 
     public ?string $title = null;
 
-    public ?string $color = 'red';
+    public ?string $color = "red";
 
     public ?bool $close = false;
 
@@ -32,8 +31,8 @@ new class extends Component
 
     public function mount(): void
     {
-        $this->addError('name', 'The name field is required.');
-        $this->addError('description', 'The description field is required.');
+        $this->addError("name", "The name field is required.");
+        $this->addError("description", "The description field is required.");
     }
 };
 
@@ -46,7 +45,7 @@ new class extends Component
         <x-errors :$only :$title :$color :$close>
             <x-slot:footer end>
                 <x-button color="red" sm round>Fix now</x-button>
-            </x-slot:footer>
+            </x-slot>
         </x-errors>
     @elseif ($showSlot)
         <x-errors :$only :$title :$color :$close>
@@ -54,7 +53,7 @@ new class extends Component
                 <div class="flex justify-end">
                     <p class="text-sm text-red-500">Footer Slot</p>
                 </div>
-            </x-slot:footer>
+            </x-slot>
         </x-errors>
     @else
         <x-errors

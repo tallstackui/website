@@ -5,24 +5,23 @@ declare(strict_types=1);
 use Livewire\Component;
 use TallStackUi\Traits\Interactions;
 
-new class extends Component
-{
+new class extends Component {
     use Interactions;
 
     public function multiples(): void
     {
         $this->toast()
-            ->success('One')
+            ->success("One")
             ->persistent()
             ->send();
 
         $this->toast()
-            ->success('Two')
+            ->success("Two")
             ->persistent()
             ->send();
 
         $this->toast()
-            ->success('Three persistent toasts', 'Now click on "sole" button.')
+            ->success("Three persistent toasts", 'Now click on "sole" button.')
             ->persistent()
             ->send();
     }
@@ -31,7 +30,7 @@ new class extends Component
     {
         $this->toast()
             ->sole()
-            ->success('Sole!')
+            ->success("Sole!")
             ->send();
     }
 };
@@ -39,6 +38,8 @@ new class extends Component
 ?>
 
 <div>
-    <x-button color="green" wire:click="multiples">Display Multiple Toasts</x-button>
+    <x-button color="green" wire:click="multiples">
+        Display Multiple Toasts
+    </x-button>
     <x-button color="green" wire:click="sole">Sole</x-button>
 </div>

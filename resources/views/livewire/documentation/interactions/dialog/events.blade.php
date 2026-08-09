@@ -6,8 +6,7 @@ use Livewire\Component;
 use Livewire\Attributes\On;
 use TallStackUi\Traits\Interactions;
 
-new class extends Component
-{
+new class extends Component {
     use Interactions;
 
     public bool $events = false;
@@ -17,22 +16,26 @@ new class extends Component
         $this->events = true;
 
         $this->dialog()
-            ->question('Warning!', 'Are you sure?')
-            ->confirm('Confirm', 'confirmed', 'Confirmed Successfully')
-            ->cancel('Cancel', 'cancelled', 'Cancelled Successfully')
+            ->question("Warning!", "Are you sure?")
+            ->confirm("Confirm", "confirmed", "Confirmed Successfully")
+            ->cancel("Cancel", "cancelled", "Cancelled Successfully")
             ->send();
     }
 
     public function confirmed(string $message): void
     {
-        $this->dialog()->success('Success', $message)->send();
+        $this->dialog()
+            ->success("Success", $message)
+            ->send();
 
         $this->events = false;
     }
 
     public function cancelled(string $message): void
     {
-        $this->dialog()->error('Cancelled', $message)->send();
+        $this->dialog()
+            ->error("Cancelled", $message)
+            ->send();
 
         $this->events = false;
     }

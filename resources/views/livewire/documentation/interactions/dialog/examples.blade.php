@@ -5,28 +5,35 @@ declare(strict_types=1);
 use Livewire\Component;
 use TallStackUi\Traits\Interactions;
 
-new class extends Component
-{
+new class extends Component {
     use Interactions;
 
     public function success(): void
     {
-        $this->dialog()->success('Success', 'This is a success message.')->send();
+        $this->dialog()
+            ->success("Success", "This is a success message.")
+            ->send();
     }
 
     public function error(): void
     {
-        $this->dialog()->error('Error', 'This is an error message.')->send();
+        $this->dialog()
+            ->error("Error", "This is an error message.")
+            ->send();
     }
 
     public function warning(): void
     {
-        $this->dialog()->warning('Warning', 'This is a warning message.')->send();
+        $this->dialog()
+            ->warning("Warning", "This is a warning message.")
+            ->send();
     }
 
     public function info(): void
     {
-        $this->dialog()->info('Info', 'This is an info message.')->send();
+        $this->dialog()
+            ->info("Info", "This is an info message.")
+            ->send();
     }
 };
 

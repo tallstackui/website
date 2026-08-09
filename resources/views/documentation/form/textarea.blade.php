@@ -5,11 +5,11 @@
 @endphp
 
 <x-layout :$content ai="form/textarea">
-    <x-slot:title>Form Textarea</x-slot:title>
-    <x-slot:description>Form textarea component.</x-slot:description>
+    <x-slot:title>Form Textarea</x-slot>
+    <x-slot:description>Form textarea component.</x-slot>
     <x-slot:customization>
         <livewire:customization :$customization component="Form\Textarea" />
-    </x-slot:customization>
+    </x-slot>
     <x-section title="Basic Usage">
         <x-preview language="blade" :contents="$basic">
             <x-textarea />
@@ -33,12 +33,18 @@
             <x-textarea resize />
         </x-preview>
     </x-section>
-    <x-section title="Resize Auto" description="An option to auto increase the size of textarea.">
+    <x-section
+        title="Resize Auto"
+        description="An option to auto increase the size of textarea."
+    >
         <x-preview language="blade" :contents="$resizeAuto">
             <x-textarea resize-auto />
         </x-preview>
     </x-section>
-    <x-section title="Character Count" description="An option to show the number of characters.">
+    <x-section
+        title="Character Count"
+        description="An option to show the number of characters."
+    >
         <div class="space-y-4">
             <x-preview language="blade" :contents="$count">
                 <div class="mb-2 space-y-8">
@@ -47,8 +53,9 @@
                 </div>
             </x-preview>
             <x-warning>
-                The character count element uses an absolute position, make sure to leave space between the elements
-                below the component. Otherwise the number may appear on top of the HTML elements.
+                The character count element uses an absolute position, make sure
+                to leave space between the elements below the component.
+                Otherwise the number may appear on top of the HTML elements.
             </x-warning>
         </div>
     </x-section>

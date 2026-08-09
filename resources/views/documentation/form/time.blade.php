@@ -1,5 +1,5 @@
 @php
-    $current = now()->format('h:i A');
+    $current = now()->format("h:i A");
 
     foreach (apply_prefix($__data) as $key => $value) {
         $$key = $value;
@@ -7,11 +7,11 @@
 @endphp
 
 <x-layout :$content ai="form/time">
-    <x-slot:title>Form Time</x-slot:title>
-    <x-slot:description>Form time component.</x-slot:description>
+    <x-slot:title>Form Time</x-slot>
+    <x-slot:description>Form time component.</x-slot>
     <x-slot:customization>
         <livewire:customization :$customization component="Form\Time" />
-    </x-slot:customization>
+    </x-slot>
     <x-section title="Basic Usage">
         <x-preview language="blade" :contents="$basic">
             <x-time />
@@ -33,14 +33,18 @@
     <x-section title="Min & Max Hours and Minutes">
         <x-preview language="blade" :contents="$minMax">
             <div class="space-y-2">
-                <x-time label="Min Hour: 5, Max Hour: 10" :min-hour="5" :max-hour="10" />
-                <x-time label="Min Minute: 30, Max Minute: 45" :min-minute="30" :max-minute="45" />
+                <x-time
+                    label="Min Hour: 5, Max Hour: 10"
+                    :min-hour="5"
+                    :max-hour="10"
+                />
+                <x-time
+                    label="Min Minute: 30, Max Minute: 45"
+                    :min-minute="30"
+                    :max-minute="45"
+                />
             </div>
         </x-preview>
-        <x-warning class="mt-4">
-            Due to the way the component works, the <b>min</b> and <b>max</b>
-            hours/minutes do not limit the range, but rather the post-selected value when time is selected.
-        </x-warning>
     </x-section>
     <x-section
         title="Required"
@@ -50,7 +54,10 @@
             <x-time format="24" required />
         </x-preview>
     </x-section>
-    <x-section title="Helper" description="An option to easily select the current time.">
+    <x-section
+        title="Helper"
+        description="An option to easily select the current time."
+    >
         <x-preview language="blade" :contents="$helper">
             <x-time format="24" helper />
         </x-preview>
@@ -63,7 +70,7 @@
     <x-section title="Footer Slot">
         <x-preview language="blade" :contents="$footerSlot">
             <x-time>
-                <x-slot:footer>Footer Slot</x-slot:footer>
+                <x-slot:footer>Footer Slot</x-slot>
             </x-time>
         </x-preview>
     </x-section>

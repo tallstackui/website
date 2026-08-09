@@ -5,11 +5,11 @@
 @endphp
 
 <x-layout :$content ai="form/range">
-    <x-slot:title>Form Range</x-slot:title>
-    <x-slot:description>Form range component.</x-slot:description>
+    <x-slot:title>Form Range</x-slot>
+    <x-slot:description>Form range component.</x-slot>
     <x-slot:customization>
         <livewire:customization :$customization component="Form\Range" />
-    </x-slot:customization>
+    </x-slot>
     <x-section title="Basic Usage">
         <x-preview language="blade" :contents="$basic">
             <x-range />
@@ -18,7 +18,10 @@
     <x-section title="Label & Hint">
         <x-preview language="blade" :contents="$labelHint">
             <div class="space-y-2">
-                <x-range label="Quantity" hint="Select an average desired salary" />
+                <x-range
+                    label="Quantity"
+                    hint="Select an average desired salary"
+                />
             </div>
         </x-preview>
     </x-section>

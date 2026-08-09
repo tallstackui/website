@@ -13,7 +13,7 @@ class Error
     public const string SPECIFIC = <<<'HTML'
     <x-errors only="name" />
 
-    <!-- use array for more than one -->
+    <x-errors only="name,description" />
 
     <x-errors :only="['name', 'description']" />
     HTML;

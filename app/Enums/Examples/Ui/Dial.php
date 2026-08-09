@@ -67,13 +67,6 @@ class Dial
     </x-dial>
     HTML;
 
-    public const string PREVENT_ROTATE = <<<'HTML'
-    <x-dial icon="bars-3" prevent-rotate>
-        <x-dial.items icon="pencil" label="Edit" />
-        <x-dial.items icon="share" label="Share" />
-    </x-dial>
-    HTML;
-
     public const string SQUARE = <<<'HTML'
     <x-dial square>
         <x-dial.items icon="pencil" label="Edit" />

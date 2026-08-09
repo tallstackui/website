@@ -1,5 +1,7 @@
 <x-demo-layout title="Dial Without Tooltip">
-    <div class="dark:text-dark-400 flex min-h-[340px] flex-col items-center justify-center px-6 py-10 text-sm text-slate-500">
+    <div
+        class="dark:text-dark-400 flex min-h-[340px] flex-col items-center justify-center px-6 py-10 text-sm text-slate-500"
+    >
         <p>Labels are hidden across the whole dial.</p>
     </div>
 

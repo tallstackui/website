@@ -5,7 +5,8 @@
             Everywhere
         </p>
         <h2 class="landing-section-heading mt-5">
-            Built for Livewire. Works with <span class="landing-serif">vanilla Blade.</span>
+            Built for Livewire. Works with
+            <span class="landing-serif">vanilla Blade.</span>
         </h2>
     </div>
 
@@ -19,9 +20,13 @@
             <span class="landing-panel-kicker">plain blade</span>
             <h3 class="landing-panel-title">No Livewire? No problem.</h3>
             <p class="landing-panel-body">
-                Give a form component a <code class="font-mono text-[0.85em]">name</code> instead of a
-                <code class="font-mono text-[0.85em]">wire:model</code> and it renders a hidden input your controller
-                reads like any other field. Currency, date, pin, tags, selects and even the calendar work this way.
+                Give a form component a
+                <code class="font-mono text-[0.85em]">name</code>
+                instead of a
+                <code class="font-mono text-[0.85em]">wire:model</code>
+                and it renders a hidden input your controller reads like any
+                other field. Currency, date, pin, tags, selects and even the
+                calendar work this way.
             </p>
             <div class="mt-5">
                 <x-code language="blade" :contents="$form" disable-copy />
@@ -38,7 +43,8 @@
             <span class="landing-panel-kicker">interactions</span>
             <h3 class="landing-panel-title">Dialogs and toasts, one line.</h3>
             <p class="landing-panel-body">
-                Confirm, notify and react from PHP or JavaScript through the same API. Try it, this one is live too.
+                Confirm, notify and react from PHP or JavaScript through the
+                same API. Try it, this one is live too.
             </p>
             <div class="mt-5">
                 <x-code language="js" :contents="$interactions" disable-copy />
@@ -55,13 +61,17 @@
                             .success('Shipped!', 'That toast came from JavaScript.')
                             .send()
                     "
-                >Dispatch a Toast notification</x-button>
+                >
+                    Dispatch a Toast notification
+                </x-button>
                 <x-button
                     color="violet"
                     icon="chat-bubble-left-right"
                     block
                     x-on:click="$tsui.interaction('dialog').info('One line.', 'Dialogs work the same way!').send()"
-                >Dispatch a Dialog notification</x-button>
+                >
+                    Dispatch a Dialog notification
+                </x-button>
             </div>
         </article>
     </div>

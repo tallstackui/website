@@ -5,39 +5,38 @@ declare(strict_types=1);
 use Livewire\Component;
 use TallStackUi\Traits\Interactions;
 
-new class extends Component
-{
+new class extends Component {
     use Interactions;
 
     public function bottomLeft(): void
     {
         $this->toast()
-            ->position('bottom-left')
-            ->success('Foo')
+            ->position("bottom-left")
+            ->success("Foo")
             ->send();
     }
 
     public function bottomRight(): void
     {
         $this->toast()
-            ->position('bottom-right')
-            ->success('Foo')
+            ->position("bottom-right")
+            ->success("Foo")
             ->send();
     }
 
     public function topRight(): void
     {
         $this->toast()
-            ->position('top-right')
-            ->success('Foo')
+            ->position("top-right")
+            ->success("Foo")
             ->send();
     }
 
     public function topLeft(): void
     {
         $this->toast()
-            ->position('top-left')
-            ->success('Foo')
+            ->position("top-left")
+            ->success("Foo")
             ->send();
     }
 };

@@ -5,8 +5,7 @@ declare(strict_types=1);
 use Livewire\Component;
 use TallStackUi\Traits\Interactions;
 
-new class extends Component
-{
+new class extends Component {
     use Interactions;
 
     public int $model = 1;
@@ -16,7 +15,7 @@ new class extends Component
     public function react(string $reaction): void
     {
         $this->toast()
-            ->success('Success', 'You reacted with '.$reaction)
+            ->success("Success", "You reacted with " . $reaction)
             ->send();
 
         $this->quantity++;
@@ -25,7 +24,7 @@ new class extends Component
     public function wow(string $reaction): void
     {
         $this->toast()
-            ->success('🚀🚀🚀', 'TallStackUI is the best UI library!')
+            ->success("🚀🚀🚀", "TallStackUI is the best UI library!")
             ->send();
     }
 };
@@ -44,8 +43,10 @@ new class extends Component
     @elseif ($model === 5)
         <x-reaction :only="['thumbs-up', 'thumbs-down', 'heart']" />
     @elseif ($model === 6)
-        <x-reaction react-method="wow"> React to the TallStackUI </x-reaction>
+        <x-reaction react-method="wow">React to the TallStackUI</x-reaction>
     @elseif ($model === 7)
-        <x-reaction x-on:react="alert(`Reacted: ${JSON.stringify($event.detail.reaction)}`)" />
+        <x-reaction
+            x-on:react="alert(`Reacted: ${JSON.stringify($event.detail.reaction)}`)"
+        />
     @endif
 </div>

@@ -60,7 +60,7 @@
     "type": "./vendor/bin/pest --type-coverage",
     "format": [
       "./vendor/bin/pint --parallel",
-      "./vendor/bin/pint --parallel --blade"
+      "npm run format"
     ],
     "ci": [
       "./vendor/bin/pint --test",

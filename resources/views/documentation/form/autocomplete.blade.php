@@ -5,27 +5,28 @@
 @endphp
 
 <x-layout :$content ai="form/autocomplete">
-    <x-slot:title>AutoComplete</x-slot:title>
-    <x-slot:description>Form auto-complete component.</x-slot:description>
+    <x-slot:title>AutoComplete</x-slot>
+    <x-slot:description>
+        Form auto-complete component.
+    </x-slot>
     <x-slot:customization>
-        <livewire:customization :$customization component="Form\Autocomplete" title="Form Auto Complete" />
-    </x-slot:customization>
+        <livewire:customization
+            :$customization
+            component="Form\Autocomplete"
+            title="Form Auto Complete"
+        />
+    </x-slot>
     <x-section title="Basic Usage">
         <div class="space-y-4">
-            <p>
-                Provide a list of items via the <x-block>items</x-block> attribute. Each item must have a
-                <x-block>value</x-block> key, which is both the visible text and the value bound to
-                <x-block>wire:model</x-block>. Filtering is case-insensitive and runs fully client-side.
-            </p>
             <x-preview language="blade" :contents="$basic">
                 <x-autocomplete
                     :items="[
-                    ['value' => 'São Paulo'],
-                    ['value' => 'Rio de Janeiro'],
-                    ['value' => 'Belo Horizonte'],
-                    ['value' => 'Curitiba'],
-                    ['value' => 'Porto Alegre'],
-                ]"
+                        ['value' => 'São Paulo'],
+                        ['value' => 'Rio de Janeiro'],
+                        ['value' => 'Belo Horizonte'],
+                        ['value' => 'Curitiba'],
+                        ['value' => 'Porto Alegre'],
+                    ]"
                 />
             </x-preview>
         </div>
@@ -37,10 +38,10 @@
                 hint="Start typing to filter the list"
                 placeholder="Choose a city"
                 :items="[
-                                ['value' => 'São Paulo'],
-                                ['value' => 'Rio de Janeiro'],
-                                ['value' => 'Belo Horizonte'],
-                            ]"
+                    ['value' => 'São Paulo'],
+                    ['value' => 'Rio de Janeiro'],
+                    ['value' => 'Belo Horizonte'],
+                ]"
             />
         </x-preview>
     </x-section>
@@ -49,10 +50,10 @@
             <x-autocomplete
                 label="Assignee"
                 :items="[
-                ['value' => 'Taylor Otwell', 'description' => 'Creator of Laravel'],
-                ['value' => 'Nuno Maduro',   'description' => 'Creator of PestPHP'],
-                ['value' => 'Jess Archer',   'description' => 'Creator of Laravel Prompts'],
-            ]"
+                    ['value' => 'Taylor Otwell', 'description' => 'Creator of Laravel'],
+                    ['value' => 'Nuno Maduro',   'description' => 'Creator of PestPHP'],
+                    ['value' => 'Jess Archer',   'description' => 'Creator of Laravel Prompts'],
+                ]"
             />
         </x-preview>
     </x-section>
@@ -61,50 +62,48 @@
             <x-autocomplete
                 label="Assignee"
                 :items="[
-                [
-                    'value' => 'Taylor Otwell',
-                    'description' => 'Creator of Laravel',
-                    'image' => 'https://unavatar.io/github/taylorotwell',
-                ],
-                [
-                    'value' => 'Nuno Maduro',
-                    'description' => 'Creator of PestPHP',
-                    'image' => 'https://unavatar.io/github/nunomaduro',
-                ],
-                [
-                    'value' => 'Jess Archer',
-                    'description' => 'Creator of Laravel Prompts',
-                    'image' => 'https://unavatar.io/github/jessarcher',
-                ],
-            ]"
+                    [
+                        'value' => 'Taylor Otwell',
+                        'description' => 'Creator of Laravel',
+                        'image' => 'https://unavatar.io/github/taylorotwell',
+                    ],
+                    [
+                        'value' => 'Nuno Maduro',
+                        'description' => 'Creator of PestPHP',
+                        'image' => 'https://unavatar.io/github/nunomaduro',
+                    ],
+                    [
+                        'value' => 'Jess Archer',
+                        'description' => 'Creator of Laravel Prompts',
+                        'image' => 'https://unavatar.io/github/jessarcher',
+                    ],
+                ]"
             />
         </x-preview>
     </x-section>
-    <x-section title="Metadata" description="An option to pass special or additional values.">
+    <x-section
+        title="Metadata"
+        description="An option to pass special or additional values."
+    >
         <x-code language="php" :contents="$metadata" />
         <x-code class="mt-4" language="blade" :contents="$metadataUsage" />
         <p class="mt-4">
-            Works identically for local items and remote results, since both go through the same normalization step.
+            Works identically for local items and remote results, since both go
+            through the same normalization step.
         </p>
-        <p class="mt-4">What it does <b>not</b> do:</p>
-        <ul class="mt-2 list-inside list-disc">
-            <li>
-                it is not matched by the search filter, only <x-block>value</x-block> and
-                <x-block>description</x-block> are;
-            </li>
-            <li>it is not rendered in the dropdown row;</li>
-            <li>it is not sent to <x-block>wire:model</x-block>, which still receives <x-block>value</x-block>.</li>
-        </ul>
     </x-section>
-    <x-section title="Disabled Items" description="An option to dim a row and block its selection.">
+    <x-section
+        title="Disabled Items"
+        description="An option for passing custom or additional values."
+    >
         <x-preview language="blade" :contents="$disabledItems">
             <x-autocomplete
                 label="Status"
                 :items="[
-                ['value' => 'Pending'],
-                ['value' => 'Approved'],
-                ['value' => 'Rejected', 'disabled' => true],
-            ]"
+                    ['value' => 'Pending'],
+                    ['value' => 'Approved'],
+                    ['value' => 'Rejected', 'disabled' => true],
+                ]"
             />
         </x-preview>
     </x-section>
@@ -114,10 +113,10 @@
                 label="City"
                 clearable
                 :items="[
-                ['value' => 'São Paulo'],
-                ['value' => 'Rio de Janeiro'],
-                ['value' => 'Belo Horizonte'],
-            ]"
+                    ['value' => 'São Paulo'],
+                    ['value' => 'Rio de Janeiro'],
+                    ['value' => 'Belo Horizonte'],
+                ]"
             />
         </x-preview>
     </x-section>
@@ -128,34 +127,32 @@
                 prefix="www"
                 suffix=".com"
                 :items="[
-                                ['value' => 'claude'],
-                                ['value' => 'chatgpt'],
-                                ['value' => 'gemini.google'],
-                            ]"
+                    ['value' => 'claude'],
+                    ['value' => 'chatgpt'],
+                    ['value' => 'gemini.google'],
+                ]"
             />
         </x-preview>
     </x-section>
-    <x-section title="Lazy">
+    <x-section
+        title="Lazy"
+        description="An option to set the minimum number of characters for the search."
+    >
         <div class="space-y-4">
-            <p>
-                The <x-block>lazy</x-block> attribute defines the minimum number of characters the user must type before
-                the dropdown is allowed to open. Below the threshold the panel stays closed; once the user crosses it,
-                the panel opens normally.
-            </p>
             <x-preview language="blade" :contents="$lazy">
                 <x-autocomplete
                     label="City"
                     lazy="2"
                     :items="[
-                    ['value' => 'São Paulo'],
-                    ['value' => 'Rio de Janeiro'],
-                    ['value' => 'Belo Horizonte'],
-                    ['value' => 'Curitiba'],
-                    ['value' => 'Porto Alegre'],
-                    ['value' => 'Salvador'],
-                    ['value' => 'Recife'],
-                    ['value' => 'Fortaleza'],
-                ]"
+                        ['value' => 'São Paulo'],
+                        ['value' => 'Rio de Janeiro'],
+                        ['value' => 'Belo Horizonte'],
+                        ['value' => 'Curitiba'],
+                        ['value' => 'Porto Alegre'],
+                        ['value' => 'Salvador'],
+                        ['value' => 'Recife'],
+                        ['value' => 'Fortaleza'],
+                    ]"
                 />
             </x-preview>
         </div>
@@ -163,20 +160,24 @@
     <x-section title="Strict Mode">
         <div class="space-y-4">
             <p>
-                By default, <x-block>wire:model</x-block> reflects whatever the user types, even values that don't
-                appear in the list. With <x-block>strict</x-block>, the binding only updates when a row is picked from
-                the dropdown. If the user blurs or presses Esc with an unmatched query, the input reverts to the last
-                selected value (or empties if nothing was ever picked).
+                Without strict,
+                <x-block>wire:model</x-block>
+                accepts any typed value. With
+                <x-block>strict</x-block>
+                , the binding updates only after the user selects an item from
+                the dropdown. If the current query does not match and the user
+                leaves the field or presses Esc, the previous selection is
+                restored. The field clears if there is no previous selection.
             </p>
             <x-preview language="blade" :contents="$strict">
                 <x-autocomplete
                     label="Status"
                     strict
                     :items="[
-                    ['value' => 'Pending'],
-                    ['value' => 'Approved'],
-                    ['value' => 'Rejected'],
-                ]"
+                        ['value' => 'Pending'],
+                        ['value' => 'Approved'],
+                        ['value' => 'Rejected'],
+                    ]"
                 />
             </x-preview>
         </div>
@@ -184,42 +185,51 @@
     <x-section title="Remote Source" anchor="remote-source">
         <div class="space-y-4">
             <p>
-                Similar to the <x-block>select.styled</x-block> component, the autocomplete can fetch items from a
-                remote endpoint as the user types.
+                Similar to the
+                <x-block>select.styled</x-block>
+                , the autocomplete can fetch items from a remote source:
             </p>
             <x-code language="blade" :contents="$requestString" disable-copy />
             <p>
-                For finer control and similar to the <x-block>select.styled</x-block>, you can pass
-                <x-block>request</x-block> as an array containing: the <x-block>url</x-block> key; also
-                <x-block>method</x-block> which accepts <x-block>get</x-block> or <x-block>post</x-block> and
-                <x-block>params</x-block>, that is are hydrated on every request, so reactive Livewire properties placed
-                there stay up to date.
+                Like
+                <x-block>select.styled</x-block>
+                , this component accepts a request array for custom requests.
+                Set
+                <x-block>url</x-block>
+                , choose get or post as the
+                <x-block>method</x-block>
+                , and add
+                <x-block>params</x-block>
+                . The component hydrates params before each request to keep
+                Livewire properties current.
             </p>
             <x-code language="blade" :contents="$requestArray" disable-copy />
             <p>
-                The endpoint must return items shaped the same way as <x-block>:items</x-block>,
-                <x-block>value</x-block>, optional <x-block>description</x-block>, optional <x-block>image</x-block>,
-                optional <x-block>disabled</x-block>. Here is an example of the code:
+                Each item returned by the endpoint must match the
+                <x-block>:items</x-block>
+                structure. The
+                <x-block>value</x-block>
+                field is required, while
+                <x-block>description</x-block>
+                ,
+                <x-block>image</x-block>
+                , and
+                <x-block>disabled</x-block>
+                are optional. Example:
             </p>
-            <x-code language="php" :contents="$requestResponseShape" disable-copy />
+            <x-code
+                language="php"
+                :contents="$requestResponseShape"
+                disable-copy
+            />
             <x-warning>
-                The <x-block>items</x-block> and <x-block>request</x-block> attributes are mutually exclusive and cannot
-                be defined at the same time.
+                The
+                <x-block>items</x-block>
+                and
+                <x-block>request</x-block>
+                attributes are mutually exclusive and cannot be defined at the
+                same time.
             </x-warning>
-        </div>
-    </x-section>
-    <x-section title="Lazy with Remote Source">
-        <div class="space-y-4">
-            <p>
-                You can combine <x-block>request</x-block> with <x-block>lazy</x-block> to avoid firing a request on
-                every keystroke. The list of options only opens (and the request only goes out) once the query crosses
-                the threshold.
-            </p>
-            <x-code language="blade" :contents="$requestLazy" disable-copy />
-            <p>
-                You can also control it based on language files, learn more about it by navigating to the
-                <x-refer doc="translation">translation page.</x-refer>
-            </p>
         </div>
     </x-section>
     <x-section title="Disabled">
@@ -228,21 +238,14 @@
                 label="City"
                 disabled
                 :items="[
-                ['value' => 'São Paulo'],
-                ['value' => 'Rio de Janeiro'],
-            ]"
+                    ['value' => 'São Paulo'],
+                    ['value' => 'Rio de Janeiro'],
+                ]"
             />
         </x-preview>
     </x-section>
-    <x-section title="Placeholders">
-        <div class="space-y-4">
-            <p>
-                You can override the translation strings used inside the component. All available keys are
-                <x-block>default</x-block> (input placeholder), <x-block>empty</x-block> (no results message), and
-                <x-block>loading</x-block> (remote-source spinner caption).
-            </p>
-            <x-code language="blade" :contents="$placeholders" disable-copy />
-        </div>
+    <x-section title="Placeholders" disable-copy>
+        <x-code language="blade" :contents="$placeholders" disable-copy />
     </x-section>
     <x-section
         title="Slot After"
@@ -253,9 +256,9 @@
                 label="City"
                 hint="Try searching for a non-existent value"
                 :items="[
-                ['value' => 'São Paulo'],
-                ['value' => 'Rio de Janeiro'],
-            ]"
+                    ['value' => 'São Paulo'],
+                    ['value' => 'Rio de Janeiro'],
+                ]"
             >
                 <x-slot:after>
                     <div class="my-2 flex items-center justify-center px-2">
@@ -263,10 +266,12 @@
                             block
                             x-on:click="$tsui.interaction('dialog').success('Done!', `Term: ${search}`).send()"
                         >
-                            <span x-html="`Create city <b>${search}</b>`"></span>
+                            <span
+                                x-html="`Create city <b>${search}</b>`"
+                            ></span>
                         </x-button>
                     </div>
-                </x-slot:after>
+                </x-slot>
             </x-autocomplete>
         </x-preview>
     </x-section>
@@ -276,9 +281,9 @@
                 <x-autocomplete
                     label="User"
                     :items="[
-                    ['value' => 'Alice', 'description' => 'admin'],
-                    ['value' => 'Bob',   'description' => 'editor'],
-                ]"
+                        ['value' => 'Alice', 'description' => 'admin'],
+                        ['value' => 'Bob',   'description' => 'editor'],
+                    ]"
                     x-on:select="alert(`Selected: ${$event.detail.item.value}`)"
                     x-on:clear="alert('Cleared')"
                     x-on:open="console.log('opened')"

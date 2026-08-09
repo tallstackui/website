@@ -73,12 +73,6 @@ class Slide
     </x-slide>
     HTML;
 
-    public const string Z_INDEX = <<<'HTML'
-    <x-slide title="TallStackUi" z-index="z-10">
-        TallStackUi
-    </x-slide>
-    HTML;
-
     public const string PERSISTENT = <<<'HTML'
     <x-slide title="TallStackUi" persistent>
         TallStackUi

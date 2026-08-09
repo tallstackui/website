@@ -51,8 +51,8 @@ class Tag
     public const string AFTER_SLOT = <<<'HTML'
     <x-tag wire:model="tags" :options="['laravel', 'livewire', 'alpine', 'tailwind']">
         <x-slot:after>
-            <x-button sm x-on:click="$tsui.open.modal('create-tag')">New tag</x-button>
-        </x-slot:after>
+            <p class="font-medium text-red-500 p-4">After slot goes here</p>
+        </x-slot>
     </x-tag>
     HTML;
 

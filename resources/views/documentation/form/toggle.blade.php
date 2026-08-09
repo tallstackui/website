@@ -5,11 +5,11 @@
 @endphp
 
 <x-layout :$content ai="form/toggle">
-    <x-slot:title>Form Toggle</x-slot:title>
-    <x-slot:description>Form toggle component.</x-slot:description>
+    <x-slot:title>Form Toggle</x-slot>
+    <x-slot:description>Form toggle component.</x-slot>
     <x-slot:customization>
         <livewire:customization :$customization component="Form\Toggle" />
-    </x-slot:customization>
+    </x-slot>
     <x-section title="Basic Usage">
         <x-preview language="blade" :contents="$basic">
             <x-toggle />
@@ -27,8 +27,9 @@
         <x-preview language="blade" :contents="$html">
             <x-toggle>
                 <x-slot:label>
-                    I agree to the <a href="#">terms and conditions</a>
-                </x-slot:label>
+                    I agree to the
+                    <a href="#">terms and conditions</a>
+                </x-slot>
             </x-toggle>
         </x-preview>
     </x-section>
@@ -37,19 +38,25 @@
             <div class="space-y-4">
                 <x-toggle>
                     <x-slot:label>
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
-                        the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
-                        of type and scrambled it to make a type specimen book. It has survived not only five centuries,
-                        but also the leap into electronic typesetting, remaining essentially unchanged.
-                    </x-slot:label>
+                        Lorem Ipsum is simply dummy text of the printing and
+                        typesetting industry. Lorem Ipsum has been the
+                        industry's standard dummy text ever since the 1500s,
+                        when an unknown printer took a galley of type and
+                        scrambled it to make a type specimen book. It has
+                        survived not only five centuries, but also the leap into
+                        electronic typesetting, remaining essentially unchanged.
+                    </x-slot>
                 </x-toggle>
                 <x-toggle>
                     <x-slot:label start>
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
-                        the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
-                        of type and scrambled it to make a type specimen book. It has survived not only five centuries,
-                        but also the leap into electronic typesetting, remaining essentially unchanged.
-                    </x-slot:label>
+                        Lorem Ipsum is simply dummy text of the printing and
+                        typesetting industry. Lorem Ipsum has been the
+                        industry's standard dummy text ever since the 1500s,
+                        when an unknown printer took a galley of type and
+                        scrambled it to make a type specimen book. It has
+                        survived not only five centuries, but also the leap into
+                        electronic typesetting, remaining essentially unchanged.
+                    </x-slot>
                 </x-toggle>
             </div>
         </x-preview>

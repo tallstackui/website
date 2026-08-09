@@ -48,6 +48,10 @@ class Clipboard
     <x-clipboard text="TallStackUI"
                  icon
                  :icons="['copy' => 'pencil', 'copied' => 'check']"/>
+
+    <!-- or -->
+
+    <x-clipboard ... :icon="['copy' => 'pencil', 'copied' => 'check']"/>
     HTML;
 
     public const string PROGRAMMATIC = <<<'HTML'
@@ -58,7 +62,7 @@ class Clipboard
 
     public const string PROGRAMMATIC_EVENT = <<<'JS'
     // $tsui.copy resolves to a boolean reporting whether the copy succeeded.
-    const copied = await window.$tsui.copy('TallStackUI');
+    const copied = await $tsui.copy('TallStackUI');
 
     // It also dispatches the `ts-ui:copy` event on window with the copied text.
     window.addEventListener('ts-ui:copy', (event) => {

@@ -5,11 +5,11 @@
 @endphp
 
 <x-layout :$content ai="tooltip">
-    <x-slot:title>Tooltip</x-slot:title>
-    <x-slot:description>Tooltip component.</x-slot:description>
+    <x-slot:title>Tooltip</x-slot>
+    <x-slot:description>Tooltip component.</x-slot>
     <x-slot:customization>
         <livewire:customization :$customization component="Tooltip" />
-    </x-slot:customization>
+    </x-slot>
     <x-section title="Basic Usage">
         <x-preview language="blade" :contents="$basic">
             <x-tooltip text="TallStackUI" />
@@ -17,9 +17,10 @@
     </x-section>
     <x-section title="Available Positions">
         <x-slot:description>
-            Fifteen Popper-style placements. The balloon flips to the opposite side when the requested one does not fit,
-            and shifts along the cross axis to stay inside the viewport.
-        </x-slot:description>
+            Fifteen Popper-style placements. The balloon flips to the opposite
+            side when the requested one does not fit, and shifts along the cross
+            axis to stay inside the viewport.
+        </x-slot>
         <x-preview language="blade" :contents="$positions">
             <div class="inline-flex space-x-2">
                 <x-tooltip text="Top" position="top" />
@@ -32,9 +33,21 @@
     <x-section title="Customized Icon">
         <x-preview language="blade" :contents="$icons">
             <div class="inline-flex space-x-2">
-                <x-tooltip text="Top" position="top" icon="exclamation-circle" />
-                <x-tooltip text="Bottom" position="bottom" icon="exclamation-triangle" />
-                <x-tooltip text="Left" position="left" icon="shield-exclamation" />
+                <x-tooltip
+                    text="Top"
+                    position="top"
+                    icon="exclamation-circle"
+                />
+                <x-tooltip
+                    text="Bottom"
+                    position="bottom"
+                    icon="exclamation-triangle"
+                />
+                <x-tooltip
+                    text="Left"
+                    position="left"
+                    icon="shield-exclamation"
+                />
                 <x-tooltip text="Right" position="right" icon="shield-check" />
             </div>
         </x-preview>
@@ -52,7 +65,11 @@
     <x-section title="HTML Content">
         <x-preview language="blade" :contents="$html">
             <div class="inline-flex space-x-2">
-                <x-tooltip> <b>Tall</b><i>Stack</i><u>Ui</u> </x-tooltip>
+                <x-tooltip>
+                    <b>Tall</b>
+                    <i>Stack</i>
+                    <u>Ui</u>
+                </x-tooltip>
             </div>
         </x-preview>
     </x-section>
@@ -119,8 +136,10 @@
             </div>
         </x-preview>
         <x-warning class="mt-4">
-            A colored balloon keeps its color in both themes, and so does the default one. Opt into a light balloon on a
-            dark theme through the <x-block>invert</x-block> setting.
+            A colored balloon keeps its color in both themes, and so does the
+            default one. Opt into a light balloon on a dark theme through the
+            <x-block>invert</x-block>
+            setting.
         </x-warning>
     </x-section>
     <x-section
@@ -130,23 +149,32 @@
     >
         <x-preview language="blade" :contents="$scale">
             <div class="inline-flex space-x-4">
-                <x-tooltip text="A hint holding a whole sentence reads cramped at text-xs." scale="sm" />
-                <x-tooltip text="A hint holding a whole sentence reads cramped at text-xs." scale="md" />
-                <x-tooltip text="A hint holding a whole sentence reads cramped at text-xs." scale="lg" />
+                <x-tooltip
+                    text="A hint holding a whole sentence reads cramped at text-xs."
+                    scale="sm"
+                />
+                <x-tooltip
+                    text="A hint holding a whole sentence reads cramped at text-xs."
+                    scale="md"
+                />
+                <x-tooltip
+                    text="A hint holding a whole sentence reads cramped at text-xs."
+                    scale="lg"
+                />
             </div>
         </x-preview>
         <x-table
             class="mt-4"
             :headers="[
-            ['index' => 'name', 'label' => 'Name'],
-            ['index' => 'type', 'label' => 'Type scale'],
-            ['index' => 'width', 'label' => 'Max width'],
-        ]"
+                ['index' => 'name', 'label' => 'Name'],
+                ['index' => 'type', 'label' => 'Type scale'],
+                ['index' => 'width', 'label' => 'Max width'],
+            ]"
             :rows="[
-            ['name' => 'sm', 'type' => 'text-xs', 'width' => '20rem'],
-            ['name' => 'md', 'type' => 'text-sm', 'width' => '24rem'],
-            ['name' => 'lg', 'type' => 'text-base', 'width' => '28rem'],
-        ]"
+                ['name' => 'sm', 'type' => 'text-xs', 'width' => '20rem'],
+                ['name' => 'md', 'type' => 'text-sm', 'width' => '24rem'],
+                ['name' => 'lg', 'type' => 'text-base', 'width' => '28rem'],
+            ]"
         />
     </x-section>
     <x-section
@@ -155,7 +183,10 @@
         description="Turns a tooltip off without removing the directive. The flag is watched, not only read when the balloon opens."
     >
         <x-preview language="blade" :contents="$disabled">
-            <div x-data="{ disabled: false }" class="flex items-center gap-4">
+            <div
+                x-data="{ disabled: false }"
+                class="flex items-center gap-4"
+            >
                 <x-toggle x-model="disabled" label="Disable the tooltip" />
                 <span
                     class="cursor-help underline"
@@ -175,8 +206,10 @@
     >
         <x-code language="php" :contents="$settings" />
         <x-warning class="mt-4">
-            <x-block>invert</x-block> flips the default balloon in dark mode. It is off unasked, so the balloon keeps
-            its dark look in both themes. A colored balloon never inverts, whatever the setting says.
+            <x-block>invert</x-block>
+            flips the default balloon in dark mode. It is off unasked, so the
+            balloon keeps its dark look in both themes. A colored balloon never
+            inverts, whatever the setting says.
         </x-warning>
     </x-section>
     <x-section
@@ -189,8 +222,13 @@
     <x-section title="Variations" disable-copy>
         <p>
             The concept of variation follows the same patterns as
-            <a href="{{ route('documentation', ['ui', 'icon']).'#variations' }}" wire:navigate class="underline"
-                >icon variations.</a>
+            <a
+                href="{{ route("documentation", ["ui", "icon"]) . "#variations" }}"
+                wire:navigate
+                class="underline"
+            >
+                icon variations.
+            </a>
         </p>
     </x-section>
 </x-layout>

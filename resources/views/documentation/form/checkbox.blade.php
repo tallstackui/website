@@ -4,23 +4,30 @@
     }
 
     $features = [
-        ['label' => 'Newsletter', 'value' => 'newsletter', 'description' => 'Weekly digest'],
-        ['label' => 'Alerts', 'value' => 'alerts', 'description' => 'Real time notifications'],
-        ['label' => 'Reports', 'value' => 'reports', 'description' => 'Monthly summary'],
+        ["label" => "Newsletter", "value" => "newsletter", "description" => "Weekly digest"],
+        ["label" => "Alerts", "value" => "alerts", "description" => "Real time notifications"],
+        ["label" => "Reports", "value" => "reports", "description" => "Monthly summary"],
     ];
 @endphp
 
-<x-layout :$content :ai="['Checkbox' => 'form/checkbox', 'Checkbox Group' => 'form/checkbox/group']">
-    <x-slot:title>Form Checkbox</x-slot:title>
-    <x-slot:description>Form checkbox component.</x-slot:description>
+<x-layout
+    :$content
+    :ai="['Checkbox' => 'form/checkbox', 'Checkbox Group' => 'form/checkbox/group']"
+>
+    <x-slot:title>Form Checkbox</x-slot>
+    <x-slot:description>Form checkbox component.</x-slot>
     <x-slot:customization>
-        <livewire:customization :$customization component="Form\Checkbox" title="Checkbox" />
+        <livewire:customization
+            :$customization
+            component="Form\Checkbox"
+            title="Checkbox"
+        />
         <livewire:customization
             :customization="$groupCustomization"
             component="Form\Checkbox\Group"
             title="Checkbox Group"
         />
-    </x-slot:customization>
+    </x-slot>
     <x-section title="Basic Usage" anchor="checkbox-basic-usage">
         <x-preview language="blade" :contents="$basic">
             <x-checkbox />
@@ -37,14 +44,18 @@
     <x-section title="Label Slot" anchor="checkbox-label-slot">
         <x-preview language="blade" :contents="$html">
             <x-checkbox>
-                <x-slot:label>I agree to the terms and conditions</x-slot:label>
+                <x-slot:label>
+                    I agree to the terms and conditions
+                </x-slot>
             </x-checkbox>
         </x-preview>
     </x-section>
     <x-section title="Label Slot at Left" anchor="checkbox-label-slot-at-left">
         <x-preview language="blade" :contents="$labelLeft">
             <x-checkbox>
-                <x-slot:label left>I agree to the terms and conditions</x-slot:label>
+                <x-slot:label left>
+                    I agree to the terms and conditions
+                </x-slot>
             </x-checkbox>
         </x-preview>
     </x-section>
@@ -53,19 +64,25 @@
             <div class="space-y-4">
                 <x-checkbox>
                     <x-slot:label>
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
-                        the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
-                        of type and scrambled it to make a type specimen book. It has survived not only five centuries,
-                        but also the leap into electronic typesetting, remaining essentially unchanged.
-                    </x-slot:label>
+                        Lorem Ipsum is simply dummy text of the printing and
+                        typesetting industry. Lorem Ipsum has been the
+                        industry's standard dummy text ever since the 1500s,
+                        when an unknown printer took a galley of type and
+                        scrambled it to make a type specimen book. It has
+                        survived not only five centuries, but also the leap into
+                        electronic typesetting, remaining essentially unchanged.
+                    </x-slot>
                 </x-checkbox>
                 <x-checkbox>
                     <x-slot:label start>
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
-                        the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
-                        of type and scrambled it to make a type specimen book. It has survived not only five centuries,
-                        but also the leap into electronic typesetting, remaining essentially unchanged.
-                    </x-slot:label>
+                        Lorem Ipsum is simply dummy text of the printing and
+                        typesetting industry. Lorem Ipsum has been the
+                        industry's standard dummy text ever since the 1500s,
+                        when an unknown printer took a galley of type and
+                        scrambled it to make a type specimen book. It has
+                        survived not only five centuries, but also the leap into
+                        electronic typesetting, remaining essentially unchanged.
+                    </x-slot>
                 </x-checkbox>
             </div>
         </x-preview>
@@ -118,7 +135,11 @@
     <x-separator text="Checkbox Group" />
     <x-section title="Basic Usage" anchor="group-basic-usage">
         <x-preview language="blade" :contents="$groupBasic">
-            <x-checkbox.group name="features-basic[]" label="Features" :options="$features" />
+            <x-checkbox.group
+                name="features-basic[]"
+                label="Features"
+                :options="$features"
+            />
         </x-preview>
         <p>You should bind a property that is an array:</p>
         <x-code language="php" :contents="$groupProperty" />
@@ -130,59 +151,105 @@
     >
         <x-preview language="blade" :contents="$groupVariations">
             <div class="space-y-6">
-                <x-checkbox.group name="features-list[]" list :options="$features" />
-                <x-checkbox.group name="features-card[]" card :options="$features" />
-                <x-checkbox.group name="features-panel[]" panel :options="$features" />
-                <x-checkbox.group name="features-inline[]" inline :options="$features" />
+                <x-checkbox.group
+                    name="features-list[]"
+                    list
+                    :options="$features"
+                />
+                <x-checkbox.group
+                    name="features-card[]"
+                    card
+                    :options="$features"
+                />
+                <x-checkbox.group
+                    name="features-panel[]"
+                    panel
+                    :options="$features"
+                />
+                <x-checkbox.group
+                    name="features-inline[]"
+                    inline
+                    :options="$features"
+                />
             </div>
         </x-preview>
     </x-section>
     <x-section title="Columns" anchor="group-columns">
         <x-preview language="blade" :contents="$groupColumns">
-            <x-checkbox.group name="features-columns[]" card :columns="3" :options="$features" />
+            <x-checkbox.group
+                name="features-columns[]"
+                card
+                :columns="3"
+                :options="$features"
+            />
         </x-preview>
     </x-section>
     <x-section title="Control Position" anchor="group-control-position">
         <x-preview language="blade" :contents="$groupPosition">
-            <x-checkbox.group name="features-position[]" position="right" :options="$features" />
+            <x-checkbox.group
+                name="features-position[]"
+                position="right"
+                :options="$features"
+            />
         </x-preview>
     </x-section>
     <x-section title="Size Variations" anchor="group-size-variations">
         <x-preview language="blade" :contents="$groupSizes">
             <div class="space-y-6">
-                <x-checkbox.group name="features-xs[]" xs :options="$features" />
-                <x-checkbox.group name="features-sm[]" sm :options="$features" />
-                <x-checkbox.group name="features-md[]" md :options="$features" />
-                <x-checkbox.group name="features-lg[]" lg :options="$features" />
+                <x-checkbox.group
+                    name="features-xs[]"
+                    xs
+                    :options="$features"
+                />
+                <x-checkbox.group
+                    name="features-sm[]"
+                    sm
+                    :options="$features"
+                />
+                <x-checkbox.group
+                    name="features-md[]"
+                    md
+                    :options="$features"
+                />
+                <x-checkbox.group
+                    name="features-lg[]"
+                    lg
+                    :options="$features"
+                />
             </div>
         </x-preview>
     </x-section>
     <x-section title="Colors" anchor="group-colors">
         <x-preview language="blade" :contents="$groupColors">
-            <x-checkbox.group name="features-color[]" color="green" :value="['alerts']" :options="$features" />
+            <x-checkbox.group
+                name="features-color[]"
+                color="green"
+                :value="['alerts']"
+                :options="$features"
+            />
         </x-preview>
     </x-section>
     <x-section title="Option Keys" anchor="group-option-keys">
         <x-table
             :headers="[
-            ['index' => 'key', 'label' => 'Key'],
-            ['index' => 'type', 'label' => 'Type'],
-            ['index' => 'required', 'label' => 'Required'],
-            ['index' => 'ignored', 'label' => 'Ignored by'],
-        ]"
+                ['index' => 'key', 'label' => 'Key'],
+                ['index' => 'type', 'label' => 'Type'],
+                ['index' => 'required', 'label' => 'Required'],
+                ['index' => 'ignored', 'label' => 'Ignored by'],
+            ]"
             :rows="[
-            ['key' => 'label', 'type' => 'string', 'required' => 'Yes', 'ignored' => '—'],
-            ['key' => 'value', 'type' => 'scalar', 'required' => 'Yes', 'ignored' => '—'],
-            ['key' => 'description', 'type' => 'string', 'required' => 'No', 'ignored' => 'inline'],
-            ['key' => 'aside', 'type' => 'string', 'required' => 'No', 'ignored' => 'inline'],
-            ['key' => 'icon', 'type' => 'string', 'required' => 'No', 'ignored' => '—'],
-            ['key' => 'image', 'type' => 'string', 'required' => 'No', 'ignored' => 'inline'],
-            ['key' => 'badge', 'type' => 'string', 'required' => 'No', 'ignored' => 'inline'],
-            ['key' => 'disabled', 'type' => 'bool', 'required' => 'No', 'ignored' => '—'],
-        ]"
+                ['key' => 'label', 'type' => 'string', 'required' => 'Yes', 'ignored' => '—'],
+                ['key' => 'value', 'type' => 'scalar', 'required' => 'Yes', 'ignored' => '—'],
+                ['key' => 'description', 'type' => 'string', 'required' => 'No', 'ignored' => 'inline'],
+                ['key' => 'aside', 'type' => 'string', 'required' => 'No', 'ignored' => 'inline'],
+                ['key' => 'icon', 'type' => 'string', 'required' => 'No', 'ignored' => '—'],
+                ['key' => 'image', 'type' => 'string', 'required' => 'No', 'ignored' => 'inline'],
+                ['key' => 'badge', 'type' => 'string', 'required' => 'No', 'ignored' => 'inline'],
+                ['key' => 'disabled', 'type' => 'bool', 'required' => 'No', 'ignored' => '—'],
+            ]"
         >
-            @interact('column_key', $row)
-                <x-block>{{ $row['key'] }}</x-block>
+            @interact("column_key", $row)
+                <x-block>{{ $row["key"] }}</x-block>
             @endinteract
         </x-table>
     </x-section>
@@ -196,27 +263,31 @@
                 name="features-select[]"
                 select="label:name|value:id|description:note"
                 :options="[
-                ['name' => 'Newsletter', 'id' => 'newsletter', 'note' => 'Product updates once a month'],
-                ['name' => 'Reports', 'id' => 'reports', 'note' => 'A weekly digest of your metrics'],
-                ['name' => 'Alerts', 'id' => 'alerts', 'note' => 'Only when something breaks'],
-            ]"
+                    ['name' => 'Newsletter', 'id' => 'newsletter', 'note' => 'Product updates once a month'],
+                    ['name' => 'Reports', 'id' => 'reports', 'note' => 'A weekly digest of your metrics'],
+                    ['name' => 'Alerts', 'id' => 'alerts', 'note' => 'Only when something breaks'],
+                ]"
             />
         </x-preview>
     </x-section>
-    <x-section title="Interact" anchor="group-interact" description="An option to replaces the body of every item.">
+    <x-section
+        title="Interact"
+        anchor="group-interact"
+        description="An option to replaces the body of every item."
+    >
         <x-preview language="blade" :contents="$groupInteract">
             <x-checkbox.group
                 name="addons-interact[]"
                 card
                 :columns="2"
                 :options="[
-                ['label' => 'Extra storage', 'value' => 'storage', 'name' => 'Extra storage', 'price' => 9],
-                ['label' => 'Priority support', 'value' => 'support', 'name' => 'Priority support', 'price' => 29],
-            ]"
+                    ['label' => 'Extra storage', 'value' => 'storage', 'name' => 'Extra storage', 'price' => 9],
+                    ['label' => 'Priority support', 'value' => 'support', 'name' => 'Priority support', 'price' => 29],
+                ]"
             >
-                @interact('option', $option)
-                    <span class="font-semibold">{{ $option['name'] }}</span>
-                    <span class="font-mono">${{ $option['price'] }}</span>
+                @interact("option", $option)
+                    <span class="font-semibold">{{ $option["name"] }}</span>
+                    <span class="font-mono">${{ $option["price"] }}</span>
                 @endinteract
             </x-checkbox.group>
         </x-preview>

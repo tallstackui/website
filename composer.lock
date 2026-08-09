@@ -6017,7 +6017,7 @@
             "dist": {
                 "type": "path",
                 "url": "/Users/aj/Workspace/tallstack/tallstackui",
-                "reference": "f651ef91a7b30823bf35f8e8ab52601a35093e8b"
+                "reference": "b5512e1b7b491382901cced3087a5c07b8cc808a"
             },
             "require": {
                 "ext-zip": "*",

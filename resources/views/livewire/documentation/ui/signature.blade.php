@@ -4,8 +4,7 @@ declare(strict_types=1);
 
 use Livewire\Component;
 
-new class extends Component
-{
+new class extends Component {
     public int $model = 1;
 };
 
@@ -15,7 +14,10 @@ new class extends Component
     @if ($model === 1)
         <x-signature />
     @elseif ($model === 2)
-        <x-signature label="Sign your name" hint="You can revert if you have written something wrong." />
+        <x-signature
+            label="Sign your name"
+            hint="You can revert if you have written something wrong."
+        />
     @elseif ($model === 3)
         <x-signature color="#ff0000" />
     @elseif ($model === 4)

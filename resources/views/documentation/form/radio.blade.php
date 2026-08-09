@@ -4,24 +4,32 @@
     }
 
     $plans = [
-        ['label' => 'Startup', 'value' => 'startup', 'description' => 'Up to 5 job postings', 'aside' => '$29 / mo'],
-        ['label' => 'Business', 'value' => 'business', 'description' => 'Up to 25 job postings', 'aside' => '$99 / mo'],
-        ['label' => 'Enterprise', 'value' => 'enterprise', 'description' => 'Unlimited', 'aside' => '$249 / mo'],
+        ["label" => "Startup", "value" => "startup", "description" => "Up to 5 job postings", "aside" => '$29 / mo'],
+        ["label" => "Business", "value" => "business", "description" => "Up to 25 job postings", "aside" => '$99 / mo'],
+        ["label" => "Enterprise", "value" => "enterprise", "description" => "Unlimited", "aside" => '$249 / mo'],
     ];
 
-    $periods = [
-        ['label' => 'Monthly', 'value' => 'monthly'],
-        ['label' => 'Yearly', 'value' => 'yearly'],
-    ];
+    $periods = [["label" => "Monthly", "value" => "monthly"], ["label" => "Yearly", "value" => "yearly"]];
 @endphp
 
-<x-layout :$content :ai="['Radio' => 'form/radio', 'Radio Group' => 'form/radio/group']">
-    <x-slot:title>Form Radio</x-slot:title>
-    <x-slot:description>Form radio component.</x-slot:description>
+<x-layout
+    :$content
+    :ai="['Radio' => 'form/radio', 'Radio Group' => 'form/radio/group']"
+>
+    <x-slot:title>Form Radio</x-slot>
+    <x-slot:description>Form radio component.</x-slot>
     <x-slot:customization>
-        <livewire:customization :$customization component="Form\Radio" title="Radio" />
-        <livewire:customization :customization="$groupCustomization" component="Form\Radio\Group" title="Radio Group" />
-    </x-slot:customization>
+        <livewire:customization
+            :$customization
+            component="Form\Radio"
+            title="Radio"
+        />
+        <livewire:customization
+            :customization="$groupCustomization"
+            component="Form\Radio\Group"
+            title="Radio Group"
+        />
+    </x-slot>
     <x-section title="Basic Usage" anchor="radio-basic-usage">
         <x-preview language="blade" :contents="$basic">
             <x-radio />
@@ -39,8 +47,9 @@
         <x-preview language="blade" :contents="$html">
             <x-radio>
                 <x-slot:label>
-                    I agree to the <a href="#">terms and conditions</a>
-                </x-slot:label>
+                    I agree to the
+                    <a href="#">terms and conditions</a>
+                </x-slot>
             </x-radio>
         </x-preview>
     </x-section>
@@ -53,8 +62,9 @@
         <x-preview language="blade" :contents="$labelLeft">
             <x-radio>
                 <x-slot:label left>
-                    I agree to the <a href="#">terms and conditions</a>
-                </x-slot:label>
+                    I agree to the
+                    <a href="#">terms and conditions</a>
+                </x-slot>
             </x-radio>
         </x-preview>
     </x-section>
@@ -63,19 +73,25 @@
             <div class="space-y-4">
                 <x-radio>
                     <x-slot:label>
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
-                        the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
-                        of type and scrambled it to make a type specimen book. It has survived not only five centuries,
-                        but also the leap into electronic typesetting, remaining essentially unchanged.
-                    </x-slot:label>
+                        Lorem Ipsum is simply dummy text of the printing and
+                        typesetting industry. Lorem Ipsum has been the
+                        industry's standard dummy text ever since the 1500s,
+                        when an unknown printer took a galley of type and
+                        scrambled it to make a type specimen book. It has
+                        survived not only five centuries, but also the leap into
+                        electronic typesetting, remaining essentially unchanged.
+                    </x-slot>
                 </x-radio>
                 <x-radio>
                     <x-slot:label start>
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
-                        the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
-                        of type and scrambled it to make a type specimen book. It has survived not only five centuries,
-                        but also the leap into electronic typesetting, remaining essentially unchanged.
-                    </x-slot:label>
+                        Lorem Ipsum is simply dummy text of the printing and
+                        typesetting industry. Lorem Ipsum has been the
+                        industry's standard dummy text ever since the 1500s,
+                        when an unknown printer took a galley of type and
+                        scrambled it to make a type specimen book. It has
+                        survived not only five centuries, but also the leap into
+                        electronic typesetting, remaining essentially unchanged.
+                    </x-slot>
                 </x-radio>
             </div>
         </x-preview>
@@ -141,18 +157,31 @@
                 <x-radio.group name="plan-list" list :options="$plans" />
                 <x-radio.group name="plan-card" card :options="$plans" />
                 <x-radio.group name="plan-panel" panel :options="$plans" />
-                <x-radio.group name="period-inline" inline :options="$periods" />
+                <x-radio.group
+                    name="period-inline"
+                    inline
+                    :options="$periods"
+                />
             </div>
         </x-preview>
     </x-section>
     <x-section title="Columns" anchor="group-columns">
         <x-preview language="blade" :contents="$groupColumns">
-            <x-radio.group name="plan-columns" card :columns="3" :options="$plans" />
+            <x-radio.group
+                name="plan-columns"
+                card
+                :columns="3"
+                :options="$plans"
+            />
         </x-preview>
     </x-section>
     <x-section title="Control Position" anchor="group-control-position">
         <x-preview language="blade" :contents="$groupPosition">
-            <x-radio.group name="plan-position" position="right" :options="$plans" />
+            <x-radio.group
+                name="plan-position"
+                position="right"
+                :options="$plans"
+            />
         </x-preview>
     </x-section>
     <x-section title="Size Variations" anchor="group-size-variations">
@@ -167,30 +196,35 @@
     </x-section>
     <x-section title="Colors" anchor="group-colors">
         <x-preview language="blade" :contents="$groupColors">
-            <x-radio.group name="plan-color" color="green" value="business" :options="$plans" />
+            <x-radio.group
+                name="plan-color"
+                color="green"
+                value="business"
+                :options="$plans"
+            />
         </x-preview>
     </x-section>
     <x-section title="Option Keys" anchor="group-option-keys">
         <x-table
             :headers="[
-            ['index' => 'key', 'label' => 'Key'],
-            ['index' => 'type', 'label' => 'Type'],
-            ['index' => 'required', 'label' => 'Required'],
-            ['index' => 'ignored', 'label' => 'Ignored by'],
-        ]"
+                ['index' => 'key', 'label' => 'Key'],
+                ['index' => 'type', 'label' => 'Type'],
+                ['index' => 'required', 'label' => 'Required'],
+                ['index' => 'ignored', 'label' => 'Ignored by'],
+            ]"
             :rows="[
-            ['key' => 'label', 'type' => 'string', 'required' => 'Yes', 'ignored' => '—'],
-            ['key' => 'value', 'type' => 'scalar', 'required' => 'Yes', 'ignored' => '—'],
-            ['key' => 'description', 'type' => 'string', 'required' => 'No', 'ignored' => 'inline'],
-            ['key' => 'aside', 'type' => 'string', 'required' => 'No', 'ignored' => 'inline'],
-            ['key' => 'icon', 'type' => 'string', 'required' => 'No', 'ignored' => '—'],
-            ['key' => 'image', 'type' => 'string', 'required' => 'No', 'ignored' => 'inline'],
-            ['key' => 'badge', 'type' => 'string', 'required' => 'No', 'ignored' => 'inline'],
-            ['key' => 'disabled', 'type' => 'bool', 'required' => 'No', 'ignored' => '—'],
-        ]"
+                ['key' => 'label', 'type' => 'string', 'required' => 'Yes', 'ignored' => '—'],
+                ['key' => 'value', 'type' => 'scalar', 'required' => 'Yes', 'ignored' => '—'],
+                ['key' => 'description', 'type' => 'string', 'required' => 'No', 'ignored' => 'inline'],
+                ['key' => 'aside', 'type' => 'string', 'required' => 'No', 'ignored' => 'inline'],
+                ['key' => 'icon', 'type' => 'string', 'required' => 'No', 'ignored' => '—'],
+                ['key' => 'image', 'type' => 'string', 'required' => 'No', 'ignored' => 'inline'],
+                ['key' => 'badge', 'type' => 'string', 'required' => 'No', 'ignored' => 'inline'],
+                ['key' => 'disabled', 'type' => 'bool', 'required' => 'No', 'ignored' => '—'],
+            ]"
         >
-            @interact('column_key', $row)
-                <x-block>{{ $row['key'] }}</x-block>
+            @interact("column_key", $row)
+                <x-block>{{ $row["key"] }}</x-block>
             @endinteract
         </x-table>
     </x-section>
@@ -204,27 +238,31 @@
                 name="plan-select"
                 select="label:name|value:id|description:note"
                 :options="[
-                ['name' => 'Startup', 'id' => 'startup', 'note' => 'Up to 5 job postings'],
-                ['name' => 'Business', 'id' => 'business', 'note' => 'Up to 25 job postings'],
-                ['name' => 'Enterprise', 'id' => 'enterprise', 'note' => 'Unlimited'],
-            ]"
+                    ['name' => 'Startup', 'id' => 'startup', 'note' => 'Up to 5 job postings'],
+                    ['name' => 'Business', 'id' => 'business', 'note' => 'Up to 25 job postings'],
+                    ['name' => 'Enterprise', 'id' => 'enterprise', 'note' => 'Unlimited'],
+                ]"
             />
         </x-preview>
     </x-section>
-    <x-section title="Interact" anchor="group-interact" description="An option to replaces the body of every item.">
+    <x-section
+        title="Interact"
+        anchor="group-interact"
+        description="An option to replaces the body of every item."
+    >
         <x-preview language="blade" :contents="$groupInteract">
             <x-radio.group
                 name="plan-interact"
                 card
                 :columns="2"
                 :options="[
-                ['label' => 'Startup', 'value' => 'startup', 'tag' => 'popular'],
-                ['label' => 'Business', 'value' => 'business', 'tag' => 'best value'],
-            ]"
+                    ['label' => 'Startup', 'value' => 'startup', 'tag' => 'popular'],
+                    ['label' => 'Business', 'value' => 'business', 'tag' => 'best value'],
+                ]"
             >
-                @interact('option', $option)
+                @interact("option", $option)
                     <div class="flex items-center justify-between">
-                        <span class="font-medium">{{ $option['label'] }}</span>
+                        <span class="font-medium">{{ $option["label"] }}</span>
                         <x-badge :text="$option['tag']" color="green" sm />
                     </div>
                 @endinteract

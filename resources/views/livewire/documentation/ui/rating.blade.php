@@ -4,8 +4,7 @@ declare(strict_types=1);
 
 use Livewire\Component;
 
-new class extends Component
-{
+new class extends Component {
     public int $model = 1;
 
     public int $rate = 3;
@@ -62,6 +61,9 @@ new class extends Component
         <x-rating :rate="3" color="taupe" />
         <x-rating :rate="3" color="black" />
     @elseif ($model === 6)
-        <x-rating :rate="3" x-on:evaluate="alert(`Evaluated: ${JSON.stringify($event.detail.evaluate)}`)" />
+        <x-rating
+            :rate="3"
+            x-on:evaluate="alert(`Evaluated: ${JSON.stringify($event.detail.evaluate)}`)"
+        />
     @endif
 </div>

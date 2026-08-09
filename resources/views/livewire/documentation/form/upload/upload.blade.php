@@ -8,8 +8,7 @@ use Livewire\WithFileUploads;
 use Illuminate\Http\UploadedFile;
 use Livewire\Attributes\Validate;
 
-new class extends Component
-{
+new class extends Component {
     use WithFileUploads;
 
     public $photo1;
@@ -26,14 +25,14 @@ new class extends Component
 
     public $photo7;
 
-    #[Validate(['file', 'extensions:dat'])]
+    #[Validate(["file", "extensions:dat"])]
     public $validate;
 
     public int $model = 1;
 
     public function deleteUpload(array $content): void
     {
-        $property = $this->model === 3 ? 'photo3' : 'photo7';
+        $property = $this->model === 3 ? "photo3" : "photo7";
 
         if (! $this->{$property}) {
             return;
@@ -42,13 +41,23 @@ new class extends Component
         $files = Arr::wrap($this->{$property});
 
         /** @var UploadedFile $file */
-        $file = collect($files)->filter(fn (UploadedFile $item) => $item->getFilename() === $content['temporary_name'])->first();
+        $file = collect($files)
+            ->filter(
+                fn (UploadedFile $item) => $item->getFilename() ===
+                    $content["temporary_name"],
+            )
+            ->first();
 
         rescue(fn () => $file->delete(), report: false);
 
-        $collect = collect($files)->filter(fn (UploadedFile $item) => $item->getFilename() !== $content['temporary_name']);
+        $collect = collect($files)->filter(
+            fn (UploadedFile $item) => $item->getFilename() !==
+                $content["temporary_name"],
+        );
 
-        $this->{$property} = is_array($this->{$property}) ? $collect->toArray() : $collect->first();
+        $this->{$property} = is_array($this->{$property})
+            ? $collect->toArray()
+            : $collect->first();
     }
 };
 
@@ -69,18 +78,31 @@ new class extends Component
     @elseif ($model === 4)
         <x-upload wire:model="photo4" multiple />
     @elseif ($model === 5)
-        <x-upload wire:model="photo5" tip="Accepting only pdf" accept="application/pdf" />
+        <x-upload
+            wire:model="photo5"
+            tip="Accepting only pdf"
+            accept="application/pdf"
+        />
     @elseif ($model === 6)
         <x-upload wire:model="photo6" multiple>
             <x-slot:footer>
-                <x-button class="w-full"> Save </x-button>
-            </x-slot:footer>
+                <x-button class="w-full">Save</x-button>
+            </x-slot>
         </x-upload>
     @elseif ($model === 7)
-        <x-upload wire:model="photo7" delete x-on:upload="alert('Uploaded!')" x-on:remove="alert('Removed')" />
+        <x-upload
+            wire:model="photo7"
+            delete
+            x-on:upload="alert('Uploaded!')"
+            x-on:remove="alert('Removed')"
+        />
     @elseif ($model === 8)
         <x-upload wire:model="photo7" close-after-upload />
     @elseif ($model === 9)
-        <x-upload label="Send File Different Than .dat" wire:model.live="validate" close-after-upload />
+        <x-upload
+            label="Send File Different Than .dat"
+            wire:model.live="validate"
+            close-after-upload
+        />
     @endif
 </div>

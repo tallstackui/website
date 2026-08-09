@@ -5,15 +5,14 @@ declare(strict_types=1);
 use Livewire\Component;
 use TallStackUi\Traits\Interactions;
 
-new class extends Component
-{
+new class extends Component {
     use Interactions;
 
     public function success(): void
     {
         $this->toast()
             ->timeout(10)
-            ->success('Success', 'This is a success message.')
+            ->success("Success", "This is a success message.")
             ->send();
     }
 };

@@ -7,8 +7,7 @@ use Livewire\Component;
 use Livewire\WithPagination;
 use Illuminate\Database\Eloquent\Builder;
 
-new class extends Component
-{
+new class extends Component {
     use WithPagination;
 
     public int $mode = 1;
@@ -22,13 +21,15 @@ new class extends Component
     public array $selected = [1, 2, 3, 4, 5];
 
     public array $sort = [
-        'column'    => 'id',
-        'direction' => 'desc',
+        "column" => "id",
+        "direction" => "desc",
     ];
 
     public function boot(): void
     {
-        $this->quantity = in_array($this->mode, [4, 5, 7, 8, 14, 15, 16]) ? 2 : 11;
+        $this->quantity = in_array($this->mode, [4, 5, 7, 8, 14, 15, 16])
+            ? 2
+            : 11;
     }
 
     public function updatingQuantity(): void
@@ -43,29 +44,51 @@ new class extends Component
 
     public function with(): array
     {
-        $rows = $this->mode === 13
-            ? collect()
-            : User::query()
-                ->when($this->search, fn (Builder $query) => $query->where('name', 'like', "%{$this->search}%"))
-                ->when($this->mode === 6, fn (Builder $query) => $query->orderBy(...array_values($this->sort)))
-                ->paginate($this->quantity)
-                ->withQueryString();
+        $rows =
+            $this->mode === 13
+                ? collect()
+                : User::query()
+                    ->when(
+                        $this->search,
+                        fn (Builder $query) => $query->where(
+                            "name",
+                            "like",
+                            "%{$this->search}%",
+                        ),
+                    )
+                    ->when(
+                        $this->mode === 6,
+                        fn (Builder $query) => $query->orderBy(
+                            ...array_values($this->sort),
+                        ),
+                    )
+                    ->paginate($this->quantity)
+                    ->withQueryString();
 
         if ($this->mode === 11) {
-            $rows->through(fn (User $user) => $user->setAttribute('highlight', match ($user->id) {
-                1, 5    => 'green',
-                3, 8    => 'red',
-                2       => 'yellow',
-                default => null,
-            }));
+            $rows->through(
+                fn (User $user) => $user->setAttribute(
+                    "highlight",
+                    match ($user->id) {
+                        1, 5 => "green",
+                        3, 8 => "red",
+                        2 => "yellow",
+                        default => null,
+                    },
+                ),
+            );
         }
 
         return [
-            'headers' => [
-                ['index' => 'id', 'label' => '#'],
-                ['index' => 'name', 'label' => 'Member Name', 'sortable' => false],
+            "headers" => [
+                ["index" => "id", "label" => "#"],
+                [
+                    "index" => "name",
+                    "label" => "Member Name",
+                    "sortable" => false,
+                ],
             ],
-            'rows' => $rows,
+            "rows" => $rows,
         ];
     }
 };
@@ -88,25 +111,36 @@ new class extends Component
     @elseif ($mode === 7)
         <x-table :$headers :$rows paginate persistent />
     @elseif ($mode === 8)
-        <x-table :$headers :$rows paginate header="Header Slot" footer="Footer Slot" />
+        <x-table
+            :$headers
+            :$rows
+            paginate
+            header="Header Slot"
+            footer="Footer Slot"
+        />
     @elseif ($mode === 9)
         <x-table :$headers :$rows :$sort selectable wire:model="selected" />
     @elseif ($mode === 10)
-        <x-table :$headers :$rows link="https://google.com.br/?users={id}" blank />
+        <x-table
+            :$headers
+            :$rows
+            link="https://google.com.br/?users={id}"
+            blank
+        />
     @elseif ($mode === 11)
         <x-table :$headers :$rows highlight />
     @elseif ($mode === 12)
         <x-table :$headers :$rows expandable>
-            @interact('sub_table', $row)
+            @interact("sub_table", $row)
                 <x-table
                     :headers="[
-                    ['index' => 'property', 'label' => 'Property'],
-                    ['index' => 'value', 'label' => 'Value'],
-                ]"
+                        ['index' => 'property', 'label' => 'Property'],
+                        ['index' => 'value', 'label' => 'Value'],
+                    ]"
                     :rows="[
-                    ['property' => 'Email', 'value' => $row->email],
-                    ['property' => 'Created', 'value' => $row->created_at->format('Y-m-d')],
-                ]"
+                        ['property' => 'Email', 'value' => $row->email],
+                        ['property' => 'Created', 'value' => $row->created_at->format('Y-m-d')],
+                    ]"
                 />
             @endinteract
         </x-table>
@@ -119,10 +153,14 @@ new class extends Component
     @elseif ($mode === 16)
         <x-table :$headers :$rows paginate persistent="users-table" />
     @elseif ($mode === 17)
-        <div x-data="{ rows: [] }" x-on:selected="rows = $event.detail.rows">
+        <div
+            x-data="{ rows: [] }"
+            x-on:selected="rows = $event.detail.rows"
+        >
             <x-table :$headers :$rows selectable wire:model="selected" />
             <p class="dark:text-dark-400 mt-2 text-sm text-gray-500">
-                Selected: <b x-text="rows.join(', ') || 'none'"></b>
+                Selected:
+                <b x-text="rows.join(', ') || 'none'"></b>
             </p>
         </div>
     @endif

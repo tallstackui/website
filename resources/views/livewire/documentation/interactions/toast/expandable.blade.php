@@ -5,15 +5,17 @@ declare(strict_types=1);
 use Livewire\Component;
 use TallStackUi\Traits\Interactions;
 
-new class extends Component
-{
+new class extends Component {
     use Interactions;
 
     public function success(): void
     {
         $this->toast()
             ->expandable()
-            ->success('Success', 'When the description has more than 30 characters, the toast can be optionally expandable.')
+            ->success(
+                "Success",
+                "When the description has more than 30 characters, the toast can be optionally expandable.",
+            )
             ->send();
     }
 };

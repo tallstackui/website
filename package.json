@@ -3,7 +3,9 @@
     "type": "module",
     "scripts": {
         "build": "vite build",
-        "dev": "vite"
+        "dev": "vite",
+        "format": "./node_modules/.bin/prettier --write \"resources/views/**/*.blade.php\"",
+        "format:test": "./node_modules/.bin/prettier --check \"resources/views/**/*.blade.php\""
     },
     "dependencies": {
         "@docsearch/css": "^3.5.2",
@@ -24,7 +26,8 @@
         "lightningcss-linux-x64-gnu": "^1.29.1"
     },
     "devDependencies": {
-        "prettier-plugin-blade": "^3.2.2",
-        "prettier-plugin-tailwindcss": "^0.8.1"
+        "prettier": "^3.6.2",
+        "prettier-plugin-blade": "^2.1.21",
+        "prettier-plugin-tailwindcss": "^0.6.14"
     }
 }

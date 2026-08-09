@@ -70,12 +70,6 @@ class Modal
     </x-modal>
     HTML;
 
-    public const string Z_INDEX = <<<'HTML'
-    <x-modal title="TallStackUi" z-index="z-10">
-        TallStackUi
-    </x-modal>
-    HTML;
-
     public const string PERSISTENT = <<<'HTML'
     <x-modal title="TallStackUi" persistent>
         TallStackUi

@@ -1,8 +1,15 @@
 <x-demo-layout title="Dial Item Colors">
-    <div class="dark:text-dark-400 flex min-h-[340px] flex-col items-center justify-center px-6 py-10 text-sm text-slate-500">
+    <div
+        class="dark:text-dark-400 flex min-h-[340px] flex-col items-center justify-center px-6 py-10 text-sm text-slate-500"
+    >
         <p class="text-center">
-            Open the dial (bottom-right) to see per-item colors: <b>solid</b>, <b>light</b>, and <b>outline</b> styles,
-            plus a neutral item.
+            Open the dial (bottom-right) to see per-item colors:
+            <b>solid</b>
+            ,
+            <b>light</b>
+            , and
+            <b>outline</b>
+            styles, plus a neutral item.
         </p>
     </div>
 

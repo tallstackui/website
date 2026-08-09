@@ -5,28 +5,32 @@
 @endphp
 
 <x-layout :$content ai="form/pin">
-    <x-slot:title>Form Pin</x-slot:title>
-    <x-slot:description>Form pin component.</x-slot:description>
+    <x-slot:title>Form Pin</x-slot>
+    <x-slot:description>Form pin component.</x-slot>
     <x-slot:customization>
         <livewire:customization :$customization component="Form\Pin" />
-    </x-slot:customization>
-    <x-section title="Concept" disable-copy>
-        Many modern applications need to validate and authorize things such as user registration or even login, through
-        mechanisms such as 2FA. Pin input is an ideal component for situations where you need to request a pin (short
-        code) from the user.
-    </x-section>
+    </x-slot>
     <x-section title="Basic Usage">
         <x-preview language="blade" :contents="$basic">
             <x-pin length="5" />
         </x-preview>
-        <x-warning class="mt-4"> The length is mandatory in any use case. </x-warning>
+        <x-warning class="mt-4">
+            The length is mandatory in any use case.
+        </x-warning>
     </x-section>
     <x-section title="Label & Hint">
         <x-preview language="blade" :contents="$labelHint">
-            <x-pin length="5" label="Insert the code" hint="We sent a 5-digit code to your email." />
+            <x-pin
+                length="5"
+                label="Insert the code"
+                hint="We sent a 5-digit code to your email."
+            />
         </x-preview>
     </x-section>
-    <x-section title="Prefix" description="An option to prefix a character related to the desired short code format.">
+    <x-section
+        title="Prefix"
+        description="An option to prefix a character related to the desired short code format."
+    >
         <x-preview language="blade" :contents="$prefix">
             <x-pin prefix="G-" length="5" />
         </x-preview>
@@ -35,7 +39,9 @@
         <x-preview language="blade" :contents="$clear">
             <livewire:documentation.form.pin :mode="1" />
         </x-preview>
-        <x-warning class="mt-4"> The clear button will only be displayed when the input is not empty. </x-warning>
+        <x-warning class="mt-4">
+            The clear button will only be displayed when the input is not empty.
+        </x-warning>
     </x-section>
     <x-section title="Masks" description="An option to limit the input types.">
         <x-preview language="blade" :contents="$masks">
@@ -48,24 +54,34 @@
     <x-section title="Events">
         <x-preview language="blade" :contents="$events">
             <div class="space-y-2">
-                <x-pin length="5" label="Filled Event" x-on:filled="alert(`Filled: ${$event.detail.model}`)" />
-                <x-pin length="5" label="Clear Event" clear x-on:clear="alert(`Cleared: ${$event.detail.model}`)" />
+                <x-pin
+                    length="5"
+                    label="Filled Event"
+                    x-on:filled="alert(`Filled: ${$event.detail.model}`)"
+                />
+                <x-pin
+                    length="5"
+                    label="Clear Event"
+                    clear
+                    x-on:clear="alert(`Cleared: ${$event.detail.model}`)"
+                />
             </div>
         </x-preview>
-        <x-warning class="mt-4"> The clear event needs the clear option to be enabled. </x-warning>
+        <x-warning class="mt-4">
+            The clear event needs the clear option to be enabled.
+        </x-warning>
     </x-section>
-    <x-section title="Smart" description="An option to automatically submit the form when all pin boxes are filled.">
+    <x-section
+        title="Smart"
+        description="An option to automatically submit the form when all pin boxes are filled."
+    >
         <div class="space-y-4">
-            <p>
-                The <x-block>smart</x-block> attribute automatically submits the parent form when all pin boxes are
-                filled.
-            </p>
             <x-preview language="blade" :contents="$smart">
                 <livewire:documentation.form.pin :mode="2" />
             </x-preview>
             <x-warning>
-                The form will only be submitted once. After submission, the user must clear and re-fill the pin to
-                submit again.
+                The form will only be submitted once. After submission, the user
+                must clear and re-fill the pin to submit again.
             </x-warning>
         </div>
     </x-section>

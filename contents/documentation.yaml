@@ -75,7 +75,6 @@ form:
     - Lazy
     - Strict Mode
     - Remote Source
-    - Lazy with Remote Source
     - Disabled
     - Placeholders
     - Slot After
@@ -123,12 +122,9 @@ form:
     - Different Currencies
     - Intl Options
     - Symbols
-    - Sync Modes
-    - Default Mode
     - Mutate Mode
     - Decimal Mode
-    - Global Defaults
-    - Caveats
+    - Sync Modes
   number:
     - Basic Usage
     - Step
@@ -315,6 +311,7 @@ ui:
     - Basic Usage
     - Multiple Open
     - Flat Variation
+    - Shadowless
     - Chevron Position
     - Default Open
     - Custom Icon
@@ -353,7 +350,6 @@ ui:
     - Presence Color
     - Presence Positions
   back-to-top:
-    - Concept
     - Basic Usage
     - Positions
     - Icon
@@ -530,7 +526,6 @@ ui:
     - Actionable
     - Lifecycle Events
     - AlpineJS Helper
-    - Background Blur
     - Mobile Centered
     - Overlay
   dial:
@@ -639,7 +634,6 @@ ui:
     - Background Blur
     - Size Variations
     - Centered
-    - Z Index
     - Persistent
     - Wireable
     - Wireable Customized
@@ -793,7 +787,6 @@ ui:
     - Footer Slot
     - Background Blur
     - Size Variations
-    - Z Index
     - Persistent
     - Wireable
     - Wireable Customized

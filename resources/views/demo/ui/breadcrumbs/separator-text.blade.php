@@ -1,8 +1,8 @@
 @php
     $items = [
-        ['label' => 'Home', 'link' => '#'],
-        ['label' => 'Users', 'link' => '#'],
-        ['label' => 'John Doe'],
+        ["label" => "Home", "link" => "#"],
+        ["label" => "Users", "link" => "#"],
+        ["label" => "John Doe"],
     ];
 @endphp
 

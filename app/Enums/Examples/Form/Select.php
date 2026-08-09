@@ -97,7 +97,7 @@ class Select
                 ['label' => 'Los Angeles', 'value' => 8],
             ]
         ],
-    ]" select="label:label|value:value" />
+    ]" />
     HTML;
 
     public const string STYLED_LIMIT = <<<'HTML'
@@ -276,7 +276,7 @@ class Select
             ['label' => 'São Paulo', 'value' => 4],
         ]],
         ['label' => 'Uncategorized', 'value' => 99],
-    ]" select="label:label|value:value" />
+    ]" />
     HTML;
 
     public const string CUSTOMIZATION_NATIVE = <<<'HTML'

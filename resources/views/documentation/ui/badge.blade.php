@@ -5,11 +5,11 @@
 @endphp
 
 <x-layout :$content ai="badge">
-    <x-slot:title>Badge</x-slot:title>
-    <x-slot:description>Badge component.</x-slot:description>
+    <x-slot:title>Badge</x-slot>
+    <x-slot:description>Badge component.</x-slot>
     <x-slot:customization>
         <livewire:customization :$customization component="Badge" />
-    </x-slot:customization>
+    </x-slot>
     <x-section title="Basic Usage">
         <x-preview language="blade" :contents="$basic">
             <x-badge text="TallStackUI" />
@@ -24,7 +24,7 @@
     </x-section>
     <x-section
         title="Round Variation"
-        description="Boolean enables rounded-full. The prop also accepts the size keys xs, sm, md, lg, xl to apply the matching rounded-{size} utility. Without the prop, the badge falls back to rounded-md. The square attribute still wins over round, removing the radius entirely."
+        description="An option to fine control of the round effect."
     >
         <x-preview language="blade" :contents="$round">
             <div class="flex items-center gap-2">
@@ -44,13 +44,13 @@
                 <x-badge lg>
                     <x-slot:left>
                         <p class="mr-2 text-xs text-yellow-300">+99</p>
-                    </x-slot:left>
+                    </x-slot>
                     TallStackUI
                 </x-badge>
                 <x-badge lg>
                     <x-slot:right>
                         <p class="ml-2 text-xs text-yellow-300">+99</p>
-                    </x-slot:right>
+                    </x-slot>
                     TallStackUI
                 </x-badge>
             </div>

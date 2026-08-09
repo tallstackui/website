@@ -1,15 +1,20 @@
-@props(['content' => [], 'mobile' => false])
+@props(["content" => [], "mobile" => false])
 
 @php
-    $slug = fn ($item) => str($item)->lower()->slug()->value();
+    $slug = fn ($item) => str($item)
+        ->lower()
+        ->slug()
+        ->value();
 @endphp
 
 @if (! empty($content))
-    <div @class([
-        'xl:top-14 xl:-mr-6 xl:block xl:h-[calc(100vh-3.5rem)] xl:flex-none custom-scrollbar overflow-y-auto xl:py-16 xl:pr-6',
-        'hidden xl:sticky' => ! $mobile,
-        'pb-8'             => $mobile,
-    ])>
+    <div
+        @class([
+            "custom-scrollbar overflow-y-auto xl:top-14 xl:-mr-6 xl:block xl:h-[calc(100vh-3.5rem)] xl:flex-none xl:py-16 xl:pr-6",
+            "hidden xl:sticky" => ! $mobile,
+            "pb-8" => $mobile,
+        ])
+    >
         <nav aria-labelledby="on-this-page-title" class="w-56">
             <h2
                 id="on-this-page-title"
@@ -17,29 +22,41 @@
             >
                 On this page
             </h2>
-            <ol role="list" class="dark:border-dark-700 mt-4 space-y-2.5 border-l border-gray-200 pl-4 text-sm">
+            <ol
+                role="list"
+                class="dark:border-dark-700 mt-4 space-y-2.5 border-l border-gray-200 pl-4 text-sm"
+            >
                 {{-- If the index is numeric, we assume it's a flat array. --}}
                 @if (! is_numeric(array_keys($content)[0]))
                     @foreach ($content as $parent => $children)
                         <li>
-                            <h3 class="dark:text-dark-100 text-[0.82rem] font-medium text-gray-900">{{ $parent }}</h3>
+                            <h3
+                                class="dark:text-dark-100 text-[0.82rem] font-medium text-gray-900"
+                            >
+                                {{ $parent }}
+                            </h3>
                             <ol role="list" class="mt-2 space-y-2.5 pl-3">
-                                @foreach ($children['contents'] as $child)
+                                @foreach ($children["contents"] as $child)
                                     <li>
                                         <a
                                             class="dark:text-dark-400 text-[0.82rem] text-gray-500 transition hover:text-pink-600 dark:hover:text-pink-400"
-                                            href="#{{ $slug($parent).'-'.$slug($child) }}"
-                                        >{{ $child }}</a>
+                                            href="#{{ $slug($parent) . "-" . $slug($child) }}"
+                                        >
+                                            {{ $child }}
+                                        </a>
                                     </li>
                                 @endforeach
                             </ol>
                         </li>
                     @endforeach
+
                     {{-- Otherwise, we assume it's a nested array (parent => child). --}}
                 @else
                     @foreach ($content as $text)
                         <li>
-                            <h3 class="dark:text-dark-400 text-[0.82rem] text-gray-500 transition hover:text-pink-600 dark:hover:text-pink-400">
+                            <h3
+                                class="dark:text-dark-400 text-[0.82rem] text-gray-500 transition hover:text-pink-600 dark:hover:text-pink-400"
+                            >
                                 <a href="#{{ $slug($text) }}">{{ $text }}</a>
                             </h3>
                         </li>
@@ -85,9 +102,16 @@
                         class="h-10 w-10 flex-none rounded-full object-cover ring-2 ring-pink-500/20"
                     />
                     <div class="min-w-0 pr-5">
-                        <p class="dark:text-dark-100 text-sm font-semibold text-gray-900">Hire AJ!</p>
-                        <p class="dark:text-dark-400 mt-0.5 text-xs leading-snug text-gray-500">
-                            TallStackUI's creator, bring deep TALL Stack expertise straight to your team.
+                        <p
+                            class="dark:text-dark-100 text-sm font-semibold text-gray-900"
+                        >
+                            Hire AJ!
+                        </p>
+                        <p
+                            class="dark:text-dark-400 mt-0.5 text-xs leading-snug text-gray-500"
+                        >
+                            TallStackUI's creator, bring deep TALL Stack
+                            expertise straight to your team.
                         </p>
                     </div>
                 </div>

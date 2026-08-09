@@ -5,15 +5,15 @@
 @endphp
 
 <x-layout :$content ai="boolean">
-    <x-slot:title>Boolean</x-slot:title>
-    <x-slot:description>Boolean component.</x-slot:description>
+    <x-slot:title>Boolean</x-slot>
+    <x-slot:description>Boolean component.</x-slot>
     <x-slot:customization>
         <livewire:customization :$customization component="Boolean" />
-    </x-slot:customization>
+    </x-slot>
     <x-section title="Concept" disable-copy>
         <p>
-            In many cases when we are building the UI of an application, we need to display icons according to the
-            boolean status of something.
+            In many cases when we are building the UI of an application, we need
+            to display icons according to the boolean status of something.
         </p>
     </x-section>
     <x-section title="Basic Usage">
@@ -28,7 +28,10 @@
         <x-preview language="blade" :contents="$icons">
             <div class="inline-flex gap-0.5">
                 <x-boolean :boolean="true" icon-when-true="hand-thumb-up" />
-                <x-boolean :boolean="false" icon-when-false="hand-thumb-down" />
+                <x-boolean
+                    :boolean="false"
+                    icon-when-false="hand-thumb-down"
+                />
             </div>
         </x-preview>
     </x-section>
@@ -67,7 +70,10 @@
             </div>
         </x-preview>
     </x-section>
-    <x-section title="Livewire Click Actions" description="An option to use a Livewire click action in the icons.">
+    <x-section
+        title="Livewire Click Actions"
+        description="An option to use a Livewire click action in the icons."
+    >
         <x-preview language="blade" :contents="$click">
             <livewire:documentation.ui.boolean />
         </x-preview>

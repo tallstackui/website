@@ -5,15 +5,14 @@ declare(strict_types=1);
 use Livewire\Component;
 use TallStackUi\Traits\Interactions;
 
-new class extends Component
-{
+new class extends Component {
     use Interactions;
 
     public function success(): void
     {
         $this->toast()
             ->persistent()
-            ->success('Success', 'This is a persistent toast.')
+            ->success("Success", "This is a persistent toast.")
             ->send();
     }
 };

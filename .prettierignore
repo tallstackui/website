@@ -1,0 +1,6 @@
+# Markdown-mail views are whitespace-sensitive: Markdown::parse treats indented
+# content as a code block and escapes multi-line inline tags. Prettier's blade
+# formatter re-indents/re-wraps them and breaks rendering (buttons, tables).
+# These are hand-formatted at column 0 and must stay out of Prettier.
+resources/views/vendor/mail/
+resources/views/mail/

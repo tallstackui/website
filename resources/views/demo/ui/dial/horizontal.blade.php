@@ -1,5 +1,7 @@
 <x-demo-layout title="Dial Horizontal">
-    <div class="dark:text-dark-400 flex min-h-[300px] flex-col items-center justify-center px-6 py-10 text-sm text-slate-500">
+    <div
+        class="dark:text-dark-400 flex min-h-[300px] flex-col items-center justify-center px-6 py-10 text-sm text-slate-500"
+    >
         <p>Items fan out horizontally instead of stacking vertically.</p>
     </div>
 

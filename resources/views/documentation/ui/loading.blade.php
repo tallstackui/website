@@ -5,34 +5,46 @@
 @endphp
 
 <x-layout :$content ai="loading">
-    <x-slot:title>Loading</x-slot:title>
-    <x-slot:description>Loading component.</x-slot:description>
+    <x-slot:title>Loading</x-slot>
+    <x-slot:description>Loading component.</x-slot>
     <x-slot:customization>
         <livewire:customization :$customization component="Loading" />
-    </x-slot:customization>
+    </x-slot>
     <x-section title="Concept" disable-copy>
         <p>
-            The loading component aims to be used to display a full-page loading overlay for situations where you are
-            waiting for a Livewire component to finish an operation.
+            The loading component aims to be used to display a full-page loading
+            overlay for situations where you are waiting for a Livewire
+            component to finish an operation.
         </p>
     </x-section>
     <x-warning class="mb-6">
-        Since the <b>wire:loading</b> is not applied to the initial render state of a Livewire component, then the
-        loading component does not apply to initial rendering, but rather to Livewire updates.
+        Since the
+        <b>wire:loading</b>
+        is not applied to the initial render state of a Livewire component, then
+        the loading component does not apply to initial rendering, but rather to
+        Livewire updates.
     </x-warning>
     <x-section title="Attributes" disable-copy>
         <p>
-            When using the Loading component you shouldn't specify the <x-block>wire:loading</x-block> and
-            <x-block>wire:target</x-block> attributes. Instead of it, you need to specify the
-            <x-block>loading</x-block> and <x-block>delay</x-block> attributes. Behind the scenes, these attributes
-            contain the same effects as Livewire attributes, but with a short way of declaring them.
+            When using the Loading component you shouldn't specify the
+            <x-block>wire:loading</x-block>
+            and
+            <x-block>wire:target</x-block>
+            attributes. Instead of it, you need to specify the
+            <x-block>loading</x-block>
+            and
+            <x-block>delay</x-block>
+            attributes. Behind the scenes, these attributes contain the same
+            effects as Livewire attributes, but with a short way of declaring
+            them.
         </p>
         <x-code language="blade" :contents="$interaction" disable-copy />
     </x-section>
     <x-section title="Usage" disable-copy>
         <p>
-            The correct way to use the Loading component is to call it in the Blade file of the Livewire component you
-            want to display the loading overlay. Let's take a look at an example:
+            The correct way to use the Loading component is to call it in the
+            Blade file of the Livewire component you want to display the loading
+            overlay. Let's take a look at an example:
         </p>
         <x-code language="blade" :contents="$usage" disable-copy />
     </x-section>
@@ -51,5 +63,4 @@
             <livewire:documentation.ui.loading :model="2" />
         </x-preview>
     </x-section>
-    <x-available-configuration />
 </x-layout>

@@ -8,13 +8,23 @@
     :$content
     :ai="['Dropdown' => 'dropdown/main', 'Dropdown Items' => 'dropdown/items', 'Dropdown Submenu' => 'dropdown/submenu']"
 >
-    <x-slot:title>Dropdown</x-slot:title>
-    <x-slot:description>Dropdown component.</x-slot:description>
+    <x-slot:title>Dropdown</x-slot>
+    <x-slot:description>Dropdown component.</x-slot>
     <x-slot:customization>
-        <livewire:customization :$customization component="Dropdown\Main" title="Dropdown" />
-        <livewire:customization :customization="$customizationItems" component="Dropdown\Items" />
-        <livewire:customization :customization="$customizationSubmenu" component="Dropdown\Submenu" />
-    </x-slot:customization>
+        <livewire:customization
+            :$customization
+            component="Dropdown\Main"
+            title="Dropdown"
+        />
+        <livewire:customization
+            :customization="$customizationItems"
+            component="Dropdown\Items"
+        />
+        <livewire:customization
+            :customization="$customizationSubmenu"
+            component="Dropdown\Submenu"
+        />
+    </x-slot>
     <x-section title="Basic Usage">
         <x-preview language="blade" :contents="$left">
             <div class="flex justify-end md:justify-center">
@@ -38,8 +48,14 @@
     <x-section title="Available Positions">
         <x-slot:description>
             All available positions based on the
-            <a href="https://alpinejs.dev/plugins/anchor" target="_blank" class="underline">AlpineJS anchor plugin.</a>
-        </x-slot:description>
+            <a
+                href="https://alpinejs.dev/plugins/anchor"
+                target="_blank"
+                class="underline"
+            >
+                AlpineJS anchor plugin.
+            </a>
+        </x-slot>
         <x-preview language="blade" :contents="$positions">
             <div class="flex justify-start md:justify-center">
                 <x-dropdown text="Menu" position="bottom-start">
@@ -64,10 +80,18 @@
                 </div>
             </x-preview>
             <p>
-                You can also use the attributes <x-block>navigate</x-block> or <x-block>navigateHover</x-block> when
-                using
-                <a href="https://livewire.laravel.com/docs/navigate" target="_blank" class="underline"
-                    >Livewire Navigate mode.</a>
+                You can also use the attributes
+                <x-block>navigate</x-block>
+                or
+                <x-block>navigateHover</x-block>
+                when using
+                <a
+                    href="https://livewire.laravel.com/docs/navigate"
+                    target="_blank"
+                    class="underline"
+                >
+                    Livewire Navigate mode.
+                </a>
             </p>
         </div>
     </x-section>
@@ -81,10 +105,17 @@
             </div>
         </x-preview>
     </x-section>
-    <x-section title="Static Icon" description="An option to use icons without rotate animation">
+    <x-section
+        title="Static Icon"
+        description="An option to use icons without rotate animation"
+    >
         <x-preview language="blade" :contents="$iconsStatic">
             <div class="flex justify-end md:justify-center">
-                <x-dropdown icon="ellipsis-vertical" static position="bottom-end">
+                <x-dropdown
+                    icon="ellipsis-vertical"
+                    static
+                    position="bottom-end"
+                >
                     <x-dropdown.items text="Settings" />
                     <x-dropdown.items text="Logout" separator />
                 </x-dropdown>
@@ -146,14 +177,21 @@
                 <x-dropdown text="Menu" position="bottom-end">
                     <x-slot:header>
                         <x-theme-switch block />
-                    </x-slot:header>
+                    </x-slot>
                     <x-dropdown.items icon="cog" text="Settings" />
-                    <x-dropdown.items icon="arrow-left-on-rectangle" text="Logout" separator />
+                    <x-dropdown.items
+                        icon="arrow-left-on-rectangle"
+                        text="Logout"
+                        separator
+                    />
                 </x-dropdown>
             </div>
         </x-preview>
     </x-section>
-    <x-section title="Dropdown Submenu" description="An option to allow the usage of multiples dropdowns nested.">
+    <x-section
+        title="Dropdown Submenu"
+        description="An option to allow the usage of multiples dropdowns nested."
+    >
         <div class="space-y-4">
             <x-preview language="blade" :contents="$sub">
                 <div class="flex justify-end md:justify-center">
@@ -171,7 +209,10 @@
                     </x-dropdown>
                 </div>
             </x-preview>
-            <p>You can also set the left chevron icon to the left side if your submenu is left-side oriented:</p>
+            <p>
+                You can also set the left chevron icon to the left side if your
+                submenu is left-side oriented:
+            </p>
             <x-code language="blade" :contents="$subLeft" />
         </div>
     </x-section>
@@ -181,9 +222,13 @@
                 <x-dropdown position="bottom-end">
                     <x-slot:action>
                         <x-button x-on:click="show = ! show" sm>Open</x-button>
-                    </x-slot:action>
+                    </x-slot>
                     <x-dropdown.items icon="cog" text="Settings" />
-                    <x-dropdown.items icon="arrow-left-on-rectangle" text="Logout" separator />
+                    <x-dropdown.items
+                        icon="arrow-left-on-rectangle"
+                        text="Logout"
+                        separator
+                    />
                 </x-dropdown>
             </div>
         </x-preview>

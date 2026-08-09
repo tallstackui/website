@@ -5,11 +5,11 @@
 @endphp
 
 <x-layout :$content ai="stats">
-    <x-slot:title>Stats</x-slot:title>
-    <x-slot:description>Stats components.</x-slot:description>
+    <x-slot:title>Stats</x-slot>
+    <x-slot:description>Stats components.</x-slot>
     <x-slot:customization>
         <livewire:customization :$customization component="Stats" />
-    </x-slot:customization>
+    </x-slot>
     <x-section title="Basic Usage">
         <x-preview language="blade" :contents="$basic" :background="false">
             <div class="grid grid-cols-3 gap-2">
@@ -24,64 +24,271 @@
             <x-stats title="Components" :number="100" />
         </x-preview>
     </x-section>
-    <x-section title="Link" description="An option to allow the navigation when clicking on the card.">
+    <x-section
+        title="Link"
+        description="An option to allow the navigation when clicking on the card."
+    >
         <x-preview language="blade" :contents="$link" :background="false">
             <div class="grid grid-cols-3 gap-2">
-                <x-stats href="https://tallstackui.com" target="_blank" title="Components" :number="50" />
-                <x-stats href="https://tallstackui.com" target="_blank" title="Users" :number="500" />
-                <x-stats href="https://tallstackui.com" target="_blank" title="Downloads" :number="10.000" />
+                <x-stats
+                    href="https://tallstackui.com"
+                    target="_blank"
+                    title="Components"
+                    :number="50"
+                />
+                <x-stats
+                    href="https://tallstackui.com"
+                    target="_blank"
+                    title="Users"
+                    :number="500"
+                />
+                <x-stats
+                    href="https://tallstackui.com"
+                    target="_blank"
+                    title="Downloads"
+                    :number="10.000"
+                />
             </div>
         </x-preview>
-        <p>You can also set <x-block>wire:navigate</x-block> or <x-block>wire:navigate.hover</x-block>:</p>
+        <p>
+            You can also set
+            <x-block>wire:navigate</x-block>
+            or
+            <x-block>wire:navigate.hover</x-block>
+            :
+        </p>
         <x-code language="blade" :contents="$navigate" disable-copy />
     </x-section>
     <x-section title="Icons">
         <div class="space-y-4">
-            <x-preview language="blade" :contents="$icons" :background="false">
+            <x-preview
+                language="blade"
+                :contents="$icons"
+                :background="false"
+            >
                 <div class="grid grid-cols-3 gap-2">
                     <x-stats icon="swatch" :number="100" />
                     <x-stats icon="swatch" :number="100" light />
                     <x-stats icon="swatch" :number="100" outline />
                 </div>
             </x-preview>
-            <p>Starting from v2.4.0 you can pass a raw HTML in the <x-block>icon</x-block> slot:</p>
+            <p>
+                Starting from v2.4.0 you can pass a raw HTML in the
+                <x-block>icon</x-block>
+                slot:
+            </p>
             <x-code language="blade" :contents="$iconSlot" />
         </div>
     </x-section>
     <x-section title="Color Variations">
         <x-preview language="blade" :contents="$colors" :background="false">
             <div class="space-y-2">
-                <x-stats title="Components" icon="swatch" :number="100" outline />
-                <x-stats title="Components" icon="swatch" :number="100" color="secondary" outline />
-                <x-stats title="Components" icon="swatch" :number="100" color="slate" outline />
-                <x-stats title="Components" icon="swatch" :number="100" color="gray" outline />
-                <x-stats title="Components" icon="swatch" :number="100" color="zinc" outline />
-                <x-stats title="Components" icon="swatch" :number="100" color="neutral" outline />
-                <x-stats title="Components" icon="swatch" :number="100" color="stone" outline />
-                <x-stats title="Components" icon="swatch" :number="100" color="red" outline />
-                <x-stats title="Components" icon="swatch" :number="100" color="orange" outline />
-                <x-stats title="Components" icon="swatch" :number="100" color="amber" outline />
-                <x-stats title="Components" icon="swatch" :number="100" color="yellow" outline />
-                <x-stats title="Components" icon="swatch" :number="100" color="lime" outline />
-                <x-stats title="Components" icon="swatch" :number="100" color="green" outline />
-                <x-stats title="Components" icon="swatch" :number="100" color="emerald" outline />
-                <x-stats title="Components" icon="swatch" :number="100" color="teal" outline />
-                <x-stats title="Components" icon="swatch" :number="100" color="cyan" outline />
-                <x-stats title="Components" icon="swatch" :number="100" color="sky" outline />
-                <x-stats title="Components" icon="swatch" :number="100" color="blue" outline />
-                <x-stats title="Components" icon="swatch" :number="100" color="indigo" outline />
-                <x-stats title="Components" icon="swatch" :number="100" color="violet" outline />
-                <x-stats title="Components" icon="swatch" :number="100" color="purple" outline />
-                <x-stats title="Components" icon="swatch" :number="100" color="fuchsia" outline />
-                <x-stats title="Components" icon="swatch" :number="100" color="pink" outline />
-                <x-stats title="Components" icon="swatch" :number="100" color="rose" outline />
-                <x-stats title="Components" icon="swatch" :number="100" color="mauve" outline />
-                <x-stats title="Components" icon="swatch" :number="100" color="olive" outline />
-                <x-stats title="Components" icon="swatch" :number="100" color="mist" outline />
-                <x-stats title="Components" icon="swatch" :number="100" color="taupe" outline />
-                <x-stats title="Components" icon="swatch" :number="100" color="black" outline />
+                <x-stats
+                    title="Components"
+                    icon="swatch"
+                    :number="100"
+                    outline
+                />
+                <x-stats
+                    title="Components"
+                    icon="swatch"
+                    :number="100"
+                    color="secondary"
+                    outline
+                />
+                <x-stats
+                    title="Components"
+                    icon="swatch"
+                    :number="100"
+                    color="slate"
+                    outline
+                />
+                <x-stats
+                    title="Components"
+                    icon="swatch"
+                    :number="100"
+                    color="gray"
+                    outline
+                />
+                <x-stats
+                    title="Components"
+                    icon="swatch"
+                    :number="100"
+                    color="zinc"
+                    outline
+                />
+                <x-stats
+                    title="Components"
+                    icon="swatch"
+                    :number="100"
+                    color="neutral"
+                    outline
+                />
+                <x-stats
+                    title="Components"
+                    icon="swatch"
+                    :number="100"
+                    color="stone"
+                    outline
+                />
+                <x-stats
+                    title="Components"
+                    icon="swatch"
+                    :number="100"
+                    color="red"
+                    outline
+                />
+                <x-stats
+                    title="Components"
+                    icon="swatch"
+                    :number="100"
+                    color="orange"
+                    outline
+                />
+                <x-stats
+                    title="Components"
+                    icon="swatch"
+                    :number="100"
+                    color="amber"
+                    outline
+                />
+                <x-stats
+                    title="Components"
+                    icon="swatch"
+                    :number="100"
+                    color="yellow"
+                    outline
+                />
+                <x-stats
+                    title="Components"
+                    icon="swatch"
+                    :number="100"
+                    color="lime"
+                    outline
+                />
+                <x-stats
+                    title="Components"
+                    icon="swatch"
+                    :number="100"
+                    color="green"
+                    outline
+                />
+                <x-stats
+                    title="Components"
+                    icon="swatch"
+                    :number="100"
+                    color="emerald"
+                    outline
+                />
+                <x-stats
+                    title="Components"
+                    icon="swatch"
+                    :number="100"
+                    color="teal"
+                    outline
+                />
+                <x-stats
+                    title="Components"
+                    icon="swatch"
+                    :number="100"
+                    color="cyan"
+                    outline
+                />
+                <x-stats
+                    title="Components"
+                    icon="swatch"
+                    :number="100"
+                    color="sky"
+                    outline
+                />
+                <x-stats
+                    title="Components"
+                    icon="swatch"
+                    :number="100"
+                    color="blue"
+                    outline
+                />
+                <x-stats
+                    title="Components"
+                    icon="swatch"
+                    :number="100"
+                    color="indigo"
+                    outline
+                />
+                <x-stats
+                    title="Components"
+                    icon="swatch"
+                    :number="100"
+                    color="violet"
+                    outline
+                />
+                <x-stats
+                    title="Components"
+                    icon="swatch"
+                    :number="100"
+                    color="purple"
+                    outline
+                />
+                <x-stats
+                    title="Components"
+                    icon="swatch"
+                    :number="100"
+                    color="fuchsia"
+                    outline
+                />
+                <x-stats
+                    title="Components"
+                    icon="swatch"
+                    :number="100"
+                    color="pink"
+                    outline
+                />
+                <x-stats
+                    title="Components"
+                    icon="swatch"
+                    :number="100"
+                    color="rose"
+                    outline
+                />
+                <x-stats
+                    title="Components"
+                    icon="swatch"
+                    :number="100"
+                    color="mauve"
+                    outline
+                />
+                <x-stats
+                    title="Components"
+                    icon="swatch"
+                    :number="100"
+                    color="olive"
+                    outline
+                />
+                <x-stats
+                    title="Components"
+                    icon="swatch"
+                    :number="100"
+                    color="mist"
+                    outline
+                />
+                <x-stats
+                    title="Components"
+                    icon="swatch"
+                    :number="100"
+                    color="taupe"
+                    outline
+                />
+                <x-stats
+                    title="Components"
+                    icon="swatch"
+                    :number="100"
+                    color="black"
+                    outline
+                />
             </div>
-            <x-warning class="mt-4"> The color is only applied to the icon and its style. </x-warning>
+            <x-warning class="mt-4">
+                The color is only applied to the icon and its style.
+            </x-warning>
         </x-preview>
     </x-section>
     <x-section title="Indicators">
@@ -99,17 +306,28 @@
     >
         <x-preview language="blade" :contents="$chart" :background="false">
             <div class="grid grid-cols-2 gap-2">
-                <x-stats :number="45231" title="Revenue" increase :chart="[10, 40, 25, 60, 30, 80]" />
+                <x-stats
+                    :number="45231"
+                    title="Revenue"
+                    increase
+                    :chart="[10, 40, 25, 60, 30, 80]"
+                />
                 <x-stats :number="45231" title="Revenue">
                     <x-slot:chart>
-                        <x-chart :series="[10, 40, 25, 60, 30, 80]" color="emerald" class="h-full w-full" />
-                    </x-slot:chart>
+                        <x-chart
+                            :series="[10, 40, 25, 60, 30, 80]"
+                            color="emerald"
+                            class="h-full w-full"
+                        />
+                    </x-slot>
                 </x-stats>
             </div>
         </x-preview>
         <x-warning class="mt-4">
-            An absent chart, an empty array and an empty slot are all treated as no chart. In
-            <x-block>solid</x-block> style the icon tile is opaque and covers the watermark behind it.
+            An absent chart, an empty array and an empty slot are all treated as
+            no chart. In
+            <x-block>solid</x-block>
+            style the icon tile is opaque and covers the watermark behind it.
         </x-warning>
     </x-section>
     <x-section
@@ -134,7 +352,8 @@
                 <x-stats :number="100" animated />
             </div>
             <x-warning class="mt-4">
-                The animation will happen every time the component enters the viewport.
+                The animation will happen every time the component enters the
+                viewport.
             </x-warning>
         </x-preview>
     </x-section>
@@ -148,7 +367,11 @@
         </x-preview>
     </x-section>
     <x-section title="Number Format">
-        <x-preview language="blade" :contents="$numberFormat" :background="false">
+        <x-preview
+            language="blade"
+            :contents="$numberFormat"
+            :background="false"
+        >
             <div class="grid grid-cols-4 gap-2">
                 <x-stats number="U$ 25,00" />
                 <x-stats number="U$ 50,00" />
@@ -156,16 +379,25 @@
                 <x-stats number="U$ 100,00" />
             </div>
             <x-warning class="mt-4">
-                The <b>animated</b> effect doesn't work when using a custom number format.
+                The
+                <b>animated</b>
+                effect doesn't work when using a custom number format.
             </x-warning>
         </x-preview>
     </x-section>
     <x-section title="Slots">
         <x-preview language="blade" :contents="$slots" :background="false">
-            <x-stats :number="50" header="TallStackUI" footer="The best TALL Stack component library">
+            <x-stats
+                :number="50"
+                header="TallStackUI"
+                footer="The best TALL Stack component library"
+            >
                 <x-slot:right>
-                    <x-icon name="wrench-screwdriver" class="h-6 w-6 text-pink-500" />
-                </x-slot:right>
+                    <x-icon
+                        name="wrench-screwdriver"
+                        class="h-6 w-6 text-pink-500"
+                    />
+                </x-slot>
             </x-stats>
         </x-preview>
     </x-section>

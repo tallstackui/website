@@ -1,6 +1,6 @@
 @php
-    $now     = now();
-    $current = $now->format('Y-m-d');
+    $now = now();
+    $current = $now->format("Y-m-d");
 
     foreach (apply_prefix($__data) as $key => $value) {
         $$key = $value;
@@ -8,11 +8,11 @@
 @endphp
 
 <x-layout :$content ai="form/date">
-    <x-slot:title>Form Date</x-slot:title>
-    <x-slot:description>Form date component.</x-slot:description>
+    <x-slot:title>Form Date</x-slot>
+    <x-slot:description>Form date component.</x-slot>
     <x-slot:customization>
         <livewire:customization :$customization component="Form\Date" />
-    </x-slot:customization>
+    </x-slot>
     <x-section title="Basic Usage">
         <x-preview language="blade" :contents="$basic">
             <x-date />
@@ -23,7 +23,10 @@
             <x-date label="Date" hint="Select your DoB" />
         </x-preview>
     </x-section>
-    <x-section title="Available Formats" description="Support for all Day.js formats">
+    <x-section
+        title="Available Formats"
+        description="Support for all Day.js formats"
+    >
         <div class="space-y-4">
             <x-preview language="blade" :contents="$formats">
                 <div class="space-y-2">
@@ -36,28 +39,44 @@
                 <ul class="ml-2 list-inside list-decimal text-sm">
                     <li>
                         You can use
-                        <a href="https://day.js.org/docs/en/display/format" target="_blank" class="underline"
-                            >all Day.js formats.</a>
+                        <a
+                            href="https://day.js.org/docs/en/display/format"
+                            target="_blank"
+                            class="underline"
+                        >
+                            all Day.js formats.
+                        </a>
                     </li>
                     <li>
-                        <b>The formats are applicable only visually.</b> The default backend format will always be
+                        <b>The formats are applicable only visually.</b>
+                        The default backend format will always be
                         <b>YYYY-MM-DD</b>
                     </li>
-                    <li>The default date format sent to the component should be <b>YYYY-MM-DD</b></li>
+                    <li>
+                        The default date format sent to the component should be
+                        <b>YYYY-MM-DD</b>
+                    </li>
                 </ul>
             </x-warning>
             <p class="mt-2">
-                Regardless of the format of the date, to send the date to the component you must follow the pattern
-                <x-block>YYYY-MM-DD</x-block>. If the date are using a format different than
-                <x-block>YYYY-MM-DD</x-block>, the correct thing to do is to use Carbon's
-                <x-block>createFromFormat</x-block>. Let's take a look at an example considering the Brazilian date
+                Regardless of the format of the date, to send the date to the
+                component you must follow the pattern
+                <x-block>YYYY-MM-DD</x-block>
+                . If the date are using a format different than
+                <x-block>YYYY-MM-DD</x-block>
+                , the correct thing to do is to use Carbon's
+                <x-block>createFromFormat</x-block>
+                . Let's take a look at an example considering the Brazilian date
                 format:
             </p>
             <x-code :contents="$createFromFormat" />
             <p>
-                If you are using the component inside Livewire components, you can use the
-                <x-block>mount</x-block> method to convert the date. If you are using the component out of Livewire, you
-                can to the same logic in the controller methods before send the variable to the Blade file.
+                If you are using the component inside Livewire components, you
+                can use the
+                <x-block>mount</x-block>
+                method to convert the date. If you are using the component out
+                of Livewire, you can to the same logic in the controller methods
+                before send the variable to the Blade file.
             </p>
         </div>
     </x-section>
@@ -68,12 +87,18 @@
     </x-section>
     <x-section title="Min & Max Dates">
         <x-preview language="blade" :contents="$minMaxDates">
-            <x-date :min-date="now()->subWeek()" :max-date="now()->addWeek()" />
+            <x-date
+                :min-date="now()->subWeek()"
+                :max-date="now()->addWeek()"
+            />
         </x-preview>
     </x-section>
     <x-section title="Min & Max Years">
         <x-preview language="blade" :contents="$minMaxYears">
-            <x-date :min-year="now()->subYear()->year" :max-year="now()->year" />
+            <x-date
+                :min-year="now()->subYear()->year"
+                :max-year="now()->year"
+            />
         </x-preview>
     </x-section>
     <x-section title="Disable Dates">
@@ -88,20 +113,39 @@
         <div class="space-y-4">
             <x-preview language="blade" :contents="$disableSpecificDays">
                 <div class="space-y-2">
-                    <x-date label="Only Wednesday" hint="Disable all days other than Wednesday" only="3" />
-                    <x-date label="Only Weekdays" hint="Disable Weekends" weekdays />
-                    <x-date label="Only Weekends" hint="Disable Weekdays" weekends />
+                    <x-date
+                        label="Only Wednesday"
+                        hint="Disable all days other than Wednesday"
+                        only="3"
+                    />
+                    <x-date
+                        label="Only Weekdays"
+                        hint="Disable Weekends"
+                        weekdays
+                    />
+                    <x-date
+                        label="Only Weekends"
+                        hint="Disable Weekdays"
+                        weekends
+                    />
                 </div>
             </x-preview>
-            <x-warning> This feature does not validate the date you pass to the component. </x-warning>
+            <x-warning>
+                This feature does not validate the date you pass to the
+                component.
+            </x-warning>
         </div>
     </x-section>
     <x-section title="Range Mode">
         <x-preview language="blade" :contents="$range">
-            <x-date range :value="[now()->addDays(2)->format('Y-m-d'), now()->addWeek()->format('Y-m-d')]" />
+            <x-date
+                range
+                :value="[now()->addDays(2)->format('Y-m-d'), now()->addWeek()->format('Y-m-d')]"
+            />
         </x-preview>
         <x-warning class="mt-4">
-            Range mode allow the user to select only the start date. In this case the end date will be null.
+            Range mode allow the user to select only the start date. In this
+            case the end date will be null.
         </x-warning>
     </x-section>
     <x-section title="Multiple Mode">
@@ -109,29 +153,38 @@
             <x-date
                 multiple
                 :value="[
-                $now->format('Y-m-d'),
-                $now->addDays(1)->format('Y-m-d'),
-                $now->addDays(2)->format('Y-m-d'),
-                $now->addDays(3)->format('Y-m-d'),
-                $now->addDays(4)->format('Y-m-d'),
-                $now->addDays(5)->format('Y-m-d'),
-            ]"
+                    $now->format('Y-m-d'),
+                    $now->addDays(1)->format('Y-m-d'),
+                    $now->addDays(2)->format('Y-m-d'),
+                    $now->addDays(3)->format('Y-m-d'),
+                    $now->addDays(4)->format('Y-m-d'),
+                    $now->addDays(5)->format('Y-m-d'),
+                ]"
             />
         </x-preview>
     </x-section>
-    <x-section title="Start Day" description="An option to set the first day of week, starting from v2.5.0" new>
+    <x-section
+        title="Start Day"
+        description="An option to set the first day of week, starting from v2.5.0"
+    >
         <x-preview language="blade" :contents="$start">
             <x-date start="1" />
         </x-preview>
     </x-section>
-    <x-section title="Month Year Only" description="An option to select only month and year.">
+    <x-section
+        title="Month Year Only"
+        description="An option to select only month and year."
+    >
         <x-preview language="blade" :contents="$monthYearOnly">
             <x-date month-year-only />
         </x-preview>
     </x-section>
     <x-section title="Events">
         <x-preview language="blade" :contents="$events">
-            <x-date x-on:select="alert(`Selected Date: ${$event.detail.date}`)" x-on:clear="alert(`Cleaned!`)" />
+            <x-date
+                x-on:select="alert(`Selected Date: ${$event.detail.date}`)"
+                x-on:clear="alert(`Cleaned!`)"
+            />
         </x-preview>
     </x-section>
 </x-layout>

@@ -4,11 +4,10 @@ declare(strict_types=1);
 
 use Livewire\Component;
 
-new class extends Component
-{
+new class extends Component {
     public string $component;
 
-    public string $id = '';
+    public string $id = "";
 
     public ?string $title = null;
 
@@ -24,32 +23,35 @@ new class extends Component
     {
         $str = str($this->component);
 
-        $this->title ??= $str->replace('\\', ' ')
+        $this->title ??= $str
+            ->replace("\\", " ")
             ->title()
             ->value();
 
-        $this->id = $str->lower()
-            ->remove('\\')
+        $this->id = $str
+            ->lower()
+            ->remove("\\")
             ->squish()
             ->value();
 
-        $this->id .= '-'.uniqid();
+        $this->id .= "-" . uniqid();
     }
 
     public function open(): void
     {
         $this->original = null;
 
-        $this->blocks = app("TallStackUi\\Components\\$this->component\\Component")->customization();
+        $this->blocks = app(
+            "TallStackUi\\Components\\$this->component\\Component",
+        )->customization();
     }
 
     public function content(string $block, string $class): void
     {
-        $this->original['block'] = $block;
-        $this->original['class'] = $class;
+        $this->original["block"] = $block;
+        $this->original["class"] = $class;
     }
 };
-
 ?>
 
 <div>
@@ -60,7 +62,7 @@ new class extends Component
         @if ($customization)
             <div wire:ignore>
                 <p class="text-base font-medium">Example:</p>
-                <x-code :contents="$customization" customization />
+                <x-code :contents="$customization" customization/>
             </div>
         @endif
         @if ($blocks)
@@ -81,13 +83,13 @@ new class extends Component
                 <div class="mt-4 space-y-2">
                     @if ($original)
                         <div>
-                            <x-clipboard :id="uniqid()" label="Name" :text="$original['block']" />
+                            <x-clipboard :id="uniqid()" label="Name" :text="$original['block']"/>
                         </div>
                         <div wire:key="{{ uniqid() }}">
                             <p class="dark:text-dark-400 block text-sm font-semibold text-gray-600">
                                 Original Content:
                             </p>
-                            <x-code language="text" :contents="$original['class']" />
+                            <x-code language="text" :contents="$original['class']"/>
                         </div>
                     @endif
                 </div>

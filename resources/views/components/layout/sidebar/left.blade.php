@@ -1,12 +1,18 @@
 <livewire:documentation-settings />
 
-<div class="relative z-40 lg:hidden" role="dialog" aria-modal="true" x-show="mobile" x-cloak>
+<div
+    class="relative z-40 lg:hidden"
+    role="dialog"
+    aria-modal="true"
+    x-show="mobile"
+    x-cloak
+>
     <div
         x-show="mobile"
-        x-transition:enter="transition-opacity ease-linear duration-300"
+        x-transition:enter="transition-opacity duration-300 ease-linear"
         x-transition:enter-start="opacity-0"
         x-transition:enter-end="opacity-100"
-        x-transition:leave="transition-opacity ease-linear duration-300"
+        x-transition:leave="transition-opacity duration-300 ease-linear"
         x-transition:leave-start="opacity-100"
         x-transition:leave-end="opacity-0"
         class="bg-opacity-75 fixed inset-0 bg-gray-600 backdrop-blur-sm"
@@ -14,10 +20,10 @@
     <div x-show="mobile" class="fixed inset-0 z-40 flex">
         <div
             x-show="mobile"
-            x-transition:enter="transition ease-in-out duration-300 transform"
+            x-transition:enter="transform transition duration-300 ease-in-out"
             x-transition:enter-start="-translate-x-full"
             x-transition:enter-end="translate-x-0"
-            x-transition:leave="transition ease-in-out duration-300 transform"
+            x-transition:leave="transform transition duration-300 ease-in-out"
             x-transition:leave-start="translate-x-0"
             x-transition:leave-end="-translate-x-full"
             class="dark:bg-dark-800 relative flex w-full max-w-xs flex-1 flex-col bg-white pt-5 pb-4"
@@ -25,10 +31,10 @@
         >
             <div
                 x-show="mobile"
-                x-transition:enter="ease-in-out duration-300"
+                x-transition:enter="duration-300 ease-in-out"
                 x-transition:enter-start="opacity-0"
                 x-transition:enter-end="opacity-100"
-                x-transition:leave="ease-in-out duration-300"
+                x-transition:leave="duration-300 ease-in-out"
                 x-transition:leave-start="opacity-100"
                 x-transition:leave-end="opacity-0"
                 class="absolute top-0 right-0 -mr-12 pt-2"
@@ -40,8 +46,19 @@
                 >
                     <span class="absolute -inset-0.5"></span>
                     <span class="sr-only">Close sidebar</span>
-                    <svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                    <svg
+                        class="h-6 w-6 text-white"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke-width="1.5"
+                        stroke="currentColor"
+                        aria-hidden="true"
+                    >
+                        <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            d="M6 18L18 6M6 6l12 12"
+                        />
                     </svg>
                 </button>
             </div>
