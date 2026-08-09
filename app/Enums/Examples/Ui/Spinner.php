@@ -73,15 +73,6 @@ class Spinner
     </x-button>
     HTML;
 
-    public const string CONFIGURATION = <<<'PHP'
-    // config/tallstackui.php
-
-    'spinner' => [
-        'type' => 'ring',
-        'size' => 'md',
-    ],
-    PHP;
-
     public const string EXCEPTION = <<<'HTML'
     {{-- Two variants at once throws --}}
     <x-spinner wave bars />

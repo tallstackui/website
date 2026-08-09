@@ -63,7 +63,6 @@ ai:
   - Connecting to Gemini CLI
 form:
   autocomplete:
-    - Concept
     - Basic Usage
     - Label & Hint
     - Description
@@ -115,7 +114,6 @@ form:
     - Exclude Color
     - Events
   currency:
-    - Concept
     - Basic Usage
     - Label & Hint
     - Clearable
@@ -153,7 +151,6 @@ form:
         - Color Variations
     Group:
       contents:
-        - Concept
         - Basic Usage
         - Variations
         - Columns
@@ -163,7 +160,6 @@ form:
         - Option Keys
         - Select
         - Interact
-        - Without Livewire
   radio:
     Radio:
       contents:
@@ -176,7 +172,6 @@ form:
         - Color Variations
     Group:
       contents:
-        - Concept
         - Basic Usage
         - Variations
         - Columns
@@ -186,7 +181,6 @@ form:
         - Option Keys
         - Select
         - Interact
-        - Without Livewire
   tag:
     - Basic Usage
     - Label & Hint
@@ -209,7 +203,6 @@ form:
     - Size Variations
     - Color Variations
   pin:
-    - Concept
     - Basic Usage
     - Label & Hint
     - Prefix
@@ -513,7 +506,6 @@ ui:
     - Using Different Icons
     - Copying Programmatically
   command-palette:
-    - Concept
     - Basic Usage
     - Keyboard Shortcut
     - Request Configuration
@@ -529,7 +521,6 @@ ui:
     - Mobile Centered
     - Overlay
   dial:
-    - Concept
     - Basic Usage
     - Positions
     - Horizontal
@@ -537,7 +528,6 @@ ui:
     - Labels
     - Without Tooltip
     - Icon
-    - Prevent Rotation
     - Square Variation
     - Links
     - Size Variations
@@ -588,7 +578,6 @@ ui:
     - Color Variations
     - Events
   environment:
-    - Concept
     - Basic Usage
     - Beyond Basic, EnvBar
     - Round Variation
@@ -615,7 +604,6 @@ ui:
     - Performance
     - Validation
   icon:
-    - Concept
     - Basic Usage
     - Size Shorthands
     - Color Shorthands
@@ -674,7 +662,6 @@ ui:
     - Without Color
     - Livewire SPA Navigation
   list:
-    - Concept
     - Basic Usage
     - Label & Hint
     - Searchable
@@ -689,7 +676,6 @@ ui:
     - Compact
     - Lazy
     - Action Slot
-    - Caption Slot
     - Skeleton
     - Caveats
   loading:
@@ -750,7 +736,6 @@ ui:
     - Configuration
     - Scannability
   reaction:
-    - Concept
     - Persist Reaction
     - Basic Usage
     - Animated Style
@@ -761,7 +746,6 @@ ui:
     - Events
     - Panel
   rating:
-    - Concept
     - Persist Rating
     - Basic Usage
     - Rating Quantity
@@ -770,7 +754,6 @@ ui:
     - Color Variations
     - Events
   signature:
-    - Concept
     - Basic Usage
     - Label & Hint
     - Pen Color
@@ -797,7 +780,6 @@ ui:
     - Paddingless
     - Footer Alignment
   spinner:
-    - Concept
     - Basic Usage
     - Variations
     - Textual Variations
@@ -806,7 +788,6 @@ ui:
     - Label
     - Thinking
     - Inside a Button
-    - Configuration
     - Spinner, Loading & Skeleton
   stats:
     - Basic Usage
