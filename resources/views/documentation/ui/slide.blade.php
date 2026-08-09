@@ -251,83 +251,67 @@
             <x-code language="blade" :contents="$focusUsingDataAttribute" />
         </div>
     </x-section>
-    <x-section
-        title="Paddingless"
-        new
-        description="Strips the horizontal padding of the main slot. Vertical bleed lives on the outer panel, shared with the header and the footer, so it stays a soft customization of wrapper.fifth."
-    >
+    <x-section title="Paddingless" new>
         <x-preview language="blade" :contents="$paddingless">
             <x-slide id="paddingless-slide" title="TallStackUI" paddingless>
-                <x-table
-                    :headers="[
-                        ['index' => 'name', 'label' => 'Name'],
-                        ['index' => 'email', 'label' => 'E-mail'],
-                    ]"
-                    :rows="[
-                        ['name' => 'Taylor', 'email' => 'taylor@laravel.com'],
-                        ['name' => 'Caleb', 'email' => 'caleb@laravel.com'],
-                    ]"
-                />
+                TallStackUI slide with no padding in the body.
             </x-slide>
             <x-button x-on:click="$tsui.open.slide('paddingless-slide')">
                 Open Slide
             </x-button>
         </x-preview>
     </x-section>
-    <x-section
-        title="Footer Alignment"
-        new
-        description="Read from the slot itself. Combining alignments, or mixing one with unwrapped, throws."
-    >
-        <x-preview language="blade" :contents="$footerAlignment">
-            <div class="flex flex-wrap gap-2">
-                <x-slide id="slide-footer-start" title="TallStackUI">
-                    The footer below is aligned with
-                    <b>start</b>
-                    .
-                    <x-slot:footer start>
-                        <x-button color="red">Delete</x-button>
-                        <x-button>Save</x-button>
-                    </x-slot>
-                </x-slide>
-                <x-button x-on:click="$tsui.open.slide('slide-footer-start')">
-                    Start
-                </x-button>
+    <x-section title="Footer Alignment" new>
+        <div class="space-y-4">
+            <x-preview language="blade" :contents="$footerAlignment">
+                <div class="flex flex-wrap gap-2">
+                    <x-slide id="slide-footer-start" title="TallStackUI">
+                        The footer below is aligned with
+                        <b>start</b>
+                        .
+                        <x-slot:footer start>
+                            <x-button color="red">Delete</x-button>
+                            <x-button>Save</x-button>
+                        </x-slot>
+                    </x-slide>
+                    <x-button x-on:click="$tsui.open.slide('slide-footer-start')">
+                        Start
+                    </x-button>
 
-                <x-slide id="slide-footer-between" title="TallStackUI">
-                    The footer below is aligned with
-                    <b>between</b>
-                    .
-                    <x-slot:footer between>
-                        <x-button color="red">Delete</x-button>
-                        <x-button>Save</x-button>
-                    </x-slot>
-                </x-slide>
-                <x-button x-on:click="$tsui.open.slide('slide-footer-between')">
-                    Between
-                </x-button>
+                    <x-slide id="slide-footer-between" title="TallStackUI">
+                        The footer below is aligned with
+                        <b>between</b>
+                        .
+                        <x-slot:footer between>
+                            <x-button color="red">Delete</x-button>
+                            <x-button>Save</x-button>
+                        </x-slot>
+                    </x-slide>
+                    <x-button x-on:click="$tsui.open.slide('slide-footer-between')">
+                        Between
+                    </x-button>
 
-                <x-slide id="slide-footer-default" title="TallStackUI">
-                    The footer below carries no attribute, so it sits at the
-                    <b>end</b>
-                    .
-                    <x-slot:footer>
-                        <x-button color="red">Delete</x-button>
-                        <x-button>Save</x-button>
-                    </x-slot>
-                </x-slide>
-                <x-button x-on:click="$tsui.open.slide('slide-footer-default')">
-                    Default
-                </x-button>
-            </div>
-        </x-preview>
-        <x-table
-            class="mt-4"
-            :headers="[
+                    <x-slide id="slide-footer-default" title="TallStackUI">
+                        The footer below carries no attribute, so it sits at the
+                        <b>end</b>
+                        .
+                        <x-slot:footer>
+                            <x-button color="red">Delete</x-button>
+                            <x-button>Save</x-button>
+                        </x-slot>
+                    </x-slide>
+                    <x-button x-on:click="$tsui.open.slide('slide-footer-default')">
+                        Default
+                    </x-button>
+                </div>
+            </x-preview>
+            <x-table
+                class="mt-4"
+                :headers="[
                 ['index' => 'attribute', 'label' => 'Attribute'],
                 ['index' => 'result', 'label' => 'Result'],
             ]"
-            :rows="[
+                :rows="[
                 ['attribute' => '(none)', 'result' => 'justify-end'],
                 ['attribute' => 'start', 'result' => 'justify-start'],
                 ['attribute' => 'center', 'result' => 'justify-center'],
@@ -335,16 +319,10 @@
                 ['attribute' => 'between', 'result' => 'justify-between'],
                 ['attribute' => 'unwrapped', 'result' => 'no aligning wrapper at all'],
             ]"
-        />
-        <x-warning warning title="The default moved" class="mt-4">
-            A slide footer with no attribute used to sit at the start, since the
-            base block carried
-            <x-block>flex</x-block>
-            with no
-            <x-block>justify-*</x-block>
-            . It defaults to the end now, and
-            <x-block>start</x-block>
-            restores the old look.
-        </x-warning>
+            />
+            <x-warning warning title="The default moved">
+                Slide footers now align to the end by default. Previously, omitting the attribute left them at the start because the base <x-block>flex</x-block> block had no justify class. Set <x-block>start</x-block> to keep the old layout.
+            </x-warning>
+        </div>
     </x-section>
 </x-layout>

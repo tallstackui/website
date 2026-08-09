@@ -134,13 +134,9 @@
             <x-block>colorful</x-block>
             global so the body background takes the notification type color
             (green for success, red for error, and so on) with white text.
-            <a
-                href="{{ route("documentation", ["customization", "globals"]) }}"
-                wire:navigate
-                class="underline"
-            >
+            <x-refer :doc="['customization', 'globals']">
                 Learn more about the global Colorful.
-            </a>
+            </x-refer>
         </p>
     </x-section>
     <x-section

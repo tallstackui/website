@@ -41,17 +41,17 @@
     <x-section title="Basic Usage">
         <x-preview language="blade" :contents="$basic">
             <x-list>
-                <x-list.items name="general" caption="1 server"/>
-                <x-list.items name="production" caption="12 servers"/>
-                <x-list.items name="staging" caption="3 servers"/>
+                <x-list.items name="general" caption="1 server" />
+                <x-list.items name="production" caption="12 servers" />
+                <x-list.items name="staging" caption="3 servers" />
             </x-list>
         </x-preview>
     </x-section>
     <x-section title="Label & Hint">
         <x-preview language="blade" :contents="$labelHint">
             <x-list label="Tags" hint="Manage your tags here.">
-                <x-list.items name="general" caption="1 server"/>
-                <x-list.items name="production" caption="12 servers"/>
+                <x-list.items name="general" caption="1 server" />
+                <x-list.items name="production" caption="12 servers" />
             </x-list>
         </x-preview>
     </x-section>
@@ -61,9 +61,9 @@
     >
         <x-preview language="blade" :contents="$searchable">
             <x-list label="Tags" searchable>
-                <x-list.items name="general" caption="1 server"/>
-                <x-list.items name="production" caption="12 servers"/>
-                <x-list.items name="staging" caption="3 servers"/>
+                <x-list.items name="general" caption="1 server" />
+                <x-list.items name="production" caption="12 servers" />
+                <x-list.items name="staging" caption="3 servers" />
             </x-list>
         </x-preview>
     </x-section>
@@ -74,8 +74,8 @@
                 searchable
                 search-placeholder="Filter tags by name or caption"
             >
-                <x-list.items name="general" caption="1 server"/>
-                <x-list.items name="production" caption="12 servers"/>
+                <x-list.items name="general" caption="1 server" />
+                <x-list.items name="production" caption="12 servers" />
             </x-list>
         </x-preview>
     </x-section>
@@ -84,40 +84,40 @@
             <x-list label="Tags" hint="Click an ellipsis to act on a tag.">
                 <x-list.items name="general" caption="1 server">
                     <x-slot:menu>
-                        <x-dropdown.items text="Edit"/>
-                        <x-dropdown.items text="Delete"/>
+                        <x-dropdown.items text="Edit" />
+                        <x-dropdown.items text="Delete" />
                     </x-slot>
                 </x-list.items>
                 <x-list.items name="production" caption="12 servers">
                     <x-slot:menu>
-                        <x-dropdown.items text="Edit"/>
-                        <x-dropdown.items text="Delete"/>
+                        <x-dropdown.items text="Edit" />
+                        <x-dropdown.items text="Delete" />
                     </x-slot>
                 </x-list.items>
             </x-list>
         </x-preview>
     </x-section>
     <x-section title="Loop Items" disable-copy>
-        <x-code language="blade" :contents="$loopItems" disable-copy/>
+        <x-code language="blade" :contents="$loopItems" disable-copy />
     </x-section>
     <x-section title="Data-Driven">
         <x-preview language="blade" :contents="$dataDriven">
-            <x-list label="Tags" :items="$preview" searchable/>
+            <x-list label="Tags" :items="$preview" searchable />
         </x-preview>
     </x-section>
     <x-section title="Data-Driven Menu">
         <x-preview language="blade" :contents="$dataDrivenMenu">
             <x-list label="Tags" :items="$preview" searchable>
                 @interact("item_menu", $item)
-                <x-dropdown.items text="Edit"/>
-                <x-dropdown.items text="Delete"/>
+                    <x-dropdown.items text="Edit" />
+                    <x-dropdown.items text="Delete" />
                 @endinteract
             </x-list>
         </x-preview>
     </x-section>
     <x-section title="Scrollable Height">
         <x-preview language="blade" :contents="$height">
-            <x-list label="Tags" :items="$long" searchable height="60"/>
+            <x-list label="Tags" :items="$long" searchable height="60" />
         </x-preview>
     </x-section>
     <x-section title="Custom Empty State">
@@ -130,10 +130,10 @@
                         >
                             No tags configured yet.
                         </p>
-                        <x-button text="Create tag"/>
+                        <x-button text="Create tag" />
                     </div>
                 </x-slot>
-                <x-list.items name="general" caption="1 server"/>
+                <x-list.items name="general" caption="1 server" />
             </x-list>
         </x-preview>
     </x-section>
@@ -159,8 +159,8 @@
     >
         <x-preview language="blade" :contents="$compact">
             <div class="grid gap-4 md:grid-cols-2">
-                <x-list label="Default" :items="$preview" searchable/>
-                <x-list label="Compact" :items="$preview" searchable compact/>
+                <x-list label="Default" :items="$preview" searchable />
+                <x-list label="Compact" :items="$preview" searchable compact />
             </div>
         </x-preview>
     </x-section>
@@ -191,29 +191,28 @@
             title="height is required, and the interact slots are refused"
             class="mt-4"
         >
-            A scroll container is required for the sentinel to intersect. The server resolves the
+            A scroll container is required for the sentinel to intersect. The
+            server resolves the
             <x-block>
                 @verbatim
-                    @interact('item_caption')
+                                @interact('item_caption')
                 @endverbatim
-
             </x-block>
             ,
             <x-block>
                 @verbatim
-                    @interact('item_action')
+                                @interact('item_action')
                 @endverbatim
-
             </x-block>
             , and
             <x-block>
                 @verbatim
-                    @interact('item_menu')
+                                @interact('item_menu')
                 @endverbatim
-
             </x-block>
-            interactions during row rendering. Without a server render for each row, these
-            interactions cannot be resolved, so the combination throws.
+            interactions during row rendering. Without a server render for each
+            row, these interactions cannot be resolved, so the combination
+            throws.
         </x-warning>
     </x-section>
     <x-section
@@ -228,8 +227,8 @@
                         <x-button sm>Deploy</x-button>
                     </x-slot>
                     <x-slot:menu>
-                        <x-dropdown.items text="Edit"/>
-                        <x-dropdown.items text="Delete"/>
+                        <x-dropdown.items text="Edit" />
+                        <x-dropdown.items text="Delete" />
                     </x-slot>
                 </x-list.items>
                 <x-list.items name="production" caption="12 servers">
@@ -247,8 +246,8 @@
     >
         <x-preview language="blade" :contents="$skeleton">
             <div class="grid gap-4 md:grid-cols-2">
-                <x-list skeleton/>
-                <x-list skeleton="6" searchable label="Tags"/>
+                <x-list skeleton />
+                <x-list skeleton="6" searchable label="Tags" />
             </div>
         </x-preview>
     </x-section>

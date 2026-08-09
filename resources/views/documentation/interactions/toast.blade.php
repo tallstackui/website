@@ -102,8 +102,8 @@
         <div class="space-y-4">
             <p class="mt-2">
                 By default, the Toast position is configured using
-                <x-refer doc="configuration">the configuration file</x-refer>.
-                However, you can set the Toast position at runtime using the
+                <x-refer doc="configuration">the configuration file</x-refer>
+                . However, you can set the Toast position at runtime using the
                 <x-block>position</x-block>
                 method:
             </p>
@@ -214,13 +214,9 @@
             <x-block>colorful</x-block>
             global so the body background takes the notification type color
             (green for success, red for error, and so on) with white text.
-            <a
-                href="{{ route("documentation", ["customization", "globals"]) }}"
-                wire:navigate
-                class="underline"
-            >
+            <x-refer :doc="['customization', 'globals']">
                 Learn more about the global Colorful.
-            </a>
+            </x-refer>
         </p>
     </x-section>
     <x-section

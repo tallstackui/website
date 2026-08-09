@@ -145,14 +145,10 @@
             </p>
             <ul class="list-inside list-decimal">
                 <li>
-                    <a
-                        href="{{ route("documentation", ["component-prefix"]) }}"
-                        wire:navigate
-                        class="underline"
-                    >
+                    <x-refer doc="component-prefix">
                         Set a component prefix name for the TallStackUI
                         components
-                    </a>
+                    </x-refer>
                     .
                 </li>
                 <li>
@@ -206,7 +202,9 @@
                 Since internally several icons are used in many components, you
                 are free to customize these internal icons through an icon guide
                 in the
-                <x-refer doc="configuration">TallStackUI configuration file.</x-refer>
+                <x-refer doc="configuration">
+                    TallStackUI configuration file.
+                </x-refer>
                 All you have to do is define the name of the icons to be used.
                 This way, the custom icon will be used instead of the Heroicon.
             </p>

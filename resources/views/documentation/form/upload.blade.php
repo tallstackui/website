@@ -16,24 +16,25 @@
     </x-slot>
     <x-warning info class="mb-4">
         Files can be uploaded through selection or drag-and-drop. Also, when
-        sending a <u>png, jpg, jpeg or gif file</u>
+        sending a
+        <u>png, jpg, jpeg or gif file</u>
         , a preview is offered when clicking on the file image. To disable the
         preview, simply pass the
         <x-block>:preview="false"</x-block>
-        parameter to the component. All files uploaded as part of tests on this page are deleted each
-        hour.
+        parameter to the component. All files uploaded as part of tests on this
+        page are deleted each hour.
     </x-warning>
     <x-warning class="mb-4">
         All files uploaded as part of tests on this page are deleted each hour.
     </x-warning>
     <x-section title="Basic Usage" anchor="upload-basic-usage">
         <x-preview language="blade" :contents="$basic">
-            <livewire:documentation.form.upload.upload :model="1"/>
+            <livewire:documentation.form.upload.upload :model="1" />
         </x-preview>
     </x-section>
     <x-section title="Label & Hint & Tip" anchor="upload-label-hint-tip">
         <x-preview language="blade" :contents="$labelHintTip">
-            <livewire:documentation.form.upload.upload :model="2"/>
+            <livewire:documentation.form.upload.upload :model="2" />
         </x-preview>
     </x-section>
     <x-section
@@ -42,7 +43,7 @@
         anchor="upload-close-after-upload"
     >
         <x-preview language="blade" :contents="$closeAfterUpload">
-            <livewire:documentation.form.upload.upload :model="8"/>
+            <livewire:documentation.form.upload.upload :model="8" />
         </x-preview>
     </x-section>
     <x-section
@@ -61,26 +62,26 @@
                 . However, unlike input, this message cannot be disabled.
             </p>
             <x-preview language="blade" disable-copy>
-                <livewire:documentation.form.upload.upload :model="9"/>
+                <livewire:documentation.form.upload.upload :model="9" />
             </x-preview>
         </div>
     </x-section>
     <x-section title="Delete" anchor="upload-delete">
         <div class="space-y-4">
             <x-preview language="blade" :contents="$delete">
-                <livewire:documentation.form.upload.upload :model="3"/>
+                <livewire:documentation.form.upload.upload :model="3" />
             </x-preview>
             <p>
                 You can use this algorithm to be the base of the method of
                 deleting temporary files.
             </p>
-            <x-code :contents="$deleteMethod" disable-copy/>
+            <x-code :contents="$deleteMethod" disable-copy />
         </div>
     </x-section>
     <x-section title="Multiple" anchor="upload-multiple">
         <div class="space-y-4">
             <x-preview language="blade" :contents="$multiple">
-                <livewire:documentation.form.upload.upload :model="4"/>
+                <livewire:documentation.form.upload.upload :model="4" />
             </x-preview>
             <p>
                 If you have ever uploaded multiple files, you may have already
@@ -90,7 +91,7 @@
                 and allow your user to select multiple files, in batches, you
                 can use an algorithm like this:
             </p>
-            <x-code :contents="$multipleBatches" disable-copy/>
+            <x-code :contents="$multipleBatches" disable-copy />
             <p>
                 The only thing to pay attention to with this approach is that
                 <b>
@@ -110,7 +111,7 @@
                     following Livewire lifecycle hooks convention:
                 </a>
             </p>
-            <x-code :contents="$multipleBatchesOtherProperties" disable-copy/>
+            <x-code :contents="$multipleBatchesOtherProperties" disable-copy />
         </div>
     </x-section>
     <x-section
@@ -118,13 +119,13 @@
         anchor="upload-restricting-file-types"
     >
         <x-preview language="blade" :contents="$accept">
-            <livewire:documentation.form.upload.upload :model="5"/>
+            <livewire:documentation.form.upload.upload :model="5" />
         </x-preview>
     </x-section>
     <x-section title="Footer Slot" anchor="upload-footer-slot">
         <div class="space-y-4">
             <x-preview language="blade" :contents="$footerSlot">
-                <livewire:documentation.form.upload.upload :model="6"/>
+                <livewire:documentation.form.upload.upload :model="6" />
             </x-preview>
             <p>
                 Use the
@@ -149,7 +150,7 @@
                 You can perform validations on selected files before they are
                 actually uploaded to the server.
             </p>
-            <x-code language="blade" :contents="$before" disable-copy/>
+            <x-code language="blade" :contents="$before" disable-copy />
             <p>
                 In this case,
                 <x-block>files</x-block>
@@ -161,10 +162,10 @@
     </x-section>
     <x-section title="Events">
         <x-preview language="blade" :contents="$events">
-            <livewire:documentation.form.upload.upload :model="7"/>
+            <livewire:documentation.form.upload.upload :model="7" />
         </x-preview>
     </x-section>
-    <x-separator text="Static Mode"/>
+    <x-separator text="Static Mode" />
     <x-section title="Concept" anchor="static-concept" disable-copy>
         Although the Upload component was created to handle file uploads, it
         also allows you to display any type of file that already exists in the
@@ -179,7 +180,7 @@
                     Use the Livewire component
                     <x-block>mount</x-block>
                     method to prepare and store the files in a property:
-                    <x-code :contents="$prepareStaticUsage" disable-copy/>
+                    <x-code :contents="$prepareStaticUsage" disable-copy />
                 </li>
                 <li>
                     Prepare the Blade file of the component:
@@ -193,14 +194,14 @@
                     <u>If you intend to offer the option to delete files,</u>
                     then the approach to deleting files will be a little
                     different from the used when file is uploading, for example:
-                    <x-code :contents="$deletingFileInStaticUsage"/>
+                    <x-code :contents="$deletingFileInStaticUsage" />
                 </li>
             </ul>
         </div>
     </x-section>
     <x-section title="Demonstration" anchor="static-demonstration" disable-copy>
         <x-preview>
-            <livewire:documentation.form.upload.static/>
+            <livewire:documentation.form.upload.static />
         </x-preview>
     </x-section>
 </x-layout>

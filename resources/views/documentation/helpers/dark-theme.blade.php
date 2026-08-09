@@ -61,13 +61,9 @@
             <p>
                 This button must be covered by the layout that received the
                 helper. If you prefer,
-                <a
-                    href="{{ route("documentation", ["ui", "theme-switch"]) }}"
-                    wire:navigate
-                    class="underline"
-                >
+                <x-refer :doc="['ui', 'theme-switch']">
                     TallStackUI offer the Theme Switch component
-                </a>
+                </x-refer>
                 to easily manage the dark theme.
             </p>
             <p>Rebuild your assets using this command:</p>

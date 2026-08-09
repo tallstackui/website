@@ -32,13 +32,9 @@
             </p>
             <p>
                 It shares nothing with
-                <a
-                    href="{{ route("documentation", ["form", "upload"]) }}"
-                    wire:navigate
-                    class="underline"
-                >
+                <x-refer :doc="['form', 'upload']">
                     <x-block>&lt;x-upload&gt;</x-block>
-                </a>
+                </x-refer>
                 beyond the namespace, and unlike it, this one works outside
                 Livewire too.
             </p>

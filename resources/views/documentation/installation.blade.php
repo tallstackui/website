@@ -58,13 +58,7 @@
         Discover the official
         <b>TallStackUI starter kit for Laravel 12</b>
         and save time on a new project creation.
-        <a
-            href="{{ route("documentation", ["starter-kit"]) }}"
-            class="underline"
-            wire:navigate
-        >
-            Click here!
-        </a>
+        <x-refer doc="starter-kit">Click here!</x-refer>
     </x-section>
     <x-section title="Manual Installation" disable-copy>
         <div class="space-y-4">

@@ -23,7 +23,7 @@
         />
     </x-section>
     <x-section title="Positions" disable-copy>
-        <x-code language="blade" :contents="$positions"/>
+        <x-code language="blade" :contents="$positions" />
     </x-section>
     <x-section title="Icon" disable-copy>
         <div class="space-y-4">
@@ -34,7 +34,7 @@
                 <x-block>icon</x-block>
                 attribute:
             </p>
-            <x-code language="blade" :contents="$icon"/>
+            <x-code language="blade" :contents="$icon" />
         </div>
     </x-section>
     <x-section title="Square Variation" disable-copy>
@@ -45,14 +45,14 @@
                 attribute to render the button with rounded corners instead of a
                 full circle:
             </p>
-            <x-code language="blade" :contents="$square"/>
+            <x-code language="blade" :contents="$square" />
         </div>
     </x-section>
     <x-section title="Size Variations" disable-copy>
-        <x-code language="blade" :contents="$sizes"/>
+        <x-code language="blade" :contents="$sizes" />
     </x-section>
     <x-section title="Color Variations" disable-copy>
-        <x-code language="blade" :contents="$colors"/>
+        <x-code language="blade" :contents="$colors" />
     </x-section>
     <x-section title="Anchor Observer" disable-copy>
         <div class="space-y-4">
@@ -64,10 +64,14 @@
                 detect when the observed element leaves the viewport, then shows
                 the button:
             </p>
-            <x-code language="blade" :contents="$anchor"/>
+            <x-code language="blade" :contents="$anchor" />
         </div>
     </x-section>
-    <x-section title="Immediate" description="An option to scroll to top instantly without any animation." disable-copy>
-        <x-code language="blade" :contents="$immediate"/>
+    <x-section
+        title="Immediate"
+        description="An option to scroll to top instantly without any animation."
+        disable-copy
+    >
+        <x-code language="blade" :contents="$immediate" />
     </x-section>
 </x-layout>

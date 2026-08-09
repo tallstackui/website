@@ -8,7 +8,7 @@
     <x-slot:title>Clipboard</x-slot>
     <x-slot:description>Clipboard component.</x-slot>
     <x-slot:customization>
-        <livewire:customization :$customization component="Clipboard"/>
+        <livewire:customization :$customization component="Clipboard" />
     </x-slot>
     <x-section title="Basic Usage">
         <x-preview language="blade" :contents="$basic">
@@ -71,7 +71,7 @@
             <x-button x-on:click="$tsui.copy('TallStackUI')">Copy</x-button>
         </x-preview>
         <div class="mt-4">
-            <x-code language="javascript" :contents="$programmaticEvent"/>
+            <x-code language="javascript" :contents="$programmaticEvent" />
         </div>
         <x-warning
             warning
@@ -80,12 +80,12 @@
         >
             Clipboard content is written with
             <x-block>navigator.clipboard.writeText()</x-block>
-            . In insecure contexts, the component uses
-            execCommand instead. Common examples include
+            . In insecure contexts, the component uses execCommand instead.
+            Common examples include
             <x-block>http://myapp.test</x-block>
-            and local IP addresses opened from another
-            device. The write must happen during a user interaction and cannot run from a timer or after an API
-            response.
+            and local IP addresses opened from another device. The write must
+            happen during a user interaction and cannot run from a timer or
+            after an API response.
         </x-warning>
     </x-section>
 </x-layout>

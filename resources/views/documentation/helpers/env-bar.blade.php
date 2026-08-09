@@ -18,12 +18,7 @@
         the environment you are interacting with through various visual
         information associated with different cores per environment. The EnvBar
         is different from the
-        <a
-            href="{{ route("documentation", ["ui", "environment"]) }}"
-            class="underline"
-        >
-            environment component
-        </a>
+        <x-refer :doc="['ui', 'environment']">environment component</x-refer>
         , the environment component is very simple compared to the EnvBar. The
         EnvBar is an official TallStackUI package installed via composer.
     </x-section>

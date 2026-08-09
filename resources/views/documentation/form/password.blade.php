@@ -10,11 +10,11 @@
         Form password component. Show or hide password value.
     </x-slot>
     <x-slot:customization>
-        <livewire:customization :$customization component="Form\Password"/>
+        <livewire:customization :$customization component="Form\Password" />
     </x-slot>
     <x-section title="Basic Usage">
         <x-preview language="blade" :contents="$basic">
-            <x-password value="TallStackUI"/>
+            <x-password value="TallStackUI" />
         </x-preview>
     </x-section>
     <x-section title="Label & Hint">
@@ -44,7 +44,7 @@
     >
         <div class="space-y-4">
             <x-preview language="blade" :contents="$capsLock">
-                <x-password hint="Activate caps lock to see the indicator."/>
+                <x-password hint="Activate caps lock to see the indicator." />
             </x-preview>
             <x-warning class="mt-4">
                 The caps lock indicator does not work on mobile devices.
@@ -76,7 +76,7 @@
     <x-section title="Password Generator">
         <div class="space-y-4">
             <x-preview language="blade" :contents="$passwordGenerator">
-                <x-password generator :rules="['min:5', 'symbols:!@']"/>
+                <x-password generator :rules="['min:5', 'symbols:!@']" />
             </x-preview>
             <p>
                 Similar to the format validator, mentioned above, you can also
@@ -106,7 +106,7 @@
                 You can copy this base code into your application layout and
                 make any necessary changes:
             </p>
-            <x-code language="blade" :contents="$algorithm"/>
+            <x-code language="blade" :contents="$algorithm" />
             <p>
                 In the code above, the variables
                 <x-block>mixed</x-block>

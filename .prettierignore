@@ -4,3 +4,6 @@
 # These are hand-formatted at column 0 and must stay out of Prettier.
 resources/views/vendor/mail/
 resources/views/mail/
+
+# Livewire single-file component: Prettier mangles the PHP class + Blade mix.
+resources/views/livewire/customization.blade.php

@@ -60,102 +60,54 @@
                     <ul>
                         <li>
                             -
-                            <a
-                                href="{{ route("documentation", ["ui", "chart"]) }}"
-                                wire:navigate
-                                class="underline"
-                            >
-                                Chart
-                            </a>
+                            <x-refer :doc="['ui', 'chart']">Chart</x-refer>
                             : five types rendered as inline SVG, with no
                             charting library involved.
                         </li>
                         <li>
                             -
-                            <a
-                                href="{{ route("documentation", ["ui", "editor"]) }}"
-                                wire:navigate
-                                class="underline"
-                            >
-                                Editor
-                            </a>
+                            <x-refer :doc="['ui', 'editor']">Editor</x-refer>
                             : a WYSIWYG editor with no external JavaScript
                             dependency, outputting HTML or Markdown.
                         </li>
                         <li>
                             -
-                            <a
-                                href="{{ route("documentation", ["ui", "gallery"]) }}"
-                                wire:navigate
-                                class="underline"
-                            >
-                                Gallery
-                            </a>
+                            <x-refer :doc="['ui', 'gallery']">Gallery</x-refer>
                             : three layouts and a shared lightbox.
                         </li>
                         <li>
                             -
-                            <a
-                                href="{{ route("documentation", ["ui", "qr-code"]) }}"
-                                wire:navigate
-                                class="underline"
-                            >
-                                QrCode
-                            </a>
+                            <x-refer :doc="['ui', 'qr-code']">QrCode</x-refer>
                             : the whole of ISO/IEC 18004, dependency free.
                         </li>
                         <li>
                             -
-                            <a
-                                href="{{ route("documentation", ["ui", "spinner"]) }}"
-                                wire:navigate
-                                class="underline"
-                            >
-                                Spinner
-                            </a>
+                            <x-refer :doc="['ui', 'spinner']">Spinner</x-refer>
                             : thirteen animated variations.
                         </li>
                         <li>
                             -
-                            <a
-                                href="{{ route("documentation", ["ui", "swap"]) }}"
-                                wire:navigate
-                                class="underline"
-                            >
-                                Swap
-                            </a>
+                            <x-refer :doc="['ui', 'swap']">Swap</x-refer>
                             : a compact value cycler driven by buttons, drag or
                             the keyboard.
                         </li>
                         <li>
                             -
-                            <a
-                                href="{{ route("documentation", ["form", "radio"]) }}"
-                                wire:navigate
-                                class="underline"
-                            >
+                            <x-refer :doc="['form', 'radio']">
                                 Radio Group
-                            </a>
+                            </x-refer>
                             and
-                            <a
-                                href="{{ route("documentation", ["form", "checkbox"]) }}"
-                                wire:navigate
-                                class="underline"
-                            >
+                            <x-refer :doc="['form', 'checkbox']">
                                 Checkbox Group
-                            </a>
+                            </x-refer>
                             : a whole set of options from one array, in four
                             presentations.
                         </li>
                         <li>
                             -
-                            <a
-                                href="{{ route("documentation", ["form", "upload-async"]) }}"
-                                wire:navigate
-                                class="underline"
-                            >
+                            <x-refer :doc="['form', 'upload-async']">
                                 Upload Async
-                            </a>
+                            </x-refer>
                             : chunked uploads straight to your own controller,
                             so a file no longer has to fit inside the PHP
                             request limits.
@@ -316,13 +268,9 @@
                     and the
                     <x-block>gray-*</x-block>
                     equivalent. Full detail on the
-                    <a
-                        href="{{ route("documentation", ["customization", "color"]) }}"
-                        wire:navigate
-                        class="underline"
-                    >
+                    <x-refer :doc="['customization', 'color']">
                         color page
-                    </a>
+                    </x-refer>
                     .
                 </p>
             </div>

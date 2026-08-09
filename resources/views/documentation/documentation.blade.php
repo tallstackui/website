@@ -36,13 +36,7 @@
                 <li>
                     <b class="italic">"Component Prefix":</b>
                     The code examples of the docs are displayed without the
-                    <a
-                        href="{{ route("documentation", ["component-prefix"]) }}"
-                        class="underline"
-                        wire:navigate
-                    >
-                        component prefix.
-                    </a>
+                    <x-refer doc="component-prefix">component prefix.</x-refer>
                     You can use this input to set the prefix you are using in
                     your Laravel project. All code examples of the docs will be
                     displayed using the prefix, which makes it easier for you to

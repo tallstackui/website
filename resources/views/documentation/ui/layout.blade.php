@@ -466,12 +466,8 @@
     <x-section title="Customization" disable-copy>
         All the components mentioned above are available to be fully customized
         through one of the TallStackUI customization methods:
-        <a
-            href="{{ route("documentation", ["customization", "concept"]) }}"
-            wire:navigate
-            class="underline"
-        >
+        <x-refer :doc="['customization', 'concept']">
             soft customization or deep customization.
-        </a>
+        </x-refer>
     </x-section>
 </x-layout>

@@ -32,68 +32,30 @@
         </p>
         <ul class="mt-2 list-inside list-decimal">
             <li>
-                <a
-                    href="{{ route("documentation", ["form", "autocomplete"]) }}"
-                    wire:navigate
-                >
+                <x-refer :doc="['form', 'autocomplete']">
                     Form AutoComplete
-                </a>
+                </x-refer>
             </li>
             <li>
-                <a
-                    href="{{ route("documentation", ["form", "input"]) }}"
-                    wire:navigate
-                >
-                    Form Date
-                </a>
+                <x-refer :doc="['form', 'input']">Form Date</x-refer>
             </li>
             <li>
-                <a
-                    href="{{ route("documentation", ["form", "time"]) }}"
-                    wire:navigate
-                >
-                    Form Time
-                </a>
+                <x-refer :doc="['form', 'time']">Form Time</x-refer>
             </li>
             <li>
-                <a
-                    href="{{ route("documentation", ["form", "password"]) }}"
-                    wire:navigate
-                >
-                    Form Password
-                </a>
+                <x-refer :doc="['form', 'password']">Form Password</x-refer>
             </li>
             <li>
-                <a
-                    href="{{ route("documentation", ["form", "upload"]) }}"
-                    wire:navigate
-                >
-                    Form Upload
-                </a>
+                <x-refer :doc="['form', 'upload']">Form Upload</x-refer>
             </li>
             <li>
-                <a
-                    href="{{ route("documentation", ["form", "color"]) }}"
-                    wire:navigate
-                >
-                    Form Color
-                </a>
+                <x-refer :doc="['form', 'color']">Form Color</x-refer>
             </li>
             <li>
-                <a
-                    href="{{ route("documentation", ["ui", "dropdown"]) }}"
-                    wire:navigate
-                >
-                    Dropdown
-                </a>
+                <x-refer :doc="['ui', 'dropdown']">Dropdown</x-refer>
             </li>
             <li>
-                <a
-                    href="{{ route("documentation", ["form", "select"]) }}"
-                    wire:navigate
-                >
-                    Select
-                </a>
+                <x-refer :doc="['form', 'select']">Select</x-refer>
             </li>
         </ul>
     </x-section>

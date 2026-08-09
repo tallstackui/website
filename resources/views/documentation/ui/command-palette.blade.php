@@ -66,7 +66,7 @@
                 attribute defines where the component fetches search results
                 from. You can use a simple URL string or a Laravel route name:
             </p>
-            <x-code language="blade" :contents="$requestString"/>
+            <x-code language="blade" :contents="$requestString" />
             <p>
                 For more control, pass an array with
                 <x-block>url</x-block>
@@ -76,7 +76,7 @@
                 <x-block>params</x-block>
                 keys:
             </p>
-            <x-code language="blade" :contents="$requestArray"/>
+            <x-code language="blade" :contents="$requestArray" />
             <x-warning>
                 The request attribute must be configured either as an inline
                 attribute or in the
@@ -94,14 +94,16 @@
                 <x-block>select.styled</x-block>
                 component:
             </p>
-            <x-code language="blade" :contents="$fieldMapping" disable-copy/>
+            <x-code language="blade" :contents="$fieldMapping" disable-copy />
         </div>
     </x-section>
-    <x-section title="Disabled Options" description="An option to disable specific items." disable-copy>
+    <x-section
+        title="Disabled Options"
+        description="An option to disable specific items."
+        disable-copy
+    >
         <div class="space-y-4">
-            <p>
-                The API response should response as it to disable an item:
-            </p>
+            <p>The API response should response as it to disable an item:</p>
             <x-code
                 language="json"
                 :contents="$disabledOptions"
@@ -117,7 +119,7 @@
                 <x-block>recycle</x-block>
                 attribute to control this behavior:
             </p>
-            <x-code language="blade" :contents="$recycle" disable-copy/>
+            <x-code language="blade" :contents="$recycle" disable-copy />
             <p>
                 You can also control it globally in the
                 <x-refer doc="configuration">configuration file.</x-refer>
@@ -126,7 +128,7 @@
     </x-section>
     <x-section title="Placeholders" disable-copy>
         <div class="space-y-4">
-            <x-code language="blade" :contents="$placeholders" disable-copy/>
+            <x-code language="blade" :contents="$placeholders" disable-copy />
         </div>
     </x-section>
     <x-section title="Empty Slot">
@@ -163,7 +165,7 @@
                 option has the highest priority and suppresses both the
                 actionable and global events.
             </p>
-            <x-code language="blade" :contents="$inlineEvent" disable-copy/>
+            <x-code language="blade" :contents="$inlineEvent" disable-copy />
         </div>
     </x-section>
     <x-section title="Actionable" disable-copy>
@@ -179,7 +181,7 @@
                 through the Laravel container. The internal TallStackUI endpoint
                 uses Laravel-signed URLs for added security.
             </p>
-            <x-code :contents="$actionableConfig" disable-copy/>
+            <x-code :contents="$actionableConfig" disable-copy />
             <p>
                 The class receives an
                 <x-block>ItemSelected</x-block>
@@ -187,34 +189,30 @@
                 <x-block>Callback</x-block>
                 response:
             </p>
-            <x-code :contents="$actionableClass" disable-copy/>
+            <x-code :contents="$actionableClass" disable-copy />
             <p>
                 The
                 <x-block>ItemSelected</x-block>
                 object provides access to all selection data:
             </p>
-            <x-code :contents="$itemSelected" disable-copy/>
+            <x-code :contents="$itemSelected" disable-copy />
             <p>
                 The
                 <x-block>Callback</x-block>
                 class offers two response types: redirect the user to a page
                 (internal ou external) or you can also dispatch a browser event:
             </p>
-            <x-code :contents="$actionableCallback" disable-copy/>
+            <x-code :contents="$actionableCallback" disable-copy />
         </div>
     </x-section>
     <x-section title="Lifecycle Events" disable-copy>
-        <x-code
-            language="blade"
-            :contents="$lifecycleEvents"
-            disable-copy
-        />
+        <x-code language="blade" :contents="$lifecycleEvents" disable-copy />
     </x-section>
     <x-section
         title="AlpineJS Helper"
         description="Helpers to open and close the command palette using AlpineJS."
     >
-        <x-code language="blade" :contents="$alpinejs" disable-copy/>
+        <x-code language="blade" :contents="$alpinejs" disable-copy />
     </x-section>
     <x-section title="Mobile Centered" disable-copy>
         By default, the command palette is aligned to the bottom of the screen
@@ -234,7 +232,7 @@
                 to skip the overlay and let the palette float above the page
                 without darkening the surrounding UI:
             </p>
-            <x-code language="blade" :contents="$overlay"/>
+            <x-code language="blade" :contents="$overlay" />
             <p>
                 You can also flip the default globally in the
                 <x-refer doc="configuration">configuration file</x-refer>

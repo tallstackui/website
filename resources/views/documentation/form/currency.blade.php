@@ -191,24 +191,24 @@
                 ]'
             >
                 @interact("column_mode", $row)
-                @if ($row["mode"] === "default")
-                    Default
-                    <span class="text-xs text-gray-400">(no prop)</span>
-                @else
-                    {{ $row["mode"] }}
-                @endif
+                    @if ($row["mode"] === "default")
+                        Default
+                        <span class="text-xs text-gray-400">(no prop)</span>
+                    @else
+                        {{ $row["mode"] }}
+                    @endif
                 @endinteract
 
                 @interact("column_usage", $row)
-                @if ($row["mode"] === "decimal")
-                    Stored as
-                    <x-block>decimal</x-block>
-                    /
-                    <x-block>float</x-block>
-                    column
-                @else
-                    {{ $row["usage"] }}
-                @endif
+                    @if ($row["mode"] === "decimal")
+                        Stored as
+                        <x-block>decimal</x-block>
+                        /
+                        <x-block>float</x-block>
+                        column
+                    @else
+                        {{ $row["usage"] }}
+                    @endif
                 @endinteract
             </x-table>
             <x-warning warning title="Mutually exclusive">

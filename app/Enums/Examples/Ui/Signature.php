@@ -48,7 +48,7 @@ class Signature
     HTML;
 
     public const string PERSISTENT = <<<'HTML'
-    <x-signature wire:model="signature" persistent />
+    <x-signature persistent />
     HTML;
 
     public const string CUSTOMIZATION = <<<'HTML'

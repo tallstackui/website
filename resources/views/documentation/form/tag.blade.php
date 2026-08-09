@@ -96,7 +96,9 @@
         <x-preview language="blade" :contents="$afterSlot">
             <x-tag :options="['laravel', 'livewire', 'alpine', 'tailwind']">
                 <x-slot:after>
-                    <p class="font-medium text-red-500 p-4">After slot goes here</p>
+                    <p class="p-4 font-medium text-red-500">
+                        After slot goes here
+                    </p>
                 </x-slot>
             </x-tag>
         </x-preview>

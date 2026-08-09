@@ -40,12 +40,9 @@
             <x-code language="shell" :contents="$prefix" />
             <p>
                 This command is used to set up the component prefix.
-                <a
-                    href="{{ route("documentation", ["component-prefix"]) }}"
-                    class="underline"
-                >
+                <x-refer doc="component-prefix">
                     Read more about it by clicking here.
-                </a>
+                </x-refer>
             </p>
         </div>
     </x-section>

@@ -166,7 +166,9 @@
     </x-section>
     <x-section title="Change the Default Namespace" disable-copy>
         <p>
-            <x-refer doc="configuration">When you publish the configuration file</x-refer>
+            <x-refer doc="configuration">
+                When you publish the configuration file
+            </x-refer>
             , you can change the default namespace for the color classes. If you
             prefer, you can control this through an environment variable:
         </p>

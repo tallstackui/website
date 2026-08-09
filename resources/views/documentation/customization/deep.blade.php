@@ -66,13 +66,9 @@
             </p>
             <x-warning>
                 Even if you prefer to use deep customization,
-                <a
-                    href="{{ route("documentation", ["customization", "soft"]) }}"
-                    wire:navigate
-                    class="underline"
-                >
+                <x-refer :doc="['customization', 'soft']">
                     soft customization
-                </a>
+                </x-refer>
                 can still be applied to components.
             </x-warning>
         </div>

@@ -62,13 +62,7 @@
             covers Dropdown and its Submenu, Autocomplete, Color, Date,
             Password, Select Styled, Time, Upload, Calendar and the List Items
             menu &mdash; every component built on the
-            <a
-                href="{{ route("documentation", ["internal", "floating"]) }}"
-                wire:navigate
-                class="underline"
-            >
-                floating
-            </a>
+            <x-refer :doc="['internal', 'floating']">floating</x-refer>
             .
         </x-warning>
     </x-section>

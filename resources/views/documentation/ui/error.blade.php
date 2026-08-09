@@ -54,7 +54,8 @@
             <livewire:documentation.ui.errors close />
         </x-preview>
         <x-warning class="mt-4">
-            After being dismissed, the error component reopens when new validation errors are added.
+            After being dismissed, the error component reopens when new
+            validation errors are added.
         </x-warning>
     </x-section>
     <x-section title="Footer Slot">

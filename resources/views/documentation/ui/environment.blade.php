@@ -19,8 +19,9 @@
         <div class="space-y-4">
             <p>
                 With the example above you should realize that the environment
-                is a basic component. If you want to go further in order to use something more sophisticated,
-                consider to know more about the <x-refer :doc="['helpers', 'env-bar']">EnvBar.</x-refer>
+                is a basic component. If you want to go further in order to use
+                something more sophisticated, consider to know more about the
+                <x-refer :doc="['helpers', 'env-bar']">EnvBar.</x-refer>
                 Unlike the environment component, the EnvBar is a fixed bar at
                 the top of the screen that serves to display several other
                 information about the current environment - not just the

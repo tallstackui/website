@@ -12,13 +12,7 @@
     </x-slot>
     <x-warning class="mt-2">
         You should only use this component if are using the
-        <a
-            href="{{ route("documentation", ["helpers", "dark-theme"]) }}"
-            wire:navigate
-            class="underline"
-        >
-            dark theme helper.
-        </a>
+        <x-refer :doc="['helpers', 'dark-theme']">dark theme helper.</x-refer>
     </x-warning>
     <x-section class="mt-4" title="Basic Usage">
         <x-preview language="blade" :contents="$basic">

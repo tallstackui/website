@@ -79,7 +79,9 @@
             :height="320"
         />
         <x-warning class="mt-4">
-            You can use <x-block>prevent-rotate</x-block> to prevent the rotation of the icon.
+            You can use
+            <x-block>prevent-rotate</x-block>
+            to prevent the rotation of the icon.
         </x-warning>
     </x-section>
     <x-section title="Square Variation">
