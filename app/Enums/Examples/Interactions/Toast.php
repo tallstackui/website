@@ -126,7 +126,7 @@ class Toast
             | z-index: controls the default z-index.
             | progress: enables the progress bar.
             | expandable: enables the expanded effect by default.
-            | position: controls the default toast position (Allowed: top-right, top-left, bottom-right, bottom-left).
+            | position: controls the default toast position (Allowed: top-right, top-left, top-center, bottom-right, bottom-left, bottom-center).
             | timeout: controls the default timeout in seconds.
             */
             'z-index' => 'z-50',
@@ -162,10 +162,20 @@ class Toast
     HTML;
 
     public const string POSITION = <<<'HTML'
-    /* Available positions: top-left, top-right, bottom-left, bottom-right */
+    /* Available positions: top-left, top-right, top-center, bottom-left, bottom-right, bottom-center */
 
     $this->toast()
         ->position('top-left') // [tl! highlight]
+        ->success('Success', 'This is a success message.')
+        ->send();
+
+    $this->toast()
+        ->position('top-center') // [tl! highlight]
+        ->success('Success', 'This is a success message.')
+        ->send();
+
+    $this->toast()
+        ->position('bottom-center') // [tl! highlight]
         ->success('Success', 'This is a success message.')
         ->send();
     HTML;
@@ -339,30 +349,18 @@ class Toast
     }
     HTML;
 
-    public const string CENTERED_POSITIONS = <<<'PHP'
-    $this->toast()->position('top-center')->success('Saved!')->send();
-    $this->toast()->position('bottom-center')->success('Saved!')->send();
-    PHP;
-
-    public const string STACKED_CONFIG = <<<'PHP'
-    // config/tallstackui.php
-
-    'toast' => [
-        Components\Toast\Component::class,
-        [
-            'stacked' => true,
-            'top-on-mobile' => true,
-        ],
-    ],
-    PHP;
-
     public const string STACKED_FLUENT = <<<'PHP'
-    $this->toast()->stacked()->success('Saved!')->send();
+    $this->toast()
+        ->stacked()
+        ->success('Third', 'This toast is at the front of the pile.')
+        ->send();
     PHP;
 
     public const string STACKED_JS = <<<'JS'
-    $tsui.interaction('toast').stacked().success('Saved!').send();
-    $tsui.interaction('toast').position('top-center').sole().warning('Careful').send();
+    $tsui.interaction('toast')
+        .stacked()
+        .success('Saved!')
+        .send();
     JS;
 
     public const string CUSTOMIZATION = <<<'HTML'

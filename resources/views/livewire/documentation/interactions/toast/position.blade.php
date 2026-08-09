@@ -24,6 +24,14 @@ new class extends Component {
             ->send();
     }
 
+    public function bottomCenter(): void
+    {
+        $this->toast()
+            ->position("bottom-center")
+            ->success("Foo")
+            ->send();
+    }
+
     public function topRight(): void
     {
         $this->toast()
@@ -39,13 +47,23 @@ new class extends Component {
             ->success("Foo")
             ->send();
     }
+
+    public function topCenter(): void
+    {
+        $this->toast()
+            ->position("top-center")
+            ->success("Foo")
+            ->send();
+    }
 };
 
 ?>
 
-<div>
-    <x-button color="green" wire:click="bottomLeft">Bottom Left</x-button>
-    <x-button color="green" wire:click="bottomRight">Bottom Right</x-button>
+<div class="flex flex-wrap gap-2">
     <x-button color="green" wire:click="topLeft">Top Left</x-button>
+    <x-button color="green" wire:click="topCenter">Top Center</x-button>
     <x-button color="green" wire:click="topRight">Top Right</x-button>
+    <x-button color="green" wire:click="bottomLeft">Bottom Left</x-button>
+    <x-button color="green" wire:click="bottomCenter">Bottom Center</x-button>
+    <x-button color="green" wire:click="bottomRight">Bottom Right</x-button>
 </div>

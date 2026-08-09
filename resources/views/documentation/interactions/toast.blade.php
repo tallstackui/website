@@ -100,38 +100,15 @@
         description="An option to control the toast position at runtime."
     >
         <div class="space-y-4">
-            <p class="mt-2">
-                By default, the Toast position is configured using
-                <x-refer doc="configuration">the configuration file</x-refer>
-                . However, you can set the Toast position at runtime using the
-                <x-block>position</x-block>
-                method:
-            </p>
             <x-preview :contents="$position">
                 <livewire:documentation.interactions.toast.position />
             </x-preview>
-            <p class="mt-2">
-                If you quickly click on all the buttons above, you will see that
-                the position of the Toasts that were already displayed will
-                change. This happens because the
-                <x-block>position</x-block>
-                method will control the position of all the Toasts that are
-                fired.
-            </p>
         </div>
     </x-section>
     <x-section title="Sole">
-        <div class="space-y-4">
-            <p class="mt-2">
-                Starting from version v2.9.0, you can use the
-                <x-block>sole</x-block>
-                method to clear all other displayed Toasts in favor of
-                displaying only a specific Toast.
-            </p>
-            <x-preview :contents="$sole">
-                <livewire:documentation.interactions.toast.sole />
-            </x-preview>
-        </div>
+        <x-preview :contents="$sole">
+            <livewire:documentation.interactions.toast.sole />
+        </x-preview>
     </x-section>
     <x-section title="Events" description="An option to listen to events.">
         <div class="space-y-4">
@@ -220,58 +197,30 @@
         </p>
     </x-section>
     <x-section
-        title="Centered Positions"
-        new
-        description="The toast accepted four positions, all of them cornered. top-center and bottom-center join them, in the fluent method and in the global default alike."
-    >
-        <x-code language="php" :contents="$centeredPositions" />
-        <x-warning class="mt-4">
-            The enter transition no longer slides horizontally when the position
-            is centered: a toast in the middle of the screen has no edge to come
-            from.
-        </x-warning>
-    </x-section>
-    <x-section
         title="Stacked"
         new
-        description="Off by default. The toasts overlap into a pile instead of growing an endless list, and the pile expands back into the list while the pointer is over it."
+        description="An option to stack the list of toasts."
     >
         <div class="space-y-4">
-            <p>
-                The most recent toast is the front of the pile. Three layers
-                peek out; deeper toasts wait at
-                <x-block>opacity: 0</x-block>
-                and reappear as the ones in front leave. In the closed pile only
-                the front card renders content. Hovering expands the pile and
-                freezes every timer and progress bar in it.
-            </p>
-            <x-code language="php" :contents="$stackedConfig" />
-            <p>Both fluent APIs also carry it per toast:</p>
+            <livewire:documentation.interactions.toast.stacked />
+            <p>PHP API:</p>
             <x-code language="php" :contents="$stackedFluent" />
+            <p>JS API:</p>
             <x-code language="js" :contents="$stackedJs" />
-            <x-warning class="mt-4">
-                Because the front of the pile is always the newest toast,
-                turning it on reverses the reading order of the
-                <x-block>top-*</x-block>
-                positions. The
-                <x-block>bottom-*</x-block>
-                positions read the same either way. The geometry is fixed, not
-                configurable, and there is no cap on how many toasts the
-                expanded pile shows.
-            </x-warning>
         </div>
     </x-section>
-    <x-section
-        title="Top on Mobile"
-        new
-        description="Off by default. Below the md breakpoint the toast never honoured its position, always landing at the bottom of a phone screen. This pins them to the top instead, whatever the position says."
-    >
-        <div class="space-y-4">
-            <p>
-                The enter transition follows the edge the toast comes from, so
-                with the flag on it enters downward rather than upward.
-            </p>
-            <x-code language="php" :contents="$stackedConfig" />
-        </div>
+    <x-section title="Top on Mobile" new>
+        <x-warning success>
+            Starting from v4, you can set the toast to be positioned at the top
+            of the page when mobile. You can configure it by using the position
+            method, mentioned above, or if you prefer, you can control it
+            globally via the
+            <x-refer doc="configuration">configuration file.</x-refer>
+            using the
+            <x-block>top-on-mobile</x-block>
+            configuration, which is
+            <x-block>false</x-block>
+            by default.
+        </x-warning>
     </x-section>
 </x-layout>

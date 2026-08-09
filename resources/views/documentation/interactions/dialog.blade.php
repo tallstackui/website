@@ -139,11 +139,7 @@
             </x-refer>
         </p>
     </x-section>
-    <x-section
-        title="Confirming with Enter"
-        new
-        description="A dialog could be dismissed from the keyboard but never accepted: Escape closed it, and the confirm button answered only to the mouse."
-    >
+    <x-section title="Confirming with Enter" new>
         <x-code language="php" :contents="$enter" />
         <x-warning class="mt-4">
             It fires only while the focus is
