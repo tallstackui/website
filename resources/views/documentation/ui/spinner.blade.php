@@ -94,27 +94,4 @@
             </x-button>
         </x-preview>
     </x-section>
-    <x-section
-        title="Spinner, Loading & Skeleton"
-        new
-        description="Three different moments. None replaces another."
-        disable-copy
-    >
-        <x-table
-            :headers="[
-                ['index' => 'state', 'label' => 'State'],
-                ['index' => 'tool', 'label' => 'Tool'],
-                ['index' => 'situation', 'label' => 'Situation'],
-            ]"
-            :rows="[
-                ['state' => 'First paint, no data yet', 'tool' => 'skeleton', 'situation' => '#[Lazy] placeholder, initial load'],
-                ['state' => 'Refetch, data already on screen', 'tool' => 'loading', 'situation' => 'Sort, paginate, search, save'],
-                ['state' => 'Anything else that has to spin', 'tool' => 'spinner', 'situation' => 'Inline, in a button, in an empty state'],
-            ]"
-        >
-            @interact("column_tool", $row)
-                <x-block>{{ $row["tool"] }}</x-block>
-            @endinteract
-        </x-table>
-    </x-section>
 </x-layout>

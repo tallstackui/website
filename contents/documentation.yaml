@@ -734,8 +734,6 @@ ui:
     - Watermark
     - Copy & Download
     - Skeleton
-    - Configuration
-    - Scannability
   reaction:
     - Persist Reaction
     - Basic Usage
@@ -789,7 +787,6 @@ ui:
     - Label
     - Thinking
     - Inside a Button
-    - Spinner, Loading & Skeleton
   stats:
     - Basic Usage
     - Title

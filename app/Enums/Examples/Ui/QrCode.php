@@ -47,18 +47,6 @@ class QrCode
     <x-qr-code :link="$resolved" :skeleton="$resolved === null" size="lg" />
     HTML;
 
-    public const string CONFIGURATION = <<<'PHP'
-    // config/tallstackui.php
-
-    'qr-code' => [
-        Components\QrCode\Component::class,
-        [
-            'size' => 'md',
-            'pixels' => 1024,
-        ],
-    ],
-    PHP;
-
     public const string CUSTOMIZATION = <<<'HTML'
     TallStackUi::customize()
         ->qrCode()
