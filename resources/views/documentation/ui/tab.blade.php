@@ -161,16 +161,26 @@
         description="An option to display the component without shadows."
     >
         <x-preview language="blade" :contents="$flat">
-            <x-tab selected="Tab 1" shadowless bordered>
-                <x-tab.items tab="Tab 1">Content 1</x-tab.items>
-                <x-tab.items tab="Tab 2">Content 2</x-tab.items>
-            </x-tab>
+            <div class="space-y-4">
+                <x-tab selected="Tab 1" bordered>
+                    <x-tab.items tab="Tab 1">Content 1</x-tab.items>
+                    <x-tab.items tab="Tab 2">Content 2</x-tab.items>
+                </x-tab>
+                <x-tab selected="Tab 1" shadowless>
+                    <x-tab.items tab="Tab 1">Content 1</x-tab.items>
+                    <x-tab.items tab="Tab 2">Content 2</x-tab.items>
+                </x-tab>
+                <x-tab selected="Tab 1" shadowless bordered>
+                    <x-tab.items tab="Tab 1">Content 1</x-tab.items>
+                    <x-tab.items tab="Tab 2">Content 2</x-tab.items>
+                </x-tab>
+            </div>
         </x-preview>
     </x-section>
     <x-section
         title="Paddingless"
         new
-        description="An option to display the component without any padding."
+        description="An option to display the component without any padding on the body."
     >
         <x-preview language="blade" :contents="$paddingless">
             <x-tab selected="Tab 1" paddingless>

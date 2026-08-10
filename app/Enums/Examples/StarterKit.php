@@ -31,6 +31,6 @@ class StarterKit
     HTML;
 
     public const string PASSWORD = <<<'HTML'
-    password
+    Test123!
     HTML;
 }

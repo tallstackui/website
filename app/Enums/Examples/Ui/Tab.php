@@ -172,6 +172,16 @@ class Tab
     HTML;
 
     public const string FLAT = <<<'HTML'
+    <x-tab selected="Tab 1" bordered>
+        <x-tab.items tab="Tab 1">Content 1</x-tab.items>
+        <x-tab.items tab="Tab 2">Content 2</x-tab.items>
+    </x-tab>
+
+    <x-tab selected="Tab 1" shadowless>
+        <x-tab.items tab="Tab 1">Content 1</x-tab.items>
+        <x-tab.items tab="Tab 2">Content 2</x-tab.items>
+    </x-tab>
+
     <x-tab selected="Tab 1" shadowless bordered>
         <x-tab.items tab="Tab 1">Content 1</x-tab.items>
         <x-tab.items tab="Tab 2">Content 2</x-tab.items>
