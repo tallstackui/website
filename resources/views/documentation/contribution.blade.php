@@ -89,7 +89,8 @@
                     <x-block>4.x</x-block>
                 </li>
                 <li>
-                    Create a basic Laravel project using <x-refer doc="starter-kit">the starter kit</x-refer>
+                    Create a basic Laravel project using
+                    <x-refer doc="starter-kit">the starter kit</x-refer>
                 </li>
                 <li>
                     Prepare any authentication way to access the

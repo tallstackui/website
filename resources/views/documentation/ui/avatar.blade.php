@@ -13,12 +13,12 @@
     <x-slot:customization>
         <livewire:customization :$customization component="Avatar" />
     </x-slot>
-    <x-section title="Basic Usage">
+    <x-section title="Basic Usage" anchor="avatar-basic-usage">
         <x-preview language="blade" :contents="$basic">
             <x-avatar text="TS" />
         </x-preview>
     </x-section>
-    <x-section title="Color Variations">
+    <x-section title="Color Variations" anchor="avatar-color-variations">
         <x-preview language="blade" :contents="$colors">
             <div class="gap-2 space-y-2">
                 <x-avatar text="TS" color="primary" />
@@ -53,15 +53,24 @@
             </div>
         </x-preview>
     </x-section>
-    <x-section title="Size Variations">
+    <x-section title="Size Variations" anchor="avatar-size-variations">
         <x-preview language="blade" :contents="$sizes">
-            <x-avatar text="XS" xs />
-            <x-avatar text="SM" sm />
-            <x-avatar text="MD" md />
-            <x-avatar text="LG" lg />
+            <div class="flex flex-col gap-2">
+                <x-avatar text="XS" xs />
+                <x-avatar text="SM" sm />
+                <x-avatar text="MD" md />
+                <x-avatar text="LG" lg />
+                <x-avatar text="XL" xl />
+                <x-avatar text="2XL" 2xl />
+                <x-avatar text="3XL" 3xl />
+                <x-avatar text="4XL" 4xl />
+                <x-avatar text="5XL" 5xl />
+                <x-avatar text="6XL" 6xl />
+                <x-avatar text="7XL" 7xl />
+            </div>
         </x-preview>
     </x-section>
-    <x-section title="Square Variations">
+    <x-section title="Square Variations" anchor="avatar-square-variations">
         <x-preview language="blade" :contents="$square">
             <x-avatar text="TS" square />
         </x-preview>
@@ -69,6 +78,7 @@
     <x-section
         title="Placeholder"
         description="An option generate avatar with a svg placeholder."
+        anchor="avatar-placeholder"
     >
         <x-preview language="blade" :contents="$placeholder">
             <div class="gap-2 space-y-2">
@@ -107,13 +117,14 @@
     <x-section
         title="Borderless"
         description="An option to remove the default border."
+        anchor="avatar-borderless"
     >
         <x-preview language="blade" :contents="$borderless">
             <x-avatar color="primary" borderless />
         </x-preview>
     </x-section>
     <x-separator text="Modelable" />
-    <x-section title="Modelable">
+    <x-section title="Modelable" anchor="modelable-modelable">
         <x-slot:description>
             An option to generate a
             <a href="https://ui-avatars.com/" class="underline" target="_blank">
@@ -125,7 +136,7 @@
             <x-avatar :model="auth()->user()" color="fff" />
         </x-preview>
     </x-section>
-    <x-section title="Custom Property">
+    <x-section title="Custom Property" anchor="modelable-custom-property">
         <x-slot:description>
             Generate a
             <a href="https://ui-avatars.com/" class="underline" target="_blank">
@@ -137,7 +148,7 @@
             <x-avatar :model="auth()->user()" property="email" color="fff" />
         </x-preview>
     </x-section>
-    <x-section title="Customizing Colors">
+    <x-section title="Customizing Colors" anchor="modelable-customizing-colors">
         <x-slot:description>
             Generate a
             <a href="https://ui-avatars.com/" class="underline" target="_blank">
@@ -154,7 +165,7 @@
             />
         </x-preview>
     </x-section>
-    <x-section title="Other Options">
+    <x-section title="Other Options" anchor="modelable-other-options">
         <x-slot:description>
             Interact with all other
             <a href="https://ui-avatars.com/" class="underline" target="_blank">
@@ -175,8 +186,69 @@
             />
         </x-preview>
     </x-section>
+    <x-separator text="Gravatar" />
+    <x-section
+        title="Gravatar"
+        description="An option to read the avatar from gravatar.com."
+        anchor="gravatar-gravatar"
+        new
+    >
+        <x-preview language="blade" :contents="$gravatar">
+            <x-avatar gravatar="alvaro.meireles@live.com" />
+        </x-preview>
+    </x-section>
+    <x-section title="From Model" anchor="gravatar-from-model" new>
+        <x-preview language="blade" :contents="$gravatarModel">
+            <x-avatar gravatar="alvaro.meireles@live.com" />
+        </x-preview>
+    </x-section>
+    <x-section
+        title="From Another Column"
+        anchor="gravatar-from-another-column"
+        new
+    >
+        <x-slot:description>
+            A value carrying an
+            <x-block>@</x-block>
+            is the address itself; a value without one names the model attribute
+            holding it. An email always has one, a column name never does, so
+            the same prop covers both.
+        </x-slot>
+        <x-code language="blade" :contents="$gravatarColumn" />
+    </x-section>
+    <x-section
+        title="Gravatar Default"
+        description="An option to pick which image Gravatar serves when there is no account and no name to fall back to."
+        anchor="gravatar-gravatar-default"
+        new
+    >
+        <x-preview language="blade" :contents="$gravatarDefault">
+            <div class="flex gap-2">
+                <x-avatar
+                    gravatar="nobody@tallstackui.com"
+                    gravatar-default="identicon"
+                />
+                <x-avatar
+                    gravatar="nobody@tallstackui.com"
+                    gravatar-default="retro"
+                />
+                <x-avatar
+                    gravatar="nobody@tallstackui.com"
+                    gravatar-default="robohash"
+                />
+                <x-avatar
+                    gravatar="nobody@tallstackui.com"
+                    gravatar-default="monsterid"
+                />
+            </div>
+        </x-preview>
+    </x-section>
     <x-separator text="Image" />
-    <x-section title="Image" description="An option to use an image as avatar.">
+    <x-section
+        title="Image"
+        description="An option to use an image as avatar."
+        anchor="image-image"
+    >
         <div class="space-y-4">
             <x-preview language="blade" :contents="$image">
                 <x-avatar image="https://i.pravatar.cc/300" xs />
@@ -192,7 +264,7 @@
             <x-code language="blade" :contents="$imageBindSrc" />
         </div>
     </x-section>
-    <x-section title="Default Alt Text">
+    <x-section title="Default Alt Text" anchor="image-default-alt-text">
         <x-preview language="blade" :contents="$imageAlt">
             <x-avatar
                 image="https://i.pravatar.cc/300"
@@ -200,7 +272,7 @@
             />
         </x-preview>
     </x-section>
-    <x-section title="Group">
+    <x-section title="Group" anchor="image-group">
         <x-preview language="blade" :contents="$avatarGroup">
             <x-avatar.group>
                 <x-avatar image="https://i.pravatar.cc/300" borderless />
@@ -212,6 +284,7 @@
     <x-section
         title="Group Reverse"
         description="An option to invert the avatar overlap layering."
+        anchor="image-group-reverse"
     >
         <x-preview language="blade" :contents="$avatarGroupReverse">
             <x-avatar.group reverse>
@@ -226,13 +299,14 @@
     <x-section
         title="Presence"
         description="An option to indicate the presence status of the avatar."
+        anchor="image-presence"
     >
         <x-preview language="blade" :contents="$presence">
             <x-avatar image="https://i.pravatar.cc/300" presence />
             <x-avatar image="https://i.pravatar.cc/300" presence pulse />
         </x-preview>
     </x-section>
-    <x-section title="Presence Color">
+    <x-section title="Presence Color" anchor="image-presence-color">
         <x-preview language="blade" :contents="$presenceColors">
             <x-avatar
                 image="https://i.pravatar.cc/30"
@@ -246,7 +320,7 @@
             />
         </x-preview>
     </x-section>
-    <x-section title="Presence Positions">
+    <x-section title="Presence Positions" anchor="image-presence-positions">
         <x-preview language="blade" :contents="$presencePositions">
             <x-avatar
                 image="https://i.pravatar.cc/500"

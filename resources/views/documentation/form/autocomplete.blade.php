@@ -112,7 +112,8 @@
             <x-code language="blade" :contents="$fieldMapping" disable-copy />
             <p>
                 Optionally, you can set the mapping globally through the
-                TallStackUI <x-refer doc="configuration">configuration file</x-refer>
+                TallStackUI
+                <x-refer doc="configuration">configuration file</x-refer>
             </p>
         </div>
     </x-section>

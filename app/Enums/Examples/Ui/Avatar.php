@@ -47,6 +47,13 @@ class Avatar
     <x-avatar text="SM" sm />
     <x-avatar text="MD" md />
     <x-avatar text="LG" lg />
+    <x-avatar text="XL" xl />
+    <x-avatar text="2XL" 2xl />
+    <x-avatar text="3XL" 3xl />
+    <x-avatar text="4XL" 4xl />
+    <x-avatar text="5XL" 5xl />
+    <x-avatar text="6XL" 6xl />
+    <x-avatar text="7XL" 7xl />
     HTML;
 
     public const string SQUARE = <<<'HTML'
@@ -77,6 +84,33 @@ class Avatar
               color="fff"
               :options="['uppercase' => false, 'rounded' => true]"
     />
+    HTML;
+
+    public const string GRAVATAR = <<<'HTML'
+    <!-- A value carrying an "@" is the address itself. -->
+
+    <x-avatar gravatar="alvaro.meireles@live.com" />
+    HTML;
+
+    public const string GRAVATAR_MODEL = <<<'HTML'
+    <!-- Without a value, the "email" attribute of the model is used. -->
+
+    <x-avatar :model="auth()->user()" gravatar />
+    HTML;
+
+    public const string GRAVATAR_COLUMN = <<<'HTML'
+    <!-- A value without an "@" names the model attribute holding the address. -->
+
+    <x-avatar :model="auth()->user()" gravatar="contact_email" />
+    HTML;
+
+    public const string GRAVATAR_DEFAULT = <<<'HTML'
+    <!-- Allowed: 404, mp, identicon, monsterid, wavatar, retro, robohash, blank -->
+
+    <x-avatar gravatar="nobody@tallstackui.com" gravatar-default="identicon" />
+    <x-avatar gravatar="nobody@tallstackui.com" gravatar-default="retro" />
+    <x-avatar gravatar="nobody@tallstackui.com" gravatar-default="robohash" />
+    <x-avatar gravatar="nobody@tallstackui.com" gravatar-default="monsterid" />
     HTML;
 
     public const string PLACEHOLDER = <<<'HTML'

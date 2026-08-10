@@ -324,23 +324,35 @@ ui:
     - Shadowless
     - Side Border
   avatar:
-    - Basic Usage
-    - Color Variations
-    - Size Variations
-    - Square Variations
-    - Placeholder
-    - Borderless
-    - Modelable
-    - Custom Property
-    - Customizing Colors
-    - Other Options
-    - Image
-    - Default Alt Text
-    - Group
-    - Group Reverse
-    - Presence
-    - Presence Color
-    - Presence Positions
+    Avatar:
+      contents:
+        - Basic Usage
+        - Color Variations
+        - Size Variations
+        - Square Variations
+        - Placeholder
+        - Borderless
+    Modelable:
+      contents:
+        - Modelable
+        - Custom Property
+        - Customizing Colors
+        - Other Options
+    Gravatar:
+      contents:
+        - Gravatar
+        - From Model
+        - From Another Column
+        - Gravatar Default
+    Image:
+      contents:
+        - Image
+        - Default Alt Text
+        - Group
+        - Group Reverse
+        - Presence
+        - Presence Color
+        - Presence Positions
   back-to-top:
     - Basic Usage
     - Positions
