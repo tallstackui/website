@@ -14,7 +14,7 @@
 <section
     x-data="{ anchor: false, code: false }"
     id="{{ $anchor }}"
-    {{ $attributes->merge(["class" => "text-gray-600 mb-6 dark:text-dark-400"]) }}
+    {{ $attributes->merge(["class" => "text-gray-600 mb-6 scroll-mt-20 dark:text-dark-400"]) }}
     @if ($id) id="{{ $id }}" @endif
 >
     @if ($title)

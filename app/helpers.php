@@ -3,6 +3,21 @@
 declare(strict_types=1);
 
 use Illuminate\Support\Facades\Cookie;
+use TallStackUi\TallStackUiServiceProvider;
+
+if (! function_exists('tallstackui_configuration')) {
+    /** The configuration file shipped by the installed TallStackUI, read at runtime. */
+    function tallstackui_configuration(): string
+    {
+        $provider = (new ReflectionClass(TallStackUiServiceProvider::class))->getFileName();
+
+        if ($provider === false || ! is_readable($path = dirname($provider).'/config.php')) {
+            return '// The TallStackUI configuration file could not be located.';
+        }
+
+        return mb_rtrim((string) file_get_contents($path));
+    }
+}
 
 if (! function_exists('latest_version')) {
     /** The newest major currently published, taken from the top of the sites map. */

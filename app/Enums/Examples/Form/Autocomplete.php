@@ -105,6 +105,24 @@ class Autocomplete
     ]" />
     HTML;
 
+    public const string FIELD_MAPPING = <<<'HTML'
+    <!-- Format: value:key|description:key|image:key|metadata:key -->
+
+    <x-autocomplete label="User"
+                    :items="$users"
+                    select="value:name|description:email|image:avatar" />
+    HTML;
+
+    public const string FIELD_MAPPING_CONFIG = <<<'PHP'
+    'autocomplete' => [
+        Components\Form\Autocomplete\Component::class,
+        [
+            'strict' => false,
+            'select' => 'value:name|description:email|image:avatar', // [tl! highlight]
+        ],
+    ],
+    PHP;
+
     public const string REQUEST_STRING = <<<'HTML'
     <!-- Using a route as a string -->
     <x-autocomplete label="User" request="/api/users" />
@@ -112,6 +130,40 @@ class Autocomplete
     <!-- Using a Laravel route -->
     <x-autocomplete label="User" :request="route('api.users')" />
     HTML;
+
+    public const string REQUEST_LIVE = <<<'HTML'
+    <!--
+    The endpoint below returns the user name under "label", so "select" points
+    the autocomplete "value" at it. "description" and "image" already match.
+    -->
+
+    <x-autocomplete label="User"
+                    placeholder="Type a user name..."
+                    :request="route('api.users')"
+                    select="value:label"
+                    clearable />
+    HTML;
+
+    public const string REQUEST_LIVE_ENDPOINT = <<<'PHP'
+    use App\Models\User;
+    use Illuminate\Http\Request;
+    use Illuminate\Support\Facades\Route;
+
+    Route::get('/users', function (Request $request) {
+        $search = $request->get('search');
+
+        return User::query()
+            ->when($search, fn ($query) => $query->whereAny(['name', 'email'], 'like', "%{$search}%"))
+            ->limit(10)
+            ->get()
+            ->map(fn (User $user): array => [
+                'label'       => $user->name,
+                'value'       => $user->id,
+                'image'       => $user->avatar,
+                'description' => $user->email,
+            ]);
+    })->name('api.users');
+    PHP;
 
     public const string REQUEST_ARRAY = <<<'HTML'
     <x-autocomplete label="User" :request="[
@@ -125,8 +177,6 @@ class Autocomplete
     use App\Models\User;
     use Illuminate\Http\Request;
     use Illuminate\Support\Facades\Route;
-
-    // ...
 
     Route::get('/users', function (Request $request) {
         $search = $request->input('search');

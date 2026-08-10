@@ -57,7 +57,12 @@ class Time
     HTML;
 
     public const string GESTURES = <<<'HTML'
-    <x-time wire:model="time" />
+    <!--
+    Scroll or drag over the sliders and over the numbers.
+    Both respect the step and the min/max bounds.
+    -->
+
+    <x-time :step-minute="5" />
     HTML;
 
     public const string CUSTOMIZATION = <<<'HTML'

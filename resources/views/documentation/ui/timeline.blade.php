@@ -71,23 +71,27 @@
                 at render time.
             </p>
             <p>
-                <b>Array mode</b>
-                auto-propagates container props (
+                Container props (
                 <x-block>horizontal</x-block>
+                ,
+                <x-block>alternate</x-block>
                 ,
                 <x-block>compact</x-block>
                 ,
+                <x-block>color</x-block>
+                and
                 <x-block>style</x-block>
-                ,
-                <x-block>alternate</x-block>
-                ) to each item.
-                <b>Slot mode</b>
-                requires those props to be passed explicitly per item —
-                Laravel's
-                <x-block>@@aware</x-block>
-                directive does not propagate from class-based parents to slot
-                children.
+                ) are inherited by the items in
+                <b>both modes</b>
+                , so they do not have to be repeated on each item. Only
+                <x-block>color</x-block>
+                and
+                <x-block>style</x-block>
+                are meant to be overridden per item: the layout flags describe
+                the timeline as a whole, and setting them on a single item
+                leaves it out of step with its siblings.
             </p>
+            <x-code language="blade" :contents="$propagation" disable-copy />
             <x-preview language="blade" :contents="$arrayMode">
                 <x-timeline :items="$releases" />
             </x-preview>

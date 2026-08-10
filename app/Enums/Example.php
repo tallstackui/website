@@ -135,12 +135,12 @@ enum Example: string
 
         return [...collect($constants)
             ->mapWithKeys(function (string $value, string $key) use ($wrapper) {
-                $hasApiCall = str_contains($value, 'TallStackUi::personalize()') || str_contains($value, 'TallStackUi::customize()');
+                $customized = str_contains($value, 'TallStackUi::personalize()') || str_contains($value, 'TallStackUi::customize()');
 
                 return [
                     str($key)->lower()
                         ->camel()
-                        ->value() => ! str_contains($value, 'AppServiceProvider') && $hasApiCall
+                        ->value() => ! str_contains($value, 'AppServiceProvider') && $customized
                     ? str_replace('{%model%}', $value, $wrapper)
                     : $value,
                 ];

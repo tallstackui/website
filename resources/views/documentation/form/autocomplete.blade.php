@@ -93,6 +93,30 @@
         </p>
     </x-section>
     <x-section
+        title="Field Mapping"
+        description="An option to remap the item keys when they do not match the expected structure."
+    >
+        <div class="space-y-4">
+            <p>
+                When the items — local or remote — name their fields
+                differently, the
+                <x-block>select</x-block>
+                attribute remaps them instead of forcing a reshape at the
+                source. Any part left out falls back to the key of the same
+                name, and
+                <x-block>disabled</x-block>
+                is always read from
+                <x-block>disabled</x-block>
+                .
+            </p>
+            <x-code language="blade" :contents="$fieldMapping" disable-copy />
+            <p>
+                Optionally, you can set the mapping globally through the
+                TallStackUI <x-refer doc="configuration">configuration file</x-refer>
+            </p>
+        </div>
+    </x-section>
+    <x-section
         title="Disabled Items"
         description="An option for passing custom or additional values."
     >
@@ -190,6 +214,35 @@
                 , the autocomplete can fetch items from a remote source:
             </p>
             <x-code language="blade" :contents="$requestString" disable-copy />
+            <p>
+                The example below queries the same endpoint used by the
+                <x-refer :doc="['form', 'select']">styled select</x-refer>
+                . It returns the user name under
+                <x-block>label</x-block>
+                , so
+                <x-block>select</x-block>
+                points the autocomplete
+                <x-block>value</x-block>
+                at it, while
+                <x-block>description</x-block>
+                and
+                <x-block>image</x-block>
+                already match:
+            </p>
+            <x-preview language="blade" :contents="$requestLive">
+                <x-autocomplete
+                    label="User"
+                    placeholder="Type a user name..."
+                    :request="route('api.users')"
+                    select="value:label"
+                    clearable
+                />
+            </x-preview>
+            <x-code
+                language="php"
+                :contents="$requestLiveEndpoint"
+                disable-copy
+            />
             <p>
                 Like
                 <x-block>select.styled</x-block>

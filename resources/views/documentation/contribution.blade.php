@@ -73,7 +73,7 @@
             <ul class="list-inside list-decimal">
                 <li>
                     Fork the
-                    <x-block>3.x</x-block>
+                    <x-block>4.x</x-block>
                     branch of the
                     <a
                         href="https://github.com/tallstackui/tallstackui"
@@ -86,22 +86,10 @@
                 <li>Clone the repository forked for your computer.</li>
                 <li>
                     Create a new branch based on
-                    <x-block>3.x</x-block>
-                    -
-                    <b class="italic">THIS IS A MANDATORY REQUIREMENT!</b>
+                    <x-block>4.x</x-block>
                 </li>
                 <li>
-                    Create a basic Laravel project using
-                    <a
-                        href="https://laravel.com/docs/10.x/starter-kits#laravel-breeze"
-                        class="underline"
-                        target="_blank"
-                    >
-                        Laravel Breeze
-                    </a>
-                    with
-                    <b>Livewire (V3)</b>
-                    stack.
+                    Create a basic Laravel project using <x-refer doc="starter-kit">the starter kit</x-refer>
                 </li>
                 <li>
                     Prepare any authentication way to access the

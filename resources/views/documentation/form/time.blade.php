@@ -22,6 +22,15 @@
             <x-time label="Time" hint="Select the hour" />
         </x-preview>
     </x-section>
+    <x-section
+        title="Scroll & Drag"
+        new
+        description="An option to change the time using the mouse scroll or drag."
+    >
+        <x-preview language="blade" :contents="$gestures">
+            <x-time step-minute="5" hint="Click in the input field and use the mouse wheel or drag (under the numbers) up and down to change the time" />
+        </x-preview>
+    </x-section>
     <x-section title="Available Formats">
         <x-preview language="blade" :contents="$formats">
             <div class="space-y-2">

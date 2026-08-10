@@ -19,9 +19,6 @@ documentation:
 configuration:
   - Concept
   - Configuration File Structure
-  - Global Keys
-  - How the Published File Is Merged
-  - Scrollbar Offset
 component-prefix:
   - Configuration File
   - Environment Variable
@@ -194,6 +191,7 @@ form:
     - Basic Usage
     - Label
     - Label Slot
+    - Label Slot at Left
     - Label Alignment
     - Size Variations
     - Color Variations
@@ -261,6 +259,7 @@ form:
   time:
     - Basic Usage
     - Label & Hint
+    - Scroll & Drag
     - Available Formats
     - Min & Max Hours and Minutes
     - Required

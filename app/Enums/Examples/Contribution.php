@@ -8,14 +8,15 @@ class Contribution
 {
     public const string COMPOSER = <<<'HTML'
     "require": {
-        "tallstackui/tallstackui": "v3.x-dev", // [tl! highlight]
+        "tallstackui/tallstackui": "v4.x-dev", // [tl! highlight]
 
         // ...
     },
 
     // ...
 
-    // Replace the "url" with the path to the TallStackUI on your computer. [tl! highlight:7]
+    // Replace the "url" with the path to the [tl! highlight:8]
+    // TallStackUI fork cloned to your computer.
 
     "repositories": [
         {

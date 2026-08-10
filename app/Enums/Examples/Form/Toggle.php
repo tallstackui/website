@@ -23,6 +23,14 @@ class Toggle
     </x-toggle>
     HTML;
 
+    public const string LABEL_LEFT = <<<'HTML'
+    <x-toggle>
+        <x-slot:label left>
+            I agree to the <a href="#">terms and conditions</a>
+        </x-slot:label>
+    </x-toggle>
+    HTML;
+
     public const string ALIGNMENT = <<<'HTML'
     <x-toggle>
         <x-slot:label>

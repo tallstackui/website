@@ -33,6 +33,16 @@
             </x-toggle>
         </x-preview>
     </x-section>
+    <x-section title="Label Slot at Left">
+        <x-preview language="blade" :contents="$labelLeft">
+            <x-toggle>
+                <x-slot:label left>
+                    I agree to the
+                    <a href="#">terms and conditions</a>
+                </x-slot>
+            </x-toggle>
+        </x-preview>
+    </x-section>
     <x-section title="Label Alignment">
         <x-preview language="blade" :contents="$alignment">
             <div class="space-y-4">

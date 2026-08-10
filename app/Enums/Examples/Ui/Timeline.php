@@ -50,6 +50,13 @@ class Timeline
     </x-timeline>
     HTML;
 
+    public const string PROPAGATION = <<<'HTML'
+    <x-timeline horizontal color="green">
+        <x-timeline.items title="A" />
+        <x-timeline.items title="B" color="red" /> <!-- overrides just this one -->
+    </x-timeline>
+    HTML;
+
     public const string HORIZONTAL = <<<'HTML'
     <x-timeline horizontal>
         <x-timeline.items title="Step A" description="Initial setup" />
