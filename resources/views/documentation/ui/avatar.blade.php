@@ -206,14 +206,8 @@
         title="From Another Column"
         anchor="gravatar-from-another-column"
         new
+        description="An option to use a different property to generate the gravatar"
     >
-        <x-slot:description>
-            A value carrying an
-            <x-block>@</x-block>
-            is the address itself; a value without one names the model attribute
-            holding it. An email always has one, a column name never does, so
-            the same prop covers both.
-        </x-slot>
         <x-code language="blade" :contents="$gravatarColumn" />
     </x-section>
     <x-section

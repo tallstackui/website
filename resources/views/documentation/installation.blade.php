@@ -3,7 +3,7 @@
     <x-section class="mt-4" title="Meet TallStackUI" disable-copy>
         TallStackUI is
         <b class="text-pink-600">
-            a powerful suite of 50+ ready-to-use components for TALL Stack
+            a powerful suite of 80+ ready-to-use components for TALL Stack
             applications.
         </b>
         TallStackUI is unlike anything you've ever seen, from its conception to
@@ -36,17 +36,10 @@
     </x-section>
     <x-section title="Requirements" disable-copy>
         <div class="space-y-4">
-            <p>
-                TallStackUI was created with a
-                <b class="font-semibold text-pink-500 underline">
-                    focus on Livewire 3
-                </b>
-                so the usage requirements are:
-            </p>
             <ul class="mt-4 ml-4 list-inside list-decimal space-y-2">
                 <li>PHP: v8.1 or later</li>
                 <li>Laravel: v10 or later</li>
-                <li>Livewire: v3 or later</li>
+                <li>Livewire: v4 or later</li>
                 <li>AlpineJS: v3 or later</li>
                 <li>TailwindCSS: v4 or later</li>
             </ul>
@@ -54,9 +47,9 @@
     </x-section>
     <x-section title="Starter Kit" disable-copy>
         Do you want to save time by using an already created base project with
-        all you need: Laravel 12, Livewire 3, TallStackUI 2 and TailwindCSS 4?
+        all you need: Laravel 13, Livewire 4, TallStackUI 4 and TailwindCSS 4?
         Discover the official
-        <b>TallStackUI starter kit for Laravel 12</b>
+        <b>TallStackUI starter kit for Laravel 13</b>
         and save time on a new project creation.
         <x-refer doc="starter-kit">Click here!</x-refer>
     </x-section>
@@ -80,7 +73,7 @@
                         <b class="underline">
                             above of the
                             @verbatim @vite @endverbatim
-                                
+
                             tag.
                         </b>
                     </x-warning>
