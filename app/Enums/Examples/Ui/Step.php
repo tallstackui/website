@@ -258,17 +258,6 @@ class Step
     <x-step selected="2" helpers="app.steps.custom">...</x-step>
     HTML;
 
-    public const string HELPERS_CONFIGURATION = <<<'PHP'
-    // config/tallstackui.php
-
-    'step' => [
-        Components\Step\Main::class,
-        [
-            'helpers' => 'compact',
-        ],
-    ],
-    PHP;
-
     public const string NAVIGATION_SLOTS = <<<'HTML'
     <x-step selected="1" helpers>
         <x-step.items step="1" title="Account" description="Step One">Step one...</x-step.items>

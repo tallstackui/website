@@ -50,20 +50,6 @@ class Color
     <x-color x-on:set="alert(`Selected Color: ${$event.detail.color}`)" />
     HTML;
 
-    public const string CONFIGURATION = <<<'PHP'
-    // config/tallstackui.php
-
-    'color' => [
-        Components\Form\Color\Component::class,
-        [
-            'colors' => [],
-            'picker' => false,
-            'selectable' => false,
-            'clearable' => false,
-        ],
-    ],
-    PHP;
-
     public const string CUSTOMIZATION = <<<'HTML'
     TallStackUi::customize()
         ->form('color')

@@ -57,8 +57,6 @@ enum Example: string
     case StarterKit      = 'StarterKit';
     case ComponentPrefix = 'ComponentPrefix';
     case Translation     = 'Translation';
-    case Troubleshooting = 'Troubleshooting';
-    case Updates         = 'Updates';
     case UpgradeGuide    = 'UpgradeGuide';
     case Welcome         = 'Welcome';
     case WithoutLivewire = 'WithoutLivewire';

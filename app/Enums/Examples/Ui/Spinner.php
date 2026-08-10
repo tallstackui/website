@@ -73,11 +73,6 @@ class Spinner
     </x-button>
     HTML;
 
-    public const string EXCEPTION = <<<'HTML'
-    {{-- Two variants at once throws --}}
-    <x-spinner wave bars />
-    HTML;
-
     public const string CUSTOMIZATION = <<<'HTML'
     TallStackUi::customize()
         ->spinner()

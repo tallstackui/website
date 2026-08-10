@@ -113,16 +113,6 @@ class Autocomplete
                     select="value:name|description:email|image:avatar" />
     HTML;
 
-    public const string FIELD_MAPPING_CONFIG = <<<'PHP'
-    'autocomplete' => [
-        Components\Form\Autocomplete\Component::class,
-        [
-            'strict' => false,
-            'select' => 'value:name|description:email|image:avatar', // [tl! highlight]
-        ],
-    ],
-    PHP;
-
     public const string REQUEST_STRING = <<<'HTML'
     <!-- Using a route as a string -->
     <x-autocomplete label="User" request="/api/users" />
@@ -191,10 +181,6 @@ class Autocomplete
                 'image' => $user->avatar,
             ]);
     })->name('api.users');
-    HTML;
-
-    public const string REQUEST_LAZY = <<<'HTML'
-    <x-autocomplete label="User" :request="route('api.users')" lazy="2" />
     HTML;
 
     public const string DISABLED = <<<'HTML'

@@ -264,21 +264,6 @@ class Select
     })->name('api.users');
     HTML;
 
-    public const string STYLED_GROUPED_QUALIFIED = <<<'TEXT'
-    single:   [ Brazil > São Paulo                          ✕ ⌵ ]
-
-    multiple: [ (Brazil > São Paulo ✕) (United States > New York ✕) ]
-    TEXT;
-
-    public const string STYLED_GROUPED_LOOSE = <<<'HTML'
-    <x-select.styled :options="[
-        ['label' => 'Brazil', 'value' => [
-            ['label' => 'São Paulo', 'value' => 4],
-        ]],
-        ['label' => 'Uncategorized', 'value' => 99],
-    ]" />
-    HTML;
-
     public const string CUSTOMIZATION_NATIVE = <<<'HTML'
     TallStackUi::customize()
         ->select()

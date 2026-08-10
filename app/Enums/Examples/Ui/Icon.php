@@ -18,13 +18,6 @@ class Icon
     php artisan optimize:clear
     HTML;
 
-    public const string OWENVOKE = <<<'HTML'
-    <x-icon name="fas.cloud" class="w-6 h-6 text-gray-500"/>
-
-    <!-- This way would also work: -->
-    <x-fas-cloud class="w-6 h-6 text-gray-500"/>
-    HTML;
-
     public const string SYMBOL = <<<'HTML'
     <!-- Assuming you have installed: secondnetwork/blade-tabler-icons -->
     <x-icon name="tabler.sun" />
@@ -145,32 +138,6 @@ class Icon
     <!-- error still wins over any color -->
     <x-icon name="exclamation-circle" error blue />
     HTML;
-
-    public const string SHORTHAND_EXCEPTION = <<<'HTML'
-    <x-icon name="users" xs 2xl />    {{-- throws --}}
-    <x-icon name="users" red blue />  {{-- throws --}}
-    HTML;
-
-    public const string SHORTHAND_CLASS = <<<'HTML'
-    {{-- Declaring class turns both shorthands off, including an empty class="" --}}
-    <x-icon name="users" 2xl red class="size-4" />
-    HTML;
-
-    public const string SHORTHAND_CONFIGURATION = <<<'PHP'
-    // config/tallstackui.php
-
-    'icon' => [
-        Components\Icon\Component::class,
-        [
-            'size' => 'md',
-        ],
-    ],
-    PHP;
-
-    public const string SHORTHAND_CUSTOMIZATION = <<<'PHP'
-    TallStackUi::customize()->icon()->block('sizes.md', 'h-9 w-9');
-    TallStackUi::customize('icon', scope: 'hero')->block('sizes.md', 'h-12 w-12');
-    PHP;
 
     public const string CUSTOMIZATION = <<<'HTML'
     TallStackUi::customize()

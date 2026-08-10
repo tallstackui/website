@@ -179,10 +179,6 @@ class Alert
     <x-alert title="TallStackUi" text="Extra large" rounded="xl" />
     HTML;
 
-    public const string SQUARE = <<<'HTML'
-    <x-alert title="TallStackUi" text="No rounded corners." square />
-    HTML;
-
     public const string BORDERED = <<<'HTML'
     <!-- Side only — color inherited from the alert's `color` -->
     <x-alert title="TallStackUi" text="Inherits the red color" color="red" light bordered="left" />

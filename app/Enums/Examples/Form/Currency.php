@@ -50,10 +50,6 @@ class Currency
     <x-currency currency="$$" />
     HTML;
 
-    public const string MODE_DEFAULT = <<<'HTML'
-    <x-currency wire:model="price" />
-    HTML;
-
     public const string MODE_MUTATE = <<<'HTML'
     <x-currency mutate wire:model="price" />
     HTML;
@@ -74,34 +70,6 @@ class Currency
 
     public const string DECIMAL_BLADE = <<<'HTML'
     <x-currency decimal wire:model="product.price" />
-    HTML;
-
-    public const string GLOBAL_DEFAULTS = <<<'HTML'
-    // ...
-
-    'currency' => [
-        Components\Form\Currency\Component::class,
-        /*
-        |----------------------------------------------------------------------
-        | Currency Global Settings
-        |----------------------------------------------------------------------
-        |
-        | mutate: when true, every currency component defaults to sending the
-        | formatted display string (e.g. "2,000.00") to the Livewire property.
-        | decimal: when true, every currency component defaults to sending the
-        | parsed decimal string (e.g. "2000.00") to the Livewire property.
-        | The two are mutually exclusive — setting both raises a validation
-        | exception at render time.
-        */
-        [
-            'mutate' => false,
-            'decimal' => false, // [tl! highlight] every <x-currency /> defaults to decimal mode
-        ],
-    ],
-    HTML;
-
-    public const string MUTATE = <<<'HTML'
-    <x-currency mutate />
     HTML;
 
     public const string CUSTOMIZATION = <<<'HTML'

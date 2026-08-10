@@ -197,10 +197,4 @@ class Tab
         ->tab()
         ->block('block', 'classes');
     HTML;
-
-    public const string CUSTOMIZATION_ITEMS = <<<'HTML'
-    TallStackUi::customize()
-        ->tab('items')
-        ->block('block', 'classes');
-    HTML;
 }

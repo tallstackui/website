@@ -87,38 +87,6 @@ class Tooltip
     <x-tooltip text="black" color="black" />
     HTML;
 
-    public const string OUTLINES = <<<'HTML'
-    <x-tooltip text="primary" outline />
-    <x-tooltip text="secondary" color="secondary" outline />
-    <x-tooltip text="slate" color="slate" outline />
-    <x-tooltip text="gray" color="gray" outline />
-    <x-tooltip text="zinc" color="zinc" outline />
-    <x-tooltip text="neutral" color="neutral" outline />
-    <x-tooltip text="stone" color="stone" outline />
-    <x-tooltip text="red" color="red" outline />
-    <x-tooltip text="orange" color="orange" outline />
-    <x-tooltip text="amber" color="amber" outline />
-    <x-tooltip text="yellow" color="yellow" outline />
-    <x-tooltip text="lime" color="lime" outline />
-    <x-tooltip text="green" color="green" outline />
-    <x-tooltip text="emerald" color="emerald" outline />
-    <x-tooltip text="teal" color="teal" outline />
-    <x-tooltip text="cyan" color="cyan" outline />
-    <x-tooltip text="sky" color="sky" outline />
-    <x-tooltip text="blue" color="blue" outline />
-    <x-tooltip text="indigo" color="indigo" outline />
-    <x-tooltip text="violet" color="violet" outline />
-    <x-tooltip text="purple" color="purple" outline />
-    <x-tooltip text="fuchsia" color="fuchsia" outline />
-    <x-tooltip text="pink" color="pink" outline />
-    <x-tooltip text="rose" color="rose" outline />
-    <x-tooltip text="mauve" color="mauve" outline />
-    <x-tooltip text="olive" color="olive" outline />
-    <x-tooltip text="mist" color="mist" outline />
-    <x-tooltip text="taupe" color="taupe" outline />
-    <x-tooltip text="black" color="black" outline />
-    HTML;
-
     public const string DELAY = <<<'HTML'
     <!-- Accepted: slow (400ms), fast (150ms), faster (75ms), flash (0) -->
     <x-tooltip text="TallStackUI" delay="flash" />
