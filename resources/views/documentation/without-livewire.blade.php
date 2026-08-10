@@ -42,13 +42,11 @@
                     the page, since that is where AlpineJS comes from.
                 </p>
             </div>
-            <x-warning warning title="Table left the list on 4.x">
+            <x-warning info title="Table left the list on 4.x">
                 <x-block>x-table</x-block>
                 no longer requires the Livewire context, and
                 <x-block>x-upload.async</x-block>
-                works outside it too &mdash; only the original
-                <x-block>x-upload</x-block>
-                still rides the Livewire upload pipeline.
+                works outside it too.
             </x-warning>
         </div>
     </x-section>
