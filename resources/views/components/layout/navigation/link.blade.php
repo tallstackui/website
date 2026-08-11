@@ -17,7 +17,7 @@
         $attributes->class([
             "group inline-flex w-full items-center gap-x-2 rounded-md py-1 pr-2 text-[0.84rem] transition",
             "dark:text-dark-400 dark:hover:text-dark-100 text-gray-500 hover:text-gray-900" => ! $activated,
-            "font-medium text-pink-600 dark:text-pink-400" => $activated,
+            "font-medium text-pink-600 dark:text-pink-500" => $activated,
         ])
     }}
     wire:navigate

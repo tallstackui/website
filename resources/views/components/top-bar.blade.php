@@ -4,8 +4,7 @@
     >
         <p>
             <b>TallStackUI 4.0 is here!</b>
-            Six new components, a near-black dark mode, and dozens of
-            improvements.
+            Seven new components and thousand of improvements.
             <a
                 href="/"
                 class="font-semibold underline decoration-pink-500 underline-offset-2"

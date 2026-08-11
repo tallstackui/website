@@ -37,15 +37,6 @@
                 experience and deep expertise in PHP, the Laravel ecosystem
                 overall, and the TALL Stack.
             </p>
-
-            <div
-                class="mt-3 flex flex-wrap items-center justify-center gap-1.5"
-            >
-                <x-badge color="pink" xs round light>Laravel</x-badge>
-                <x-badge color="violet" xs round light>Livewire</x-badge>
-                <x-badge color="sky" xs round light>Alpine.js</x-badge>
-                <x-badge color="emerald" xs round light>TailwindCSS</x-badge>
-            </div>
         </div>
 
         <div class="relative mt-6 space-y-2">
