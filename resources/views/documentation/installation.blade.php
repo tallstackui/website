@@ -68,10 +68,8 @@
                         The TallStackUI script must be loaded
                         <b class="underline">
                             above of the
-                            @verbatim
-                                            @vite
-                            @endverbatim
-
+                            @verbatim @vite @endverbatim
+                                
                             tag.
                         </b>
                     </x-warning>

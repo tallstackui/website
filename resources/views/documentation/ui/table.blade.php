@@ -138,9 +138,8 @@
         <p>
             The table component provides a custom Blade directive
             <x-block>
-                @verbatim
-                                                        @interact
-                @endverbatim
+                @verbatim @interact @endverbatim
+                    
             </x-block>
             to allow you to interact with the table columns about the data
             provided in each row. Allowing you to interact with the table and
@@ -158,9 +157,8 @@
             , for cases where you want to render components in a loop, using the
             Blade
             <x-block>
-                @verbatim
-                                                        @interact
-                @endverbatim
+                @verbatim @interact @endverbatim
+                    
             </x-block>
             directive, you must specify a unique key for each component:
         </p>
@@ -170,9 +168,8 @@
             <x-block>$loop</x-block>
             inside the
             <x-block>
-                @verbatim
-                                                        @interact
-                @endverbatim
+                @verbatim @interact @endverbatim
+                    
             </x-block>
             directive to interact with the data of each row. The
             <x-block>$loop</x-block>

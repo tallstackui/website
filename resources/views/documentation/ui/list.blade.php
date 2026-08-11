@@ -194,21 +194,18 @@
             A scroll container is required for the sentinel to intersect. The
             server resolves the
             <x-block>
-                @verbatim
-                                                                    @interact('item_caption')
-                @endverbatim
+                @verbatim @interact('item_caption') @endverbatim
+                    
             </x-block>
             ,
             <x-block>
-                @verbatim
-                                                                    @interact('item_action')
-                @endverbatim
+                @verbatim @interact('item_action') @endverbatim
+                    
             </x-block>
             , and
             <x-block>
-                @verbatim
-                                                                    @interact('item_menu')
-                @endverbatim
+                @verbatim @interact('item_menu') @endverbatim
+                    
             </x-block>
             interactions during row rendering. Without a server render for each
             row, these interactions cannot be resolved, so the combination
