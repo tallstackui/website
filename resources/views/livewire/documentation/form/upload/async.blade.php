@@ -23,8 +23,8 @@ new class extends Component {
                 wire:model.live="document"
                 :route="route('demo.async-upload')"
                 label="Document"
-                accept="image/*"
-                :max-size="50"
+                accept="application/pdf"
+                :max-size="60"
             />
             <p class="dark:text-dark-400 text-sm text-gray-500">
                 Bound value:
@@ -36,21 +36,46 @@ new class extends Component {
             wire:model="gallery"
             :route="route('demo.async-upload')"
             label="Gallery"
-            accept="image/*"
+            accept="application/pdf"
             multiple
             :limit="6"
             :columns="4"
-            :max-size="50"
+            :max-size="60"
         />
     @elseif ($mode === 3)
         <x-upload.async
             wire:model="files"
             :route="route('demo.async-upload')"
             label="Files"
-            accept="image/*"
+            accept="application/pdf"
             multiple
             manual
-            :max-size="50"
-        />
+            :max-size="60"
+        >
+            <x-slot:footer>
+                <div
+                    x-show="files.length"
+                    class="mt-3 flex items-center justify-between"
+                >
+                    <span
+                        x-text="summary()"
+                        class="text-xs text-gray-500"
+                    ></span>
+
+                    <div class="flex items-center gap-2">
+                        <x-button color="red" x-on:click="clear()" round sm>
+                            Abort & Clear
+                        </x-button>
+                        <x-button
+                            x-bind:disabled="!sendable() || disabled"
+                            x-on:click="send()"
+                            round
+                        >
+                            Upload Now
+                        </x-button>
+                    </div>
+                </div>
+            </x-slot>
+        </x-upload.async>
     @endif
 </div>

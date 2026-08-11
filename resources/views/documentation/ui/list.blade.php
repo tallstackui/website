@@ -195,19 +195,19 @@
             server resolves the
             <x-block>
                 @verbatim
-                                                                @interact('item_caption')
+                                                                    @interact('item_caption')
                 @endverbatim
             </x-block>
             ,
             <x-block>
                 @verbatim
-                                                                @interact('item_action')
+                                                                    @interact('item_action')
                 @endverbatim
             </x-block>
             , and
             <x-block>
                 @verbatim
-                                                                @interact('item_menu')
+                                                                    @interact('item_menu')
                 @endverbatim
             </x-block>
             interactions during row rendering. Without a server render for each

@@ -42,6 +42,33 @@ class UpgradeGuide
     TallStackUi::customize()->button()->block('border.radius.full', '...'); // [tl! add]
     PHP;
 
+    public const string BUTTON_SPINNER = <<<'PHP'
+    TallStackUi::customize()->button()->block('icon.spinner-animation', 'animate-pulse'); // [tl! remove]
+    TallStackUi::customize()->button()->block('spinner.gradient.base', 'inline-block animate-pulse'); // [tl! add]
+    PHP;
+
+    public const string CLIPBOARD_ICON = <<<'HTML'
+    <x-clipboard text="TallStackUI" icon :icons="['copy' => 'pencil', 'copied' => 'check']" /> // [tl! remove]
+    <x-clipboard text="TallStackUI" :icon="['copy' => 'pencil', 'copied' => 'check']" /> // [tl! add]
+    HTML;
+
+    public const string CALENDAR_SCOPE = <<<'PHP'
+    // The calendar renders no floating anymore, so the internal scope is gone
+    TallStackUi::customize('floating', scope: 'calendar.floating')->block('default', '...'); // [tl! remove]
+    PHP;
+
+    public const string CUSTOMIZATION_STRICT = <<<'PHP'
+    // 3.x: quietly built a scope named "main"; 4.x: throws
+    TallStackUi::customize('badge.main')->block('wrapper', '...');
+
+    // 3.x: wrote nowhere; 4.x: throws
+    TallStackUi::customize('alert')->append('foo-bar');
+
+    // 3.x: registered twice, so the narrowing never took effect; 4.x: the last call wins
+    TallStackUi::customize()->globals()->colorful();
+    TallStackUi::customize()->globals()->colorful(toast: false);
+    PHP;
+
     public const string TOOLTIP_DISABLED = <<<'HTML'
     x-effect="$el._tippy && ($store['tsui.side-bar'].open ? $el._tippy.disable() : $el._tippy.enable())" // [tl! remove]
     x-bind:data-tooltip-disabled="$store['tsui.side-bar'].open" // [tl! add]

@@ -227,18 +227,17 @@ form:
         - Demonstration
   upload-async:
     - Concept
+    - Prepare Backend
+    - Caveats
     - Basic Usage
     - Multiple
     - Manual
-    - Without Livewire
-    - Bound Value
-    - Backend
-    - Backend Options
+    - Uploader Trait
     - Taking Over Persistence
-    - Guards
+    - Authorization
     - Staging
     - Cleaning Up
-    - AlpineJS Events
+    - JavaScript Events
     - Laravel Events
     - Configuration
   date:

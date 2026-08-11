@@ -24,7 +24,7 @@
     </x-section>
     <x-section title="Demonstration" disable-copy>
         <div class="space-y-4">
-            <img src="{{ url("assets/images/env-bar.png") }}" />
+            <img src="{{ url("assets/images/env-bar.png") }}"/>
             <p>
                 As you can see in the example above, the environment is "local",
                 so this determines the green color for all visual elements of
@@ -57,130 +57,61 @@
     </x-section>
     <x-section title="Installation" disable-copy>
         <div class="space-y-4">
-            <x-code language="shell" :contents="$installation" />
+            <x-code language="shell" :contents="$installation"/>
             <p>
                 <span class="underline">
                     EnvBar will be automatically injected into your application.
                 </span>
-                If you prefer to determine where it should
-                be injected instead of accepting automatic injection, you can
-                use
+                If you prefer to determine where it should be injected instead
+                of accepting automatic injection, you can use
                 <x-block>@envbar</x-block>
                 anywhere in your layout.
             </p>
         </div>
     </x-section>
     <x-section title="Available Configurations" disable-copy>
-        <div class="space-y-4">
-            <x-code language="shell" :contents="$configuration" />
+        <x-code language="shell" :contents="$configuration"/>
+        <p class="mb-2">
             There are several useful settings available through the
             <x-block>config/envbar.php</x-block>
             configuration file, however most of them can be set through
             environment variables. Here is the list of all available environment
             variables:
-            <ul class="list-inside list-decimal">
-                <li>
-                    <x-block>ENVBAR_ENABLED</x-block>
-                    : Enable/disable the EnvBar.
-                </li>
-                <li>
-                    <x-block>ENVBAR_DISABLE_ON_TESTS</x-block>
-                    : Enable/disable the EnvBar on tests.
-                </li>
-                <li>
-                    <x-block>ENVBAR_SIZE</x-block>
-                    : Set the size of the EnvBar: Allowed: xs, sm, md, lg, xl
-                </li>
-                <li>
-                    <x-block>ENVBAR_FIXED</x-block>
-                    : If the EnvBar should be fixed at the top.
-                </li>
-                <li>
-                    <x-block>ENVBAR_BOTTOM</x-block>
-                    : If the EnvBar should be fixed at the bottom instead of the
-                    top.
-                </li>
-                <li>
-                    <x-block>ENVBAR_TAILWIND_BREAKING_POINTS</x-block>
-                    : If the TailwindCSS breakpoints should be displayed.
-                </li>
-                <li>
-                    <x-block>ENVBAR_WARNING_MESSAGE</x-block>
-                    : Allows you to set a warning message.
-                </li>
-                <li>
-                    <x-block>ENVBAR_CLOSABLE_ENABLED</x-block>
-                    : If the close button should be displayed.
-                </li>
-                <li>
-                    <x-block>ENVBAR_CLOSABLE_TIMEOUT</x-block>
-                    : If after closing the EnvBar, it should be displayed again
-                    after a certain time, in minutes.
-                </li>
-                <li>
-                    <x-block>ENVBAR_LINKS</x-block>
-                    : Set a list of links to be displayed on the right side of
-                    the EnvBar as a dropdown.
-                </li>
-                <li>
-                    <x-block>ENVBAR_FOR_AUTHENTICATED_USERS_ENABLED</x-block>
-                    : If the EnvBar should be displayed only for authenticated
-                    users.
-                </li>
-                <li>
-                    <x-block>ENVBAR_FOR_AUTHENTICATED_USERS_GUARD</x-block>
-                    : The default guard to be used for authenticated users.
-                </li>
-                <li>
-                    <x-block>ENVBAR_ON_MOBILE</x-block>
-                    : If the EnvBar should be displayed on mobile.
-                </li>
-                <li>
-                    <x-block>ENVBAR_PROVIDER</x-block>
-                    : The provider to be used for fetching the last release.
-                    Allowed: github, bitbucket, envoyer.
-                </li>
-                <li>
-                    <x-block>ENVBAR_GITHUB_TOKEN</x-block>
-                    : GitHub token to be used for fetching the last release.
-                </li>
-                <li>
-                    <x-block>ENVBAR_GITHUB_REPOSITORY</x-block>
-                    : GitHub repository to be used for fetching the last
-                    release.
-                </li>
-                <li>
-                    <x-block>ENVBAR_GITHUB_DAYS_FOR_CACHE</x-block>
-                    : The time in days to cache the last GitHub release.
-                </li>
-                <li>
-                    <x-block>ENVBAR_BITBUCKET_TOKEN</x-block>
-                    : BitBucket token to be used for fetching the last release.
-                </li>
-                <li>
-                    <x-block>ENVBAR_BITBUCKET_REPOSITORY</x-block>
-                    : BitBucket repository to be used for fetching the last
-                    release.
-                </li>
-                <li>
-                    <x-block>ENVBAR_BITBUCKET_DAYS_FOR_CACHE</x-block>
-                    : The time in days to cache the last release.
-                </li>
-                <li>
-                    <x-block>ENVBAR_ENVOYER_TOKEN</x-block>
-                    : Envoyer token to be used for fetching the last release.
-                </li>
-                <li>
-                    <x-block>ENVBAR_ENVOYER_PROJECT_ID</x-block>
-                    : Envoyer project id to be used for fetching the last
-                    release.
-                </li>
-                <li>
-                    <x-block>ENVBAR_ENVOYER_DAYS_FOR_CACHE</x-block>
-                    : The time in days to cache the last release.
-                </li>
-            </ul>
-        </div>
+        </p>
+        <x-table
+            :headers="[
+                    ['index' => 'variable', 'label' => 'Variable'],
+                    ['index' => 'description', 'label' => 'Description'],
+                ]"
+            :rows="[
+                    ['variable' => 'ENVBAR_ENABLED', 'description' => 'Enable/disable the EnvBar.'],
+                    ['variable' => 'ENVBAR_DISABLE_ON_TESTS', 'description' => 'Enable/disable the EnvBar on tests.'],
+                    ['variable' => 'ENVBAR_SIZE', 'description' => 'Set the size of the EnvBar. Allowed: xs, sm, md, lg, xl.'],
+                    ['variable' => 'ENVBAR_FIXED', 'description' => 'If the EnvBar should be fixed at the top.'],
+                    ['variable' => 'ENVBAR_BOTTOM', 'description' => 'If the EnvBar should be fixed at the bottom instead of the top.'],
+                    ['variable' => 'ENVBAR_TAILWIND_BREAKING_POINTS', 'description' => 'If the TailwindCSS breakpoints should be displayed.'],
+                    ['variable' => 'ENVBAR_WARNING_MESSAGE', 'description' => 'Allows you to set a warning message.'],
+                    ['variable' => 'ENVBAR_CLOSABLE_ENABLED', 'description' => 'If the close button should be displayed.'],
+                    ['variable' => 'ENVBAR_CLOSABLE_TIMEOUT', 'description' => 'If after closing the EnvBar, it should be displayed again after a certain time, in minutes.'],
+                    ['variable' => 'ENVBAR_LINKS', 'description' => 'Set a list of links to be displayed on the right side of the EnvBar as a dropdown.'],
+                    ['variable' => 'ENVBAR_FOR_AUTHENTICATED_USERS_ENABLED', 'description' => 'If the EnvBar should be displayed only for authenticated users.'],
+                    ['variable' => 'ENVBAR_FOR_AUTHENTICATED_USERS_GUARD', 'description' => 'The default guard to be used for authenticated users.'],
+                    ['variable' => 'ENVBAR_ON_MOBILE', 'description' => 'If the EnvBar should be displayed on mobile.'],
+                    ['variable' => 'ENVBAR_PROVIDER', 'description' => 'The provider to be used for fetching the last release. Allowed: github, bitbucket, envoyer.'],
+                    ['variable' => 'ENVBAR_GITHUB_TOKEN', 'description' => 'GitHub token to be used for fetching the last release.'],
+                    ['variable' => 'ENVBAR_GITHUB_REPOSITORY', 'description' => 'GitHub repository to be used for fetching the last release.'],
+                    ['variable' => 'ENVBAR_GITHUB_DAYS_FOR_CACHE', 'description' => 'The time in days to cache the last GitHub release.'],
+                    ['variable' => 'ENVBAR_BITBUCKET_TOKEN', 'description' => 'BitBucket token to be used for fetching the last release.'],
+                    ['variable' => 'ENVBAR_BITBUCKET_REPOSITORY', 'description' => 'BitBucket repository to be used for fetching the last release.'],
+                    ['variable' => 'ENVBAR_BITBUCKET_DAYS_FOR_CACHE', 'description' => 'The time in days to cache the last release.'],
+                    ['variable' => 'ENVBAR_ENVOYER_TOKEN', 'description' => 'Envoyer token to be used for fetching the last release.'],
+                    ['variable' => 'ENVBAR_ENVOYER_PROJECT_ID', 'description' => 'Envoyer project id to be used for fetching the last release.'],
+                    ['variable' => 'ENVBAR_ENVOYER_DAYS_FOR_CACHE', 'description' => 'The time in days to cache the last release.'],
+                ]">
+            @interact('column_variable', $row)
+            <x-block>{{ $row['variable'] }}</x-block>
+            @endinteract
+        </x-table>
     </x-section>
     <x-section title="Production Environment" disable-copy>
         <div class="space-y-4">
@@ -190,7 +121,7 @@
                 its entirety before using it in production. Therefore, to
                 activate EnvBar in production you must:
             </p>
-            <ul class="list-inside list-decimal">
+            <ul class="list-inside list-decimal space-y-2">
                 <li>
                     Enable the
                     <x-block>production</x-block>
@@ -210,45 +141,23 @@
                     <x-block>web</x-block>
                     .
                 </li>
-                <li class="font-bold">
+                <li>
                     Optionally, create a Laravel Gate to control which users
                     will see the EnvBar.
                 </li>
             </ul>
-            <p>
-                As mentioned above, you can create a Laravel Gate to control
-                which users will see the EnvBar in production.
-                <a
-                    href="https://laravel.com/docs/11.x/horizon#dashboard-authorization"
-                    class="underline"
-                    target="_blank"
-                >
-                    The process is similar to what is done for Horizon
-                </a>
-                , however the gate name should be
-                <x-block>envbar::view</x-block>
-                :
-            </p>
-            <x-code :contents="$gate" disable-copy />
+            <x-code :contents="$gate" disable-copy/>
         </div>
     </x-section>
     <x-section title="Configure Color Scheme" disable-copy>
         <div class="space-y-4">
             <p>
                 You can customize the color scheme for each environment in the
-                configuration file. The default value will be similar to the
-                following:
+                <x-refer doc="configuration">configuration file:</x-refer>
             </p>
-            <x-code :contents="$colors" disable-copy />
+            <x-code :contents="$colors" disable-copy/>
             <p>
-                All colors are based on the TailwindCSS color scheme, and
-                <b>
-                    we strongly suggest to use
-                    <x-block>production</x-block>
-                    as
-                    <x-block>red</x-block>
-                    if you will activate it.
-                </b>
+                All colors are based on the TailwindCSS color scheme.
             </p>
         </div>
     </x-section>
@@ -256,9 +165,9 @@
         <div class="space-y-4">
             <p>
                 You can control which pages the EnvBar will be ignored on via
-                the configuration file:
+                <x-refer doc="configuration">the configuration file.</x-refer>
             </p>
-            <x-code :contents="$ignores" disable-copy />
+            <x-code :contents="$ignores" disable-copy/>
             <p>
                 Behind the scenes, this feature uses
                 <x-block>Request::routeIs</x-block>
@@ -276,7 +185,7 @@
                 the entire application cache or run the following command to
                 clear the release cache only, without affecting the other cache:
             </p>
-            <x-code language="shell" :contents="$flush" />
+            <x-code language="shell" :contents="$flush"/>
             <p>
                 If you are using
                 <x-block>ENVBAR_CLOSABLE_TIMEOUT</x-block>
@@ -284,7 +193,7 @@
                 the EnvBar again without waiting for the final minutes timeout
                 to run out:
             </p>
-            <x-code language="shell" :contents="$show" />
+            <x-code language="shell" :contents="$show"/>
         </div>
     </x-section>
     <x-section title="Helper Links" disable-copy>
@@ -301,11 +210,11 @@
             <ul class="list-inside list-decimal">
                 <li>
                     Only link:
-                    <x-code language="env" :contents="$links" />
+                    <x-code language="env" :contents="$links"/>
                 </li>
                 <li>
                     Label and link:
-                    <x-code language="env" :contents="$labels" />
+                    <x-code language="env" :contents="$labels"/>
                 </li>
             </ul>
         </div>

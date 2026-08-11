@@ -69,7 +69,7 @@
                         <b class="underline">
                             above of the
                             @verbatim
-                                    @vite
+                                            @vite
                             @endverbatim
 
                             tag.

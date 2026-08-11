@@ -41,9 +41,40 @@ new class extends Component {
     {
         $this->original = null;
 
+        $component = "TallStackUi\\Components\\$this->component\\Component";
+
         $this->blocks = app(
-            "TallStackUi\\Components\\$this->component\\Component",
+            $component,
+            $this->parameters($component),
         )->customization();
+    }
+
+    // Components like upload.async declare required constructor
+    // parameters that the container cannot resolve on its own.
+    private function parameters(string $component): array
+    {
+        $constructor = (new \ReflectionClass($component))->getConstructor();
+
+        return collect($constructor?->getParameters() ?? [])
+            ->reject(
+                fn (\ReflectionParameter $parameter) => $parameter->isDefaultValueAvailable() ||
+                    $parameter->allowsNull(),
+            )
+            ->mapWithKeys(function (\ReflectionParameter $parameter) {
+                $type = $parameter->getType();
+
+                return [
+                    $parameter->getName() => match (
+                        $type instanceof \ReflectionNamedType ? $type->getName() : null
+                    ) {
+                        "int", "float" => 0,
+                        "bool" => false,
+                        "array" => [],
+                        default => "",
+                    },
+                ];
+            })
+            ->all();
     }
 
     public function content(string $block, string $class): void

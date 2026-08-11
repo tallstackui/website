@@ -58,7 +58,7 @@
                 <x-block>wire:navigate.hover</x-block>
                 with special attributes:
             </p>
-            <x-code language="blade" :contents="$navigate" disable-copy/>
+            <x-code language="blade" :contents="$navigate" disable-copy />
         </div>
     </x-section>
     <x-section title="Icons">
@@ -75,7 +75,9 @@
                 </div>
             </x-preview>
             <p>
-                You can also pass a raw HTML in the <x-block>icon</x-block> slot:
+                You can also pass a raw HTML in the
+                <x-block>icon</x-block>
+                slot:
             </p>
             <x-code language="blade" :contents="$iconSlot" />
         </div>
