@@ -45,7 +45,7 @@
             :contents="$labelHint"
             :background="false"
         >
-            <x-calendar label="Pick a date" hint="Format: YYYY-MM-DD" />
+            <x-calendar label="Pick a date" hint="Format: YYYY-MM-DD" helpers />
         </x-preview>
     </x-section>
     <x-section title="Range Mode">

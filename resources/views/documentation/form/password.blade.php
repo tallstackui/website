@@ -94,6 +94,21 @@
             />
         </div>
     </x-section>
+    <x-section
+        title="Password Generator Reflection"
+        new
+        description="An option to populate a different field when password is generated."
+    >
+        <x-preview language="blade" :contents="$passwordGeneratorReflection">
+            <div class="space-y-4">
+                <x-password label="New password" generator="confirm_password" />
+                <x-password
+                    label="Confirm new password"
+                    id="confirm_password"
+                />
+            </div>
+        </x-preview>
+    </x-section>
     <x-section title="Generator Algorithm" disable-copy>
         <div class="space-y-4">
             <p>

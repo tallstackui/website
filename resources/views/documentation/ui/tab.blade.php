@@ -82,7 +82,7 @@
     <x-section title="Route-Based Tabs">
         <div class="space-y-4">
             <p>
-                Starting from v3, tabs can be associated with URLs using the
+                Tabs can be associated with URLs using the
                 <x-block>href</x-block>
                 attribute on
                 <x-block>tab.items</x-block>

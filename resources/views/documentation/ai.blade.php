@@ -16,18 +16,15 @@
     <x-section title="AI-Powered Development" disable-copy>
         <div class="space-y-4">
             <p>
-                Starting from version 3, TallStackUI ships with AI-ready
-                documentation in its
+                TallStackUI ships with AI-ready documentation in its
                 <x-block>.ai/</x-block>
                 directory, designed to give AI assistants (GitHub Copilot,
                 Claude, Cursor, etc.) full component knowledge. Each component
                 has a dedicated markdown file with attributes, slots, usage
                 examples, and customization options. In addition, TallStackUI
-                provides an
-                <b>MCP server</b>
-                hosted on this documentation website, giving AI assistants
-                real-time access to component documentation without needing
-                local files.
+                provides an MCP server hosted on this documentation website,
+                giving AI assistants real-time access to component documentation
+                without needing local files.
             </p>
         </div>
     </x-section>
@@ -98,7 +95,7 @@
                     ['tool' => 'get_component', 'description' => 'Get full documentation for a specific component.'],
                     ['tool' => 'search_documentation', 'description' => 'Full-text search across all component documentation.'],
                     ['tool' => 'search_customization', 'description' => 'Search CSS class customization options for components.'],
-                    ['tool' => 'search_classes', 'description' => 'Search for specific CSS classes across all components. Returns matching blocks with override code snippets for Soft Customization.'],
+                    ['tool' => 'search_classes', 'description' => 'Search for specific CSS classes across all components.'],
                 ]"
             >
                 @interact("column_tool", $row)
@@ -109,11 +106,6 @@
     </x-section>
     <x-section title="Available Resources" disable-copy>
         <div class="space-y-4">
-            <p>
-                Beyond the tools, the MCP server also exposes read-only
-                resources that AI assistants can load to gain broader context in
-                a single read:
-            </p>
             <x-table
                 :headers="[
                     ['index' => 'resource', 'label' => 'Resource'],
@@ -136,7 +128,7 @@
                 @interact("column_description", $row)
                     @if ($row["resource"] === "component-index")
                         Full Markdown index of the documentation: every component grouped by category, global
-                        configuration, and customization guides.
+                    configuration, and customization guides.
                     @else
                         Canonical list of every internal
                         <x-block>scope="..."</x-block>
@@ -208,47 +200,6 @@
             <x-code language="json" :contents="$claudeCodeSettings" />
             <p>After configuration, verify the server is connected:</p>
             <x-code language="shell" :contents="'claude mcp list'" />
-        </div>
-    </x-section>
-    <x-section title="Connecting to Cursor">
-        <div class="space-y-4">
-            <p>
-                To connect the MCP server to
-                <a href="https://cursor.com" target="_blank" class="underline">
-                    Cursor
-                </a>
-                , create a
-                <x-block>.cursor/mcp.json</x-block>
-                file in your project root:
-            </p>
-            <x-code language="json" :contents="$cursorProject" />
-            <p>
-                You can also create this file at
-                <x-block>~/.cursor/mcp.json</x-block>
-                for global access across all projects.
-            </p>
-        </div>
-    </x-section>
-    <x-section title="Connecting to Gemini CLI">
-        <div class="space-y-4">
-            <p>
-                The quickest way to connect the MCP server to
-                <a
-                    href="https://github.com/google-gemini/gemini-cli"
-                    target="_blank"
-                    class="underline"
-                >
-                    Gemini CLI
-                </a>
-                is using the CLI command:
-            </p>
-            <x-code language="shell" :contents="$geminiCli" />
-            <p>
-                Alternatively, add the server to your
-                <x-block>~/.gemini/settings.json</x-block>
-                :
-            </p>
-            <x-code language="json" :contents="$geminiSettings" />
         </div>
     </x-section>
 </x-layout>

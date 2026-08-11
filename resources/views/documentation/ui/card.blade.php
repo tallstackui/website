@@ -96,7 +96,7 @@
         </x-warning>
         <x-warning warning title="bordered became accent" class="mt-4">
             On
-            <x-block>3.x</x-block>
+            <x-block>v3</x-block>
             this variation was called
             <x-block>bordered</x-block>
             . That name now belongs to the wrapper border below, so combining

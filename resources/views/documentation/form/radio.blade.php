@@ -263,7 +263,12 @@
                 @interact("option", $option)
                     <div class="flex items-center justify-between">
                         <span class="font-medium">{{ $option["label"] }}</span>
-                        <x-badge :text="$option['tag']" color="green" sm />
+                        <x-badge
+                            :text="$option['tag']"
+                            color="green"
+                            round
+                            sm
+                        />
                     </div>
                 @endinteract
             </x-radio.group>

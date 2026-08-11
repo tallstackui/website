@@ -15,7 +15,7 @@
                 work, because they depend on AlpineJS-based code.
             </p>
             <p>
-                At this point you might be thinking: "Livewire 3 delivers
+                At this point you might be thinking: "Livewire 4 delivers
                 AlpineJS automatically! Why should I care about that?". Well,
                 some inattentive people don't realize that
                 <u>

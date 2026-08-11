@@ -139,7 +139,7 @@
             The table component provides a custom Blade directive
             <x-block>
                 @verbatim
-                                        @interact
+                                                @interact
                 @endverbatim
             </x-block>
             to allow you to interact with the table columns about the data
@@ -159,7 +159,7 @@
             Blade
             <x-block>
                 @verbatim
-                                        @interact
+                                                @interact
                 @endverbatim
             </x-block>
             directive, you must specify a unique key for each component:
@@ -171,7 +171,7 @@
             inside the
             <x-block>
                 @verbatim
-                                        @interact
+                                                @interact
                 @endverbatim
             </x-block>
             directive to interact with the data of each row. The
@@ -226,8 +226,7 @@
     >
         <div class="space-y-4">
             <x-warning success>
-                Previously, in v3, the
-                <x-block>table</x-block>
+                Previously the <x-block>table</x-block>
                 component was blocked for use outside of Livewire; in v4, we
                 adapted its use for any location, whether inside or outside of
                 Livewire components.

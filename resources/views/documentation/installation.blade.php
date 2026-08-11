@@ -1,14 +1,10 @@
 <x-layout :$content>
     <x-slot:title>Installation</x-slot>
     <x-section class="mt-4" title="Meet TallStackUI" disable-copy>
-        TallStackUI is
-        <b class="text-pink-600">
-            a powerful suite of 80+ ready-to-use components for TALL Stack
-            applications.
-        </b>
-        TallStackUI is unlike anything you've ever seen, from its conception to
-        construction and general availability. Beforehand we want to tell you a
-        little about our motivation.
+        TallStackUI is a powerful suite of 80+ ready-to-use components for TALL
+        Stack applications. TallStackUI is unlike anything you've ever seen,
+        from its conception to construction and general availability. Beforehand
+        we want to tell you a little about our motivation.
     </x-section>
     <x-section class="space-y-4" title="History & Motivation" disable-copy>
         TallStackUI was created by
@@ -34,7 +30,7 @@
         is an active developer in the community, contributing to Laravel,
         Livewire, PestPHP and other open-source solutions.
     </x-section>
-    <x-section title="Requirements" disable-copy>
+    <x-section title="v4 Requirements" disable-copy>
         <div class="space-y-4">
             <ul class="mt-4 ml-4 list-inside list-decimal space-y-2">
                 <li>PHP: v8.1 or later</li>
@@ -72,7 +68,9 @@
                         The TallStackUI script must be loaded
                         <b class="underline">
                             above of the
-                            @verbatim @vite @endverbatim
+                            @verbatim
+                                    @vite
+                            @endverbatim
 
                             tag.
                         </b>

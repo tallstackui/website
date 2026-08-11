@@ -28,36 +28,38 @@
         title="Link"
         description="An option to allow the navigation when clicking on the card."
     >
-        <x-preview language="blade" :contents="$link" :background="false">
-            <div class="grid grid-cols-3 gap-2">
-                <x-stats
-                    href="https://tallstackui.com"
-                    target="_blank"
-                    title="Components"
-                    :number="50"
-                />
-                <x-stats
-                    href="https://tallstackui.com"
-                    target="_blank"
-                    title="Users"
-                    :number="500"
-                />
-                <x-stats
-                    href="https://tallstackui.com"
-                    target="_blank"
-                    title="Downloads"
-                    :number="10.000"
-                />
-            </div>
-        </x-preview>
-        <p>
-            You can also set
-            <x-block>wire:navigate</x-block>
-            or
-            <x-block>wire:navigate.hover</x-block>
-            :
-        </p>
-        <x-code language="blade" :contents="$navigate" disable-copy />
+        <div class="space-y-4">
+            <x-preview language="blade" :contents="$link" :background="false">
+                <div class="grid grid-cols-3 gap-2">
+                    <x-stats
+                        href="https://tallstackui.com"
+                        target="_blank"
+                        title="Components"
+                        :number="50"
+                    />
+                    <x-stats
+                        href="https://tallstackui.com"
+                        target="_blank"
+                        title="Users"
+                        :number="500"
+                    />
+                    <x-stats
+                        href="https://tallstackui.com"
+                        target="_blank"
+                        title="Downloads"
+                        :number="10.000"
+                    />
+                </div>
+            </x-preview>
+            <p>
+                You can also set
+                <x-block>wire:navigate</x-block>
+                or
+                <x-block>wire:navigate.hover</x-block>
+                with special attributes:
+            </p>
+            <x-code language="blade" :contents="$navigate" disable-copy/>
+        </div>
     </x-section>
     <x-section title="Icons">
         <div class="space-y-4">
@@ -73,9 +75,7 @@
                 </div>
             </x-preview>
             <p>
-                Starting from v2.4.0 you can pass a raw HTML in the
-                <x-block>icon</x-block>
-                slot:
+                You can also pass a raw HTML in the <x-block>icon</x-block> slot:
             </p>
             <x-code language="blade" :contents="$iconSlot" />
         </div>

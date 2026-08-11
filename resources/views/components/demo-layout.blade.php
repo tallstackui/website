@@ -4,13 +4,11 @@
 <html
     lang="{{ str_replace("_", "-", app()->getLocale()) }}"
     class="h-full antialiased"
-    x-data="tallstackui_darkTheme()"
+    x-data="tallstackui_darkTheme({ default: 'dark' })"
     x-on:storage.window="
-        if (
-            $event.key === 'dark-theme' &&
-            ['light', 'dark', 'system'].includes($event.newValue)
-        )
-            mode = $event.newValue
+        $event.key === storage &&
+            ['light', 'dark', 'system'].includes($event.newValue) &&
+            (mode = $event.newValue)
     "
 >
     <head>

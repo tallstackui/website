@@ -15,22 +15,31 @@
         />
     </x-slot>
     <x-warning info class="mb-4">
-        Files can be uploaded through selection or drag-and-drop. Also, when
-        sending a
-        <u>png, jpg, jpeg or gif file</u>
-        , a preview is offered when clicking on the file image. To disable the
-        preview, simply pass the
-        <x-block>:preview="false"</x-block>
-        parameter to the component. All files uploaded as part of tests on this
-        page are deleted each hour.
+        This component performs uploads in the traditional way that Livewire
+        offers. If you want an asynchronous upload, splitting the file into
+        parts and sending it to the server, you should use the new
+        <x-refer :doc="['form', 'upload-async']">
+            upload async component.
+        </x-refer>
     </x-warning>
     <x-warning class="mb-4">
         All files uploaded as part of tests on this page are deleted each hour.
     </x-warning>
     <x-section title="Basic Usage" anchor="upload-basic-usage">
-        <x-preview language="blade" :contents="$basic">
-            <livewire:documentation.form.upload.upload :model="1" />
-        </x-preview>
+        <div class="space-y-4">
+            <x-preview language="blade" :contents="$basic">
+                <livewire:documentation.form.upload.upload :model="1" />
+            </x-preview>
+            <p>
+                Files can be uploaded through selection or drag-and-drop. Also,
+                when sending a png, jpg, jpeg or gif file , a preview is offered
+                when clicking on the file image. To disable the preview, simply
+                pass the
+                <x-block>:preview="false"</x-block>
+                parameter to the component. All files uploaded as part of tests
+                on this page are deleted each hour.
+            </p>
+        </div>
     </x-section>
     <x-section title="Label & Hint & Tip" anchor="upload-label-hint-tip">
         <x-preview language="blade" :contents="$labelHintTip">

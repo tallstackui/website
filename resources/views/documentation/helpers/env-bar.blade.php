@@ -62,7 +62,7 @@
                 <span class="underline">
                     EnvBar will be automatically injected into your application.
                 </span>
-                Starting with v1.2.0, if you prefer to determine where it should
+                If you prefer to determine where it should
                 be injected instead of accepting automatic injection, you can
                 use
                 <x-block>@envbar</x-block>

@@ -165,7 +165,7 @@
     </x-section>
     <x-section
         title="Start Day"
-        description="An option to set the first day of week, starting from v2.5.0"
+        description="An option to set the first day of week."
     >
         <x-preview language="blade" :contents="$start">
             <x-date start="1" />

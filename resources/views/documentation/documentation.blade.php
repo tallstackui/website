@@ -1,16 +1,8 @@
 <x-layout :$content :torchlight="false">
     <x-slot:title>Documentation</x-slot>
-    <x-section disable-copy>
-        The goal of this page is explain you several things related to the
-        TallStackUI documentation. Although here in this page we can mention
-        some specific things for the version 2.x, several other things can be
-        considered valid for understanding the version 1.x too. We recommend you
-        to read with attention and without hurry, including if you are starting
-        to use TallStackUI now.
-    </x-section>
     <x-section title="Searches" disable-copy>
         <p>
-            The docs offers a search system that can be used to quickly find
+            The documentation a search system that can be used to quickly find
             what you are looking for. You can click on the text box "Quick
             search...", on the left side of the screen, or press one of the
             shortcuts, depending on your operating system:

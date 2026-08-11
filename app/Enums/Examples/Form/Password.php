@@ -41,6 +41,14 @@ class Password
     <x-password generator />
     HTML;
 
+    public const string PASSWORD_GENERATOR_REFLECTION = <<<'HTML'
+    <x-password generator="confirm_password" />
+
+    <!-- and... -->
+
+    <x-password id="confirm_password" /> <!-- accepts id or x-ref -->
+    HTML;
+
     public const string ALGORITHM = <<<'HTML'
     <script>
         window.TallStackUi = window.TallStackUi || {};

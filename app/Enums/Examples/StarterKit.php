@@ -11,19 +11,19 @@ class StarterKit
     HTML;
 
     public const string PEST = <<<'HTML'
-    composer test
+    composer run test
     HTML;
 
     public const string PHPSTAN = <<<'HTML'
-    composer analyse
+    composer run analyse
     HTML;
 
     public const string PINT = <<<'HTML'
-    composer format
+    composer run format
     HTML;
 
     public const string CI = <<<'HTML'
-    composer ci
+    composer run ci
     HTML;
 
     public const string EMAIL = <<<'HTML'

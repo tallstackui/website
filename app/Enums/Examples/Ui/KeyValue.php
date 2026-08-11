@@ -108,6 +108,10 @@ class KeyValue
     HTML;
 
     public const string COLORLESS = <<<'HTML'
+    <x-key-value wire:model="metadata" :color="null" />
+
+    <!-- or -->
+
     <x-key-value wire:model="metadata" colorless />
     HTML;
 

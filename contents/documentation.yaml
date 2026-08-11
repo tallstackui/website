@@ -1,7 +1,7 @@
 installation:
   - Meet TallStackUI
   - History & Motivation
-  - Requirements
+  - v4 Requirements
   - Starter Kit
   - Manual Installation
 starter-kit:
@@ -56,8 +56,6 @@ ai:
   - Available Resources
   - Available Prompts
   - Connecting to Claude Code
-  - Connecting to Cursor
-  - Connecting to Gemini CLI
 form:
   autocomplete:
     - Basic Usage
@@ -97,6 +95,7 @@ form:
     - Caps Lock Indicator
     - Format Validator
     - Password Generator
+    - Password Generator Reflection
     - Generator Algorithm
     - Disable Paste Event
     - Events

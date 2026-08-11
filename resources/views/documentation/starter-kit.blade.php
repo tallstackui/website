@@ -1,36 +1,10 @@
 <x-layout :$content>
     <x-slot:title>Starter Kit</x-slot>
-    <x-section title="Preview" disable-copy>
-        <div class="space-y-4">
-            <video width="1024" height="1024" controls>
-                <source
-                    src="{{ asset("/assets/videos/tsui-starter-kit-preview.mp4") }}"
-                    type="video/mp4"
-                />
-            </video>
-            <span class="text-sm font-bold">
-                Have you ever imagined having a Laravel 12 project completely
-                ready to use in exactly 30 secs? 🤯
-            </span>
-        </div>
-    </x-section>
     <x-section title="About Starter Kit" disable-copy>
-        The release of Laravel 12 brought the long-awaited support for community
-        starter kits through the
-        <a
-            href="https://laravel.com/docs/12.x#creating-a-laravel-project"
-            target="_blank"
-            class="underline"
-        >
-            Laravel installer.
-        </a>
-        The idea behind starter kits is to offer a ready-to-use base project
-        containing customizations specific to each use case. The TallStackUI
-        starter kit offers a simple project, yet fully prepared for real use.
-        <b>
-            The biggest benefit of using the TallStackUI starter kit is saving
-            time on basic setup of new Laravel projects.
-        </b>
+        The Starter Kit is a quick and easy way to begin a new Laravel project,
+        containing everything essential for a basic Laravel project and
+        including TallStackUI v4. Read the entire page to understand how to use
+        the TallStackUI Starter Kit.
     </x-section>
     <x-section title="Ready to Use" disable-copy>
         <div class="space-y-4">
@@ -40,17 +14,11 @@
                 <i>out of the box:</i>
             </p>
             <ul class="list-inside list-decimal">
-                <li>Laravel v12</li>
+                <li>Laravel v13</li>
                 <li>Livewire v4</li>
-                <li>TallStackUI v3</li>
+                <li>TallStackUI v4</li>
                 <li>TailwindCSS v4</li>
             </ul>
-            <x-warning>
-                <b>TallStackUI support both TailwindCSS versions, v3 and v4</b>
-                , but we have no plans to create a TallStackUI starter kit based
-                on TailwindCSS v3 since the main version of TailwindCSS is now
-                v4.
-            </x-warning>
             <p class="font-semibold text-pink-600">Features:</p>
             <ul class="list-inside list-decimal">
                 <li>
@@ -58,8 +26,10 @@
                     <x-block>sqlite</x-block>
                     database connection
                 </li>
-                <li>Basic login and registration</li>
-                <li>Basic profile update page</li>
+                <li>
+                    Login, registration, password reset, profile update, 2FA
+                    stuff and more
+                </li>
                 <li>
                     Users
                     <x-block>C.R.U.D.</x-block>
@@ -70,7 +40,7 @@
                 <li>One single config file published</li>
                 <li>All unnecessary comments removed</li>
             </ul>
-            <p class="font-semibold text-pink-600">Tools:</p>
+            <p class="font-semibold text-pink-600">Tools and commands:</p>
             <ul class="list-inside">
                 <li>
                     Pest:
@@ -197,7 +167,7 @@
                 action in a specific Livewire component for a better
                 organization:
             </p>
-            <ul class="list-inside list-decimal">
+            <ul class="list-inside list-decimal space-y-2">
                 <li>
                     <x-block>Users\Index</x-block>
                     - Used to only list the users and also display other
