@@ -21,7 +21,7 @@ class Accordion
     HTML;
 
     public const string MULTIPLE = <<<'HTML'
-    <x-accordion multiple> {{-- [tl! highlight] --}}
+    <x-accordion multiple> <!-- [tl! highlight] -->
         <x-accordion.items title="Feature A" id="multi-a">
             Stays open independently.
         </x-accordion.items>
@@ -72,7 +72,7 @@ class Accordion
     </x-accordion>
 
     <!-- Chevron on the left -->
-    <x-accordion chevron="left"> {{-- [tl! highlight] --}}
+    <x-accordion chevron="left"> <!-- [tl! highlight] -->
         <x-accordion.items title="Left chevron" id="chev-left">
             The chevron sits before the title.
         </x-accordion.items>
@@ -84,7 +84,7 @@ class Accordion
         <x-accordion.items title="Closed by default" id="default-closed">
             Content
         </x-accordion.items>
-        <x-accordion.items title="Open by default" id="default-opened" open> {{-- [tl! highlight] --}}
+        <x-accordion.items title="Open by default" id="default-opened" open> <!-- [tl! highlight] -->
             Ships expanded on page load.
         </x-accordion.items>
     </x-accordion>
@@ -94,7 +94,7 @@ class Accordion
     <x-accordion>
         <x-accordion.items title="Using plus-circle"
                            id="icon-plus"
-                           icon="plus-circle"> {{-- [tl! highlight] --}}
+                           icon="plus-circle"> <!-- [tl! highlight] -->
             The icon still rotates 180° when the item opens.
         </x-accordion.items>
         <x-accordion.items title="Using bell"
@@ -108,7 +108,7 @@ class Accordion
     public const string ICON_SLOT = <<<'HTML'
     <x-accordion>
         <x-accordion.items title="Custom indicator" id="icon-slot-1">
-            <x-slot:icon> {{-- [tl! highlight:3] --}}
+            <x-slot:icon> <!-- [tl! highlight:3] -->
                 <span class="rounded-full bg-primary-100 px-2 py-0.5 text-xs font-semibold text-primary-700">
                     new
                 </span>
@@ -121,7 +121,7 @@ class Accordion
     public const string TRIGGER_SLOT = <<<'HTML'
     <x-accordion>
         <x-accordion.items id="user-1">
-            <x-slot:trigger> {{-- [tl! highlight:10] --}}
+            <x-slot:trigger> <!-- [tl! highlight:10] -->
                 <div class="flex items-center gap-3">
                     <x-avatar sm color="primary" text="JD" />
                     <div class="flex flex-col text-start">

@@ -76,7 +76,7 @@ class Editor
     HTML;
 
     public const string LIVEWIRE = <<<'HTML'
-    {{-- The component is wire:ignore'd, so a runtime attribute change needs a wire:key --}}
+    <!-- The component is wire:ignore'd, so a runtime attribute change needs a wire:key -->
     <x-editor wire:model="content" :readonly="$locked" wire:key="editor-{{ $locked ? 'locked' : 'open' }}" />
     HTML;
 

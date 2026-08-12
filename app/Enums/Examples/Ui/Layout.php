@@ -73,7 +73,7 @@ class Layout
 
     public const string TOP = <<<'HTML'
     <div x-data="{ tallStackUiMenuMobile : false }" x-on:tallstackui-menu-mobile.window="tallStackUiMenuMobile = $event.detail.status">
-        @if ($top) {{-- [tl! focus:2] --}}
+        @if ($top) <!-- [tl! focus:2] -->
             {{ $top }}
         @endif
         @if ($menu)
@@ -88,7 +88,7 @@ class Layout
     <div x-data="{ tallStackUiMenuMobile : false }" x-on:tallstackui-menu-mobile.window="tallStackUiMenuMobile = $event.detail.status">
         <!-- ... -->
 
-        @if ($footer) {{-- [tl! focus:2] --}}
+        @if ($footer) <!-- [tl! focus:2] -->
             {{ $footer }}
         @endif
     </div>

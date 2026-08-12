@@ -22,13 +22,13 @@ class Kbd
     HTML;
 
     public const string BORDERLESS = <<<'HTML'
-    {{-- No border, still raised --}}
+    <!-- No border, still raised -->
     <x-kbd text="Ctrl" borderless />
 
-    {{-- Bordered, flat --}}
+    <!-- Bordered, flat -->
     <x-kbd text="Ctrl" shadowless />
 
-    {{-- What borderless alone used to do on 3.x --}}
+    <!-- What borderless alone used to do on 3.x -->
     <x-kbd text="Ctrl" borderless shadowless />
     HTML;
 

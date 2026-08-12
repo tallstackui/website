@@ -42,18 +42,18 @@ class Spinner
     <x-spinner wave color="amber" />
     <x-spinner dots color="blue" />
 
-    {{-- Anything outside the palette comes straight from a utility --}}
+    <!-- Anything outside the palette comes straight from a utility -->
     <x-spinner class="text-[#ff5f1f]" />
     HTML;
 
     public const string LABEL = <<<'HTML'
-    {{-- glyph + sr-only fallback --}}
+    <!-- glyph + sr-only fallback -->
     <x-spinner />
 
-    {{-- glyph + visible label --}}
+    <!-- glyph + visible label -->
     <x-spinner text="Sending the file" />
 
-    {{-- glyph + markup label --}}
+    <!-- glyph + markup label -->
     <x-spinner>Sending <b>3</b> files</x-spinner>
     HTML;
 

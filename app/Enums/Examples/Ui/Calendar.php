@@ -37,7 +37,7 @@ class Calendar
     secondary panel hides automatically. Only valid with `range`.
     -->
 
-    <x-calendar range double /> {{-- [tl! highlight] --}}
+    <x-calendar range double /> <!-- [tl! highlight] -->
     HTML;
 
     public const string MULTIPLE = <<<'HTML'
@@ -61,7 +61,7 @@ class Calendar
     displayed period must stay fixed.
     -->
 
-    <x-calendar lock-month-year /> {{-- [tl! highlight] --}}
+    <x-calendar lock-month-year /> <!-- [tl! highlight] -->
 
     <!-- Combined with constraints, locks selection to a fixed period -->
     <x-calendar lock-month-year

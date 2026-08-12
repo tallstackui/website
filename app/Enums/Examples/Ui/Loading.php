@@ -7,16 +7,16 @@ namespace App\Enums\Examples\Ui;
 class Loading
 {
     public const string INTERACTION = <<<'HTML'
-    <x-loading wire:loading.delay.longest wire:target="save" /> {{-- [tl! remove] --}}
+    <x-loading wire:loading.delay.longest wire:target="save" /> <!-- [tl! remove] -->
 
-    <x-loading delay="longest" loading="save" /> {{-- [tl! add] --}}
+    <x-loading delay="longest" loading="save" /> <!-- [tl! add] -->
     HTML;
 
     public const string USAGE = <<<'HTML'
     <!-- resources/views/livewire/post.blade.php -->
 
     <div>
-        <x-loading /> {{-- [tl! highlight] --}}
+        <x-loading /> <!-- [tl! highlight] -->
 
         <form wire:submit="save">
             <input type="text" wire:model="title">
@@ -50,6 +50,10 @@ class Loading
     HTML;
 
     public const string USING_SPINNERS = <<<'HTML'
+    <x-loading text="Waiting..." indicator="spinner.typing" />
+
+    <!-- or -->
+
     <x-loading>
         <x-spinner typing text="Waiting..." />
     </x-loading>

@@ -151,7 +151,7 @@ class Upload
 
     public const string FOOTER_SLOT_WHEN_UPLOADED = <<<'HTML'
     <x-upload>
-        <x-slot:footer when-uploaded> {{-- [tl! highlight] --}}
+        <x-slot:footer when-uploaded> <!-- [tl! highlight] -->
             <x-button class="w-full" wire:click="store">
                 Save
             </x-button>
@@ -212,7 +212,7 @@ class Upload
 
     <!-- You can set a custom placeholder for the input -->
     <x-upload wire:model="photos"
-             :placeholder="count($photos) . ' images'" {{-- [tl! highlight] --}}
+             :placeholder="count($photos) . ' images'" <!-- [tl! highlight] -->
              static
              delete />
     HTML;

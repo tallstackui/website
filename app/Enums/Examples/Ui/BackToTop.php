@@ -27,7 +27,7 @@ class BackToTop
     public const string SIZES = <<<'HTML'
     <x-back-to-top xs />
     <x-back-to-top sm />
-    <x-back-to-top /> {{-- md (default) --}}
+    <x-back-to-top /> <!-- md (default) -->
     <x-back-to-top lg />
     HTML;
 

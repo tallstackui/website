@@ -158,10 +158,10 @@ class ListComponent
     HTML;
 
     public const string LAZY = <<<'HTML'
-    {{-- First slice of 20, the default --}}
+    <!-- First slice of 20, the default -->
     <x-list label="Tags" :items="$tags" searchable height="60" lazy />
 
-    {{-- First slice of 4 --}}
+    <!-- First slice of 4 -->
     <x-list label="Tags" :items="$tags" searchable height="60" lazy="4" />
     HTML;
 
@@ -185,10 +185,10 @@ class ListComponent
     HTML;
 
     public const string SKELETON = <<<'HTML'
-    {{-- 4 items, the default --}}
+    <!-- 4 items, the default -->
     <x-list skeleton />
 
-    {{-- The label, the search bar and the item count are derived from the props --}}
+    <!-- The label, the search bar and the item count are derived from the props -->
     <x-list skeleton="6" searchable label="Tags" />
     HTML;
 

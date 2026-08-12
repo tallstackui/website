@@ -34,9 +34,7 @@ new class extends Component {
 
         <x-button wire:click="save(6)">Show Loading (Click and wait!)</x-button>
     @elseif ($model === 3)
-        <x-loading>
-            <x-spinner typing text="Waiting..." />
-        </x-loading>
+        <x-loading text="Waiting..." indicator="spinner.typing" />
 
         <x-button wire:click="save(3)">Show Loading</x-button>
     @endif

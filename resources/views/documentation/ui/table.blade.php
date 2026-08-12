@@ -145,7 +145,7 @@
             provided in each row. Allowing you to interact with the table and
             make things like add an action button for each row.
         </p>
-        <x-code :contents="$columns" disable-copy />
+        <x-code language="blade" :contents="$columns" disable-copy />
         <p>
             <a
                 href="https://livewire.laravel.com/docs/nesting#rendering-children-in-a-loop"
@@ -162,7 +162,7 @@
             </x-block>
             directive, you must specify a unique key for each component:
         </p>
-        <x-code :contents="$loop" disable-copy />
+        <x-code language="blade" :contents="$loop" disable-copy />
         <p>
             You can use
             <x-block>$loop</x-block>

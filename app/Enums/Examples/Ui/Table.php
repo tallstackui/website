@@ -501,7 +501,7 @@ class Table
     HTML;
 
     public const string OUTSIDE_LIVEWIRE = <<<'HTML'
-    {{-- routes/web.php -> a plain controller, no Livewire anywhere --}}
+    <!-- routes/web.php -> a plain controller, no Livewire anywhere -->
     <x-table :$headers
              :rows="$users"
              :sort="request('sort', ['column' => 'id', 'direction' => 'desc'])"
@@ -514,10 +514,10 @@ class Table
     TEXT;
 
     public const string PERSISTENT = <<<'HTML'
-    {{-- Anchors on the table itself --}}
+    <!-- Anchors on the table itself -->
     <x-table :$headers :$rows paginate persistent />
 
-    {{-- Anchors on an element of your own, so the card header stays in frame --}}
+    <!-- Anchors on an element of your own, so the card header stays in frame -->
     <div id="users-table">
         <x-card>
             <x-table :$headers :$rows paginate persistent="users-table" />
@@ -534,33 +534,33 @@ class Table
     HTML;
 
     public const string PAGINATORS = <<<'HTML'
-    {{-- The configured default --}}
+    <!-- The configured default -->
     <x-table :$headers :$rows paginate />
 
-    {{-- This table only. Accepted: simple, minimal, compact --}}
+    <!-- This table only. Accepted: simple, minimal, compact -->
     <x-table :$headers :$rows paginate paginator="compact" />
 
-    {{-- A dotted value is still treated as a view path --}}
+    <!-- A dotted value is still treated as a view path -->
     <x-table :$headers :$rows paginate paginator="components.my-paginator" />
     HTML;
 
     public const string SIMPLE_PAGINATION = <<<'HTML'
-    {{-- 3.x --}}
+    <!-- 3.x -->
     <x-table :$headers :$rows paginate simple-pagination />
 
-    {{-- 4.x: simple-pagination implies paginate --}}
+    <!-- 4.x: simple-pagination implies paginate -->
     <x-table :$headers :$rows simple-pagination />
 
-    {{-- The paginator variant styles this mode too --}}
+    <!-- The paginator variant styles this mode too -->
     <x-table :$headers :$rows simple-pagination paginator="minimal" />
     <x-table :$headers :$rows simple-pagination paginator="compact" />
     HTML;
 
     public const string SKELETON = <<<'HTML'
-    {{-- Bare flag: 5 rows --}}
+    <!-- Bare flag: 5 rows -->
     <x-table :$headers skeleton />
 
-    {{-- An integer sets the count --}}
+    <!-- An integer sets the count -->
     <x-table :$headers skeleton="8" selectable paginate />
     HTML;
 

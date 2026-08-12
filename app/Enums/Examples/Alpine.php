@@ -18,7 +18,7 @@ class Alpine
         <body>
             <!-- ... -->
 
-            @livewireScripts {{-- [tl! focus, highlight] --}}
+            @livewireScripts <!-- [tl! focus, highlight] -->
         </body>
     </html>
     HTML;
@@ -26,19 +26,19 @@ class Alpine
     public const string INPUT = <<<'HTML'
     <x-input label="Birthday"
              hint="Insert your birthday"
-             x-mask="99/99/9999" {{-- [tl! highlight] --}}
+             x-mask="99/99/9999" <!-- [tl! highlight] -->
              value="27/02/1992" />
 
     <x-input label="Salary"
              hint="Insert your desired salary"
-             x-mask:dynamic="$money($input, ',')" {{-- [tl! highlight] --}}
+             x-mask:dynamic="$money($input, ',')" <!-- [tl! highlight] -->
              value="200.000" />
 
     <!-- Custom Dynamic Mask -->
 
     <x-input label="Credit Card"
              hint="Insert your credit card number"
-             x-mask:dynamic="creditCardMask" {{-- [tl! highlight] --}}
+             x-mask:dynamic="creditCardMask" <!-- [tl! highlight] -->
              value="4444555566667777" />
 
     <script>

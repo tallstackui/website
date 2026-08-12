@@ -26,13 +26,13 @@ class UpgradeGuide
     HTML;
 
     public const string CARD_ACCENT = <<<'HTML'
-    <x-card color="red" bordered header="Report">...</x-card> // [tl! remove]
-    <x-card color="red" accent header="Report">...</x-card> // [tl! add]
+    <x-card color="red" bordered header="Report">...</x-card> <!-- [tl! remove] -->
+    <x-card color="red" accent header="Report">...</x-card> <!-- [tl! add] -->
     HTML;
 
     public const string KBD_SHADOWLESS = <<<'HTML'
-    <x-kbd borderless /> // [tl! remove]
-    <x-kbd borderless shadowless /> // [tl! add]
+    <x-kbd borderless /> <!-- [tl! remove] -->
+    <x-kbd borderless shadowless /> <!-- [tl! add] -->
     HTML;
 
     public const string BUTTON_BLOCKS = <<<'PHP'
@@ -48,8 +48,8 @@ class UpgradeGuide
     PHP;
 
     public const string CLIPBOARD_ICON = <<<'HTML'
-    <x-clipboard text="TallStackUI" icon :icons="['copy' => 'pencil', 'copied' => 'check']" /> // [tl! remove]
-    <x-clipboard text="TallStackUI" :icon="['copy' => 'pencil', 'copied' => 'check']" /> // [tl! add]
+    <x-clipboard text="TallStackUI" icon :icons="['copy' => 'pencil', 'copied' => 'check']" /> <!-- [tl! remove] -->
+    <x-clipboard text="TallStackUI" :icon="['copy' => 'pencil', 'copied' => 'check']" /> <!-- [tl! add] -->
     HTML;
 
     public const string CALENDAR_SCOPE = <<<'PHP'
@@ -70,8 +70,8 @@ class UpgradeGuide
     PHP;
 
     public const string TOOLTIP_DISABLED = <<<'HTML'
-    x-effect="$el._tippy && ($store['tsui.side-bar'].open ? $el._tippy.disable() : $el._tippy.enable())" // [tl! remove]
-    x-bind:data-tooltip-disabled="$store['tsui.side-bar'].open" // [tl! add]
+    x-effect="$el._tippy && ($store['tsui.side-bar'].open ? $el._tippy.disable() : $el._tippy.enable())" <!-- [tl! remove] -->
+    x-bind:data-tooltip-disabled="$store['tsui.side-bar'].open" <!-- [tl! add] -->
     HTML;
 
     public const string CUSTOMIZATION_STACKING = <<<'PHP'
@@ -91,20 +91,20 @@ class UpgradeGuide
     PHP;
 
     public const string SECONDARY_COLOR = <<<'HTML'
-    {{-- Was slate-gray, is violet now --}}
-    <x-badge color="secondary" text="Draft" /> // [tl! remove]
-    <x-badge color="slate" text="Draft" /> // [tl! add]
+    <!-- Was slate-gray, is violet now -->
+    <x-badge color="secondary" text="Draft" /> <!-- [tl! remove] -->
+    <x-badge color="slate" text="Draft" /> <!-- [tl! add] -->
     HTML;
 
     public const string TABLE_PAGINATOR = <<<'HTML'
-    <x-table :$headers :$rows paginate paginator="components.table.paginators" /> // [tl! remove]
-    <x-table :$headers :$rows paginate paginator="components.table.paginators.simple" /> // [tl! add]
+    <x-table :$headers :$rows paginate paginator="components.table.paginators" /> <!-- [tl! remove] -->
+    <x-table :$headers :$rows paginate paginator="components.table.paginators.simple" /> <!-- [tl! add] -->
     HTML;
 
     public const string STEP_SLOTS = <<<'HTML'
-    {{-- previous and next are slot names now: a bare attribute throws --}}
-    <x-step selected="1" helpers previous> // [tl! remove]
-    <x-step selected="1" helpers navigate-previous> // [tl! add]
+    <!-- previous and next are slot names now: a bare attribute throws -->
+    <x-step selected="1" helpers previous> <!-- [tl! remove] -->
+    <x-step selected="1" helpers navigate-previous> <!-- [tl! add] -->
     HTML;
 
     public const string LIST_DIVIDER = <<<'PHP'

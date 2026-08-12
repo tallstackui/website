@@ -142,10 +142,10 @@ class Dropdown
     <x-dropdown text="Menu" position="bottom-end">
         <x-dropdown.items text="PHP" />
         <x-dropdown.items text="Python" />
-        <x-dropdown.submenu text="Second Level" position="left-start"> {{-- [tl! focus] --}}
+        <x-dropdown.submenu text="Second Level" position="left-start"> <!-- [tl! focus] -->
             <x-dropdown.items text="JavaScript" />
             <x-dropdown.items text="Java" />
-            <x-dropdown.submenu text="Third Level" position="left-start"> {{-- [tl! focus] --}}
+            <x-dropdown.submenu text="Third Level" position="left-start"> <!-- [tl! focus] -->
                 <x-dropdown.items text="C++" />
                 <x-dropdown.items text="Golang" />
             </x-dropdown.submenu>

@@ -255,10 +255,10 @@ class Button
     HTML;
 
     public const string SPINNER = <<<'HTML'
-    {{-- Without the prop, the default effect --}}
+    <!-- Without the prop, the default effect -->
     <x-button wire:click="save" loading="save">Save</x-button>
 
-    {{-- Any of the nine visual variations --}}
+    <!-- Any of the nine visual variations -->
     <x-button wire:click="save" loading="save" spinner="ring">Save</x-button>
     <x-button wire:click="save" loading="save" spinner="throbber">Save</x-button>
     <x-button wire:click="save" loading="save" spinner="gradient">Save</x-button>
@@ -269,7 +269,7 @@ class Button
     <x-button wire:click="save" loading="save" spinner="bars">Save</x-button>
     <x-button wire:click="save" loading="save" spinner="wave">Save</x-button>
 
-    {{-- The four textual variations throw, as does any unknown value --}}
+    <!-- The four textual variations throw, as does any unknown value -->
     <x-button wire:click="save" loading="save" loading spinner="shimmer">Save</x-button>
     HTML;
 

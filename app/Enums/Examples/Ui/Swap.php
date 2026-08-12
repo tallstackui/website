@@ -7,13 +7,13 @@ namespace App\Enums\Examples\Ui;
 class Swap
 {
     public const string BASIC = <<<'HTML'
-    {{-- Flat array --}}
+    <!-- Flat array -->
     <x-swap :options="['Apple', 'Banana', 'Cherry']" />
 
-    {{-- Collection --}}
+    <!-- Collection -->
     <x-swap :options="collect(['Apple', 'Banana', 'Cherry'])" />
 
-    {{-- Dimensional array, default keys --}}
+    <!-- Dimensional array, default keys -->
     <x-swap :options="[
         ['label' => 'Small', 'value' => 1],
         ['label' => 'Medium', 'value' => 2],
@@ -48,10 +48,10 @@ class Swap
     HTML;
 
     public const string LOOP = <<<'HTML'
-    {{-- Loops infinitely, the default --}}
+    <!-- Loops infinitely, the default -->
     <x-swap :options="['One', 'Two', 'Three']" />
 
-    {{-- Stops at both ends: the matching button disables and the drag resists --}}
+    <!-- Stops at both ends: the matching button disables and the drag resists -->
     <x-swap :loop="false" :options="['One', 'Two', 'Three']" />
     HTML;
 
@@ -73,7 +73,7 @@ class Swap
     public const string WITHOUT_LIVEWIRE = <<<'HTML'
     <form method="POST" action="/preferences">
         @csrf
-        {{-- request('cycle') carries the value of the selected option --}}
+        <!-- request('cycle') carries the value of the selected option -->
         <x-swap name="cycle" :options="['Monthly', 'Quarterly', 'Yearly']" />
     </form>
     HTML;

@@ -92,7 +92,7 @@ class Dial
     public const string SIZES = <<<'HTML'
     <x-dial xs>...</x-dial>
     <x-dial sm>...</x-dial>
-    <x-dial>...</x-dial> {{-- md (default) --}}
+    <x-dial>...</x-dial> <!-- md (default) -->
     <x-dial lg>...</x-dial>
     HTML;
 

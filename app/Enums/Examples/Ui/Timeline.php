@@ -94,7 +94,7 @@ class Timeline
     @endphp
 
     <div class="max-w-md">
-        <x-timeline :items="$items" alternate /> {{-- [tl! highlight] --}}
+        <x-timeline :items="$items" alternate /> <!-- [tl! highlight] -->
     </div>
     HTML;
 
@@ -107,7 +107,7 @@ class Timeline
     </x-timeline>
 
     <!-- Compact: continuous line, no gap between items -->
-    <x-timeline compact> {{-- [tl! highlight] --}}
+    <x-timeline compact> <!-- [tl! highlight] -->
         <x-timeline.items title="Step A" description="First." date="Jan" />
         <x-timeline.items title="Step B" description="Second." date="Feb" />
         <x-timeline.items title="Step C" description="Third." date="Mar" />
@@ -118,7 +118,7 @@ class Timeline
     <x-timeline>
         <x-timeline.items title="Planning"
                           description="Research and spec."
-                          icon="pencil-square" /> {{-- [tl! highlight] --}}
+                          icon="pencil-square" /> <!-- [tl! highlight] -->
         <x-timeline.items title="Building"
                           description="Implementation."
                           icon="wrench-screwdriver" />
@@ -134,7 +134,7 @@ class Timeline
     public const string MARKER_SLOT = <<<'HTML'
     <x-timeline color="rose">
         <x-timeline.items title="Numbered step 1" description="First step.">
-            <x-slot:marker> {{-- [tl! highlight:3] --}}
+            <x-slot:marker> <!-- [tl! highlight:3] -->
                 <span class="flex h-6 w-6 items-center justify-center rounded-full bg-rose-600 text-xs font-bold text-white">1</span>
             </x-slot:marker>
         </x-timeline.items>

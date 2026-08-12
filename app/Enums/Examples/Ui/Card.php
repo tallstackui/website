@@ -76,12 +76,12 @@ class Card
     HTML;
 
     public const string ROUND = <<<'HTML'
-    {{-- Default radius (rounded-lg). --}}
+    <!-- Default radius (rounded-lg). -->
     <x-card>
         TallStackUI
     </x-card>
 
-    {{-- Bare flag preserves the default radius. --}}
+    <!-- Bare flag preserves the default radius. -->
     <x-card round>
         TallStackUI
     </x-card>
@@ -186,10 +186,10 @@ class Card
     HTML;
 
     public const string SKELETON = <<<'HTML'
-    {{-- Bare flag: 3 body lines --}}
+    <!-- Bare flag: 3 body lines -->
     <x-card skeleton />
 
-    {{-- An integer sets the count --}}
+    <!-- An integer sets the count -->
     <x-card skeleton="5" header="TallStackUI" footer image round="xl" />
     HTML;
 

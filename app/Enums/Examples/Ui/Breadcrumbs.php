@@ -41,7 +41,7 @@ class Breadcrumbs
     public const string SIZES = <<<'HTML'
     <x-breadcrumbs xs :items="$items" />
     <x-breadcrumbs sm :items="$items" />
-    <x-breadcrumbs :items="$items" /> {{-- md (default) --}}
+    <x-breadcrumbs :items="$items" /> <!-- md (default) -->
     <x-breadcrumbs lg :items="$items" />
     HTML;
 

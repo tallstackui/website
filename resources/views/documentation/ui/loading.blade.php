@@ -68,12 +68,17 @@
         new
         description="An option to use the new spinners component."
     >
-        <x-preview language="blade" :contents="$usingSpinners">
-            <livewire:documentation.ui.loading :model="3" />
-        </x-preview>
-        <p class="mt-4">
-            You can read more about the new spinners component
-            <x-refer :doc="['ui', 'spinner']">by click here.</x-refer>
-        </p>
+        <div class="space-y-4">
+            <x-preview language="blade" :contents="$usingSpinners">
+                <livewire:documentation.ui.loading :model="3" />
+            </x-preview>
+            <p>
+                You can read more about the new spinners component
+                <x-refer :doc="['ui', 'spinner']">by click here.</x-refer>
+            </p>
+            <x-warning info>
+                You can set the <x-block>loading</x-block> component to use spinners by default in the <x-refer doc="configuration">configuration file.</x-refer>
+            </x-warning>
+        </div>
     </x-section>
 </x-layout>

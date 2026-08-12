@@ -11,10 +11,10 @@ class QrCode
     HTML;
 
     public const string COLORS = <<<'HTML'
-    {{-- Without color the modules follow the theme --}}
+    <!-- Without color the modules follow the theme -->
     <x-qr-code link="https://tallstackui.com" />
 
-    {{-- A named color is the same color under both themes --}}
+    <!-- A named color is the same color under both themes -->
     <x-qr-code link="https://tallstackui.com" color="blue" />
     <x-qr-code link="https://tallstackui.com" color="emerald" />
     HTML;
@@ -29,10 +29,10 @@ class QrCode
     HTML;
 
     public const string WATERMARK = <<<'HTML'
-    {{-- An icon name draws the icon --}}
+    <!-- An icon name draws the icon -->
     <x-qr-code link="https://tallstackui.com" watermark="bolt" size="lg" />
 
-    {{-- Anything else is drawn as text, capped at 8 characters --}}
+    <!-- Anything else is drawn as text, capped at 8 characters -->
     <x-qr-code link="https://tallstackui.com" watermark="TALL" size="lg" />
     HTML;
 

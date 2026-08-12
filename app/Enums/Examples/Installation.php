@@ -15,7 +15,7 @@ class Installation
         <head>
             <!-- ... -->
 
-            <tallstackui:script /> {{-- [tl! highlight:1, focus:1] --}}
+            <tallstackui:script /> <!-- [tl! highlight:1, focus:1] -->
             @livewireStyles
             @vite(['resources/css/app.css', 'resources/js/app.js'])
         </head>

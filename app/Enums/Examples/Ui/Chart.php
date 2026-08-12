@@ -7,7 +7,7 @@ namespace App\Enums\Examples\Ui;
 class Chart
 {
     public const string BASIC = <<<'HTML'
-    {{-- A flat list of numbers is a single unnamed series --}}
+    <!-- A flat list of numbers is a single unnamed series -->
     <x-chart :series="[10, 40, 25, 60, 30, 80]" />
     HTML;
 
@@ -83,15 +83,15 @@ class Chart
     HTML;
 
     public const string FORMATTING = <<<'HTML'
-    {{-- prefix, suffix and decimals cover the common case --}}
+    <!-- prefix, suffix and decimals cover the common case -->
     <x-chart :series="$revenue" grid prefix="$" :decimals="2" />
 
-    {{-- Anything beyond it takes a closure --}}
+    <!-- Anything beyond it takes a closure -->
     <x-chart :series="$revenue"
              grid
              :formatter="fn (float $value) => Number::currency($value, 'BRL', 'pt_BR')" />
 
-    {{-- The axis arrives as a second argument --}}
+    <!-- The axis arrives as a second argument -->
     <x-chart :formatter="fn (float $value, string $axis) => $axis === 'right'
                  ? $value.' un'
                  : Number::currency($value, 'BRL', 'pt_BR')"

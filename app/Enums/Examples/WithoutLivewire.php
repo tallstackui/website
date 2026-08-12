@@ -135,7 +135,7 @@ class WithoutLivewire
     HTML;
 
     public const string TABLE = <<<'HTML'
-    {{-- The three features that needed a round trip now travel through the query string --}}
+    <!-- The three features that needed a round trip now travel through the query string -->
 
     <x-table :$headers
              :rows="$users"

@@ -130,10 +130,10 @@ class Slide
         Open
     </x-button>
 
-    <x-slide id="slide-id" x-on:open="$tsui.focus('email')"> {{-- [tl! highlight] --}}
+    <x-slide id="slide-id" x-on:open="$tsui.focus('email')"> <!-- [tl! highlight] -->
         <form>
             <x-input label="Email"
-                     id="email" {{-- [tl! highlight] --}}
+                     id="email" <!-- [tl! highlight] -->
                      hint="Insert your best email address" />
         </form>
     </x-slide>
@@ -144,10 +144,10 @@ class Slide
         Open
     </x-button>
 
-    <x-slide id="slide-id" x-on:open="$tsui.focus('email', 1000)"> {{-- [tl! highlight] --}}
+    <x-slide id="slide-id" x-on:open="$tsui.focus('email', 1000)"> <!-- [tl! highlight] -->
         <form>
             <x-input label="Email"
-                     id="email" {{-- [tl! highlight] --}}
+                     id="email" <!-- [tl! highlight] -->
                      hint="Insert your best email address" />
         </form>
     </x-slide>
@@ -158,10 +158,10 @@ class Slide
         Open
     </x-button>
 
-    <x-slide id="slide-id" x-on:open="$tsui.focus('email')"> {{-- [tl! highlight] --}}
+    <x-slide id="slide-id" x-on:open="$tsui.focus('email')"> <!-- [tl! highlight] -->
         <form>
             <x-input label="Email"
-                     data-focus="email" {{-- [tl! highlight] --}}
+                     data-focus="email" <!-- [tl! highlight] -->
                      hint="Insert your best email address" />
         </form>
     </x-slide>

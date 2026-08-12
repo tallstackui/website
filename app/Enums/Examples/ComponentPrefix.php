@@ -44,18 +44,18 @@ class ComponentPrefix
     public const string EXAMPLES = <<<'HTML'
     <!-- Prefixing: "ts-" -->
 
-    <x-alert /> {{-- [tl! remove] --}}
-    <x-ts-alert /> {{-- [tl! add] --}}
+    <x-alert /> <!-- [tl! remove] -->
+    <x-ts-alert /> <!-- [tl! add] -->
 
-    <x-modal /> {{-- [tl! remove] --}}
-    <x-ts-modal /> {{-- [tl! add] --}}
+    <x-modal /> <!-- [tl! remove] -->
+    <x-ts-modal /> <!-- [tl! add] -->
 
     <!-- Prefixing: "foo" -->
 
-    <x-alert /> {{-- [tl! remove] --}}
-    <x-fooalert /> {{-- [tl! add] --}}
+    <x-alert /> <!-- [tl! remove] -->
+    <x-fooalert /> <!-- [tl! add] -->
 
-    <x-modal /> {{-- [tl! remove] --}}
-    <x-foomodal /> {{-- [tl! add] --}}
+    <x-modal /> <!-- [tl! remove] -->
+    <x-foomodal /> <!-- [tl! add] -->
     HTML;
 }

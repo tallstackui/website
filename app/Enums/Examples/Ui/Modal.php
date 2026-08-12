@@ -127,10 +127,10 @@ class Modal
         Open
     </x-button>
 
-    <x-modal id="modal-id" x-on:open="$tsui.focus('email')"> {{-- [tl! highlight] --}}
+    <x-modal id="modal-id" x-on:open="$tsui.focus('email')"> <!-- [tl! highlight] -->
         <form>
             <x-input label="Email"
-                     id="email" {{-- [tl! highlight] --}}
+                     id="email" <!-- [tl! highlight] -->
                      hint="Insert your best email address" />
         </form>
     </x-modal>
@@ -141,10 +141,10 @@ class Modal
         Open
     </x-button>
 
-    <x-modal id="modal-id" x-on:open="$tsui.focus('email', 1000)"> {{-- [tl! highlight] --}}
+    <x-modal id="modal-id" x-on:open="$tsui.focus('email', 1000)"> <!-- [tl! highlight] -->
         <form>
             <x-input label="Email"
-                     id="email" {{-- [tl! highlight] --}}
+                     id="email" <!-- [tl! highlight] -->
                      hint="Insert your best email address" />
         </form>
     </x-modal>
@@ -155,17 +155,17 @@ class Modal
         Open
     </x-button>
 
-    <x-modal id="modal-id" x-on:open="$tsui.focus('email')"> {{-- [tl! highlight] --}}
+    <x-modal id="modal-id" x-on:open="$tsui.focus('email')"> <!-- [tl! highlight] -->
         <form>
             <x-input label="Email"
-                     data-focus="email" {{-- [tl! highlight] --}}
+                     data-focus="email" <!-- [tl! highlight] -->
                      hint="Insert your best email address" />
         </form>
     </x-modal>
     HTML;
 
     public const string CENTER_BREAKPOINT = <<<'HTML'
-    {{-- Bottom sheet below 768px, centered dialog from there upwards --}}
+    <!-- Bottom sheet below 768px, centered dialog from there upwards -->
     <x-modal center="md">
         TallStackUI
     </x-modal>
