@@ -55,28 +55,34 @@
             </x-accordion>
         </x-preview>
     </x-section>
-    <x-section title="Flat Variation">
-        <x-preview language="blade" :contents="$flat">
-            <x-accordion flat>
-                <x-accordion.items title="First" id="flat-1">
-                    Without the outer border, rounding, and shadow.
-                </x-accordion.items>
-                <x-accordion.items title="Second" id="flat-2">
-                    Only the inter-item separator remains.
-                </x-accordion.items>
-            </x-accordion>
-        </x-preview>
-    </x-section>
-    <x-section title="Shadowless">
-        <x-preview language="blade" :contents="$shadowless">
-            <x-accordion shadowless>
-                <x-accordion.items title="First" id="flat-1">
-                    Without the shadow, 1
-                </x-accordion.items>
-                <x-accordion.items title="Second" id="flat-2">
-                    Without the shadow, 2
-                </x-accordion.items>
-            </x-accordion>
+    <x-section title="Variations">
+        <x-preview language="blade" :contents="$variations">
+            <div class="space-y-4">
+                <x-accordion shadowless>
+                    <x-accordion.items title="First" id="flat-1">
+                        Without the shadow, 1
+                    </x-accordion.items>
+                    <x-accordion.items title="Second" id="flat-2">
+                        Without the shadow, 2
+                    </x-accordion.items>
+                </x-accordion>
+                <x-accordion bordered>
+                    <x-accordion.items title="First" id="flat-1">
+                        With border, 1
+                    </x-accordion.items>
+                    <x-accordion.items title="Second" id="flat-2">
+                        With border, 2
+                    </x-accordion.items>
+                </x-accordion>
+                <x-accordion shadowless bordered>
+                    <x-accordion.items title="First" id="flat-1">
+                        Without shadow and with border, 1
+                    </x-accordion.items>
+                    <x-accordion.items title="Second" id="flat-2">
+                        Without shadow and with border, 2
+                    </x-accordion.items>
+                </x-accordion>
+            </div>
         </x-preview>
     </x-section>
     <x-section title="Chevron Position">

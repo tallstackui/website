@@ -4,8 +4,20 @@
         "components": {
             "list": [
                 {
+                    "name": "accordion",
+                    "className": "TallStackUi\\Components\\Accordion\\Main\\Component"
+                },
+                {
+                    "name": "accordion.items",
+                    "className": "TallStackUi\\Components\\Accordion\\Items\\Component"
+                },
+                {
                     "name": "alert",
                     "className": "TallStackUi\\Components\\Alert\\Component"
+                },
+                {
+                    "name": "autocomplete",
+                    "className": "TallStackUi\\Components\\Form\\Autocomplete\\Component"
                 },
                 {
                     "name": "back-to-top",
@@ -44,6 +56,14 @@
                     "className": "TallStackUi\\Components\\Button\\Circle\\Component"
                 },
                 {
+                    "name": "button.group",
+                    "className": "TallStackUi\\Components\\Button\\Group\\Component"
+                },
+                {
+                    "name": "calendar",
+                    "className": "TallStackUi\\Components\\Calendar\\Component"
+                },
+                {
                     "name": "carousel",
                     "className": "TallStackUi\\Components\\Carousel\\Component"
                 },
@@ -52,8 +72,16 @@
                     "className": "TallStackUi\\Components\\Card\\Component"
                 },
                 {
+                    "name": "chart",
+                    "className": "TallStackUi\\Components\\Chart\\Component"
+                },
+                {
                     "name": "checkbox",
                     "className": "TallStackUi\\Components\\Form\\Checkbox\\Component"
+                },
+                {
+                    "name": "checkbox.group",
+                    "className": "TallStackUi\\Components\\Form\\Checkbox\\Group\\Component"
                 },
                 {
                     "name": "color",
@@ -100,6 +128,10 @@
                     "className": "TallStackUi\\Components\\Dropdown\\Submenu\\Component"
                 },
                 {
+                    "name": "editor",
+                    "className": "TallStackUi\\Components\\Editor\\Component"
+                },
+                {
                     "name": "environment",
                     "className": "TallStackUi\\Components\\Environment\\Component"
                 },
@@ -110,6 +142,10 @@
                 {
                     "name": "errors",
                     "className": "TallStackUi\\Components\\Errors\\Component"
+                },
+                {
+                    "name": "gallery",
+                    "className": "TallStackUi\\Components\\Gallery\\Component"
                 },
                 {
                     "name": "hint",
@@ -142,6 +178,14 @@
                 {
                     "name": "link",
                     "className": "TallStackUi\\Components\\Link\\Component"
+                },
+                {
+                    "name": "list",
+                    "className": "TallStackUi\\Components\\List\\Main\\Component"
+                },
+                {
+                    "name": "list.items",
+                    "className": "TallStackUi\\Components\\List\\Items\\Component"
                 },
                 {
                     "name": "loading",
@@ -180,8 +224,16 @@
                     "className": "TallStackUi\\Components\\Progress\\Circle\\Component"
                 },
                 {
+                    "name": "qr-code",
+                    "className": "TallStackUi\\Components\\QrCode\\Component"
+                },
+                {
                     "name": "radio",
                     "className": "TallStackUi\\Components\\Form\\Radio\\Component"
+                },
+                {
+                    "name": "radio.group",
+                    "className": "TallStackUi\\Components\\Form\\Radio\\Group\\Component"
                 },
                 {
                     "name": "range",
@@ -220,6 +272,10 @@
                     "className": "TallStackUi\\Components\\Slide\\Component"
                 },
                 {
+                    "name": "spinner",
+                    "className": "TallStackUi\\Components\\Spinner\\Component"
+                },
+                {
                     "name": "stats",
                     "className": "TallStackUi\\Components\\Stats\\Component"
                 },
@@ -230,6 +286,10 @@
                 {
                     "name": "step.items",
                     "className": "TallStackUi\\Components\\Step\\Items\\Component"
+                },
+                {
+                    "name": "swap",
+                    "className": "TallStackUi\\Components\\Swap\\Component"
                 },
                 {
                     "name": "tab",
@@ -260,6 +320,14 @@
                     "className": "TallStackUi\\Components\\Form\\Time\\Component"
                 },
                 {
+                    "name": "timeline",
+                    "className": "TallStackUi\\Components\\Timeline\\Main\\Component"
+                },
+                {
+                    "name": "timeline.items",
+                    "className": "TallStackUi\\Components\\Timeline\\Items\\Component"
+                },
+                {
                     "name": "toast",
                     "className": "TallStackUi\\Components\\Toast\\Component"
                 },
@@ -274,6 +342,10 @@
                 {
                     "name": "upload",
                     "className": "TallStackUi\\Components\\Form\\Upload\\Component"
+                },
+                {
+                    "name": "upload.async",
+                    "className": "TallStackUi\\Components\\Form\\Upload\\Async\\Component"
                 },
                 {
                     "name": "reaction",

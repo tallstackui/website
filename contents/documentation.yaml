@@ -300,8 +300,7 @@ ui:
   accordion:
     - Basic Usage
     - Multiple Open
-    - Flat Variation
-    - Shadowless
+    - Variations
     - Chevron Position
     - Default Open
     - Custom Icon
@@ -597,7 +596,6 @@ ui:
     - Branch Detection Algorithm
     - Color Scheme
   gallery:
-    - Concept
     - Basic Usage
     - Grid
     - Masonry
@@ -611,8 +609,6 @@ ui:
     - Slots
     - Events
     - Image Object
-    - Performance
-    - Validation
   icon:
     - Basic Usage
     - Size Shorthands

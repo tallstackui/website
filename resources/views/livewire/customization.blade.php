@@ -86,7 +86,7 @@ new class extends Component {
 ?>
 
 <div>
-    <x-modal id="{{ $id }}">
+    <x-modal scrollable id="{{ $id }}">
         <x-slot:title>
             <p class="flex items-center justify-start gap-2">{{ $title }}, Customization Blocks</p>
         </x-slot:title>

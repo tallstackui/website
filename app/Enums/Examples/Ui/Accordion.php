@@ -34,24 +34,31 @@ class Accordion
     </x-accordion>
     HTML;
 
-    public const string FLAT = <<<'HTML'
-    <x-accordion flat> {{-- [tl! highlight] --}}
-        <x-accordion.items title="First" id="flat-1">
-            Without the outer border, rounding, and shadow.
-        </x-accordion.items>
-        <x-accordion.items title="Second" id="flat-2">
-            Only the inter-item separator remains.
-        </x-accordion.items>
-    </x-accordion>
-    HTML;
-
-    public const string SHADOWLESS = <<<'HTML'
-    <x-accordion shadowless> {{-- [tl! highlight] --}}
+    public const string VARIATIONS = <<<'HTML'
+    <x-accordion shadowless>
         <x-accordion.items title="First" id="flat-1">
             Without the shadow, 1
         </x-accordion.items>
         <x-accordion.items title="Second" id="flat-2">
             Without the shadow, 2
+        </x-accordion.items>
+    </x-accordion>
+
+    <x-accordion bordered>
+        <x-accordion.items title="First" id="flat-1">
+            With border, 1
+        </x-accordion.items>
+        <x-accordion.items title="Second" id="flat-2">
+            With border, 2
+        </x-accordion.items>
+    </x-accordion>
+
+    <x-accordion shadowless bordered>
+        <x-accordion.items title="First" id="flat-1">
+            Without shadow and with border, 1
+        </x-accordion.items>
+        <x-accordion.items title="Second" id="flat-2">
+            Without shadow and with border, 2
         </x-accordion.items>
     </x-accordion>
     HTML;

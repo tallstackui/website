@@ -10,12 +10,12 @@
     <x-slot:customization>
         <livewire:customization :$customization component="Spinner" />
     </x-slot>
-    <x-section title="Basic Usage" new>
+    <x-section title="Basic Usage">
         <x-preview language="blade" :contents="$basic">
             <x-spinner />
         </x-preview>
     </x-section>
-    <x-section title="Variations" new>
+    <x-section title="Variations">
         <x-preview language="blade" :contents="$variations">
             <div class="flex flex-wrap items-center gap-8">
                 <x-spinner ring />
@@ -30,7 +30,7 @@
             </div>
         </x-preview>
     </x-section>
-    <x-section title="Textual Variations" new>
+    <x-section title="Textual Variations">
         <x-preview language="blade" :contents="$textual">
             <div class="flex flex-col gap-4">
                 <x-spinner shimmer text="Loading the report" />
@@ -40,7 +40,7 @@
             </div>
         </x-preview>
     </x-section>
-    <x-section title="Size Variations" new>
+    <x-section title="Size Variations">
         <x-preview language="blade" :contents="$sizes">
             <div class="flex items-center gap-6">
                 <x-spinner xs />
@@ -50,7 +50,7 @@
             </div>
         </x-preview>
     </x-section>
-    <x-section title="Colors" new>
+    <x-section title="Colors">
         <x-preview language="blade" :contents="$colors">
             <div class="flex flex-wrap items-center gap-8">
                 <x-spinner color="red" />
@@ -61,7 +61,7 @@
             </div>
         </x-preview>
     </x-section>
-    <x-section title="Label" new>
+    <x-section title="Label">
         <x-preview language="blade" :contents="$label">
             <div class="flex flex-col gap-4">
                 <x-spinner />
@@ -74,7 +74,7 @@
             </div>
         </x-preview>
     </x-section>
-    <x-section title="Thinking" new>
+    <x-section title="Thinking">
         <x-preview language="blade" :contents="$thinking">
             <div class="flex flex-col gap-4">
                 <x-spinner thinking />
@@ -84,7 +84,7 @@
             </div>
         </x-preview>
     </x-section>
-    <x-section title="Inside a Button" new>
+    <x-section title="Inside a Button">
         <x-preview language="blade" :contents="$button">
             <x-button color="primary">
                 <x-slot:left>

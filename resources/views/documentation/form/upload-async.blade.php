@@ -101,9 +101,19 @@
         </x-link>
     </x-warning>
     <x-section class="mt-4" title="Basic Usage">
-        <x-preview language="blade" :contents="$basic">
-            <livewire:documentation.form.upload.async :mode="1" />
-        </x-preview>
+        <div class="space-y-4">
+            <x-preview language="blade" :contents="$basic">
+                <livewire:documentation.form.upload.async :mode="1" />
+            </x-preview>
+            <x-warning info>
+                Similar to the
+                <x-block>upload</x-block>
+                component, you can also use the
+                <x-block>:preview="false"</x-block>
+                attribute to disable the preview of images when uploading
+                images.
+            </x-warning>
+        </div>
     </x-section>
     <x-section title="Multiple">
         <x-preview language="blade" :contents="$multiple">
