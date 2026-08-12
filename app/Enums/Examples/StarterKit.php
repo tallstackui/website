@@ -5,7 +5,7 @@ namespace App\Enums\Examples;
 class StarterKit
 {
     public const string COMMAND = <<<'HTML'
-    laravel new --using=tallstackui/starter-kit
+    laravel new --using=tallstackui/starter-kit:3.x
     HTML;
 
     public const string PEST = <<<'HTML'
