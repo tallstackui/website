@@ -489,7 +489,6 @@ ui:
     - Slots
     - Events
   chart:
-    - Concept
     - Basic Usage
     - Types
     - Multiple Series
@@ -497,13 +496,12 @@ ui:
     - Combining Types
     - Secondary Axis
     - Colors
-    - Chrome
     - Formatting
     - Slots
-    - Inside a Card
     - Skeleton
     - Configuration
-    - Degenerate Input
+    - Soft Customization
+    - Invalid Input
   clipboard:
     - Basic Usage
     - Button at Left

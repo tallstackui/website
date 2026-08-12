@@ -7,16 +7,25 @@ namespace App\Enums\Examples\Ui;
 class Chart
 {
     public const string BASIC = <<<'HTML'
-    <!-- A flat list of numbers is a single unnamed series -->
     <x-chart :series="[10, 40, 25, 60, 30, 80]" />
     HTML;
 
     public const string TYPES = <<<'HTML'
-    <x-chart :series="[10, 40, 25, 60, 30, 80]" type="area" />
-    <x-chart :series="[10, 40, 25, 60, 30, 80]" type="line" />
-    <x-chart :series="[10, 40, 25, 60, 30, 80]" type="bar" />
-    <x-chart :series="[35, 25, 20, 20]" :labels="['Direct', 'Organic', 'Social', 'Referral']" type="pie" legend />
-    <x-chart :series="[35, 25, 20, 20]" :labels="['Direct', 'Organic', 'Social', 'Referral']" type="donut" legend />
+    <x-chart :series="[10, 40, 25, 60, 30, 80]" area />
+
+    <x-chart :series="[10, 40, 25, 60, 30, 80]" line />
+
+    <x-chart :series="[10, 40, 25, 60, 30, 80]" bar />
+
+    <x-chart :series="[35, 25, 20, 20]"
+             :labels="['Direct', 'Organic', 'Social', 'Referral']"
+             pie
+             legend />
+
+    <x-chart :series="[35, 25, 20, 20]"
+             :labels="['Direct', 'Organic', 'Social', 'Referral']"
+             donut
+             legend />
     HTML;
 
     public const string MULTIPLE = <<<'HTML'
@@ -33,11 +42,12 @@ class Chart
 
     public const string STACKED = <<<'HTML'
     <x-chart :labels="['Jan', 'Feb', 'Mar', 'Apr']"
-             type="bar"
+             bar
              stacked
              :series="[
-                 ['name' => 'New', 'data' => [12, 18, 15, 22]],
-                 ['name' => 'Returning', 'data' => [30, 26, 34, 28]],
+                 ['name' => 'Active', 'data' => [12, 18, 15, 22]],
+                 ['name' => 'Inactive', 'data' => [30, 26, 34, 28]],
+                 ['name' => 'Recurring', 'data' => [18, 41, 12, 62]],
              ]"
              grid
              legend />
@@ -45,7 +55,7 @@ class Chart
 
     public const string COMBINING = <<<'HTML'
     <x-chart :labels="['Jan', 'Feb', 'Mar', 'Apr']"
-             type="bar"
+             bar
              stacked
              :series="[
                  ['name' => 'New', 'data' => [12, 18, 15, 22]],
@@ -70,7 +80,8 @@ class Chart
     HTML;
 
     public const string COLORS = <<<'HTML'
-    <x-chart :series="[10, 40, 25, 60, 30, 80]" color="emerald" />
+    <x-chart :series="[10, 40, 25, 60, 30, 80]"
+             color="emerald" />
 
     <x-chart :labels="['Jan', 'Feb', 'Mar', 'Apr']"
              :colors="['red', 'blue', 'amber']"
@@ -99,52 +110,29 @@ class Chart
                  ['name' => 'Revenue', 'data' => $revenue],
                  ['name' => 'Orders', 'data' => $orders, 'axis' => 'right'],
              ]"
-             grid />
-    HTML;
-
-    public const string CHROME = <<<'HTML'
-    <x-chart :series="[10, 40, 25, 60, 30, 80]"
-             :labels="['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun']"
              grid
              legend
-             tooltip
-             markers />
+             tooltip />
     HTML;
 
     public const string SLOTS = <<<'HTML'
     <x-chart :series="[10, 40, 25, 60, 30, 80]" grid>
         <x-slot:header>Monthly Balance</x-slot:header>
-        <x-slot:footer>Updated 2 minutes ago</x-slot:footer>
+        <x-slot:footer>
+            <div class="flex justify-end">
+                Updated 2 minutes ago
+            </div>
+        </x-slot:footer>
     </x-chart>
-    HTML;
-
-    public const string CARD = <<<'HTML'
-    <x-card paddingless>
-        <x-slot:header>Monthly Balance</x-slot:header>
-        <x-chart :series="[10, 40, 25, 60, 30, 80]" grid prefix="$" class="p-4" />
-    </x-card>
     HTML;
 
     public const string SKELETON = <<<'HTML'
     <x-chart skeleton />
-    <x-chart skeleton="10" type="bar" :height="240" />
-    <x-chart skeleton="5" type="donut" />
+
+    <x-chart skeleton="10" bar />
+
+    <x-chart skeleton="5" donut />
     HTML;
-
-    public const string CONFIGURATION = <<<'PHP'
-    // config/tallstackui.php
-
-    'chart' => [
-        Components\Chart\Component::class,
-        [
-            'height' => 64,
-            'grid' => false,
-            'legend' => false,
-            'tooltip' => false,
-            'markers' => false,
-        ],
-    ],
-    PHP;
 
     public const string CUSTOMIZATION = <<<'HTML'
     TallStackUi::customize()
