@@ -117,7 +117,7 @@
     </x-section>
     <x-section title="Flat Look">
         <x-preview language="blade" :contents="$flat">
-            <div class="space-y-4">
+            <div class="flex flex-col space-y-4">
                 <x-calendar shadowless />
                 <x-calendar bordered />
                 <x-calendar shadowless bordered />

@@ -118,23 +118,11 @@ class Tooltip
     </div>
     HTML;
 
-    public const string SETTINGS = <<<'PHP'
-    // config/tallstackui.php
-
-    'tooltip' => [
-        Components\Tooltip\Component::class,
-        [
-            'delay' => null,
-            'color' => null,
-            'size' => null,
-            'invert' => false,
-        ],
-    ],
-    PHP;
-
     public const string STYLING = <<<'CSS'
-    /* The balloon is built by JavaScript and shared by every anchor,
-       so it is styled through a stable selector instead of customize() */
+    /*
+    The balloon is built by JavaScript and shared by every anchor,
+    so it is styled through a stable selector instead of customize()
+    */
 
     [data-tsui-tooltip] { border-radius: 0; }
     [data-tsui-tooltip] > [data-arrow] { display: none; }

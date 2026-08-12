@@ -248,19 +248,13 @@
     <x-section title="Extending a Scope" new disable-copy>
         <div class="space-y-4">
             <p>
-                Scopes could only be created, never touched, which made the ones
-                the package ships (
-                <x-block>card-shadowless</x-block>
-                ,
-                <x-block>stats-shadowless</x-block>
-                ,
-                <x-block>calendar-shadowless</x-block>
-                ,
-                <x-block>tab-shadowless</x-block>
-                ) read only from an application's point of view. Calling
+                Scopes are awesome, but they have a single problem: they could only be created, never touched. Calling
                 <x-block>scope()</x-block>
                 with the same name did not extend the existing one, it started
-                over from the component's original classes.
+                over from the component's original classes. To solve this problem, starting from v4 you can extend a
+                scope with
+                <x-block>extend()</x-block>
+                :
             </p>
             <x-code language="php" :contents="$extend" />
             <p>
@@ -272,14 +266,6 @@
                 <x-block>extend()</x-block>
                 refuses one.
             </p>
-            <x-warning>
-                The package's own scopes are registered in the service
-                provider's
-                <x-block>boot()</x-block>
-                , which runs before the application's providers under Laravel's
-                default discovery. Applications that disable discovery have to
-                make sure their provider boots afterwards.
-            </x-warning>
         </div>
     </x-section>
     <x-section title="Customizations Stack" new disable-copy>
@@ -297,10 +283,7 @@
                 <x-block>extend()</x-block>
                 work.
             </p>
-            <x-warning
-                warning
-                title="Anything relying on the last chain winning has to change"
-            >
+            <x-warning warning>
                 The practical case to watch is a customization that runs more
                 than once in the same process: it now accumulates rather than
                 settling on a fixed result.
@@ -318,47 +301,6 @@
                 now and drops only whole classes.
             </p>
             <x-code language="php" :contents="$removeTokens" />
-            <x-warning>
-                <x-block>replace()</x-block>
-                deliberately stays a substring operation &mdash; swapping a
-                palette with
-                <x-block>replace('gray-', 'zinc-')</x-block>
-                depends on it. Which means
-                <x-block>replace('rounded', 'rounded-full')</x-block>
-                still turns
-                <x-block>rounded-md</x-block>
-                into
-                <x-block>rounded-full-md</x-block>
-                ; target the full class name when that is not what you want.
-            </x-warning>
-        </div>
-    </x-section>
-    <x-section
-        title="Scopes Layer Over the Global Customization"
-        new
-        disable-copy
-    >
-        <div class="space-y-4">
-            <p>
-                A scope only overrides the blocks it names. Every other block
-                keeps whatever the global customization did to it, so a scoped
-                instance is the global look plus the scope's changes, not a
-                reset.
-            </p>
-            <x-code language="php" :contents="$scopeLayering" />
-            <p>
-                This applies to the scopes the package ships as well, so
-                <x-block>&lt;x-card scope="card-shadowless"&gt;</x-block>
-                no longer discards every global customization of Card.
-            </p>
-            <x-warning>
-                Block names containing a dot are keys, not paths. A scope can
-                set
-                <x-block>body</x-block>
-                and
-                <x-block>body.paddingless</x-block>
-                in the same call without one replacing the other.
-            </x-warning>
         </div>
     </x-section>
     <x-section title="Internal Scoped Customization" disable-copy>
@@ -378,9 +320,7 @@
                 Below is the full reference of available scopes organized by
                 parent component.
             </p>
-            <h3 class="text-lg font-semibold dark:text-white">
-                Wrapper Components
-            </h3>
+            <h3 class="text-xl font-mono dark:text-white">Wrapper Components</h3>
             <p>
                 These scopes affect all form components that use the shared
                 wrapper infrastructure.
@@ -391,15 +331,12 @@
                     ['index' => 'child', 'label' => 'Child'],
                     ['index' => 'scope', 'label' => 'Scope'],
                 ]"
-                :rows="collect($scopes['wrapper'])->flatMap(fn (array $section) => collect($section['rows'])->map(fn (array $scope) => ['parent' => $section['label'], 'child' => $scope['child'], 'scope' => $scope['scope']]))"
-            >
+                :rows="collect($scopes['wrapper'])->flatMap(fn (array $section) => collect($section['rows'])->map(fn (array $scope) => ['parent' => $section['label'], 'child' => $scope['child'], 'scope' => $scope['scope']]))">
                 @interact("column_scope", $row)
-                    <x-block>{{ $row["scope"] }}</x-block>
+                <x-block>{{ $row["scope"] }}</x-block>
                 @endinteract
             </x-table>
-            <h3 class="text-lg font-semibold dark:text-white">
-                Form Components
-            </h3>
+            <h3 class="text-xl font-mono dark:text-white">Form Components</h3>
             <x-table
                 :headers="[
                     ['index' => 'parent', 'label' => 'Component'],
@@ -409,10 +346,10 @@
                 :rows="collect($scopes['form'])->flatMap(fn (array $section) => collect($section['rows'])->map(fn (array $scope) => ['parent' => $section['label'], 'child' => $scope['child'], 'scope' => $scope['scope']]))"
             >
                 @interact("column_scope", $row)
-                    <x-block>{{ $row["scope"] }}</x-block>
+                <x-block>{{ $row["scope"] }}</x-block>
                 @endinteract
             </x-table>
-            <h3 class="text-lg font-semibold dark:text-white">UI Components</h3>
+            <h3 class="text-xl font-mono dark:text-white">UI Components</h3>
             <x-table
                 :headers="[
                     ['index' => 'parent', 'label' => 'Component'],
@@ -422,7 +359,7 @@
                 :rows="collect($scopes['ui'])->flatMap(fn (array $section) => collect($section['rows'])->map(fn (array $scope) => ['parent' => $section['label'], 'child' => $scope['child'], 'scope' => $scope['scope']]))"
             >
                 @interact("column_scope", $row)
-                    <x-block>{{ $row["scope"] }}</x-block>
+                <x-block>{{ $row["scope"] }}</x-block>
                 @endinteract
             </x-table>
         </div>

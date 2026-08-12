@@ -41,7 +41,7 @@
                 />
                 <x-input
                     label="Credit Card"
-                    hint="Insert your credit card number"
+                    hint="Insert a fake Visa credit card number"
                     x-mask:dynamic="creditCardMask"
                     value="4444555566667777"
                 />

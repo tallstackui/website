@@ -326,13 +326,6 @@ class Soft
     ->remove('shadow-md rounded-lg')
     PHP;
 
-    public const string SCOPE_LAYERING = <<<'PHP'
-    TallStackUi::customize()->alert()->block('wrapper')->append('brand-shadow');
-    TallStackUi::customize('alert', scope: 'flat')->block('text.title')->append('text-xl');
-
-    // <x-alert scope="flat" /> renders with both brand-shadow and text-xl
-    PHP;
-
     public const string CUSTOMIZATION = <<<'HTML'
     TallStackUi::customize()
         ->form('checkbox')

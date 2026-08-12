@@ -312,24 +312,30 @@
                     :number="45231"
                     title="Revenue"
                     increase
-                    :chart="[10, 40, 25, 60, 30, 80]"
-                />
-                <x-stats :number="45231" title="Revenue">
+                >
                     <x-slot:chart>
                         <x-chart
-                            :series="[10, 40, 25, 60, 30, 80]"
-                            color="emerald"
+                            :series="[71, 24, 50, 33, 90, 120]"
+                            color="green"
                             class="h-full w-full"
+                            :height="64"
+                        />
+                    </x-slot>
+                </x-stats>
+                <x-stats :number="45231" title="Revenue" decrease>
+                    <x-slot:chart>
+                        <x-chart
+                            :series="[10, 40, 25, 51, 12, 102]"
+                            color="red"
+                            class="h-full w-full"
+                            :height="64"
                         />
                     </x-slot>
                 </x-stats>
             </div>
         </x-preview>
         <x-warning class="mt-4">
-            The component treats a missing chart, an empty array, and an empty
-            slot as no chart. With the solid
-            <x-block>solid</x-block>
-            , the icon tile is opaque and hides the watermark behind it.
+            The component treats a missing chart, an empty array, and an empty slot as no chart.
         </x-warning>
     </x-section>
     <x-section

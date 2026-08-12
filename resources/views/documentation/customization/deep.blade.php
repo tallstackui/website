@@ -20,7 +20,10 @@
             </u>
         </p>
     </x-section>
-    <x-section title="Publishing Configuration File" disable-copy>
+    <x-warning error>
+        We do not recommend deep customization unless you have a very good reason to do so.
+    </x-warning>
+    <x-section class="mt-4" title="Publishing Configuration File" disable-copy>
         <p>
             <x-refer doc="configuration">
                 To start deep customization you must publish the TallStackUI
@@ -89,6 +92,15 @@
     </x-section>
     <x-section title="Publish Blade Files" disable-copy>
         <div class="space-y-4">
+            <x-warning error>
+                We do not recommend publishing Blade files, as each time TallStackUI releases an update, you will need
+                to perform a rigorous merge on the published files, which will be hard and time-consuming. If you want
+                to customize the HTML of the components, we recommend that you use
+                <x-refer :doc="['customization', 'soft']">
+                    soft customization
+                </x-refer>
+                instead.
+            </x-warning>
             <p>
                 You can also edit the Blade files of TallStackUI components by
                 publishing them to your application level. This will allow you

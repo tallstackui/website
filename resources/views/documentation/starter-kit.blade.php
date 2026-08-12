@@ -40,6 +40,9 @@
                 <li>One single config file published</li>
                 <li>All unnecessary comments removed</li>
             </ul>
+            <x-warning>
+                The new version of the Starter Kit now uses the Laravel Fortify instead of Laravel Breeze.
+            </x-warning>
             <p class="font-semibold text-pink-600">Tools and commands:</p>
             <ul class="list-inside">
                 <li>
@@ -56,9 +59,7 @@
                 </li>
             </ul>
             <p>
-                You can also use the
-                <x-block>composer ci</x-block>
-                , like simulating a CI/CD pipeline:
+                All in one:
             </p>
             <x-code language="shell" :contents="$ci" />
         </div>
@@ -211,9 +212,9 @@
                     color based on the TallStackUI documentation color.
                 </li>
                 <li>
-                    The starter kit is built on top of Laravel Breeze. Keep in
+                    The starter kit is built on top of Laravel Fortify. Keep in
                     mind that all other aspects are modeled after the way
-                    Laravel Breeze works.
+                    Laravel Fortify works.
                 </li>
                 <li>
                     Due to the way Laravel starter kit mechanism works,

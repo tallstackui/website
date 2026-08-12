@@ -897,9 +897,7 @@ ui:
     - Balloon Color
     - Balloon Scale
     - Disabled
-    - Global Settings
     - Styling the Balloon
-    - Variations
 interactions:
   dialog:
     - Configuration
@@ -945,7 +943,6 @@ customization:
     - Extending a Scope
     - Customizations Stack
     - Remove Matches Whole Classes
-    - Scopes Layer Over the Global Customization
     - Internal Scoped Customization
   deep:
     - Concept

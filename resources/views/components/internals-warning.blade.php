@@ -1,6 +1,6 @@
 @props(["customization" => false])
 
-<x-card>
+<x-card shadowless bordered>
     <p>
         TallStackUI has several components that were created for internal use
         only. This documentation serves only to reflect the

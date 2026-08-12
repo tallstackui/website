@@ -104,9 +104,9 @@
         </x-preview>
         <x-warning info class="mt-4">
             On
-            <x-block>x-select.styled</x-block>
+            <x-block>select.styled</x-block>
             and
-            <x-block>x-autocomplete</x-block>
+            <x-block>autocomplete</x-block>
             the slot of the same name
             <b>replaces</b>
             the empty message and appears only when nothing matches. Here it

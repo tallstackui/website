@@ -25,7 +25,7 @@
                 seeds the initial state.
             </p>
             <div class="mt-2 space-y-2">
-                <p class="text-md font-medium">
+                <p class="text-md font-semibold">
                     Components that CANNOT be used out of a Livewire component
                     ❌
                 </p>
@@ -42,11 +42,9 @@
                     the page, since that is where AlpineJS comes from.
                 </p>
             </div>
-            <x-warning info title="Table left the list on 4.x">
-                <x-block>x-table</x-block>
-                no longer requires the Livewire context, and
-                <x-block>x-upload.async</x-block>
-                works outside it too.
+            <x-warning info>
+                Starting from v4, the <x-block>table</x-block> component
+                no longer requires the Livewire context.
             </x-warning>
         </div>
     </x-section>
