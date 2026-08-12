@@ -2,6 +2,7 @@
 
 declare(strict_types=1);
 
+use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Cookie;
 use TallStackUi\TallStackUiServiceProvider;
 
@@ -34,6 +35,68 @@ if (! function_exists('version_url')) {
         $base = mb_rtrim(config("documentation.sites.$version"), '/');
 
         return $segments ? $base.'/docs/'.implode('/', $segments) : $base.'/docs';
+    }
+}
+
+if (! function_exists('landing_ticker_components')) {
+    /**
+     * Landing ticker: every TallStackUI component that has a documentation page.
+     *
+     * @return Collection<int, array{name: string, main: string, children: string}>
+     */
+    function landing_ticker_components(): Collection
+    {
+        $aliases = ['errors' => 'error'];
+        // `error` is the internal form helper. The Errors component is `errors` → ui/error.
+        $skip     = ['error', 'hint', 'label', 'floating'];
+        $sections = ['form', 'ui', 'interactions'];
+        $seen     = [];
+
+        return collect(config('ts-ui.components'))
+            ->keys()
+            ->reject(fn (string $key): bool => in_array($key, $skip, true) || str_starts_with($key, 'wrapper.'))
+            ->map(function (string $key) use ($aliases, $sections, &$seen): ?array {
+                $slug  = $aliases[$key] ?? str($key)->replace('.', '-')->value();
+                $label = $key;
+
+                $item = null;
+
+                foreach ($sections as $section) {
+                    if (view()->exists("documentation.{$section}.{$slug}")) {
+                        $item = [$section, $slug];
+
+                        break;
+                    }
+                }
+
+                if ($item === null && str_contains($key, '.')) {
+                    $slug  = str($key)->before('.')->value();
+                    $label = $slug;
+
+                    foreach ($sections as $section) {
+                        if (view()->exists("documentation.{$section}.{$slug}")) {
+                            $item = [$section, $slug];
+
+                            break;
+                        }
+                    }
+                }
+
+                if ($item === null || isset($seen[$item[1]])) {
+                    return null;
+                }
+
+                $seen[$item[1]] = true;
+
+                return [
+                    'name'     => str($label)->replace(['.', '-'], ' ')->title()->value(),
+                    'main'     => $item[0],
+                    'children' => $item[1],
+                ];
+            })
+            ->filter()
+            ->sortBy('name', SORT_NATURAL | SORT_FLAG_CASE)
+            ->values();
     }
 }
 

@@ -650,16 +650,6 @@ a.landing-ticker-item:hover {
     color: var(--landing-raised-dark);
 }
 
-.landing-ticker-new {
-    font-size: 0.58rem;
-    font-weight: 600;
-    letter-spacing: 0.12em;
-    color: var(--landing-violet);
-    border: 1px solid color-mix(in oklab, var(--landing-violet) 45%, transparent);
-    border-radius: 9999px;
-    padding: 0.1rem 0.45rem;
-}
-
 /* -----------------------------------------------------------------
  | Changelog details — the numbered editorial list.
  ----------------------------------------------------------------- */

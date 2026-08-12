@@ -36,6 +36,7 @@ describe('Documentation', function () {
     test('can access all routes', function (string $route) {
         $this->get($route)->assertOk();
     })->with([
+        fn () => route('welcome'),
         fn () => route('documentation', ['installation']),
         fn () => route('documentation', ['starter-kit']),
         fn () => route('documentation', ['documentation']),
@@ -121,4 +122,24 @@ describe('Documentation', function () {
         fn () => route('documentation', ['helpers', 'env-bar']),
         fn () => route('documentation', ['helpers', 'debug-mode']),
     ]);
+});
+
+describe('Landing ticker', function () {
+    test('lists documented components from the TallStackUI config', function () {
+        $ticker = landing_ticker_components();
+        $names  = $ticker->pluck('name');
+        $hrefs  = $ticker->map(fn (array $component): string => route('documentation', [$component['main'], $component['children']]));
+
+        expect($ticker)->not->toBeEmpty()
+            ->and($names)->toContain('Alert', 'Select', 'Upload Async', 'Errors')
+            ->and($names)->not->toContain('Accordion Items', 'Hint', 'Floating', 'Wrapper Input')
+            ->and($ticker->firstWhere('name', 'Select'))->toMatchArray(['main' => 'form', 'children' => 'select'])
+            ->and($ticker->firstWhere('name', 'Errors'))->toMatchArray(['main' => 'ui', 'children' => 'error']);
+
+        $this->get(route('welcome'))
+            ->assertOk()
+            ->assertSee('Alert', false)
+            ->assertSee($hrefs->first(), false)
+            ->assertDontSee('landing-ticker-new', false);
+    });
 });

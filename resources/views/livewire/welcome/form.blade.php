@@ -64,7 +64,7 @@ new class extends Component {
 ?>
 
 <div>
-    <x-card scope="card-shadowless">
+    <x-card shadowless bordered>
         <x-errors close />
         <form wire:submit.prevent="save">
             <div class="mt-2 grid grid-cols-1 gap-4 sm:grid-cols-2">
@@ -116,7 +116,7 @@ new class extends Component {
                     <x-select.styled
                         :request="route('api.users')"
                         multiple
-                        label="Preferable Laravel Developer *"
+                        label="Preferable Developer *"
                         hint="You can choose more than one"
                         wire:model="developer"
                     />
