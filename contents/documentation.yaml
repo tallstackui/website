@@ -553,8 +553,8 @@ ui:
     - Action Slot
     - Events
   editor:
-    - Concept
     - Basic Usage
+    - Caveats
     - Label & Hint
     - Toolbar
     - Heights
@@ -570,7 +570,8 @@ ui:
     - Livewire
     - Security
     - Configuration
-    - Scoped Customization
+    - Soft Customization
+    - Invalid Input
   error:
     - Basic Usage
     - Filtering Properties

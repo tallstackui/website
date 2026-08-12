@@ -10,23 +10,46 @@
     <x-slot:customization>
         <livewire:customization :$customization component="Editor" />
     </x-slot>
-    <x-section title="Concept" disable-copy>
-        A WYSIWYG rich text editor with no external JavaScript dependency, built
-        on
-        <x-block>contenteditable</x-block>
-        . It outputs HTML or Markdown. Either
-        <x-block>wire:model</x-block>
-        or
-        <x-block>name</x-block>
-        is required. It is content focused rather than a document editor: no
-        tables, no resize handles, no slash commands, no embeds.
+    <x-section title="Basic Usage">
+        <div class="space-y-4">
+            <x-preview language="blade" :contents="$basic">
+                <x-editor name="content" />
+            </x-preview>
+            <p>
+                A WYSIWYG editor built on
+                <x-block>contenteditable</x-block>
+                ,
+                <b>with no external JavaScript.</b> It outputs HTML or Markdown.
+            </p>
+        </div>
     </x-section>
-    <x-section title="Basic Usage" new>
-        <x-preview language="blade" :contents="$basic">
-            <x-editor name="content" />
-        </x-preview>
+    <x-section title="Caveats" disable-copy>
+        <p>Before continuing, it is important to know:</p>
+        <ul class="list mt-4 list-inside list-decimal space-y-2">
+            <li>The component can be used inside or outside Livewire.</li>
+            <li>
+                Inside Livewire, use
+                <x-block>wire:model</x-block>
+                to bind the content.
+            </li>
+            <li>
+                In a normal form, use
+                <x-block>name</x-block>
+                . The HTML is mirrored into a hidden input.
+            </li>
+            <li>
+                Without a
+                <x-block>wire:model</x-block>
+                or
+                <x-block>name</x-block>
+                , the component will throw an exception.
+            </li>
+        </ul>
     </x-section>
-    <x-section title="Label & Hint" new>
+    <x-section
+        title="Label & Hint"
+        description="An option to display a label and a hint below the editor."
+    >
         <x-preview language="blade" :contents="$labelHint">
             <x-editor
                 name="article"
@@ -37,23 +60,22 @@
     </x-section>
     <x-section
         title="Toolbar"
-        new
-        description="Twenty buttons across eight groups. Dividers are inserted wherever two consecutive buttons do not share a group. An unknown slug throws."
+        description="Twenty buttons across eight groups. Dividers sit between groups. An unknown slug throws."
     >
-        <x-preview language="blade" :contents="$toolbar">
-            <x-editor
-                name="short"
-                :toolbar="['style', 'bold', 'italic', 'link', 'image']"
-            />
-        </x-preview>
-        <x-table
-            class="mt-4"
-            :headers="[
+        <div class="space-y-4">
+            <x-preview language="blade" :contents="$toolbar">
+                <x-editor
+                    name="short"
+                    :toolbar="['style', 'bold', 'italic', 'link', 'image']"
+                />
+            </x-preview>
+            <x-table
+                :headers="[
                 ['index' => 'slug', 'label' => 'Slug'],
                 ['index' => 'group', 'label' => 'Group'],
                 ['index' => 'does', 'label' => 'Does'],
             ]"
-            :rows="[
+                :rows="[
                 ['slug' => 'style', 'group' => 'formatting', 'does' => 'Dropdown: Paragraph, Heading 1 to 3'],
                 ['slug' => 'blockquote', 'group' => 'formatting', 'does' => 'Quote'],
                 ['slug' => 'bold', 'group' => 'inline', 'does' => 'Bold'],
@@ -75,22 +97,25 @@
                 ['slug' => 'redo', 'group' => 'history', 'does' => 'Redo'],
                 ['slug' => 'fullscreen', 'group' => 'view', 'does' => 'Fills the viewport'],
             ]"
-        >
-            @interact("column_slug", $row)
+            >
+                @interact("column_slug", $row)
                 <x-block>{{ $row["slug"] }}</x-block>
-            @endinteract
-        </x-table>
+                @endinteract
+            </x-table>
+        </div>
     </x-section>
     <x-section
         title="Heights"
-        new
-        description="Any CSS unit. Defaults to 12rem and 40rem."
+        description="An option to set min-height and max-height. Any CSS unit. Defaults to 12rem and 40rem."
     >
         <x-preview language="blade" :contents="$heights">
             <x-editor name="tall" min-height="20rem" max-height="60vh" />
         </x-preview>
     </x-section>
-    <x-section title="Readonly & Disabled" new>
+    <x-section
+        title="Readonly & Disabled"
+        description="An option to lock the editor. They cannot be used together."
+    >
         <x-preview language="blade" :contents="$readonly">
             <div class="space-y-4">
                 <x-editor name="readonly-editor" readonly />
@@ -100,8 +125,7 @@
     </x-section>
     <x-section
         title="Counters"
-        new
-        description="Word and line counters in the footer, on by default."
+        description="An option to display word and line counters in the footer. On by default."
     >
         <x-preview language="blade" :contents="$counters">
             <x-editor name="no-counters" :counters="false" />
@@ -109,8 +133,7 @@
     </x-section>
     <x-section
         title="Markdown"
-        new
-        description="The editing surface stays a WYSIWYG. Markdown is a serialization format at the boundary, so the property holds **bold** instead of <strong>bold</strong>."
+        description="The editor stays a WYSIWYG. The bound property stores Markdown instead of HTML."
     >
         <x-preview language="blade" :contents="$markdown">
             <x-editor name="markdown-editor" markdown />
@@ -118,7 +141,6 @@
     </x-section>
     <x-section
         title="Markdown Mapping"
-        new
         description="Tables, task lists and footnotes are not covered, in either direction."
     >
         <x-table
@@ -147,8 +169,7 @@
     </x-section>
     <x-section
         title="Markdown Autoformat"
-        new
-        description="Applied as it is typed. Every transform lands in the browser undo stack, so Ctrl+Z reverts the formatting and leaves the characters. Nothing is transformed inside a code block."
+        description="Applied as you type. Ctrl+Z undoes the formatting and keeps the characters. Nothing changes inside a code block."
     >
         <x-table
             :headers="[
@@ -181,8 +202,7 @@
     </x-section>
     <x-section
         title="Image Upload"
-        new
-        description="The editor does not decide where an image lives. Point it at a WithFileUploads property and a method that persists the file and returns its URL."
+        description="An option to allow upload of image using normal Livewire way"
     >
         <x-code language="blade" :contents="$uploadBlade" />
         <x-code class="mt-4" language="php" :contents="$uploadPhp" />
@@ -195,39 +215,32 @@
             Without them the image dialog is URL only.
         </x-warning>
     </x-section>
-    <x-section
-        title="Without Livewire"
-        new
-        description="With name the HTML is mirrored into a hidden input, so the editor works in a plain form."
-    >
+    <x-section title="Without Livewire">
         <x-code language="blade" :contents="$native" />
     </x-section>
-    <x-section
-        title="Events"
-        new
-        description="Dispatched on the component root. editor:change always carries html, and adds a markdown key while markdown is on."
-    >
-        <x-code language="blade" :contents="$events" />
-        <x-table
-            class="mt-4"
-            :headers="[
+    <x-section title="Events">
+        <div class="space-y-4">
+            <x-code language="blade" :contents="$events" />
+            <x-table
+                :headers="[
                 ['index' => 'event', 'label' => 'Event'],
                 ['index' => 'detail', 'label' => 'Detail'],
                 ['index' => 'fires', 'label' => 'Fires'],
             ]"
-            :rows="[
+                :rows="[
                 ['event' => 'editor:change', 'detail' => '{ id, html, words, lines }', 'fires' => 'After the debounced sync, on a real change'],
                 ['event' => 'editor:link-inserted', 'detail' => '{ id, href, text }', 'fires' => 'A link was inserted'],
                 ['event' => 'editor:image-inserted', 'detail' => '{ id, src, alt, source }', 'fires' => 'An image was inserted'],
                 ['event' => 'editor:fullscreen-toggled', 'detail' => '{ id, on }', 'fires' => 'Fullscreen was toggled'],
             ]"
-        >
-            @interact("column_event", $row)
+            >
+                @interact("column_event", $row)
                 <x-block>{{ $row["event"] }}</x-block>
-            @endinteract
-        </x-table>
+                @endinteract
+            </x-table>
+        </div>
     </x-section>
-    <x-section title="Keyboard" new>
+    <x-section title="Keyboard">
         <x-table
             :headers="[
                 ['index' => 'shortcut', 'label' => 'Shortcut'],
@@ -247,14 +260,13 @@
             ]"
         />
     </x-section>
-    <x-section
-        title="Livewire"
-        new
-        description="The component is wire:ignore'd, so nothing about it reacts to the server. Reach for wire:key when an attribute has to change at runtime."
-    >
+    <x-section title="Livewire">
         <x-code language="blade" :contents="$livewire" />
     </x-section>
-    <x-section title="Security" new>
+    <x-section
+        title="Security"
+        description="The sanitizer is defense in depth, not the defense."
+    >
         <div class="space-y-4">
             <p>
                 The sanitizer strips tags, attributes and style properties
@@ -264,25 +276,44 @@
                 and
                 <x-block>src</x-block>
                 are additionally checked by scheme.
+                <x-block>allowed_styles</x-block>
+                is applied after
+                <x-block>allowed_attributes</x-block>
+                ,
+                so widening the tags that may carry a style cannot widen what
+                that style does. SVG is deliberately absent from the default
+                upload mimes.
             </p>
-            <x-warning error title="This is defense in depth, not the defense">
+            <x-warning error>
                 Sanitize the content on the server before persisting it and
-                before rendering it back. Markdown mode is not safer: Markdown
-                permits raw HTML.
+                before rendering it back.
             </x-warning>
         </div>
     </x-section>
-    <x-section
-        title="Configuration"
-        new
-        description="allowed_styles is applied after allowed_attributes, so widening the tags that may carry a style cannot widen what that style does. SVG is deliberately absent from the upload mimes."
-    >
-        <x-code language="php" :contents="$configuration" />
+    <x-section title="Configuration">
+        <p>
+            There are a few things that can be configured using the
+            <x-refer doc="configuration">configuration file.</x-refer>
+            For example, you can turn
+            <x-block>markdown</x-block>
+            on for every editor, or set the default
+            <x-block>toolbar</x-block>
+            and heights. The default
+            <x-block>min-height</x-block>
+            is
+            <x-block>12rem</x-block>
+            and the default
+            <x-block>max-height</x-block>
+            is
+            <x-block>40rem</x-block>
+            in the
+            <x-refer doc="configuration">configuration file.</x-refer>
+        </p>
     </x-section>
     <x-section
-        title="Scoped Customization"
-        new
-        description="The dialogs and the toolbar dropdowns are other components under fixed scopes."
+        title="Soft Customization"
+        description="An option to customize components used inside of the editor."
+        disable-copy
     >
         <x-code language="php" :contents="$scopes" />
         <x-table
@@ -296,23 +327,33 @@
                 ['scope' => 'editor.toolbar', 'component' => 'dropdown', 'covers' => 'The style and the alignment dropdowns of the toolbar'],
                 ['scope' => 'editor.modal.link', 'component' => 'modal', 'covers' => 'The dialog that inserts a link'],
                 ['scope' => 'editor.modal.image', 'component' => 'modal', 'covers' => 'The dialog that inserts an image'],
-            ]"
-        >
+            ]">
             @interact("column_scope", $row)
                 <x-block>{{ $row["scope"] }}</x-block>
             @endinteract
 
             @interact("column_component", $row)
-                <x-block>{{ $row["component"] }}</x-block>
+            <x-block>{{ $row["component"] }}</x-block>
             @endinteract
         </x-table>
-        <x-warning class="mt-4">
-            These are the names the editor renders with. Customizing the plain
-            <x-block>modal</x-block>
-            or
-            <x-block>dropdown</x-block>
-            without a scope reaches every instance on the page, the editor's
-            included.
-        </x-warning>
+    </x-section>
+    <x-section
+        title="Invalid Input"
+        description="What happens when the data cannot be used."
+    >
+        <x-table
+            :headers="[
+                ['index' => 'input', 'label' => 'Input'],
+                ['index' => 'result', 'label' => 'Result'],
+            ]"
+            :rows="[
+                ['input' => 'Absent wire:model and name', 'result' => 'Throw an exception'],
+                ['input' => 'Empty toolbar', 'result' => 'Throw an exception'],
+                ['input' => 'Unknown toolbar slug', 'result' => 'Throw an exception'],
+                ['input' => 'upload-property without upload-method, or the reverse', 'result' => 'Throw an exception'],
+                ['input' => 'Image upload outside Livewire', 'result' => 'Throw an exception'],
+                ['input' => 'readonly and disabled together', 'result' => 'Throw an exception'],
+            ]"
+        />
     </x-section>
 </x-layout>
