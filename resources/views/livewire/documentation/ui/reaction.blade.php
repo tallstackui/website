@@ -48,5 +48,11 @@ new class extends Component {
         <x-reaction
             x-on:react="alert(`Reacted: ${JSON.stringify($event.detail.reaction)}`)"
         />
+    @elseif ($model === 8)
+        <x-reaction delay="flash" />
+    @elseif ($model === 9)
+        <x-reaction balloon="red" />
+    @elseif ($model === 10)
+        <x-reaction hover />
     @endif
 </div>

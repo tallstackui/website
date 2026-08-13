@@ -31,9 +31,21 @@
         </div>
     </x-section>
     <x-section title="Basic Usage">
-        <x-preview language="blade" :contents="$basic">
-            <livewire:documentation.ui.reaction :model="1" />
-        </x-preview>
+        <div class="space-y-4">
+            <x-preview language="blade" :contents="$basic">
+                <livewire:documentation.ui.reaction :model="1" />
+            </x-preview>
+            <x-warning>
+                You can control some aspects of the tooltip used by the reaction component via <x-refer doc="configuration">configuration file.</x-refer>
+            </x-warning>
+        </div>
+    </x-section>
+    <x-section title="Open on hover" new>
+        <div class="space-y-4">
+            <x-preview language="blade" :contents="$hover">
+                <livewire:documentation.ui.reaction :model="10" />
+            </x-preview>
+        </div>
     </x-section>
     <x-section
         title="Animated Style"
@@ -46,6 +58,16 @@
     <x-section title="Tooltip Position">
         <x-preview language="blade" :contents="$position">
             <livewire:documentation.ui.reaction :model="3" />
+        </x-preview>
+    </x-section>
+    <x-section title="Tooltip Speed" new>
+        <x-preview language="blade" :contents="$speed">
+            <livewire:documentation.ui.reaction :model="8" />
+        </x-preview>
+    </x-section>
+    <x-section title="Tooltip Ballon Color" new>
+        <x-preview language="blade" :contents="$balloonColor">
+            <livewire:documentation.ui.reaction :model="9" />
         </x-preview>
     </x-section>
     <x-section

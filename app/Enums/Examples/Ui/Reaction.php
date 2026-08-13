@@ -28,6 +28,10 @@ class Reaction
     <x-reaction />
     HTML;
 
+    public const string HOVER = <<<'HTML'
+    <x-reaction hover />
+    HTML;
+
     public const string ANIMATED = <<<'HTML'
     <x-reaction animated />
     HTML;
@@ -36,6 +40,16 @@ class Reaction
     <!-- Accept all positions of Tooltip component -->
 
     <x-reaction position="top" />
+    HTML;
+
+    public const string SPEED = <<<'HTML'
+    <!-- accept all Tooltip delays -->
+
+    <x-reaction delay="fast" />
+    HTML;
+
+    public const string BALLOON_COLOR = <<<'HTML'
+    <x-reaction balloon="red" />
     HTML;
 
     public const string QUANTITY = <<<'HTML'
