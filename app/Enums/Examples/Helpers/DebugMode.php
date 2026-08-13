@@ -8,6 +8,7 @@ class DebugMode
 {
     public const string ENV = <<<'HTML'
     TALLSTACKUI_DEBUG_MODE=true
+    TALLSTACKUI_DEBUG_ENVIRONMENTS=local,sandbox,staging
     HTML;
 
     public const string CONFIGURATION = <<<'HTML'
@@ -28,11 +29,7 @@ class DebugMode
         | Controls the environments where the debug mode can be enabled.
         |----------------------------------------------------------------------
         */
-        'environments' => [
-            'local',
-            'sandbox',
-            'staging',
-        ],
+        'environments' => array_map('trim', explode(',', env('TALLSTACKUI_DEBUG_ENVIRONMENTS', 'local,sandbox,staging'))),
 
         /*
         |----------------------------------------------------------------------
