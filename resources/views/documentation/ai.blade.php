@@ -67,7 +67,7 @@
                 server hosted on this documentation website, giving AI assistants real-time access to component
                 documentation without needing local files. The MCP server endpoint is available at:
             </p>
-            <x-clipboard text="https://tallstackui.com/mcp/tallstackui"/>
+            <x-clipboard :text="url('/mcp/tallstackui')" />
         </div>
     </x-section>
     <x-section title="Available Tools" disable-copy>
