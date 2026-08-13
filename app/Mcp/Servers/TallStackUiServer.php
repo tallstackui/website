@@ -20,7 +20,7 @@ use Laravel\Mcp\Server\Attributes\Instructions;
 #[Name('TallStackUI Documentation')]
 #[Version('1.1.0')]
 #[Instructions(<<<'MARKDOWN'
-TallStackUI v4 component library documentation server for the TALL Stack (Tailwind CSS 4, Alpine.js 3, Laravel 10-13, Livewire 4). Serves 65+ Blade components across the categories: Display, Buttons, Form, Overlay & Interaction, Navigation & Layout, Progress & Feedback, Theme, and Internal — plus a Guides group with supplementary documents.
+TallStackUI v4 component library documentation server for the TALL Stack (Tailwind CSS 4, Alpine.js 3, Laravel 10-13, Livewire 4). Serves 80+ Blade components across the categories: Display, Buttons, Form, Overlay & Interaction, Navigation & Layout, Progress & Feedback, Theme, and Internal — plus a Guides group with supplementary documents.
 
 How to choose a tool:
 - Already know the component name? Call `get_component` directly. Pass `section` (e.g. "Attributes", "Soft Customization") to fetch a single section instead of the whole document.

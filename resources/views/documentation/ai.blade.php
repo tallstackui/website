@@ -77,7 +77,10 @@
                 component documentation without needing local files. The MCP
                 server endpoint is available at:
             </p>
-            <x-clipboard text="https://tallstackui.com/mcp/tallstackui" />
+            <x-clipboard :text="url('/mcp/tallstackui')" />
+            <x-warning>
+                The MCP server always point to the latest version of the TallStackUI.
+            </x-warning>
         </div>
     </x-section>
     <x-section title="Available Tools" disable-copy>
