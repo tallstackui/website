@@ -4,9 +4,9 @@
     >
         <p>
             Same as Links, but using
-            <code class="font-mono">navigate</code>
+            <x-block>navigate</x-block>
             /
-            <code class="font-mono">navigate-hover</code>
+            <x-block>navigate-hover</x-block>
             for Livewire SPA transitions.
         </p>
     </div>

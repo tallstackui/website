@@ -13,7 +13,7 @@
 
 @if ($variants)
     <div x-data="copy(@js($urls->values()->all()))" class="inline-flex">
-        <x-dropdown position="bottom-end" xs width="sm">
+        <x-dropdown position="bottom-end" sm>
             <x-slot:action>
                 <x-button
                     icon="clipboard-document"
@@ -24,7 +24,7 @@
                     "
                     unfocus
                     round
-                    xs
+                    sm
                 >
                     Copy
                     <x-slot:right>

@@ -1,7 +1,7 @@
 <x-demo-layout title="Layout Sidebar Item">
     <x-tsui-layout>
         <x-slot:header>
-            <x-tsui-layout.header />
+            <x-tsui-layout.header without-mobile-button />
         </x-slot>
 
         <x-slot:menu>
@@ -65,22 +65,22 @@
         </x-slot>
 
         <p class="dark:text-dark-400 text-sm text-slate-500">
-            The sidebar showcases item types in one go: a
+            The sidebar includes several item types: a
             <b>current</b>
             item, items with
             <b>badges</b>
             (counts) using two badge colors, two
             <b>separator</b>
             styles (
-            <code class="font-mono">line</code>
+            <x-block>line</x-block>
             and
-            <code class="font-mono">line-right</code>
+            <x-block>line-right</x-block>
             ), grouped items (
             <i>Settings</i>
             opened,
             <i>Account</i>
             closed), and an item using a raw
-            <code class="font-mono">href</code>
+            <x-block>href</x-block>
             .
         </p>
     </x-tsui-layout>

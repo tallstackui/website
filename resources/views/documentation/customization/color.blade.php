@@ -35,7 +35,7 @@
                 color. Overriding it therefore repainted text, borders and
                 dividers across the library. Two changes untangle it.
             </p>
-            <ul class="list-inside list-disc space-y-1">
+            <ul class="list-inside list-disc space-y-2">
                 <li>
                     <x-block>--color-secondary-*</x-block>
                     is now Tailwind

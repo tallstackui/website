@@ -6,8 +6,8 @@
     >
         <p>
             Set the
-            <code class="font-mono">text</code>
-            attribute and the banner displays it.
+            <x-block>text</x-block>
+            attribute and the banner shows it.
         </p>
     </div>
 </x-demo-layout>

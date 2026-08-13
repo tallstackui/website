@@ -1,7 +1,7 @@
 <x-demo-layout title="Layout Sidebar Footer">
     <x-tsui-layout>
         <x-slot:header>
-            <x-tsui-layout.header />
+            <x-tsui-layout.header without-mobile-button />
         </x-slot>
 
         <x-slot:menu>
@@ -30,18 +30,17 @@
 
                 <x-slot:footer>
                     <p class="text-sm text-gray-500 dark:text-gray-400">
-                        v3.0.0
+                        v4.0.0
                     </p>
                 </x-slot>
             </x-tsui-side-bar>
         </x-slot>
 
         <p class="dark:text-dark-400 text-sm text-slate-500">
-            The version label is pinned at the bottom of the sidebar — that's
-            the
-            <code class="font-mono">footer</code>
+            The version label sits at the bottom of the sidebar. That is the
+            <x-block>footer</x-block>
             slot of
-            <code class="font-mono">&lt;x-side-bar&gt;</code>
+            <x-block>&lt;x-side-bar&gt;</x-block>
             .
         </p>
     </x-tsui-layout>

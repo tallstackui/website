@@ -4,7 +4,7 @@
     >
         <p>
             Each action renders as an anchor when given an
-            <code class="font-mono">href</code>
+            <x-block>href</x-block>
             .
         </p>
     </div>

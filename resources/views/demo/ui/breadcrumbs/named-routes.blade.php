@@ -9,11 +9,11 @@
         />
 
         <p class="dark:text-dark-400 text-xs text-slate-500">
-            <code class="font-mono">welcome</code>
+            <x-block>welcome</x-block>
             is a named route resolved via Laravel's
-            <code class="font-mono">route()</code>
+            <x-block>route()</x-block>
             helper.
-            <code class="font-mono">/</code>
+            <x-block>/</x-block>
             is kept as-is.
         </p>
     </div>

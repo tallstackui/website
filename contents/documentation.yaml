@@ -656,25 +656,31 @@ ui:
     - Paddingless
     - Footer Alignment
   layout:
-    - Concept
-    - Layout Example
-    - "Slot: Header"
-    - "Slot: Menu"
-    - "Slot: Top"
-    - "Slot: Footer"
-    - Layout Header
-    - Side Bar
-    - Brand Collapsed
-    - Side Bar Footer
-    - Side Bar Item
-    - Href Attribute
-    - Match Attribute
-    - Badge
-    - Collapsed Sidebar Flyout
-    - Badge on the Collapsed Rail
-    - Side Bar Separator
-    - Disable Layout Components
-    - Customization
+    Layout:
+      contents:
+        - Concept
+        - Layout Example
+    Layout Slots:
+      contents:
+        - "Slot: Header"
+        - "Slot: Menu"
+        - "Slot: Top"
+        - "Slot: Footer"
+    Children Components:
+      contents:
+        - Layout Header
+        - Side Bar
+        - Brand Collapsed
+        - Side Bar Footer
+        - Side Bar Item
+        - Href Attribute
+        - Match Attribute
+        - Badge
+        - Collapsed Sidebar Flyout
+        - Badge on the Collapsed Rail
+        - Side Bar Separator
+        - Disable Layout Components
+        - Customization
   link:
     - Basic Usage
     - Size Variations

@@ -167,14 +167,14 @@ new class extends Component {
         @endif
     </x-modal>
     @if ($items !== [])
-        <x-dropdown position="bottom-start" xs width="sm">
+        <x-dropdown position="bottom-start" sm>
             <x-slot:action>
                 <x-button
                     color="pink"
                     x-on:click="show = ! show"
                     unfocus
                     round
-                    xs
+                    sm
                 >
                     Customize
                     <x-slot:right>

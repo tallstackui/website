@@ -10,8 +10,8 @@
     >
         <p>
             Use the
-            <code class="font-mono">left</code>
-            slot to inject an icon (or anything else) before the message.
+            <x-block>left</x-block>
+            slot puts an icon (or anything else) before the message.
         </p>
     </div>
 </x-demo-layout>

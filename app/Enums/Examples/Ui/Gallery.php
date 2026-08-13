@@ -34,13 +34,24 @@ class Gallery
 
     public const string FEATURE = <<<'HTML'
     <!-- The cover is the entry flagged 'cover' => true, falling back to the first -->
+
     <x-gallery feature :limit="3" :images="$images" />
     HTML;
 
     public const string THUMBNAILS = <<<'HTML'
-    <x-gallery feature thumbnails="left" ratio="square" :limit="4" :images="$images" class="max-w-md" />
+    <x-gallery feature
+               thumbnails="left"
+               ratio="square"
+               :limit="4"
+               :images="$images"
+               class="max-w-md" />
 
-    <x-gallery feature thumbnails="right" ratio="square" :limit="4" :images="$images" class="max-w-md" />
+    <x-gallery feature
+               thumbnails="right"
+               ratio="square"
+               :limit="4"
+               :images="$images"
+               class="max-w-md" />
     HTML;
 
     public const string ROUND = <<<'HTML'

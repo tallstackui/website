@@ -7,34 +7,74 @@ namespace App\Enums\Examples\Ui;
 class Layout
 {
     public const string LAYOUT = <<<'HTML'
-    <body>
+    <x-layout>
+        <x-slot:header>
+            <x-layout.header>
+                <x-slot:left>
+                    <span>Dashboard</span>
+                </x-slot:left>
 
-        <x-layout> <!-- [tl! focus:22] -->
-            <x-slot:header>
-                <x-layout.header>
-                    <x-slot:right>
-                        <x-dropdown text="Hello, {{ auth()->user()->name }}!">
-                            <form method="POST" action="{{ route('logout') }}">
-                                @csrf
-                                <x-dropdown.items text="Logout" onclick="event.preventDefault(); this.closest('form').submit();" />
-                            </form>
-                        </x-dropdown>
-                    </x-slot:right>
-                </x-layout.header>
-            </x-slot:header>
+                <x-slot:middle>
+                    <x-input icon="magnifying-glass" placeholder="Search" sm />
+                </x-slot:middle>
 
-            <x-slot:menu>
-                <x-side-bar>
-                    <x-side-bar.item text="Home" icon="home" :route="route('dashboard')" />
-                    <x-side-bar.item text="Settings" icon="cog" :route="route('settings')" />
-                </x-side-bar>
-            </x-slot:menu>
+                <x-slot:right>
+                    <x-dropdown text="Hello, AJ!">
+                        <x-slot:header>
+                            <x-theme-switch block />
+                        </x-slot:header>
+                        <x-dropdown.items text="Profile" />
+                        <x-dropdown.items text="Logout" />
+                    </x-dropdown>
+                </x-slot:right>
+            </x-layout.header>
+        </x-slot:header>
 
-            {{ $slot }}
-        </x-layout>
+        <x-slot:menu>
+            <x-side-bar collapsible thin-scroll>
+                <x-slot:brand>
+                    <div class="flex justify-center py-4">
+                        <img src="{{ asset('logo.svg') }}" class="h-10 w-10" />
+                    </div>
+                </x-slot:brand>
+                <x-slot:brand-collapsed>
+                    <div class="flex justify-center py-4">
+                        <img src="{{ asset('logo-icon.svg') }}" class="h-8 w-8" />
+                    </div>
+                </x-slot:brand-collapsed>
 
-        @livewireScripts
-    </body>
+                <x-side-bar.item text="Home" icon="home" route="#" current />
+                <x-side-bar.item text="Notifications" icon="bell" route="#">
+                    <x-slot:badge>5</x-slot:badge>
+                </x-side-bar.item>
+                <x-side-bar.item text="Messages" icon="envelope" badge-color="blue" route="#">
+                    <x-slot:badge>3</x-slot:badge>
+                </x-side-bar.item>
+
+                <x-side-bar.separator text="Configurations" line />
+
+                <x-side-bar.item text="Settings" icon="cog-6-tooth" opened>
+                    <x-side-bar.item text="General" route="#" />
+                    <x-side-bar.item text="Privacy" route="#" />
+                </x-side-bar.item>
+                <x-side-bar.item text="Account" icon="user">
+                    <x-side-bar.item text="Profile" route="#" />
+                    <x-side-bar.item text="API Keys" route="#" />
+                </x-side-bar.item>
+
+                <x-side-bar.separator text="Resources" line-right />
+
+                <x-side-bar.item text="External Docs" icon="book-open" href="/" />
+
+                <x-slot:footer>
+                    <p class="text-sm text-gray-500">v4.0.0</p>
+                </x-slot:footer>
+            </x-side-bar>
+        </x-slot:menu>
+
+        <h1>Welcome back, AJ!</h1>
+        <p>A complete layout with header slots and a collapsible sidebar.</p>
+    </x-layout>
     HTML;
 
     public const string HEADER = <<<'HTML'
@@ -168,19 +208,19 @@ class Layout
 
     public const string SEPARATOR = <<<'HTML'
     <x-side-bar.item text="Home" icon="home" :route="route('dashboard')" />
-    <x-side-bar.separator text="Configurations" /> <!-- [tl! focus] -->
+    <x-side-bar.separator text="Configuration" /> <!-- [tl! focus] -->
     <x-side-bar.item text="Settings" icon="cog" :route="route('settings')" />
     HTML;
 
     public const string STYLES = <<<'HTML'
     <!-- Default, only text -->
-    <x-side-bar.separator text="Configurations" />
+    <x-side-bar.separator text="Configuration" />
 
     <!-- Line separator between text -->
-    <x-side-bar.separator text="Configurations" line />
+    <x-side-bar.separator text="Configuration" line />
 
     <!-- Line separator at right -->
-    <x-side-bar.separator text="Configurations" line-right />
+    <x-side-bar.separator text="Configuration" line-right />
     HTML;
 
     public const string BRAND_COLLAPSED = <<<'HTML'
@@ -216,7 +256,7 @@ class Layout
     </x-side-bar.item>
 
     <!-- Custom badge color -->
-    <x-side-bar.item text="Messages" icon="envelope" badge-color="blue" :route="route('messages')"> <!-- [tl! focus:1] -->
+    <x-side-bar.item text="Messages" icon="envelope" badge-color="blue" :route="route('messages')"> <!-- [tl! focus:2] -->
         <x-slot:badge>3</x-slot:badge>
     </x-side-bar.item>
     HTML;

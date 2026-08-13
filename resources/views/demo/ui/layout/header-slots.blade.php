@@ -1,5 +1,5 @@
 <x-demo-layout title="Layout Header Slots">
-    <x-tsui-layout.header>
+    <x-tsui-layout.header without-mobile-button>
         <x-slot:left>
             <span
                 class="dark:text-dark-200 text-sm font-semibold text-slate-700"
@@ -24,11 +24,11 @@
     <div class="dark:text-dark-400 px-6 py-8 text-sm text-slate-500">
         <p>
             The header above shows the three slot positions:
-            <code class="font-mono">left</code>
+            <x-block>left</x-block>
             ,
-            <code class="font-mono">middle</code>
+            <x-block>middle</x-block>
             ,
-            <code class="font-mono">right</code>
+            <x-block>right</x-block>
             .
         </p>
     </div>

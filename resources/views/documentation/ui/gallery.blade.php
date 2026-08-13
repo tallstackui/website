@@ -66,12 +66,14 @@
                     thumbnails="left"
                     ratio="square"
                     :images="$nine"
+                    class="max-w-xl"
                 />
                 <x-gallery
                     feature
                     thumbnails="right"
                     ratio="square"
                     :images="$nine"
+                    class="max-w-xl"
                 />
             </div>
         </x-preview>

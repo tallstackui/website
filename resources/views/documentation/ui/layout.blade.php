@@ -41,20 +41,19 @@
             ]"
         />
     </x-slot>
-    <x-section title="Concept" disable-copy>
+    <x-section title="Concept" anchor="layout-concept" disable-copy>
         <p>
-            The TallStackUI layout component was introduced in version 2 for
-            dashboard creation and has been enhanced in version 3 with features
-            like a collapsible sidebar, collapsed branding, a sidebar footer
-            slot, and item badges. While this component is simple, it is
-            complete in every way. Due to the format of the TallStackUI
-            documentation, there will be no code examples of the layout that
-            makes it display.
+            TallStackUI offers a simple yet powerful and comprehensive layout
+            component in terms of elements, slots, and overall features. The
+            component has been extensively improved during the creation of v4,
+            receiving adjustments, enhancements, and new features. Read the
+            complete documentation carefully to understand all aspects of the
+            layout.
         </p>
     </x-section>
-    <x-section title="Layout Example">
+    <x-section title="Layout Example" anchor="layout-layout-example">
         <div class="space-y-4">
-            <p>Here is a complete example of using the layout component:</p>
+            <p>Here is a complete example of the layout component:</p>
             <x-preview
                 language="blade"
                 :contents="$layout"
@@ -62,22 +61,40 @@
                 :height="720"
             />
             <p>Before continuing, you may have noticed the following:</p>
-            <ul class="list-inside list-decimal">
-                <li>The layout component has multiple slots</li>
+            <ul class="list-inside list-decimal space-y-2">
                 <li>
-                    The layout component has other components, such as
-                    <x-block>layout.header</x-block>
+                    The layout uses several slots:
+                    <x-block>header</x-block>
+                    and
+                    <x-block>menu</x-block>
                 </li>
                 <li>
-                    In this example, we are using other components from
-                    TallStackUI, such as
+                    It is composed of child components:
+                    <x-block>layout.header</x-block>
+                    ,
+                    <x-block>side-bar</x-block>
+                    ,
+                    <x-block>side-bar.item</x-block>
+                    , and
+                    <x-block>side-bar.separator</x-block>
+                </li>
+                <li>
+                    The preview also uses other TallStackUI components:
                     <x-block>dropdown</x-block>
+                    ,
+                    <x-block>input</x-block>
+                    , and
+                    <x-block>theme-switch</x-block>
                 </li>
             </ul>
         </div>
     </x-section>
     <x-separator text="Layout Slots" />
-    <x-section title="Slot: Header" disable-copy>
+    <x-section
+        title="Slot: Header"
+        anchor="layout-slots-slot-header"
+        disable-copy
+    >
         <div class="space-y-4">
             <p>
                 This slot is used to position the component
@@ -87,7 +104,7 @@
             <x-code language="blade" :contents="$header" disable-copy />
         </div>
     </x-section>
-    <x-section title="Slot: Menu" disable-copy>
+    <x-section title="Slot: Menu" anchor="layout-slots-slot-menu" disable-copy>
         <div class="space-y-4">
             <p>
                 This slot is used to position the comonent
@@ -97,7 +114,7 @@
             <x-code language="blade" :contents="$menu" disable-copy />
         </div>
     </x-section>
-    <x-section title="Slot: Top" disable-copy>
+    <x-section title="Slot: Top" anchor="layout-slots-slot-top" disable-copy>
         <div class="space-y-4">
             <p>
                 Although it was not used in the example above, this slot is
@@ -109,7 +126,11 @@
             <x-code language="blade" :contents="$top" disable-copy />
         </div>
     </x-section>
-    <x-section title="Slot: Footer" disable-copy>
+    <x-section
+        title="Slot: Footer"
+        anchor="layout-slots-slot-footer"
+        disable-copy
+    >
         <div class="space-y-4">
             <p>
                 Same as
@@ -117,20 +138,10 @@
                 , but positioned in the bottom of the layout component:
             </p>
             <x-code language="blade" :contents="$footer" disable-copy />
-            <x-warning warning title="The footer moved on 4.x">
-                It used to render as a sibling of the padded column, so on
-                desktop it started at x=0, under the fixed sidebar. It now
-                renders inside the same column as
-                <x-block>main</x-block>
-                , which puts it past the sidebar, and the column becomes a
-                full-height flex when the slot is filled, which pins the footer
-                to the bottom of the page rather than leaving it floating
-                mid-screen on short pages.
-            </x-warning>
         </div>
     </x-section>
     <x-separator text="Children Components" />
-    <x-section title="Layout Header">
+    <x-section title="Layout Header" anchor="children-components-layout-header">
         <div class="space-y-4">
             <p>
                 The
@@ -145,7 +156,7 @@
                 frame="ui/layout/header-slots"
                 :height="220"
             />
-            <ul class="list-inside list-decimal">
+            <ul class="list-inside list-decimal space-y-2">
                 <li>
                     <x-block>left</x-block>
                     : adds content to the left of the horizontal bar
@@ -168,7 +179,11 @@
             </p>
         </div>
     </x-section>
-    <x-section title="Side Bar" disable-copy>
+    <x-section
+        title="Side Bar"
+        anchor="children-components-side-bar"
+        disable-copy
+    >
         <div class="space-y-4">
             <p>
                 The
@@ -211,66 +226,64 @@
                 has few settings available, but they are all useful for a
                 purpose:
             </p>
-            <ul class="list-inside list-decimal">
-                <li>
-                    Slot:
-                    <x-block>brand</x-block>
-                    : special slot for adding an image/text above the options
-                    menu
-                </li>
-                <li>
-                    Slot:
-                    <x-block>brand-collapsed</x-block>
-                    : compact branding shown when the collapsible sidebar is
-                    collapsed
-                </li>
-                <li>
-                    Slot:
-                    <x-block>footer</x-block>
-                    : content pinned to the bottom of the sidebar
-                </li>
-                <li>
-                    Attribute:
-                    <x-block>smart</x-block>
-                    : enable route detection behavior to enable the "current"
-                    routes effect
-                </li>
-                <li>
-                    Attribute:
-                    <x-block>navigate</x-block>
-                    : enable
-                    <x-block>wire:navigate</x-block>
-                    routes
-                </li>
-                <li>
-                    Attribute:
-                    <x-block>navigate-hover</x-block>
-                    : enable
-                    <x-block>wire:navigate.hover</x-block>
-                    routes
-                </li>
-                <li>
-                    Attribute:
-                    <x-block>thin-scroll</x-block>
-                    : enable
-                    <x-block>soft-scrollbar</x-block>
-                    in the side bar
-                </li>
-                <li>
-                    Attribute:
-                    <x-block>thick-scroll</x-block>
-                    : enable
-                    <x-block>custom-scrollbar</x-block>
-                    in the side bar
-                </li>
-                <li>
-                    Attribute:
-                    <x-block>collapsible</x-block>
-                    : enable
-                    <x-block>collapsible</x-block>
-                    behavior to the sidebar
-                </li>
-            </ul>
+            <x-table
+                :headers="[
+                    ['index' => 'type', 'label' => 'Type'],
+                    ['index' => 'name', 'label' => 'Name'],
+                    ['index' => 'description', 'label' => 'Description'],
+                ]"
+                :rows="[
+                    [
+                        'type' => 'Slot',
+                        'name' => 'brand',
+                        'description' => 'Image or text above the options menu.',
+                    ],
+                    [
+                        'type' => 'Slot',
+                        'name' => 'brand-collapsed',
+                        'description' => 'Compact branding when the sidebar is collapsed.',
+                    ],
+                    [
+                        'type' => 'Slot',
+                        'name' => 'footer',
+                        'description' => 'Content pinned to the bottom of the sidebar.',
+                    ],
+                    [
+                        'type' => 'Attribute',
+                        'name' => 'smart',
+                        'description' => 'Enables route detection for the current route effect.',
+                    ],
+                    [
+                        'type' => 'Attribute',
+                        'name' => 'navigate',
+                        'description' => 'Enables wire:navigate on routes.',
+                    ],
+                    [
+                        'type' => 'Attribute',
+                        'name' => 'navigate-hover',
+                        'description' => 'Enables wire:navigate.hover on routes.',
+                    ],
+                    [
+                        'type' => 'Attribute',
+                        'name' => 'thin-scroll',
+                        'description' => 'Enables soft-scrollbar in the sidebar.',
+                    ],
+                    [
+                        'type' => 'Attribute',
+                        'name' => 'thick-scroll',
+                        'description' => 'Enables custom-scrollbar in the sidebar.',
+                    ],
+                    [
+                        'type' => 'Attribute',
+                        'name' => 'collapsible',
+                        'description' => 'Enables collapsible sidebar behavior.',
+                    ],
+                ]"
+            >
+                @interact("column_name", $row)
+                <x-block>{{ $row["name"] }}</x-block>
+                @endinteract
+            </x-table>
             <x-warning>
                 The collapsible will work properly if all of your items have
                 icons and you don't use three levels of items.
@@ -283,7 +296,10 @@
             />
         </div>
     </x-section>
-    <x-section title="Brand Collapsed">
+    <x-section
+        title="Brand Collapsed"
+        anchor="children-components-brand-collapsed"
+    >
         <div class="space-y-4">
             <p>
                 When using the
@@ -302,7 +318,10 @@
             />
         </div>
     </x-section>
-    <x-section title="Side Bar Footer">
+    <x-section
+        title="Side Bar Footer"
+        anchor="children-components-side-bar-footer"
+    >
         <div class="space-y-4">
             <p>
                 The
@@ -318,7 +337,11 @@
             />
         </div>
     </x-section>
-    <x-section title="Side Bar Item" disable-copy>
+    <x-section
+        title="Side Bar Item"
+        anchor="children-components-side-bar-item"
+        disable-copy
+    >
         <div class="space-y-4">
             <p>
                 The
@@ -364,7 +387,11 @@
             </p>
         </div>
     </x-section>
-    <x-section title="Href Attribute" disable-copy>
+    <x-section
+        title="Href Attribute"
+        anchor="children-components-href-attribute"
+        disable-copy
+    >
         <div class="space-y-4">
             <p>
                 By default, sidebar items use the
@@ -379,7 +406,11 @@
             <x-code language="blade" :contents="$href" disable-copy />
         </div>
     </x-section>
-    <x-section title="Match Attribute" disable-copy>
+    <x-section
+        title="Match Attribute"
+        anchor="children-components-match-attribute"
+        disable-copy
+    >
         <div class="space-y-4">
             <p>
                 The
@@ -392,7 +423,7 @@
             <x-code language="blade" :contents="$itemMatch" disable-copy />
         </div>
     </x-section>
-    <x-section title="Badge" disable-copy>
+    <x-section title="Badge" anchor="children-components-badge" disable-copy>
         <div class="space-y-4">
             <p>
                 Sidebar items support a
@@ -405,12 +436,17 @@
             <x-code language="blade" :contents="$badge" disable-copy />
         </div>
     </x-section>
-    <x-section title="Collapsed Sidebar Flyout" new disable-copy>
+    <x-section
+        title="Collapsed Sidebar Flyout"
+        anchor="children-components-collapsed-sidebar-flyout"
+        new
+        disable-copy
+    >
         <div class="space-y-4">
             <p>
                 A group has nothing to show on a collapsed sidebar: its items
                 live in a list that only opens inline, and the rail has no room
-                for it. Hovering &mdash; or clicking, for touch &mdash; a
+                for it. Hovering, or clicking, for touch, a
                 collapsed group now opens its items in a panel anchored beside
                 the icon, headed by the group name.
             </p>
@@ -419,18 +455,14 @@
                 sidebar is expanded again. Single items keep their tooltip;
                 groups no longer show one, since the panel names itself.
             </p>
-            <x-warning>
-                The panel is an
-                <x-block>x-floating</x-block>
-                , so it is teleported out of the sidebar and is not clipped by
-                the scroll container. It is capped at
-                <x-block>min(24rem, 100dvh - 2rem)</x-block>
-                with its own scroll, so a group of thirty items neither runs off
-                the screen nor stretches the page.
-            </x-warning>
         </div>
     </x-section>
-    <x-section title="Badge on the Collapsed Rail" new disable-copy>
+    <x-section
+        title="Badge on the Collapsed Rail"
+        anchor="children-components-badge-on-the-collapsed-rail"
+        new
+        disable-copy
+    >
         <div class="space-y-4">
             <p>
                 A badge is the one thing on an item that carries information the
@@ -441,7 +473,11 @@
             </p>
         </div>
     </x-section>
-    <x-section title="Side Bar Separator" disable-copy>
+    <x-section
+        title="Side Bar Separator"
+        anchor="children-components-side-bar-separator"
+        disable-copy
+    >
         <div class="space-y-4">
             <p>
                 The
@@ -457,7 +493,11 @@
             <x-code language="blade" :contents="$styles" disable-copy />
         </div>
     </x-section>
-    <x-section title="Disable Layout Components" disable-copy>
+    <x-section
+        title="Disable Layout Components"
+        anchor="children-components-disable-layout-components"
+        disable-copy
+    >
         If for some reason you do not want to use the layout components - the
         main component and its child components, you can set the environment
         variable
@@ -468,7 +508,11 @@
         file and comment out the components - which would also be a valid
         measure, but less practical.
     </x-section>
-    <x-section title="Customization" disable-copy>
+    <x-section
+        title="Customization"
+        anchor="children-components-customization"
+        disable-copy
+    >
         All the components mentioned above are available to be fully customized
         through one of the TallStackUI customization methods:
         <x-refer :doc="['customization', 'concept']">
