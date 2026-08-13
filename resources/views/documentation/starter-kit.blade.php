@@ -27,8 +27,7 @@
                     database connection
                 </li>
                 <li>
-                    Login, registration, password reset, profile update, 2FA
-                    stuff and more
+                    Login, registration, password reset, profile update, 2FA.
                 </li>
                 <li>
                     Users
@@ -37,7 +36,6 @@
                 </li>
                 <li>Dark theme switcher</li>
                 <li>Full test covered</li>
-                <li>One single config file published</li>
                 <li>All unnecessary comments removed</li>
             </ul>
             <x-warning>

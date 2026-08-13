@@ -20,6 +20,14 @@
             <x-textarea label="Name" hint="Insert the description" />
         </x-preview>
     </x-section>
+    <x-section title="Readonly & Disabled">
+        <x-preview language="blade" :contents="$readonlyDisabled">
+            <div class="space-y-2">
+                <x-textarea label="Readonly" value="Readonly text" readonly />
+                <x-textarea label="Disabled" value="Disabled text" disabled />
+            </div>
+        </x-preview>
+    </x-section>
     <x-section
         title="Required Label Indicator"
         description="An option to display an asterisk indicating that the field is required."

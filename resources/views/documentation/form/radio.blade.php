@@ -43,6 +43,14 @@
             </div>
         </x-preview>
     </x-section>
+    <x-section title="Readonly & Disabled" anchor="radio-readonly-disabled">
+        <x-preview language="blade" :contents="$readonlyDisabled">
+            <div class="space-y-2">
+                <x-radio label="Readonly" checked readonly />
+                <x-radio label="Disabled" checked disabled />
+            </div>
+        </x-preview>
+    </x-section>
     <x-section title="Label Slot" anchor="radio-label-slot">
         <x-preview language="blade" :contents="$html">
             <x-radio>

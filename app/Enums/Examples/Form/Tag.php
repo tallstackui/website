@@ -14,6 +14,11 @@ class Tag
     <x-tag label="Frameworks" hint="Select your preferred frameworks" />
     HTML;
 
+    public const string READONLY_DISABLED = <<<'HTML'
+    <x-tag label="Readonly" :value="['Laravel', 'Livewire']" readonly />
+    <x-tag label="Disabled" :value="['Laravel', 'Livewire']" disabled />
+    HTML;
+
     public const string LIMIT = <<<'HTML'
     <x-tag label="Frameworks" hint="Select your preferred frameworks" :limit="2" />
     HTML;

@@ -14,6 +14,11 @@ class Upload
     <x-upload label="Screenshot" hint="We need to analyze your screenshot" tip="Drag and drop your screenshot here" />
     HTML;
 
+    public const string READONLY_DISABLED = <<<'HTML'
+    <x-upload label="Readonly" readonly />
+    <x-upload label="Disabled" disabled />
+    HTML;
+
     public const string CLOSE_AFTER_UPLOAD = <<<'HTML'
     <x-upload close-after-upload />
     HTML;

@@ -69,7 +69,7 @@ form:
     - Lazy
     - Strict Mode
     - Remote Source
-    - Disabled
+    - Readonly & Disabled
     - Placeholders
     - Slot After
     - Events
@@ -79,6 +79,7 @@ form:
     - Required Label Indicator
     - Icon Slot
     - Prefix & Suffix
+    - Readonly & Disabled
     - Button Support
     - Clearable
     - Strip Zeros
@@ -87,10 +88,12 @@ form:
     - Concept
     - Select Native
     - Select Styled
+    - Readonly & Disabled
     - Panel Width
   password:
     - Basic Usage
     - Label & Hint
+    - Readonly & Disabled
     - Required Label Indicator
     - Caps Lock Indicator
     - Format Validator
@@ -102,6 +105,7 @@ form:
   color:
     - Basic Usage
     - Label & Hint
+    - Readonly & Disabled
     - Picker Mode
     - Selectable
     - Custom Colors
@@ -112,6 +116,7 @@ form:
   currency:
     - Basic Usage
     - Label & Hint
+    - Readonly & Disabled
     - Clearable
     - Different Currencies
     - Intl Options
@@ -123,6 +128,7 @@ form:
     - Basic Usage
     - Step
     - Label & Hint
+    - Readonly & Disabled
     - Min & Max Control
     - Centralized
     - Selectable
@@ -131,6 +137,7 @@ form:
   textarea:
     - Basic Usage
     - Label & Hint
+    - Readonly & Disabled
     - Required Label Indicator
     - Resize
     - Resize Auto
@@ -140,6 +147,7 @@ form:
       contents:
         - Basic Usage
         - Label
+        - Readonly & Disabled
         - Label Slot
         - Label Slot at Left
         - Label Alignment
@@ -161,6 +169,7 @@ form:
       contents:
         - Basic Usage
         - Label
+        - Readonly & Disabled
         - Label Slot
         - Label Slot at Left
         - Label Alignment
@@ -180,6 +189,7 @@ form:
   tag:
     - Basic Usage
     - Label & Hint
+    - Readonly & Disabled
     - Limit Options
     - Lazy
     - Prefix
@@ -189,6 +199,7 @@ form:
   toggle:
     - Basic Usage
     - Label
+    - Readonly & Disabled
     - Label Slot
     - Label Slot at Left
     - Label Alignment
@@ -197,11 +208,13 @@ form:
   range:
     - Basic Usage
     - Label & Hint
+    - Readonly & Disabled
     - Size Variations
     - Color Variations
   pin:
     - Basic Usage
     - Label & Hint
+    - Readonly & Disabled
     - Prefix
     - Clear
     - Masks
@@ -212,6 +225,7 @@ form:
       contents:
         - Basic Usage
         - Label & Hint & Tip
+        - Readonly & Disabled
         - Close After Upload
         - Validation Error
         - Delete
@@ -243,6 +257,7 @@ form:
   date:
     - Basic Usage
     - Label & Hint
+    - Readonly & Disabled
     - Available Formats
     - Helpers
     - Min & Max Dates
@@ -257,6 +272,7 @@ form:
   time:
     - Basic Usage
     - Label & Hint
+    - Readonly & Disabled
     - Scroll & Drag
     - Available Formats
     - Min & Max Hours and Minutes
@@ -270,11 +286,13 @@ form:
       contents:
         - Basic Usage
         - Label & Hint
+        - Readonly & Disabled
         - Multi-dimensional Array
     Styled:
       contents:
         - Basic Usage
         - Label & Hint
+        - Readonly & Disabled
         - Placeholders
         - Required
         - Multiple

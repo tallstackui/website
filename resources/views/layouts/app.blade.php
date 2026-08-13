@@ -157,7 +157,9 @@
                                     @endif
 
                                     @if ($personalization || $customization)
-                                        <div class="mt-2 inline-flex space-x-2">
+                                        <div
+                                            class="mt-2 flex flex-wrap items-center gap-2"
+                                        >
                                             {{ $personalization ?? $customization }}
                                         </div>
                                     @endif

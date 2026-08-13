@@ -25,6 +25,14 @@
             </div>
         </x-preview>
     </x-section>
+    <x-section title="Readonly & Disabled">
+        <x-preview language="blade" :contents="$readonlyDisabled">
+            <div class="space-y-2">
+                <x-range label="Readonly" value="50" readonly />
+                <x-range label="Disabled" value="50" disabled />
+            </div>
+        </x-preview>
+    </x-section>
     <x-section title="Size Variations">
         <x-preview language="blade" :contents="$sizes">
             <div class="space-y-2">

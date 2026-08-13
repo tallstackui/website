@@ -16,6 +16,11 @@ class Checkbox
     <x-checkbox label="Receive Alert" position="left" />
     HTML;
 
+    public const string READONLY_DISABLED = <<<'HTML'
+    <x-checkbox label="Readonly" checked readonly />
+    <x-checkbox label="Disabled" checked disabled />
+    HTML;
+
     public const string HTML = <<<'HTML'
     <x-checkbox>
         <x-slot:label>

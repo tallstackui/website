@@ -183,8 +183,12 @@ class Autocomplete
     })->name('api.users');
     HTML;
 
-    public const string DISABLED = <<<'HTML'
-    <x-autocomplete label="City" disabled :items="[
+    public const string READONLY_DISABLED = <<<'HTML'
+    <x-autocomplete label="Readonly" value="São Paulo" readonly :items="[
+        ['value' => 'São Paulo'],
+        ['value' => 'Rio de Janeiro'],
+    ]" />
+    <x-autocomplete label="Disabled" value="São Paulo" disabled :items="[
         ['value' => 'São Paulo'],
         ['value' => 'Rio de Janeiro'],
     ]" />

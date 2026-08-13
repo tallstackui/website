@@ -104,5 +104,10 @@ new class extends Component {
             wire:model.live="validate"
             close-after-upload
         />
+    @elseif ($model === 10)
+        <div class="space-y-2">
+            <x-upload label="Readonly" wire:model="photo1" readonly />
+            <x-upload label="Disabled" wire:model="photo2" disabled />
+        </div>
     @endif
 </div>

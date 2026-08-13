@@ -26,6 +26,11 @@ class Textarea
     <x-textarea label="Name" hint="Insert the description" />
     HTML;
 
+    public const string READONLY_DISABLED = <<<'HTML'
+    <x-textarea label="Readonly" value="Readonly text" readonly />
+    <x-textarea label="Disabled" value="Disabled text" disabled />
+    HTML;
+
     public const string COUNT = <<<'HTML'
     <div class="space-y-8">
         <x-textarea maxlength="10" count />

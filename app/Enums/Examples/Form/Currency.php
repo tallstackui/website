@@ -14,6 +14,11 @@ class Currency
     <x-currency label="Salary Expectation" hint="Between 5,000 and 10,000 USD" />
     HTML;
 
+    public const string READONLY_DISABLED = <<<'HTML'
+    <x-currency label="Readonly" value="500000" readonly />
+    <x-currency label="Disabled" value="500000" disabled />
+    HTML;
+
     public const string CLEARABLE = <<<'HTML'
     <x-currency clearable />
     HTML;

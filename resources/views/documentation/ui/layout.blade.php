@@ -12,28 +12,33 @@
     <x-slot:description>Layout component.</x-slot>
     <x-slot:customization>
         <livewire:customization
-            :customization="$customizationLayout"
-            component="Layout\Main"
-            title="Layout"
-        />
-        <livewire:customization
-            :customization="$customizationLayoutHeader"
-            component="Layout\Header"
-        />
-        <livewire:customization
-            :customization="$customizationSidebar"
-            component="Layout\SideBar\Main"
-            title="Sidebar"
-        />
-        <livewire:customization
-            :customization="$customizationSidebarItem"
-            component="Layout\SideBar\Item"
-            title="Sidebar Item"
-        />
-        <livewire:customization
-            :customization="$customizationSidebarSeparator"
-            component="Layout\SideBar\Separator"
-            title="Sidebar Separator"
+            :items="[
+                [
+                    'component' => 'Layout\\Main',
+                    'title' => 'Layout',
+                    'customization' => $customizationLayout,
+                ],
+                [
+                    'component' => 'Layout\\Header',
+                    'title' => 'Layout Header',
+                    'customization' => $customizationLayoutHeader,
+                ],
+                [
+                    'component' => 'Layout\\SideBar\\Main',
+                    'title' => 'Sidebar',
+                    'customization' => $customizationSidebar,
+                ],
+                [
+                    'component' => 'Layout\\SideBar\\Item',
+                    'title' => 'Sidebar Item',
+                    'customization' => $customizationSidebarItem,
+                ],
+                [
+                    'component' => 'Layout\\SideBar\\Separator',
+                    'title' => 'Sidebar Separator',
+                    'customization' => $customizationSidebarSeparator,
+                ],
+            ]"
         />
     </x-slot>
     <x-section title="Concept" disable-copy>

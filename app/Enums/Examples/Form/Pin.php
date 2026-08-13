@@ -14,6 +14,11 @@ class Pin
     <x-pin length="5" label="Insert the code" hint="We sent a 5-digit code to your email." />
     HTML;
 
+    public const string READONLY_DISABLED = <<<'HTML'
+    <x-pin name="pin-readonly" length="5" label="Readonly" value="12345" readonly />
+    <x-pin name="pin-disabled" length="5" label="Disabled" value="12345" disabled />
+    HTML;
+
     public const string PREFIX = <<<'HTML'
     <x-pin prefix="G-" length="5" />
     HTML;

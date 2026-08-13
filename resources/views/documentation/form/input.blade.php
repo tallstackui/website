@@ -61,6 +61,14 @@
             as this is not explicitly defined.
         </x-warning>
     </x-section>
+    <x-section title="Readonly & Disabled">
+        <x-preview language="blade" :contents="$readonlyDisabled">
+            <div class="space-y-2">
+                <x-input label="Readonly" value="Readonly text" readonly />
+                <x-input label="Disabled" value="Disabled text" disabled />
+            </div>
+        </x-preview>
+    </x-section>
     <x-section title="Button Support">
         <div class="space-y-4">
             <p>

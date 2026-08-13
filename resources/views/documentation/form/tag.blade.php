@@ -35,6 +35,22 @@
             />
         </x-preview>
     </x-section>
+    <x-section title="Readonly & Disabled">
+        <x-preview language="blade" :contents="$readonlyDisabled">
+            <div class="space-y-2">
+                <x-tag
+                    label="Readonly"
+                    :value="['Laravel', 'Livewire']"
+                    readonly
+                />
+                <x-tag
+                    label="Disabled"
+                    :value="['Laravel', 'Livewire']"
+                    disabled
+                />
+            </div>
+        </x-preview>
+    </x-section>
     <x-section
         title="Limit Options"
         description="An option to limit the number of tags that can be added."

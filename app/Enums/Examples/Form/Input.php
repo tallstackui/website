@@ -47,6 +47,11 @@ class Input
     </x-input>
     HTML;
 
+    public const string READONLY_DISABLED = <<<'HTML'
+    <x-input label="Readonly" value="Readonly text" readonly />
+    <x-input label="Disabled" value="Disabled text" disabled />
+    HTML;
+
     public const string BUTTON_ADDON_SUFFIX = <<<'HTML'
     <x-input label="Search">
         <x-slot:suffix button>

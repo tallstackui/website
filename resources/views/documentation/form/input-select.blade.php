@@ -51,6 +51,32 @@
             </x-input.select>
         </x-preview>
     </x-section>
+    <x-section title="Readonly & Disabled">
+        <x-preview language="blade" :contents="$readonlyDisabled">
+            <div class="space-y-2">
+                <x-input.select label="Readonly" value="555-0100" readonly>
+                    <x-slot:left>
+                        <x-select.native :options="['+1', '+44']" readonly />
+                    </x-slot>
+                </x-input.select>
+                <x-input.select label="Disabled" value="555-0100" disabled>
+                    <x-slot:left>
+                        <x-select.native :options="['+1', '+44']" disabled />
+                    </x-slot>
+                </x-input.select>
+                <x-input.select label="Readonly" value="555-0100" readonly>
+                    <x-slot:left>
+                        <x-select.styled :options="['+1', '+44']" readonly />
+                    </x-slot>
+                </x-input.select>
+                <x-input.select label="Disabled" value="555-0100" disabled>
+                    <x-slot:left>
+                        <x-select.styled :options="['+1', '+44']" disabled />
+                    </x-slot>
+                </x-input.select>
+            </div>
+        </x-preview>
+    </x-section>
     <x-section
         title="Panel Width"
         description="An option to control the width of the floating."

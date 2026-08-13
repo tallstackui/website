@@ -27,6 +27,26 @@
             />
         </x-preview>
     </x-section>
+    <x-section title="Readonly & Disabled">
+        <x-preview language="blade" :contents="$readonlyDisabled">
+            <div class="space-y-2">
+                <x-pin
+                    name="pin-readonly"
+                    length="5"
+                    label="Readonly"
+                    value="12345"
+                    readonly
+                />
+                <x-pin
+                    name="pin-disabled"
+                    length="5"
+                    label="Disabled"
+                    value="12345"
+                    disabled
+                />
+            </div>
+        </x-preview>
+    </x-section>
     <x-section
         title="Prefix"
         description="An option to prefix a character related to the desired short code format."

@@ -23,6 +23,14 @@
             />
         </x-preview>
     </x-section>
+    <x-section title="Readonly & Disabled">
+        <x-preview language="blade" :contents="$readonlyDisabled">
+            <div class="space-y-2">
+                <x-currency label="Readonly" value="500000" readonly />
+                <x-currency label="Disabled" value="500000" disabled />
+            </div>
+        </x-preview>
+    </x-section>
     <x-section title="Clearable">
         <x-preview language="blade" :contents="$clearable">
             <x-currency clearable />

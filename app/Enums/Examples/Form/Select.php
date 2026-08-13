@@ -16,6 +16,11 @@ class Select
     <x-select.native label="Select One Option" hint="You can choose 1, 2 or 3" :options="[1,2,3]" />
     HTML;
 
+    public const string NATIVE_READONLY_DISABLED = <<<'HTML'
+    <x-select.native label="Readonly" :options="[1, 2, 3]" value="2" readonly />
+    <x-select.native label="Disabled" :options="[1, 2, 3]" value="2" disabled />
+    HTML;
+
     public const string NATIVE_ADVANCED = <<<'HTML'
     <x-select.native :options="[
         ['label' => 'TALL', 'value' => 1],
@@ -41,6 +46,11 @@ class Select
                      placeholder="Custom Placeholder"
                      hint="You can choose 1, 2 or 3"
                      :options="[1,2,3]" />
+    HTML;
+
+    public const string STYLED_READONLY_DISABLED = <<<'HTML'
+    <x-select.styled label="Readonly" :options="[1, 2, 3]" value="2" readonly />
+    <x-select.styled label="Disabled" :options="[1, 2, 3]" value="2" disabled />
     HTML;
 
     public const string STYLED_PLACEHOLDERS = <<<'HTML'

@@ -22,6 +22,14 @@
             <x-time label="Time" hint="Select the hour" />
         </x-preview>
     </x-section>
+    <x-section title="Readonly & Disabled">
+        <x-preview language="blade" :contents="$readonlyDisabled">
+            <div class="space-y-2">
+                <x-time label="Readonly" value="10:00 AM" readonly />
+                <x-time label="Disabled" value="10:00 AM" disabled />
+            </div>
+        </x-preview>
+    </x-section>
     <x-section
         title="Scroll & Drag"
         new

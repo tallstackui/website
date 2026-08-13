@@ -14,6 +14,11 @@ class Range
     <x-range label="Quantity" hint="Select an average desired salary" />
     HTML;
 
+    public const string READONLY_DISABLED = <<<'HTML'
+    <x-range label="Readonly" value="50" readonly />
+    <x-range label="Disabled" value="50" disabled />
+    HTML;
+
     public const string SIZES = <<<'HTML'
     <x-range sm />
     <x-range md />

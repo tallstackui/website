@@ -18,6 +18,11 @@ class Password
     <x-password label="Password *" hint="Insert your password" value="TallStackUi" />
     HTML;
 
+    public const string READONLY_DISABLED = <<<'HTML'
+    <x-password label="Readonly" value="TallStackUI" readonly />
+    <x-password label="Disabled" value="TallStackUI" disabled />
+    HTML;
+
     public const string CAPS_LOCK = <<<'HTML'
     <x-password hint="Activate caps lock to see the indicator." />
 

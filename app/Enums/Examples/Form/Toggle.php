@@ -15,6 +15,11 @@ class Toggle
     <x-toggle label="Receive Alert" position="left" />
     HTML;
 
+    public const string READONLY_DISABLED = <<<'HTML'
+    <x-toggle label="Readonly" checked readonly />
+    <x-toggle label="Disabled" checked disabled />
+    HTML;
+
     public const string HTML = <<<'HTML'
     <x-toggle>
         <x-slot:label>

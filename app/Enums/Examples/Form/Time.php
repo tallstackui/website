@@ -14,6 +14,11 @@ class Time
     <x-time label="Time" hint="Select the hour" />
     HTML;
 
+    public const string READONLY_DISABLED = <<<'HTML'
+    <x-time label="Readonly" value="10:00 AM" readonly />
+    <x-time label="Disabled" value="10:00 AM" disabled />
+    HTML;
+
     public const string FORMATS = <<<'HTML'
     <!-- 12-hour format -->
     <x-time />

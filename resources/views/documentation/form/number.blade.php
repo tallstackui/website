@@ -39,6 +39,14 @@
             />
         </x-preview>
     </x-section>
+    <x-section title="Readonly & Disabled">
+        <x-preview language="blade" :contents="$readonlyDisabled">
+            <div class="space-y-2">
+                <x-number label="Readonly" value="10" readonly />
+                <x-number label="Disabled" value="10" disabled />
+            </div>
+        </x-preview>
+    </x-section>
     <x-section title="Min & Max Control">
         <x-preview language="blade" :contents="$minMax">
             <x-number

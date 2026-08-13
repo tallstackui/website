@@ -14,6 +14,11 @@ class Date
     <x-date label="Date" hint="Select your DoB" />
     HTML;
 
+    public const string READONLY_DISABLED = <<<'HTML'
+    <x-date label="Readonly" value="2026-08-13" readonly />
+    <x-date label="Disabled" value="2026-08-13" disabled />
+    HTML;
+
     public const string FORMATS = <<<'HTML'
     <x-date format="YYYY-MM-DD" />
     <x-date format="YYYY, MMMM, DD" />

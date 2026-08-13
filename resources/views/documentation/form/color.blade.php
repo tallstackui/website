@@ -23,6 +23,14 @@
             />
         </x-preview>
     </x-section>
+    <x-section title="Readonly & Disabled">
+        <x-preview language="blade" :contents="$readonlyDisabled">
+            <div class="space-y-2">
+                <x-color label="Readonly" value="#3B82F6" readonly />
+                <x-color label="Disabled" value="#3B82F6" disabled />
+            </div>
+        </x-preview>
+    </x-section>
     <x-section
         title="Picker Mode"
         description="An option to pick the color using a different selector."

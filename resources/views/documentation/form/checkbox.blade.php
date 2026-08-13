@@ -41,6 +41,14 @@
             </div>
         </x-preview>
     </x-section>
+    <x-section title="Readonly & Disabled" anchor="checkbox-readonly-disabled">
+        <x-preview language="blade" :contents="$readonlyDisabled">
+            <div class="space-y-2">
+                <x-checkbox label="Readonly" checked readonly />
+                <x-checkbox label="Disabled" checked disabled />
+            </div>
+        </x-preview>
+    </x-section>
     <x-section title="Label Slot" anchor="checkbox-label-slot">
         <x-preview language="blade" :contents="$html">
             <x-checkbox>

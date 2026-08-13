@@ -36,6 +36,24 @@
             />
         </x-preview>
     </x-section>
+    <x-section title="Readonly & Disabled" anchor="native-readonly-disabled">
+        <x-preview language="blade" :contents="$nativeReadonlyDisabled">
+            <div class="space-y-2">
+                <x-select.native
+                    label="Readonly"
+                    :options="[1, 2, 3]"
+                    value="2"
+                    readonly
+                />
+                <x-select.native
+                    label="Disabled"
+                    :options="[1, 2, 3]"
+                    value="2"
+                    disabled
+                />
+            </div>
+        </x-preview>
+    </x-section>
     <x-section
         title="Multi-dimensional Array"
         anchor="native-multi-dimensional-array"
@@ -104,6 +122,24 @@
                 hint="You can choose 1, 2 or 3"
                 :options="[1, 2, 3]"
             />
+        </x-preview>
+    </x-section>
+    <x-section title="Readonly & Disabled" anchor="styled-readonly-disabled">
+        <x-preview language="blade" :contents="$styledReadonlyDisabled">
+            <div class="space-y-2">
+                <x-select.styled
+                    label="Readonly"
+                    :options="[1, 2, 3]"
+                    value="2"
+                    readonly
+                />
+                <x-select.styled
+                    label="Disabled"
+                    :options="[1, 2, 3]"
+                    value="2"
+                    disabled
+                />
+            </div>
         </x-preview>
     </x-section>
     <x-section title="Placeholders" anchor="styled-placeholders">

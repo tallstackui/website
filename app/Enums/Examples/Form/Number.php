@@ -22,6 +22,11 @@ class Number
     <x-number label="Quantity" hint="Press the plus button to increase one by one" />
     HTML;
 
+    public const string READONLY_DISABLED = <<<'HTML'
+    <x-number label="Readonly" value="10" readonly />
+    <x-number label="Disabled" value="10" disabled />
+    HTML;
+
     public const string MIN_MAX = <<<'HTML'
     <x-number label="Quantity" hint="Press the plus button to increase one by one" min="1" max="10" />
     HTML;

@@ -286,16 +286,28 @@
             </x-warning>
         </div>
     </x-section>
-    <x-section title="Disabled">
-        <x-preview language="blade" :contents="$disabled">
-            <x-autocomplete
-                label="City"
-                disabled
-                :items="[
-                    ['value' => 'São Paulo'],
-                    ['value' => 'Rio de Janeiro'],
-                ]"
-            />
+    <x-section title="Readonly & Disabled">
+        <x-preview language="blade" :contents="$readonlyDisabled">
+            <div class="space-y-2">
+                <x-autocomplete
+                    label="Readonly"
+                    value="São Paulo"
+                    readonly
+                    :items="[
+                        ['value' => 'São Paulo'],
+                        ['value' => 'Rio de Janeiro'],
+                    ]"
+                />
+                <x-autocomplete
+                    label="Disabled"
+                    value="São Paulo"
+                    disabled
+                    :items="[
+                        ['value' => 'São Paulo'],
+                        ['value' => 'Rio de Janeiro'],
+                    ]"
+                />
+            </div>
         </x-preview>
     </x-section>
     <x-section title="Placeholders" disable-copy>

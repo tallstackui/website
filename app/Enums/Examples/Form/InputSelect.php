@@ -22,6 +22,20 @@ class InputSelect
     </x-input.select>
     HTML;
 
+    public const string READONLY_DISABLED = <<<'HTML'
+    <x-input.select label="Readonly" value="555-0100" readonly>
+        <x-slot:left>
+            <x-select.native :options="['+1', '+44']" readonly />
+        </x-slot:left>
+    </x-input.select>
+
+    <x-input.select label="Disabled" value="555-0100" disabled>
+        <x-slot:left>
+            <x-select.native :options="['+1', '+44']" disabled />
+        </x-slot:left>
+    </x-input.select>
+    HTML;
+
     public const string FLOATING = <<<'HTML'
     <x-input.select label="E-mail Provider" floating="min-w-40">
         <x-slot:right>

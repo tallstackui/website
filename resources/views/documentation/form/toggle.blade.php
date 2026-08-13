@@ -23,6 +23,14 @@
             </div>
         </x-preview>
     </x-section>
+    <x-section title="Readonly & Disabled">
+        <x-preview language="blade" :contents="$readonlyDisabled">
+            <div class="space-y-2">
+                <x-toggle label="Readonly" checked readonly />
+                <x-toggle label="Disabled" checked disabled />
+            </div>
+        </x-preview>
+    </x-section>
     <x-section title="Label Slot">
         <x-preview language="blade" :contents="$html">
             <x-toggle>

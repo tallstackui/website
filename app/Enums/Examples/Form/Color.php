@@ -14,6 +14,11 @@ class Color
     <x-color label="Color" hint="Select your favorite color or insert a hexadecimal value." />
     HTML;
 
+    public const string READONLY_DISABLED = <<<'HTML'
+    <x-color label="Readonly" value="#3B82F6" readonly />
+    <x-color label="Disabled" value="#3B82F6" disabled />
+    HTML;
+
     public const string PICKER = <<<'HTML'
     <x-color picker />
     HTML;

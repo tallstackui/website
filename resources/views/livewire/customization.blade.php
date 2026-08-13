@@ -5,7 +5,7 @@ declare(strict_types=1);
 use Livewire\Component;
 
 new class extends Component {
-    public string $component;
+    public ?string $component = null;
 
     public string $id = "";
 
@@ -19,8 +19,27 @@ new class extends Component {
 
     public ?string $customization = null;
 
+    public array $items = [];
+
     public function mount(): void
     {
+        if ($this->items !== []) {
+            $this->items = collect($this->items)
+                ->map(function (array $item): array {
+                    $item["title"] ??= str($item["component"])
+                        ->replace("\\", " ")
+                        ->title()
+                        ->value();
+
+                    return $item;
+                })
+                ->all();
+
+            $this->id = "customization-group-" . uniqid();
+
+            return;
+        }
+
         $str = str($this->component);
 
         $this->title ??= $str
@@ -37,8 +56,27 @@ new class extends Component {
         $this->id .= "-" . uniqid();
     }
 
+    public function select(int $index): void
+    {
+        $item = $this->items[$index] ?? null;
+
+        if ($item === null) {
+            return;
+        }
+
+        $this->component = $item["component"];
+        $this->customization = $item["customization"] ?? null;
+        $this->title = $item["title"];
+
+        $this->open();
+    }
+
     public function open(): void
     {
+        if (blank($this->component)) {
+            return;
+        }
+
         $this->original = null;
 
         $component = "TallStackUi\\Components\\$this->component\\Component";
@@ -85,31 +123,32 @@ new class extends Component {
 };
 ?>
 
-<div>
+<div class="shrink-0">
     <x-modal scrollable id="{{ $id }}">
         <x-slot:title>
             <p class="flex items-center justify-start gap-2">{{ $title }}, Customization Blocks</p>
         </x-slot:title>
         @if ($customization)
-            <div wire:ignore>
-                <p class="text-base font-medium">Example:</p>
-                <x-code :contents="$customization" customization/>
+            <div wire:key="example-{{ $this->component }}">
+                <div wire:ignore>
+                    <p class="text-base font-medium">Example:</p>
+                    <x-code :contents="$customization" customization/>
+                </div>
             </div>
         @endif
         @if ($blocks)
             <div class="px-2 sm:px-0">
                 <p class="text-base font-medium">Blocks:</p>
-                <div class="flex items-center justify-start gap-1">
-                    <div>
-                        @foreach ($blocks as $name => $class)
-                            <x-button
-                                wire:click="$call('content', '{{ $name }}', '{{ $class }}')"
-                                :text="$name"
-                                color="pink"
-                                xs
-                            />
-                        @endforeach
-                    </div>
+                <div class="flex flex-wrap items-center justify-start gap-1">
+                    @foreach ($blocks as $name => $class)
+                        <x-button
+                            wire:click="$call('content', '{{ $name }}', '{{ $class }}')"
+                            :text="$name"
+                            color="pink"
+                            class="whitespace-nowrap"
+                            xs
+                        />
+                    @endforeach
                 </div>
                 <div class="mt-4 space-y-2">
                     @if ($original)
@@ -127,10 +166,46 @@ new class extends Component {
             </div>
         @endif
     </x-modal>
-    <x-button
-        x-on:click="$tsui.open.modal('{{ $id }}'); $wire.call('open');"
-        text="Customize: {{ $title }}"
-        color="pink"
-        xs
-    />
+    @if ($items !== [])
+        <x-dropdown position="bottom-start" xs width="sm">
+            <x-slot:action>
+                <x-button
+                    color="pink"
+                    x-on:click="show = ! show"
+                    unfocus
+                    round
+                    xs
+                >
+                    Customize
+                    <x-slot:right>
+                        <x-icon
+                            name="chevron-down"
+                            class="h-3 w-3 transition-transform"
+                            x-bind:class="{ 'rotate-180': show }"
+                            solid
+                        />
+                    </x-slot>
+                </x-button>
+            </x-slot>
+            @foreach ($items as $index => $item)
+                <x-dropdown.items
+                    :text="$item['title']"
+                    :separator="! $loop->first"
+                    x-on:click="
+                        show = false;
+                        $tsui.open.modal('{{ $id }}');
+                        $wire.call('select', {{ $index }});
+                    "
+                />
+            @endforeach
+        </x-dropdown>
+    @else
+        <x-button
+            x-on:click="$tsui.open.modal('{{ $id }}'); $wire.call('open');"
+            text="Customize: {{ $title }}"
+            color="pink"
+            class="whitespace-nowrap"
+            xs
+        />
+    @endif
 </div>

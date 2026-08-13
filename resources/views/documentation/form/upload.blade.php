@@ -43,6 +43,11 @@
             <livewire:documentation.form.upload.upload :model="2" />
         </x-preview>
     </x-section>
+    <x-section title="Readonly & Disabled" anchor="upload-readonly-disabled">
+        <x-preview language="blade" :contents="$readonlyDisabled">
+            <livewire:documentation.form.upload.upload :model="10" />
+        </x-preview>
+    </x-section>
     <x-section
         title="Close After Upload"
         description="An option to optionally close the float after upload the file"

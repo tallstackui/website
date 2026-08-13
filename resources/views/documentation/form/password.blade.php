@@ -26,6 +26,14 @@
             />
         </x-preview>
     </x-section>
+    <x-section title="Readonly & Disabled">
+        <x-preview language="blade" :contents="$readonlyDisabled">
+            <div class="space-y-2">
+                <x-password label="Readonly" value="TallStackUI" readonly />
+                <x-password label="Disabled" value="TallStackUI" disabled />
+            </div>
+        </x-preview>
+    </x-section>
     <x-section
         title="Required Label Indicator"
         description="An option to display an asterisk indicating that the field is required."

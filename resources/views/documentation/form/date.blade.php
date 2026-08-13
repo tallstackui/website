@@ -23,6 +23,14 @@
             <x-date label="Date" hint="Select your DoB" />
         </x-preview>
     </x-section>
+    <x-section title="Readonly & Disabled">
+        <x-preview language="blade" :contents="$readonlyDisabled">
+            <div class="space-y-2">
+                <x-date label="Readonly" value="2026-08-13" readonly />
+                <x-date label="Disabled" value="2026-08-13" disabled />
+            </div>
+        </x-preview>
+    </x-section>
     <x-section
         title="Available Formats"
         description="Support for all Day.js formats"

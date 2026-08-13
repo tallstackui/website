@@ -15,6 +15,11 @@ class Radio
     <x-radio label="Receive Alert" position="left" />
     HTML;
 
+    public const string READONLY_DISABLED = <<<'HTML'
+    <x-radio label="Readonly" checked readonly />
+    <x-radio label="Disabled" checked disabled />
+    HTML;
+
     public const string HTML = <<<'HTML'
     <x-radio>
         <x-slot:label>
