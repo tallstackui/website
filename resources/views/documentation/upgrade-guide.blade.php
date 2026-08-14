@@ -72,7 +72,7 @@
                     >
                         🥳 New Components:
                     </h2>
-                    <ul>
+                    <ul class="space-y-2">
                         <li>
                             -
                             <x-refer :doc="['ui', 'chart']">Chart</x-refer>
@@ -135,7 +135,7 @@
                     >
                         👀 Cross-cutting:
                     </h2>
-                    <ul>
+                    <ul class="space-y-2">
                         <li>
                             -
                             <x-block>skeleton</x-block>
@@ -782,7 +782,7 @@
                 <h2 class="text-lg font-medium tracking-tight text-pink-600">
                     17. Smaller behaviour changes
                 </h2>
-                <ul class="list-inside list-disc">
+                <ul class="list-inside list-disc space-y-2">
                     <li>
                         Currency is 12px tighter on each side, since the slot
                         paddings became

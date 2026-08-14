@@ -168,7 +168,7 @@
         </div>
     </x-section>
     <x-section title="Usage" anchor="livewire-integration-usage" disable-copy>
-        <ul class="list-inside list-decimal">
+        <ul class="list-inside list-decimal space-y-2">
             <li>
                 Use the Interactions trait in your Livewire component.
                 <x-code language="php" :contents="$trait" disable-copy />

@@ -186,7 +186,7 @@
     </x-section>
     <x-section title="Prepare the Usage" anchor="static-prepare-the-usage">
         <div class="space-y-4">
-            <ul class="list-inside list-decimal">
+            <ul class="list-inside list-decimal space-y-2">
                 <li>
                     Use the Livewire component
                     <x-block>mount</x-block>

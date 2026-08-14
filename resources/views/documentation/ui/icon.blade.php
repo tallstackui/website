@@ -104,7 +104,7 @@
                 any dependencies. However, if you want to use a different icon
                 kit - through the Blade UI Kit, you can follow these steps:
             </p>
-            <ul class="list-inside list-decimal">
+            <ul class="list-inside list-decimal space-y-2">
                 <li>
                     Install the icon package you want to use, for example:
                     <x-code language="shell" :contents="$installation" />
@@ -143,7 +143,7 @@
                 of using it via TallStackUI. To resolve this small conflict you
                 can adopt one of these alternatives:
             </p>
-            <ul class="list-inside list-decimal">
+            <ul class="list-inside list-decimal space-y-2">
                 <li>
                     <x-refer doc="component-prefix">
                         Set a component prefix name for the TallStackUI

@@ -29,7 +29,7 @@
                     Components that CANNOT be used out of a Livewire component
                     ❌
                 </p>
-                <ul class="list-inside list-decimal">
+                <ul class="list-inside list-decimal space-y-2">
                     <li>KeyValue</li>
                     <li>Loading</li>
                     <li>Reaction</li>
@@ -50,20 +50,6 @@
     </x-section>
     <x-section title="Example" disable-copy>
         <x-code language="blade" :contents="$example" disable-copy />
-    </x-section>
-    <x-section title="Supported Form Components" new disable-copy>
-        <div class="space-y-4">
-            <p>
-                Nine of these carry a browser test that renders a real form on a
-                plain Blade page, submits it and asserts what the controller
-                received. Writing them turned up three defects fixed on
-                <x-block>4.x</x-block>
-                : Calendar never filled its hidden input, Tag submitted the form
-                on the first tag, and Autocomplete had never been adapted at
-                all.
-            </p>
-            <x-code language="blade" :contents="$supported" disable-copy />
-        </div>
     </x-section>
     <x-section title="Table" new disable-copy>
         <div class="space-y-4">

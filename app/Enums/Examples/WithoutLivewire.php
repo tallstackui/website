@@ -106,34 +106,6 @@ class WithoutLivewire
     }
     HTML;
 
-    public const string SUPPORTED = <<<'HTML'
-    <form method="POST" action="/products">
-        @csrf
-
-        <x-currency name="price" symbol currency />
-
-        <x-date name="published_at" />
-
-        <x-time name="starts_at" />
-
-        <x-color name="brand" />
-
-        <x-pin name="code" :length="4" />
-
-        <x-tag name="tags" />
-
-        <x-select.styled name="status" :options="$options" select="label:label|value:value" />
-
-        <x-autocomplete name="city" :items="$cities" />
-
-        <x-calendar name="scheduled_at" />
-
-        <x-editor name="body" />
-
-        <x-upload.async name="attachments" :route="route('uploads.store')" multiple />
-    </form>
-    HTML;
-
     public const string TABLE = <<<'HTML'
     <!-- The three features that needed a round trip now travel through the query string -->
 

@@ -54,7 +54,7 @@ return new class extends Component {
     <x-modal
         id="prefix-modal"
         :title="__('CONFIGURE DOCUMENTATION')"
-        center
+        center="md"
         blur
         x-on:open="$tsui.focus('doc-prefix')"
     >

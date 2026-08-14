@@ -30,7 +30,7 @@
         is an active developer in the community, contributing to Laravel,
         Livewire, PestPHP and other open-source solutions.
     </x-section>
-    <x-section title="v4 Requirements" disable-copy>
+    <x-section title="Requirements" disable-copy>
         <div class="space-y-4">
             <ul class="mt-4 ml-4 list-inside list-decimal space-y-2">
                 <li>PHP: v8.1 or later</li>
@@ -69,7 +69,7 @@
                         <b class="underline">
                             above of the
                             @verbatim @vite @endverbatim
-                                
+
                             tag.
                         </b>
                     </x-warning>

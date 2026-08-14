@@ -30,7 +30,7 @@
             that allows individual soft customization of that component's
             floating. Here is the list of components that use floating:
         </p>
-        <ul class="mt-2 list-inside list-decimal">
+        <ul class="mt-2 list-inside list-decimal space-y-2">
             <li>
                 <x-refer :doc="['form', 'autocomplete']">
                     Form AutoComplete

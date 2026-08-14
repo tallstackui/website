@@ -5,7 +5,7 @@
             New in 4.0
         </p>
         <h2 class="landing-section-heading mt-5">
-            Six new components.
+            Seven new components.
             <span class="landing-serif">Zero</span>
             new dependencies.
         </h2>

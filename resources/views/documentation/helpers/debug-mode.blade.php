@@ -85,7 +85,7 @@
             </p>
             <x-code :contents="$configuration" disable-copy />
             <p>Here is some important caveats:</p>
-            <ul class="list-inside list-decimal">
+            <ul class="list-inside list-decimal space-y-2">
                 <li>Debug mode is skipped when running unit tests.</li>
                 <li>
                     The

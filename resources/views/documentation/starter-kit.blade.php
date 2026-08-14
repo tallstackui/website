@@ -13,14 +13,14 @@
                 delivers
                 <i>out of the box:</i>
             </p>
-            <ul class="list-inside list-decimal">
+            <ul class="list-inside list-decimal space-y-2">
                 <li>Laravel v13</li>
                 <li>Livewire v4</li>
                 <li>TallStackUI v4</li>
                 <li>TailwindCSS v4</li>
             </ul>
             <p class="font-semibold text-pink-600">Features:</p>
-            <ul class="list-inside list-decimal">
+            <ul class="list-inside list-decimal space-y-2">
                 <li>
                     Basic
                     <x-block>sqlite</x-block>
@@ -42,7 +42,7 @@
                 The new version of the Starter Kit now uses the Laravel Fortify instead of Laravel Breeze.
             </x-warning>
             <p class="font-semibold text-pink-600">Tools and commands:</p>
-            <ul class="list-inside">
+            <ul class="list-inside space-y-2">
                 <li>
                     Pest:
                     <x-code language="shell" :contents="$pest" />
@@ -92,7 +92,7 @@
                 you will need to install the starter kit manually, which may
                 require more knowledge and time.
             </p>
-            <ul class="list-inside list-decimal">
+            <ul class="list-inside list-decimal space-y-2">
                 <li>
                     Start a new Laravel project using this command:
                     <x-code language="shell" :contents="$command" />
@@ -121,7 +121,7 @@
                 You can create a new account or use the default account, which
                 has the following credentials:
             </p>
-            <ul class="list-inside">
+            <ul class="list-inside space-y-2">
                 <li>
                     Email:
                     <x-code language="txt" :contents="$email" />

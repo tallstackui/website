@@ -6,9 +6,9 @@ namespace App\Enums\Examples\Customization;
 
 class Soft
 {
-    public const string TAILWINDCSS = <<<'HTML'
+    public const string TAILWINDCSS = <<<'CSS'
     @source '../../app/Providers/*.php';
-    HTML;
+    CSS;
 
     public const string EXAMPLE = <<<'HTML'
     use TallStackUi\Facades\TallStackUi;

@@ -9,9 +9,7 @@
 
             <h1 class="landing-headline landing-rise landing-rise--2 mt-6">
                 Beautifully
-                <span class="landing-serif landing-serif--upright">
-                    crafted
-                </span>
+                crafted
                 components for your next
                 <span class="text-pink-500">TALL Stack</span>
                 idea.

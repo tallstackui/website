@@ -31,7 +31,7 @@
                 Before we really get into the guide on how to contribute with
                 code, we want you to know a few things:
             </p>
-            <ul class="list-inside list-decimal">
+            <ul class="list-inside list-decimal space-y-2">
                 <li>
                     All codes must follow the
                     <a
@@ -70,7 +70,7 @@
     </x-section>
     <x-section title="Prepare Environment" disable-copy>
         <div class="space-y-4">
-            <ul class="list-inside list-decimal">
+            <ul class="list-inside list-decimal space-y-2">
                 <li>
                     Fork the
                     <x-block>4.x</x-block>
@@ -139,7 +139,7 @@
         </div>
     </x-section>
     <x-section title="Run Tests" disable-copy>
-        <ul class="list-inside list-decimal">
+        <ul class="list-inside list-decimal space-y-2">
             <li>
                 Run all tests:
                 <x-code language="shell" :contents="$allTests" />

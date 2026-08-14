@@ -206,7 +206,7 @@
                 addition, links can have a label associated with a link or just
                 links, where the label will be the link itself.
             </p>
-            <ul class="list-inside list-decimal">
+            <ul class="list-inside list-decimal space-y-2">
                 <li>
                     Only link:
                     <x-code language="env" :contents="$links" />

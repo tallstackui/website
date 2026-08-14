@@ -72,7 +72,7 @@
             />
         </x-preview>
         <x-warning class="mt-4">
-            <ul class="ml-2 list-inside list-decimal text-sm">
+            <ul class="ml-2 list-inside list-decimal space-y-2 text-sm">
                 <li>The double mode is only valid alongside range.</li>
                 <li>
                     Both calendars share the same month/year state, navigating

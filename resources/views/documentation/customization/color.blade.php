@@ -24,64 +24,6 @@
             your preference following the TailwindCSS custom color concept.
         </p>
     </x-section>
-    <x-section title="The 4.x Palette" new disable-copy>
-        <div class="space-y-4">
-            <p>
-                <x-block>secondary</x-block>
-                used to be three things at once: the light-mode neutral scale
-                the components' own chrome was built on, the palette behind
-                <x-block>color="secondary"</x-block>
-                , and the color pitched to applications as the second brand
-                color. Overriding it therefore repainted text, borders and
-                dividers across the library. Two changes untangle it.
-            </p>
-            <ul class="list-inside list-disc space-y-2">
-                <li>
-                    <x-block>--color-secondary-*</x-block>
-                    is now Tailwind
-                    <b>Violet</b>
-                    , a real accent sitting next to the Indigo primary.
-                    <x-block>color="secondary"</x-block>
-                    renders violet exactly the way
-                    <x-block>color="red"</x-block>
-                    renders red.
-                </li>
-                <li>
-                    Component chrome no longer references
-                    <x-block>secondary-*</x-block>
-                    at all. The ~30 base usages moved to the equivalent
-                    <x-block>gray-*</x-block>
-                    shade, so light mode now has a single neutral system,
-                    mirroring
-                    <x-block>dark-*</x-block>
-                    in dark mode.
-                </li>
-            </ul>
-            <p>
-                <x-block>--color-dark-*</x-block>
-                was an exact copy of Slate, blue tint included, so every dark
-                surface leaned cold. The scale is now pure neutral, declared in
-                <x-block>oklch()</x-block>
-                and anchored near black:
-            </p>
-            <x-code language="css" :contents="$darkPalette" />
-            <x-warning warning title="What this means for an upgrade">
-                Applications that override these variables in their own
-                <x-block>@@theme</x-block>
-                keep winning and see no difference. On the stock palette,
-                <x-block>color="secondary"</x-block>
-                renders violet instead of slate-gray &mdash; switch those calls
-                to
-                <x-block>color="slate"</x-block>
-                or
-                <x-block>color="gray"</x-block>
-                , which are unchanged. A page background chosen to match the old
-                Slate look now sits better as
-                <x-block>dark:bg-dark-900</x-block>
-                .
-            </x-warning>
-        </div>
-    </x-section>
     <x-section title="Change Colors Definitions" disable-copy>
         <div class="space-y-4">
             <p>
@@ -180,6 +122,13 @@
                 Given all the above explanations, creating a new and totally
                 personal color is extremely easy:
             </p>
+            <p>
+                The first thing to do is allow TailwindCSS map and track the classes:
+            </p>
+            <x-code language="css" :contents="$tailwindCssMapClasses" disable-copy />
+            <p>
+                Then:
+            </p>
             <x-code :contents="$createCustomColor" disable-copy />
             <p>
                 Now all you need to do is use the new color in the component
@@ -191,10 +140,8 @@
                 disable-copy
             />
             <p>
-                Although this example used
-                <x-block>red</x-block>
-                , you can use completely custom colors as you build in
-                TailwindCSS:
+                If your intention is to create a custom color, then this involves the process of creating a new color in
+                TailwindCSS as well, so first define the color in CSS:
             </p>
             <x-code language="css" :contents="$newCustomColor" disable-copy />
             <p>

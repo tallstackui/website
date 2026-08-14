@@ -273,6 +273,10 @@ class Color
     TALLSTACKUI_COLOR_CLASSES_NAMESPACE="App\\View\\Components\\TallStackUi\\Colors"
     HTML;
 
+    public const string TAILWIND_CSS_MAP_CLASSES = <<<'CSS'
+    @source '../../app/View/**/*.php';
+    CSS;
+
     public const string CREATE_CUSTOM_COLOR = <<<'HTML'
     namespace App\View\Components\TallStackUi\Colors;
 
@@ -288,7 +292,7 @@ class Color
             // You can omit all other colors if you don't want to change them. [tl! highlight]
             return [
                 'solid' => [
-                    'foo-bar' => 'bg-gradient-to-bl from-slate-700 via-violet-600 to-indigo-600', // [tl! add]
+                    'illuminate' => 'bg-gradient-to-bl from-slate-700 via-violet-600 to-indigo-600', // [tl! add]
                     // 'primary' => null,
                     // 'secondary' => null,
                     // 'slate' => null,
@@ -305,7 +309,7 @@ class Color
         {
             return [
                 'solid' => [
-                    'foo-bar' => 'text-slate-900', // [tl! add]
+                    'illuminate' => 'text-slate-900', // [tl! add]
                     // 'primary' => null,
                     // 'secondary' => null,
                     // 'slate' => null,
@@ -318,7 +322,7 @@ class Color
     HTML;
 
     public const string USE_CUSTOM_COLOR = <<<'HTML'
-    <x-alert text="My custom color is foo-bar" color="foo-bar" />
+    <x-alert text="My custom color is illuminate" color="illuminate" />
     HTML;
 
     public const string NEW_CUSTOM_COLOR = <<<'HTML'
@@ -380,11 +384,4 @@ class Color
     public const string USE_NEW_CUSTOM_COLOR = <<<'HTML'
     <x-alert text="My custom color is foo-bar" color="malibu" />
     HTML;
-
-    public const string DARK_PALETTE = <<<'CSS'
-    /* was (Slate) */              /* now (neutral) */
-    --color-dark-700: #334155;     --color-dark-700: oklch(0.253 0 0); /* #242424 */
-    --color-dark-800: #1e293b;     --color-dark-800: oklch(0.185 0 0); /* #141414 */
-    --color-dark-900: #0f172a;     --color-dark-900: oklch(0.145 0 0); /* #0a0a0a */
-    CSS;
 }

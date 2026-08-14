@@ -170,7 +170,7 @@
     </x-section>
     <x-section title="Multiple" anchor="styled-multiple">
         <x-preview language="blade" :contents="$styledMultiple">
-            <x-select.styled :options="[1, 2, 3, 4, 5, 6]" multiple />
+            <x-select.styled :value="[1,2,3]" :options="[1, 2, 3, 4, 5, 6]" multiple />
         </x-preview>
     </x-section>
     <x-section
