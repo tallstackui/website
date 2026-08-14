@@ -26,13 +26,22 @@ class InputSelect
     <x-input.select label="Readonly" value="555-0100" readonly>
         <x-slot:left>
             <x-select.native :options="['+1', '+44']" readonly />
-        </x-slot:left>
+        </x-slot>
     </x-input.select>
-
     <x-input.select label="Disabled" value="555-0100" disabled>
-        <x-slot:left>
+        <x-slot:right>
             <x-select.native :options="['+1', '+44']" disabled />
-        </x-slot:left>
+        </x-slot>
+    </x-input.select>
+    <x-input.select label="Readonly" value="555-0100" readonly>
+        <x-slot:left>
+            <x-select.styled value="+1" :options="['+1', '+44']" readonly />
+        </x-slot>
+    </x-input.select>
+    <x-input.select label="Disabled" value="555-0100" disabled>
+        <x-slot:right>
+            <x-select.styled value="+1" :options="['+1', '+44']" disabled />
+        </x-slot>
     </x-input.select>
     HTML;
 

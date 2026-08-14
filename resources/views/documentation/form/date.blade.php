@@ -33,28 +33,52 @@
     </x-section>
     <x-section
         title="Available Formats"
-        description="Support for all Day.js formats"
+        description="The tokens the visible input understands"
     >
         <div class="space-y-4">
             <x-preview language="blade" :contents="$formats">
                 <div class="space-y-2">
                     <x-date format="YYYY-MM-DD" :value="$current" />
                     <x-date format="YYYY, MMMM, DD" :value="$current" />
-                    <x-date format="MMMM, DD, YYYY" :value="$current" />
+                    <x-date
+                        format="DD [of] MMMM [of] YYYY"
+                        :value="$current"
+                    />
                 </div>
             </x-preview>
+            <p>
+                The table below lists every token, with what each one produces
+                for
+                <x-block>2026-08-07</x-block>
+                , a Friday:
+            </p>
+            <x-table
+                :headers="[
+                    ['index' => 'token', 'label' => 'Token'],
+                    ['index' => 'output', 'label' => 'Output'],
+                ]"
+                :rows="[
+                    ['token' => 'YY', 'output' => '26'],
+                    ['token' => 'YYYY', 'output' => '2026'],
+                    ['token' => 'M', 'output' => '8'],
+                    ['token' => 'MM', 'output' => '08'],
+                    ['token' => 'MMM', 'output' => 'Aug'],
+                    ['token' => 'MMMM', 'output' => 'August'],
+                    ['token' => 'D', 'output' => '7'],
+                    ['token' => 'DD', 'output' => '07'],
+                    ['token' => 'd', 'output' => '5'],
+                    ['token' => 'dd', 'output' => 'Fr'],
+                    ['token' => 'ddd', 'output' => 'Fri'],
+                    ['token' => 'dddd', 'output' => 'Friday'],
+                    ['token' => '[text]', 'output' => 'text, escaped from parsing'],
+                ]"
+            >
+                @interact("column_token", $row)
+                    <x-block>{{ $row["token"] }}</x-block>
+                @endinteract
+            </x-table>
             <x-warning class="mt-4">
                 <ul class="ml-2 list-inside list-decimal space-y-2 text-sm">
-                    <li>
-                        You can use
-                        <a
-                            href="https://day.js.org/docs/en/display/format"
-                            target="_blank"
-                            class="underline"
-                        >
-                            all Day.js formats.
-                        </a>
-                    </li>
                     <li>
                         <b>The formats are applicable only visually.</b>
                         The default backend format will always be
@@ -63,6 +87,20 @@
                     <li>
                         The default date format sent to the component should be
                         <b>YYYY-MM-DD</b>
+                    </li>
+                    <li>
+                        Month and weekday names follow the application locale,
+                        so
+                        <x-block>MMMM</x-block>
+                        and
+                        <x-block>dddd</x-block>
+                        are translated along with the rest of the calendar.
+                    </li>
+                    <li>
+                        The time tokens
+                        <x-block>H HH h hh m mm s ss SSS a A Z ZZ</x-block>
+                        are accepted, but a date picker holds no time, so they
+                        always render zeros.
                     </li>
                 </ul>
             </x-warning>

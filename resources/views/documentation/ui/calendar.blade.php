@@ -130,5 +130,18 @@
             <x-refer :doc="['form', 'date']">date</x-refer>
             component are also available in the Calendar component.
         </p>
+        <x-warning class="mt-4">
+            With one exception:
+            <x-block>format</x-block>
+            has no effect here. The calendar is inline and has no input to
+            render a formatted value, so the only string it produces is the
+            model, and the model is always written as
+            <x-block>YYYY-MM-DD</x-block>
+            , or
+            <x-block>YYYY-MM</x-block>
+            under
+            <x-block>month-year-only</x-block>
+            .
+        </x-warning>
     </x-section>
 </x-layout>
