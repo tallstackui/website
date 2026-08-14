@@ -73,6 +73,14 @@
                 are defined by each block, for example:
             </p>
             <livewire:customization :$customization component="Form\Checkbox" />
+            <x-warning info>
+                Are you an AI-first developer? If so, you can use the
+                <x-refer doc="ai">TallStackUI MCP server</x-refer>
+                to guide your agent
+                about how to customize your components. The MCP provide a full list of all components, their blocks and
+                the original classes defined by each block. You can use this information to guide your agent to
+                customize your components as you wish.
+            </x-warning>
         </div>
     </x-section>
     <x-section title="Fluent Customization" disable-copy>
@@ -337,7 +345,7 @@
                 :rows="collect($scopes['wrapper'])->flatMap(fn (array $section) => collect($section['rows'])->map(fn (array $scope) => ['parent' => $section['label'], 'child' => $scope['child'], 'scope' => $scope['scope']]))"
             >
                 @interact("column_scope", $row)
-                    <x-block>{{ $row["scope"] }}</x-block>
+                <x-block>{{ $row["scope"] }}</x-block>
                 @endinteract
             </x-table>
             <h3 class="font-mono text-xl dark:text-white">Form Components</h3>
@@ -350,7 +358,7 @@
                 :rows="collect($scopes['form'])->flatMap(fn (array $section) => collect($section['rows'])->map(fn (array $scope) => ['parent' => $section['label'], 'child' => $scope['child'], 'scope' => $scope['scope']]))"
             >
                 @interact("column_scope", $row)
-                    <x-block>{{ $row["scope"] }}</x-block>
+                <x-block>{{ $row["scope"] }}</x-block>
                 @endinteract
             </x-table>
             <h3 class="font-mono text-xl dark:text-white">UI Components</h3>
@@ -363,7 +371,7 @@
                 :rows="collect($scopes['ui'])->flatMap(fn (array $section) => collect($section['rows'])->map(fn (array $scope) => ['parent' => $section['label'], 'child' => $scope['child'], 'scope' => $scope['scope']]))"
             >
                 @interact("column_scope", $row)
-                    <x-block>{{ $row["scope"] }}</x-block>
+                <x-block>{{ $row["scope"] }}</x-block>
                 @endinteract
             </x-table>
         </div>
