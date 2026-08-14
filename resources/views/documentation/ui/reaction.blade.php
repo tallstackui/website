@@ -36,7 +36,9 @@
                 <livewire:documentation.ui.reaction :model="1" />
             </x-preview>
             <x-warning>
-                You can control some aspects of the tooltip used by the reaction component via <x-refer doc="configuration">configuration file.</x-refer>
+                You can control some aspects of the tooltip used by the reaction
+                component via
+                <x-refer doc="configuration">configuration file.</x-refer>
             </x-warning>
         </div>
     </x-section>
@@ -93,9 +95,29 @@
         </x-preview>
     </x-section>
     <x-section title="Events">
-        <x-preview language="blade" :contents="$events">
-            <livewire:documentation.ui.reaction :model="7" />
-        </x-preview>
+        <div class="space-y-4">
+            <x-preview language="blade" :contents="$events">
+                <livewire:documentation.ui.reaction :model="7" />
+            </x-preview>
+            <x-table
+                :headers="[
+                    ['index' => 'event', 'label' => 'Event'],
+                    ['index' => 'detail', 'label' => 'Detail'],
+                    ['index' => 'fired', 'label' => 'Fired when'],
+                ]"
+                :rows="[
+                    ['event' => 'react', 'detail' => '{ reaction: { method, reaction } }', 'fired' => 'A reaction is picked'],
+                ]"
+            >
+                @interact("column_detail", $row)
+                    <x-block>{{ $row["detail"] }}</x-block>
+                @endinteract
+
+                @interact("column_event", $row)
+                    <x-block>{{ $row["event"] }}</x-block>
+                @endinteract
+            </x-table>
+        </div>
     </x-section>
     <x-section title="Panel" new disable-copy>
         The emoji picker is now a JavaScript generated panel instead of Tippy's

@@ -79,7 +79,8 @@
             </p>
             <x-clipboard :text="url('/mcp/tallstackui')" />
             <x-warning>
-                The MCP server always point to the latest version of the TallStackUI.
+                The MCP server always point to the latest version of the
+                TallStackUI.
             </x-warning>
         </div>
     </x-section>

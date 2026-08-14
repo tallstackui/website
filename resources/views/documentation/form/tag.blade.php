@@ -88,14 +88,36 @@
         </x-warning>
     </x-section>
     <x-section title="Events">
-        <x-preview language="blade" :contents="$events">
-            <x-tag
-                :value="['Laravel', 'Symfony', 'CodeIgniter']"
-                x-on:add="alert(`Introduced: ${$event.detail.tag}`)"
-                x-on:remove="alert(`Removed: ${$event.detail.tag}`)"
-                x-on:erase="alert(`Erased: ${$event.detail.tags}`)"
-            />
-        </x-preview>
+        <div class="space-y-4">
+            <x-preview language="blade" :contents="$events">
+                <x-tag
+                    :value="['Laravel', 'Symfony', 'CodeIgniter']"
+                    x-on:add="alert(`Introduced: ${$event.detail.tag}`)"
+                    x-on:remove="alert(`Removed: ${$event.detail.tag}`)"
+                    x-on:erase="alert(`Erased: ${$event.detail.tags}`)"
+                />
+            </x-preview>
+            <x-table
+                :headers="[
+                    ['index' => 'event', 'label' => 'Event'],
+                    ['index' => 'detail', 'label' => 'Detail'],
+                    ['index' => 'fired', 'label' => 'Fired when'],
+                ]"
+                :rows="[
+                    ['event' => 'add', 'detail' => '{ tag }', 'fired' => 'A tag is introduced'],
+                    ['event' => 'remove', 'detail' => '{ tag }', 'fired' => 'A tag is removed'],
+                    ['event' => 'erase', 'detail' => '{ tags }', 'fired' => 'All tags are erased'],
+                ]"
+            >
+                @interact("column_detail", $row)
+                    <x-block>{{ $row["detail"] }}</x-block>
+                @endinteract
+
+                @interact("column_event", $row)
+                    <x-block>{{ $row["event"] }}</x-block>
+                @endinteract
+            </x-table>
+        </div>
     </x-section>
     <x-section
         title="Options"

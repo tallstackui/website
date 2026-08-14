@@ -102,12 +102,36 @@
         </x-preview>
     </x-section>
     <x-section title="Events">
-        <x-preview language="blade" :contents="$events">
-            <x-time
-                x-on:hour="alert(`Hour Selected: ${$event.detail.hour}`)"
-                x-on:minute="alert(`Minute Selected: ${$event.detail.minute}`)"
-                x-on:interval="alert(`Interval Changed: ${$event.detail.interval}`)"
-            />
-        </x-preview>
+        <div class="space-y-4">
+            <x-preview language="blade" :contents="$events">
+                <x-time
+                    x-on:hour="alert(`Hour Selected: ${$event.detail.hour}`)"
+                    x-on:minute="alert(`Minute Selected: ${$event.detail.minute}`)"
+                    x-on:interval="alert(`Interval Changed: ${$event.detail.interval}`)"
+                />
+            </x-preview>
+            <x-table
+                :headers="[
+                    ['index' => 'event', 'label' => 'Event'],
+                    ['index' => 'detail', 'label' => 'Detail'],
+                    ['index' => 'fired', 'label' => 'Fired when'],
+                ]"
+                :rows="[
+                    ['event' => 'hour', 'detail' => '{ hour }', 'fired' => 'An hour is selected'],
+                    ['event' => 'minute', 'detail' => '{ minute }', 'fired' => 'A minute is selected'],
+                    ['event' => 'interval', 'detail' => '{ interval }', 'fired' => 'AM/PM is changed'],
+                    ['event' => 'current', 'detail' => '{ time: { hour, minute, interval } }', 'fired' => 'The current time is applied'],
+                    ['event' => 'clear', 'detail' => '{ time }', 'fired' => 'The value is cleared'],
+                ]"
+            >
+                @interact("column_detail", $row)
+                    <x-block>{{ $row["detail"] }}</x-block>
+                @endinteract
+
+                @interact("column_event", $row)
+                    <x-block>{{ $row["event"] }}</x-block>
+                @endinteract
+            </x-table>
+        </div>
     </x-section>
 </x-layout>

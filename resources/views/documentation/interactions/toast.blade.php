@@ -115,7 +115,27 @@
             <x-preview language="blade" :contents="$events">
                 <livewire:documentation.interactions.toast.events />
             </x-preview>
-            <x-warning class="mt-4">
+            <x-table
+                :headers="[
+                    ['index' => 'event', 'label' => 'Event'],
+                    ['index' => 'detail', 'label' => 'Detail'],
+                    ['index' => 'fired', 'label' => 'Fired when'],
+                ]"
+                :rows="[
+                    ['event' => 'toast:accepted', 'detail' => '{ title, description, type }', 'fired' => 'The confirm action is pressed'],
+                    ['event' => 'toast:rejected', 'detail' => '{ title, description, type }', 'fired' => 'The cancel action is pressed'],
+                    ['event' => 'toast:timeout', 'detail' => '{ title, description, type }', 'fired' => 'The toast times out'],
+                ]"
+            >
+                @interact("column_detail", $row)
+                    <x-block>{{ $row["detail"] }}</x-block>
+                @endinteract
+
+                @interact("column_event", $row)
+                    <x-block>{{ $row["event"] }}</x-block>
+                @endinteract
+            </x-table>
+            <x-warning>
                 We recommend that you use listeners in one place, whether in the
                 base layout or once per component.
             </x-warning>

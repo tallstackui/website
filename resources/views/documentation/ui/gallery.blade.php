@@ -38,12 +38,13 @@
             <x-preview language="blade" :contents="$basic">
                 <x-gallery :images="$nine" />
             </x-preview>
-            <x-warning>
-                All images are lazy loaded by default.
-            </x-warning>
+            <x-warning>All images are lazy loaded by default.</x-warning>
         </div>
     </x-section>
-    <x-section title="Grid" description="An option to uniform tiles in a responsive grid.">
+    <x-section
+        title="Grid"
+        description="An option to uniform tiles in a responsive grid."
+    >
         <x-preview language="blade" :contents="$grid">
             <x-gallery grid :columns="4" ratio="portrait" :images="$eight" />
         </x-preview>
@@ -83,13 +84,18 @@
             <x-gallery round :images="$nine" />
         </x-preview>
     </x-section>
-    <x-section title="Height" description="An option to caps the tile area and scrolls inside it: 40, 60, 80 or 96.">
+    <x-section
+        title="Height"
+        description="An option to caps the tile area and scrolls inside it: 40, 60, 80 or 96."
+    >
         <div class="space-y-4">
             <x-preview language="blade" :contents="$height">
                 <x-gallery grid height="60" :columns="3" :images="$nine" />
             </x-preview>
             <x-warning>
-                The <x-block>height</x-block> should be one of them: 40, 60, 80 or 96.
+                The
+                <x-block>height</x-block>
+                should be one of them: 40, 60, 80 or 96.
             </x-warning>
         </div>
     </x-section>
@@ -113,12 +119,7 @@
         <x-preview language="blade" :contents="$navigable">
             <div class="space-y-6">
                 <x-gallery clickable navigable :images="$nine" />
-                <x-gallery
-                    clickable
-                    navigable
-                    without-loop
-                    :images="$nine"
-                />
+                <x-gallery clickable navigable without-loop :images="$nine" />
             </div>
         </x-preview>
     </x-section>
@@ -135,19 +136,21 @@
             <x-code language="blade" :contents="$events" />
             <x-table
                 :headers="[
-                ['index' => 'event', 'label' => 'Event'],
-                ['index' => 'detail', 'label' => 'Detail'],
-                ['index' => 'fired', 'label' => 'Fired when'],
-            ]"
+                    ['index' => 'event', 'label' => 'Event'],
+                    ['index' => 'detail', 'label' => 'Detail'],
+                    ['index' => 'fired', 'label' => 'Fired when'],
+                ]"
                 :rows="[
-                ['event' => 'expand', 'detail' => '{ image }', 'fired' => 'The lightbox opens'],
-                ['event' => 'collapse', 'detail' => '{ image: null }', 'fired' => 'The lightbox closes'],
-                ['event' => 'next', 'detail' => '{ current, image }', 'fired' => 'The lightbox steps forward'],
-                ['event' => 'previous', 'detail' => '{ current, image }', 'fired' => 'The lightbox steps backward'],
-            ]">
+                    ['event' => 'expand', 'detail' => '{ image }', 'fired' => 'The lightbox opens'],
+                    ['event' => 'collapse', 'detail' => '{ image: null }', 'fired' => 'The lightbox closes'],
+                    ['event' => 'next', 'detail' => '{ current, image }', 'fired' => 'The lightbox steps forward'],
+                    ['event' => 'previous', 'detail' => '{ current, image }', 'fired' => 'The lightbox steps backward'],
+                ]"
+            >
                 @interact("column_detail", $row)
                     <x-block>{{ $row["detail"] }}</x-block>
                 @endinteract
+
                 @interact("column_event", $row)
                     <x-block>{{ $row["event"] }}</x-block>
                 @endinteract

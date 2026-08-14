@@ -205,28 +205,49 @@
         title="Events"
         description="An option to listen event when the slide is opening or closing."
     >
-        <x-preview language="blade" :contents="$events">
-            <x-slide
-                id="event-open"
-                title="TallStackUI"
-                x-on:open="alert('Opened!')"
+        <div class="space-y-4">
+            <x-preview language="blade" :contents="$events">
+                <x-slide
+                    id="event-open"
+                    title="TallStackUI"
+                    x-on:open="alert('Opened!')"
+                >
+                    TallStackUI
+                </x-slide>
+                <x-slide
+                    id="event-close"
+                    title="TallStackUI"
+                    x-on:close="alert('Closed!')"
+                >
+                    TallStackUI
+                </x-slide>
+                <x-button x-on:click="$tsui.open.slide('event-open')">
+                    Open Event
+                </x-button>
+                <x-button x-on:click="$tsui.open.slide('event-close')">
+                    Close Event
+                </x-button>
+            </x-preview>
+            <x-table
+                :headers="[
+                    ['index' => 'event', 'label' => 'Event'],
+                    ['index' => 'detail', 'label' => 'Detail'],
+                    ['index' => 'fired', 'label' => 'Fired when'],
+                ]"
+                :rows="[
+                    ['event' => 'open', 'detail' => '—', 'fired' => 'The slide opens'],
+                    ['event' => 'close', 'detail' => '—', 'fired' => 'The slide closes'],
+                ]"
             >
-                TallStackUI
-            </x-slide>
-            <x-slide
-                id="event-close"
-                title="TallStackUI"
-                x-on:close="alert('Closed!')"
-            >
-                TallStackUI
-            </x-slide>
-            <x-button x-on:click="$tsui.open.slide('event-open')">
-                Open Event
-            </x-button>
-            <x-button x-on:click="$tsui.open.slide('event-close')">
-                Close Event
-            </x-button>
-        </x-preview>
+                @interact("column_detail", $row)
+                    <x-block>{{ $row["detail"] }}</x-block>
+                @endinteract
+
+                @interact("column_event", $row)
+                    <x-block>{{ $row["event"] }}</x-block>
+                @endinteract
+            </x-table>
+        </div>
     </x-section>
     <x-section
         title="Focus Helper"

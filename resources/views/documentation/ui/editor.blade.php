@@ -19,7 +19,8 @@
                 A WYSIWYG editor built on
                 <x-block>contenteditable</x-block>
                 ,
-                <b>with no external JavaScript.</b> It outputs HTML or Markdown.
+                <b>with no external JavaScript.</b>
+                It outputs HTML or Markdown.
             </p>
         </div>
     </x-section>
@@ -71,35 +72,35 @@
             </x-preview>
             <x-table
                 :headers="[
-                ['index' => 'slug', 'label' => 'Slug'],
-                ['index' => 'group', 'label' => 'Group'],
-                ['index' => 'does', 'label' => 'Does'],
-            ]"
+                    ['index' => 'slug', 'label' => 'Slug'],
+                    ['index' => 'group', 'label' => 'Group'],
+                    ['index' => 'does', 'label' => 'Does'],
+                ]"
                 :rows="[
-                ['slug' => 'style', 'group' => 'formatting', 'does' => 'Dropdown: Paragraph, Heading 1 to 3'],
-                ['slug' => 'blockquote', 'group' => 'formatting', 'does' => 'Quote'],
-                ['slug' => 'bold', 'group' => 'inline', 'does' => 'Bold'],
-                ['slug' => 'italic', 'group' => 'inline', 'does' => 'Italic'],
-                ['slug' => 'underline', 'group' => 'inline', 'does' => 'Underline'],
-                ['slug' => 'strikethrough', 'group' => 'inline', 'does' => 'Strikethrough'],
-                ['slug' => 'ordered-list', 'group' => 'lists', 'does' => 'Numbered list'],
-                ['slug' => 'unordered-list', 'group' => 'lists', 'does' => 'Bulleted list'],
-                ['slug' => 'indent', 'group' => 'lists', 'does' => 'Nests a list item, or indents any other block by 2rem'],
-                ['slug' => 'outdent', 'group' => 'lists', 'does' => 'The reverse'],
-                ['slug' => 'align', 'group' => 'align', 'does' => 'Dropdown: Left, Center, Right, Justify'],
-                ['slug' => 'code', 'group' => 'code', 'does' => 'Inline code'],
-                ['slug' => 'code-block', 'group' => 'code', 'does' => 'Code block'],
-                ['slug' => 'clear-format', 'group' => 'code', 'does' => 'Strips formatting from the selection'],
-                ['slug' => 'link', 'group' => 'insert', 'does' => 'Opens the link dialog'],
-                ['slug' => 'image', 'group' => 'insert', 'does' => 'Opens the image dialog'],
-                ['slug' => 'hr', 'group' => 'insert', 'does' => 'Inserts a horizontal rule'],
-                ['slug' => 'undo', 'group' => 'history', 'does' => 'Undo'],
-                ['slug' => 'redo', 'group' => 'history', 'does' => 'Redo'],
-                ['slug' => 'fullscreen', 'group' => 'view', 'does' => 'Fills the viewport'],
-            ]"
+                    ['slug' => 'style', 'group' => 'formatting', 'does' => 'Dropdown: Paragraph, Heading 1 to 3'],
+                    ['slug' => 'blockquote', 'group' => 'formatting', 'does' => 'Quote'],
+                    ['slug' => 'bold', 'group' => 'inline', 'does' => 'Bold'],
+                    ['slug' => 'italic', 'group' => 'inline', 'does' => 'Italic'],
+                    ['slug' => 'underline', 'group' => 'inline', 'does' => 'Underline'],
+                    ['slug' => 'strikethrough', 'group' => 'inline', 'does' => 'Strikethrough'],
+                    ['slug' => 'ordered-list', 'group' => 'lists', 'does' => 'Numbered list'],
+                    ['slug' => 'unordered-list', 'group' => 'lists', 'does' => 'Bulleted list'],
+                    ['slug' => 'indent', 'group' => 'lists', 'does' => 'Nests a list item, or indents any other block by 2rem'],
+                    ['slug' => 'outdent', 'group' => 'lists', 'does' => 'The reverse'],
+                    ['slug' => 'align', 'group' => 'align', 'does' => 'Dropdown: Left, Center, Right, Justify'],
+                    ['slug' => 'code', 'group' => 'code', 'does' => 'Inline code'],
+                    ['slug' => 'code-block', 'group' => 'code', 'does' => 'Code block'],
+                    ['slug' => 'clear-format', 'group' => 'code', 'does' => 'Strips formatting from the selection'],
+                    ['slug' => 'link', 'group' => 'insert', 'does' => 'Opens the link dialog'],
+                    ['slug' => 'image', 'group' => 'insert', 'does' => 'Opens the image dialog'],
+                    ['slug' => 'hr', 'group' => 'insert', 'does' => 'Inserts a horizontal rule'],
+                    ['slug' => 'undo', 'group' => 'history', 'does' => 'Undo'],
+                    ['slug' => 'redo', 'group' => 'history', 'does' => 'Redo'],
+                    ['slug' => 'fullscreen', 'group' => 'view', 'does' => 'Fills the viewport'],
+                ]"
             >
                 @interact("column_slug", $row)
-                <x-block>{{ $row["slug"] }}</x-block>
+                    <x-block>{{ $row["slug"] }}</x-block>
                 @endinteract
             </x-table>
         </div>
@@ -223,19 +224,19 @@
             <x-code language="blade" :contents="$events" />
             <x-table
                 :headers="[
-                ['index' => 'event', 'label' => 'Event'],
-                ['index' => 'detail', 'label' => 'Detail'],
-                ['index' => 'fires', 'label' => 'Fires'],
-            ]"
+                    ['index' => 'event', 'label' => 'Event'],
+                    ['index' => 'detail', 'label' => 'Detail'],
+                    ['index' => 'fires', 'label' => 'Fires'],
+                ]"
                 :rows="[
-                ['event' => 'editor:change', 'detail' => '{ id, html, words, lines }', 'fires' => 'After the debounced sync, on a real change'],
-                ['event' => 'editor:link-inserted', 'detail' => '{ id, href, text }', 'fires' => 'A link was inserted'],
-                ['event' => 'editor:image-inserted', 'detail' => '{ id, src, alt, source }', 'fires' => 'An image was inserted'],
-                ['event' => 'editor:fullscreen-toggled', 'detail' => '{ id, on }', 'fires' => 'Fullscreen was toggled'],
-            ]"
+                    ['event' => 'editor:change', 'detail' => '{ id, html, words, lines }', 'fires' => 'After the debounced sync, on a real change'],
+                    ['event' => 'editor:link-inserted', 'detail' => '{ id, href, text }', 'fires' => 'A link was inserted'],
+                    ['event' => 'editor:image-inserted', 'detail' => '{ id, src, alt, source }', 'fires' => 'An image was inserted'],
+                    ['event' => 'editor:fullscreen-toggled', 'detail' => '{ id, on }', 'fires' => 'Fullscreen was toggled'],
+                ]"
             >
                 @interact("column_event", $row)
-                <x-block>{{ $row["event"] }}</x-block>
+                    <x-block>{{ $row["event"] }}</x-block>
                 @endinteract
             </x-table>
         </div>
@@ -279,8 +280,7 @@
                 <x-block>allowed_styles</x-block>
                 is applied after
                 <x-block>allowed_attributes</x-block>
-                ,
-                so widening the tags that may carry a style cannot widen what
+                , so widening the tags that may carry a style cannot widen what
                 that style does. SVG is deliberately absent from the default
                 upload mimes.
             </p>
@@ -327,13 +327,14 @@
                 ['scope' => 'editor.toolbar', 'component' => 'dropdown', 'covers' => 'The style and the alignment dropdowns of the toolbar'],
                 ['scope' => 'editor.modal.link', 'component' => 'modal', 'covers' => 'The dialog that inserts a link'],
                 ['scope' => 'editor.modal.image', 'component' => 'modal', 'covers' => 'The dialog that inserts an image'],
-            ]">
+            ]"
+        >
             @interact("column_scope", $row)
                 <x-block>{{ $row["scope"] }}</x-block>
             @endinteract
 
             @interact("column_component", $row)
-            <x-block>{{ $row["component"] }}</x-block>
+                <x-block>{{ $row["component"] }}</x-block>
             @endinteract
         </x-table>
     </x-section>

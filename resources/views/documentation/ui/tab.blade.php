@@ -119,25 +119,45 @@
         </div>
     </x-section>
     <x-section title="Events">
-        <x-preview language="blade" :contents="$events">
-            <x-tab
-                selected="Invoices"
-                x-on:navigate="alert($event.detail.select)"
+        <div class="space-y-4">
+            <x-preview language="blade" :contents="$events">
+                <x-tab
+                    selected="Invoices"
+                    x-on:navigate="alert($event.detail.select)"
+                >
+                    <x-tab.items tab="Invoices">
+                        <x-slot:right>
+                            <x-icon name="document-text" class="h-5 w-5" />
+                        </x-slot>
+                        Invoices
+                    </x-tab.items>
+                    <x-tab.items tab="Transactions">
+                        <x-slot:left>
+                            <x-icon name="currency-dollar" class="h-5 w-5" />
+                        </x-slot>
+                        Transactions
+                    </x-tab.items>
+                </x-tab>
+            </x-preview>
+            <x-table
+                :headers="[
+                    ['index' => 'event', 'label' => 'Event'],
+                    ['index' => 'detail', 'label' => 'Detail'],
+                    ['index' => 'fired', 'label' => 'Fired when'],
+                ]"
+                :rows="[
+                    ['event' => 'navigate', 'detail' => '{ select }', 'fired' => 'The selected tab changes'],
+                ]"
             >
-                <x-tab.items tab="Invoices">
-                    <x-slot:right>
-                        <x-icon name="document-text" class="h-5 w-5" />
-                    </x-slot>
-                    Invoices
-                </x-tab.items>
-                <x-tab.items tab="Transactions">
-                    <x-slot:left>
-                        <x-icon name="currency-dollar" class="h-5 w-5" />
-                    </x-slot>
-                    Transactions
-                </x-tab.items>
-            </x-tab>
-        </x-preview>
+                @interact("column_detail", $row)
+                    <x-block>{{ $row["detail"] }}</x-block>
+                @endinteract
+
+                @interact("column_event", $row)
+                    <x-block>{{ $row["event"] }}</x-block>
+                @endinteract
+            </x-table>
+        </div>
     </x-section>
     <x-section
         title="Wireable"

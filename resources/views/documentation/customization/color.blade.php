@@ -123,12 +123,15 @@
                 personal color is extremely easy:
             </p>
             <p>
-                The first thing to do is allow TailwindCSS map and track the classes:
+                The first thing to do is allow TailwindCSS map and track the
+                classes:
             </p>
-            <x-code language="css" :contents="$tailwindCssMapClasses" disable-copy />
-            <p>
-                Then:
-            </p>
+            <x-code
+                language="css"
+                :contents="$tailwindCssMapClasses"
+                disable-copy
+            />
+            <p>Then:</p>
             <x-code :contents="$createCustomColor" disable-copy />
             <p>
                 Now all you need to do is use the new color in the component
@@ -140,8 +143,9 @@
                 disable-copy
             />
             <p>
-                If your intention is to create a custom color, then this involves the process of creating a new color in
-                TailwindCSS as well, so first define the color in CSS:
+                If your intention is to create a custom color, then this
+                involves the process of creating a new color in TailwindCSS as
+                well, so first define the color in CSS:
             </p>
             <x-code language="css" :contents="$newCustomColor" disable-copy />
             <p>

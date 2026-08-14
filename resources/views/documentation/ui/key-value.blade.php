@@ -99,9 +99,30 @@
         </x-preview>
     </x-section>
     <x-section title="Events">
-        <x-preview language="blade" :contents="$events">
-            <livewire:documentation.ui.key-value :model="9" />
-        </x-preview>
+        <div class="space-y-4">
+            <x-preview language="blade" :contents="$events">
+                <livewire:documentation.ui.key-value :model="9" />
+            </x-preview>
+            <x-table
+                :headers="[
+                    ['index' => 'event', 'label' => 'Event'],
+                    ['index' => 'detail', 'label' => 'Detail'],
+                    ['index' => 'fired', 'label' => 'Fired when'],
+                ]"
+                :rows="[
+                    ['event' => 'add', 'detail' => '{ rows }', 'fired' => 'A row is added'],
+                    ['event' => 'remove', 'detail' => '{ rows }', 'fired' => 'A row is removed'],
+                ]"
+            >
+                @interact("column_detail", $row)
+                    <x-block>{{ $row["detail"] }}</x-block>
+                @endinteract
+
+                @interact("column_event", $row)
+                    <x-block>{{ $row["event"] }}</x-block>
+                @endinteract
+            </x-table>
+        </div>
     </x-section>
     <x-section
         title="Compact"

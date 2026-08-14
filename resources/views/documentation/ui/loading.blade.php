@@ -77,7 +77,10 @@
                 <x-refer :doc="['ui', 'spinner']">by click here.</x-refer>
             </p>
             <x-warning info>
-                You can set the <x-block>loading</x-block> component to use spinners by default in the <x-refer doc="configuration">configuration file.</x-refer>
+                You can set the
+                <x-block>loading</x-block>
+                component to use spinners by default in the
+                <x-refer doc="configuration">configuration file.</x-refer>
             </x-warning>
         </div>
     </x-section>

@@ -7,9 +7,7 @@
             threshold.
         </p>
         @for ($i = 1; $i <= 30; $i++)
-            <p>
-                Filler line #{{ $i }}. Keep scrolling to trigger the button.
-            </p>
+            <p>Filler line #{{ $i }}. Keep scrolling to trigger the button.</p>
         @endfor
     </div>
 

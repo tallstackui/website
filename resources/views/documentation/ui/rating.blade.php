@@ -72,8 +72,28 @@
         </x-preview>
     </x-section>
     <x-section title="Events">
-        <x-preview language="blade" :contents="$events">
-            <livewire:documentation.ui.rating :model="6" />
-        </x-preview>
+        <div class="space-y-4">
+            <x-preview language="blade" :contents="$events">
+                <livewire:documentation.ui.rating :model="6" />
+            </x-preview>
+            <x-table
+                :headers="[
+                    ['index' => 'event', 'label' => 'Event'],
+                    ['index' => 'detail', 'label' => 'Detail'],
+                    ['index' => 'fired', 'label' => 'Fired when'],
+                ]"
+                :rows="[
+                    ['event' => 'evaluate', 'detail' => '{ evaluate: { method, rate } }', 'fired' => 'A rating is set'],
+                ]"
+            >
+                @interact("column_detail", $row)
+                    <x-block>{{ $row["detail"] }}</x-block>
+                @endinteract
+
+                @interact("column_event", $row)
+                    <x-block>{{ $row["event"] }}</x-block>
+                @endinteract
+            </x-table>
+        </div>
     </x-section>
 </x-layout>

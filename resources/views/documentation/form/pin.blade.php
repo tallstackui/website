@@ -72,24 +72,45 @@
         </x-preview>
     </x-section>
     <x-section title="Events">
-        <x-preview language="blade" :contents="$events">
-            <div class="space-y-2">
-                <x-pin
-                    length="5"
-                    label="Filled Event"
-                    x-on:filled="alert(`Filled: ${$event.detail.model}`)"
-                />
-                <x-pin
-                    length="5"
-                    label="Clear Event"
-                    clear
-                    x-on:clear="alert(`Cleared: ${$event.detail.model}`)"
-                />
-            </div>
-        </x-preview>
-        <x-warning class="mt-4">
-            The clear event needs the clear option to be enabled.
-        </x-warning>
+        <div class="space-y-4">
+            <x-preview language="blade" :contents="$events">
+                <div class="space-y-2">
+                    <x-pin
+                        length="5"
+                        label="Filled Event"
+                        x-on:filled="alert(`Filled: ${$event.detail.model}`)"
+                    />
+                    <x-pin
+                        length="5"
+                        label="Clear Event"
+                        clear
+                        x-on:clear="alert(`Cleared: ${$event.detail.model}`)"
+                    />
+                </div>
+            </x-preview>
+            <x-table
+                :headers="[
+                    ['index' => 'event', 'label' => 'Event'],
+                    ['index' => 'detail', 'label' => 'Detail'],
+                    ['index' => 'fired', 'label' => 'Fired when'],
+                ]"
+                :rows="[
+                    ['event' => 'filled', 'detail' => '{ model }', 'fired' => 'All boxes are filled'],
+                    ['event' => 'clear', 'detail' => '{ model }', 'fired' => 'The pin is cleared'],
+                ]"
+            >
+                @interact("column_detail", $row)
+                    <x-block>{{ $row["detail"] }}</x-block>
+                @endinteract
+
+                @interact("column_event", $row)
+                    <x-block>{{ $row["event"] }}</x-block>
+                @endinteract
+            </x-table>
+            <x-warning>
+                The clear event needs the clear option to be enabled.
+            </x-warning>
+        </div>
     </x-section>
     <x-section
         title="Smart"

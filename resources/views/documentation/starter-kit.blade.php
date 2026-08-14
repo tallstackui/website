@@ -39,7 +39,8 @@
                 <li>All unnecessary comments removed</li>
             </ul>
             <x-warning>
-                The new version of the Starter Kit now uses the Laravel Fortify instead of Laravel Breeze.
+                The new version of the Starter Kit now uses the Laravel Fortify
+                instead of Laravel Breeze.
             </x-warning>
             <p class="font-semibold text-pink-600">Tools and commands:</p>
             <ul class="list-inside space-y-2">
@@ -56,9 +57,7 @@
                     <x-code language="shell" :contents="$pint" />
                 </li>
             </ul>
-            <p>
-                All in one:
-            </p>
+            <p>All in one:</p>
             <x-code language="shell" :contents="$ci" />
         </div>
     </x-section>

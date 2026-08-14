@@ -187,17 +187,39 @@
         title="Events"
         description="An option to listen to events when the card state changes."
     >
-        <x-preview language="blade" :contents="$events">
-            <x-card
-                header="TallStackUI"
-                minimize
-                close
-                x-on:minimize="alert('Minimized!')"
-                x-on:maximize="alert('Maximized!')"
-                x-on:close="alert('Closed!')"
+        <div class="space-y-4">
+            <x-preview language="blade" :contents="$events">
+                <x-card
+                    header="TallStackUI"
+                    minimize
+                    close
+                    x-on:minimize="alert('Minimized!')"
+                    x-on:maximize="alert('Maximized!')"
+                    x-on:close="alert('Closed!')"
+                >
+                    TallStackUI
+                </x-card>
+            </x-preview>
+            <x-table
+                :headers="[
+                    ['index' => 'event', 'label' => 'Event'],
+                    ['index' => 'detail', 'label' => 'Detail'],
+                    ['index' => 'fired', 'label' => 'Fired when'],
+                ]"
+                :rows="[
+                    ['event' => 'minimize', 'detail' => '—', 'fired' => 'The card is minimized'],
+                    ['event' => 'maximize', 'detail' => '—', 'fired' => 'The card is restored'],
+                    ['event' => 'close', 'detail' => '—', 'fired' => 'The card is closed'],
+                ]"
             >
-                TallStackUI
-            </x-card>
-        </x-preview>
+                @interact("column_detail", $row)
+                    <x-block>{{ $row["detail"] }}</x-block>
+                @endinteract
+
+                @interact("column_event", $row)
+                    <x-block>{{ $row["event"] }}</x-block>
+                @endinteract
+            </x-table>
+        </div>
     </x-section>
 </x-layout>

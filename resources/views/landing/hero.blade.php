@@ -8,9 +8,7 @@
             </p>
 
             <h1 class="landing-headline landing-rise landing-rise--2 mt-6">
-                Beautifully
-                crafted
-                components for your next
+                Beautifully crafted components for your next
                 <span class="text-pink-500">TALL Stack</span>
                 idea.
             </h1>

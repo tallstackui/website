@@ -24,9 +24,9 @@
                 The
                 <x-block>chart</x-block>
                 works on its own or inside a
-                <x-block>card</x-block>.
-                This first example is shown without a card. Later previews wrap
-                the chart in a card only so they are easier to read.
+                <x-block>card</x-block>
+                . This first example is shown without a card. Later previews
+                wrap the chart in a card only so they are easier to read.
             </p>
         </div>
     </x-section>
@@ -68,8 +68,8 @@
                 Each type is also a flag, so
                 <x-block>line</x-block>
                 is the same as
-                <x-block>type="line"</x-block>.
-                Using two flags at once, or a flag next to a
+                <x-block>type="line"</x-block>
+                . Using two flags at once, or a flag next to a
                 <x-block>type</x-block>
                 that contradicts it, throws.
             </p>
@@ -84,9 +84,9 @@
                 <x-chart
                     :labels="['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun']"
                     :series="[
-                    ['name' => '2026', 'data' => [10, 40, 25, 60, 30, 80]],
-                    ['name' => '2025', 'data' => [8, 30, 33, 41, 22, 55]],
-                ]"
+                        ['name' => '2026', 'data' => [10, 40, 25, 60, 30, 80]],
+                        ['name' => '2025', 'data' => [8, 30, 33, 41, 22, 55]],
+                    ]"
                     grid
                     legend
                     tooltip
@@ -147,9 +147,9 @@
                 <x-chart
                     :labels="['Jan', 'Feb', 'Mar', 'Apr']"
                     :series="[
-                    ['name' => 'Revenue', 'data' => [1200, 1900, 1500, 2100]],
-                    ['name' => 'Orders', 'data' => [8, 14, 11, 16], 'axis' => 'right'],
-                ]"
+                        ['name' => 'Revenue', 'data' => [1200, 1900, 1500, 2100]],
+                        ['name' => 'Orders', 'data' => [8, 14, 11, 16], 'axis' => 'right'],
+                    ]"
                     grid
                     legend
                     :prefix="['left' => '$']"
@@ -165,7 +165,10 @@
         <x-preview language="blade" :contents="$colors">
             <div class="space-y-6">
                 <x-card shadowless bordered>
-                    <x-chart :series="[10, 40, 25, 60, 30, 80]" color="emerald" />
+                    <x-chart
+                        :series="[10, 40, 25, 60, 30, 80]"
+                        color="emerald"
+                    />
                 </x-card>
                 <x-card shadowless bordered>
                     <x-chart
@@ -189,7 +192,12 @@
         <x-preview language="blade" :contents="$formatting">
             <div class="space-y-8">
                 <x-card shadowless bordered>
-                    <x-chart :series="$revenue" grid prefix="$" :decimals="2" />
+                    <x-chart
+                        :series="$revenue"
+                        grid
+                        prefix="$"
+                        :decimals="2"
+                    />
                 </x-card>
                 <x-card shadowless bordered>
                     <x-chart
@@ -202,7 +210,7 @@
                     <x-chart
                         :formatter="fn (float $value, string $axis) => $axis === 'right'
                             ? $value.' un'
-                            : Number::currency($value, 'BRL', 'pt_BR')"
+                        : Number::currency($value, 'BRL', 'pt_BR')"
                         :series="[
                             ['name' => 'Revenue', 'data' => $revenue],
                             ['name' => 'Orders', 'data' => $orders, 'axis' => 'right'],
@@ -222,12 +230,14 @@
         <x-preview language="blade" :contents="$slots">
             <x-card shadowless bordered>
                 <x-chart :series="[10, 40, 25, 60, 30, 80]" grid>
-                    <x-slot:header>Monthly Balance</x-slot:header>
+                    <x-slot:header>
+                        Monthly Balance
+                    </x-slot>
                     <x-slot:footer>
                         <div class="flex justify-end">
                             Updated 2 minutes ago
                         </div>
-                    </x-slot:footer>
+                    </x-slot>
                 </x-chart>
             </x-card>
         </x-preview>
@@ -256,20 +266,22 @@
             <x-refer doc="configuration">configuration file.</x-refer>
             For example, you can control the height of a chart by using the
             <x-block>height</x-block>
-            attribute inline per chart,
-            or globally by using the
+            attribute inline per chart, or globally by using the
             <x-block>chart.height</x-block>
             configuration. The default value of the
             <x-block>height</x-block>
             is
             <x-block>240</x-block>
-            in the <x-refer doc="configuration">configuration file.</x-refer>
+            in the
+            <x-refer doc="configuration">configuration file.</x-refer>
         </p>
     </x-section>
     <x-section title="Soft Customization" disable-copy>
         <x-warning>
             Using
-            <x-refer :doc="['customization', 'soft']">soft customization</x-refer>
+            <x-refer :doc="['customization', 'soft']">
+                soft customization
+            </x-refer>
             you can paint the SVG. It does not redraw it. Every
             <x-block>plot.*</x-block>
             block works like any other, but the shapes are computed server-side

@@ -188,11 +188,32 @@
         </x-preview>
     </x-section>
     <x-section title="Events">
-        <x-preview language="blade" :contents="$events">
-            <x-date
-                x-on:select="alert(`Selected Date: ${$event.detail.date}`)"
-                x-on:clear="alert(`Cleaned!`)"
-            />
-        </x-preview>
+        <div class="space-y-4">
+            <x-preview language="blade" :contents="$events">
+                <x-date
+                    x-on:select="alert(`Selected Date: ${$event.detail.date}`)"
+                    x-on:clear="alert(`Cleaned!`)"
+                />
+            </x-preview>
+            <x-table
+                :headers="[
+                    ['index' => 'event', 'label' => 'Event'],
+                    ['index' => 'detail', 'label' => 'Detail'],
+                    ['index' => 'fired', 'label' => 'Fired when'],
+                ]"
+                :rows="[
+                    ['event' => 'select', 'detail' => '{ type, date }', 'fired' => 'A date is picked'],
+                    ['event' => 'clear', 'detail' => '{ type, date }', 'fired' => 'The value is cleared'],
+                ]"
+            >
+                @interact("column_detail", $row)
+                    <x-block>{{ $row["detail"] }}</x-block>
+                @endinteract
+
+                @interact("column_event", $row)
+                    <x-block>{{ $row["event"] }}</x-block>
+                @endinteract
+            </x-table>
+        </div>
     </x-section>
 </x-layout>

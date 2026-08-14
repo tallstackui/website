@@ -303,16 +303,43 @@
         </x-preview>
     </x-section>
     <x-section title="Events">
-        <x-preview language="blade" :background="false" :contents="$events">
-            <x-carousel
-                :images="[
-                    ['src' => url('assets/images/wallpapers/1.jpg'), 'alt' => 'Wallpaper 1'],
-                    ['src' => url('assets/images/wallpapers/2.jpg'), 'alt' => 'Wallpaper 2'],
-                    ['src' => url('assets/images/wallpapers/3.jpg'), 'alt' => 'Wallpaper 3'],
+        <div class="space-y-4">
+            <x-preview
+                language="blade"
+                :background="false"
+                :contents="$events"
+            >
+                <x-carousel
+                    :images="[
+                        ['src' => url('assets/images/wallpapers/1.jpg'), 'alt' => 'Wallpaper 1'],
+                        ['src' => url('assets/images/wallpapers/2.jpg'), 'alt' => 'Wallpaper 2'],
+                        ['src' => url('assets/images/wallpapers/3.jpg'), 'alt' => 'Wallpaper 3'],
+                    ]"
+                    x-on:next="alert('Navigated to the next image')"
+                    x-on:previous="alert('Navigated to the previous image')"
+                />
+            </x-preview>
+            <x-table
+                :headers="[
+                    ['index' => 'event', 'label' => 'Event'],
+                    ['index' => 'detail', 'label' => 'Detail'],
+                    ['index' => 'fired', 'label' => 'Fired when'],
                 ]"
-                x-on:next="alert('Navigated to the next image')"
-                x-on:previous="alert('Navigated to the previous image')"
-            />
-        </x-preview>
+                :rows="[
+                    ['event' => 'expand', 'detail' => '{ image }', 'fired' => 'The lightbox opens'],
+                    ['event' => 'collapse', 'detail' => '{ image: null }', 'fired' => 'The lightbox closes'],
+                    ['event' => 'next', 'detail' => '{ current, image }', 'fired' => 'The carousel or lightbox steps forward'],
+                    ['event' => 'previous', 'detail' => '{ current, image }', 'fired' => 'The carousel or lightbox steps backward'],
+                ]"
+            >
+                @interact("column_detail", $row)
+                    <x-block>{{ $row["detail"] }}</x-block>
+                @endinteract
+
+                @interact("column_event", $row)
+                    <x-block>{{ $row["event"] }}</x-block>
+                @endinteract
+            </x-table>
+        </div>
     </x-section>
 </x-layout>

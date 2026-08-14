@@ -10,7 +10,7 @@ if (! function_exists('tallstackui_configuration')) {
     /** The configuration file shipped by the installed TallStackUI, read at runtime. */
     function tallstackui_configuration(): string
     {
-        return \Illuminate\Support\Facades\Cache::remember('config.tallstackui', now()->addHour(), function (): string {
+        return Illuminate\Support\Facades\Cache::remember('config.tallstackui', now()->addHour(), function (): string {
             $provider = (new ReflectionClass(TallStackUiServiceProvider::class))->getFileName();
 
             if ($provider === false || ! is_readable($path = dirname($provider).'/config.php')) {

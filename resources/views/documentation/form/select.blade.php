@@ -170,7 +170,11 @@
     </x-section>
     <x-section title="Multiple" anchor="styled-multiple">
         <x-preview language="blade" :contents="$styledMultiple">
-            <x-select.styled :value="[1,2,3]" :options="[1, 2, 3, 4, 5, 6]" multiple />
+            <x-select.styled
+                :value="[1,2,3]"
+                :options="[1, 2, 3, 4, 5, 6]"
+                multiple
+            />
         </x-preview>
     </x-section>
     <x-section
@@ -420,17 +424,38 @@
         </x-preview>
     </x-section>
     <x-section title="Events" anchor="styled-events">
-        <x-preview language="blade" :contents="$styledEvents">
-            <x-select.styled
-                :options="[
-                    ['label' => 'TALL', 'value' => 1],
-                    ['label' => 'LIVT', 'value' => 2],
+        <div class="space-y-4">
+            <x-preview language="blade" :contents="$styledEvents">
+                <x-select.styled
+                    :options="[
+                        ['label' => 'TALL', 'value' => 1],
+                        ['label' => 'LIVT', 'value' => 2],
+                    ]"
+                    x-on:select="alert(`Select: ${JSON.stringify($event.detail.select)}`)"
+                    x-on:remove="alert(`Remove: ${JSON.stringify($event.detail.select)}`)"
+                    multiple
+                />
+            </x-preview>
+            <x-table
+                :headers="[
+                    ['index' => 'event', 'label' => 'Event'],
+                    ['index' => 'detail', 'label' => 'Detail'],
+                    ['index' => 'fired', 'label' => 'Fired when'],
                 ]"
-                x-on:select="alert(`Select: ${JSON.stringify($event.detail.select)}`)"
-                x-on:remove="alert(`Remove: ${JSON.stringify($event.detail.select)}`)"
-                multiple
-            />
-        </x-preview>
+                :rows="[
+                    ['event' => 'select', 'detail' => '{ select }', 'fired' => 'An option is picked'],
+                    ['event' => 'remove', 'detail' => '{ select }', 'fired' => 'An option is removed'],
+                ]"
+            >
+                @interact("column_detail", $row)
+                    <x-block>{{ $row["detail"] }}</x-block>
+                @endinteract
+
+                @interact("column_event", $row)
+                    <x-block>{{ $row["event"] }}</x-block>
+                @endinteract
+            </x-table>
+        </div>
     </x-section>
     <x-section
         title="AlpineJS Helper"

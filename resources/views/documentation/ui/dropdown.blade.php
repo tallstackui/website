@@ -234,17 +234,38 @@
         </x-preview>
     </x-section>
     <x-section title="Events">
-        <x-preview language="blade" :contents="$events">
-            <div class="flex justify-end md:justify-center">
-                <x-dropdown
-                    text="Menu"
-                    x-on:open="alert(`Open, 'show' status: ${$event.detail.status}`)"
-                    x-on:select="alert('Selected')"
-                >
-                    <x-dropdown.items text="Settings" />
-                    <x-dropdown.items text="Logout" separator />
-                </x-dropdown>
-            </div>
-        </x-preview>
+        <div class="space-y-4">
+            <x-preview language="blade" :contents="$events">
+                <div class="flex justify-end md:justify-center">
+                    <x-dropdown
+                        text="Menu"
+                        x-on:open="alert(`Open, 'show' status: ${$event.detail.status}`)"
+                        x-on:select="alert('Selected')"
+                    >
+                        <x-dropdown.items text="Settings" />
+                        <x-dropdown.items text="Logout" separator />
+                    </x-dropdown>
+                </div>
+            </x-preview>
+            <x-table
+                :headers="[
+                    ['index' => 'event', 'label' => 'Event'],
+                    ['index' => 'detail', 'label' => 'Detail'],
+                    ['index' => 'fired', 'label' => 'Fired when'],
+                ]"
+                :rows="[
+                    ['event' => 'open', 'detail' => '{ status }', 'fired' => 'The dropdown opens or closes'],
+                    ['event' => 'select', 'detail' => '—', 'fired' => 'An item is clicked'],
+                ]"
+            >
+                @interact("column_detail", $row)
+                    <x-block>{{ $row["detail"] }}</x-block>
+                @endinteract
+
+                @interact("column_event", $row)
+                    <x-block>{{ $row["event"] }}</x-block>
+                @endinteract
+            </x-table>
+        </div>
     </x-section>
 </x-layout>

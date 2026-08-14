@@ -308,11 +308,7 @@
     >
         <x-preview language="blade" :contents="$chart" :background="false">
             <div class="grid grid-cols-2 gap-2">
-                <x-stats
-                    :number="45231"
-                    title="Revenue"
-                    increase
-                >
+                <x-stats :number="45231" title="Revenue" increase>
                     <x-slot:chart>
                         <x-chart
                             :series="[71, 24, 50, 33, 90, 120]"
@@ -335,7 +331,8 @@
             </div>
         </x-preview>
         <x-warning class="mt-4">
-            The component treats a missing chart, an empty array, and an empty slot as no chart.
+            The component treats a missing chart, an empty array, and an empty
+            slot as no chart.
         </x-warning>
     </x-section>
     <x-section

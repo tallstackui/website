@@ -206,7 +206,36 @@
         </div>
     </x-section>
     <x-section title="Lifecycle Events" disable-copy>
-        <x-code language="blade" :contents="$lifecycleEvents" disable-copy />
+        <div class="space-y-4">
+            <x-code
+                language="blade"
+                :contents="$lifecycleEvents"
+                disable-copy
+            />
+            <x-table
+                :headers="[
+                    ['index' => 'event', 'label' => 'Event'],
+                    ['index' => 'detail', 'label' => 'Detail'],
+                    ['index' => 'fired', 'label' => 'Fired when'],
+                ]"
+                :rows="[
+                    ['event' => 'open', 'detail' => '—', 'fired' => 'The palette opens'],
+                    ['event' => 'close', 'detail' => '—', 'fired' => 'The palette closes'],
+                    ['event' => 'select', 'detail' => '{ ...option }', 'fired' => 'An option is picked, on x-on:select'],
+                    ['event' => 'command-palette:{id}:open', 'detail' => '—', 'fired' => 'The palette opens, on window'],
+                    ['event' => 'command-palette:{id}:close', 'detail' => '—', 'fired' => 'The palette closes, on window'],
+                    ['event' => 'command-palette:{id}:select', 'detail' => '{ ...option }', 'fired' => 'An option is picked, on window when x-on:select is absent'],
+                ]"
+            >
+                @interact("column_detail", $row)
+                    <x-block>{{ $row["detail"] }}</x-block>
+                @endinteract
+
+                @interact("column_event", $row)
+                    <x-block>{{ $row["event"] }}</x-block>
+                @endinteract
+            </x-table>
+        </div>
     </x-section>
     <x-section
         title="AlpineJS Helper"

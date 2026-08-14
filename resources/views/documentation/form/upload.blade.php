@@ -172,9 +172,30 @@
         </div>
     </x-section>
     <x-section title="Events">
-        <x-preview language="blade" :contents="$events">
-            <livewire:documentation.form.upload.upload :model="7" />
-        </x-preview>
+        <div class="space-y-4">
+            <x-preview language="blade" :contents="$events">
+                <livewire:documentation.form.upload.upload :model="7" />
+            </x-preview>
+            <x-table
+                :headers="[
+                    ['index' => 'event', 'label' => 'Event'],
+                    ['index' => 'detail', 'label' => 'Detail'],
+                    ['index' => 'fired', 'label' => 'Fired when'],
+                ]"
+                :rows="[
+                    ['event' => 'upload', 'detail' => '{ files }', 'fired' => 'Files start uploading'],
+                    ['event' => 'remove', 'detail' => '{ file }', 'fired' => 'A file is removed'],
+                ]"
+            >
+                @interact("column_detail", $row)
+                    <x-block>{{ $row["detail"] }}</x-block>
+                @endinteract
+
+                @interact("column_event", $row)
+                    <x-block>{{ $row["event"] }}</x-block>
+                @endinteract
+            </x-table>
+        </div>
     </x-section>
     <x-separator text="Static Mode" />
     <x-section title="Concept" anchor="static-concept" disable-copy>

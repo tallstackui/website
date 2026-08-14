@@ -55,9 +55,29 @@
         </x-preview>
     </x-section>
     <x-section title="Events">
-        <x-preview language="blade" :contents="$event">
-            <livewire:documentation.ui.signature :model="9" />
-        </x-preview>
+        <div class="space-y-4">
+            <x-preview language="blade" :contents="$event">
+                <livewire:documentation.ui.signature :model="9" />
+            </x-preview>
+            <x-table
+                :headers="[
+                    ['index' => 'event', 'label' => 'Event'],
+                    ['index' => 'detail', 'label' => 'Detail'],
+                    ['index' => 'fired', 'label' => 'Fired when'],
+                ]"
+                :rows="[
+                    ['event' => 'export', 'detail' => '{ signature }', 'fired' => 'The signature is exported'],
+                ]"
+            >
+                @interact("column_detail", $row)
+                    <x-block>{{ $row["detail"] }}</x-block>
+                @endinteract
+
+                @interact("column_event", $row)
+                    <x-block>{{ $row["event"] }}</x-block>
+                @endinteract
+            </x-table>
+        </div>
     </x-section>
     <x-section
         title="Persistent"

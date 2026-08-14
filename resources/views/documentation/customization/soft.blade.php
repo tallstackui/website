@@ -248,11 +248,12 @@
     <x-section title="Extending a Scope" new disable-copy>
         <div class="space-y-4">
             <p>
-                Scopes are awesome, but they have a single problem: they could only be created, never touched. Calling
+                Scopes are awesome, but they have a single problem: they could
+                only be created, never touched. Calling
                 <x-block>scope()</x-block>
                 with the same name did not extend the existing one, it started
-                over from the component's original classes. To solve this problem, starting from v4 you can extend a
-                scope with
+                over from the component's original classes. To solve this
+                problem, starting from v4 you can extend a scope with
                 <x-block>extend()</x-block>
                 :
             </p>
@@ -320,7 +321,9 @@
                 Below is the full reference of available scopes organized by
                 parent component.
             </p>
-            <h3 class="text-xl font-mono dark:text-white">Wrapper Components</h3>
+            <h3 class="font-mono text-xl dark:text-white">
+                Wrapper Components
+            </h3>
             <p>
                 These scopes affect all form components that use the shared
                 wrapper infrastructure.
@@ -331,12 +334,13 @@
                     ['index' => 'child', 'label' => 'Child'],
                     ['index' => 'scope', 'label' => 'Scope'],
                 ]"
-                :rows="collect($scopes['wrapper'])->flatMap(fn (array $section) => collect($section['rows'])->map(fn (array $scope) => ['parent' => $section['label'], 'child' => $scope['child'], 'scope' => $scope['scope']]))">
+                :rows="collect($scopes['wrapper'])->flatMap(fn (array $section) => collect($section['rows'])->map(fn (array $scope) => ['parent' => $section['label'], 'child' => $scope['child'], 'scope' => $scope['scope']]))"
+            >
                 @interact("column_scope", $row)
-                <x-block>{{ $row["scope"] }}</x-block>
+                    <x-block>{{ $row["scope"] }}</x-block>
                 @endinteract
             </x-table>
-            <h3 class="text-xl font-mono dark:text-white">Form Components</h3>
+            <h3 class="font-mono text-xl dark:text-white">Form Components</h3>
             <x-table
                 :headers="[
                     ['index' => 'parent', 'label' => 'Component'],
@@ -346,10 +350,10 @@
                 :rows="collect($scopes['form'])->flatMap(fn (array $section) => collect($section['rows'])->map(fn (array $scope) => ['parent' => $section['label'], 'child' => $scope['child'], 'scope' => $scope['scope']]))"
             >
                 @interact("column_scope", $row)
-                <x-block>{{ $row["scope"] }}</x-block>
+                    <x-block>{{ $row["scope"] }}</x-block>
                 @endinteract
             </x-table>
-            <h3 class="text-xl font-mono dark:text-white">UI Components</h3>
+            <h3 class="font-mono text-xl dark:text-white">UI Components</h3>
             <x-table
                 :headers="[
                     ['index' => 'parent', 'label' => 'Component'],
@@ -359,7 +363,7 @@
                 :rows="collect($scopes['ui'])->flatMap(fn (array $section) => collect($section['rows'])->map(fn (array $scope) => ['parent' => $section['label'], 'child' => $scope['child'], 'scope' => $scope['scope']]))"
             >
                 @interact("column_scope", $row)
-                <x-block>{{ $row["scope"] }}</x-block>
+                    <x-block>{{ $row["scope"] }}</x-block>
                 @endinteract
             </x-table>
         </div>

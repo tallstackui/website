@@ -199,22 +199,6 @@
     </x-section>
     <x-section title="Events">
         <div class="space-y-4">
-            <p>
-                Accordion dispatches
-                <x-block>open</x-block>
-                and
-                <x-block>close</x-block>
-                CustomEvents on the wrapper, with the triggered item's
-                identifier in
-                <x-block>$event.detail.id</x-block>
-                . Listen with
-                <x-block>x-on:open</x-block>
-                and
-                <x-block>x-on:close</x-block>
-                directly on the
-                <x-block>&lt;x-accordion&gt;</x-block>
-                or any ancestor.
-            </p>
             <x-preview
                 language="blade"
                 :contents="$events"
@@ -233,6 +217,25 @@
                     </x-accordion.items>
                 </x-accordion>
             </x-preview>
+            <x-table
+                :headers="[
+                    ['index' => 'event', 'label' => 'Event'],
+                    ['index' => 'detail', 'label' => 'Detail'],
+                    ['index' => 'fired', 'label' => 'Fired when'],
+                ]"
+                :rows="[
+                    ['event' => 'open', 'detail' => '{ id }', 'fired' => 'An item opens'],
+                    ['event' => 'close', 'detail' => '{ id }', 'fired' => 'An item closes'],
+                ]"
+            >
+                @interact("column_detail", $row)
+                    <x-block>{{ $row["detail"] }}</x-block>
+                @endinteract
+
+                @interact("column_event", $row)
+                    <x-block>{{ $row["event"] }}</x-block>
+                @endinteract
+            </x-table>
         </div>
     </x-section>
 </x-layout>

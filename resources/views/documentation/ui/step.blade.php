@@ -216,30 +216,59 @@
         </x-preview>
     </x-section>
     <x-section title="Events">
-        <x-preview language="blade" :contents="$events">
-            <x-step
-                selected="1"
-                helpers
-                x-on:change="alert(`Changed: ${$event.detail.step}`)"
-                x-on:finish="alert(`Finished: ${$event.detail.step}`)"
-            >
-                <x-step.items step="1" title="Starting" description="Step One">
-                    Step one...
-                </x-step.items>
-                <x-step.items step="2" title="Advancing" description="Step Two">
-                    Step two...
-                </x-step.items>
-                <x-step.items
-                    step="3"
-                    title="Finishing"
-                    description="Step Three"
-                    completed
+        <div class="space-y-4">
+            <x-preview language="blade" :contents="$events">
+                <x-step
+                    selected="1"
+                    helpers
+                    x-on:change="alert(`Changed: ${$event.detail.step}`)"
+                    x-on:finish="alert(`Finished: ${$event.detail.step}`)"
                 >
-                    Step three...
-                    <b>finished!</b>
-                </x-step.items>
-            </x-step>
-        </x-preview>
+                    <x-step.items
+                        step="1"
+                        title="Starting"
+                        description="Step One"
+                    >
+                        Step one...
+                    </x-step.items>
+                    <x-step.items
+                        step="2"
+                        title="Advancing"
+                        description="Step Two"
+                    >
+                        Step two...
+                    </x-step.items>
+                    <x-step.items
+                        step="3"
+                        title="Finishing"
+                        description="Step Three"
+                        completed
+                    >
+                        Step three...
+                        <b>finished!</b>
+                    </x-step.items>
+                </x-step>
+            </x-preview>
+            <x-table
+                :headers="[
+                    ['index' => 'event', 'label' => 'Event'],
+                    ['index' => 'detail', 'label' => 'Detail'],
+                    ['index' => 'fired', 'label' => 'Fired when'],
+                ]"
+                :rows="[
+                    ['event' => 'change', 'detail' => '{ step }', 'fired' => 'The current step changes'],
+                    ['event' => 'finish', 'detail' => '{ step }', 'fired' => 'The last step is finished'],
+                ]"
+            >
+                @interact("column_detail", $row)
+                    <x-block>{{ $row["detail"] }}</x-block>
+                @endinteract
+
+                @interact("column_event", $row)
+                    <x-block>{{ $row["event"] }}</x-block>
+                @endinteract
+            </x-table>
+        </div>
     </x-section>
     <x-section
         title="Helper Variations"

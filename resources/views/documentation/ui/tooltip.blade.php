@@ -16,7 +16,8 @@
         </x-preview>
     </x-section>
     <x-warning success>
-        The v4 dropped the dependency of the Tippy.js in order to reduce the bundle size.
+        The v4 dropped the dependency of the Tippy.js in order to reduce the
+        bundle size.
     </x-warning>
     <x-section class="mt-4" title="Available Positions">
         <x-preview language="blade" :contents="$positions">
@@ -135,9 +136,11 @@
         </x-preview>
         <x-warning class="mt-4">
             A colored balloon keeps its color in both themes, and so does the
-            default one. You can ppt into a light balloon on a dark theme through the
+            default one. You can ppt into a light balloon on a dark theme
+            through the
             <x-block>invert</x-block>
-            setting in the <x-refer doc="configuration">configuration file.</x-refer>
+            setting in the
+            <x-refer doc="configuration">configuration file.</x-refer>
         </x-warning>
     </x-section>
     <x-section title="Balloon Scale" new>

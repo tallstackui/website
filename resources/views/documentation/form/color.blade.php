@@ -93,11 +93,32 @@
         </x-warning>
     </x-section>
     <x-section title="Events">
-        <x-preview language="blade" :contents="$events">
-            <x-color
-                picker
-                x-on:set="alert(`Selected Color: ${$event.detail.color}`)"
-            />
-        </x-preview>
+        <div class="space-y-4">
+            <x-preview language="blade" :contents="$events">
+                <x-color
+                    picker
+                    x-on:set="alert(`Selected Color: ${$event.detail.color}`)"
+                />
+            </x-preview>
+            <x-table
+                :headers="[
+                    ['index' => 'event', 'label' => 'Event'],
+                    ['index' => 'detail', 'label' => 'Detail'],
+                    ['index' => 'fired', 'label' => 'Fired when'],
+                ]"
+                :rows="[
+                    ['event' => 'set', 'detail' => '{ color }', 'fired' => 'A color is picked'],
+                    ['event' => 'clear', 'detail' => '{ color }', 'fired' => 'The value is cleared'],
+                ]"
+            >
+                @interact("column_detail", $row)
+                    <x-block>{{ $row["detail"] }}</x-block>
+                @endinteract
+
+                @interact("column_event", $row)
+                    <x-block>{{ $row["event"] }}</x-block>
+                @endinteract
+            </x-table>
+        </div>
     </x-section>
 </x-layout>

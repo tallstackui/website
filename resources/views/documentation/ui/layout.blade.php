@@ -281,7 +281,7 @@
                 ]"
             >
                 @interact("column_name", $row)
-                <x-block>{{ $row["name"] }}</x-block>
+                    <x-block>{{ $row["name"] }}</x-block>
                 @endinteract
             </x-table>
             <x-warning>
@@ -446,9 +446,9 @@
             <p>
                 A group has nothing to show on a collapsed sidebar: its items
                 live in a list that only opens inline, and the rail has no room
-                for it. Hovering, or clicking, for touch, a
-                collapsed group now opens its items in a panel anchored beside
-                the icon, headed by the group name.
+                for it. Hovering, or clicking, for touch, a collapsed group now
+                opens its items in a panel anchored beside the icon, headed by
+                the group name.
             </p>
             <p>
                 It closes on leave, on click outside, on Escape, and when the

@@ -15,9 +15,12 @@
                 work, because they depend on AlpineJS-based code.
             </p>
             <p>
-                At this point you might be thinking: <i>"Livewire 4 delivers
-                AlpineJS automatically! Why should I care about that?".</i> Well,
-                some inattentive people don't realize that
+                At this point you might be thinking:
+                <i>
+                    "Livewire 4 delivers AlpineJS automatically! Why should I
+                    care about that?".
+                </i>
+                Well, some inattentive people don't realize that
                 <b>
                     Livewire 4 only delivers AlpineJS automatically when there
                     are Livewire components on the page.

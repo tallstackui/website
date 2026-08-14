@@ -156,14 +156,36 @@
         </div>
     </x-section>
     <x-section title="Events">
-        <x-preview language="blade" :contents="$events">
-            <x-password
-                value="TallStackUI"
-                generator
-                :rules="['min:8', 'symbols', 'numbers', 'mixed']"
-                x-on:reveal="alert(`Password Revealed: ${$event.detail.status}`)"
-                x-on:generate="alert(`Password Generated: ${$event.detail.password}`)"
-            />
-        </x-preview>
+        <div class="space-y-4">
+            <x-preview language="blade" :contents="$events">
+                <x-password
+                    value="TallStackUI"
+                    generator
+                    :rules="['min:8', 'symbols', 'numbers', 'mixed']"
+                    x-on:reveal="alert(`Password Revealed: ${$event.detail.status}`)"
+                    x-on:generate="alert(`Password Generated: ${$event.detail.password}`)"
+                />
+            </x-preview>
+            <x-table
+                :headers="[
+                    ['index' => 'event', 'label' => 'Event'],
+                    ['index' => 'detail', 'label' => 'Detail'],
+                    ['index' => 'fired', 'label' => 'Fired when'],
+                ]"
+                :rows="[
+                    ['event' => 'reveal', 'detail' => '{ status }', 'fired' => 'Visibility is toggled'],
+                    ['event' => 'generate', 'detail' => '{ password }', 'fired' => 'A password is generated'],
+                    ['event' => 'paste', 'detail' => '{ password }', 'fired' => 'A password is pasted'],
+                ]"
+            >
+                @interact("column_detail", $row)
+                    <x-block>{{ $row["detail"] }}</x-block>
+                @endinteract
+
+                @interact("column_event", $row)
+                    <x-block>{{ $row["event"] }}</x-block>
+                @endinteract
+            </x-table>
+        </div>
     </x-section>
 </x-layout>

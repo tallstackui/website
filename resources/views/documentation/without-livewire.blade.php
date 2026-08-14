@@ -43,8 +43,9 @@
                 </p>
             </div>
             <x-warning info>
-                Starting from v4, the <x-block>table</x-block> component
-                no longer requires the Livewire context.
+                Starting from v4, the
+                <x-block>table</x-block>
+                component no longer requires the Livewire context.
             </x-warning>
         </div>
     </x-section>
