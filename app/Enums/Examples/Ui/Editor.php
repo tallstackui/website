@@ -10,6 +10,52 @@ class Editor
     <x-editor />
     HTML;
 
+    public const string OUTPUT_CLASSES = <<<'HTML'
+    <x-editor output-classes />
+    HTML;
+
+    public const string OUTPUT_CLASSES_HTML = <<<'HTML'
+    <ol class="tsui-editor-numeric-list">
+        <li class="tsui-editor-list-item">…</li>
+    </ol>
+    HTML;
+
+    public const string OUTPUT_CLASSES_CSS = <<<'CSS'
+    .tsui-editor-numeric-list { @apply my-2 list-decimal pl-6; }
+    .tsui-editor-heading-1 { @apply text-3xl font-bold; }
+    .tsui-editor-paragraph { @apply my-2; }
+    CSS;
+
+    public const string OUTPUT_CLASSES_RENAME = <<<'HTML'
+    <x-editor :output-classes="['ol' => 'tsui-editor-steps']" />
+    HTML;
+
+    public const string OUTPUT_CLASSES_PREFIX = <<<'HTML'
+    <x-editor output-classes="blog-" />
+    HTML;
+
+    public const string OUTPUT_CLASSES_PREFIX_HTML = <<<'HTML'
+    <ol class="blog-numeric-list">
+        <li class="blog-list-item">…</li>
+    </ol>
+    HTML;
+
+    public const string OUTPUT_CLASSES_CONFIG = <<<'PHP'
+    // ...
+
+    'editor' => [
+        Components\Editor\Component::class,
+        // ...
+        [
+            'markdown'              => false,
+            'output_classes'        => true, // [tl! focus:1]
+            'output_classes_prefix' => null,
+            'toolbar'               => [/* ... */],
+
+            // ...
+    // ...
+    PHP;
+
     public const string LABEL_HINT = <<<'HTML'
     <x-editor label="Article" hint="Keep it under a thousand words" />
     HTML;

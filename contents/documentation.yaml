@@ -573,6 +573,7 @@ ui:
   editor:
     - Basic Usage
     - Caveats
+    - Output Classes
     - Label & Hint
     - Toolbar
     - Heights
@@ -582,14 +583,11 @@ ui:
     - Markdown Mapping
     - Markdown Autoformat
     - Image Upload
-    - Without Livewire
     - Events
     - Keyboard
-    - Livewire
     - Security
     - Configuration
     - Soft Customization
-    - Invalid Input
   error:
     - Basic Usage
     - Filtering Properties
