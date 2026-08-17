@@ -42,16 +42,9 @@ new class extends Component {
 
         $str = str($this->component);
 
-        $this->title ??= $str
-            ->replace("\\", " ")
-            ->title()
-            ->value();
+        $this->title ??= $str->replace("\\", " ")->title()->value();
 
-        $this->id = $str
-            ->lower()
-            ->remove("\\")
-            ->squish()
-            ->value();
+        $this->id = $str->lower()->remove("\\")->squish()->value();
 
         $this->id .= "-" . uniqid();
     }

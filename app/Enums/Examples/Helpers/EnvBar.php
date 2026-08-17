@@ -7,7 +7,7 @@ namespace App\Enums\Examples\Helpers;
 class EnvBar
 {
     public const string INSTALLATION = <<<'HTML'
-    composer require tallstackui/envbar
+    composer require tallstackui/envbar:^2.0.0
     HTML;
 
     public const string CONFIGURATION = <<<'HTML'

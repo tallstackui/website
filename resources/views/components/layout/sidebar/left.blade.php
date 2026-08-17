@@ -15,7 +15,7 @@
         x-transition:leave="transition-opacity duration-300 ease-linear"
         x-transition:leave-start="opacity-100"
         x-transition:leave-end="opacity-0"
-        class="bg-opacity-75 fixed inset-0 bg-gray-600 backdrop-blur-sm"
+        class="bg-opacity-75 fixed inset-0 bg-gray-400 backdrop-blur-sm"
     ></div>
     <div x-show="mobile" class="fixed inset-0 z-40 flex">
         <div
