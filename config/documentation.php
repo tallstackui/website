@@ -28,6 +28,7 @@ return [
     */
 
     'sites' => [
+        'v4' => 'https://tallstackui.com',
         'v3' => env('DOCS_V3_URL', 'https://v3.tallstackui.com'),
     ],
 

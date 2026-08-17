@@ -18,6 +18,8 @@
     <meta property="og:title" content="TallStackUI: TALL Stack components ready-to-use." />
     <meta property="og:image" content="{{ asset('assets/images/og.png') }}" />
 
+    <meta name="algolia-site-verification"  content="23A69478DD9B4A03" />
+
     <link rel="apple-touch-icon" href="{{ asset('assets/images/apple-touch-icon.png') }}" >
     <link rel="icon" ype="image/x-icon" href="{{ asset('assets/images/favicon.ico') }}">
     <link rel="icon" type="image/png" href="{{ asset('assets/images/favicon-16x16.png') }}" sizes="16x16">
