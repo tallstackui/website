@@ -90,6 +90,7 @@
         x-bind:class="{
             'dark text-dark-100': darkTheme,
             'text-gray-900': ! darkTheme,
+            'overflow-hidden': mobile,
         }"
         x-data="{ mobile: false }"
         x-cloak

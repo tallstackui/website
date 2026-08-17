@@ -6,6 +6,8 @@
     aria-modal="true"
     x-show="mobile"
     x-cloak
+    x-effect="document.documentElement.classList.toggle('overflow-hidden', mobile)"
+    x-on:keydown.escape.window="mobile = false"
 >
     <div
         x-show="mobile"
@@ -15,9 +17,9 @@
         x-transition:leave="transition-opacity duration-300 ease-linear"
         x-transition:leave-start="opacity-100"
         x-transition:leave-end="opacity-0"
-        class="bg-opacity-75 fixed inset-0 bg-gray-400 backdrop-blur-sm"
+        class="dark:bg-dark-800/75 fixed inset-0 bg-gray-400/75 backdrop-blur-sm"
     ></div>
-    <div x-show="mobile" class="fixed inset-0 z-40 flex">
+    <div x-show="mobile" class="fixed inset-0 z-40 flex overflow-hidden">
         <div
             x-show="mobile"
             x-transition:enter="transform transition duration-300 ease-in-out"

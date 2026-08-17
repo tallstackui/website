@@ -42,11 +42,17 @@
                 <x-dropdown.items
                     :text="$multiple ? $label.' as markdown' : 'Copy as markdown'"
                     :separator="! $loop->first"
-                    x-on:click="markdown('{{ $urls[$label] }}')"
+                    x-on:click="
+                        show = false;
+                        markdown('{{ $urls[$label] }}');
+                    "
                 />
                 <x-dropdown.items
                     :text="$multiple ? $label.' as link' : 'Copy as link'"
-                    x-on:click="link('{{ $urls[$label] }}')"
+                    x-on:click="
+                        show = false;
+                        link('{{ $urls[$label] }}');
+                    "
                 />
             @endforeach
         </x-dropdown>

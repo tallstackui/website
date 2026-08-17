@@ -14,7 +14,7 @@
                 <x-svg.tallstackui />
             </div>
         </div>
-        <div class="mt-2 flex justify-center">
+        <div class="mt-2 px-6 text-center">
             <p
                 class="dark:text-dark-400 font-mono text-[0.7rem] tracking-[0.16em] text-gray-500 uppercase"
             >
