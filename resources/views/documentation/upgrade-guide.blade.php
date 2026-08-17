@@ -10,20 +10,20 @@
                 were there as bugs. I fixed a lot.
             </p>
             <p>
-                Before I start describing the upgrade guide, like I always do,
-                I want to thank you for using TallStackUI and for reading this.
-                If you are here, you have some interest in it, even if it is
-                just to know the basics of what TallStackUI is. I created
-                TallStackUI to be my own source of components for TALL
-                projects, with Livewire as the main foundation, so I would not
-                depend on third parties and would not have to pay for a
-                component library.
+                Before I start describing the upgrade guide, like I always do, I
+                want to thank you for using TallStackUI and for reading this. If
+                you are here, you have some interest in it, even if it is just
+                to know the basics of what TallStackUI is. I created TallStackUI
+                to be my own source of components for TALL projects, with
+                Livewire as the main foundation, so I would not depend on third
+                parties and would not have to pay for a component library.
             </p>
             <p>
-                Now let's talk about what matters. <b>First of all, v4 requires Livewire 4 exclusively.</b> And also,
-                before you go through the actual upgrade guide, remember I
-                currently work on this library alone. If you want to help, you
-                are welcome to
+                Now let's talk about what matters.
+                <b>First of all, v4 requires Livewire 4 exclusively.</b>
+                And also, before you go through the actual upgrade guide,
+                remember I currently work on this library alone. If you want to
+                help, you are welcome to
                 <x-link
                     href="https://github.com/sponsors/devajmeireles"
                     blank
@@ -73,8 +73,7 @@
                         <li>
                             -
                             <x-refer :doc="['ui', 'swap']">Swap</x-refer>
-                            : cycle a value with buttons, drag, or the
-                            keyboard.
+                            : cycle a value with buttons, drag, or the keyboard.
                         </li>
                         <li>
                             -
@@ -231,9 +230,7 @@
                     </ul>
                 </div>
             </div>
-            <p>
-                The rest is on each component page.
-            </p>
+            <p>The rest is on each component page.</p>
         </div>
     </x-section>
     <x-section title="Breaking Changes" disable-copy>
@@ -265,7 +262,11 @@
                     , the header stops being colored and you get the neutral
                     wrapper border instead.
                 </p>
-                <x-code language="blade" :contents="$cardAccent" disable-copy />
+                <x-code
+                    language="blade"
+                    :contents="$cardAccent"
+                    disable-copy
+                />
             </div>
             <div class="space-y-4">
                 <h2 class="text-lg font-medium tracking-tight text-pink-600">
@@ -281,7 +282,11 @@
                     <x-block>shadowless</x-block>
                     if you want the shadow gone too.
                 </p>
-                <x-code language="blade" :contents="$kbdShadowless" disable-copy />
+                <x-code
+                    language="blade"
+                    :contents="$kbdShadowless"
+                    disable-copy
+                />
             </div>
             <div class="space-y-4">
                 <h2 class="text-lg font-medium tracking-tight text-pink-600">
@@ -302,7 +307,11 @@
                     takes the array, and passing an array turns icon mode on by
                     itself.
                 </p>
-                <x-code language="blade" :contents="$clipboardIcon" disable-copy />
+                <x-code
+                    language="blade"
+                    :contents="$clipboardIcon"
+                    disable-copy
+                />
                 <p>
                     <x-block>icons</x-block>
                     is gone, not deprecated. The attribute bag drops an array
@@ -329,7 +338,11 @@
                     <x-block>@@theme</x-block>
                     , your values still win.
                 </p>
-                <x-code language="blade" :contents="$secondaryColor" disable-copy />
+                <x-code
+                    language="blade"
+                    :contents="$secondaryColor"
+                    disable-copy
+                />
                 <p>
                     If you
                     <x-block>replace()</x-block>
@@ -406,13 +419,17 @@
                 <p>
                     Anything that reached for
                     <x-block>$el._tippy</x-block>
-                    to enable or disable a tooltip has to move to the
-                    attribute. A balloon styled through tippy's theme classes
-                    has to be restyled through
+                    to enable or disable a tooltip has to move to the attribute.
+                    A balloon styled through tippy's theme classes has to be
+                    restyled through
                     <x-block>[data-tsui-tooltip]</x-block>
                     .
                 </p>
-                <x-code language="blade" :contents="$tooltipDisabled" disable-copy />
+                <x-code
+                    language="blade"
+                    :contents="$tooltipDisabled"
+                    disable-copy
+                />
             </div>
             <div class="space-y-4">
                 <h2 class="text-lg font-medium tracking-tight text-pink-600">
@@ -425,7 +442,11 @@
                     relying on the last chain winning, collapse them into one
                     chain.
                 </p>
-                <x-code language="php" :contents="$customizationStacking" disable-copy />
+                <x-code
+                    language="php"
+                    :contents="$customizationStacking"
+                    disable-copy
+                />
                 <p>
                     <x-block>remove()</x-block>
                     ran a plain
@@ -438,7 +459,11 @@
                     Three calls that used to pass silently now throw, and one
                     global changed how it accumulates.
                 </p>
-                <x-code language="php" :contents="$customizationStrict" disable-copy />
+                <x-code
+                    language="php"
+                    :contents="$customizationStrict"
+                    disable-copy
+                />
                 <p>
                     A scope also layers over the global customization instead of
                     replacing it, so
@@ -466,7 +491,11 @@
                     are a size map now, in the same place Badge and Environment
                     keep theirs.
                 </p>
-                <x-code language="php" :contents="$buttonBlocks" disable-copy />
+                <x-code
+                    language="php"
+                    :contents="$buttonBlocks"
+                    disable-copy
+                />
                 <p>
                     <x-block>icon.spinner-animation</x-block>
                     is gone from both buttons. Each spinner variant has its own
@@ -476,7 +505,11 @@
                     <x-block>icon.sizes.*</x-block>
                     . That block still applies to regular icons.
                 </p>
-                <x-code language="php" :contents="$buttonSpinner" disable-copy />
+                <x-code
+                    language="php"
+                    :contents="$buttonSpinner"
+                    disable-copy
+                />
                 <p>
                     <x-block>round</x-block>
                     is validated now. The button had no
@@ -498,7 +531,11 @@
                     <x-block>paginators/simple.blade.php</x-block>
                     , and the directory has one file per variation.
                 </p>
-                <x-code language="blade" :contents="$tablePaginator" disable-copy />
+                <x-code
+                    language="blade"
+                    :contents="$tablePaginator"
+                    disable-copy
+                />
                 <p>
                     <x-block>paginator</x-block>
                     is no longer only a view path. It also names a look:
@@ -620,7 +657,11 @@
                     Everything that changes by notification type now lives in
                     the color classes.
                 </p>
-                <x-code language="php" :contents="$colorfulBlocks" disable-copy />
+                <x-code
+                    language="php"
+                    :contents="$colorfulBlocks"
+                    disable-copy
+                />
                 <p>
                     The
                     <x-block>question</x-block>
@@ -919,9 +960,7 @@
                 <h2 class="text-lg font-medium tracking-tight text-pink-600">
                     4. Clear the application cache
                 </h2>
-                <p>
-                    Clear cached files before updating Composer:
-                </p>
+                <p>Clear cached files before updating Composer:</p>
                 <x-code language="shell" :contents="$optimizeClear" />
             </div>
             <div class="space-y-4">

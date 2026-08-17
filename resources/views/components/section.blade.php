@@ -34,7 +34,7 @@
                         >
                             #
                         </span>
-                        {{ $title }}
+                        <span data-search-heading>{{ $title }}</span>
                         @if (! $dontCopy)
                             <x-clipboard
                                 icon

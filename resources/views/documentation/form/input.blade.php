@@ -108,7 +108,9 @@
                 </x-input>
             </x-preview>
             <x-warning info>
-                You can also use <x-block>button.circle</x-block> but the style will be the same as a normal button.
+                You can also use
+                <x-block>button.circle</x-block>
+                but the style will be the same as a normal button.
             </x-warning>
         </div>
     </x-section>

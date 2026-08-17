@@ -48,8 +48,8 @@
                 The default output of the
                 <x-block>editor</x-block>
                 is raw HTML content. Tailwind's Preflight strips the list
-                markers and the heading sizes, so the same markup reads as
-                plain lines once it is rendered anywhere else.
+                markers and the heading sizes, so the same markup reads as plain
+                lines once it is rendered anywhere else.
                 <x-block>output-classes</x-block>
                 stamps a class on every element the editor writes, so the
                 content can be styled wherever it lands.
@@ -62,13 +62,23 @@
                 <x-block>output-classes</x-block>
                 , every element will carries a class of its own:
             </p>
-            <x-code language="html" :contents="$outputClassesHtml" disable-copy />
+            <x-code
+                language="html"
+                :contents="$outputClassesHtml"
+                disable-copy
+            />
             <p>
-                So you will be able to customize the output of the editor with your own CSS, for example:
+                So you will be able to customize the output of the editor with
+                your own CSS, for example:
             </p>
-            <x-code language="css" :contents="$outputClassesCss" disable-copy />
+            <x-code
+                language="css"
+                :contents="$outputClassesCss"
+                disable-copy
+            />
             <x-warning>
-                TallStackUI defines none of them. They are hooks, empty until your the application fills them.
+                TallStackUI defines none of them. They are hooks, empty until
+                your the application fills them.
             </x-warning>
             <p>
                 An array changes only the tags it lists and leaves the rest
@@ -76,12 +86,22 @@
                 sanitizer recognizes on the way back in, and anything else
                 throws.
             </p>
-            <x-code language="blade" :contents="$outputClassesRename" disable-copy />
-            <p>
-                A string is the prefix itself:
-            </p>
-            <x-code language="blade" :contents="$outputClassesPrefix" disable-copy />
-            <x-code language="html" :contents="$outputClassesPrefixHtml" disable-copy />
+            <x-code
+                language="blade"
+                :contents="$outputClassesRename"
+                disable-copy
+            />
+            <p>A string is the prefix itself:</p>
+            <x-code
+                language="blade"
+                :contents="$outputClassesPrefix"
+                disable-copy
+            />
+            <x-code
+                language="html"
+                :contents="$outputClassesPrefixHtml"
+                disable-copy
+            />
             <p>
                 Without a string, the prefix comes from
                 <x-block>output_classes_prefix</x-block>
@@ -89,8 +109,7 @@
                 <x-refer doc="configuration">configuration file</x-refer>
                 when
                 <x-block>output_classes</x-block>
-                is enable
-                , defaulting to
+                is enable , defaulting to
                 <x-block>tsui-editor-</x-block>
                 . The option is off by default, under
                 <x-block>output_classes</x-block>
@@ -98,7 +117,11 @@
                 <x-block>markdown</x-block>
                 is on, since Markdown carries no classes.
             </p>
-            <x-code language="php" :contents="$outputClassesConfig" disable-copy />
+            <x-code
+                language="php"
+                :contents="$outputClassesConfig"
+                disable-copy
+            />
             <p>The default tags and classes are:</p>
             <x-table
                 :headers="[
@@ -129,23 +152,24 @@
                 ]"
             >
                 @interact("column_tag", $row)
-                <x-block>{{ $row["tag"] }}</x-block>
+                    <x-block>{{ $row["tag"] }}</x-block>
                 @endinteract
 
                 @interact("column_class", $row)
-                <x-block>{{ $row["class"] }}</x-block>
+                    <x-block>{{ $row["class"] }}</x-block>
                 @endinteract
             </x-table>
             <p>
-                The stamp is authoritative rather than incremental. On the
-                way in and after every command the classes are wiped and
-                written again from the tag, so a renamed class, a duplicate,
-                and a class the browser carried onto the wrong element all
-                settle on the next pass. Turning it off stops the stamping,
-                it does not rewrite what is stored.
+                The stamp is authoritative rather than incremental. On the way
+                in and after every command the classes are wiped and written
+                again from the tag, so a renamed class, a duplicate, and a class
+                the browser carried onto the wrong element all settle on the
+                next pass. Turning it off stops the stamping, it does not
+                rewrite what is stored.
             </p>
             <x-warning warning>
-                The prefix should be lowercase, dash separated and end with a dash.
+                The prefix should be lowercase, dash separated and end with a
+                dash.
             </x-warning>
         </div>
     </x-section>
@@ -202,7 +226,7 @@
                 ]"
             >
                 @interact("column_slug", $row)
-                <x-block>{{ $row["slug"] }}</x-block>
+                    <x-block>{{ $row["slug"] }}</x-block>
                 @endinteract
             </x-table>
         </div>
@@ -303,9 +327,11 @@
             <x-warning warning>
                 You need to use both attributes in order to make it work. The
                 <x-block>upload-property</x-block>
-                is used to upload the image following the Livewire's way, and the
+                is used to upload the image following the Livewire's way, and
+                the
                 <x-block>upload-method</x-block>
-                is used to handle the uploaded image and return the URL of the image.
+                is used to handle the uploaded image and return the URL of the
+                image.
             </x-warning>
         </div>
     </x-section>
@@ -326,10 +352,11 @@
                 ]"
             >
                 @interact("column_event", $row)
-                <x-block>{{ $row["event"] }}</x-block>
+                    <x-block>{{ $row["event"] }}</x-block>
                 @endinteract
+
                 @interact("column_detail", $row)
-                <x-block>{{ $row["detail"] }}</x-block>
+                    <x-block>{{ $row["detail"] }}</x-block>
                 @endinteract
             </x-table>
         </div>
@@ -362,9 +389,9 @@
             <p>
                 The sanitizer strips tags, attributes and style properties
                 outside the configured whitelist, over pasted markup and over
-                the value the editor boots with. The stamped output classes
-                are the one exception: they pass whether the option is on or
-                off, bounded by the prefix.
+                the value the editor boots with. The stamped output classes are
+                the one exception: they pass whether the option is on or off,
+                bounded by the prefix.
                 <x-block>href</x-block>
                 and
                 <x-block>src</x-block>
@@ -412,31 +439,37 @@
                 The
                 <x-block>editor</x-block>
                 component reuse other components internally, such as
-                <x-block>modal</x-block> and <x-block>dropdown</x-block>
+                <x-block>modal</x-block>
+                and
+                <x-block>dropdown</x-block>
                 . You can customize the internal components by using the
                 <x-block>scopes</x-block>
-                following the guide of the <x-refer :doc="['customization', 'soft']">soft customization</x-refer>.
+                following the guide of the
+                <x-refer :doc="['customization', 'soft']">
+                    soft customization
+                </x-refer>
+                .
             </p>
             <x-code language="php" :contents="$scopes" disable-copy />
             <x-table
                 class="mt-4"
                 :headers="[
-                ['index' => 'scope', 'label' => 'Scope'],
-                ['index' => 'component', 'label' => 'Component'],
-                ['index' => 'covers', 'label' => 'Covers'],
-            ]"
+                    ['index' => 'scope', 'label' => 'Scope'],
+                    ['index' => 'component', 'label' => 'Component'],
+                    ['index' => 'covers', 'label' => 'Covers'],
+                ]"
                 :rows="[
-                ['scope' => 'editor.toolbar', 'component' => 'dropdown', 'covers' => 'The style and the alignment dropdowns of the toolbar'],
-                ['scope' => 'editor.modal.link', 'component' => 'modal', 'covers' => 'The dialog that inserts a link'],
-                ['scope' => 'editor.modal.image', 'component' => 'modal', 'covers' => 'The dialog that inserts an image'],
-            ]"
+                    ['scope' => 'editor.toolbar', 'component' => 'dropdown', 'covers' => 'The style and the alignment dropdowns of the toolbar'],
+                    ['scope' => 'editor.modal.link', 'component' => 'modal', 'covers' => 'The dialog that inserts a link'],
+                    ['scope' => 'editor.modal.image', 'component' => 'modal', 'covers' => 'The dialog that inserts an image'],
+                ]"
             >
                 @interact("column_scope", $row)
-                <x-block>{{ $row["scope"] }}</x-block>
+                    <x-block>{{ $row["scope"] }}</x-block>
                 @endinteract
 
                 @interact("column_component", $row)
-                <x-block>{{ $row["component"] }}</x-block>
+                    <x-block>{{ $row["component"] }}</x-block>
                 @endinteract
             </x-table>
         </div>
