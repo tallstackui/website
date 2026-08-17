@@ -18,7 +18,7 @@
             <h2 @class(['text-xl tracking-tight text-pink-600 font-medium cursor-pointer', 'flex items-center gap-2' => $new]) x-on:mouseover="anchor = true" x-on:mouseleave="anchor = false">
                 <a class="flex gap-1" href="#{{ $anchor }}">
                     <span class="text-gray-400 dark:text-gray-400" x-show="anchor">#</span>
-                    {{ $title }}
+                    <span data-search-heading>{{ $title }}</span>
                     @if (!$dontCopy)
                         <x-clipboard icon text="{{ url()->current() . '#' . $anchor }}" x-show="anchor" />
                     @endif
