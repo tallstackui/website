@@ -73,8 +73,6 @@ new class extends Component {
 
     public function open(): void
     {
-        sleep(3);
-
         if (blank($this->component)) {
             return;
         }
@@ -119,8 +117,6 @@ new class extends Component {
 
     public function content(string $block, string $class): void
     {
-        sleep(3);
-        
         $this->original["block"] = $block;
         $this->original["class"] = $class;
     }
@@ -140,11 +136,11 @@ new class extends Component {
                 </div>
             </div>
         @endif
+        <div wire:loading wire:target="open, select" class="flex items-center justify-center py-4">
+            <x-spinner color="pink" />
+        </div>
         @if ($blocks)
-            <div wire:loading wire:target="open" class="flex items-center justify-center py-4">
-                <x-spinner />
-            </div>
-            <div wire:loading.remove class="px-2 sm:px-0">
+            <div wire:loading.remove wire:target="open, select" class="px-2 sm:px-0">
                 <p class="text-base font-medium">Blocks:</p>
                 <div class="flex flex-wrap items-center justify-start gap-1">
                     @foreach ($blocks as $name => $class)
