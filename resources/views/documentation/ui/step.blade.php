@@ -308,8 +308,7 @@
         <x-warning class="mt-4">
             <x-block>compact</x-block>
             mode keeps its width unchanged by disabling edge buttons rather than
-            hiding them. The finish button is displayed to the left of the
-            controls.
+            hiding them.
         </x-warning>
     </x-section>
     <x-section

@@ -70,14 +70,6 @@ class Swap
             x-on:swap="console.log($event.detail)" />
     HTML;
 
-    public const string WITHOUT_LIVEWIRE = <<<'HTML'
-    <form method="POST" action="/preferences">
-        @csrf
-        <!-- request('cycle') carries the value of the selected option -->
-        <x-swap name="cycle" :options="['Monthly', 'Quarterly', 'Yearly']" />
-    </form>
-    HTML;
-
     public const string ALPINE = <<<'HTML'
     <div x-data="{ cycle: 'Monthly' }">
         <x-swap x-model="cycle" :options="['Monthly', 'Quarterly', 'Yearly']" />

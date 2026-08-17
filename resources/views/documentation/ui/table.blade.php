@@ -74,9 +74,16 @@
         title="Loading Effect"
         description="An option to display a loading effect when interacts with the table elements."
     >
-        <x-preview language="blade" :contents="$loading" :background="false">
-            <livewire:documentation.ui.table :mode="5" />
-        </x-preview>
+        <div class="space-y-4">
+            <x-preview language="blade" :contents="$loading" :background="false">
+                <livewire:documentation.ui.table :mode="5" />
+            </x-preview>
+            <p>
+                You can change the loading indicator icon to use a
+                <x-block>spinner</x-block>
+                new component in <x-refer doc="configuration">configuration file.</x-refer>
+            </p>
+        </div>
     </x-section>
     <x-section
         title="Sorting"
@@ -139,7 +146,7 @@
             The table component provides a custom Blade directive
             <x-block>
                 @verbatim @interact @endverbatim
-                    
+
             </x-block>
             to allow you to interact with the table columns about the data
             provided in each row. Allowing you to interact with the table and
@@ -158,7 +165,7 @@
             Blade
             <x-block>
                 @verbatim @interact @endverbatim
-                    
+
             </x-block>
             directive, you must specify a unique key for each component:
         </p>
@@ -169,7 +176,7 @@
             inside the
             <x-block>
                 @verbatim @interact @endverbatim
-                    
+
             </x-block>
             directive to interact with the data of each row. The
             <x-block>$loop</x-block>

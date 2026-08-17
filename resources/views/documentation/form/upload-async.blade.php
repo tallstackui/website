@@ -106,12 +106,9 @@
                 <livewire:documentation.form.upload.async :mode="1" />
             </x-preview>
             <x-warning info>
-                Similar to the
-                <x-block>upload</x-block>
-                component, you can also use the
+                You can use
                 <x-block>:preview="false"</x-block>
-                attribute to disable the preview of images when uploading
-                images.
+                to disable the preview of images when uploading images.
             </x-warning>
         </div>
     </x-section>
@@ -141,8 +138,7 @@
             <p>
                 However, the
                 <x-block>upload</x-block>
-                method has several useful options. From here, we will
-                demonstrate and explain all available options in the method.
+                method has several useful options:
             </p>
             <x-table
                 :headers="[

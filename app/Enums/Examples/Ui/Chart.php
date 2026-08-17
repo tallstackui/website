@@ -80,8 +80,7 @@ class Chart
     HTML;
 
     public const string COLORS = <<<'HTML'
-    <x-chart :series="[10, 40, 25, 60, 30, 80]"
-             color="emerald" />
+    <x-chart :series="[10, 40, 25, 60, 30, 80]" color="emerald" />
 
     <x-chart :labels="['Jan', 'Feb', 'Mar', 'Apr']"
              :colors="['red', 'blue', 'amber']"

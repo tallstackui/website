@@ -96,10 +96,7 @@
             band resistance past them.
         </x-warning>
     </x-section>
-    <x-section
-        title="Readonly & Disabled"
-        description="Both freeze the buttons, the drag and the keyboard. disabled also dims the control, while readonly keeps the resting look."
-    >
+    <x-section title="Readonly & Disabled">
         <x-preview language="blade" :contents="$readonlyAndDisabled">
             <div class="flex flex-wrap items-center gap-6">
                 <x-swap readonly :options="['Apple', 'Banana', 'Cherry']" />
@@ -142,9 +139,6 @@
                 @endinteract
             </x-table>
         </div>
-    </x-section>
-    <x-section title="Without Livewire">
-        <x-code language="blade" :contents="$withoutLivewire" />
     </x-section>
     <x-section title="AlpineJS Helper">
         <x-preview language="blade" :contents="$alpine">
