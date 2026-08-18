@@ -5,7 +5,7 @@ declare(strict_types=1);
 use Livewire\Component;
 
 return new class extends Component {
-    public bool $state = false;
+    public bool $slide = false;
 };
 
 ?>
