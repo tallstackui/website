@@ -16,17 +16,17 @@
                 Insert the
                 <x-block>dialog</x-block>
                 component on your main layout:
-                <x-code language="html" :contents="$tag" />
+                <x-code language="html" :contents="$tag" disable-copy />
             </li>
             <li>
                 Use the
                 <x-block>Interactions</x-block>
                 trait in your Livewire component:
-                <x-code language="php" :contents="$trait" />
+                <x-code language="php" :contents="$trait" disable-copy />
             </li>
             <li>
                 Dispatch the Dialog from a Livewire method:
-                <x-code language="php" :contents="$dispatch" />
+                <x-code language="php" :contents="$dispatch" disable-copy />
             </li>
         </ul>
     </x-section>
@@ -76,7 +76,7 @@
             </x-warning>
         </div>
     </x-section>
-    <x-section title="Hooks">
+    <x-section title="Hooks" disable-copy>
         <div class="space-y-4">
             <x-code :contents="$hooks" disable-copy />
             <p>
@@ -94,6 +94,7 @@
     <x-section
         title="JavaScript API"
         description="JavaScript API to interact with Dialog."
+        disable-copy
     >
         <div class="space-y-4">
             <x-code language="blade" :contents="$javascript" disable-copy />
@@ -102,7 +103,7 @@
             </x-warning>
         </div>
     </x-section>
-    <x-section title="Display After Redirects">
+    <x-section title="Display After Redirects" disable-copy>
         <div class="space-y-4">
             <p>
                 You can trigger a dialog that will actually be displayed after a
@@ -110,7 +111,7 @@
                 another Livewire component or to basic controllers, you can
                 still display the dialog.
             </p>
-            <x-code :contents="$flash" />
+            <x-code :contents="$flash" disable-copy />
             <p>
                 When using
                 <x-block>flash()</x-block>
@@ -120,7 +121,7 @@
             </p>
         </div>
     </x-section>
-    <x-section title="Dispatching via Controllers">
+    <x-section title="Dispatching via Controllers" disable-copy>
         <div class="space-y-4">
             <p>You can trigger a dialog via controllers.</p>
             <x-code :contents="$controllers" disable-copy />
@@ -143,6 +144,7 @@
     <x-section
         title="Persistent"
         description="An option to prevent the dialog from being closed by clicking outside."
+        disable-copy
     >
         <div class="space-y-4">
             <x-code :contents="$persistent" disable-copy />
@@ -159,7 +161,7 @@
             </x-refer>
         </p>
     </x-section>
-    <x-section title="Confirming with Enter" new>
+    <x-section title="Confirming with Enter" new disable-copy>
         <x-code language="php" :contents="$enter" />
         <x-warning class="mt-4">
             It fires only while the focus is

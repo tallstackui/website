@@ -16,17 +16,17 @@
                 Insert the
                 <x-block>toast</x-block>
                 component on your main layout:
-                <x-code language="html" :contents="$tag" />
+                <x-code language="html" :contents="$tag" disable-copy />
             </li>
             <li>
                 Use the
                 <x-block>Interactions</x-block>
                 trait in your Livewire component:
-                <x-code language="php" :contents="$trait" />
+                <x-code language="php" :contents="$trait" disable-copy />
             </li>
             <li>
                 Dispatch the Toast from a Livewire method:
-                <x-code language="php" :contents="$dispatch" />
+                <x-code language="php" :contents="$dispatch" disable-copy />
             </li>
         </ul>
     </x-section>
@@ -55,11 +55,8 @@
             </x-preview>
             <p>
                 You can also control the default time by interacting with
-                <x-refer doc="configuration">the configuration file</x-refer>
-                :
-                <x-code :contents="$defaultTime" disable-copy />
+                <x-refer doc="configuration">the configuration file.</x-refer>
             </p>
-
             <p>
                 Then use the
                 <x-block>timeout</x-block>
@@ -141,7 +138,7 @@
             </x-warning>
         </div>
     </x-section>
-    <x-section title="Hooks">
+    <x-section title="Hooks" disable-copy>
         <div class="space-y-4">
             <x-code :contents="$hooks" disable-copy />
             <p>
@@ -159,6 +156,7 @@
     <x-section
         title="JavaScript API"
         description="JavaScript API to interact with Toast."
+        disable-copy
     >
         <div class="space-y-4">
             <x-code language="blade" :contents="$javascript" disable-copy />
@@ -167,7 +165,7 @@
             </x-warning>
         </div>
     </x-section>
-    <x-section title="Display After Redirects">
+    <x-section title="Display After Redirects" disable-copy>
         <div class="space-y-4">
             <p>
                 You can trigger a toast that will actually be displayed after a
@@ -175,7 +173,7 @@
                 another Livewire component or to basic controllers, you can
                 still display the toast.
             </p>
-            <x-code :contents="$flash" />
+            <x-code :contents="$flash" disable-copy />
             <p>
                 When using
                 <x-block>flash()</x-block>
@@ -185,7 +183,7 @@
             </p>
         </div>
     </x-section>
-    <x-section title="Dispatching via Controllers">
+    <x-section title="Dispatching via Controllers" disable-copy>
         <div class="space-y-4">
             <p>You can trigger a toast via controllers.</p>
             <x-code :contents="$controllers" disable-copy />
@@ -220,6 +218,7 @@
         title="Stacked"
         new
         description="An option to stack the list of toasts."
+        disable-copy
     >
         <div class="space-y-4">
             <livewire:documentation.interactions.toast.stacked />
@@ -229,7 +228,7 @@
             <x-code language="js" :contents="$stackedJs" />
         </div>
     </x-section>
-    <x-section title="Top on Mobile" new>
+    <x-section title="Top on Mobile" new disable-copy>
         <x-warning success>
             Starting from v4, you can set the toast to be positioned at the top
             of the page when mobile. You can configure it by using the position

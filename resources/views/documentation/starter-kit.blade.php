@@ -38,7 +38,7 @@
                 <li>Full test covered</li>
                 <li>All unnecessary comments removed</li>
             </ul>
-            <x-warning>
+            <x-warning info>
                 The new version of the Starter Kit now uses the Laravel Fortify
                 instead of Laravel Breeze.
             </x-warning>

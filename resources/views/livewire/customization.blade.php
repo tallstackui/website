@@ -146,7 +146,10 @@ new class extends Component {
                         />
                     @endforeach
                 </div>
-                <div class="mt-4 space-y-2">
+                <div wire:loading wire:target="content" class="flex items-center justify-center py-4">
+                    <x-spinner color="pink" />
+                </div>
+                <div wire:loading.remove wire:target="content" class="mt-4 space-y-2">
                     @if ($original)
                         <div>
                             <x-clipboard :id="uniqid()" label="Name" :text="$original['block']"/>

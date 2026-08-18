@@ -112,34 +112,6 @@ class Toast
         ->send();
     HTML;
 
-    public const string DEFAULT_TIME = <<<'HTML'
-    // ...
-
-    'toast' => [
-        Components\Toast\Component::class,
-        [
-            /*
-            |----------------------------------------------------------------------
-            | Toast Global Settings
-            |----------------------------------------------------------------------
-            |
-            | z-index: controls the default z-index.
-            | progress: enables the progress bar.
-            | expandable: enables the expanded effect by default.
-            | position: controls the default toast position (Allowed: top-right, top-left, top-center, bottom-right, bottom-left, bottom-center).
-            | timeout: controls the default timeout in seconds.
-            */
-            'z-index' => 'z-50',
-            'progress' => true,
-            'expandable' => false,
-            'position' => 'top-right',
-            'timeout' => 10, // [tl! highlight]
-        ],
-    ],
-
-    // ...
-    HTML;
-
     public const string DEFAULT_TIME_USAGE = <<<'HTML'
     $this->toast()
         ->timeout() // [tl! highlight]
@@ -259,21 +231,19 @@ class Toast
                 .send();
 
             error = () => $tsui.interaction('toast')
-                .error('Success', 'This is a error message.')
+                .error('Error', 'This is an error message.')
                 .send();
 
             warning = () => $tsui.interaction('toast')
-                .warning('Success', 'This is a warning message.')
+                .warning('Warning', 'This is a warning message.')
                 .send();
 
             info = () => $tsui.interaction('toast')
-                .info('Success', 'This is a info message.')
+                .info('Info', 'This is an info message.')
                 .send();
 
-            // To use confirmations the use and interact with methods of
-            // a Livewire component, it is necessary to pass the id of
-            // the component where the method is defined. You need to
-            // do this by interacting with the `wireable()` method.
+            // Confirm/cancel that call a Livewire method need the
+            // component id, passed through `wireable()`.
 
             const component = Livewire.find('your-component-id-goes-here').id; // [tl! highlight]
 
@@ -284,14 +254,24 @@ class Toast
                 .cancel('Cancel', 'cancelled', 'Cancelled Successfully')
                 .send();
 
-            // Alternatively, you can pass the component id as an
-            // empty string to use the FIRST LIVEWIRE COMPONENT OF THE PAGE.
+            // Omit the id to target the first Livewire component on the page.
 
             confirm = () => $tsui.interaction('toast')
                 .wireable() // [tl! highlight]
                 .question('Warning', 'Are you sure?')
                 .confirm('Confirm', 'confirmed', 'Confirmed Successfully')
                 .cancel('Cancel', 'cancelled', 'Cancelled Successfully')
+                .send();
+
+            // The same fluent methods as PHP: position, sole, stacked.
+            $tsui.interaction('toast')
+                .position('top-left')
+                .success('Success', 'This is a success message.')
+                .send();
+
+            $tsui.interaction('toast')
+                .sole()
+                .success('Success', 'This is a success message.')
                 .send();
         </script>
     </div>

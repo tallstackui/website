@@ -27,28 +27,35 @@ class UpgradeGuide
 
     public const string CARD_ACCENT = <<<'HTML'
     <x-card color="red" bordered header="Report">...</x-card> <!-- [tl! remove] -->
+
     <x-card color="red" accent header="Report">...</x-card> <!-- [tl! add] -->
     HTML;
 
     public const string KBD_SHADOWLESS = <<<'HTML'
     <x-kbd borderless /> <!-- [tl! remove] -->
+
     <x-kbd borderless shadowless /> <!-- [tl! add] -->
     HTML;
 
     public const string BUTTON_BLOCKS = <<<'PHP'
     TallStackUi::customize()->button()->block('wrapper.border.radius.rounded', 'rounded-2xl'); // [tl! remove]
+
     TallStackUi::customize()->button()->block('wrapper.border.radius.circle', '...'); // [tl! remove]
+
     TallStackUi::customize()->button()->block('border.radius.md', 'rounded-2xl'); // [tl! add]
+
     TallStackUi::customize()->button()->block('border.radius.full', '...'); // [tl! add]
     PHP;
 
     public const string BUTTON_SPINNER = <<<'PHP'
     TallStackUi::customize()->button()->block('icon.spinner-animation', 'animate-pulse'); // [tl! remove]
+
     TallStackUi::customize()->button()->block('spinner.gradient.base', 'inline-block animate-pulse'); // [tl! add]
     PHP;
 
     public const string CLIPBOARD_ICON = <<<'HTML'
     <x-clipboard text="TallStackUI" icon :icons="['copy' => 'pencil', 'copied' => 'check']" /> <!-- [tl! remove] -->
+
     <x-clipboard text="TallStackUI" :icon="['copy' => 'pencil', 'copied' => 'check']" /> <!-- [tl! add] -->
     HTML;
 
@@ -71,6 +78,7 @@ class UpgradeGuide
 
     public const string TOOLTIP_DISABLED = <<<'HTML'
     x-effect="$el._tippy && ($store['tsui.side-bar'].open ? $el._tippy.disable() : $el._tippy.enable())" <!-- [tl! remove] -->
+
     x-bind:data-tooltip-disabled="$store['tsui.side-bar'].open" <!-- [tl! add] -->
     HTML;
 
@@ -93,17 +101,20 @@ class UpgradeGuide
     public const string SECONDARY_COLOR = <<<'HTML'
     <!-- Was slate-gray, is violet now -->
     <x-badge color="secondary" text="Draft" /> <!-- [tl! remove] -->
+
     <x-badge color="slate" text="Draft" /> <!-- [tl! add] -->
     HTML;
 
     public const string TABLE_PAGINATOR = <<<'HTML'
     <x-table :$headers :$rows paginate paginator="components.table.paginators" /> <!-- [tl! remove] -->
+
     <x-table :$headers :$rows paginate paginator="components.table.paginators.simple" /> <!-- [tl! add] -->
     HTML;
 
     public const string STEP_SLOTS = <<<'HTML'
     <!-- previous and next are slot names now: a bare attribute throws -->
     <x-step selected="1" helpers previous> <!-- [tl! remove] -->
+
     <x-step selected="1" helpers navigate-previous> <!-- [tl! add] -->
     HTML;
 
@@ -115,9 +126,11 @@ class UpgradeGuide
     PHP;
 
     public const string COLORFUL_BLOCKS = <<<'PHP'
-    // These three blocks no longer exist and now throw
+    // These three block no longer exist and now throw
     TallStackUi::customize()->dialog()->block('colorful.confirm', '...'); // [tl! remove]
+
     TallStackUi::customize()->toast()->block('colorful.confirm', '...'); // [tl! remove]
+
     TallStackUi::customize()->toast()->block('colorful.cancel', '...'); // [tl! remove]
 
     // Publish the color classes and override colorfulColors() instead
