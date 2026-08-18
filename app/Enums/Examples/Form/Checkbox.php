@@ -91,7 +91,7 @@ class Checkbox
     HTML;
 
     public const string GROUP_BASIC = <<<'HTML'
-    <x-checkbox.group wire:model="features" label="Features" :options="[
+    <x-checkbox.group label="Features" :options="[
         ['label' => 'Newsletter', 'value' => 'newsletter', 'description' => 'Weekly digest'],
         ['label' => 'Alerts', 'value' => 'alerts', 'description' => 'Real time notifications'],
         ['label' => 'Reports', 'value' => 'reports', 'description' => 'Monthly summary'],

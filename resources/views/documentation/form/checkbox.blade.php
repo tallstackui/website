@@ -142,8 +142,6 @@
     </x-section>
     <x-separator text="Checkbox Group" />
     <x-section title="Basic Usage" anchor="group-basic-usage">
-        <p>You should bind a property that is an array:</p>
-        <x-code language="php" :contents="$groupProperty" />
         <x-preview language="blade" :contents="$groupBasic">
             <x-checkbox.group
                 name="features-basic[]"
