@@ -44,11 +44,7 @@
         , on the other hand, allows uploading large files without necessarily
         changing anything in PHP, but requires a bit more code to work.
     </x-section>
-    <x-section
-        title="Prepare Backend"
-        description="The route prop accepts a named route or a plain URL. Either wire:model or name is required."
-        disable-copy
-    >
+    <x-section title="Prepare Backend" disable-copy>
         <p>
             With
             <x-block>upload.async</x-block>
