@@ -27,5 +27,8 @@
         <env name="PULSE_ENABLED" value="false"/>
         <env name="TELESCOPE_ENABLED" value="false"/>
         <env name="TORCHLIGHT_TOKEN" value="foo-bar-baz"/>
+        <env name="SENTRY_LARAVEL_DSN" value="null"/>
+        <env name="SENTRY_ENABLE_LOGS" value="false"/>
+        <env name="LOG_STACK" value="single"/>
     </php>
 </phpunit>
