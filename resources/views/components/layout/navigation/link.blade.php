@@ -3,6 +3,7 @@
     "href" => null,
     "activated" => null,
     "new" => false,
+    "changes" => false,
 ])
 
 @php
@@ -35,6 +36,14 @@
             class="rounded-full border border-violet-500/40 px-1.5 py-px font-mono text-[0.55rem] font-semibold tracking-widest text-violet-500"
         >
             NEW
+        </span>
+    @endif
+
+    @if ($changes)
+        <span
+            class="rounded-full border border-violet-500/40 px-1.5 py-px font-mono text-[0.55rem] font-semibold tracking-widest text-violet-500"
+        >
+            CHANGES
         </span>
     @endif
 </a>

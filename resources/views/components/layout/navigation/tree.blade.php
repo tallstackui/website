@@ -116,6 +116,7 @@
                         <x-layout.navigation.link
                             :href="route('documentation', ['form', 'password'])"
                             text="Password"
+                            changes
                         />
                     </li>
                     <li class="relative ml-4">
@@ -128,6 +129,7 @@
                         <x-layout.navigation.link
                             :href="route('documentation', ['form', 'radio'])"
                             text="Radio"
+                            changes
                         />
                     </li>
                     <li class="relative ml-4">
@@ -146,6 +148,7 @@
                         <x-layout.navigation.link
                             :href="route('documentation', ['form', 'time'])"
                             text="Time"
+                            changes
                         />
                     </li>
                     <li class="relative ml-4">
@@ -204,6 +207,7 @@
                         <x-layout.navigation.link
                             :href="route('documentation', ['ui', 'avatar'])"
                             text="Avatar"
+                            changes
                         />
                     </li>
                     <li class="relative ml-4">
@@ -240,6 +244,7 @@
                         <x-layout.navigation.link
                             :href="route('documentation', ['ui', 'button'])"
                             text="Button"
+                            changes
                         />
                     </li>
                     <li class="relative ml-4">
@@ -252,6 +257,7 @@
                         <x-layout.navigation.link
                             :href="route('documentation', ['ui', 'card'])"
                             text="Card"
+                            changes
                         />
                     </li>
                     <li class="relative ml-4">
@@ -289,6 +295,7 @@
                         <x-layout.navigation.link
                             :href="route('documentation', ['ui', 'dropdown'])"
                             text="Dropdown"
+                            changes
                         />
                     </li>
                     <li class="relative ml-4">
@@ -302,6 +309,7 @@
                         <x-layout.navigation.link
                             :href="route('documentation', ['ui', 'error'])"
                             text="Error"
+                            changes
                         />
                     </li>
                     <li class="relative ml-4">
@@ -321,18 +329,21 @@
                         <x-layout.navigation.link
                             :href="route('documentation', ['ui', 'icon'])"
                             text="Icon"
+                            changes
                         />
                     </li>
                     <li class="relative ml-4">
                         <x-layout.navigation.link
                             :href="route('documentation', ['ui', 'modal'])"
                             text="Modal"
+                            changes
                         />
                     </li>
                     <li class="relative ml-4">
                         <x-layout.navigation.link
                             :href="route('documentation', ['ui', 'layout'])"
                             text="Layout"
+                            changes
                         />
                     </li>
                     <li class="relative ml-4">
@@ -345,24 +356,28 @@
                         <x-layout.navigation.link
                             :href="route('documentation', ['ui', 'list'])"
                             text="List"
+                            changes
                         />
                     </li>
                     <li class="relative ml-4">
                         <x-layout.navigation.link
                             :href="route('documentation', ['ui', 'loading'])"
                             text="Loading"
+                            changes
                         />
                     </li>
                     <li class="relative ml-4">
                         <x-layout.navigation.link
                             :href="route('documentation', ['ui', 'kbd'])"
                             text="Kbd"
+                            changes
                         />
                     </li>
                     <li class="relative ml-4">
                         <x-layout.navigation.link
                             :href="route('documentation', ['ui', 'key-value'])"
                             text="KeyValue"
+                            changes
                         />
                     </li>
                     <li class="relative ml-4">
@@ -382,6 +397,7 @@
                         <x-layout.navigation.link
                             :href="route('documentation', ['ui', 'reaction'])"
                             text="Reaction"
+                            changes
                         />
                     </li>
                     <li class="relative ml-4">
@@ -394,12 +410,14 @@
                         <x-layout.navigation.link
                             :href="route('documentation', ['ui', 'signature'])"
                             text="Signature"
+                            changes
                         />
                     </li>
                     <li class="relative ml-4">
                         <x-layout.navigation.link
                             :href="route('documentation', ['ui', 'slide'])"
                             text="Slide"
+                            changes
                         />
                     </li>
                     <li class="relative ml-4">
@@ -413,12 +431,14 @@
                         <x-layout.navigation.link
                             :href="route('documentation', ['ui', 'stats'])"
                             text="Stats"
+                            changes
                         />
                     </li>
                     <li class="relative ml-4">
                         <x-layout.navigation.link
                             :href="route('documentation', ['ui', 'step'])"
                             text="Step"
+                            changes
                         />
                     </li>
                     <li class="relative ml-4">
@@ -432,12 +452,14 @@
                         <x-layout.navigation.link
                             :href="route('documentation', ['ui', 'tab'])"
                             text="Tab"
+                            changes
                         />
                     </li>
                     <li class="relative ml-4">
                         <x-layout.navigation.link
                             :href="route('documentation', ['ui', 'table'])"
                             text="Table"
+                            changes
                         />
                     </li>
                     <li class="relative ml-4">
@@ -456,6 +478,7 @@
                         <x-layout.navigation.link
                             :href="route('documentation', ['ui', 'tooltip'])"
                             text="Tooltip"
+                            changes
                         />
                     </li>
                 </ul>
@@ -471,12 +494,14 @@
                         <x-layout.navigation.link
                             :href="route('documentation', ['interactions', 'dialog'])"
                             text="Dialog"
+                            changes
                         />
                     </li>
                     <li class="relative ml-4">
                         <x-layout.navigation.link
                             :href="route('documentation', ['interactions', 'toast'])"
                             text="Toast"
+                            changes
                         />
                     </li>
                 </ul>
@@ -551,6 +576,7 @@
                 <x-layout.navigation.link
                     :href="route('documentation', ['without-livewire'])"
                     text="Without Livewire"
+                    changes
                 />
             </li>
             <li class="relative ml-4">
@@ -570,6 +596,7 @@
                         <x-layout.navigation.link
                             :href="route('documentation', ['customization', 'soft'])"
                             text="Soft Customization"
+                            changes
                         />
                     </li>
                     <li class="relative ml-4">
@@ -588,6 +615,7 @@
                         <x-layout.navigation.link
                             :href="route('documentation', ['customization', 'globals'])"
                             text="Globals"
+                            changes
                         />
                     </li>
                 </ul>
