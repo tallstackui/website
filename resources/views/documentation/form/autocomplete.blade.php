@@ -29,6 +29,15 @@
                     ]"
                 />
             </x-preview>
+            <x-warning info>
+                The local filter ignores accents, so typing
+                <x-block>Sao</x-block>
+                finds
+                <x-block>São Paulo</x-block>
+                and the other way around. A remote
+                <x-block>request</x-block> that you will learn more below
+                still receives the typed term as-is.
+            </x-warning>
         </div>
     </x-section>
     <x-section title="Label & Hint">
@@ -284,6 +293,45 @@
                 attributes are mutually exclusive and cannot be defined at the
                 same time.
             </x-warning>
+        </div>
+    </x-section>
+    <x-section
+        title="Loading Indicator"
+        new
+        description="An option to swap the remote loading icon for a spinner."
+    >
+        <div class="space-y-4">
+            <x-preview language="blade" :contents="$indicator">
+                <div class="space-y-2">
+                    <x-autocomplete
+                        label="User"
+                        placeholder="Type a user name..."
+                        :request="route('api.users')"
+                        select="value:label"
+                        indicator="spinner"
+                    />
+                    <x-autocomplete
+                        label="User"
+                        placeholder="Type a user name..."
+                        :request="route('api.users')"
+                        select="value:label"
+                        indicator="spinner.bars"
+                    />
+                </div>
+            </x-preview>
+            <p>
+                Type in the field to see the indicator. A bare
+                <x-block>spinner</x-block>
+                uses the globally configured
+                <x-block>spinner.type</x-block>
+                .
+                <x-block>spinner.{type}</x-block>
+                picks a specific
+                <x-refer :doc="['ui', 'spinner']">spinner</x-refer>
+                variant. Leaving it empty keeps the original icon. The inline
+                attribute wins over the
+                <x-refer doc="configuration">configuration file.</x-refer>
+            </p>
         </div>
     </x-section>
     <x-section title="Readonly & Disabled">

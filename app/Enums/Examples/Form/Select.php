@@ -242,6 +242,12 @@ class Select
     <x-select.styled :request="route('api.users')" />
     HTML;
 
+    public const string STYLED_API_INDICATOR = <<<'HTML'
+    <x-select.styled :request="route('api.users')" indicator="spinner" />
+
+    <x-select.styled :request="route('api.users')" indicator="spinner.bars" />
+    HTML;
+
     public const string STYLED_API_UNFILTERED = <<<'HTML'
     <x-select.styled :request="route('api.users')" unfiltered />
     HTML;

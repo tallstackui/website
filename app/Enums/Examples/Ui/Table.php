@@ -76,6 +76,18 @@ class Table
     </div>
     HTML;
 
+    public const string ALIGN = <<<'HTML'
+    <x-table :headers="[
+        ['index' => 'name', 'label' => 'Product'],
+        ['index' => 'quantity', 'label' => 'Quantity', 'align' => 'center'],
+        ['index' => 'price', 'label' => 'Price', 'align' => 'right'],
+    ]" :rows="[
+        ['name' => 'Laravel', 'quantity' => 12, 'price' => '$99.00'],
+        ['name' => 'Livewire', 'quantity' => 8, 'price' => '$49.00'],
+        ['name' => 'Alpine', 'quantity' => 21, 'price' => '$0.00'],
+    ]" />
+    HTML;
+
     public const string WITHOUT_HEADER = <<<'HTML'
     <?php
 

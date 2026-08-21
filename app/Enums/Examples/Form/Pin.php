@@ -33,6 +33,28 @@ class Pin
     <x-pin length="5" label="Only Letters" letters />
     HTML;
 
+    public const string PASSWORD = <<<'HTML'
+    <x-pin length="6" numbers password />
+    HTML;
+
+    public const string SEPARATOR = <<<'HTML'
+    <!-- Cuts in the middle when split is omitted: 123-456 -->
+    <x-pin length="6" numbers separator />
+
+    <!-- Custom character and a single split: 12/3456 -->
+    <x-pin length="6" numbers separator="/" split="2" />
+
+    <!-- Several splits: AB-CD-EF-GH -->
+    <x-pin length="8" letters separator split="2,4,6" />
+    HTML;
+
+    public const string GROUP = <<<'HTML'
+    <x-pin length="6" numbers group />
+
+    <!-- Each chunk becomes its own group: [123]-[456] -->
+    <x-pin length="6" numbers group separator />
+    HTML;
+
     public const string EVENTS = <<<'HTML'
     <x-pin length="5" x-on:filled="alert(`Filled: ${$event.detail.model}`)" />
 

@@ -216,6 +216,17 @@
         <x-preview language="blade" :contents="$start">
             <x-date start="1" />
         </x-preview>
+        <x-warning info class="mt-4">
+            You can set the first day of the week for every date picker in the
+            <x-refer doc="configuration">configuration file.</x-refer>
+            The inline attribute always wins, so
+            <x-block>start="0"</x-block>
+            keeps Sunday on a single picker. Values outside
+            <x-block>0</x-block>
+            to
+            <x-block>6</x-block>
+            throw, including negatives.
+        </x-warning>
     </x-section>
     <x-section
         title="Month Year Only"

@@ -498,6 +498,43 @@
         </div>
     </x-section>
     <x-section
+        title="Loading Indicator"
+        new
+        anchor="styled-api-loading-indicator"
+        description="An option to swap the remote loading icon for a spinner."
+    >
+        <div class="space-y-4">
+            <x-preview language="blade" :contents="$styledApiIndicator">
+                <div class="space-y-2">
+                    <x-select.styled
+                        :request="route('api.users')"
+                        indicator="spinner"
+                    />
+                    <x-select.styled
+                        :request="route('api.users')"
+                        indicator="spinner.bars"
+                    />
+                </div>
+            </x-preview>
+            <p>
+                Open the list to see the indicator. A bare
+                <x-block>spinner</x-block>
+                uses the globally configured
+                <x-block>spinner.type</x-block>
+                .
+                <x-block>spinner.{type}</x-block>
+                picks a specific
+                <x-refer :doc="['ui', 'spinner']">spinner</x-refer>
+                variant. Leaving it empty keeps the original icon. The inline
+                attribute wins over the
+                <x-refer doc="configuration">configuration file.</x-refer>
+                Local
+                <x-block>options</x-block>
+                never render one.
+            </p>
+        </div>
+    </x-section>
+    <x-section
         title="Unfiltered Results"
         anchor="styled-api-unfiltered-results"
     >

@@ -71,6 +71,75 @@
             </div>
         </x-preview>
     </x-section>
+    <x-section
+        title="Password"
+        new
+        description="An option to mask the typed characters."
+    >
+        <x-preview language="blade" :contents="$password">
+            <x-pin length="6" numbers password />
+        </x-preview>
+    </x-section>
+    <x-section
+        title="Separator"
+        new
+        description="An option to draw a visual divider between the boxes. The divider never reaches the value."
+    >
+        <div class="space-y-4">
+            <x-preview language="blade" :contents="$separator">
+                <div class="space-y-2">
+                    <x-pin length="6" numbers separator />
+                    <x-pin length="6" numbers separator="/" split="2" />
+                    <x-pin length="8" letters separator split="2,4,6" />
+                </div>
+            </x-preview>
+            <p>
+                A bare
+                <x-block>separator</x-block>
+                uses
+                <x-block>-</x-block>
+                and cuts the boxes in the middle. Pass a string of up to three
+                characters to replace it, and
+                <x-block>split</x-block>
+                to choose the positions:
+                <x-block>2</x-block>
+                gives
+                <x-block>12-3456</x-block>
+                ,
+                <x-block>2,4,6</x-block>
+                or
+                <x-block>[2, 4, 6]</x-block>
+                gives
+                <x-block>12-34-56-78</x-block>
+                .
+            </p>
+            <x-warning class="mt-4">
+                The
+                <x-block>split</x-block>
+                attribute requires
+                <x-block>separator</x-block>
+                . Positions must sit between
+                <x-block>1</x-block>
+                and
+                <x-block>length - 1</x-block>
+                .
+            </x-warning>
+        </div>
+    </x-section>
+    <x-section
+        title="Group"
+        new
+        description="An option to join the boxes with shared borders."
+    >
+        <div class="space-y-4">
+            <x-preview language="blade" :contents="$group">
+                <div class="space-y-2">
+                    <x-pin length="6" numbers group />
+                    <x-pin length="6" numbers group separator />
+                </div>
+            </x-preview>
+        </div>
+    </x-section>
     <x-section title="Events">
         <div class="space-y-4">
             <x-preview language="blade" :contents="$events">

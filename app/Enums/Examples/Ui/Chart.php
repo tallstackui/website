@@ -125,6 +125,36 @@ class Chart
     </x-chart>
     HTML;
 
+    public const string CURVE = <<<'HTML'
+    <x-chart :series="[10, 40, 25, 60, 30, 80]" :labels="['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun']" curve="straight" />
+
+    <x-chart :series="[10, 40, 25, 60, 30, 80]" :labels="['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun']" curve="step" />
+
+    <!-- Per series. The chart default stays smooth. -->
+    <x-chart :series="[
+        ['name' => 'Actual', 'data' => [10, 40, 25, 60, 30, 80]],
+        ['name' => 'Target', 'data' => [12, 35, 28, 55, 32, 75], 'curve' => 'step'],
+    ]" line legend />
+    HTML;
+
+    public const string GAPS = <<<'HTML'
+    <x-chart :series="[44, 31, 38, null, 32, 55, 51, 67, 22, 34]" markers />
+    HTML;
+
+    public const string ROUNDED_CORNERS = <<<'HTML'
+    <x-chart :series="[12, 18, 15, 22, 30, 26]"
+             :labels="['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun']"
+             bar
+             round="md"
+             corners="end" />
+    HTML;
+
+    public const string AXIS_LABELS = <<<'HTML'
+    <x-chart :series="[10, 40, 25, 60, 30, 80, 45, 20, 55, 35, 70, 15]"
+             :labels="['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']"
+             fit="rotate" />
+    HTML;
+
     public const string SKELETON = <<<'HTML'
     <x-chart skeleton />
 

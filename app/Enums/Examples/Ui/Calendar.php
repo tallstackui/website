@@ -75,6 +75,19 @@ class Calendar
     <x-calendar shadowless bordered />
     HTML;
 
+    public const string START = <<<'HTML'
+    <!--
+    0: Sunday, (default)
+    1: Monday,
+    2: Tuesday,
+    3: Wednesday,
+    4: Thursday,
+    5: Friday,
+    6: Saturday -->
+
+    <x-calendar start="1" />
+    HTML;
+
     public const string CUSTOMIZATION = <<<'HTML'
     TallStackUi::customize()
         ->calendar()

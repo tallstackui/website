@@ -47,6 +47,83 @@
             <livewire:documentation.ui.table :mode="1" />
         </x-preview>
     </x-section>
+    <x-section
+        title="Column Alignment"
+        new
+        description="An option to center or right-align a column through the header."
+    >
+        <div class="space-y-4">
+            <x-preview
+                language="blade"
+                :contents="$align"
+                :background="false"
+            >
+                <x-table
+                    :headers="[
+                        ['index' => 'name', 'label' => 'Product'],
+                        [
+                            'index' => 'quantity',
+                            'label' => 'Quantity',
+                            'align' => 'center',
+                        ],
+                        [
+                            'index' => 'price',
+                            'label' => 'Price',
+                            'align' => 'right',
+                        ],
+                    ]"
+                    :rows="[
+                        [
+                            'name' => 'Laravel',
+                            'quantity' => 12,
+                            'price' => '$99.00',
+                        ],
+                        [
+                            'name' => 'Livewire',
+                            'quantity' => 8,
+                            'price' => '$49.00',
+                        ],
+                        [
+                            'name' => 'Alpine',
+                            'quantity' => 21,
+                            'price' => '$0.00',
+                        ],
+                    ]"
+                />
+            </x-preview>
+            <p>
+                Each header takes an
+                <x-block>align</x-block>
+                key:
+                <x-block>left</x-block>
+                by default,
+                <x-block>center</x-block>
+                or
+                <x-block>right</x-block>
+                . It reaches the header cell and every body cell of the column,
+                including cells rendered through
+                <x-block>
+                    @verbatim @interact @endverbatim
+                        
+                </x-block>
+                . The sort icon follows the label. Any other value throws.
+            </p>
+            <x-warning info>
+                <x-block>text-left</x-block>
+                moved out of
+                <x-block>table.th</x-block>
+                and
+                <x-block>table.th-compact</x-block>
+                into
+                <x-block>table.align.left</x-block>
+                . A customization that replaced
+                <x-block>text-left</x-block>
+                on those blocks should target
+                <x-block>table.align.left</x-block>
+                instead.
+            </x-warning>
+        </div>
+    </x-section>
     <x-section title="Without Header">
         <x-preview
             language="blade"

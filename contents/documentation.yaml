@@ -69,12 +69,14 @@ form:
     - Lazy
     - Strict Mode
     - Remote Source
+    - Loading Indicator
     - Readonly & Disabled
     - Placeholders
     - Slot After
     - Events
   input:
     - Basic Usage
+    - Email
     - Label & Hint
     - Required Label Indicator
     - Icon Slot
@@ -218,6 +220,9 @@ form:
     - Prefix
     - Clear
     - Masks
+    - Password
+    - Separator
+    - Group
     - Events
     - Smart
   upload:
@@ -311,6 +316,7 @@ form:
       contents:
         - Concept
         - Basic Usage
+        - Loading Indicator
         - Unfiltered Results
         - Advanced Usage
         - Recycle
@@ -473,6 +479,7 @@ ui:
     - Multiple Mode
     - Lock Month Year
     - Flat Look
+    - Start Day
     - Other Options
   card:
     - Basic Usage
@@ -515,6 +522,10 @@ ui:
     - Secondary Axis
     - Colors
     - Formatting
+    - Curve
+    - Gaps
+    - Rounded Corners
+    - Axis Labels
     - Slots
     - Skeleton
     - Configuration
@@ -870,6 +881,7 @@ ui:
     - Concept
     - Data for Table
     - Basic Usage
+    - Column Alignment
     - Without Header
     - Striped Style
     - Filters

@@ -134,6 +134,20 @@ class Autocomplete
                     clearable />
     HTML;
 
+    public const string INDICATOR = <<<'HTML'
+    <x-autocomplete label="User"
+                    placeholder="Type a user name..."
+                    :request="route('api.users')"
+                    select="value:label"
+                    indicator="spinner" />
+
+    <x-autocomplete label="User"
+                    placeholder="Type a user name..."
+                    :request="route('api.users')"
+                    select="value:label"
+                    indicator="spinner.bars" />
+    HTML;
+
     public const string REQUEST_LIVE_ENDPOINT = <<<'PHP'
     use App\Models\User;
     use Illuminate\Http\Request;

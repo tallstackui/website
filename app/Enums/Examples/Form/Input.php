@@ -7,7 +7,9 @@ namespace App\Enums\Examples\Form;
 class Input
 {
     public const string BASIC = <<<'HTML'
-    <x-input />
+    <x-input /> <!-- type as text -->
+
+    <x-input email /> <!-- type as email -->
     HTML;
 
     public const string LABEL_HINT = <<<'HTML'

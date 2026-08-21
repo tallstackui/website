@@ -126,6 +126,21 @@
         <x-preview language="blade" :contents="$options">
             <x-tag :options="['laravel', 'livewire', 'alpine', 'tailwind']" />
         </x-preview>
+        <p class="mt-4">
+            Matching is case-insensitive, and a typed value that matches an
+            option is stored with the option's casing. Typing
+            <x-block>Alpine</x-block>
+            and confirming adds
+            <x-block>alpine</x-block>
+            when that is the option. A
+            <x-block>prefix</x-block>
+            is ignored while comparing, so
+            <x-block>LARAVEL</x-block>
+            still finds
+            <x-block>#laravel</x-block>
+            . A match that is already picked is skipped as a duplicate. Typing a
+            tag that matches no option is stored as typed.
+        </p>
     </x-section>
     <x-section
         title="Slot After"

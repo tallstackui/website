@@ -77,6 +77,15 @@
                 <x-card round="2xl">round="2xl"</x-card>
             </div>
         </x-preview>
+        <x-warning info class="mt-4">
+            You can set the default
+            <x-block>round</x-block>
+            for every card in the
+            <x-refer doc="configuration">configuration file.</x-refer>
+            The inline attribute always wins, so
+            <x-block>round="sm"</x-block>
+            on a single card overrides the configured value.
+        </x-warning>
     </x-section>
     <x-section title="Color Variations">
         <x-preview language="blade" :contents="$color">

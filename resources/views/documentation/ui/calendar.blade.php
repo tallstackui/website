@@ -124,6 +124,26 @@
             </div>
         </x-preview>
     </x-section>
+    <x-section
+        title="Start Day"
+        new
+        description="An option to set the first day of week."
+    >
+        <x-preview language="blade" :contents="$start" :background="false">
+            <x-calendar start="1" />
+        </x-preview>
+        <x-warning info class="mt-4">
+            You can set the first day of the week for every calendar in the
+            <x-refer doc="configuration">configuration file.</x-refer>
+            The inline attribute always wins, so
+            <x-block>start="0"</x-block>
+            keeps Sunday on a single calendar. Values outside
+            <x-block>0</x-block>
+            to
+            <x-block>6</x-block>
+            throw, including negatives.
+        </x-warning>
+    </x-section>
     <x-section title="Other Options" disable-copy>
         <p>
             All other methods available in the

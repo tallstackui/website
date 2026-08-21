@@ -173,6 +173,11 @@
                 ['name' => 'lg', 'type' => 'text-base', 'width' => '28rem'],
             ]"
         />
+        <p class="mt-4">
+            The balloon wraps at that maximum and then shrinks to its widest
+            line, so a two-line hint does not sit in a box with empty space on
+            its right.
+        </p>
     </x-section>
     <x-section title="Disabled" new>
         <x-preview language="blade" :contents="$disabled">
