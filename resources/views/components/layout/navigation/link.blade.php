@@ -30,20 +30,19 @@
             "bg-pink-500" => $activated,
         ])
     ></span>
+    @if ($changed)
+        <span class="relative flex size-1.5 shrink-0" title="This component has changes">
+            <span class="absolute inline-flex size-full animate-ping rounded-full bg-violet-500 opacity-75"></span>
+            <span class="relative inline-flex size-1.5 rounded-full bg-violet-500"></span>
+        </span>
+    @endif
+
     {!! $text ?? $slot !!}
     @if ($new)
         <span
             class="rounded-full border border-violet-500/40 px-1.5 py-px font-mono text-[0.55rem] font-semibold tracking-widest text-violet-500"
         >
             NEW
-        </span>
-    @endif
-
-    @if ($changed)
-        <span
-            class="rounded-full border border-violet-500/40 px-1.5 py-px font-mono text-[0.55rem] font-semibold tracking-widest text-violet-500"
-        >
-            CHANGED
         </span>
     @endif
 </a>
