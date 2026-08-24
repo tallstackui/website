@@ -3,6 +3,7 @@
     "href" => null,
     "activated" => null,
     "new" => false,
+    "changed" => false,
 ])
 
 @php
@@ -29,6 +30,13 @@
             "bg-pink-500" => $activated,
         ])
     ></span>
+    @if ($changed)
+        <span class="relative flex size-1.5 shrink-0" title="This component has changes">
+            <span class="absolute inline-flex size-full animate-ping rounded-full bg-violet-500 opacity-75"></span>
+            <span class="relative inline-flex size-1.5 rounded-full bg-violet-500"></span>
+        </span>
+    @endif
+
     {!! $text ?? $slot !!}
     @if ($new)
         <span
