@@ -6,9 +6,9 @@ namespace App\Support;
 
 use Illuminate\Support\Collection;
 
-class Llms
+readonly class Llms
 {
-    public function __construct(private readonly ComponentDocumentation $documentation)
+    public function __construct(private ComponentDocumentation $documentation)
     {
         //
     }
@@ -26,7 +26,7 @@ class Llms
         return <<<'MARKDOWN'
         # TallStackUI
 
-        > TallStackUI is a suite of 65+ Blade components for the TALL Stack — TailwindCSS, Alpine.js, Laravel and Livewire. It ships production-ready UI (forms, tables, modals, charts, layouts) as plain Blade tags that bind straight to Livewire properties through `wire:model`, and is restyled at runtime through a class customization API instead of published views.
+        > TallStackUI is a suite of 80+ Blade components for the TALL Stack — TailwindCSS, Alpine.js, Laravel and Livewire. It ships production-ready UI (forms, tables, modals, charts, layouts) as plain Blade tags that bind straight to Livewire properties through `wire:model`, and is restyled at runtime through a class customization API instead of published views.
 
         TallStackUI is installed as a Composer package into an existing Laravel application. It publishes no Blade views and brings no build step of its own: components render from inside the package, their JavaScript arrives through a single script tag, and their Tailwind classes are picked up by pointing `app.css` at the package source.
 

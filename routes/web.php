@@ -18,12 +18,6 @@ Route::redirect('/install', '/docs/installation');
 Route::redirect('/summer-release', '/docs/upgrade-guide');
 Route::redirect('/issue', 'https://github.com/tallstackui/tallstackui/issues/new?template=bug_report.yml')->name('issue');
 
-/**
- * The major used to live in the path. It now lives in the domain, so these
- * point at whoever publishes that major, or at the upgrade guide when the
- * major reached end of life. Declared before the documentation route so the
- * "v<n>" segment is never mistaken for a page.
- */
 Route::get('/docs/{version}/{path?}', function (string $version, ?string $path = null) {
     if ($version === config('documentation.version')) {
         return redirect('/docs/'.($path ?: 'installation'), 301);
@@ -42,10 +36,6 @@ Route::get('/demo/{view}', function (string $view) {
     return view($template);
 })->where('view', '[a-z0-9./_-]+')->name('demo');
 
-/**
- * Backs the async upload live preview. Throttled and capped, writing to a
- * throwaway disk the scheduler wipes; it persists nothing anyone can read back.
- */
 Route::post('/demo/async-upload', AsyncUploadDemoController::class)
     ->middleware('throttle:60,1')
     ->name('demo.async-upload');
@@ -75,5 +65,6 @@ Route::get('/ai/{name}.md', function (string $name, ComponentDocumentation $docu
 Route::middleware(ShareVersionVariable::class)
     ->group(function () {
         Route::view('/', 'welcome', Example::Welcome->variables())->name('welcome');
+
         Route::get('/docs/{main?}/{children?}', PageController::class)->name('documentation');
     });
