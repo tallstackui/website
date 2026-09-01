@@ -91,6 +91,7 @@ class UploadAsync
 
     public const string EDITOR_MANUAL = <<<'HTML'
     <!-- The edited file waits in the grid until send() -->
+
     <x-upload.async :route="route('files.upload')"
                     label="Covers"
                     accept="image/*"
@@ -103,23 +104,6 @@ class UploadAsync
         </x-slot:footer>
     </x-upload.async>
     HTML;
-
-    public const string CONFIGURATION = <<<'PHP'
-    // ...
-
-    'upload.async' => [
-        Components\Form\Upload\Async\Component::class,
-        [
-            // ...
-            'editor' => 'crop', // [tl! focus:3]
-            'aspect' => '16:9',
-            'quality' => 0.85,
-            'format' => 'webp',
-        ],
-    ],
-
-    // ...
-    PHP;
 
     public const string STORE = <<<'PHP'
     return $this->upload($request, [
