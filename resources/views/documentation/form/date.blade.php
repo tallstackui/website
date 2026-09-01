@@ -126,6 +126,66 @@
             </p>
         </div>
     </x-section>
+    <x-section
+        title="Typeable"
+        new
+        description="An option to type the date directly into the input."
+    >
+        <div class="space-y-4">
+            <x-preview language="blade" :contents="$typeable">
+                <x-date typeable />
+            </x-preview>
+            <p>
+                The input becomes a regular text field with an auto-formatting
+                mask derived from the
+                <x-block>format</x-block>
+                tokens:
+                <x-block>YYYY</x-block>
+                takes four digits,
+                <x-block>MM</x-block>
+                and
+                <x-block>DD</x-block>
+                take two, and any other character is inserted as the user types.
+                Clicking the input no longer opens the picker, but the calendar
+                icon still does.
+            </p>
+            <x-preview language="blade" :contents="$typeableFormat">
+                <x-date format="DD/MM/YYYY" typeable />
+            </x-preview>
+            <p>
+                On blur the typed value is parsed against the format and
+                validated by the same rules as the picker: min and max dates,
+                disabled dates, weekdays, weekends and
+                <x-block>only</x-block>
+                . An invalid, impossible or out-of-range date, like
+                <x-block>31/02/2020</x-block>
+                , restores the previous value, while clearing the field and
+                leaving empties the model.
+            </p>
+            <x-preview language="blade" :contents="$typeableMinDate">
+                <x-date format="DD/MM/YYYY" :min-date="today()" typeable />
+            </x-preview>
+            <x-warning class="mt-4">
+                The
+                <x-block>format</x-block>
+                must contain the
+                <x-block>YYYY</x-block>
+                ,
+                <x-block>MM</x-block>
+                and
+                <x-block>DD</x-block>
+                tokens for the mask to make sense.
+                <x-block>typeable</x-block>
+                cannot be combined with
+                <x-block>range</x-block>
+                ,
+                <x-block>multiple</x-block>
+                or
+                <x-block>month-year-only</x-block>
+                , and combining them throws.
+            </x-warning>
+        </div>
+    </x-section>
     <x-section title="Helpers">
         <x-preview language="blade" :contents="$helpers">
             <x-date helpers />
