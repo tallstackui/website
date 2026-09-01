@@ -14,6 +14,14 @@ class Range
     <x-range label="Quantity" hint="Select an average desired salary" />
     HTML;
 
+    public const string DUAL = <<<'HTML'
+    <x-range dual :min="0" :max="1000" :step="10" label="Price range" />
+    HTML;
+
+    public const string DUAL_TOOLTIP = <<<'HTML'
+    <x-range dual :min="0" :max="1000" color="emerald" tooltip />
+    HTML;
+
     public const string READONLY_DISABLED = <<<'HTML'
     <x-range label="Readonly" value="50" readonly />
     <x-range label="Disabled" value="50" disabled />
