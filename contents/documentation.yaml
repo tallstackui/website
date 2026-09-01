@@ -251,6 +251,7 @@ form:
     - Basic Usage
     - Multiple
     - Manual
+    - Image Editor
     - Uploader Trait
     - Taking Over Persistence
     - Authorization

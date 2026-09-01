@@ -180,6 +180,7 @@
                             :href="route('documentation', ['form', 'upload-async'])"
                             text="Upload Async"
                             new
+                            changed
                         />
                     </li>
                 </ul>

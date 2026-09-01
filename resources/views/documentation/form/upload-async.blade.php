@@ -122,6 +122,51 @@
         </x-preview>
     </x-section>
     <x-section
+        title="Image Editor"
+        new
+        description="An option to crop and rotate images before they are uploaded."
+    >
+        <div class="space-y-4">
+            <x-preview language="blade" :contents="$editor">
+                <livewire:documentation.form.upload.async :mode="4" />
+            </x-preview>
+            <p>
+                Images open a crop and rotate dialog before the first chunk is
+                sent; the edited file is what gets chunked, validated and
+                stored. Documents go straight to the upload, and cancelling the
+                dialog drops the file. With
+                <x-block>multiple</x-block>
+                the dialog opens once per image, in sequence.
+            </p>
+            <x-preview language="blade" :contents="$editorManual">
+                <livewire:documentation.form.upload.async :mode="5" />
+            </x-preview>
+            <p>
+                In
+                <x-block>manual</x-block>
+                mode the edited file waits in the grid until
+                <x-block>send()</x-block>
+                . The
+                <x-block>editor</x-block>
+                and
+                <x-block>aspect</x-block>
+                attributes accept the same values as the
+                <x-refer :doc="['form', 'upload']">upload component</x-refer>
+                :
+                <x-block>true</x-block>
+                ,
+                <x-block>crop</x-block>
+                ,
+                <x-block>rotate</x-block>
+                or
+                <x-block>false</x-block>
+                for the editor and a
+                <x-block>width:height</x-block>
+                ratio for the aspect.
+            </p>
+        </div>
+    </x-section>
+    <x-section
         title="Uploader Trait"
         description="All options of the upload method."
     >

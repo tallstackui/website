@@ -12,6 +12,10 @@ new class extends Component {
     public array $gallery = [];
 
     public array $files = [];
+
+    public array $photos = [];
+
+    public array $covers = [];
 };
 
 ?>
@@ -48,6 +52,53 @@ new class extends Component {
             :route="route('demo.async-upload')"
             label="Files"
             accept="application/pdf"
+            multiple
+            manual
+            :max-size="60"
+        >
+            <x-slot:footer>
+                <div
+                    x-show="files.length"
+                    class="mt-3 flex items-center justify-between"
+                >
+                    <span
+                        x-text="summary()"
+                        class="text-xs text-gray-500"
+                    ></span>
+
+                    <div class="flex items-center gap-2">
+                        <x-button color="red" x-on:click="clear()" round sm>
+                            Abort & Clear
+                        </x-button>
+                        <x-button
+                            x-bind:disabled="!sendable() || disabled"
+                            x-on:click="send()"
+                            round
+                        >
+                            Upload Now
+                        </x-button>
+                    </div>
+                </div>
+            </x-slot>
+        </x-upload.async>
+    @elseif ($mode === 4)
+        <x-upload.async
+            wire:model="photos"
+            :route="route('demo.async-upload')"
+            label="Photos"
+            accept="image/*"
+            editor
+            multiple
+            :max-size="60"
+        />
+    @elseif ($mode === 5)
+        <x-upload.async
+            wire:model="covers"
+            :route="route('demo.async-upload')"
+            label="Covers"
+            accept="image/*"
+            editor
+            aspect="16:9"
             multiple
             manual
             :max-size="60"
