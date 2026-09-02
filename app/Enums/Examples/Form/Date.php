@@ -41,8 +41,6 @@ class Date
     HTML;
 
     public const string TYPEABLE_FORMAT = <<<'HTML'
-    <!-- The mask follows the format: ##/##/#### -->
-
     <x-date format="DD/MM/YYYY" typeable />
     HTML;
 
@@ -57,8 +55,6 @@ class Date
     HTML;
 
     public const string MIN_MAX_DATES = <<<'HTML'
-    <!-- You can use dates as strings or Carbon instances -->
-
     <x-date :min-date="now()->subWeek()" :max-date="now()->addWeek()" />
     HTML;
 
