@@ -269,6 +269,7 @@
     <x-section
         title="Expandable"
         description="An option to expand rows to display sub-content such as nested tables."
+        disable-copy
     >
         <div class="space-y-4">
             <x-code language="blade" :contents="$expandableNested" />

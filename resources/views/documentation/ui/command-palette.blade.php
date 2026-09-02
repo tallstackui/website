@@ -84,7 +84,7 @@
             </x-warning>
         </div>
     </x-section>
-    <x-section title="Field Mapping">
+    <x-section title="Field Mapping" disable-copy>
         <div class="space-y-4">
             <p>
                 The
@@ -240,6 +240,7 @@
     <x-section
         title="AlpineJS Helper"
         description="Helpers to open and close the command palette using AlpineJS."
+        disable-copy
     >
         <x-code language="blade" :contents="$alpinejs" disable-copy />
     </x-section>
@@ -252,7 +253,7 @@
         configuration. When set to true, the command palette will be centered on
         mobile devices.
     </x-section>
-    <x-section title="Overlay">
+    <x-section title="Overlay" disable-copy>
         <div class="space-y-4">
             <p>
                 By default, the command palette renders a dimmed overlay behind

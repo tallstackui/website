@@ -169,6 +169,7 @@
     <x-section
         title="Uploader Trait"
         description="All options of the upload method."
+        disable-copy
     >
         <div class="space-y-4">
             <p>

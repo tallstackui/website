@@ -93,6 +93,7 @@
     <x-section
         title="Metadata"
         description="An option to pass special or additional values."
+        disable-copy
     >
         <x-code language="php" :contents="$metadata" />
         <x-code class="mt-4" language="blade" :contents="$metadataUsage" />
@@ -104,6 +105,7 @@
     <x-section
         title="Field Mapping"
         description="An option to remap the item keys when they do not match the expected structure."
+        disable-copy
     >
         <div class="space-y-4">
             <p>

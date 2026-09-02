@@ -207,6 +207,7 @@
         anchor="gravatar-from-another-column"
         new
         description="An option to use a different property to generate the gravatar"
+        disable-copy
     >
         <x-code language="blade" :contents="$gravatarColumn" />
     </x-section>

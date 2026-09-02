@@ -131,7 +131,7 @@
             </x-gallery>
         </x-preview>
     </x-section>
-    <x-section title="Events">
+    <x-section title="Events" disable-copy>
         <div class="space-y-4">
             <x-code language="blade" :contents="$events" />
             <x-table
@@ -157,7 +157,7 @@
             </x-table>
         </div>
     </x-section>
-    <x-section title="Image Object">
+    <x-section title="Image Object" disable-copy>
         <x-table
             :headers="[
                 ['index' => 'key', 'label' => 'Key'],
