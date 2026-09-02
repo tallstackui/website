@@ -30,8 +30,6 @@ class Carousel
     ]" round />
 
     <!--
-    also accept other types of "round":
-
     default => rounded-xl,
     xs      => rounded-xs,
     sm      => rounded-sm,
@@ -103,6 +101,64 @@ class Carousel
         ['src' => url('assets/images/wallpapers/3.jpg'), 'alt' => 'Wallpaper 3'],
     ]" without-indicators />
     HTML;
+
+    public const string THUMBNAILS = <<<'HTML'
+    <x-carousel :images="[
+        ['src' => url('assets/images/wallpapers/1.jpg'), 'alt' => 'Wallpaper 1'],
+        ['src' => url('assets/images/wallpapers/2.jpg'), 'alt' => 'Wallpaper 2'],
+        ['src' => url('assets/images/wallpapers/3.jpg'), 'alt' => 'Wallpaper 3'],
+    ]" thumbnails />
+    HTML;
+
+    public const string THUMBNAILS_LIMIT = <<<'HTML'
+    <x-carousel :images="[
+        ['src' => url('assets/images/wallpapers/1.jpg'), 'alt' => 'Wallpaper 1'],
+        ['src' => url('assets/images/wallpapers/2.jpg'), 'alt' => 'Wallpaper 2'],
+        ['src' => url('assets/images/wallpapers/3.jpg'), 'alt' => 'Wallpaper 3'],
+        ['src' => url('assets/images/wallpapers/4.jpg'), 'alt' => 'Wallpaper 4'],
+        ['src' => url('assets/images/wallpapers/5.jpg'), 'alt' => 'Wallpaper 5'],
+        ['src' => url('assets/images/wallpapers/6.jpg'), 'alt' => 'Wallpaper 6'],
+        ['src' => url('assets/images/wallpapers/7.jpg'), 'alt' => 'Wallpaper 7'],
+        ['src' => url('assets/images/wallpapers/8.jpg'), 'alt' => 'Wallpaper 8'],
+        ['src' => url('assets/images/wallpapers/9.jpg'), 'alt' => 'Wallpaper 9'],
+    ]" thumbnails :limit="5" round="xl" />
+    HTML;
+
+    public const string THUMBNAILS_WITHOUT_HIGHLIGHT = <<<'HTML'
+    <x-carousel :images="[
+        ['src' => url('assets/images/wallpapers/1.jpg'), 'alt' => 'Wallpaper 1'],
+        ['src' => url('assets/images/wallpapers/2.jpg'), 'alt' => 'Wallpaper 2'],
+        ['src' => url('assets/images/wallpapers/3.jpg'), 'alt' => 'Wallpaper 3'],
+    ]" thumbnails without-highlight />
+    HTML;
+
+    public const string THUMBNAILS_AUTOPLAY = <<<'HTML'
+    <x-carousel :images="[
+        ['src' => url('assets/images/wallpapers/1.jpg'), 'alt' => 'Wallpaper 1'],
+        ['src' => url('assets/images/wallpapers/2.jpg'), 'alt' => 'Wallpaper 2'],
+        ['src' => url('assets/images/wallpapers/3.jpg'), 'alt' => 'Wallpaper 3'],
+    ]" thumbnails autoplay :interval="5" stop-on-hover>
+        <x-slot:footer>
+            <p class="mt-2 text-sm text-gray-500">Click a thumbnail to jump to that photo.</p>
+        </x-slot:footer>
+    </x-carousel>
+    HTML;
+
+    public const string THUMBNAILS_CONFIGURATION = <<<'PHP'
+    // ...
+
+    'carousel' => [
+        Components\Carousel\Component::class,
+        [
+            // ...
+            'thumbnails' => true, // [tl! focus:2]
+            'limit' => 6,
+            'without-highlight' => false,
+        ],
+    ],
+
+    // ...
+    PHP;
 
     public const string TITLE_DESCRIPTION = <<<'HTML'
     <x-carousel :images="[

@@ -210,6 +210,7 @@ form:
   range:
     - Basic Usage
     - Label & Hint
+    - Dual Mode
     - Readonly & Disabled
     - Size Variations
     - Color Variations
@@ -235,6 +236,7 @@ form:
         - Validation Error
         - Delete
         - Multiple
+        - Image Editor
         - Restricting File Types
         - Footer Slot
         - Validate Before Upload
@@ -251,6 +253,7 @@ form:
     - Basic Usage
     - Multiple
     - Manual
+    - Image Editor
     - Uploader Trait
     - Taking Over Persistence
     - Authorization
@@ -264,6 +267,7 @@ form:
     - Label & Hint
     - Readonly & Disabled
     - Available Formats
+    - Typeable
     - Helpers
     - Min & Max Dates
     - Min & Max Years
@@ -444,6 +448,7 @@ ui:
         - Light Variations
         - Outline Variations
         - Flat Variations
+        - Subtle Variations
         - Unfocus
     Circle:
       contents:
@@ -459,12 +464,14 @@ ui:
         - Light Variations
         - Outline Variations
         - Flat Variations
+        - Subtle Variations
         - Unfocus
     Group:
       contents:
         - Concept
         - Basic Usage
         - Vertical Orientation
+        - Shadowless
   boolean:
     - Concept
     - Basic Usage
@@ -504,6 +511,7 @@ ui:
     - Autoplay, Stop on Hover
     - Autoplay, Without Loop
     - Without Indicators
+    - Thumbnails
     - Image Title & Description
     - Clickable
     - Clickable Caption

@@ -201,6 +201,7 @@
         title="Styling the Balloon"
         new
         description="The balloon is created by JavaScript and shared by anchors that have no component behind them."
+        disable-copy
     >
         <x-code language="css" :contents="$styling" />
     </x-section>

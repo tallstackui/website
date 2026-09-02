@@ -36,13 +36,25 @@ class Date
     $date; // 2024-02-20
     HTML;
 
+    public const string TYPEABLE = <<<'HTML'
+    <x-date typeable />
+    HTML;
+
+    public const string TYPEABLE_FORMAT = <<<'HTML'
+    <x-date format="DD/MM/YYYY" typeable />
+    HTML;
+
+    public const string TYPEABLE_MIN_DATE = <<<'HTML'
+    <!-- A typed date before today restores the previous value on blur -->
+
+    <x-date format="DD/MM/YYYY" :min-date="today()" typeable />
+    HTML;
+
     public const string HELPERS = <<<'HTML'
     <x-date helpers />
     HTML;
 
     public const string MIN_MAX_DATES = <<<'HTML'
-    <!-- You can use dates as strings or Carbon instances -->
-
     <x-date :min-date="now()->subWeek()" :max-date="now()->addWeek()" />
     HTML;
 

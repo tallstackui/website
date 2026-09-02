@@ -130,6 +130,30 @@ class Upload
     public function updatedFiles(): void {} // [tl! add]
     HTML;
 
+    public const string EDITOR = <<<'HTML'
+    <x-upload editor />
+    HTML;
+
+    public const string EDITOR_ASPECT = <<<'HTML'
+    <x-upload editor aspect="1:1" />
+    HTML;
+
+    public const string EDITOR_MODES = <<<'HTML'
+    <!-- Crop box only -->
+    <x-upload editor="crop" />
+
+    <!-- Rotation buttons only -->
+    <x-upload editor="rotate" />
+    HTML;
+
+    public const string EDITOR_MULTIPLE = <<<'HTML'
+    <x-upload editor multiple />
+    HTML;
+
+    public const string EDITOR_DISABLED = <<<'HTML'
+    <x-upload :editor="false" />
+    HTML;
+
     public const string ACCEPT = <<<'HTML'
     <x-upload accept="application/pdf" />
     HTML;

@@ -82,14 +82,6 @@ class Editor
     <x-editor markdown />
     HTML;
 
-    public const string NATIVE = <<<'HTML'
-    <form method="POST" action="{{ route('posts.store') }}">
-        @csrf
-        <x-editor name="body" label="Body" />
-        <x-button type="submit" text="Save" />
-    </form>
-    HTML;
-
     public const string UPLOAD_BLADE = <<<'HTML'
     <x-editor upload-property="picture" upload-method="storeImage" />
     HTML;
@@ -114,16 +106,19 @@ class Editor
     }
     PHP;
 
+    public const string UPLOAD_EDITOR = <<<'HTML'
+    <!-- Crop box and rotation buttons -->
+    <x-editor upload-property="picture" upload-method="storeImage" upload-editor />
+
+    <!-- Crop only, locked to a ratio -->
+    <x-editor upload-property="picture" upload-method="storeImage" upload-editor="crop" upload-aspect="4:3" />
+    HTML;
+
     public const string EVENTS = <<<'HTML'
     <x-editor x-on:editor:change="words = $event.detail.words"
               x-on:editor:link-inserted="console.log($event.detail.href)"
               x-on:editor:image-inserted="console.log($event.detail.src)"
               x-on:editor:fullscreen-toggled="console.log($event.detail.on)" />
-    HTML;
-
-    public const string LIVEWIRE = <<<'HTML'
-    <!-- The component is wire:ignore, so a runtime attribute change needs a wire:key -->
-    <x-editor :readonly="$locked" wire:key="editor-{{ $locked ? 'locked' : 'open' }}" />
     HTML;
 
     public const string SCOPES = <<<'PHP'

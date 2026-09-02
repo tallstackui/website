@@ -81,6 +81,30 @@ class UploadAsync
     </x-upload.async>
     HTML;
 
+    public const string EDITOR = <<<'HTML'
+    <x-upload.async :route="route('files.upload')"
+                    label="Photos"
+                    accept="image/*"
+                    editor
+                    multiple />
+    HTML;
+
+    public const string EDITOR_MANUAL = <<<'HTML'
+    <!-- The edited file waits in the grid until send() -->
+
+    <x-upload.async :route="route('files.upload')"
+                    label="Covers"
+                    accept="image/*"
+                    editor
+                    aspect="16:9"
+                    multiple
+                    manual>
+        <x-slot:footer>
+            <!-- ... -->
+        </x-slot:footer>
+    </x-upload.async>
+    HTML;
+
     public const string STORE = <<<'PHP'
     return $this->upload($request, [
         'disk' => 'public',
