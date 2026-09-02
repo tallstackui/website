@@ -25,6 +25,14 @@ new class extends Component {
 
     public $photo7;
 
+    public $photo8;
+
+    public $photo9;
+
+    public $photo10;
+
+    public $photo11 = [];
+
     #[Validate(["file", "extensions:dat"])]
     public $validate;
 
@@ -109,5 +117,26 @@ new class extends Component {
             <x-upload label="Readonly" wire:model="photo1" readonly />
             <x-upload label="Disabled" wire:model="photo2" disabled />
         </div>
+    @elseif ($model === 11)
+        <x-upload wire:model="photo8" tip="Pick an image" editor />
+    @elseif ($model === 12)
+        <x-upload wire:model="photo9" tip="Pick an image" editor aspect="1:1" />
+    @elseif ($model === 13)
+        <div class="space-y-2">
+            <x-upload
+                label="Crop only"
+                wire:model="photo10"
+                tip="Pick an image"
+                editor="crop"
+            />
+            <x-upload
+                label="Rotate only"
+                wire:model="photo10"
+                tip="Pick an image"
+                editor="rotate"
+            />
+        </div>
+    @elseif ($model === 14)
+        <x-upload wire:model="photo11" tip="Pick some images" editor multiple />
     @endif
 </div>

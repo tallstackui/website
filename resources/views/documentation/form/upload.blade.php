@@ -126,6 +126,100 @@
         </div>
     </x-section>
     <x-section
+        title="Image Editor"
+        new
+        anchor="upload-image-editor"
+        description="An option to crop and rotate images before they are uploaded."
+    >
+        <div class="space-y-4">
+            <x-preview language="blade" :contents="$editor">
+                <livewire:documentation.form.upload.upload :model="11" />
+            </x-preview>
+            <p>
+                The editor runs at intake, between picking the file and sending
+                it. What reaches Livewire is the edited file; the original never
+                leaves the browser. Only images open the editor: documents and
+                SVGs go straight to the upload. Cancelling, Escape, the backdrop
+                or the close button drop the file, so nothing is uploaded. Files
+                already uploaded cannot be edited again.
+            </p>
+            <x-preview language="blade" :contents="$editorAspect">
+                <livewire:documentation.form.upload.upload :model="12" />
+            </x-preview>
+            <p>
+                <x-block>aspect</x-block>
+                locks the crop box to a
+                <x-block>width:height</x-block>
+                ratio, like
+                <x-block>1:1</x-block>
+                ,
+                <x-block>4:3</x-block>
+                or
+                <x-block>16:9</x-block>
+                . The box starts as the largest centered rectangle of that ratio
+                and every handle keeps it. Without it the box is free.
+            </p>
+            <x-preview language="blade" :contents="$editorModes">
+                <livewire:documentation.form.upload.upload :model="13" />
+            </x-preview>
+            <p>
+                A bare
+                <x-block>editor</x-block>
+                offers the crop box and the rotation buttons.
+                <x-block>editor="crop"</x-block>
+                keeps the crop box only and
+                <x-block>editor="rotate"</x-block>
+                keeps the rotation buttons only, in which case
+                <x-block>aspect</x-block>
+                has no effect.
+            </p>
+            <x-preview language="blade" :contents="$editorMultiple">
+                <livewire:documentation.form.upload.upload :model="14" />
+            </x-preview>
+            <p>
+                With
+                <x-block>multiple</x-block>
+                the editor opens once per image, in sequence. Cancelling one
+                removes only that one from the batch.
+            </p>
+            <x-code
+                language="blade"
+                :contents="$editorDisabled"
+                disable-copy
+            />
+            <p>
+                The EXIF orientation is applied on load, images larger than
+                4096px on their longest side are downscaled to that, and an
+                animated GIF is flattened to a PNG frame. The output file name
+                follows the resulting format, so
+                <x-block>photo.gif</x-block>
+                becomes
+                <x-block>photo.png</x-block>
+                . The dialog is a
+                <x-refer :doc="['ui', 'modal']">modal</x-refer>
+                that behaves as a bottom sheet below the
+                <x-block>md</x-block>
+                breakpoint and is centered above it.
+            </p>
+            <x-warning class="mt-4">
+                <x-block>editor</x-block>
+                must be
+                <x-block>true</x-block>
+                ,
+                <x-block>false</x-block>
+                ,
+                <x-block>crop</x-block>
+                or
+                <x-block>rotate</x-block>
+                , and
+                <x-block>aspect</x-block>
+                must follow the
+                <x-block>width:height</x-block>
+                format with positive integers. Anything else throws.
+            </x-warning>
+        </div>
+    </x-section>
+    <x-section
         title="Restricting File Types"
         anchor="upload-restricting-file-types"
     >
@@ -171,7 +265,7 @@
             </p>
         </div>
     </x-section>
-    <x-section title="Events">
+    <x-section title="Events" anchor="upload-events">
         <div class="space-y-4">
             <x-preview language="blade" :contents="$events">
                 <livewire:documentation.form.upload.upload :model="7" />

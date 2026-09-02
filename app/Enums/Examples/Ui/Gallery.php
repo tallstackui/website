@@ -98,12 +98,6 @@ class Gallery
                x-on:previous="console.log($event.detail.current)" />
     HTML;
 
-    public const string PERFORMANCE = <<<'HTML'
-    TallStackUi::customize()
-        ->gallery()
-        ->block('tile.performance', '');
-    HTML;
-
     public const string CUSTOMIZATION = <<<'HTML'
     TallStackUi::customize()
         ->gallery()

@@ -263,6 +263,7 @@
                         <x-layout.navigation.link
                             :href="route('documentation', ['ui', 'carousel'])"
                             text="Carousel"
+                            changed
                         />
                     </li>
                     <li class="relative ml-4">

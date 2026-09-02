@@ -125,6 +125,159 @@
             />
         </x-preview>
     </x-section>
+    <x-section
+        title="Thumbnails"
+        new
+        description="An option to render a row of small square tiles below the slides."
+    >
+        <div class="space-y-4">
+            <x-preview
+                language="blade"
+                :background="false"
+                :contents="$thumbnails"
+            >
+                <x-carousel
+                    :images="[
+                        ['src' => url('assets/images/wallpapers/1.jpg'), 'alt' => 'Wallpaper 1'],
+                        ['src' => url('assets/images/wallpapers/2.jpg'), 'alt' => 'Wallpaper 2'],
+                        ['src' => url('assets/images/wallpapers/3.jpg'), 'alt' => 'Wallpaper 3'],
+                    ]"
+                    thumbnails
+                />
+            </x-preview>
+            <p>
+                Clicking a tile moves the carousel to that slide and restarts
+                the autoplay timer, exactly like the dot indicators. The tile of
+                the current slide carries a primary ring and
+                <x-block>aria-current="true"</x-block>
+                , the other tiles carry a subtle gray ring. The strip already
+                shows the position, so
+                <x-block>thumbnails</x-block>
+                implies
+                <x-block>without-indicators</x-block>
+                . The tiles follow the
+                <x-block>shuffle</x-block>
+                order and
+                <x-block>round</x-block>
+                applies to them the same way it applies to the slides.
+            </p>
+            <x-preview
+                language="blade"
+                :background="false"
+                :contents="$thumbnailsLimit"
+            >
+                <x-carousel
+                    :images="[
+                        ['src' => url('assets/images/wallpapers/1.jpg'), 'alt' => 'Wallpaper 1'],
+                        ['src' => url('assets/images/wallpapers/2.jpg'), 'alt' => 'Wallpaper 2'],
+                        ['src' => url('assets/images/wallpapers/3.jpg'), 'alt' => 'Wallpaper 3'],
+                        ['src' => url('assets/images/wallpapers/4.jpg'), 'alt' => 'Wallpaper 4'],
+                        ['src' => url('assets/images/wallpapers/5.jpg'), 'alt' => 'Wallpaper 5'],
+                        ['src' => url('assets/images/wallpapers/6.jpg'), 'alt' => 'Wallpaper 6'],
+                        ['src' => url('assets/images/wallpapers/7.jpg'), 'alt' => 'Wallpaper 7'],
+                        ['src' => url('assets/images/wallpapers/8.jpg'), 'alt' => 'Wallpaper 8'],
+                        ['src' => url('assets/images/wallpapers/9.jpg'), 'alt' => 'Wallpaper 9'],
+                    ]"
+                    thumbnails
+                    :limit="5"
+                    round="xl"
+                />
+            </x-preview>
+            <p>
+                <x-block>limit</x-block>
+                caps the number of tiles, six by default. When the carousel
+                holds more images than the limit, the last tile keeps its image
+                under a
+                <x-block>+N</x-block>
+                overlay counting the images left out of the strip. Clicking it
+                moves to that image and the arrows keep going from there. While
+                the current slide sits beyond the visible tiles, the last tile
+                keeps the highlight.
+            </p>
+            <x-preview
+                language="blade"
+                :background="false"
+                :contents="$thumbnailsWithoutHighlight"
+            >
+                <x-carousel
+                    :images="[
+                        ['src' => url('assets/images/wallpapers/1.jpg'), 'alt' => 'Wallpaper 1'],
+                        ['src' => url('assets/images/wallpapers/2.jpg'), 'alt' => 'Wallpaper 2'],
+                        ['src' => url('assets/images/wallpapers/3.jpg'), 'alt' => 'Wallpaper 3'],
+                    ]"
+                    thumbnails
+                    without-highlight
+                />
+            </x-preview>
+            <p>
+                <x-block>without-highlight</x-block>
+                drops the primary ring, so every tile shares the inactive look
+                while
+                <x-block>aria-current</x-block>
+                keeps marking the current slide for assistive technology.
+            </p>
+            <x-preview
+                language="blade"
+                :background="false"
+                :contents="$thumbnailsAutoplay"
+            >
+                <x-carousel
+                    :images="[
+                        ['src' => url('assets/images/wallpapers/1.jpg'), 'alt' => 'Wallpaper 1'],
+                        ['src' => url('assets/images/wallpapers/2.jpg'), 'alt' => 'Wallpaper 2'],
+                        ['src' => url('assets/images/wallpapers/3.jpg'), 'alt' => 'Wallpaper 3'],
+                    ]"
+                    thumbnails
+                    autoplay
+                    :interval="5"
+                    stop-on-hover
+                >
+                    <x-slot:footer>
+                        <p class="mt-2 text-sm text-gray-500">
+                            Click a thumbnail to jump to that photo.
+                        </p>
+                    </x-slot>
+                </x-carousel>
+            </x-preview>
+            <p>
+                The strip sits between the slides and the
+                <x-block>footer</x-block>
+                slot.
+            </p>
+            <x-warning class="mt-4">
+                <x-block>limit</x-block>
+                and
+                <x-block>without-highlight</x-block>
+                require
+                <x-block>thumbnails</x-block>
+                , and
+                <x-block>limit</x-block>
+                must be at least
+                <x-block>2</x-block>
+            </x-warning>
+            <x-warning info class="mt-4">
+                You can turn the strip on for every carousel, and set the
+                default
+                <x-block>limit</x-block>
+                and
+                <x-block>without-highlight</x-block>
+                , in the
+                <x-refer doc="configuration">configuration file.</x-refer>
+                The inline attributes always win, so
+                <x-block>:thumbnails="false"</x-block>
+                hides the strip on a single carousel.
+                <x-block>without-highlight</x-block>
+                is only read when the strip renders, so a carousel without
+                <x-block>thumbnails</x-block>
+                ignores it instead of throwing.
+            </x-warning>
+            <x-code
+                language="php"
+                :contents="$thumbnailsConfiguration"
+                disable-copy
+            />
+        </div>
+    </x-section>
     <x-section title="Image Title & Description">
         <x-preview
             language="blade"

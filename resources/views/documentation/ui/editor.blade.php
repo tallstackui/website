@@ -269,6 +269,7 @@
     <x-section
         title="Markdown Mapping"
         description="Tables, task lists and footnotes are not covered, in either direction."
+        disable-copy
     >
         <x-table
             :headers="[
@@ -297,6 +298,7 @@
     <x-section
         title="Markdown Autoformat"
         description="Applied as you type. Ctrl+Z undoes the formatting and keeps the characters. Nothing changes inside a code block."
+        disable-copy
     >
         <x-table
             :headers="[
@@ -320,6 +322,7 @@
     <x-section
         title="Image Upload"
         description="An option to allow upload of image using normal Livewire way"
+        disable-copy
     >
         <div class="space-y-4">
             <x-code language="blade" :contents="$uploadBlade" />
@@ -333,9 +336,40 @@
                 is used to handle the uploaded image and return the URL of the
                 image.
             </x-warning>
+            <p>
+                With
+                <x-block>upload-editor</x-block>
+                the picked image opens a crop and rotate dialog on top of the
+                image dialog before it is uploaded. It accepts the same values
+                as the
+                <x-refer :doc="['form', 'upload']">upload component</x-refer>
+                :
+                <x-block>true</x-block>
+                for the crop box and the rotation buttons,
+                <x-block>crop</x-block>
+                or
+                <x-block>rotate</x-block>
+                for one of them, and
+                <x-block>false</x-block>
+                to turn it off whatever the configuration says.
+                <x-block>upload-aspect</x-block>
+                locks the crop box to a
+                <x-block>width:height</x-block>
+                ratio.
+            </p>
+            <x-code language="blade" :contents="$uploadEditor" />
+            <p>
+                Cancelling the editor returns to the image dialog with no URL.
+                Images pasted by URL never go through it. The editor is only
+                active when both
+                <x-block>upload-property</x-block>
+                and
+                <x-block>upload-method</x-block>
+                are set.
+            </p>
         </div>
     </x-section>
-    <x-section title="Events">
+    <x-section title="Events" disable-copy>
         <div class="space-y-4">
             <x-code language="blade" :contents="$events" />
             <x-table
@@ -361,7 +395,7 @@
             </x-table>
         </div>
     </x-section>
-    <x-section title="Keyboard">
+    <x-section title="Keyboard" disable-copy>
         <x-table
             :headers="[
                 ['index' => 'shortcut', 'label' => 'Shortcut'],
@@ -384,6 +418,7 @@
     <x-section
         title="Security"
         description="The sanitizer is defense in depth, not the defense."
+        disable-copy
     >
         <div class="space-y-4">
             <p>
@@ -409,7 +444,7 @@
             </x-warning>
         </div>
     </x-section>
-    <x-section title="Configuration">
+    <x-section title="Configuration" disable-copy>
         <p>
             There are a lot things that can be configured using the
             <x-refer doc="configuration">configuration file.</x-refer>
@@ -431,6 +466,22 @@
             <x-block>40rem</x-block>
             in the
             <x-refer doc="configuration">configuration file.</x-refer>
+        </p>
+        <p class="mt-4">
+            The image editor of the upload can also be enabled for every editor
+            through the
+            <x-block>upload</x-block>
+            key, with the same
+            <x-block>editor</x-block>
+            ,
+            <x-block>aspect</x-block>
+            ,
+            <x-block>quality</x-block>
+            and
+            <x-block>format</x-block>
+            settings of the
+            <x-refer :doc="['form', 'upload']">upload component</x-refer>
+            . The inline attributes always win.
         </p>
     </x-section>
     <x-section title="Soft Customization" disable-copy>
