@@ -98,10 +98,6 @@ class Checkbox
     ]" />
     HTML;
 
-    public const string GROUP_PROPERTY = <<<'PHP'
-    public array $features = [];
-    PHP;
-
     public const string GROUP_VARIATIONS = <<<'HTML'
     <x-checkbox.group list :options="$features" />
     <x-checkbox.group card :options="$features" />

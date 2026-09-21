@@ -63,9 +63,10 @@
         title="Scroll Lock"
         new
         description="An option to block the overflow when the floating is opened."
+        disable-copy
     >
         <div class="space-y-4">
-            <x-code language="php" :contents="$scrollLock" />
+            <x-code language="php" :contents="$scrollLock" disable-copy />
             <x-warning>
                 Nested and stacked popups share a single lock, counted by
                 reference, so the first popup to open takes it and the last to

@@ -79,7 +79,7 @@
             </x-tab>
         </x-preview>
     </x-section>
-    <x-section title="Route-Based Tabs">
+    <x-section title="Route-Based Tabs" disable-copy>
         <div class="space-y-4">
             <p>
                 Tabs can be associated with URLs using the

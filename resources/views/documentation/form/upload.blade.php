@@ -171,7 +171,7 @@
             </p>
         </div>
     </x-section>
-    <x-section title="Events">
+    <x-section title="Events" anchor="upload-events">
         <div class="space-y-4">
             <x-preview language="blade" :contents="$events">
                 <livewire:documentation.form.upload.upload :model="7" />
@@ -205,7 +205,11 @@
         benefit of this usage format is that it allows people to view files,
         including preview images, and can choose to delete them.
     </x-section>
-    <x-section title="Prepare the Usage" anchor="static-prepare-the-usage">
+    <x-section
+        title="Prepare the Usage"
+        anchor="static-prepare-the-usage"
+        disable-copy
+    >
         <div class="space-y-4">
             <ul class="list-inside list-decimal space-y-2">
                 <li>

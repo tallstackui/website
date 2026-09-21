@@ -197,6 +197,7 @@
     <x-section
         title="Display After Redirects"
         anchor="livewire-integration-display-after-redirects"
+        disable-copy
     >
         <div class="space-y-4">
             <p>
@@ -206,7 +207,7 @@
                 but yes stored temporarily in the session and displayed in the
                 next request when you redirect to another page.
             </p>
-            <x-code :contents="$flash" />
+            <x-code :contents="$flash" disable-copy />
         </div>
     </x-section>
 </x-layout>

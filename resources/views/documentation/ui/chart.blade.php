@@ -460,7 +460,7 @@
             </div>
         </x-preview>
     </x-section>
-    <x-section title="Configuration">
+    <x-section title="Configuration" disable-copy>
         <p>
             There are a few things that can be configured using the
             <x-refer doc="configuration">configuration file.</x-refer>
@@ -510,6 +510,7 @@
     <x-section
         title="Invalid Input"
         description="What happens when the data cannot be drawn."
+        disable-copy
     >
         <x-table
             :headers="[

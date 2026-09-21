@@ -65,14 +65,32 @@
         </x-preview>
     </x-section>
     <x-section title="Size Variations">
-        <x-preview language="blade" :contents="$sizes">
-            <div class="flex items-center gap-2">
-                <x-badge text="XS" xs />
-                <x-badge text="SM" sm />
-                <x-badge text="MD" md />
-                <x-badge text="LG" lg />
-            </div>
-        </x-preview>
+        <div class="space-y-4">
+            <x-preview language="blade" :contents="$sizes">
+                <div class="flex items-center gap-2">
+                    <x-badge text="XS" xs />
+                    <x-badge text="SM" sm />
+                    <x-badge text="MD" md />
+                    <x-badge text="LG" lg />
+                </div>
+            </x-preview>
+            <x-code language="blade" :contents="$sizesConfig" disable-copy />
+            <x-warning info>
+                You can set the default
+                <x-block>size</x-block>
+                of every badge in the
+                <x-refer doc="configuration">configuration file.</x-refer>
+                The inline attributes always win, so any of
+                <x-block>xs</x-block>
+                ,
+                <x-block>sm</x-block>
+                ,
+                <x-block>md</x-block>
+                or
+                <x-block>lg</x-block>
+                replaces the global size.
+            </x-warning>
+        </div>
     </x-section>
     <x-section title="Color Variations">
         <x-preview language="blade" :contents="$colors">

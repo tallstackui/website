@@ -175,7 +175,7 @@
             </x-table>
         </div>
     </x-section>
-    <x-section title="Connecting to Claude Code">
+    <x-section title="Connecting to Claude Code" disable-copy>
         <div class="space-y-4">
             <p>
                 The quickest way to connect the MCP server to

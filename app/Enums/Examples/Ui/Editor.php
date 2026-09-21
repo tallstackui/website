@@ -64,6 +64,11 @@ class Editor
     <x-editor :toolbar="['style', 'bold', 'italic', 'link', 'image']" />
     HTML;
 
+    public const string TOOLBAR_TOOLTIP = <<<'HTML'
+    <!-- With 'toolbar_tooltip' => false in the configuration file -->
+    <x-editor />
+    HTML;
+
     public const string HEIGHTS = <<<'HTML'
     <x-editor min-height="20rem" max-height="60vh" />
     HTML;
@@ -80,14 +85,6 @@ class Editor
 
     public const string MARKDOWN = <<<'HTML'
     <x-editor markdown />
-    HTML;
-
-    public const string NATIVE = <<<'HTML'
-    <form method="POST" action="{{ route('posts.store') }}">
-        @csrf
-        <x-editor name="body" label="Body" />
-        <x-button type="submit" text="Save" />
-    </form>
     HTML;
 
     public const string UPLOAD_BLADE = <<<'HTML'
@@ -119,11 +116,6 @@ class Editor
               x-on:editor:link-inserted="console.log($event.detail.href)"
               x-on:editor:image-inserted="console.log($event.detail.src)"
               x-on:editor:fullscreen-toggled="console.log($event.detail.on)" />
-    HTML;
-
-    public const string LIVEWIRE = <<<'HTML'
-    <!-- The component is wire:ignore, so a runtime attribute change needs a wire:key -->
-    <x-editor :readonly="$locked" wire:key="editor-{{ $locked ? 'locked' : 'open' }}" />
     HTML;
 
     public const string SCOPES = <<<'PHP'

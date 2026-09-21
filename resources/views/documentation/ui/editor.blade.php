@@ -229,6 +229,21 @@
                     <x-block>{{ $row["slug"] }}</x-block>
                 @endinteract
             </x-table>
+            <x-code
+                language="blade"
+                :contents="$toolbarTooltip"
+                disable-copy
+            />
+            <x-warning info>
+                Every button names itself through a tooltip that opens as soon
+                as the pointer arrives. You can render the toolbar without any
+                tooltip by setting
+                <x-block>toolbar_tooltip</x-block>
+                to
+                <x-block>false</x-block>
+                in the
+                <x-refer doc="configuration">configuration file.</x-refer>
+            </x-warning>
         </div>
     </x-section>
     <x-section
@@ -269,6 +284,7 @@
     <x-section
         title="Markdown Mapping"
         description="Tables, task lists and footnotes are not covered, in either direction."
+        disable-copy
     >
         <x-table
             :headers="[
@@ -297,6 +313,7 @@
     <x-section
         title="Markdown Autoformat"
         description="Applied as you type. Ctrl+Z undoes the formatting and keeps the characters. Nothing changes inside a code block."
+        disable-copy
     >
         <x-table
             :headers="[
@@ -320,6 +337,7 @@
     <x-section
         title="Image Upload"
         description="An option to allow upload of image using normal Livewire way"
+        disable-copy
     >
         <div class="space-y-4">
             <x-code language="blade" :contents="$uploadBlade" />
@@ -335,7 +353,7 @@
             </x-warning>
         </div>
     </x-section>
-    <x-section title="Events">
+    <x-section title="Events" disable-copy>
         <div class="space-y-4">
             <x-code language="blade" :contents="$events" />
             <x-table
@@ -361,7 +379,7 @@
             </x-table>
         </div>
     </x-section>
-    <x-section title="Keyboard">
+    <x-section title="Keyboard" disable-copy>
         <x-table
             :headers="[
                 ['index' => 'shortcut', 'label' => 'Shortcut'],
@@ -384,6 +402,7 @@
     <x-section
         title="Security"
         description="The sanitizer is defense in depth, not the defense."
+        disable-copy
     >
         <div class="space-y-4">
             <p>
@@ -409,7 +428,7 @@
             </x-warning>
         </div>
     </x-section>
-    <x-section title="Configuration">
+    <x-section title="Configuration" disable-copy>
         <p>
             There are a lot things that can be configured using the
             <x-refer doc="configuration">configuration file.</x-refer>
@@ -421,7 +440,9 @@
             <x-block>toolbar</x-block>
             ,
             <x-block>output_classes_prefix</x-block>
-            and heights. The default
+            and heights, or turn the toolbar tooltips off with
+            <x-block>toolbar_tooltip</x-block>
+            . The default
             <x-block>min-height</x-block>
             is
             <x-block>12rem</x-block>

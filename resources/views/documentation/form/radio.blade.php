@@ -212,7 +212,7 @@
             />
         </x-preview>
     </x-section>
-    <x-section title="Option Keys" anchor="group-option-keys">
+    <x-section title="Option Keys" anchor="group-option-keys" disable-copy>
         <x-table
             :headers="[
                 ['index' => 'key', 'label' => 'Key'],

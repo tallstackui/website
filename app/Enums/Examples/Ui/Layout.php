@@ -91,6 +91,12 @@ class Layout
     </x-layout.header>
     HTML;
 
+    public const string HEADER_COLLAPSE_ICON = <<<'HTML'
+    <x-layout.header collapse-icon="chevron-double-left">
+        <!-- ... -->
+    </x-layout.header>
+    HTML;
+
     public const string JAVASCRIPT = <<<'HTML'
     <!-- Opening -->
     <button x-on:click="$dispatch('tallstackui-menu-mobile', { status : true })">

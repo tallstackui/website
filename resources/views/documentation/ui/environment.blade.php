@@ -15,7 +15,7 @@
             <x-environment />
         </x-preview>
     </x-section>
-    <x-section title="Beyond Basic, EnvBar">
+    <x-section title="Beyond Basic, EnvBar" disable-copy>
         <div class="space-y-4">
             <p>
                 With the example above you should realize that the environment
@@ -62,7 +62,7 @@
             <x-environment without-branch />
         </x-preview>
     </x-section>
-    <x-section title="Branch Detection Algorithm">
+    <x-section title="Branch Detection Algorithm" disable-copy>
         <div class="space-y-4">
             <p>
                 Internally TallStackUI uses a simple algorithm to get the
@@ -80,7 +80,7 @@
             <x-code :contents="$customAlgorithm" disable-copy />
         </div>
     </x-section>
-    <x-section title="Color Scheme">
+    <x-section title="Color Scheme" disable-copy>
         <div class="space-y-4">
             <p>
                 You may have noticed that there is no way to define component

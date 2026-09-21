@@ -198,6 +198,7 @@
     <x-section
         title="AlpineJS Helper"
         description="Helpers to open and close the slide using AlpineJS."
+        disable-copy
     >
         <x-code language="blade" :contents="$alpinejs" />
     </x-section>
@@ -252,6 +253,7 @@
     <x-section
         title="Focus Helper"
         description="Ah helper to interact with slide events to easily focus an input when slide open."
+        disable-copy
     >
         <div class="space-y-4">
             <x-code language="blade" :contents="$focus" />

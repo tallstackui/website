@@ -341,16 +341,97 @@
         </x-preview>
     </x-section>
     <x-section
+        title="Subtle Variations"
+        new
+        anchor="normal-subtle-variations"
+        description="A neutral body, with the color applied to the text, the icon and the focus ring only."
+    >
+        <div class="space-y-4">
+            <x-preview language="blade" :contents="$subtle">
+                <div class="gap-2 space-y-2">
+                    <x-button text="Primary" subtle />
+                    <x-button text="Secondary" color="secondary" subtle />
+                    <x-button text="Slate" color="slate" subtle />
+                    <x-button text="Gray" color="gray" subtle />
+                    <x-button text="Zinc" color="zinc" subtle />
+                    <x-button text="Neutral" color="neutral" subtle />
+                    <x-button text="Stone" color="stone" subtle />
+                    <x-button text="Red" color="red" subtle />
+                    <x-button text="Orange" color="orange" subtle />
+                    <x-button text="Amber" color="amber" subtle />
+                    <x-button text="Yellow" color="yellow" subtle />
+                    <x-button text="Lime" color="lime" subtle />
+                    <x-button text="Green" color="green" subtle />
+                    <x-button text="Emerald" color="emerald" subtle />
+                    <x-button text="Teal" color="teal" subtle />
+                    <x-button text="Cyan" color="cyan" subtle />
+                    <x-button text="Sky" color="sky" subtle />
+                    <x-button text="Blue" color="blue" subtle />
+                    <x-button text="Indigo" color="indigo" subtle />
+                    <x-button text="Violet" color="violet" subtle />
+                    <x-button text="Purple" color="purple" subtle />
+                    <x-button text="Fuchsia" color="fuchsia" subtle />
+                    <x-button text="Pink" color="pink" subtle />
+                    <x-button text="Rose" color="rose" subtle />
+                    <x-button text="Mauve" color="mauve" subtle />
+                    <x-button text="Olive" color="olive" subtle />
+                    <x-button text="Mist" color="mist" subtle />
+                    <x-button text="Taupe" color="taupe" subtle />
+                    <x-button text="Black" color="black" subtle />
+                </div>
+            </x-preview>
+            <p>
+                <x-block>subtle</x-block>
+                borrows the border and background of the
+                <x-refer :doc="['form', 'input']">input</x-refer>
+                and hovers in gray whatever the color. Add
+                <x-block>tinted</x-block>
+                to tint the hover with the color instead:
+            </p>
+            <x-preview language="blade" :contents="$subtleTinted">
+                <div class="inline-flex items-center gap-x-2">
+                    <x-button text="Delete" color="red" subtle icon="trash" />
+                    <x-button
+                        text="Delete"
+                        color="red"
+                        subtle
+                        tinted
+                        icon="trash"
+                    />
+                </div>
+            </x-preview>
+            <x-warning class="mt-4">
+                <x-block>tinted</x-block>
+                is a modifier of
+                <x-block>subtle</x-block>
+                and throws on its own.
+            </x-warning>
+        </div>
+    </x-section>
+    <x-section
         title="Unfocus"
         anchor="normal-unfocus"
         description="Suppresses the focus halo when the button is activated by mouse."
     >
-        <x-preview language="blade" :contents="$unfocus">
-            <div class="inline-flex items-center gap-x-2">
-                <x-button text="With Focus" />
-                <x-button text="Without Focus" unfocus />
-            </div>
-        </x-preview>
+        <div class="space-y-4">
+            <x-preview language="blade" :contents="$unfocus">
+                <div class="inline-flex items-center gap-x-2">
+                    <x-button text="With Focus" />
+                    <x-button text="Without Focus" unfocus />
+                </div>
+            </x-preview>
+            <x-code language="blade" :contents="$unfocusConfig" disable-copy />
+            <x-warning info>
+                You can set
+                <x-block>unfocus</x-block>
+                for every button in the
+                <x-refer doc="configuration">configuration file.</x-refer>
+                The key is shared with the circle button. The inline attribute
+                always wins, so
+                <x-block>:unfocus="false"</x-block>
+                keeps a single button focusable by click.
+            </x-warning>
+        </div>
     </x-section>
     <x-separator text="Circle" />
     <x-section title="Basic Usage" anchor="circle-basic-usage">
@@ -560,6 +641,60 @@
         </x-preview>
     </x-section>
     <x-section
+        title="Subtle Variations"
+        new
+        anchor="circle-subtle-variations"
+        description="The circle button reads the same subtle and tinted props as the normal one."
+    >
+        <div class="space-y-4">
+            <x-preview language="blade" :contents="$circleSubtle">
+                <div class="gap-2 space-y-2">
+                    <x-button.circle icon="bookmark" subtle />
+                    <x-button.circle icon="bookmark" color="secondary" subtle />
+                    <x-button.circle icon="bookmark" color="slate" subtle />
+                    <x-button.circle icon="bookmark" color="gray" subtle />
+                    <x-button.circle icon="bookmark" color="zinc" subtle />
+                    <x-button.circle icon="bookmark" color="neutral" subtle />
+                    <x-button.circle icon="bookmark" color="stone" subtle />
+                    <x-button.circle icon="bookmark" color="red" subtle />
+                    <x-button.circle icon="bookmark" color="orange" subtle />
+                    <x-button.circle icon="bookmark" color="amber" subtle />
+                    <x-button.circle icon="bookmark" color="yellow" subtle />
+                    <x-button.circle icon="bookmark" color="lime" subtle />
+                    <x-button.circle icon="bookmark" color="green" subtle />
+                    <x-button.circle icon="bookmark" color="emerald" subtle />
+                    <x-button.circle icon="bookmark" color="teal" subtle />
+                    <x-button.circle icon="bookmark" color="cyan" subtle />
+                    <x-button.circle icon="bookmark" color="sky" subtle />
+                    <x-button.circle icon="bookmark" color="blue" subtle />
+                    <x-button.circle icon="bookmark" color="indigo" subtle />
+                    <x-button.circle icon="bookmark" color="violet" subtle />
+                    <x-button.circle icon="bookmark" color="purple" subtle />
+                    <x-button.circle icon="bookmark" color="fuchsia" subtle />
+                    <x-button.circle icon="bookmark" color="pink" subtle />
+                    <x-button.circle icon="bookmark" color="rose" subtle />
+                    <x-button.circle icon="bookmark" color="mauve" subtle />
+                    <x-button.circle icon="bookmark" color="olive" subtle />
+                    <x-button.circle icon="bookmark" color="mist" subtle />
+                    <x-button.circle icon="bookmark" color="taupe" subtle />
+                    <x-button.circle icon="bookmark" color="black" subtle />
+                </div>
+            </x-preview>
+            <x-preview language="blade" :contents="$circleSubtleTinted">
+                <div class="inline-flex items-center gap-x-2">
+                    <x-button.circle icon="pencil" subtle />
+                    <x-button.circle icon="trash" color="red" subtle tinted />
+                </div>
+            </x-preview>
+            <x-warning class="mt-4">
+                <x-block>tinted</x-block>
+                is a modifier of
+                <x-block>subtle</x-block>
+                and throws on its own.
+            </x-warning>
+        </div>
+    </x-section>
+    <x-section
         title="Unfocus"
         anchor="circle-unfocus"
         description="Same focus-suppression behaviour as on the regular button."
@@ -568,6 +703,13 @@
             <x-button.circle icon="x-mark" color="secondary" sm />
             <x-button.circle icon="x-mark" color="secondary" sm unfocus />
         </x-preview>
+        <x-warning info class="mt-4">
+            The circle button reads the same
+            <x-block>unfocus</x-block>
+            key of the
+            <x-refer doc="configuration">configuration file.</x-refer>
+            The inline attribute always wins.
+        </x-warning>
     </x-section>
     <x-separator text="Group" />
     <x-section title="Concept" anchor="group-concept" disable-copy>
@@ -625,5 +767,43 @@
                 <x-button text="Map" icon="map" color="secondary" />
             </x-button.group>
         </x-preview>
+    </x-section>
+    <x-section
+        title="Shadowless"
+        new
+        anchor="group-shadowless"
+        description="An option to drop the shadow of the wrapper."
+    >
+        <div class="space-y-4">
+            <x-preview language="blade" :contents="$groupShadowless">
+                <x-button.group shadowless>
+                    <x-button text="Years" subtle color="secondary" sm />
+                    <x-button text="Months" subtle color="secondary" sm />
+                    <x-button text="Days" subtle color="secondary" sm />
+                </x-button.group>
+            </x-preview>
+            <p>
+                The wrapper carries a
+                <x-block>shadow-xs</x-block>
+                of its own. Use
+                <x-block>shadowless</x-block>
+                with
+                <x-block>subtle</x-block>
+                children, which have no shadow of their own.
+            </p>
+            <x-warning info>
+                The
+                <x-block>shadow-xs</x-block>
+                moved out of
+                <x-block>wrapper.base</x-block>
+                into
+                <x-block>wrapper.shadow</x-block>
+                . A customization that removed it from
+                <x-block>wrapper.base</x-block>
+                should target
+                <x-block>wrapper.shadow</x-block>
+                instead, or use the attribute.
+            </x-warning>
+        </div>
     </x-section>
 </x-layout>
