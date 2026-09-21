@@ -229,6 +229,21 @@
                     <x-block>{{ $row["slug"] }}</x-block>
                 @endinteract
             </x-table>
+            <x-code
+                language="blade"
+                :contents="$toolbarTooltip"
+                disable-copy
+            />
+            <x-warning info>
+                Every button names itself through a tooltip that opens as soon
+                as the pointer arrives. You can render the toolbar without any
+                tooltip by setting
+                <x-block>toolbar_tooltip</x-block>
+                to
+                <x-block>false</x-block>
+                in the
+                <x-refer doc="configuration">configuration file.</x-refer>
+            </x-warning>
         </div>
     </x-section>
     <x-section
@@ -336,37 +351,6 @@
                 is used to handle the uploaded image and return the URL of the
                 image.
             </x-warning>
-            <p>
-                With
-                <x-block>upload-editor</x-block>
-                the picked image opens a crop and rotate dialog on top of the
-                image dialog before it is uploaded. It accepts the same values
-                as the
-                <x-refer :doc="['form', 'upload']">upload component</x-refer>
-                :
-                <x-block>true</x-block>
-                for the crop box and the rotation buttons,
-                <x-block>crop</x-block>
-                or
-                <x-block>rotate</x-block>
-                for one of them, and
-                <x-block>false</x-block>
-                to turn it off whatever the configuration says.
-                <x-block>upload-aspect</x-block>
-                locks the crop box to a
-                <x-block>width:height</x-block>
-                ratio.
-            </p>
-            <x-code language="blade" :contents="$uploadEditor" />
-            <p>
-                Cancelling the editor returns to the image dialog with no URL.
-                Images pasted by URL never go through it. The editor is only
-                active when both
-                <x-block>upload-property</x-block>
-                and
-                <x-block>upload-method</x-block>
-                are set.
-            </p>
         </div>
     </x-section>
     <x-section title="Events" disable-copy>
@@ -456,7 +440,9 @@
             <x-block>toolbar</x-block>
             ,
             <x-block>output_classes_prefix</x-block>
-            and heights. The default
+            and heights, or turn the toolbar tooltips off with
+            <x-block>toolbar_tooltip</x-block>
+            . The default
             <x-block>min-height</x-block>
             is
             <x-block>12rem</x-block>
@@ -466,22 +452,6 @@
             <x-block>40rem</x-block>
             in the
             <x-refer doc="configuration">configuration file.</x-refer>
-        </p>
-        <p class="mt-4">
-            The image editor of the upload can also be enabled for every editor
-            through the
-            <x-block>upload</x-block>
-            key, with the same
-            <x-block>editor</x-block>
-            ,
-            <x-block>aspect</x-block>
-            ,
-            <x-block>quality</x-block>
-            and
-            <x-block>format</x-block>
-            settings of the
-            <x-refer :doc="['form', 'upload']">upload component</x-refer>
-            . The inline attributes always win.
         </p>
     </x-section>
     <x-section title="Soft Customization" disable-copy>

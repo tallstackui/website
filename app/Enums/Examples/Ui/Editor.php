@@ -64,6 +64,11 @@ class Editor
     <x-editor :toolbar="['style', 'bold', 'italic', 'link', 'image']" />
     HTML;
 
+    public const string TOOLBAR_TOOLTIP = <<<'HTML'
+    <!-- With 'toolbar_tooltip' => false in the configuration file -->
+    <x-editor />
+    HTML;
+
     public const string HEIGHTS = <<<'HTML'
     <x-editor min-height="20rem" max-height="60vh" />
     HTML;
@@ -105,14 +110,6 @@ class Editor
         }
     }
     PHP;
-
-    public const string UPLOAD_EDITOR = <<<'HTML'
-    <!-- Crop box and rotation buttons -->
-    <x-editor upload-property="picture" upload-method="storeImage" upload-editor />
-
-    <!-- Crop only, locked to a ratio -->
-    <x-editor upload-property="picture" upload-method="storeImage" upload-editor="crop" upload-aspect="4:3" />
-    HTML;
 
     public const string EVENTS = <<<'HTML'
     <x-editor x-on:editor:change="words = $event.detail.words"

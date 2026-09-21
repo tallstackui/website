@@ -172,7 +172,6 @@
                         <x-layout.navigation.link
                             :href="route('documentation', ['form', 'upload'])"
                             text="Upload"
-                            changed
                         />
                     </li>
                     <li class="relative ml-4">
@@ -180,7 +179,6 @@
                             :href="route('documentation', ['form', 'upload-async'])"
                             text="Upload Async"
                             new
-                            changed
                         />
                     </li>
                 </ul>
@@ -220,6 +218,7 @@
                         <x-layout.navigation.link
                             :href="route('documentation', ['ui', 'badge'])"
                             text="Badge"
+                            changed
                         />
                     </li>
                     <li class="relative ml-4">
@@ -340,6 +339,7 @@
                         <x-layout.navigation.link
                             :href="route('documentation', ['ui', 'layout'])"
                             text="Layout"
+                            changed
                         />
                     </li>
                     <li class="relative ml-4">

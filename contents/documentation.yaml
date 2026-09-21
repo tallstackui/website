@@ -236,7 +236,6 @@ form:
         - Validation Error
         - Delete
         - Multiple
-        - Image Editor
         - Restricting File Types
         - Footer Slot
         - Validate Before Upload
@@ -253,7 +252,6 @@ form:
     - Basic Usage
     - Multiple
     - Manual
-    - Image Editor
     - Uploader Trait
     - Taking Over Persistence
     - Authorization

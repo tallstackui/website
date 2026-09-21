@@ -56,6 +56,13 @@ class Badge
     <x-badge text="LG" lg />
     HTML;
 
+    public const string SIZES_CONFIG = <<<'HTML'
+    <!-- With 'size' => 'md' in the configuration file -->
+    <x-badge text="Medium" />
+
+    <x-badge text="Small" sm />
+    HTML;
+
     public const string COLORS = <<<'HTML'
     <x-badge text="Primary" />
     <x-badge text="Secondary" color="secondary" />

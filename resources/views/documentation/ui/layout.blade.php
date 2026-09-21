@@ -177,6 +177,27 @@
                 on mobile devices. You will learn more about this as you
                 continue reading the documentation below.
             </p>
+            <p>
+                The icon of the button that collapses the
+                <x-block>side-bar</x-block>
+                into its rail can be replaced through the
+                <x-block>collapse-icon</x-block>
+                attribute:
+            </p>
+            <x-code
+                language="blade"
+                :contents="$headerCollapseIcon"
+                disable-copy
+            />
+            <x-warning info>
+                You can also set
+                <x-block>collapse-icon</x-block>
+                for every header in the
+                <x-refer doc="configuration">configuration file.</x-refer>
+                The attribute wins over the configuration, and both win over the
+                <x-block>collapse.icon</x-block>
+                customization block, which stays the last fallback.
+            </x-warning>
         </div>
     </x-section>
     <x-section
