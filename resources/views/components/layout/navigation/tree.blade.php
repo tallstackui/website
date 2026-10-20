@@ -172,6 +172,7 @@
                         <x-layout.navigation.link
                             :href="route('documentation', ['form', 'upload'])"
                             text="Upload"
+                            changed
                         />
                     </li>
                     <li class="relative ml-4">

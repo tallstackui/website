@@ -28,7 +28,41 @@ new class extends Component {
     #[Validate(["file", "extensions:dat"])]
     public $validate;
 
+    #[
+        Validate([
+            "multiples" => ["array", "max:2"],
+            "multiples.*" => ["file", "extensions:dat"],
+        ]),
+    ]
+    public $multiples = [];
+
+    #[
+        Validate([
+            "summaryless" => ["array", "max:2"],
+            "summaryless.*" => ["file", "extensions:dat"],
+        ]),
+    ]
+    public $summaryless = [];
+
+    #[Validate(["file", "extensions:dat"])]
+    public $invalidated;
+
+    public $banner;
+
+    public $gallery = [];
+
     public int $model = 1;
+
+    // #[Validate] only checks the array itself on update, never its ".*" rules.
+    public function updatedMultiples(): void
+    {
+        $this->validate();
+    }
+
+    public function updatedSummaryless(): void
+    {
+        $this->validate();
+    }
 
     public function deleteUpload(array $content): void
     {
@@ -108,6 +142,36 @@ new class extends Component {
         <div class="space-y-2">
             <x-upload label="Readonly" wire:model="photo1" readonly />
             <x-upload label="Disabled" wire:model="photo2" disabled />
+        </div>
+    @elseif ($model === 11)
+        <x-upload
+            label="Send Up To 2 Files Different Than .dat"
+            wire:model.live="multiples"
+            multiple
+            close-after-upload
+        />
+    @elseif ($model === 12)
+        <x-upload
+            label="Send Up To 2 Files Different Than .dat"
+            wire:model.live="summaryless"
+            multiple
+            without-summary
+        />
+    @elseif ($model === 13)
+        <x-upload
+            label="Send File Different Than .dat"
+            wire:model.live="invalidated"
+            invalidate
+        />
+    @elseif ($model === 14)
+        <div class="space-y-2">
+            <x-upload
+                label="Banner"
+                wire:model="banner"
+                accept="image/*"
+                direct
+            />
+            <x-upload label="Photos" wire:model="gallery" multiple direct />
         </div>
     @endif
 </div>

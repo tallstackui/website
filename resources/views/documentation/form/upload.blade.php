@@ -64,17 +64,79 @@
     >
         <div class="space-y-4">
             <p>
-                Since after selecting the file to be sent it is common for the
-                floating element to be closed, if there is a validation error in
-                the file, it will probably not be visible. For this reason a
-                validation error message will appear below the input, similar to
-                what happens with normal
+                A validation error on the bound property paints the input and
+                the label red, hides the
+                <x-block>hint</x-block>
+                and shows the rule message below the input, the same way the
                 <x-block>input</x-block>
-                . However, unlike input, this message cannot be disabled.
+                component does.
             </p>
             <x-preview language="blade" disable-copy>
                 <livewire:documentation.form.upload.upload :model="9" />
             </x-preview>
+            <p>
+                When
+                <x-block>multiple</x-block>
+                , the errors of each file land on keys like
+                <x-block>photos.0</x-block>
+                and
+                <x-block>photos.1</x-block>
+                . They are listed next to each file inside the floating, and
+                since the floating is usually closed after the files are
+                selected, a generic message is shown below the input to warn
+                about them. An error on the property itself, such as a
+                <x-block>max</x-block>
+                rule on the array, behaves like the single mode and takes the
+                place of the generic message, so only one message is shown below
+                the input at a time.
+            </p>
+            <x-preview language="blade" disable-copy>
+                <livewire:documentation.form.upload.upload :model="11" />
+            </x-preview>
+        </div>
+    </x-section>
+    <x-section
+        title="Without Summary"
+        new
+        description="An option to hide the generic validation message of the multiple mode."
+        anchor="upload-without-summary"
+    >
+        <div class="space-y-4">
+            <x-preview language="blade" :contents="$withoutSummary">
+                <livewire:documentation.form.upload.upload :model="12" />
+            </x-preview>
+            <p>
+                The generic message is dropped in every scenario, leaving only
+                the messages next to each file inside the floating. An error on
+                the property itself is still shown below the input.
+            </p>
+            <x-warning info class="mt-4">
+                If you want to hide the generic message of every upload, publish
+                the
+                <x-refer doc="configuration">configuration file</x-refer>
+                and set it there.
+            </x-warning>
+        </div>
+    </x-section>
+    <x-section
+        title="Invalidate"
+        new
+        description="An option to not show validation error messages."
+        anchor="upload-invalidate"
+    >
+        <div class="space-y-4">
+            <x-preview language="blade" :contents="$invalidate">
+                <livewire:documentation.form.upload.upload :model="13" />
+            </x-preview>
+            <p>
+                Every validation feedback is hidden: the red state, the message
+                below the input, the generic message of the multiple mode and
+                the messages next to each file. Without the attribute, the
+                <x-block>invalidate_global</x-block>
+                key of the
+                <x-refer doc="configuration">configuration file</x-refer>
+                decides.
+            </p>
         </div>
     </x-section>
     <x-section title="Delete" anchor="upload-delete">
@@ -169,6 +231,61 @@
                 <x-block>false</x-block>
                 to prevent the upload.
             </p>
+        </div>
+    </x-section>
+    <x-section
+        title="Direct Mode"
+        new
+        description="An option to upload files without the floating."
+        anchor="upload-direct-mode"
+    >
+        <div class="space-y-4">
+            <x-preview language="blade" :contents="$direct">
+                <livewire:documentation.form.upload.upload :model="14" />
+            </x-preview>
+            <p>
+                Clicking the input, or its icon, opens the file picker of the
+                operating system, and the chosen files are uploaded right away.
+                While uploading, a spinning icon takes the place of the upload
+                icon, and a failed upload shows the
+                <x-block>error</x-block>
+                message below the input.
+            </p>
+            <p>
+                Validation errors follow the rules of the
+                <a href="#upload-validation-error" class="underline">
+                    Validation Error
+                </a>
+                section, but in multiple mode the messages of each file have
+                nowhere to be rendered, so only the generic message is shown for
+                them. Combined with
+                <x-block>without-summary</x-block>
+                , an error that only touches a file is not shown at all.
+            </p>
+            <x-warning class="mt-4">
+                Everything that lives inside the floating does not apply: the
+                file list,
+                <x-block>delete</x-block>
+                ,
+                <x-block>preview</x-block>
+                ,
+                <x-block>tip</x-block>
+                , the
+                <x-block>footer</x-block>
+                slot and
+                <x-block>close-after-upload</x-block>
+                .
+                <x-block>accept</x-block>
+                ,
+                <x-block>multiple</x-block>
+                , the
+                <x-block>upload</x-block>
+                event and the validation before upload work as usual. The
+                <x-block>direct</x-block>
+                can't be combined with
+                <x-block>static</x-block>
+                , which throws an exception.
+            </x-warning>
         </div>
     </x-section>
     <x-section title="Events" anchor="upload-events">

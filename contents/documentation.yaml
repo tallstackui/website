@@ -234,11 +234,14 @@ form:
         - Readonly & Disabled
         - Close After Upload
         - Validation Error
+        - Without Summary
+        - Invalidate
         - Delete
         - Multiple
         - Restricting File Types
         - Footer Slot
         - Validate Before Upload
+        - Direct Mode
         - Events
     Static:
       contents:

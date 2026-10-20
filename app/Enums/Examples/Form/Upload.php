@@ -23,6 +23,14 @@ class Upload
     <x-upload close-after-upload />
     HTML;
 
+    public const string WITHOUT_SUMMARY = <<<'HTML'
+    <x-upload multiple without-summary />
+    HTML;
+
+    public const string INVALIDATE = <<<'HTML'
+    <x-upload invalidate />
+    HTML;
+
     public const string DELETE = <<<'HTML'
     <!-- The Livewire component should have the "deleteUpload" method -->
 
@@ -162,6 +170,12 @@ class Upload
             </x-button>
         </x-slot:footer>
     </x-upload>
+    HTML;
+
+    public const string DIRECT = <<<'HTML'
+    <x-upload label="Banner" accept="image/*" direct />
+
+    <x-upload label="Photos" multiple direct />
     HTML;
 
     public const string EVENTS = <<<'HTML'
