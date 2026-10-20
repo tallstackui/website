@@ -255,6 +255,29 @@ class Carousel
     ]" wrapper="aspect-[3/1]" />
     HTML;
 
+    public const string BACKDROP = <<<'HTML'
+    <x-carousel :images="[
+        ['src' => url('assets/images/wallpapers/1.jpg'), 'alt' => 'Wallpaper 1', 'backdrop' => true],
+        ['src' => url('assets/images/wallpapers/2.jpg'), 'alt' => 'Wallpaper 2'],
+        ['src' => url('assets/images/wallpapers/3.jpg'), 'alt' => 'Wallpaper 3', 'backdrop' => true],
+    ]" wrapper="aspect-[3/1]" />
+    HTML;
+
+    public const string BACKDROP_CLICKABLE = <<<'HTML'
+    <x-carousel :images="[
+        ['src' => url('assets/images/wallpapers/1.jpg'), 'alt' => 'Wallpaper 1', 'backdrop' => true],
+        ['src' => url('assets/images/wallpapers/2.jpg'), 'alt' => 'Wallpaper 2', 'backdrop' => true],
+        ['src' => url('assets/images/wallpapers/3.jpg'), 'alt' => 'Wallpaper 3', 'backdrop' => true],
+    ]" wrapper="aspect-[3/1]" round clickable />
+    HTML;
+
+    public const string BACKDROP_CUSTOMIZATION = <<<'PHP'
+    TallStackUi::customize()
+        ->carousel()
+        ->block('images.backdrop.image')
+        ->replace('blur-lg', 'blur-2xl');
+    PHP;
+
     public const string SLOTS = <<<'HTML'
     <x-carousel :images="[
         ['src' => url('assets/images/wallpapers/1.jpg'), 'alt' => 'Wallpaper 1'],

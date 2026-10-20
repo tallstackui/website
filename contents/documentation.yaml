@@ -517,6 +517,7 @@ ui:
     - Clickable Navigable, Caption
     - Clickable Navigable, Without Loop
     - Fixed Aspect Radio
+    - Backdrop
     - Slots
     - Events
   chart:

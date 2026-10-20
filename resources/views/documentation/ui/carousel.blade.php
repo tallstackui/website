@@ -441,6 +441,90 @@
             </x-warning>
         </div>
     </x-section>
+    <x-section
+        title="Backdrop"
+        new
+        description="An option to show the whole image over a blurred copy of itself."
+    >
+        <div class="space-y-4">
+            <x-preview
+                language="blade"
+                :background="false"
+                :contents="$backdrop"
+            >
+                <x-carousel
+                    :images="[
+                        ['src' => url('assets/images/wallpapers/1.jpg'), 'alt' => 'Wallpaper 1', 'backdrop' => true],
+                        ['src' => url('assets/images/wallpapers/2.jpg'), 'alt' => 'Wallpaper 2'],
+                        ['src' => url('assets/images/wallpapers/3.jpg'), 'alt' => 'Wallpaper 3', 'backdrop' => true],
+                    ]"
+                    wrapper="aspect-[3/1]"
+                />
+            </x-preview>
+            <p>
+                An image that sets
+                <x-block>'backdrop' => true</x-block>
+                shows whole and centered over a blurred, enlarged copy of itself
+                that fills the empty bands, instead of being cropped to the
+                frame. The carousel keeps the same height on every slide, and
+                the images without the key keep the default crop, like the
+                second slide above.
+            </p>
+            <x-preview
+                language="blade"
+                :background="false"
+                :contents="$backdropClickable"
+            >
+                <x-carousel
+                    :images="[
+                        ['src' => url('assets/images/wallpapers/1.jpg'), 'alt' => 'Wallpaper 1', 'backdrop' => true],
+                        ['src' => url('assets/images/wallpapers/2.jpg'), 'alt' => 'Wallpaper 2', 'backdrop' => true],
+                        ['src' => url('assets/images/wallpapers/3.jpg'), 'alt' => 'Wallpaper 3', 'backdrop' => true],
+                    ]"
+                    wrapper="aspect-[3/1]"
+                    round
+                    clickable
+                />
+            </x-preview>
+            <p>
+                The copy lives inside the slide, so
+                <x-block>url</x-block>
+                ,
+                <x-block>target</x-block>
+                ,
+                <x-block>clickable</x-block>
+                and
+                <x-block>stop-on-hover</x-block>
+                work the same way, and
+                <x-block>round</x-block>
+                clips it to the slide corners. The copy is decorative, rendered
+                with an empty
+                <x-block>alt</x-block>
+                and
+                <x-block>aria-hidden="true"</x-block>
+                , and the thumbnail tiles and the lightbox show the plain image.
+            </p>
+            <x-warning info class="mt-4">
+                The image of a backdrop slide uses the
+                <x-block>images.contain</x-block>
+                block instead of
+                <x-block>images.base</x-block>
+                , and the blurred copy uses
+                <x-block>images.backdrop.wrapper</x-block>
+                and
+                <x-block>images.backdrop.image</x-block>
+                , so you can tune the effect through
+                <x-refer :doc="['customization', 'soft']">
+                    soft customization.
+                </x-refer>
+            </x-warning>
+            <x-code
+                language="php"
+                :contents="$backdropCustomization"
+                disable-copy
+            />
+        </div>
+    </x-section>
     <x-section title="Slots">
         <x-preview language="blade" :background="false" :contents="$slots">
             <x-carousel
