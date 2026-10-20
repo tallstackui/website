@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ac8b0a59dc22b0b22d175995174b4ab3",
+    "content-hash": "a6898f0f030ed0c5ba9ec5ea8845c351",
     "packages": [
         {
             "name": "brick/math",
@@ -6592,16 +6592,16 @@
         },
         {
             "name": "tallstackui/tallstackui",
-            "version": "v4.3.0",
+            "version": "v4.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/tallstackui/tallstackui.git",
-                "reference": "8480e69ecd3959bf7e6bd055bd8c17bd6406928c"
+                "reference": "1615aefebe3f3d04d7019e1eeca0959326d52e18"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tallstackui/tallstackui/zipball/8480e69ecd3959bf7e6bd055bd8c17bd6406928c",
-                "reference": "8480e69ecd3959bf7e6bd055bd8c17bd6406928c",
+                "url": "https://api.github.com/repos/tallstackui/tallstackui/zipball/1615aefebe3f3d04d7019e1eeca0959326d52e18",
+                "reference": "1615aefebe3f3d04d7019e1eeca0959326d52e18",
                 "shasum": ""
             },
             "require": {
@@ -6660,7 +6660,7 @@
             "description": "TallStackUI is a powerful suite of Blade components that elevate your workflow of Livewire applications.",
             "support": {
                 "issues": "https://github.com/tallstackui/tallstackui/issues",
-                "source": "https://github.com/tallstackui/tallstackui/tree/v4.3.0"
+                "source": "https://github.com/tallstackui/tallstackui/tree/v4.4.0"
             },
             "funding": [
                 {
@@ -6668,7 +6668,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2026-10-20T18:14:49+00:00"
+            "time": "2026-10-20T23:54:11+00:00"
         },
         {
             "name": "tijsverkoyen/css-to-inline-styles",
