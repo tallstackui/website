@@ -35,8 +35,9 @@
                 finds
                 <x-block>São Paulo</x-block>
                 and the other way around. A remote
-                <x-block>request</x-block> that you will learn more below
-                still receives the typed term as-is.
+                <x-block>request</x-block>
+                that you will learn more below still receives the typed term
+                as-is.
             </x-warning>
         </div>
     </x-section>

@@ -6,7 +6,7 @@
             <b>TallStackUI 4.0 is here!</b>
             Seven new components and thousand of improvements.
             <a
-                href="{{ route('documentation', 'upgrade-guide') }}"
+                href="{{ route("documentation", "upgrade-guide") }}"
                 class="font-semibold underline decoration-pink-500 underline-offset-2"
             >
                 See what's new
