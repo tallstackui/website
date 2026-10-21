@@ -111,6 +111,7 @@
                         <x-layout.navigation.link
                             :href="route('documentation', ['form', 'number'])"
                             text="Number"
+                            changed
                         />
                     </li>
                     <li class="relative ml-4">
@@ -295,6 +296,7 @@
                         <x-layout.navigation.link
                             :href="route('documentation', ['ui', 'dropdown'])"
                             text="Dropdown"
+                            changed
                         />
                     </li>
                     <li class="relative ml-4">

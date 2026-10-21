@@ -216,6 +216,29 @@
             <x-code language="blade" :contents="$subLeft" />
         </div>
     </x-section>
+    <x-section
+        title="Submenu on Hover"
+        new
+        description="When the dropdown has hover, the submenus open on hover too."
+    >
+        <x-preview language="blade" :contents="$subHover">
+            <div class="flex justify-end md:justify-center">
+                <x-dropdown text="Categories" hover>
+                    <x-dropdown.submenu text="Vehicles" icon="truck">
+                        <x-dropdown.items text="Cars" />
+                        <x-dropdown.items text="Motorcycles" />
+                    </x-dropdown.submenu>
+                    <x-dropdown.submenu
+                        text="Electronics"
+                        icon="computer-desktop"
+                    >
+                        <x-dropdown.items text="Phones" />
+                        <x-dropdown.items text="Laptops" />
+                    </x-dropdown.submenu>
+                </x-dropdown>
+            </div>
+        </x-preview>
+    </x-section>
     <x-section title="Action Slot">
         <x-preview language="blade" :contents="$actionSlots">
             <div class="flex justify-end md:justify-center">

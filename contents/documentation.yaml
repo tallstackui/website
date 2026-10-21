@@ -591,6 +591,7 @@ ui:
     - Width
     - Header Slot
     - Dropdown Submenu
+    - Submenu on Hover
     - Action Slot
     - Events
   editor:

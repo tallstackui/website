@@ -56,6 +56,10 @@
                 max="10"
             />
         </x-preview>
+        <x-warning class="mt-4">
+            A value outside the range still renders, so validate it in your
+            application.
+        </x-warning>
     </x-section>
     <x-section title="Centralized">
         <x-preview language="blade" :contents="$centralized">
