@@ -255,6 +255,8 @@ form:
     - Basic Usage
     - Multiple
     - Manual
+    - Sortable
+    - Tile Slot
     - Uploader Trait
     - Taking Over Persistence
     - Authorization

@@ -122,6 +122,68 @@
         </x-preview>
     </x-section>
     <x-section
+        title="Sortable"
+        new
+        description="An option to let the user reorder the files by dragging the tiles."
+    >
+        <div class="space-y-4">
+            <x-preview language="blade" :contents="$sortable">
+                <livewire:documentation.form.upload.async :mode="4" />
+            </x-preview>
+            <p>
+                On touch, the tile is dragged after a long press, so swiping
+                still scrolls the page. The bound value follows the order of the
+                tiles, and each change dispatches the
+                <a href="#javascript-events" class="underline">
+                    <x-block>sorted</x-block>
+                    event.
+                </a>
+            </p>
+            <x-warning class="mt-4">
+                The
+                <x-block>sortable</x-block>
+                only works together with
+                <x-block>multiple</x-block>
+                .
+            </x-warning>
+        </div>
+    </x-section>
+    <x-section
+        title="Tile Slot"
+        new
+        description="An option to render your own content inside every tile."
+    >
+        <div class="space-y-4">
+            <x-preview language="blade" :contents="$tile">
+                <livewire:documentation.form.upload.async :mode="5" />
+            </x-preview>
+            <p>
+                The tiles are rendered by Alpine, so the slot content must be
+                Alpine, not PHP. Inside it you can use:
+            </p>
+            <x-table
+                :headers="[
+                    ['index' => 'variable', 'label' => 'Variable'],
+                    ['index' => 'description', 'label' => 'Description'],
+                ]"
+                :rows="[
+                    ['variable' => 'file', 'description' => 'The file of the tile.'],
+                    ['variable' => 'index', 'description' => 'The position of the tile, failed ones included.'],
+                    ['variable' => 'uploaded', 'description' => 'The uploaded files, in the order of the bound value.'],
+                ]"
+            >
+                @interact("column_variable", $row)
+                    <x-block>{{ $row["variable"] }}</x-block>
+                @endinteract
+            </x-table>
+            <x-warning info class="mt-4">
+                Use
+                <x-block>absolute</x-block>
+                classes to position the content inside the tile.
+            </x-warning>
+        </div>
+    </x-section>
+    <x-section
         title="Uploader Trait"
         description="All options of the upload method."
         disable-copy
@@ -251,6 +313,7 @@
                     ['event' => 'error', 'when' => 'Definitive failure, retries exhausted', 'detail' => '{ file, error, status }'],
                     ['event' => 'removed', 'when' => 'File removed from the grid', 'detail' => '{ file }'],
                     ['event' => 'complete', 'when' => 'Whole queue finished, whatever the outcome', 'detail' => '{ files }'],
+                    ['event' => 'sorted', 'when' => 'A drop changed the order of the tiles, with sortable', 'detail' => '{ file, from, to }'],
                 ]"
             >
                 @interact("column_event", $row)

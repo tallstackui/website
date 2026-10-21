@@ -12,6 +12,10 @@ new class extends Component {
     public array $gallery = [];
 
     public array $files = [];
+
+    public array $photos = [];
+
+    public array $covers = [];
 };
 
 ?>
@@ -75,6 +79,41 @@ new class extends Component {
                         </x-button>
                     </div>
                 </div>
+            </x-slot>
+        </x-upload.async>
+    @elseif ($mode === 4)
+        <div class="space-y-2">
+            <x-upload.async
+                wire:model.live="photos"
+                :route="route('demo.async-upload')"
+                label="Photos"
+                accept="image/*"
+                multiple
+                sortable
+            />
+            <p class="dark:text-dark-400 text-sm text-gray-500">
+                Bound value:
+                <b>
+                    {{ implode(", ", array_column($photos, "real_name")) ?: "[]" }}
+                </b>
+            </p>
+        </div>
+    @elseif ($mode === 5)
+        <x-upload.async
+            wire:model="covers"
+            :route="route('demo.async-upload')"
+            label="Photos"
+            accept="image/*"
+            multiple
+            sortable
+        >
+            <x-slot:tile>
+                <span
+                    x-show="uploaded[0] === file"
+                    class="bg-primary-500 absolute top-6 left-1 z-10 rounded px-1.5 text-xs text-white"
+                >
+                    Cover
+                </span>
             </x-slot>
         </x-upload.async>
     @endif

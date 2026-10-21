@@ -81,6 +81,29 @@ class UploadAsync
     </x-upload.async>
     HTML;
 
+    public const string SORTABLE = <<<'HTML'
+    <x-upload.async :route="route('files.upload')"
+                    label="Photos"
+                    accept="image/*"
+                    multiple
+                    sortable />
+    HTML;
+
+    public const string TILE = <<<'HTML'
+    <x-upload.async :route="route('files.upload')"
+                    label="Photos"
+                    accept="image/*"
+                    multiple
+                    sortable>
+        <x-slot:tile>
+            <span x-show="uploaded[0] === file"
+                  class="absolute left-1 top-6 z-10 rounded bg-primary-500 px-1.5 text-xs text-white">
+                Cover
+            </span>
+        </x-slot:tile>
+    </x-upload.async>
+    HTML;
+
     public const string STORE = <<<'PHP'
     return $this->upload($request, [
         'disk' => 'public',
