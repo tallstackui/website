@@ -180,7 +180,6 @@
                         <x-layout.navigation.link
                             :href="route('documentation', ['form', 'upload-async'])"
                             text="Upload Async"
-                            new
                         />
                     </li>
                 </ul>
@@ -271,7 +270,6 @@
                         <x-layout.navigation.link
                             :href="route('documentation', ['ui', 'chart'])"
                             text="Chart"
-                            new
                         />
                     </li>
                     <li class="relative ml-4">
@@ -303,7 +301,6 @@
                         <x-layout.navigation.link
                             :href="route('documentation', ['ui', 'editor'])"
                             text="Editor"
-                            new
                             changed
                         />
                     </li>
@@ -323,7 +320,6 @@
                         <x-layout.navigation.link
                             :href="route('documentation', ['ui', 'gallery'])"
                             text="Gallery"
-                            new
                         />
                     </li>
                     <li class="relative ml-4">
@@ -385,7 +381,6 @@
                         <x-layout.navigation.link
                             :href="route('documentation', ['ui', 'qr-code'])"
                             text="QrCode"
-                            new
                         />
                     </li>
                     <li class="relative ml-4">
@@ -416,7 +411,6 @@
                         <x-layout.navigation.link
                             :href="route('documentation', ['ui', 'spinner'])"
                             text="Spinner"
-                            new
                         />
                     </li>
                     <li class="relative ml-4">
@@ -435,6 +429,12 @@
                         <x-layout.navigation.link
                             :href="route('documentation', ['ui', 'swap'])"
                             text="Swap"
+                        />
+                    </li>
+                    <li class="relative ml-4">
+                        <x-layout.navigation.link
+                            :href="route('documentation', ['ui', 'switcher'])"
+                            text="Switcher"
                             new
                         />
                     </li>

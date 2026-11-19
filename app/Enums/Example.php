@@ -109,6 +109,7 @@ enum Example: string
     case Stats          = 'Ui\\Stats';
     case Step           = 'Ui\\Step';
     case Swap           = 'Ui\\Swap';
+    case Switcher       = 'Ui\\Switcher';
     case Tab            = 'Ui\\Tab';
     case Table          = 'Ui\\Table';
     case ThemeSwitch    = 'Ui\\ThemeSwitch';

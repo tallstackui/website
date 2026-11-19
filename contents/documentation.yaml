@@ -879,6 +879,18 @@ ui:
     - Events
     - Without Livewire
     - AlpineJS Helper
+  switcher:
+    - Concept
+    - Basic Usage
+    - Icons
+    - Icon Position
+    - Effects
+    - Size Variations
+    - Slots
+    - Color Variations
+    - Readonly & Disabled
+    - Events
+    - AlpineJS Helper
   tab:
     - Basic Usage
     - Centered

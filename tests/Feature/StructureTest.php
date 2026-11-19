@@ -105,6 +105,7 @@ describe('Documentation', function () {
         fn () => route('documentation', ['ui', 'stats']),
         fn () => route('documentation', ['ui', 'step']),
         fn () => route('documentation', ['ui', 'swap']),
+        fn () => route('documentation', ['ui', 'switcher']),
         fn () => route('documentation', ['ui', 'tab']),
         fn () => route('documentation', ['ui', 'table']),
         fn () => route('documentation', ['ui', 'theme-switch']),
